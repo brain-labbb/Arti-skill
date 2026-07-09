@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_rope_pulley_var_triple_block",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T04:28:26Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "491c1103420184e7de535dda421ca4d7d90105dde38804d81f2faa62ff3eb267",
+  "source": {
+    "run_id": "run_20260709_042826_594512_d369d911",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "491c1103420184e7de535dda421ca4d7d90105dde38804d81f2faa62ff3eb267",
+    "model_py_sha256": "d788feb5f7d3807955cfd7b852c32f81a46f9f68d2396c030bff0056966f73eb"
+  },
+  "run_summary": {
+    "turn_count": 22,
+    "tool_call_count": 22,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_camping_outdoor_gear__rope_pulley_3508f00573934a1e82b506b8bf7688c2",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_camping_outdoor_gear__rope_pulley_3508f00573934a1e82b506b8bf7688c2",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_camping_outdoor_gear__rope_pulley_3508f00573934a1e82b506b8bf7688c2",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/003.png",
+      "sha256": "357040d718023475ba2bbad8a63e0f14d5bf50ddbfba6b8af648edef3836fc32"
+    }
+  ],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-09T06:53:44Z",
+    "record_id": "rec_rope_pulley_var_triple_block",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_rope_pulley_var_triple_block/compile_report.json",
+      "status": "success",
+      "record_id": "rec_rope_pulley_var_triple_block",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "d788feb5f7d3807955cfd7b852c32f81a46f9f68d2396c030bff0056966f73eb",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "f2f244a4d69363012e0a90d703a367377a236903e088e4ccc934f2a6ed4735ed",
+        "model_py_mtime_ns": 1783572080561555727,
+        "model_py_size_bytes": 15228,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 654275,
+        "visual_mesh_file_count": 8,
+        "compile_elapsed_seconds": 2.5529188867658377
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 6,
+      "errors": [
+        "record.json missing creator metadata for external workflow",
+        "source.run_id must be null for external records",
+        "external records must not contain Articraft agent traces",
+        "provenance.run_summary.turn_count must be null",
+        "provenance.run_summary.tool_call_count must be null",
+        "provenance.run_summary.compile_attempt_count must be null"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

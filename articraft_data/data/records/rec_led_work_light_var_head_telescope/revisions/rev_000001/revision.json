@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_led_work_light_var_head_telescope",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T15:45:13Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "cd4353d341ec30c69431a86316c110f6c21d25487cd993059764e0b72cf64b37",
+  "source": {
+    "run_id": "run_20260623_154513_194787_8a116b66",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5",
+    "thinking_level": "high",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "cd4353d341ec30c69431a86316c110f6c21d25487cd993059764e0b72cf64b37",
+    "model_py_sha256": "1b1b529190dbe11e3a7b2c41f71512f9d073a25da04cd3ecb76b59c5a08491f5"
+  },
+  "run_summary": {
+    "turn_count": 22,
+    "tool_call_count": 21,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-led-_20260609_180048_908359_f7e038e0",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-led-_20260609_180048_908359_f7e038e0",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

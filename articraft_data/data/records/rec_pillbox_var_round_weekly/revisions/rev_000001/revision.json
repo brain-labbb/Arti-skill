@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_pillbox_var_round_weekly",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:57:53Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "d6e8fe07c7319aed586accbce7de430f312ae954ee750652bd3c7b7f065ecc1a",
+  "source": {
+    "run_id": "run_20260705_095753_888239_d27c20a1",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 5.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "d6e8fe07c7319aed586accbce7de430f312ae954ee750652bd3c7b7f065ecc1a",
+    "model_py_sha256": "735ebeea8c2523343f8623293d97103ddbc9c6cd30b83fe1e68c9b0121d01915"
+  },
+  "run_summary": {
+    "turn_count": 8,
+    "tool_call_count": 10,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-portable-7-day-pill-organizer-box-a-flat-recta_20260623_174436_818406_81682422",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-portable-7-day-pill-organizer-box-a-flat-recta_20260623_174436_818406_81682422",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_a-portable-7-day-pill-organizer-box-a-flat-recta_20260623_174436_818406_81682422",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "569bf11d361db35718bbe5a7e64f1dddbe85a00aad5ae84aef4a0b908fa8c67c"
+    }
+  ]
+}

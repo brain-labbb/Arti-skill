@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-17-create-a-folding-chair-with-arched-ba_20260611_123154_954554_0b7e3fd9",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-11T12:31:54Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "a5fd4f0ec1221f5d60024e307a5ad159d9d113f6efc4c5f20c3d8cf080c28886",
+  "source": {
+    "run_id": "run_20260611_123154_954554_0b7e3fd9",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5",
+    "thinking_level": "med",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a5fd4f0ec1221f5d60024e307a5ad159d9d113f6efc4c5f20c3d8cf080c28886",
+    "model_py_sha256": "5e86c4ec197d2aea44524e669337b8e97c873856490e535852cfe583c48f7b2f"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 10,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_metal-folding-chair-a-gray-powder-coated-tubular_20260606_120809_950609_cc9b62cf",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_metal-folding-chair-a-gray-powder-coated-tubular_20260606_120809_950609_cc9b62cf",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

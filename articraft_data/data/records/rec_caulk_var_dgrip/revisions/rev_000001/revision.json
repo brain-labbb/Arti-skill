@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_caulk_var_dgrip",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T15:10:43Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "4eed76a79e343928b9d5774239f6f7137dd691231fe3c8b24d4512642cd7dbf5",
+  "source": {
+    "run_id": "run_20260618_151043_319998_2e36c337",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "4eed76a79e343928b9d5774239f6f7137dd691231fe3c8b24d4512642cd7dbf5",
+    "model_py_sha256": "88951b17c6bfba2edc7c30d6cbee33c6be0adc859784264899d7db6f39f68082"
+  },
+  "run_summary": {
+    "turn_count": 28,
+    "tool_call_count": 30,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-caul_20260609_164000_793564_ff090a9c",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-caul_20260609_164000_793564_ff090a9c",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

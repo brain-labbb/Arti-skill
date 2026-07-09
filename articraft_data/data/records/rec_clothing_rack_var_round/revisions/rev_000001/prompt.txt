@@ -1,0 +1,26 @@
+CATEGORY: Retail_Shop Fixtures
+SUBCATEGORY: Clothing rack
+TARGET: change the straight linear top_hanging_rail into a circular "rounder" hanging rail (a closed round hoop rail) carried on a central mast, with hangers distributed radially.
+DIVERSITY_AXIS: ① skeleton / topology (linear rail span -> closed circular rail loop / rounder).
+POSITIONING: real retail "round rack" / rounder garment display where clothes hang around a circular rail on a central post over a wheeled base; a well-known clothing-rack subtype.
+KEEP: preserve these parent functional layers by name: base_frame, height_slide (prismatic telescoping), lower_sleeve_{i}, sliding_bushing_{i}, wheel_{i} + wheel_spin_{i} (continuous casters), the _create_hanger hook helper and *_swing REVOLUTE hanger joints.
+STRUCTURAL_DELTA: replace the horizontal top_hanging_rail and twin upright posts with one central upper mast rising from a single lower_sleeve on a spider base, topped by a horizontal round_rail hoop (mesh circle via tube_from_spline_points) held by short radial spoke arms; loop the hangers hanger_{idx} radially around the hoop with hanger_{idx}_swing REVOLUTE hooking over the circular rail. Keep telescoping mast insertion and the caster base.
+MULTIPLICITY: hangers placed by a for-i-in-range loop at even angular spacing around the round_rail (radial placement), each with its own swing revolute; indexed hanger_{idx}.
+COMPANION_VARIATIONS: none beyond palette.
+FORBIDDEN: do not become a coat/hat tree with vertical pegs, a carousel/turntable, a lazy-susan, or an umbrella stand; keep a true horizontal circular hanging rail at garment height; do not change the caster base type or add a rotation joint.
+COMPATIBILITY_PROBE:
+
+This is a Retail_Shop Fixtures/Clothing rack family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Retail_Shop Fixtures/Clothing rack (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

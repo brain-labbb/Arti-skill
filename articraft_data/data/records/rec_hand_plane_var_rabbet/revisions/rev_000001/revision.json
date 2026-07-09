@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_hand_plane_var_rabbet",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T06:33:37Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "cd5d99011d244d03967fe3e47a57bd21cf50c8409aba8a1cbd490a1183f85ed1",
+  "source": {
+    "run_id": "run_20260618_063337_837374_27abe694",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "cd5d99011d244d03967fe3e47a57bd21cf50c8409aba8a1cbd490a1183f85ed1",
+    "model_py_sha256": "d03c98752f90f2338b6f664598bc6690e2eb741292131dc5e5b7bfe0da497339"
+  },
+  "run_summary": {
+    "turn_count": 22,
+    "tool_call_count": 22,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-hand_20260609_163932_985437_d722d7db",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-hand_20260609_163932_985437_d722d7db",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

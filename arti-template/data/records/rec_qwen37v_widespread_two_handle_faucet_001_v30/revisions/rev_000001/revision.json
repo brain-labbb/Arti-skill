@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_widespread_two_handle_faucet_001_v30",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-12T06:26:55Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "7112e7433a453a13bb425fe9812fc5629fb39ad66d02afae53dff9c604dc6799",
+  "source": {
+    "run_id": "run_20260612_062655_122117_e592fa1f",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "7112e7433a453a13bb425fe9812fc5629fb39ad66d02afae53dff9c604dc6799",
+    "model_py_sha256": "f4800b34a3f19a9c786767128b2f365ece4f6a97891b1de84aaeda3574e6c11b"
+  },
+  "run_summary": {
+    "turn_count": 8,
+    "tool_call_count": 9,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-wall-mounted-bathroom-faucet-in-polished_20260610_083939_878644_a684e234",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-wall-mounted-bathroom-faucet-in-polished_20260610_083939_878644_a684e234",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,24 @@
+CATEGORY: <Category>
+SUBCATEGORY: <Subcategory>
+TARGET: change the bifold skeleton (base_panel + fold_panel joined by base_panel_to_fold_panel spine hinge) to a single flat leather panel slip-case with only a fold-over closure flap.
+DIVERSITY_AXIS: ① skeleton/topology.
+POSITIONING: single-panel leather double-pointed-needle slip case; one needle bed under one fold-over flap; remains a needle case (needle row, stitched pocket_band, dividers, needle flap).
+KEEP: preserve these parent functional layers by name: base_panel, panel_shell, needle_{i}, pocket_band, band_divider_{i}, flap_seam_ridge, base_needle_flap, base_panel_to_needle_flap, closure_flap.
+STRUCTURAL_DELTA: remove fold_panel, its base_panel_to_fold_panel spine hinge, and the second needle bed; keep one needle bed on base_panel; re-parent the closure_flap hinge (fold_panel_to_closure_flap) directly to base_panel so the flap folds over the single bed; retain the base_needle_flap revolute so at least one real non-fixed joint remains.
+COMPANION_VARIATIONS: none.
+FORBIDDEN: bifold or trifold layouts; soft fabric envelope/pouch/bag neighbor; do NOT change the needle-retention internal family (keep the stitched band).
+
+This is a <Category>/<Subcategory> family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a <Category>/<Subcategory> (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

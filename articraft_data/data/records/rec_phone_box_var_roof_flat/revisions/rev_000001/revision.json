@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_phone_box_var_roof_flat",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-27T03:30:20Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "bbf31cca597c0e2be0d096889776b51fcfb0d6f21ee1be6ced022990ba22a570",
+  "source": {
+    "run_id": "run_20260627_033020_613692_8f65fdf1",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "bbf31cca597c0e2be0d096889776b51fcfb0d6f21ee1be6ced022990ba22a570",
+    "model_py_sha256": "8044a97597a06a7b391a5baee464f740e9c94c053f4393c4426cb2f9c4bfe5a2"
+  },
+  "run_summary": {
+    "turn_count": 10,
+    "tool_call_count": 9,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_red-british-k6-telephone-booth-phone-box-a-cast-_20260612_113148_944128_c00c1818",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_red-british-k6-telephone-booth-phone-box-a-cast-_20260612_113148_944128_c00c1818",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

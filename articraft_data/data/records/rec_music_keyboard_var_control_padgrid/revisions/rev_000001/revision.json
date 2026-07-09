@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_music_keyboard_var_control_padgrid",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-24T16:07:28Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "730fa2d4fa6e3844d3fd132cf5eecb1f8fd8a912491342ccc1157833352eac81",
+  "source": {
+    "run_id": "run_20260624_160728_351604_283e74f7",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "730fa2d4fa6e3844d3fd132cf5eecb1f8fd8a912491342ccc1157833352eac81",
+    "model_py_sha256": "f18058114d4b735e244bc4a74b7072c7586db6d745dea728cee3e9f375f4aaa9"
+  },
+  "run_summary": {
+    "turn_count": 13,
+    "tool_call_count": 13,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_analog-synthesizer-keyboard-with-two-octaves-of-_20260611_163604_601709_c8a11966",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_analog-synthesizer-keyboard-with-two-octaves-of-_20260611_163604_601709_c8a11966",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

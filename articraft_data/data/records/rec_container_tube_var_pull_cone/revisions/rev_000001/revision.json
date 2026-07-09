@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_container_tube_var_pull_cone",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T17:49:35Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "1f34f9d750d756737b1c7400d93ddfd3adff03c5af7b391ae5995e3bf16c7e2e",
+  "source": {
+    "run_id": "run_20260618_174935_827235_0e8df7fe",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "1f34f9d750d756737b1c7400d93ddfd3adff03c5af7b391ae5995e3bf16c7e2e",
+    "model_py_sha256": "0e0dd093012970fb9a43e4562f4a34e68eb25c4c7ead38f8b816945114f493a9"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 12,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_blue-sunscreen-squeeze-tube-with-a-hinged-flip-t_20260606_075018_228582_60b00467",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_blue-sunscreen-squeeze-tube-with-a-hinged-flip-t_20260606_075018_228582_60b00467",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

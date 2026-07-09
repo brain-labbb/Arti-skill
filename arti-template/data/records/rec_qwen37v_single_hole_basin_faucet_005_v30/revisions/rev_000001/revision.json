@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_single_hole_basin_faucet_005_v30",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-12T06:20:24Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "a8e6f8cb963e98d92792553b9c20a402199d8668bffe8fb8e4a6d2daff909a19",
+  "source": {
+    "run_id": "run_20260612_062024_155266_f2ee8a16",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a8e6f8cb963e98d92792553b9c20a402199d8668bffe8fb8e4a6d2daff909a19",
+    "model_py_sha256": "9a33d7634ba3d1892b37f5808b96806a1be4f133b4e4b5abd480be79c4c64990"
+  },
+  "run_summary": {
+    "turn_count": 23,
+    "tool_call_count": 26,
+    "compile_attempt_count": 5,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-brushed-stainless-single-lever-basin-fau_20260610_084153_727699_2322df65",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-brushed-stainless-single-lever-basin-fau_20260610_084153_727699_2322df65",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

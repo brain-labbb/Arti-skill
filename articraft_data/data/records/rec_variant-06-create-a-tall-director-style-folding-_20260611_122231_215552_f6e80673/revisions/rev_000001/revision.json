@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-06-create-a-tall-director-style-folding-_20260611_122231_215552_f6e80673",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-11T12:22:31Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "43180a02aac9bd089341e3bc30384fcf0a3057b3ad008ad57c4c20d1e1529fe6",
+  "source": {
+    "run_id": "run_20260611_122231_215552_f6e80673",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5",
+    "thinking_level": "med",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "43180a02aac9bd089341e3bc30384fcf0a3057b3ad008ad57c4c20d1e1529fe6",
+    "model_py_sha256": "c43a35b16c55ad56682fc7adb78784490add6f59b30d29e2acd253d3b7859b84"
+  },
+  "run_summary": {
+    "turn_count": 16,
+    "tool_call_count": 15,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_metal-folding-chair-a-gray-powder-coated-tubular_20260606_120809_950609_cc9b62cf",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_metal-folding-chair-a-gray-powder-coated-tubular_20260606_120809_950609_cc9b62cf",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

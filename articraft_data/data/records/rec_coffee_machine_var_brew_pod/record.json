@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_coffee_machine_var_brew_pod",
+  "created_at": "2026-06-19T13:16:52Z",
+  "updated_at": "2026-06-19T13:33:27Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "espresso_machine_with_articulated_components",
+  "source": {
+    "run_id": "run_20260619_131652_589495_19709a6b",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "coffee_machine-brew_pod",
+    "prompt_preview": "TARGET AXIS: brew mechanism type. Convert to a POD/CAPSULE machine: replace the bean hopper with a top capsule-insert lever/flap (REVOLUTE) and a compact sin..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "bf8988ec465f7d70fa482e35b47a7f8232625ed3f005a63a6fba77f81be5ea17",
+    "model_py_sha256": "db496159a869d7bd09cb95de4cd4fde76ab552900bc1fe6e0dd97e45ddf06b0b"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_model-a-delonghi-magnifica-style-super-automatic_20260610_080724_417430_ed06768c",
+    "parent_record_id": "rec_model-a-delonghi-magnifica-style-super-automatic_20260610_080724_417430_ed06768c",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

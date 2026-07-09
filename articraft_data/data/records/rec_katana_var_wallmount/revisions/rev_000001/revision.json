@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_katana_var_wallmount",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T13:26:47Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "509be6e69faea6d21d67a1f51e41a6654ba52bafa6fe50db57a059d8bd52b7bb",
+  "source": {
+    "run_id": "run_20260623_132647_828922_5a2ef6f4",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "509be6e69faea6d21d67a1f51e41a6654ba52bafa6fe50db57a059d8bd52b7bb",
+    "model_py_sha256": "8ce49917e8d556f507e31a84e0167278e925f19c58a844a9be344637c36f5d86"
+  },
+  "run_summary": {
+    "turn_count": 6,
+    "tool_call_count": 6,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-decorative-japanese-katana-display-set-a_20260610_080556_400208_ac7923b8",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-decorative-japanese-katana-display-set-a_20260610_080556_400208_ac7923b8",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

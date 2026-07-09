@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-yellow-counterbalance-forklift-truck-with-a-bl_20260608_165407_230789_7a98e3e9",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-08T16:54:07Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "326be6b1321c44a0132e67d52c9d63447c8d5ed385bb0409b5271f7c88faf6bd",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "326be6b1321c44a0132e67d52c9d63447c8d5ed385bb0409b5271f7c88faf6bd",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-08T17:21:38Z",
+    "record_id": "rec_a-yellow-counterbalance-forklift-truck-with-a-bl_20260608_165407_230789_7a98e3e9",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_a-yellow-counterbalance-forklift-truck-with-a-bl_20260608_165407_230789_7a98e3e9/compile_report.json",
+      "status": "success",
+      "record_id": "rec_a-yellow-counterbalance-forklift-truck-with-a-bl_20260608_165407_230789_7a98e3e9",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='front_wheel_l' connected=2/3 disconnected=[front_l_wheel__component_002:Mesh]\npart='front_wheel_r' connected=2/3 disconnected=[front_r_wheel__component_002:Mesh]\npart='rear_wheel_l' connected=2/15 disconnected=[rear_l_tire__component_002:Mesh, rear_l_tire__component_003:Mesh, rear_l_tire__component_004:Mesh, rear_l_tire__component_005:Mesh, rear_l_tire__component_006:Mesh, rear_l_tire__component_007:Mesh, rear_l_tire__component_008:Mesh, rear_l_tire__component_009:Mesh, rear_l_tire__component_010:Mesh, rear_l_tire__component_011:Mesh, rear_l_tire__component_012:Mesh, rear_l_tire__component_013:Mesh, rear_l_wheel__component_002:Mesh]\npart='rear_wheel_r' connected=2/15 disconnected=[rear_r_tire__component_002:Mesh, rear_r_tire__component_003:Mesh, rear_r_tire__component_004:Mesh, rear_r_tire__component_005:Mesh, rear_r_tire__component_006:Mesh, rear_r_tire__component_007:Mesh, rear_r_tire__component_008:Mesh, rear_r_tire__component_009:Mesh, rear_r_tire__component_010:Mesh, rear_r_tire__component_011:Mesh, rear_r_tire__component_012:Mesh, rear_r_tire__component_013:Mesh, rear_r_wheel__component_002:Mesh]"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 30 overlaps across 6 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "770db7fc97c6b6c7918c48b1113e9f7e2724cd3ad36e780df34665437cf30cfb",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "b800cebdfd49bfd4d5a12e63164f6de8d61f868d8dba4ec7908fb99b4db0059e",
+        "model_py_mtime_ns": 1780939243660403430,
+        "model_py_size_bytes": 28806,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 4054060,
+        "visual_mesh_file_count": 8,
+        "compile_elapsed_seconds": 31.007886726409197
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

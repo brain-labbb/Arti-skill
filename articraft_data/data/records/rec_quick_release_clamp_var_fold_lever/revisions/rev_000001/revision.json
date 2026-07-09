@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_quick_release_clamp_var_fold_lever",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T16:00:07Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "effcbba3b5a3ec9b2f86811e33b5eb70bb38735cd63c9a80e5eee87b403f8cdb",
+  "source": {
+    "run_id": "run_20260623_160007_616511_7ae14b67",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5",
+    "thinking_level": "high",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "effcbba3b5a3ec9b2f86811e33b5eb70bb38735cd63c9a80e5eee87b403f8cdb",
+    "model_py_sha256": "fa13a9d681abd10fa4df18ccd4d56c2348666e5621983ed604e3aa905f8a6e52"
+  },
+  "run_summary": {
+    "turn_count": 32,
+    "tool_call_count": 31,
+    "compile_attempt_count": 6,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-bicycle-style-quick-release-seat-clamp-i_20260610_085231_449555_1b80e476",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-bicycle-style-quick-release-seat-clamp-i_20260610_085231_449555_1b80e476",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

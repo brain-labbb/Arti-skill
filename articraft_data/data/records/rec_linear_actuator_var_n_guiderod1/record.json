@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_linear_actuator_var_n_guiderod1",
+  "created_at": "2026-07-09T13:52:03Z",
+  "updated_at": "2026-07-09T14:06:06Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260709_135203_346464_d0353ebd",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "linear_actuator-n_guiderod1",
+    "prompt_preview": "CATEGORY: Robotics SUBCATEGORY: Linear actuator TARGET: change the number of parallel `guide_rod_{i}` support rods from 2 to 1 (a single central anti-rotatio..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a58f9673deda93f47d94ef914cdca801b83b03a220d2361a2ee7a7e84e87d0e3",
+    "model_py_sha256": "3f96dae39f08d24424fd6840c0f2475a1867234050782e2be23bfe06a4bff88e"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_robotics__linear_actuator__001_png_9c02462c174f4f14bcda0a4340649b63",
+    "parent_record_id": "rec_robotics__linear_actuator__001_png_9c02462c174f4f14bcda0a4340649b63",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

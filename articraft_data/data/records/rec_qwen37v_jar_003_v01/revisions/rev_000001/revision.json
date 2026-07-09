@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_jar_003_v01",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-12T08:09:18Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "24361887f2491b52ed7aded74e7bc666ac5d0f00a6c60cf7adc55a0369126718",
+  "source": {
+    "run_id": "run_20260612_080918_549770_fab594eb",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "24361887f2491b52ed7aded74e7bc666ac5d0f00a6c60cf7adc55a0369126718",
+    "model_py_sha256": "58d9132339c0578822b5cd909c5eb600684b12bc6077afb30011a0b6730837e7"
+  },
+  "run_summary": {
+    "turn_count": 9,
+    "tool_call_count": 10,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_tall-square-glass-bottle-with-a-rose-gold-lift-o_20260606_074811_471317_7af717d1",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_tall-square-glass-bottle-with-a-rose-gold-lift-o_20260606_074811_471317_7af717d1",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

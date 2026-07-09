@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_point_of_sale_terminal_var_softkeys_n2",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T14:29:58Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "30a507e2451e7c15c57d8e1fa8fe9e33b92eb07663d51b5e4433a5b4ed7a2c06",
+  "source": {
+    "run_id": "run_20260709_142958_733143_0372dc45",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "30a507e2451e7c15c57d8e1fa8fe9e33b92eb07663d51b5e4433a5b4ed7a2c06",
+    "model_py_sha256": "9173e3953f1ca0954b279cc36dc50c69d22dd8d931488bab5a558bcbf1ce7eef"
+  },
+  "run_summary": {
+    "turn_count": 6,
+    "tool_call_count": 5,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-silver-handheld-wireless-point-of-sale-payment_20260708_092652_294276_074f8840",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-silver-handheld-wireless-point-of-sale-payment_20260708_092652_294276_074f8840",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

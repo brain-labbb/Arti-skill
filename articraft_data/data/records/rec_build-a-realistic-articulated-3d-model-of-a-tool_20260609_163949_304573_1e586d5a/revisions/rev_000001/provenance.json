@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-tool_20260609_163949_304573_1e586d5a",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "48c1acb46c6036e6eef904e4f363944751fac19e",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-09T17:56:42Z",
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-tool_20260609_163949_304573_1e586d5a",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_build-a-realistic-articulated-3d-model-of-a-tool_20260609_163949_304573_1e586d5a/compile_report.json",
+      "status": "success",
+      "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-tool_20260609_163949_304573_1e586d5a",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Isolated parts detected but allowed by justification: 5 part(s) ['drawer_0', 'drawer_1', 'drawer_2', 'drawer_3', 'drawer_4'].\n- pose_index=0 at pose (caster_to_wheel_0=0, caster_to_wheel_1=0, caster_to_wheel_2=0, caster_to_wheel_3=0, frame_to_caster_0=0, frame_to_caster_1=0, frame_to_caster_2=0, frame_to_caster_3=0, frame_to_drawer_0=0, frame_to_drawer_1=0, frame_to_drawer_2=0, frame_to_drawer_3=0, frame_to_drawer_4=0, frame_to_handle=0), part 'drawer_0' is disconnected from the grounded body rooted at 'cabinet_frame'; nearest_grounded_part='cabinet_frame'; approx_gap=0.002m; backend=fcl\n- pose_index=0 at pose (caster_to_wheel_0=0, caster_to_wheel_1=0, caster_to_wheel_2=0, caster_to_wheel_3=0, frame_to_caster_0=0, frame_to_caster_1=0, frame_to_caster_2=0, frame_to_caster_3=0, frame_to_drawer_0=0, frame_to_drawer_1=0, frame_to_drawer_2=0, frame_to_drawer_3=0, frame_to_drawer_4=0, frame_to_handle=0), part 'drawer_1' is disconnected from the grounded body rooted at 'cabinet_frame'; nearest_grounded_part='cabinet_frame'; approx_gap=0.002m; backend=fcl\n- pose_index=0 at pose (caster_to_wheel_0=0, caster_to_wheel_1=0, caster_to_wheel_2=0, caster_to_wheel_3=0, frame_to_caster_0=0, frame_to_caster_1=0, frame_to_caster_2=0, frame_to_caster_3=0, frame_to_drawer_0=0, frame_to_drawer_1=0, frame_to_drawer_2=0, frame_to_drawer_3=0, frame_to_drawer_4=0, frame_to_handle=0), part 'drawer_2' is disconnected from the grounded body rooted at 'cabinet_frame'; nearest_grounded_part='cabinet_frame'; approx_gap=0.002m; backend=fcl\n- pose_index=0 at pose (caster_to_wheel_0=0, caster_to_wheel_1=0, caster_to_wheel_2=0, caster_to_wheel_3=0, frame_to_caster_0=0, frame_to_caster_1=0, frame_to_caster_2=0, frame_to_caster_3=0, frame_to_drawer_0=0, frame_to_drawer_1=0, frame_to_drawer_2=0, frame_to_drawer_3=0, frame_to_drawer_4=0, frame_to_handle=0), part 'drawer_3' is disconnected from the grounded body rooted at 'cabinet_frame'; nearest_grounded_part='cabinet_frame'; approx_gap=0.002m; backend=fcl\n- pose_index=0 at pose (caster_to_wheel_0=0, caster_to_wheel_1=0, caster_to_wheel_2=0, caster_to_wheel_3=0, frame_to_caster_0=0, frame_to_caster_1=0, frame_to_caster_2=0, frame_to_caster_3=0, frame_to_drawer_0=0, frame_to_drawer_1=0, frame_to_drawer_2=0, frame_to_drawer_3=0, frame_to_drawer_4=0, frame_to_handle=0), part 'drawer_4' is disconnected from the grounded body rooted at 'cabinet_frame'; nearest_grounded_part='cabinet_frame'; approx_gap=0.002m; backend=fcl"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 9 overlaps across 9 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "564e17eb60b96d7ca30342ee4632a06d751c4922a55589b058a566e7f5240859",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "824e89df13eef09d7d1f25bab4bbc64d0af09bf5d3e13f0d07898c1b87fe1285",
+        "model_py_mtime_ns": 1781024619603599385,
+        "model_py_size_bytes": 30735,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 5767733,
+        "visual_mesh_file_count": 11,
+        "compile_elapsed_seconds": 14.203420516103506
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

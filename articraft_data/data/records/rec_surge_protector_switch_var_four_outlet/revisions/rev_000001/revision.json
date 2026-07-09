@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_surge_protector_switch_var_four_outlet",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:41:30Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "d169227f19a05e2f08a01cc01037392fea716b9b453d91119ecda897d75ee243",
+  "source": {
+    "run_id": "run_20260705_094130_787712_2c74fb6d",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "d169227f19a05e2f08a01cc01037392fea716b9b453d91119ecda897d75ee243",
+    "model_py_sha256": "84566cd57f16641a9da9228d6b7aa55e43a082924a90454cd12a0e2b887a74d6"
+  },
+  "run_summary": {
+    "turn_count": 12,
+    "tool_call_count": 11,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260626_102016_767543_d5decd1b",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260626_102016_767543_d5decd1b",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260626_102016_767543_d5decd1b",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "340d3d6ce4f3145f553854a093bf4ed1428bc95a8f1bcef335f7e6fd7790310f"
+    }
+  ]
+}

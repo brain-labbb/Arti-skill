@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_circuit_breaker_var_plugin_stab_terminals",
+  "created_at": "2026-07-05T09:41:30Z",
+  "updated_at": "2026-07-05T09:47:39Z",
+  "rating": 5,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "circuit_breaker",
+  "source": {
+    "run_id": "run_20260705_094130_782173_a3491e59",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "cb-plugin_stab",
+    "prompt_preview": "TARGET: change the terminal-connection type from screw box terminals to flat plug-in / busbar stab tabs \u2014 replace the top and bottom terminal_screw cavities..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a0f0bae5e632e41a58d1be0129c1e6fe0787f84bc6f352a935c9a78633aca9e0",
+    "model_py_sha256": "60a8f338dbb07950aa3039d98240c97be21f1e9569676d981e895e7c7e4b173f"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_228695_7bb9b32f",
+    "parent_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_228695_7bb9b32f",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

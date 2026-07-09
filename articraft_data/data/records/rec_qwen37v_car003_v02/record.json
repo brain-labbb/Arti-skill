@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_qwen37v_car003_v02",
+  "created_at": "2026-06-14T11:24:04Z",
+  "updated_at": "2026-06-14T14:38:47Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "car",
+  "source": {
+    "run_id": "run_20260614_112404_741096_34fbf22c",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "Car 003 silver compact sedan",
+    "prompt_preview": "Variant 02: fork the parent compact four-door sedan by editing the existing model.py. Do not use image input. Preserve all existing door, hood, trunk, steeri..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "1811da2611bf9d8182584919c325d31eaee65cf5ebb2939720bdf2614f5a4903",
+    "model_py_sha256": "e7b2362ae93aa385eba60c4e83d1fd774acc740d52e8984471994fd37dc67c84"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_a-white-volkswagen-santana-style-three-box-compa_20260614_034713_599654_fc426856",
+    "parent_record_id": "rec_a-white-volkswagen-santana-style-three-box-compa_20260614_034713_599654_fc426856",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

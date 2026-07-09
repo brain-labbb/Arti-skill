@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_adjustable-chrome-dumbbell-with-stacked-round-st_20260605_165825_655766_e0c0e76a",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "0ea5c9890f6e1c17ff89838a0485830e0b2b9e87",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-05T17:30:29Z",
+    "record_id": "rec_adjustable-chrome-dumbbell-with-stacked-round-st_20260605_165825_655766_e0c0e76a",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_adjustable-chrome-dumbbell-with-stacked-round-st_20260605_165825_655766_e0c0e76a/compile_report.json",
+      "status": "success",
+      "record_id": "rec_adjustable-chrome-dumbbell-with-stacked-round-st_20260605_165825_655766_e0c0e76a",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "5140f3d720a70aa66d171c7cb4987485e154622c514391cc6af0c8970e870ec9",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "7ea90237d6d2d31bbd40e8d56ea7a8ca5e8c4ef38d714633ee7d88bf620b5c68",
+        "model_py_mtime_ns": 1780679122221112524,
+        "model_py_size_bytes": 11590,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 1149799,
+        "visual_mesh_file_count": 10,
+        "compile_elapsed_seconds": 25.03465109039098
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

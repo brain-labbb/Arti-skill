@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_koenigsegg_regera_v01",
+  "created_at": "2026-06-15T17:16:08Z",
+  "updated_at": "2026-06-15T17:16:08Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": null,
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "draft_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "sports_car",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "anthropic",
+  "model_id": "claude-opus-4-8",
+  "display": {
+    "title": "Koenigsegg Regera (icy blue)",
+    "prompt_preview": "Koenigsegg Regera mid-engine hypercar, icy light blue: rounded organic body, dihedral synchro-helix doors, ghost hood vents, hook LED headlights, full-width tail light bar, central exhaust, top-mounted wing. Forked from the Diablo (hollow cabin + steering knuckle chain inherited)."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "d513c3e543062b4c7774416f4d3f95d0219b0746886c5c0efd67d0592d55e0e4",
+    "model_py_sha256": "397e5654c4b18a972f7784eeb6f46ccf22f47ab97324aed72fb341b02e14ec6a"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "parent_record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  },
+  "creator": {
+    "mode": "external_agent",
+    "agent": "claude-code",
+    "trace_available": false
+  }
+}

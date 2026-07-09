@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_change-only-the-rear-main-rotor-to-have-6-blades_20260613_164225_089755_aa107137",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-13T16:42:25Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "c115ace272d69ea1911bead1c442544e994f1f4bf78e8473639d3e77dc114144",
+  "source": {
+    "run_id": "run_20260613_164225_089755_aa107137",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 80,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "c115ace272d69ea1911bead1c442544e994f1f4bf78e8473639d3e77dc114144",
+    "model_py_sha256": "922490dbd5c59a08875f747deaae13c8e61ddb278bf34426aba6bc7f47258074"
+  },
+  "run_summary": {
+    "turn_count": 20,
+    "tool_call_count": 20,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-ch-47-chinook-style-tandem-rotor-militar_20260610_080515_971792_e6faf6f7",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-ch-47-chinook-style-tandem-rotor-militar_20260610_080515_971792_e6faf6f7",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

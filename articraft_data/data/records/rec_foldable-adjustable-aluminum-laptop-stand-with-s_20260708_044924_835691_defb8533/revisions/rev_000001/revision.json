@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_foldable-adjustable-aluminum-laptop-stand-with-s_20260708_044924_835691_defb8533",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-08T04:49:24Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "ade534c91b407294dfd9f62be2a015bd0a7b8ee0bbf8d71d4ed7e77ae630f01b",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-6",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "ade534c91b407294dfd9f62be2a015bd0a7b8ee0bbf8d71d4ed7e77ae630f01b",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T06:29:56Z",
+    "record_id": "rec_foldable-adjustable-aluminum-laptop-stand-with-s_20260708_044924_835691_defb8533",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_foldable-adjustable-aluminum-laptop-stand-with-s_20260708_044924_835691_defb8533/compile_report.json",
+      "status": "success",
+      "record_id": "rec_foldable-adjustable-aluminum-laptop-stand-with-s_20260708_044924_835691_defb8533",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 12 overlaps across 4 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "792874f5c3225e3433a66a22e191984c3fc9225c739c26bd3da304da4e487c51",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "af91ec304efd01ca90aa4548cf4e1a5293ee3f216e8d68714872b6b3b25b89f6",
+        "model_py_mtime_ns": 1783492141921833137,
+        "model_py_size_bytes": 19643,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 474132,
+        "visual_mesh_file_count": 9,
+        "compile_elapsed_seconds": 3.843570541997906
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_an-nvidia-geforce-rtx-4090-founders-edition-grap_20260704_080420_464108_ccf04675",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-04T08:04:20Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "9d7961462795da1a5f039a68d3695b43f3c4adfcd62a65f56624784140e2f826",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "9d7961462795da1a5f039a68d3695b43f3c4adfcd62a65f56624784140e2f826",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-04T08:29:08Z",
+    "record_id": "rec_an-nvidia-geforce-rtx-4090-founders-edition-grap_20260704_080420_464108_ccf04675",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_an-nvidia-geforce-rtx-4090-founders-edition-grap_20260704_080420_464108_ccf04675/compile_report.json",
+      "status": "success",
+      "record_id": "rec_an-nvidia-geforce-rtx-4090-founders-edition-grap_20260704_080420_464108_ccf04675",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "9b7d0ca46db1c6e7563788d7e99610d85f99bf6190ed75f447852fa11b618c28",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "1400f71f09f161d914933eb7ed5f15ba06e5c175e45b45aa78b88c86e3dba818",
+        "model_py_mtime_ns": 1783153645734368042,
+        "model_py_size_bytes": 26945,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 620757,
+        "visual_mesh_file_count": 12,
+        "compile_elapsed_seconds": 5.898329125717282
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

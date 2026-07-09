@@ -1,0 +1,24 @@
+TARGET: change the tri-star `body_shell` into a circular puck body AND RE-COMPOSE THE WHOLE TOP FACE AS A ROUND-NATIVE DESIGN (do NOT transplant the old tri-star face layout of "one big disc + two patches + rectangular keypad wedge"). Required polar composition, in the style of real round conference pucks (Yamaha YVC / Poly Sync):
+- body: round disc, soft chamfered rim band, slightly domed top, small feet;
+- CENTER: one circular speaker grille, diameter <= 0.38x body diameter, with a raised trim ring;
+- KEY ZONE: all 12 dial keys re-arranged along a CIRCULAR ARC in the front sector (two concentric arcs of 6 keys each, following the disc curvature, radius between grille ring and rim band; every key embedded >=1mm, pressing along the local top-face normal); call_key (green) and end_key (red) at the two ends of the outer arc; volume keys on the rim band at +/-90 degrees;
+- LCD: one clean rectangular screen with bezel, placed in the rear sector between grille ring and rim (opposite the key arc);
+- MIC: three small circular mic hole clusters ON the rim band at 120-degree spacing (loop-emitted), replacing the old two patches.
+Nothing may overlap the central grille footprint (annular clearance >= 6mm, assert it in run_tests).
+KEEP: hold identical: the key JOINT inventory (soft_key_*, keypad_*_*, call_key, end_key, volume_up_key, volume_down_key — same count, same prismatic press semantics; only their positions/arrangement change as described), lcd_display content role.
+COMPANION_VARIATIONS: ⑥ light warm-gray body colorway; joint graph / interfaces / primitive family unchanged.
+Add run_tests assertions: keys lie on two arcs (radial distance from center within the arc band, no key inside the grille annulus); LCD is rectangular; mic clusters at 120-degree spacing on the rim.
+This is a <Category>/<Subcategory> family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a <Category>/<Subcategory> (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

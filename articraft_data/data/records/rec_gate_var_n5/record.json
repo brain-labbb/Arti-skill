@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_gate_var_n5",
+  "created_at": "2026-06-21T01:26:07Z",
+  "updated_at": "2026-06-21T01:27:53Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "door",
+  "source": {
+    "run_id": "run_20260621_012607_813795_2ddc8d1e",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "gate-n5",
+    "prompt_preview": "Reduce the vertical picket count per leaf to five evenly spaced bars, keeping the same loop-emitted picket helper, regular spacing, and every other layer ide..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "81bdf522045c1501a934b1115aecbd57c0c9821534e3d238d11ab306493d0fb2",
+    "model_py_sha256": "7ef67b1bf9626e887af7d0d498979a7afa017f2b9323ac4b7aaebf9e536b8368"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_door_gate",
+    "parent_record_id": "rec_door_gate",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

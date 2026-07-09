@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_compact-midi-keyboard-controller-with-twenty-fiv_20260611_163826_287630_99ed5d64",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "c643f986cdfa0965ab5cddd147f9830a15dad414",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-11T17:24:18Z",
+    "record_id": "rec_compact-midi-keyboard-controller-with-twenty-fiv_20260611_163826_287630_99ed5d64",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_compact-midi-keyboard-controller-with-twenty-fiv_20260611_163826_287630_99ed5d64/compile_report.json",
+      "status": "success",
+      "record_id": "rec_compact-midi-keyboard-controller-with-twenty-fiv_20260611_163826_287630_99ed5d64",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "ab968b447069c40cf97f36efbb2ec29dca5e519425b0b1793591bc9c819cc472",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "e4161bd73932d4b9a8c2d6bcc8685c19b72449870944f42122abc45e45e46539",
+        "model_py_mtime_ns": 1781196263447787912,
+        "model_py_size_bytes": 16877,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 146787,
+        "visual_mesh_file_count": 7,
+        "compile_elapsed_seconds": 6.626413771882653
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

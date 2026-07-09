@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_surge_protector_switch_var_reset_breaker_button",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:41:30Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "1bc5d47d42ac0fa23a66a7a745ecff6bdecfd5fc313ca9b6fe54559f9980b6f3",
+  "source": {
+    "run_id": "run_20260705_094130_785514_9e188d0d",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "1bc5d47d42ac0fa23a66a7a745ecff6bdecfd5fc313ca9b6fe54559f9980b6f3",
+    "model_py_sha256": "a910ad164ebc40b45cff1a29218744a989253f2a1bc1edaf40feef9352a46072"
+  },
+  "run_summary": {
+    "turn_count": 15,
+    "tool_call_count": 15,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_electrical_wiring_gpt55_surge_protector_switch_001_redo_recessed_sixrockers",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_electrical_wiring_gpt55_surge_protector_switch_001_redo_recessed_sixrockers",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

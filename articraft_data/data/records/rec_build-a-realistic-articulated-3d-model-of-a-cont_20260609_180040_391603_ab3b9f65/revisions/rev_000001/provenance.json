@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-cont_20260609_180040_391603_ab3b9f65",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "48c1acb46c6036e6eef904e4f363944751fac19e",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-09T18:30:41Z",
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-cont_20260609_180040_391603_ab3b9f65",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_build-a-realistic-articulated-3d-model-of-a-cont_20260609_180040_391603_ab3b9f65/compile_report.json",
+      "status": "success",
+      "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-cont_20260609_180040_391603_ab3b9f65",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "a419caad09558589459fdf26e26ee0e052894c41d45d4a5ecdcc2d23ebeea6a7",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "0e14009f61806ebca77bf8c1c9dbd5c05e5c76354534daf328d877c563096f6c",
+        "model_py_mtime_ns": 1781028649954527450,
+        "model_py_size_bytes": 19924,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 653284,
+        "visual_mesh_file_count": 10,
+        "compile_elapsed_seconds": 1.9271320458501577
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

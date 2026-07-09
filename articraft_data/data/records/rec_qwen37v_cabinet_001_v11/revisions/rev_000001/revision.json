@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_cabinet_001_v11",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-12T06:55:04Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "625f4365fdf8e183be027ccaca3a3ef1b2acf923c9003d28d9148511ab76957a",
+  "source": {
+    "run_id": "run_20260612_065504_192376_80b2a3bb",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "625f4365fdf8e183be027ccaca3a3ef1b2acf923c9003d28d9148511ab76957a",
+    "model_py_sha256": "6c4fa49ca5b5e59d4cd88dc0e8c9f722f1509853a0a57cf33b5dc482139a051d"
+  },
+  "run_summary": {
+    "turn_count": 16,
+    "tool_call_count": 17,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-vintage-industrial-steel-locker-cabinet-_20260610_083716_659700_76107d7e",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-vintage-industrial-steel-locker-cabinet-_20260610_083716_659700_76107d7e",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

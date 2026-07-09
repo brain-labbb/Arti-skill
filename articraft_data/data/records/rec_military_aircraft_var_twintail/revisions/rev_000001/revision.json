@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_military_aircraft_var_twintail",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T13:11:42Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "150132f4b2991b04876fec50433024be7333e077d04ac65904b63c9fd797a8cf",
+  "source": {
+    "run_id": "run_20260623_131142_595043_dcf52f97",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "150132f4b2991b04876fec50433024be7333e077d04ac65904b63c9fd797a8cf",
+    "model_py_sha256": "25568a1c8ad1f60962aac753684e4938ef4a68491787017f8ad31eab608f053a"
+  },
+  "run_summary": {
+    "turn_count": 14,
+    "tool_call_count": 14,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-wwii-era-single-engine-fighter-airplane-_20260610_080057_602122_05771485",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-wwii-era-single-engine-fighter-airplane-_20260610_080057_602122_05771485",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

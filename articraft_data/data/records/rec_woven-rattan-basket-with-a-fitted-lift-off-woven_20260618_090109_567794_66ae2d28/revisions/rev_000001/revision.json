@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_woven-rattan-basket-with-a-fitted-lift-off-woven_20260618_090109_567794_66ae2d28",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T09:01:09Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "b912624ebdb1d024106f52fdc352a5b6cc08a409bb5db3dd0e804a01501da7c9",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "b912624ebdb1d024106f52fdc352a5b6cc08a409bb5db3dd0e804a01501da7c9",
+    "model_py_sha256": "54d923da259f72e8877a47ea371ae56dbf496a4374f0577109a666a08b2b8cb7"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-18T12:11:06Z",
+    "record_id": "rec_woven-rattan-basket-with-a-fitted-lift-off-woven_20260618_090109_567794_66ae2d28",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_woven-rattan-basket-with-a-fitted-lift-off-woven_20260618_090109_567794_66ae2d28/compile_report.json",
+      "status": "success",
+      "record_id": "rec_woven-rattan-basket-with-a-fitted-lift-off-woven_20260618_090109_567794_66ae2d28",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "54d923da259f72e8877a47ea371ae56dbf496a4374f0577109a666a08b2b8cb7",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "f356f3820c1a50e8795421d83b26d60fc8f550feddff81582408deed91756de0",
+        "model_py_mtime_ns": 1781784585954260545,
+        "model_py_size_bytes": 14079,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 8580721,
+        "visual_mesh_file_count": 114,
+        "compile_elapsed_seconds": 13.991744428873062
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

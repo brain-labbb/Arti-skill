@@ -1,0 +1,24 @@
+CATEGORY: <Category>
+SUBCATEGORY: <Subcategory>
+TARGET: change the stitched pocket_band + band_divider_{i} needle-retention structure to a row of individual leather retaining loops, one loop per needle.
+DIVERSITY_AXIS: ① skeleton/topology.
+POSITIONING: loop-row leather needle holder (each needle slipped under its own bent-leather loop, like a tool-loop panel); stays a needle case with the needles held on the leather bed by loops.
+KEEP: preserve these parent functional layers by name: base_panel, panel_shell, fold_panel, base_panel_to_fold_panel, needle_{i}, NEEDLE_XS, base_needle_flap, base_panel_to_needle_flap, closure_flap.
+STRUCTURAL_DELTA: remove the single pocket_band strap and the band_divider_{i} divider blocks; add a loop_{i} arch (thin bent-leather bridge) over each needle at the NEEDLE_XS positions through a shared loop helper, so each needle threads under its own loop; loop count equals needle count.
+COMPANION_VARIATIONS: none.
+FORBIDDEN: channel tunnels or a stitched over-band (already covered by other anchors); do NOT change the fold skeleton or the closure mechanism.
+
+This is a <Category>/<Subcategory> family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a <Category>/<Subcategory> (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

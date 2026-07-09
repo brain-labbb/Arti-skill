@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_ghvent_var_glazing_single_pane",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:44:07Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "882ee656f121e22726b4627f57d1b8ab12f427f42e1db98816300eedf25be398",
+  "source": {
+    "run_id": "run_20260705_094407_114631_5f04ff03",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "882ee656f121e22726b4627f57d1b8ab12f427f42e1db98816300eedf25be398",
+    "model_py_sha256": "4ffae2b0d26994e27037d43276e8962fdaa4588354d3fce83329c10239adc522"
+  },
+  "run_summary": {
+    "turn_count": 19,
+    "tool_call_count": 18,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_892757_32a39adc",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_892757_32a39adc",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_892757_32a39adc",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "97ee439c852c16a9586553221cdb5b65a224f12c60643737d4b45e70aaf9dfa8"
+    }
+  ]
+}

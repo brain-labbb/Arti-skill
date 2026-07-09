@@ -1,0 +1,22 @@
+CATEGORY_CONTEXT: This is an Urban Environment/Caster Trolley2 supermarket shopping cart family fork variant. It must still clearly read as a supermarket shopping cart.
+
+TARGET: change only the fixed basket rim protection module by adding very visible colored molded plastic guard sleeves on the upper basket rim: long left/right top-rim sleeves, a front top-rim sleeve, and rounded corner bumper caps. The chrome wire basket, lower shelf, handle, child seat flap, front bumpers, underframe, and all wheels stay the same. The new guards should be thick enough and brightly colored enough to be obvious from first glance, but they are fixed visual geometry attached to the basket rim only.
+
+KEEP: keep the parent joint graph exactly unchanged: basket_to_seat_flap / child_seat_flap and all four caster yaw/spin joints remain identical. Do not add any joint. Do not modify joint origins, axes, or limits.
+
+MOTION_SAFETY: the rim guard sleeves sit on the top rim only, outside the child_seat_flap hinge/swing clearance and far above all caster sweep volumes. Add run_tests checks that (1) the non-fixed joint inventory exactly matches the parent, (2) rim_guard visual names exist on basket, and (3) every rim_guard AABB is above the wheels and not intersecting child_seat_flap.
+
+COMPANION_VARIATIONS: only material/color may change (e.g. red/orange/blue molded plastic). No other structural axis changes.
+
+This is a <Category>/<Subcategory> family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline.
+2. Stays in category. A layperson must still call it a supermarket shopping cart / caster trolley.
+3. At least one real non-fixed joint remains from the parent. Zero moving joints = rejected.
+
+CODE SHAPE:
+- Inline non-moving rim guards as basket visuals, not new fixed-joint parts.
+- Use semantic repeated visual names: rim_guard_side_0, rim_guard_side_1, rim_guard_front, rim_guard_corner_0...
+- Use simple rounded/capsule or box/cylinder-like guard geometry that physically overlaps the existing top rim so the connectivity checker does not report floating/disconnected islands.
+- Add specific run_tests assertions for rim guards and unchanged joint inventory.

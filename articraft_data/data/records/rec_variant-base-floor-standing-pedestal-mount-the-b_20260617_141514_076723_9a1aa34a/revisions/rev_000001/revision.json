@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-base-floor-standing-pedestal-mount-the-b_20260617_141514_076723_9a1aa34a",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T14:15:14Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "875058de6fd482438749012725c0260c778b99923103def6fbadada4bf994e76",
+  "source": {
+    "run_id": "run_20260617_141514_076723_9a1aa34a",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "875058de6fd482438749012725c0260c778b99923103def6fbadada4bf994e76",
+    "model_py_sha256": "d27976bbb216b6cb6e4104126eaa7707940e9662321c9e1b5bc4426757aef59b"
+  },
+  "run_summary": {
+    "turn_count": 17,
+    "tool_call_count": 18,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-triple-faucet-countertop-beverage-dispen_20260610_084909_908684_acfaa2cf",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-triple-faucet-countertop-beverage-dispen_20260610_084909_908684_acfaa2cf",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

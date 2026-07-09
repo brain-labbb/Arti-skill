@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_container_basket_var_banded_wave_weave",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-19T00:00:00Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "6575b21e0873a87ef7bfb97f2ee2c3e760545f8dd4ea25ad3d3a92ac21d17d0d",
+  "source": {
+    "run_id": "run_20260619_000000_banded_wave_weave",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5-codex",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "6575b21e0873a87ef7bfb97f2ee2c3e760545f8dd4ea25ad3d3a92ac21d17d0d",
+    "model_py_sha256": "6af080ee51826e0d3dc555da253ba1f98e2f69a0f5794aa8d542bfa775917a4c"
+  },
+  "run_summary": {
+    "turn_count": 1,
+    "tool_call_count": null,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_container_basket_var_diagonal_twill_weave",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_container_basket_var_diagonal_twill_weave",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

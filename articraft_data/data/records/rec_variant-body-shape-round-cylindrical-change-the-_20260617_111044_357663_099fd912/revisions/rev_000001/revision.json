@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-body-shape-round-cylindrical-change-the-_20260617_111044_357663_099fd912",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T11:10:44Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "40564d1d6d42cf2738d6b1c89b92058235b76bdaa19726926c9e371b66545469",
+  "source": {
+    "run_id": "run_20260617_111044_357663_099fd912",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "40564d1d6d42cf2738d6b1c89b92058235b76bdaa19726926c9e371b66545469",
+    "model_py_sha256": "0fcde03e83b430e0340c50d6f5cc8e75c482e3610d5e7b7335610e142f434307"
+  },
+  "run_summary": {
+    "turn_count": 8,
+    "tool_call_count": 8,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-classic-disposable-flint-pocket-lighter-_20260610_084427_650680_c45ce5f7",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-classic-disposable-flint-pocket-lighter-_20260610_084427_650680_c45ce5f7",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

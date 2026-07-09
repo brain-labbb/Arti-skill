@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-gutt_20260609_185904_296819_efa584a4",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "48c1acb46c6036e6eef904e4f363944751fac19e",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-09T19:57:49Z",
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-gutt_20260609_185904_296819_efa584a4",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_build-a-realistic-articulated-3d-model-of-a-gutt_20260609_185904_296819_efa584a4/compile_report.json",
+      "status": "success",
+      "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-gutt_20260609_185904_296819_efa584a4",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "dc32411480370ccbf3683ceff51e6667631ebb3432844b9b79e2172714d528a6",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "b1bc8157c16029f1ad92a09d4e40ba40496245f80a719ca6138c977922e0285c",
+        "model_py_mtime_ns": 1781033697379000378,
+        "model_py_size_bytes": 19438,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 692674,
+        "visual_mesh_file_count": 21,
+        "compile_elapsed_seconds": 1.5967484302818775
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

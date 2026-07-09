@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_window_var_hopper",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-21T06:03:36Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "e80639189919f61eb7e1da1f4b51f6adb35ece4bcffe392f0dd28a4d00a905e9",
+  "source": {
+    "run_id": "run_20260621_060336_432638_1c6dfe72",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "e80639189919f61eb7e1da1f4b51f6adb35ece4bcffe392f0dd28a4d00a905e9",
+    "model_py_sha256": "32e53ee1ce327c1335a2cfd835c952fe63c1f93c7a0ba607089fdb19a3c8cdee"
+  },
+  "run_summary": {
+    "turn_count": 6,
+    "tool_call_count": 6,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_aluminium-awning-window-with-a-single-top-hung-s_20260608_163252_797981_0b523c52",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_aluminium-awning-window-with-a-single-top-hung-s_20260608_163252_797981_0b523c52",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

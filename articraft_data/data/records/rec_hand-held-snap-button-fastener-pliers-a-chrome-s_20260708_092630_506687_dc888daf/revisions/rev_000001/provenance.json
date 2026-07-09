@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_hand-held-snap-button-fastener-pliers-a-chrome-s_20260708_092630_506687_dc888daf",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.13",
+    "platform": "darwin-arm64",
+    "git_commit": "e07e427df84ab12b2983b648af5ead3c556d0883",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T09:28:39Z",
+    "record_id": "rec_hand-held-snap-button-fastener-pliers-a-chrome-s_20260708_092630_506687_dc888daf",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_hand-held-snap-button-fastener-pliers-a-chrome-s_20260708_092630_506687_dc888daf/compile_report.json",
+      "status": "success",
+      "record_id": "rec_hand-held-snap-button-fastener-pliers-a-chrome-s_20260708_092630_506687_dc888daf",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "6fcc51868c996da8d824320514890a50f9b7ee6da9425e7875f5d89b0fe11a7c",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "bd425cf5a8d41ffee2f37871944cc89c42467047fe380012d2efd01ca683f7c8",
+        "model_py_mtime_ns": 1783502890169029336,
+        "model_py_size_bytes": 11423,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 122998,
+        "visual_mesh_file_count": 5,
+        "compile_elapsed_seconds": 2.219036458998744
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

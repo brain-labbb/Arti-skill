@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_toaster_var_lever_side",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-19T13:25:00Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "dcbb0a42b3620cfe7cf71c09aaa0ba9b7c2488f6fad854b4efad94559b0fb1ec",
+  "source": {
+    "run_id": "run_20260619_132500_322757_c266757e",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "dcbb0a42b3620cfe7cf71c09aaa0ba9b7c2488f6fad854b4efad94559b0fb1ec",
+    "model_py_sha256": "f7551869a71ad994089989f4eed4d2d60575e828f15edf093e1bf421f90a1a2d"
+  },
+  "run_summary": {
+    "turn_count": 17,
+    "tool_call_count": 17,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-compact-two-slice-pop-up-toaster-amazonb_20260610_081022_324275_d8fcb465",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-compact-two-slice-pop-up-toaster-amazonb_20260610_081022_324275_d8fcb465",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

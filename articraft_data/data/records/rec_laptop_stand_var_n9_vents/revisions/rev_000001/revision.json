@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_laptop_stand_var_n9_vents",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T13:42:16Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "1576d05ef3ef5e2df4b2e783b57a761ad1730e77a1ab4d9b9eca302f9ea7c517",
+  "source": {
+    "run_id": "run_20260709_134216_892356_ba3f8da4",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "1576d05ef3ef5e2df4b2e783b57a761ad1730e77a1ab4d9b9eca302f9ea7c517",
+    "model_py_sha256": "edfe0bfc5aed50a144d10a7627b75d9d7f99fc7399fe289ddf475dbe64fa302f"
+  },
+  "run_summary": {
+    "turn_count": 8,
+    "tool_call_count": 7,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_foldable-adjustable-aluminum-laptop-stand-with-s_20260708_044924_835691_defb8533",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_foldable-adjustable-aluminum-laptop-stand-with-s_20260708_044924_835691_defb8533",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_foldable-adjustable-aluminum-laptop-stand-with-s_20260708_044924_835691_defb8533",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "fded924c577326643f477f82170780e01adca28500d4d4de3ae63de7896e9f3b"
+    }
+  ]
+}

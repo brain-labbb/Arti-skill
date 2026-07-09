@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_single_hole_basin_faucet_008_v02",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-12T06:20:24Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "32444f8492a8c8b11df2e6d6a5e3ec0d0c8f98d9dbde9d74b77d519742321a7d",
+  "source": {
+    "run_id": "run_20260612_062024_148409_4b5afe9b",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "32444f8492a8c8b11df2e6d6a5e3ec0d0c8f98d9dbde9d74b77d519742321a7d",
+    "model_py_sha256": "94b09b40942051dc1e5d9532e2bdc2a7cbaeca7b6a2ac0ddfac715c9e0766320"
+  },
+  "run_summary": {
+    "turn_count": 12,
+    "tool_call_count": 14,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-polished-chrome-self-closing-timed-flow-_20260610_084328_663460_02f72c2d",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-polished-chrome-self-closing-timed-flow-_20260610_084328_663460_02f72c2d",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

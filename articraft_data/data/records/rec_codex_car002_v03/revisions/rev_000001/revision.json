@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_codex_car002_v03",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-14T12:34:04Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "55eb24d16077a43e36e9dcd48205780552c1d6ae54d484e3e7afd7697d4b63c9",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "codex",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "55eb24d16077a43e36e9dcd48205780552c1d6ae54d484e3e7afd7697d4b63c9",
+    "model_py_sha256": "397e5654c4b18a972f7784eeb6f46ccf22f47ab97324aed72fb341b02e14ec6a"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_edit_draft"
+  },
+  "parent": {
+    "record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-14T12:59:50Z",
+    "record_id": "rec_codex_car002_v03",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_codex_car002_v03/compile_report.json",
+      "status": "success",
+      "record_id": "rec_codex_car002_v03",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='body' connected=78/84 disconnected=[wide_fender_flare_front_left:Box, wide_fender_flare_front_right:Box, wide_fender_flare_rear_left:Box, wide_fender_flare_rear_right:Box, front_axle_bar:Cylinder, rear_axle_bar:Cylinder]"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 21 overlaps across 7 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "6a38982d4f2f40f7a266b34f9c818ceef4c948d25128ead82a32f6498cdc2999",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "7da7e3372a2c3e2a1788298178d01cd482550664b55c55008f45fb5867a3c6fd",
+        "model_py_mtime_ns": 1781441383750998056,
+        "model_py_size_bytes": 47958,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 2505178,
+        "visual_mesh_file_count": 16,
+        "compile_elapsed_seconds": 24.079136895015836
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

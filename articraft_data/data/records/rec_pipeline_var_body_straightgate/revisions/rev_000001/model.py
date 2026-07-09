@@ -1,0 +1,418 @@
+from __future__ import annotations
+
+# Industrial yellow gas/oil pipeline section with a straight-through gate valve.
+#
+# This fork keeps the parent flange pair, bonnet stack, stem, and chrome
+# three-spoke handwheel, but replaces the former elbowed/inline-barrel layer
+# with a full-bore straight valve barrel. The glossy yellow line now runs
+# flange-to-flange with no 90-degree elbow or downward drop.
+#
+# Articulated mechanism: the HANDWHEEL is the operator control. It spins
+# continuously about the vertical valve stem (right-hand rule about +Z). In a
+# real rising-stem gate valve this rotation drives the gate up/down; here we
+# articulate the directly-visible rotary control (the handwheel) about the stem.
+
+import math
+
+import cadquery as cq
+from sdk import (
+    ArticulatedObject,
+    ArticulationType,
+    MotionLimits,
+    Origin,
+    TestContext,
+    TestReport,
+    mesh_from_cadquery,
+)
+
+TOL = 0.0012
+ATOL = 0.2
+
+# ---------------------------------------------------------------------------
+# Real-world dimensions (meters)
+# ---------------------------------------------------------------------------
+PIPE_OR = 0.060          # pipe outer radius (~120 mm OD line)
+PIPE_WALL = 0.010        # pipe wall thickness
+PIPE_IR = PIPE_OR - PIPE_WALL
+
+ELBOW_BEND_R = 0.110     # retained layout offset from the parent reference
+RUN_RIGHT_LEN = 0.150    # straight inlet run before the first flange
+VALVE_RUN_LEN = 0.330    # length of the central valve-body region
+RUN_END_LEN = 0.150      # horizontal run after the valve to the open end
+DROP_LEN = 0.230         # vertical drop of the elbow leg
+
+FLANGE_R = 0.085         # bolted flange outer radius
+FLANGE_T = 0.013         # flange half-thickness (disk spans +-FLANGE_T)
+BOLT_CIRCLE_R = 0.066    # bolt circle radius
+BOLT_HEAD_R = 0.0075
+BOLT_HEAD_H = 0.006
+N_BOLTS = 12
+
+VALVE_BODY_R = 0.078     # central valve body bulge radius
+VALVE_BODY_LEN = 0.150
+
+BONNET_BASE_R = 0.058
+BONNET_TOP_R = 0.034
+BONNET_H = 0.072         # bonnet rises above the pipe top
+GLAND_R = 0.030
+GLAND_H = 0.026
+
+STEM_R = 0.0085
+STEM_LEN = 0.090         # exposed stem from bonnet top up into hub
+
+HUB_R = 0.022
+HUB_H = 0.026
+WHEEL_RIM_R = 0.082      # handwheel outer radius
+WHEEL_TUBE_R = 0.0085    # torus tube radius of the rim
+SPOKE_R = 0.0055
+N_SPOKES = 3
+
+# World layout: pipe centerline along +X at height Z0. The handwheel sits on
+# top at the valve center; there is intentionally no elbow or dropped leg.
+Z0 = DROP_LEN + PIPE_OR + 0.02       # centerline height above ground
+X_ELBOW = 0.0                        # x of vertical leg centerline
+X_VALVE_CENTER = X_ELBOW + ELBOW_BEND_R + RUN_RIGHT_LEN + VALVE_RUN_LEN / 2.0
+
+
+# ---------------------------------------------------------------------------
+# Geometry builders (CadQuery)
+# ---------------------------------------------------------------------------
+def _pipe_tube(length: float) -> cq.Workplane:
+    """A hollow straight pipe segment of given length, axis along +X, starting at x=0."""
+    outer = cq.Workplane("YZ").circle(PIPE_OR).extrude(length)
+    inner = cq.Workplane("YZ").circle(PIPE_IR).extrude(length)
+    return outer.cut(inner)
+
+
+def _pipeline_run() -> cq.Workplane:
+    """Yellow straight-through line pipe, hollow and open-ended.
+
+    The parent elbow has been removed: this is a single full-bore horizontal
+    barrel running through both flange joints with no vertical leg.
+    """
+    x_start = X_ELBOW
+    x_end = X_ELBOW + ELBOW_BEND_R + RUN_RIGHT_LEN + VALVE_RUN_LEN + RUN_END_LEN
+
+    def _tube_cyl(origin, normal, length: float) -> cq.Workplane:
+        return (
+            cq.Workplane(cq.Plane(origin=origin, normal=normal))
+            .circle(PIPE_OR)
+            .circle(PIPE_IR)
+            .extrude(length)
+        )
+
+    # Authored as a true annular extrusion, not a solid cylinder post-cut by a
+    # bore, so both visible ends remain open rather than capped.
+    return _tube_cyl((x_start, 0.0, Z0), (1, 0, 0), x_end - x_start)
+
+
+def _flange(x_center: float) -> cq.Workplane:
+    """Bolted raised-face flange (annular steel collar) at the given x."""
+    plane = cq.Plane(origin=(x_center, 0.0, Z0), normal=(1, 0, 0))
+    disk = cq.Workplane(plane).circle(FLANGE_R).extrude(FLANGE_T, both=True)
+    bore = cq.Workplane(plane).circle(PIPE_IR).extrude(FLANGE_T + 0.004, both=True)
+    flange = disk.cut(bore)
+    # Bolt heads spaced around the bolt circle, protruding on both faces.
+    for i in range(N_BOLTS):
+        ang = 2.0 * math.pi * i / N_BOLTS
+        by = BOLT_CIRCLE_R * math.cos(ang)
+        bz = BOLT_CIRCLE_R * math.sin(ang)
+        bolt = (
+            cq.Workplane(cq.Plane(origin=(x_center, by, Z0 + bz), normal=(1, 0, 0)))
+            .polygon(6, BOLT_HEAD_R * 2.0)
+            .extrude(FLANGE_T + BOLT_HEAD_H, both=True)
+        )
+        flange = flange.union(bolt)
+    return flange
+
+
+def _flange_pair() -> cq.Workplane:
+    """All four flanges: a bolted pair at the inlet joint and at the outlet joint.
+
+    Each joint is two flange disks bolted face-to-face around the pipe; the span
+    between the joints stays bare yellow pipe (plus the yellow valve body),
+    matching the reference rather than wrapping it in a steel sleeve.
+    """
+    x_in = X_ELBOW + ELBOW_BEND_R + RUN_RIGHT_LEN
+    x_out = x_in + VALVE_RUN_LEN
+    f = _flange(x_in - FLANGE_T - 0.001)
+    f = f.union(_flange(x_in + FLANGE_T + 0.001))
+    f = f.union(_flange(x_out - FLANGE_T - 0.001))
+    f = f.union(_flange(x_out + FLANGE_T + 0.001))
+    return f
+
+
+def _valve_body() -> cq.Workplane:
+    """Straight full-bore valve body barrel spanning flange-to-flange."""
+    plane = cq.Plane(origin=(X_VALVE_CENTER, 0.0, Z0), normal=(1, 0, 0))
+    body = cq.Workplane(plane).circle(VALVE_BODY_R).extrude(VALVE_RUN_LEN / 2.0, both=True)
+    bore = cq.Workplane(plane).circle(PIPE_IR).extrude(VALVE_RUN_LEN / 2.0 + 0.004, both=True)
+
+    # Subtle raised cast boss under the bonnet, fused into the same yellow body
+    # layer, keeps the valve readable without changing the top functional stack.
+    saddle = (
+        cq.Workplane("XY")
+        .workplane(offset=Z0 + PIPE_OR - 0.004)
+        .ellipse(BONNET_BASE_R * 0.95, BONNET_BASE_R * 0.72)
+        .workplane(offset=0.030)
+        .ellipse(BONNET_BASE_R * 0.78, BONNET_BASE_R * 0.58)
+        .loft(combine=True)
+        .translate((X_VALVE_CENTER, 0.0, 0.0))
+    )
+    return body.cut(bore).union(saddle)
+
+
+def _bonnet_stack() -> cq.Workplane:
+    """Steel bonnet neck, packing gland nut, and gland flange above the valve."""
+    z_top = Z0 + PIPE_OR  # top of the valve body roughly
+    # Tapered bonnet neck rising from the valve body top.
+    bonnet = (
+        cq.Workplane("XY")
+        .workplane(offset=z_top)
+        .circle(BONNET_BASE_R)
+        .workplane(offset=BONNET_H)
+        .circle(BONNET_TOP_R)
+        .loft(combine=True)
+        .translate((X_VALVE_CENTER, 0.0, 0.0))
+    )
+    # Hexagonal gland/packing nut on top of the bonnet.
+    gland = (
+        cq.Workplane(cq.Plane(origin=(X_VALVE_CENTER, 0.0, z_top + BONNET_H), normal=(0, 0, 1)))
+        .polygon(6, GLAND_R * 2.0)
+        .extrude(GLAND_H)
+    )
+    return bonnet.union(gland)
+
+
+def _stem() -> cq.Workplane:
+    """Rising threaded valve stem, vertical along +Z up into the handwheel hub."""
+    z_base = Z0 + PIPE_OR + BONNET_H + GLAND_H - 0.006
+    stem = (
+        cq.Workplane(cq.Plane(origin=(X_VALVE_CENTER, 0.0, z_base), normal=(0, 0, 1)))
+        .circle(STEM_R)
+        .extrude(STEM_LEN)
+    )
+    return stem
+
+
+def _handwheel() -> cq.Workplane:
+    """Chrome three-spoke handwheel built around its own center at local origin.
+
+    Local frame: wheel lies in the XY plane, spin axis = +Z, hub at origin.
+    """
+    # Outer rim: a torus.
+    rim = (
+        cq.Workplane("XY")
+        .add(
+            cq.Solid.makeTorus(
+                WHEEL_RIM_R - WHEEL_TUBE_R,
+                WHEEL_TUBE_R,
+            )
+        )
+    )
+    wheel = rim
+    # Central hub (short collar around the stem axis).
+    hub = cq.Workplane("XY").circle(HUB_R).extrude(HUB_H, both=True)
+    wheel = wheel.union(hub)
+    # Three spokes from hub to rim.
+    for i in range(N_SPOKES):
+        ang = 2.0 * math.pi * i / N_SPOKES
+        # spoke is a cylinder lying in the wheel plane, pointing outward at angle.
+        spoke = (
+            cq.Workplane("XY")
+            .center(0.0, 0.0)
+            .circle(SPOKE_R)
+            .extrude(WHEEL_RIM_R - WHEEL_TUBE_R)
+        )
+        # The default extrude is along +Z; rotate so the spoke lies radially in XY.
+        spoke = spoke.rotate((0, 0, 0), (0, 1, 0), 90.0)  # now along +X
+        spoke = spoke.rotate((0, 0, 0), (0, 0, 1), math.degrees(ang))
+        wheel = wheel.union(spoke)
+    return wheel
+
+
+# ---------------------------------------------------------------------------
+# Model assembly
+# ---------------------------------------------------------------------------
+def build_object_model() -> ArticulatedObject:
+    model = ArticulatedObject(name="gate_valve_pipeline")
+
+    model.material("pipe_yellow", rgba=(0.96, 0.78, 0.05, 1.0))
+    model.material("valve_steel", rgba=(0.52, 0.54, 0.57, 1.0))
+    model.material("bolt_steel", rgba=(0.40, 0.41, 0.43, 1.0))
+    model.material("chrome", rgba=(0.78, 0.80, 0.83, 1.0))
+
+    # ---- ROOT: the whole stationary pipeline + valve body + bonnet + stem ----
+    body = model.part("pipeline_body")
+    body.visual(
+        mesh_from_cadquery(_pipeline_run(), "pipeline_run", tolerance=TOL, angular_tolerance=ATOL),
+        material="pipe_yellow",
+        name="pipe_yellow",
+    )
+    body.visual(
+        mesh_from_cadquery(_valve_body(), "valve_body", tolerance=TOL, angular_tolerance=ATOL),
+        material="pipe_yellow",
+        name="valve_body",
+    )
+    body.visual(
+        mesh_from_cadquery(_flange_pair(), "flanges", tolerance=TOL, angular_tolerance=ATOL),
+        material="bolt_steel",
+        name="flanges",
+    )
+    body.visual(
+        mesh_from_cadquery(_bonnet_stack(), "bonnet_stack", tolerance=TOL, angular_tolerance=ATOL),
+        material="valve_steel",
+        name="bonnet",
+    )
+    body.visual(
+        mesh_from_cadquery(_stem(), "valve_stem", tolerance=TOL, angular_tolerance=ATOL),
+        material="chrome",
+        name="valve_stem",
+    )
+
+    # ---- HANDWHEEL: the rotary operator control ----
+    wheel = model.part("handwheel")
+    wheel.visual(
+        mesh_from_cadquery(_handwheel(), "handwheel", tolerance=TOL, angular_tolerance=ATOL),
+        material="chrome",
+        name="handwheel",
+    )
+
+    # Handwheel spins about the vertical stem. Its local frame has the hub at the
+    # origin and the spin axis along +Z, so we place the joint at the stem top.
+    z_wheel = Z0 + PIPE_OR + BONNET_H + GLAND_H + STEM_LEN - 0.014
+    model.articulation(
+        "valve_handwheel",
+        ArticulationType.CONTINUOUS,
+        parent=body,
+        child=wheel,
+        origin=Origin(xyz=(X_VALVE_CENTER, 0.0, z_wheel)),
+        axis=(0.0, 0.0, 1.0),
+        motion_limits=MotionLimits(effort=12.0, velocity=4.0),
+    )
+
+    return model
+
+
+def run_tests() -> TestReport:
+    ctx = TestContext(object_model)
+    body = object_model.get_part("pipeline_body")
+    wheel = object_model.get_part("handwheel")
+    joint = object_model.get_articulation("valve_handwheel")
+
+    # --- Joint is the rotary handwheel control about the vertical stem ---
+    ctx.check(
+        "handwheel joint is continuous",
+        joint.joint_type == "continuous",
+        details=f"joint_type={joint.joint_type}",
+    )
+    ax = tuple(round(c, 6) for c in joint.axis)
+    ctx.check(
+        "handwheel spin axis is vertical (+Z)",
+        ax == (0.0, 0.0, 1.0),
+        details=f"axis={ax}",
+    )
+
+    # --- Handwheel sits on top, above the bonnet/valve, centered over the stem ---
+    wheel_aabb = ctx.part_world_aabb(wheel)
+    body_aabb = ctx.part_world_aabb(body)
+    ctx.check(
+        "handwheel is the highest assembly (on top of the valve)",
+        wheel_aabb is not None
+        and body_aabb is not None
+        and wheel_aabb[1][2] >= body_aabb[1][2] - 0.001,
+        details=f"wheel_top={wheel_aabb[1][2]:.3f}, body_top={body_aabb[1][2]:.3f}",
+    )
+    wheel_pos = ctx.part_world_position(wheel)
+    ctx.check(
+        "handwheel centered over the valve stem",
+        wheel_pos is not None
+        and abs(wheel_pos[0] - X_VALVE_CENTER) < 0.02
+        and abs(wheel_pos[1]) < 0.02,
+        details=f"wheel_pos={wheel_pos}, stem_x={X_VALVE_CENTER:.3f}",
+    )
+
+    # --- Rotating the handwheel spins the rim but keeps the hub center fixed ---
+    rim_rest = ctx.part_element_world_aabb(wheel, elem="handwheel")
+    hub_rest = ctx.part_world_position(wheel)
+    with ctx.pose({joint: math.pi / 2.0}):
+        hub_turned = ctx.part_world_position(wheel)
+    ctx.check(
+        "turning the handwheel keeps the hub center on the stem axis",
+        hub_rest is not None
+        and hub_turned is not None
+        and abs(hub_turned[0] - hub_rest[0]) < 1e-4
+        and abs(hub_turned[1] - hub_rest[1]) < 1e-4
+        and abs(hub_turned[2] - hub_rest[2]) < 1e-4,
+        details=f"rest={hub_rest}, turned={hub_turned}",
+    )
+    ctx.check(
+        "handwheel rim has real radial extent (it is a spoked wheel, not a disk)",
+        rim_rest is not None
+        and (rim_rest[1][0] - rim_rest[0][0]) > 2.0 * (WHEEL_RIM_R - 0.01)
+        and (rim_rest[1][1] - rim_rest[0][1]) > 2.0 * (WHEEL_RIM_R - 0.01),
+        details=f"rim_aabb={rim_rest}",
+    )
+
+    # --- Pipe is now a straight-through barrel: no elbow or dropped leg ---
+    pipe_aabb = ctx.part_element_world_aabb(body, elem="pipe_yellow")
+    ctx.check(
+        "yellow pipe is a straight full-bore run with no elbow drop",
+        pipe_aabb is not None
+        and (pipe_aabb[1][0] - pipe_aabb[0][0]) > 0.70
+        and (pipe_aabb[1][2] - pipe_aabb[0][2]) < 2.0 * PIPE_OR + 0.018
+        and pipe_aabb[0][2] > Z0 - PIPE_OR - 0.006,
+        details=f"pipe_aabb={pipe_aabb}",
+    )
+
+    valve_aabb = ctx.part_element_world_aabb(body, elem="valve_body")
+    ctx.check(
+        "straight valve body barrel spans flange-to-flange",
+        valve_aabb is not None
+        and (valve_aabb[1][0] - valve_aabb[0][0]) >= VALVE_RUN_LEN - 0.006
+        and (valve_aabb[1][1] - valve_aabb[0][1]) > 2.0 * PIPE_OR + 0.025
+        and (valve_aabb[1][2] - valve_aabb[0][2]) > 2.0 * PIPE_OR + 0.025,
+        details=f"valve_aabb={valve_aabb}, expected_span={VALVE_RUN_LEN:.3f}",
+    )
+
+    # --- Bonnet rises between the pipe and the handwheel (real supporting stack) ---
+    bonnet_aabb = ctx.part_element_world_aabb(body, elem="bonnet")
+    stem_aabb = ctx.part_element_world_aabb(body, elem="valve_stem")
+    ctx.check(
+        "bonnet + stem form the support stack reaching up toward the handwheel",
+        bonnet_aabb is not None
+        and stem_aabb is not None
+        and stem_aabb[1][2] > bonnet_aabb[1][2]
+        and stem_aabb[1][2] >= wheel_aabb[0][2] - 0.005,
+        details=f"bonnet_top={bonnet_aabb[1][2]:.3f}, stem_top={stem_aabb[1][2]:.3f}, "
+        f"wheel_bottom={wheel_aabb[0][2]:.3f}",
+    )
+
+    # --- Flanges present and seated around the valve body ---
+    flange_aabb = ctx.part_element_world_aabb(body, elem="flanges")
+    ctx.check(
+        "bolted flanges present and taller/wider than the bare pipe",
+        flange_aabb is not None
+        and (flange_aabb[1][1] - flange_aabb[0][1]) > 2.0 * PIPE_OR + 0.02,
+        details=f"flange_aabb={flange_aabb}",
+    )
+
+    # The handwheel hub is intentionally seated over the captured rising stem.
+    ctx.allow_overlap(
+        wheel,
+        body,
+        elem_a="handwheel",
+        elem_b="valve_stem",
+        reason="The handwheel hub is seated over the captured rising valve stem (nested shaft fit).",
+    )
+    ctx.expect_overlap(
+        wheel, body, axes="xy",
+        elem_a="handwheel", elem_b="valve_stem",
+        min_overlap=2.0 * STEM_R - 0.002,
+        name="handwheel hub engages the valve stem",
+    )
+
+    return ctx.report()
+
+
+object_model = build_object_model()

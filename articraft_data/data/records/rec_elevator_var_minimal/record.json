@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_elevator_var_minimal",
+  "created_at": "2026-06-28T06:41:42Z",
+  "updated_at": "2026-06-28T06:44:27Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "structure",
+  "source": {
+    "run_id": "run_20260628_064142_300921_50b82962",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "elevator-minimal",
+    "prompt_preview": "Change the landing fixtures: produce a MINIMAL landing with NO separate indicator box and NO hall call-button plate at all, just the wall surround, the cente..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "c5f9110b7b4616942225ecbeb343632d3315116cb2103b98cfacda76955644a8",
+    "model_py_sha256": "47d408e04ca522b1138a150c0b7f88f800571646241167ac8ea3839b4159a9a6"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_a-passenger-elevator-landing-entrance-in-a-dark-_20260608_165157_614797_f45c0537",
+    "parent_record_id": "rec_a-passenger-elevator-landing-entrance-in-a-dark-_20260608_165157_614797_f45c0537",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

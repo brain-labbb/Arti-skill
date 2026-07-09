@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_printer_var_foldinput",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T10:48:34Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "8f76a00563595a1f808ae8b059bfbb7693ed51347397dd5bfaec16b7feed0973",
+  "source": {
+    "run_id": "run_20260705_104834_045716_2db0d8ca",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "8f76a00563595a1f808ae8b059bfbb7693ed51347397dd5bfaec16b7feed0973",
+    "model_py_sha256": "ccf6fd9b314dc06710cacb5e211fe2994bb01646084637f83d5e6a980d0cff54"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 11,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-white-hp-deskjet-compact-all-in-one-inkjet-pri_20260624_124934_795287_c7dd9a61",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-white-hp-deskjet-compact-all-in-one-inkjet-pri_20260624_124934_795287_c7dd9a61",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_a-white-hp-deskjet-compact-all-in-one-inkjet-pri_20260624_124934_795287_c7dd9a61",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/003.png",
+      "sha256": "f79c40536aaa5eda8c8af10f7b827db9029beefd82aae9a061bbb5aaeb3a07e4"
+    }
+  ]
+}

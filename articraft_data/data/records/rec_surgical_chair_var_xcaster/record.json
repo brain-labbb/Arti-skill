@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_surgical_chair_var_xcaster",
+  "created_at": "2026-06-23T13:42:41Z",
+  "updated_at": "2026-06-23T13:46:10Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260623_134241_217270_661f83b3",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "surgical_chair-xcaster",
+    "prompt_preview": "Change the base to a four-arm cross shaped caster base instead of the five-spoke star, keeping the twin-wheel casters and the yellow hub. Emit the four arms..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "fe3a578a72806d8b661a9a114ca93a4d6deadb03a24c3e3243426c0851a02f76",
+    "model_py_sha256": "ee97c1e5bc2ac36f62190bbbe199528bee5d597f8df4ee2dfedeea635ba82a81"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_build-a-realistic-articulated-3d-model-of-a-surg_20260609_183631_452724_821a91c4",
+    "parent_record_id": "rec_build-a-realistic-articulated-3d-model-of-a-surg_20260609_183631_452724_821a91c4",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

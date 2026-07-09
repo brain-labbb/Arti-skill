@@ -1,0 +1,25 @@
+CATEGORY: Camping_Outdoor Gear
+SUBCATEGORY: Trekking pole collapsible
+TARGET: change the number of telescoping shaft sections from 3 (upper/mid/lower) to 4 by adding one more nested telescoping stage per pole.
+DIVERSITY_AXIS: N multiplicity.
+POSITIONING: A 4-section telescoping flick-lock trekking pole (compact-fold travel/backpacking pole with an extra stage for a shorter packed length); same subcategory with more collapse stages.
+KEEP: preserve these parent functional layers by name: upper_assemblies, mid_stage_{i}, lower_stage_{i}, upper_to_mid_{i} (PRISMATIC), mid_to_lower_{i} (PRISMATIC), upper_clamp_hinge_{i} / lower_clamp_hinge_{i} (REVOLUTE flick levers via _add_lever_visuals), _make_cork_handle_mesh, _make_tip_mesh, _make_basket_mesh, _cyl_z helper.
+STRUCTURAL_DELTA: insert an additional intermediate telescoping stage part (e.g. mid2_stage_{i}) between mid_stage_{i} and lower_stage_{i}, with its own PRISMATIC joint and its own flick-lock lever/hinge; refactor the per-stage shaft build into a shared helper emitted in a loop with indexed names so 4 nested tubes of decreasing diameter chain via prismatic joints; keep the outer POLE_X pole loop.
+MULTIPLICITY: target N=4 telescoping sections; copied object is the shaft-stage part (tube + sleeve + clamp collar + flick lever) placed as a linear nested chain by decreasing radius; one prismatic joint + one flick lever per added stage; N samples 2/3/4.
+COMPANION_VARIATIONS: none.
+FORBIDDEN: do not change lock mechanism, grip, or tip family; do not fold; add stages via loop, not hand-written duplicate blocks.
+
+This is a Camping_Outdoor Gear/Trekking pole collapsible family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Camping_Outdoor Gear/Trekking pole collapsible (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

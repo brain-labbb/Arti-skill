@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_codex_car002_v07",
+  "created_at": "2026-06-14T12:34:19Z",
+  "updated_at": "2026-06-14T16:39:41Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": null,
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "external_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "sports_car",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "openai",
+  "model_id": "codex",
+  "display": {
+    "title": "Codex Car 002 pop-up headlights",
+    "prompt_preview": "Variant 07 external-agent takeover: edit the existing model.py to add mechanically clear pop-up headlight cover panels on the front nose with visible seam ga..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "3261ae73ddd3fbb8bdd9d157bc2d030c8b2cae80f93ed4fefc0eb9b32bbccc40",
+    "model_py_sha256": "d99fd2411fccb474d6d1d499f1c044b4d31472577790cc6158dca0db14cf06ad"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "parent_record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  },
+  "creator": {
+    "mode": "external_agent",
+    "agent": "codex",
+    "trace_available": false
+  }
+}

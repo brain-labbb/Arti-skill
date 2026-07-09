@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-burner-count-6-give-the-cooktop-exactly-_20260618_065032_674022_3b7e7039",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T06:50:32Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "17202758e0105621a5e46f4616661b79875d7b157778d4124f402e0eadd56519",
+  "source": {
+    "run_id": "run_20260618_065032_674022_3b7e7039",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "17202758e0105621a5e46f4616661b79875d7b157778d4124f402e0eadd56519",
+    "model_py_sha256": "cc9c138f0e67bb18b516eb0df658cacab726d3053ecafb7fc830371c23d52b4e"
+  },
+  "run_summary": {
+    "turn_count": 9,
+    "tool_call_count": 9,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-compact-freestanding-gas-range-cooker-ap_20260610_085103_861011_ee507c92",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-compact-freestanding-gas-range-cooker-ap_20260610_085103_861011_ee507c92",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

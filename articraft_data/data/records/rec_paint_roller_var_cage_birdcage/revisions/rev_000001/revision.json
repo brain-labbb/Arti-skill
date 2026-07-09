@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_paint_roller_var_cage_birdcage",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T06:55:05Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "42ad29002ec6af40e4b5db6e0e8a49ffb4c167fa6ff1091b4e2328f64477dedb",
+  "source": {
+    "run_id": "run_20260618_065505_012968_ee9520a6",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "42ad29002ec6af40e4b5db6e0e8a49ffb4c167fa6ff1091b4e2328f64477dedb",
+    "model_py_sha256": "053bedf26a2cd2145f5f72a5d2bf41c5f71d146c0c7b7e928f555ee0de36a8c6"
+  },
+  "run_summary": {
+    "turn_count": 7,
+    "tool_call_count": 7,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-pain_20260609_163938_915351_ec6d7dba",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-pain_20260609_163938_915351_ec6d7dba",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

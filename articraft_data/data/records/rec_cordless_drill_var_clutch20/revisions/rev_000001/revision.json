@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_cordless_drill_var_clutch20",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T13:59:13Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "401c724e75f737b17ab7b12acbd93651365a95c2e30c8f47d786656f7abfc16f",
+  "source": {
+    "run_id": "run_20260623_135913_935759_c22cee96",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "401c724e75f737b17ab7b12acbd93651365a95c2e30c8f47d786656f7abfc16f",
+    "model_py_sha256": "d953d1dd597dd309b8d6d63b50ee5833965d56fea74c9a4b45900e7512ff22cc"
+  },
+  "run_summary": {
+    "turn_count": 6,
+    "tool_call_count": 5,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-handheld-cordless-drill-driver-about-0-2_20260610_085501_032015_611bf0fa",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-handheld-cordless-drill-driver-about-0-2_20260610_085501_032015_611bf0fa",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_wheelchair_var_desk_armrest",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:57:52Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "9659abb7d3d16306671f2179fa2eb452502452a8e5e9dc415b9c59154ac8284e",
+  "source": {
+    "run_id": "run_20260705_095752_951015_dc32a6cb",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 5.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "9659abb7d3d16306671f2179fa2eb452502452a8e5e9dc415b9c59154ac8284e",
+    "model_py_sha256": "08863b79e6f715079889fefcd685a02b2eb6441802cf1b69417c84d4640de9e0"
+  },
+  "run_summary": {
+    "turn_count": 22,
+    "tool_call_count": 21,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-manual-wheelchair-two-large-rear-drive-wheels-_20260623_174436_818325_dcd9a412",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-manual-wheelchair-two-large-rear-drive-wheels-_20260623_174436_818325_dcd9a412",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_a-manual-wheelchair-two-large-rear-drive-wheels-_20260623_174436_818325_dcd9a412",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "6a07e93995a38d2fc8f88b394914ec6abc105bc9509ca4fceab8a9addd4f4534"
+    }
+  ]
+}

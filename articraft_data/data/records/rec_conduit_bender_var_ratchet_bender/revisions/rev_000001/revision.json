@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_conduit_bender_var_ratchet_bender",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T10:27:10Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "8d96605a3816c0bd6984f48a844d906095d8f67178e553b7c0758535e01f6cc1",
+  "source": {
+    "run_id": "run_20260705_102710_167268_dc43317f",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "8d96605a3816c0bd6984f48a844d906095d8f67178e553b7c0758535e01f6cc1",
+    "model_py_sha256": "e5e923ff1c63bd53505de367f502836a21d671e96b81b5e1aa8e05f76b4f909c"
+  },
+  "run_summary": {
+    "turn_count": 10,
+    "tool_call_count": 10,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_228545_39453ad4",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_228545_39453ad4",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_228545_39453ad4",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "b1e9de995133c281aa509b27a8b86768bd3681f9b5e91debc658e6d7a9b49565"
+    }
+  ]
+}

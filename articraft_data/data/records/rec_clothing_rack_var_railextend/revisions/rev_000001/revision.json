@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_clothing_rack_var_railextend",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T12:41:00Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "9a3a383aad1ff85b632d9c4fcc0acc1b99d8ffe8c11d2af1c269bcf9620a3683",
+  "source": {
+    "run_id": "run_20260709_124100_465742_5cb0a127",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "9a3a383aad1ff85b632d9c4fcc0acc1b99d8ffe8c11d2af1c269bcf9620a3683",
+    "model_py_sha256": "6dd4790fecf40f86efc25ad606ae1a915d843a523ae5e6a5c3229a6400f75f51"
+  },
+  "run_summary": {
+    "turn_count": 36,
+    "tool_call_count": 36,
+    "compile_attempt_count": 6,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_retail_shop_fixtures__clothing_rack__002_png_fd3af89368ea4e9e93d75f404754c26e",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_retail_shop_fixtures__clothing_rack__002_png_fd3af89368ea4e9e93d75f404754c26e",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_retail_shop_fixtures__clothing_rack__002_png_fd3af89368ea4e9e93d75f404754c26e",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "af8f4a2f6596824f02f573deb9de477529c57a895505554a8cb7383c4fd8c110"
+    }
+  ]
+}

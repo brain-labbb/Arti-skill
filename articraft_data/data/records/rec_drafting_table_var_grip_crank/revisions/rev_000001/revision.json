@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_drafting_table_var_grip_crank",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T13:04:48Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "263dbed92d747b4dacd27047bb8f9c7ded84f6e60e61d918fbfc36bd315b3c34",
+  "source": {
+    "run_id": "run_20260709_130448_602010_dc3c779e",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "263dbed92d747b4dacd27047bb8f9c7ded84f6e60e61d918fbfc36bd315b3c34",
+    "model_py_sha256": "d3d7cb9fa96a82d1245fb4d6f5f2e3d8a43f400b467783cbb85d0be0a0cabd5a"
+  },
+  "run_summary": {
+    "turn_count": 18,
+    "tool_call_count": 18,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_workspace__drafting_table__001_png_5a8e04ab8781490d928f4f521d03383a",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_workspace__drafting_table__001_png_5a8e04ab8781490d928f4f521d03383a",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_workspace__drafting_table__001_png_5a8e04ab8781490d928f4f521d03383a",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "5f266fa23ec99dc30bdf5a290d41bccef771f53b434a0c9418f7ff8d9da80191"
+    }
+  ]
+}

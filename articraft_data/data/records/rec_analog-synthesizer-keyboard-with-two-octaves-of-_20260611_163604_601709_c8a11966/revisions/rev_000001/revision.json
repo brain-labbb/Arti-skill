@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_analog-synthesizer-keyboard-with-two-octaves-of-_20260611_163604_601709_c8a11966",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-11T16:36:04Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "9f0c2ecc6d8d465f30aa5cbf77a662d02672ef7fbc4dd0c2fc4eb31d70bd74bc",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "9f0c2ecc6d8d465f30aa5cbf77a662d02672ef7fbc4dd0c2fc4eb31d70bd74bc",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-11T17:34:12Z",
+    "record_id": "rec_analog-synthesizer-keyboard-with-two-octaves-of-_20260611_163604_601709_c8a11966",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_analog-synthesizer-keyboard-with-two-octaves-of-_20260611_163604_601709_c8a11966/compile_report.json",
+      "status": "success",
+      "record_id": "rec_analog-synthesizer-keyboard-with-two-octaves-of-_20260611_163604_601709_c8a11966",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 15 overlaps across 15 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "702b5f67a4d3ed85d6457364e5e31ab1176f5a2d4d4e26a5d104f462b228be46",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "fed6f7dedb404e26b8a6c19d12aa8d9c1c1067fabccf1bb7784cc165d71de5b3",
+        "model_py_mtime_ns": 1781199073133369706,
+        "model_py_size_bytes": 20929,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 131297,
+        "visual_mesh_file_count": 7,
+        "compile_elapsed_seconds": 6.862941147759557
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

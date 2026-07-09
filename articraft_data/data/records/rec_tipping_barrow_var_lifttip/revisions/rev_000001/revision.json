@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_tipping_barrow_var_lifttip",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-27T03:52:53Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "7189b3b393e2466dfb1f75df5b6c87108a1bda170b5c235dd147750146e05f7f",
+  "source": {
+    "run_id": "run_20260627_035253_381547_439b9e34",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "7189b3b393e2466dfb1f75df5b6c87108a1bda170b5c235dd147750146e05f7f",
+    "model_py_sha256": "8c3c9f6e7a051fa4fffb9b11f8535010ff6a281bf180b1269dc7483de549c7d7"
+  },
+  "run_summary": {
+    "turn_count": 9,
+    "tool_call_count": 9,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_heavy-duty-plastic-tilt-truck-dump-cart-a-large-_20260608_164439_693743_747a4fc9",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_heavy-duty-plastic-tilt-truck-dump-cart-a-large-_20260608_164439_693743_747a4fc9",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

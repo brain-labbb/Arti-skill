@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_model-a-pair-of-compact-flush-cut-wire-snips-ele_20260610_085045_783699_e0ef2013",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "48c1acb46c6036e6eef904e4f363944751fac19e",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-11T03:08:05Z",
+    "record_id": "rec_model-a-pair-of-compact-flush-cut-wire-snips-ele_20260610_085045_783699_e0ef2013",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-a-pair-of-compact-flush-cut-wire-snips-ele_20260610_085045_783699_e0ef2013/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-a-pair-of-compact-flush-cut-wire-snips-ele_20260610_085045_783699_e0ef2013",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "f2c6efaff4a6169c2f476797426890bf0ec48ff2cf3ea6c8de036545d5211da8",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "b0e29257a9666ae6047d00797f446b022f14618d006e58fd6cc23f672d7ac32d",
+        "model_py_mtime_ns": 1781145181505185413,
+        "model_py_size_bytes": 16181,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 991167,
+        "visual_mesh_file_count": 11,
+        "compile_elapsed_seconds": 15.906677655875683
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

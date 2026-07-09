@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_washmachine_var_flip_lid_dispenser",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-20T14:17:55Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "53fabea5006ac1e996a03b54c359b9250499a3fff0e7ab10a47640b0cf2c0985",
+  "source": {
+    "run_id": "run_20260620_141755_384061_94313728",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "53fabea5006ac1e996a03b54c359b9250499a3fff0e7ab10a47640b0cf2c0985",
+    "model_py_sha256": "4d563981f196124148a17d3357fddc4fcf5929f8932d4ed0626f769af7e33af2"
+  },
+  "run_summary": {
+    "turn_count": 24,
+    "tool_call_count": 24,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_white-front-loading-washing-machine-with-a-pull-_20260605_154143_807145_3205b533",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_white-front-loading-washing-machine-with-a-pull-_20260605_154143_807145_3205b533",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

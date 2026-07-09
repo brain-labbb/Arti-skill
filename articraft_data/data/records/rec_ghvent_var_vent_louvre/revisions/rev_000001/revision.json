@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_ghvent_var_vent_louvre",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:43:06Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "8a13ea3d2ac602dbc85a2569e2ce8185f463c0ae6d34f2fe4012c7282e5fb045",
+  "source": {
+    "run_id": "run_20260705_094306_058789_91176870",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "8a13ea3d2ac602dbc85a2569e2ce8185f463c0ae6d34f2fe4012c7282e5fb045",
+    "model_py_sha256": "160ac9e2532cb844675d6d77dd7b92af8c4ef0723b39f3d8bfc227484c02576b"
+  },
+  "run_summary": {
+    "turn_count": 12,
+    "tool_call_count": 12,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_892757_32a39adc",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_892757_32a39adc",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_892757_32a39adc",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "97ee439c852c16a9586553221cdb5b65a224f12c60643737d4b45e70aaf9dfa8"
+    }
+  ]
+}

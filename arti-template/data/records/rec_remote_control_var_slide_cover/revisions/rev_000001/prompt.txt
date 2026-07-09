@@ -1,0 +1,17 @@
+TARGET: add ONE new sliding `cover` part over the +X button cluster of the `body`, attached by a new PRISMATIC rail joint `body_to_cover` along the long X axis. The cover is a thin shell panel that slides toward the -X SONY end to expose the buttons (open) and toward +X to conceal them (closed), riding on real rails. It must be REALLY anchored: add visible side rails / a channel on the body along X and place the joint origin on that true rail surface with a travel range that clears the buttons (no phantom interface). The buttons remain present under the cover.
+KEEP: hold identical (same parts, positions, joints, primitives): btn_input, btn_power, btn_sound_field, btn_voice, btn_night, btn_mute (each body_to_btn_* prismatic), btn_bass_up, btn_bass_down (body_to_btn_bass_* prismatic), volume_rocker (body_to_volume_rocker revolute about Y), body body_shell slim-wand envelope, and the sony_print logo.
+COMPANION_VARIATIONS (optional): ⑥ colorway only -- two-tone (dark body_black shell with a lighter grey cover); no change to part tree, joint graph, interfaces, or primitive families.
+This is a <Category>/<Subcategory> family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a <Category>/<Subcategory> (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

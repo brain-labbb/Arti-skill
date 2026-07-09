@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_door_var_solid_louvered",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-21T01:26:07Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "0d5966fb7135a761166fb1052441461e6446b2ab46257a2f024f3fc4943be06e",
+  "source": {
+    "run_id": "run_20260621_012607_815078_7eebae7a",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "0d5966fb7135a761166fb1052441461e6446b2ab46257a2f024f3fc4943be06e",
+    "model_py_sha256": "3f27880d45c23f325bd7c5e215f676823fa4860641e1c3bdd7ec49d2bd548983"
+  },
+  "run_summary": {
+    "turn_count": 7,
+    "tool_call_count": 7,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_single-hinged-interior-door-light-oak-wood-one-l_20260606_115124_332093_00107e3e",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_single-hinged-interior-door-light-oak-wood-one-l_20260606_115124_332093_00107e3e",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

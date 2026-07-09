@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_add-a-hinged-top-lid-to-make-the-basket-articula_20260609_062924_147603_ab5a00e2",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-09T06:29:24Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "3a1aa86ee15c84d4ea4eb8560f2bbfa37b0232360d30293a2aab3491cadd8785",
+  "source": {
+    "run_id": "run_20260609_062924_147603_ab5a00e2",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 60,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "3a1aa86ee15c84d4ea4eb8560f2bbfa37b0232360d30293a2aab3491cadd8785",
+    "model_py_sha256": "a0d98ef02eba0e1f968d79a61f0a7b9164628e734ea287cd66d34f414fb1ef3d"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 11,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_convert-into-a-large-deep-floor-standing-shoppin_20260609_054807_131956_76a2aabf",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_convert-into-a-large-deep-floor-standing-shoppin_20260609_054807_131956_76a2aabf",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

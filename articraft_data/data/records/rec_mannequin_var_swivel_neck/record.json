@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_mannequin_var_swivel_neck",
+  "created_at": "2026-07-09T17:57:05Z",
+  "updated_at": "2026-07-09T17:58:11Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260709_175705_653143_3cfaa5c3",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "TARGET axis joint/mechanism type: change only the 'neck_joint' from REVOLUTE to CONTINUOUS so the featureless ovoid head",
+    "prompt_preview": "TARGET axis joint/mechanism type: change only the 'neck_joint' from REVOLUTE to CONTINUOUS so the featureless ovoid head swivels freely around the vertical n..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "290bfa3e07af28e3c519b364fcc3a056ad70c9a93d43111b821c14ca2cd936bc",
+    "model_py_sha256": "273b0a9fbcb4f953f7cb1536b3fe2ff48ac53192fd064360799e01bceb12e095"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_use-the-attached-reference-image-003-png-as-the-_20260706_043717_205274_0c6efacc",
+    "parent_record_id": "rec_use-the-attached-reference-image-003-png-as-the-_20260706_043717_205274_0c6efacc",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

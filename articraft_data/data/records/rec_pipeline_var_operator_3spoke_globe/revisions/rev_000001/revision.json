@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_pipeline_var_operator_3spoke_globe",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T15:31:56Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "0c75f74a0fcaa5074da378ba8826b3586a36c8ffe4d2c877c5df1a3123c8cd04",
+  "source": {
+    "run_id": "run_20260623_153156_487840_bf93a5f6",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5",
+    "thinking_level": "high",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "0c75f74a0fcaa5074da378ba8826b3586a36c8ffe4d2c877c5df1a3123c8cd04",
+    "model_py_sha256": "b44a320fd079263f1e9b35e6f963b55eb609ab07fc4fd6f969c605c216cda3f8"
+  },
+  "run_summary": {
+    "turn_count": 6,
+    "tool_call_count": 5,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-pipe_20260609_180109_734374_b30771ae",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-pipe_20260609_180109_734374_b30771ae",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

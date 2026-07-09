@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_adjustable-black-iron-dumbbell-with-stacked-rubb_20260605_165834_309488_e9921a05",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "0ea5c9890f6e1c17ff89838a0485830e0b2b9e87",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-05T17:31:12Z",
+    "record_id": "rec_adjustable-black-iron-dumbbell-with-stacked-rubb_20260605_165834_309488_e9921a05",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_adjustable-black-iron-dumbbell-with-stacked-rubb_20260605_165834_309488_e9921a05/compile_report.json",
+      "status": "success",
+      "record_id": "rec_adjustable-black-iron-dumbbell-with-stacked-rubb_20260605_165834_309488_e9921a05",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "7892362ad1ed9e0a5069e2b11881b93fe179614aa01dbd691a435255451284b7",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "03ded728d2733b84e2b941fdd486f8cacc7b5b9f2284f903e4fffa93509668a1",
+        "model_py_mtime_ns": 1780679157408861682,
+        "model_py_size_bytes": 14926,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 1870899,
+        "visual_mesh_file_count": 11,
+        "compile_elapsed_seconds": 11.761229572817683
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

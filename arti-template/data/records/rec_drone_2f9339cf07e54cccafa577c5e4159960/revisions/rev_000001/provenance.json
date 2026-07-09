@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_drone_2f9339cf07e54cccafa577c5e4159960",
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5-2026-04-23",
+    "thinking_level": "high",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 250,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "designer_system_prompt_openai.txt",
+    "system_prompt_sha256": "040a0415b5899abb7654040b8726b3dc8c1b50afa2db2baa481172a65fed8e7a",
+    "post_success_design_audit": false
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.10",
+    "platform": "darwin-arm64",
+    "git_commit": "ff27bf628f9f0c41d4e670320ecce770d9a506ed",
+    "uv_lock_sha256": "609c6cb5ce8a26122aaeab4bd2bdcc6e45bacfa426781165809f517f6b02bb83"
+  },
+  "run_summary": {
+    "turn_count": 22,
+    "tool_call_count": 27,
+    "compile_attempt_count": 6,
+    "final_status": "success"
+  }
+}

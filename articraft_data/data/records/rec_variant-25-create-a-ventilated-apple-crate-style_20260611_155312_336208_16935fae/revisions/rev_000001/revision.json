@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-25-create-a-ventilated-apple-crate-style_20260611_155312_336208_16935fae",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-11T15:53:12Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "3c53ade2886c6b2fe634919a1c0dea2fdd510ba11fce24fbeabbdc693903bf7d",
+  "source": {
+    "run_id": "run_20260611_155312_336208_16935fae",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.4",
+    "thinking_level": "medium",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "3c53ade2886c6b2fe634919a1c0dea2fdd510ba11fce24fbeabbdc693903bf7d",
+    "model_py_sha256": "6af43f5cfefe48345d43e6eaa841a6fc3ef34fb5549b92835729c52e7174a9ef"
+  },
+  "run_summary": {
+    "turn_count": 8,
+    "tool_call_count": 7,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_rustic-wooden-storage-box-with-plank-sides-metal_20260605_133631_387134_1a9c91ba",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_rustic-wooden-storage-box-with-plank-sides-metal_20260605_133631_387134_1a9c91ba",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

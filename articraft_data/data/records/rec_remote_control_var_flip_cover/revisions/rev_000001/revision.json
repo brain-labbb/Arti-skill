@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_remote_control_var_flip_cover",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T10:51:25Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "a0a9735b06e4e623dcb8c9d22b1fc0f35f2f66d9ff457a1bdf817e1c6103c0db",
+  "source": {
+    "run_id": "run_20260705_105125_503198_189f852c",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a0a9735b06e4e623dcb8c9d22b1fc0f35f2f66d9ff457a1bdf817e1c6103c0db",
+    "model_py_sha256": "b48dc5b135b5a6e7edba523b0872ba0eae3b67214203d609487ae37951ce8d7d"
+  },
+  "run_summary": {
+    "turn_count": 16,
+    "tool_call_count": 16,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-black-handheld-thermostat-style-remote-control_20260624_124939_052056_fdc967f6",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-black-handheld-thermostat-style-remote-control_20260624_124939_052056_fdc967f6",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_a-black-handheld-thermostat-style-remote-control_20260624_124939_052056_fdc967f6",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "79b9d4735429015ae3576c5def7d6dec17ca45e4dcb9dd78182b327b5be7587d"
+    }
+  ]
+}

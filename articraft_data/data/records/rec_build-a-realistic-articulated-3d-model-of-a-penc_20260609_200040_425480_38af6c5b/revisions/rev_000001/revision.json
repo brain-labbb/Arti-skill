@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-penc_20260609_200040_425480_38af6c5b",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-09T20:00:40Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "3224672e166f36bd54c13c95529932453aa9f133b9a9ea989476082ed3078872",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": null
+  },
+  "hashes": {
+    "prompt_sha256": "3224672e166f36bd54c13c95529932453aa9f133b9a9ea989476082ed3078872",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-09T21:50:07Z",
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-penc_20260609_200040_425480_38af6c5b",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_build-a-realistic-articulated-3d-model-of-a-penc_20260609_200040_425480_38af6c5b/compile_report.json",
+      "status": "success",
+      "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-penc_20260609_200040_425480_38af6c5b",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "40f142d5b615bfcf8cb68c5cbb18f045847d49115fcfdd26770fb7dcd727bfe8",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "24d5dd46c7c2980203ce01b3fcb45ecd5a57347889bab7261a02858c9418ed8a",
+        "model_py_mtime_ns": 1781036184926028460,
+        "model_py_size_bytes": 17169,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 1433186,
+        "visual_mesh_file_count": 6,
+        "compile_elapsed_seconds": 2.666521178558469
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

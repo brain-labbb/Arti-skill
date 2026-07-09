@@ -1,0 +1,24 @@
+CATEGORY: Emergency Equipment
+SUBCATEGORY: Stretcher
+TARGET: change the four-wheel caster set (the caster_specs loop and the head_leg/foot_leg wheel joints) to a two-wheel cot with two swivel casters at the foot end only, the head end resting on fixed skid legs.
+DIVERSITY_AXIS: N multiplicity.
+POSITIONING: two-wheel roll-in ambulance cot / foot-end wheeled stretcher (load the head onto the vehicle floor while the two foot casters roll), a real reduced-wheel stretcher configuration.
+KEEP: preserve these parent functional layers by name: deck_frame, backrest, deck_to_backrest, side_rail_0, side_rail_1, deck_to_side_rail_0, deck_to_side_rail_1, head_leg, foot_leg, deck_to_head_leg, deck_to_foot_leg, _add_leg_geometry, _add_side_rail_geometry, _make_caster_meshes, caster_specs.
+STRUCTURAL_DELTA: reduce caster_specs from 4 entries to 2 (only the foot_leg casters), and convert the head_leg feet to fixed skids/glides (no wheel joint); keep the two remaining casters generated in the loop with stable indexed names caster_0/caster_1 and CONTINUOUS joints foot_leg_to_caster_0 / foot_leg_to_caster_1; folding legs, backrest, and rails unchanged.
+MULTIPLICITY: target N=2; copied_object=foot-end caster subassembly; placement_rule=single transverse pair at the foot leg; joint_policy=one CONTINUOUS spin joint per remaining wheel; head end is non-rolling skids.
+FORBIDDEN: do not change surface, backrest, rails, or leg-fold mechanism; only the wheel count/placement changes.
+
+This is a Emergency Equipment/Stretcher family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Emergency Equipment/Stretcher (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

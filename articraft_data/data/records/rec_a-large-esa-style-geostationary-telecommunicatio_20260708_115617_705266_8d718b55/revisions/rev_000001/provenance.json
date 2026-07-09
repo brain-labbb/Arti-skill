@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_a-large-esa-style-geostationary-telecommunicatio_20260708_115617_705266_8d718b55",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": null,
+    "thinking_level": null,
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "f87d931bc8ba4242e522375b7b28f383e9185f11",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T12:07:52Z",
+    "record_id": "rec_a-large-esa-style-geostationary-telecommunicatio_20260708_115617_705266_8d718b55",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_a-large-esa-style-geostationary-telecommunicatio_20260708_115617_705266_8d718b55/compile_report.json",
+      "status": "success",
+      "record_id": "rec_a-large-esa-style-geostationary-telecommunicatio_20260708_115617_705266_8d718b55",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 4 overlaps across 4 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "307b93e893ae146ca768396aff93feb901f3b81626a2a22326b71a6b95dd2191",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "97f802eceac58f2124d0d9cf6444553fcda26df516143c297bfbb2b68bf34b8e",
+        "model_py_mtime_ns": 1783512153892044890,
+        "model_py_size_bytes": 13756,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 71480,
+        "visual_mesh_file_count": 2,
+        "compile_elapsed_seconds": 1.1474553681910038
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

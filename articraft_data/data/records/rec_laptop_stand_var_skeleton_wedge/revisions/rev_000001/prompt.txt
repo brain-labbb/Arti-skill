@@ -1,0 +1,26 @@
+CATEGORY: Workspace
+SUBCATEGORY: Laptop stand
+TARGET: change the folding two-bar support (base_rail_0/1 + upright_0/1 + brace_strut_0/1 linkage) to a single rigid inclined wedge riser body.
+DIVERSITY_AXIS: ③ primary form family (open bar-linkage frame -> closed volumetric inclined shelf / macro solid construction).
+POSITIONING: fixed aluminum incline laptop riser (Rain Design mStand archetype): one solid ventilated wedge that props the laptop at a fixed ergonomic angle. Stays a Laptop stand: an elevated inclined laptop support surface with a front retaining lip and ventilation, just non-folding.
+KEEP: preserve these parent functional layers by name: front_hook (hook_bracket, rubber_saddle), rubber feet (rail_foot), the lightening/ventilation slot treatment via _lightening_slot_bar, brushed_silver_aluminum material.
+STRUCTURAL_DELTA: replace the four revolute fold joints (upright_pitch_*, strut_pitch_*) and the paired uprights/struts with one continuous rigid wedge: an inclined top support panel carried by two solid ventilated side walls (or a single curved cantilever spine) down to a footed base; keep the front hook lip at the low front edge and rubber feet under the base. No fold hinges; this is static_only (all articulations fixed).
+MULTIPLICITY:
+COMPANION_VARIATIONS: may vary side-wall ventilation slot pattern and aluminum finish only; no joint graph or part-tree changes beyond the wedge consolidation.
+FORBIDDEN: do not become a monitor riser/shelf, a desk, a book/document stand, or a cooling pad; do not add fold/scissor/telescoping joints; do not change the front-retainer or the rubber feet identity.
+COMPATIBILITY_PROBE:
+
+This is a Workspace/Laptop stand family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Workspace/Laptop stand (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

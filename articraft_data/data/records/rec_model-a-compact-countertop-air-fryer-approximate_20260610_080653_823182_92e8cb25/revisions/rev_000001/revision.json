@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_model-a-compact-countertop-air-fryer-approximate_20260610_080653_823182_92e8cb25",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-10T08:06:53Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "885f006171cc4f07d54e685a210f23d0ccc7da10b3a7076a0fec61af500dcb69",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": null
+  },
+  "hashes": {
+    "prompt_sha256": "885f006171cc4f07d54e685a210f23d0ccc7da10b3a7076a0fec61af500dcb69",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-10T15:09:12Z",
+    "record_id": "rec_model-a-compact-countertop-air-fryer-approximate_20260610_080653_823182_92e8cb25",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-a-compact-countertop-air-fryer-approximate_20260610_080653_823182_92e8cb25/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-a-compact-countertop-air-fryer-approximate_20260610_080653_823182_92e8cb25",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "f677c8b796a672f0dd4befc9ec6e3b9c300dd7dd887219920d281e3426080e55",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "1606bc66af6308a7a380a4f244adfbe55f54083ce6814dafdee2267f0ad50e1c",
+        "model_py_mtime_ns": 1781100354617491793,
+        "model_py_size_bytes": 17208,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 287636,
+        "visual_mesh_file_count": 6,
+        "compile_elapsed_seconds": 4.097307184711099
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

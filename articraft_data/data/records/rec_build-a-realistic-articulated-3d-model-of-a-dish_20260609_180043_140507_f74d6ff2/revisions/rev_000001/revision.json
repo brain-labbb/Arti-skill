@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-dish_20260609_180043_140507_f74d6ff2",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-09T18:00:43Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "e091170085d1cec8e9b631fb391f9bf0e077a1c3378e0b5b52b08092cf4d6ce4",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": null
+  },
+  "hashes": {
+    "prompt_sha256": "e091170085d1cec8e9b631fb391f9bf0e077a1c3378e0b5b52b08092cf4d6ce4",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-09T18:31:05Z",
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-dish_20260609_180043_140507_f74d6ff2",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_build-a-realistic-articulated-3d-model-of-a-dish_20260609_180043_140507_f74d6ff2/compile_report.json",
+      "status": "success",
+      "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-dish_20260609_180043_140507_f74d6ff2",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "7a2348318c9dd52d5f1a228f1bc4b76981ac9aab8d9f9ccd3bfe1f4d284fa3b0",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "3fc4a03369262a315fe4c68301f24213eb4f771a050ba4d94e5aec5cca61178e",
+        "model_py_mtime_ns": 1781028904316675357,
+        "model_py_size_bytes": 21906,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 601580,
+        "visual_mesh_file_count": 18,
+        "compile_elapsed_seconds": 3.1291448529809713
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

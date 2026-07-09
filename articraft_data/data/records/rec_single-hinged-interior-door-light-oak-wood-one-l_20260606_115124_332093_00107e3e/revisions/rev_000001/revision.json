@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_single-hinged-interior-door-light-oak-wood-one-l_20260606_115124_332093_00107e3e",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-06T11:51:24Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "fc7cdd071b6ad04ac5c3b6f6efe45cbd4733d59a1b4c379b6d77f2265d294812",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "fc7cdd071b6ad04ac5c3b6f6efe45cbd4733d59a1b4c379b6d77f2265d294812",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-06T15:49:34Z",
+    "record_id": "rec_single-hinged-interior-door-light-oak-wood-one-l_20260606_115124_332093_00107e3e",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_single-hinged-interior-door-light-oak-wood-one-l_20260606_115124_332093_00107e3e/compile_report.json",
+      "status": "success",
+      "record_id": "rec_single-hinged-interior-door-light-oak-wood-one-l_20260606_115124_332093_00107e3e",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "59c50539e6f00f3e7b66d4a9df4cbd719fc61d4985b1cc9449bf33bfc3c97a2a",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "923676141021e0fc50629b639e8f8cc6884e3ca146cdb4c0cc0808ff5d0f79b2",
+        "model_py_mtime_ns": 1780759839427436810,
+        "model_py_size_bytes": 11691,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 347653,
+        "visual_mesh_file_count": 2,
+        "compile_elapsed_seconds": 5.9419610453769565
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

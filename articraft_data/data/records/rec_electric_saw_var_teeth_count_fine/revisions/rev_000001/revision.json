@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_electric_saw_var_teeth_count_fine",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T16:42:57Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "2437361a90174a5da4b5a453e3ee03d95ee01f320b00c19e04c6319076f30d32",
+  "source": {
+    "run_id": "run_20260709_164257_174993_763d65be",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "2437361a90174a5da4b5a453e3ee03d95ee01f320b00c19e04c6319076f30d32",
+    "model_py_sha256": "6ca64967d33e0b5cf91ad0472eae88a9480c09606ea7278305dc096eabbbe580"
+  },
+  "run_summary": {
+    "turn_count": 5,
+    "tool_call_count": 4,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-cordless-electric-circular-saw-with-a-teal-mot_20260708_091340_730591_88da991f",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-cordless-electric-circular-saw-with-a-teal-mot_20260708_091340_730591_88da991f",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

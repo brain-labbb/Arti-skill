@@ -1,0 +1,24 @@
+CATEGORY: Emergency Equipment
+SUBCATEGORY: Fire escape ladder
+TARGET: change the single rigid fixed_ladder + one PRISMATIC lower section topology into a multi-section folding/articulated escape ladder where rigid rail segments are joined by REVOLUTE hinges.
+DIVERSITY_AXIS: ② joint / mechanism type.
+POSITIONING: folding articulated fire escape ladder (multi-fold wall-stowed ladder that unfolds down the facade); real escape ladder family that folds flat against the wall and swings out into a climbable run, same subcategory.
+KEEP: preserve these parent functional layers by name: fixed_ladder (upper anchored segment), fixed_side_rail_0/1, fixed_rung_{i}, wall_standoff_{s}_{l}, wall_anchor_plate_{s}_{l}, helpers _cyl_x/_cyl_y/_cyl_z; keep at least one real non-fixed joint.
+STRUCTURAL_DELTA: split the ladder into 2-3 rigid rail segments (segment parts ladder_seg_0/ladder_seg_1[/ladder_seg_2]), each with its own for-i rung loop (seg{n}_rung_{i}). Connect adjacent segments with REVOLUTE fold hinges (fold_hinge_{n}) at the rail ends, each hinge realized with a visible hinge pin captured in a sleeve (fold_pin_{n} / fold_sleeve_{n}) with realistic swing MotionLimits. Replace the PRISMATIC fixed_to_lower_ladder slide with these fold hinges; keep the top segment anchored to the wall via the standoff/anchor-plate hardware. Optionally drop the cylindrical cage (folding ladders are cageless). Rungs on every segment must be loop-emitted with stable indexed names.
+COMPANION_VARIATIONS: ⑤ optional shorter per-segment length (proportion only).
+FORBIDDEN: do not become a stepladder A-frame, an extension ladder, or a hinged gate only; do not add a telescoping prismatic drop; do not hand-write rungs; each fold must be a real REVOLUTE hinge with visible pin/sleeve.
+
+This is a Emergency Equipment/Fire escape ladder family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Emergency Equipment/Fire escape ladder (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

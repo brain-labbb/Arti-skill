@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_codex_car002_v09",
+  "created_at": "2026-06-14T12:34:32Z",
+  "updated_at": "2026-06-14T16:39:41Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": null,
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "external_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "sports_car",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "openai",
+  "model_id": "codex",
+  "display": {
+    "title": "Codex Car 002 raised engine cover",
+    "prompt_preview": "Variant 09 external-agent takeover: edit the existing model.py to add a rear engine cover panel behind the cabin with clear louver details and a rear-edge or..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "1b1301861b40e990241049fd090681389c1db8ebe8d85b6224609582f972aef8",
+    "model_py_sha256": "24d7341cb348bfa4cbf5a92ed3c8f502f8e4cc246ae7605247591512eeb6a4ca"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "parent_record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  },
+  "creator": {
+    "mode": "external_agent",
+    "agent": "codex",
+    "trace_available": false
+  }
+}

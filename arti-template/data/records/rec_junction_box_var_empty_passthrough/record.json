@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_junction_box_var_empty_passthrough",
+  "created_at": "2026-07-05T09:41:30Z",
+  "updated_at": "2026-07-05T09:45:50Z",
+  "rating": 5,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "junction_box",
+  "source": {
+    "run_id": "run_20260705_094130_778104_3ec7f3aa",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "jb-empty",
+    "prompt_preview": "TARGET: change the interior fit-out from a populated terminal strip to an empty pass-through box \u2014 remove the terminal rows/screws/copper bus and the interna..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "57b1ed3075178a7ad66fe7f2bd88e7d2e987349528bbd748e107c29a710ab395",
+    "model_py_sha256": "d5ffdcd7bd0a93d4ac6611c3368fee11f132d1710795ca504c16550c381b3bd0"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260626_091402_791782_058eea1f",
+    "parent_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260626_091402_791782_058eea1f",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

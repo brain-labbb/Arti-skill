@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_black-airless-cosmetic-primer-pump-bottle-with-a_20260606_074952_062921_ec0caf66",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-06T07:49:52Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "ffd481a4987c86c789330488d72a87ae8910431a3a272f1b62143cbff340d5c0",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "ffd481a4987c86c789330488d72a87ae8910431a3a272f1b62143cbff340d5c0",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-06T09:19:34Z",
+    "record_id": "rec_black-airless-cosmetic-primer-pump-bottle-with-a_20260606_074952_062921_ec0caf66",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_black-airless-cosmetic-primer-pump-bottle-with-a_20260606_074952_062921_ec0caf66/compile_report.json",
+      "status": "success",
+      "record_id": "rec_black-airless-cosmetic-primer-pump-bottle-with-a_20260606_074952_062921_ec0caf66",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "8fdddfeb62a12c91e7d6c34ca015833e997f0674a2d73758aafb2835ce4da694",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "6e057115282332601daf2d86d8d45ac0cbb9754ddaafd3c2b03a21a4801bd35f",
+        "model_py_mtime_ns": 1780736019117761119,
+        "model_py_size_bytes": 9187,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 143590,
+        "visual_mesh_file_count": 4,
+        "compile_elapsed_seconds": 2.8393103582784534
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

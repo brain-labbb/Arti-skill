@@ -1,0 +1,16 @@
+Create a highly detailed, articulated 3D model of a pair of silver aviator-style sunglasses that PRECISELY matches the attached reference image. Match the reference closely in shape, proportion, color and material.
+
+Visible features to reproduce faithfully:
+- Slim, polished-silver metal frame with rounded-square (squarish-aviator) rims.
+- Thin dark/black inner lens bezels just inside the silver rims.
+- Warm amber/brown translucent lenses.
+- A slim DOUBLE bridge over the nose: two parallel thin horizontal silver bars joined by short vertical struts (not a single bar).
+- Small oval metal nose pads on thin curved stems descending from the rims.
+- Refined boxy metal hinge dovetails at the outer top corners of each rim.
+- Thin, tapered, polished-silver temple arms that run straight back and end in slightly down-curved black acetate ear tips.
+
+Primary articulation (must be real, user-facing): the folding of BOTH temple arms at the hinges. Each temple arm is a separate revolute joint at its hinge that swings the arm from open/extended (pointing straight back) to folded flat against the front of the frame. Both arms must actually rotate.
+
+Quality bar: use realistic proportions and curved/hollow/compound geometry (lathe, CadQuery, lofts, sweeps) for the rims, lenses, bridge bars and nose pads instead of boxy placeholders. Give the metal a polished-silver material and the lenses a translucent amber material. Connected structure, no floating parts, no unintended overlaps, semantic link names.
+
+Add prompt-specific run_tests() that assert: (1) exactly two temple-arm revolute joints that fold through a meaningful angle, (2) the bridge is a double bar (two parallel bars present), (3) two lenses present with a translucent amber material, (4) the frame uses a silver metal material, (5) no floating/disconnected parts. Keep it a workbench object.

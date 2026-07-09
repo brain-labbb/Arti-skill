@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_garage_shutter_var_window_row",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-21T01:30:07Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "7dd958c25a2680e417b2e3dcc9e7305b1ce55e0990d579e6bb2a2b292d128f66",
+  "source": {
+    "run_id": "run_20260621_013007_365418_16396b78",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "7dd958c25a2680e417b2e3dcc9e7305b1ce55e0990d579e6bb2a2b292d128f66",
+    "model_py_sha256": "6b390da41a8e86ca007592555949cbcba727c80dc78602d3e0ce1e9cb046a2be"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 11,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_door_garage_shutter",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_door_garage_shutter",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

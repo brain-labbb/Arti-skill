@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_model-a-stylized-wooden-watermill-waterwheel-mou_20260610_081149_220030_afe3e6a1",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "48c1acb46c6036e6eef904e4f363944751fac19e",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_finalized"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-10T15:26:10Z",
+    "record_id": "rec_model-a-stylized-wooden-watermill-waterwheel-mou_20260610_081149_220030_afe3e6a1",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-a-stylized-wooden-watermill-waterwheel-mou_20260610_081149_220030_afe3e6a1/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-a-stylized-wooden-watermill-waterwheel-mou_20260610_081149_220030_afe3e6a1",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "f2f066ed0183c9ca82e754ca3b21b7d242a9b7bfb557285e042254fba0f2671c",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "ce348267df2ea4ae2318af8742cb78a1899eb84e20fb3708c332ed713ff9b39b",
+        "model_py_mtime_ns": 1781101264139133289,
+        "model_py_size_bytes": 14460,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 61281,
+        "visual_mesh_file_count": 3,
+        "compile_elapsed_seconds": 3.9581483444198966
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

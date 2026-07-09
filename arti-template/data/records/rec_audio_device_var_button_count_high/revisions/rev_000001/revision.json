@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_audio_device_var_button_count_high",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T10:45:14Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "0f000dde8e392ae12f15c34096cc56916233b99cd9217f8336745eeb3e63ed98",
+  "source": {
+    "run_id": "run_20260705_104514_898097_745fd1bb",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "0f000dde8e392ae12f15c34096cc56916233b99cd9217f8336745eeb3e63ed98",
+    "model_py_sha256": "1d63210a25219e94d8ee513dccbe689609d8a8c7bad150e05c28bc4807da37dc"
+  },
+  "run_summary": {
+    "turn_count": 6,
+    "tool_call_count": 5,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-tan-beige-minimalist-retro-portable-radio-a-re_20260624_122658_140174_25291653",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-tan-beige-minimalist-retro-portable-radio-a-re_20260624_122658_140174_25291653",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_a-tan-beige-minimalist-retro-portable-radio-a-re_20260624_122658_140174_25291653",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/005.png",
+      "sha256": "6cdb2153ba436b1cbeb3eee3f0912e01da71028e6a931d87b6f05e01dc971e53"
+    }
+  ]
+}

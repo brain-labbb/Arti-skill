@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_red-british-k6-telephone-booth-phone-box-a-cast-_20260612_113148_944128_c00c1818",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "c643f986cdfa0965ab5cddd147f9830a15dad414",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-12T11:54:13Z",
+    "record_id": "rec_red-british-k6-telephone-booth-phone-box-a-cast-_20260612_113148_944128_c00c1818",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_red-british-k6-telephone-booth-phone-box-a-cast-_20260612_113148_944128_c00c1818/compile_report.json",
+      "status": "success",
+      "record_id": "rec_red-british-k6-telephone-booth-phone-box-a-cast-_20260612_113148_944128_c00c1818",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "9972b7d5ac51fabc1dd60180f75ac86ed84cecfc4e0eaf6e9f4a513f61d60f49",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "ee367f049bee8e6defdf54b983da2826d0e4d40ada54e45c4eae59b3f92f194f",
+        "model_py_mtime_ns": 1781264433719417117,
+        "model_py_size_bytes": 15715,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 0,
+        "visual_mesh_file_count": 0,
+        "compile_elapsed_seconds": 0.12933890335261822
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

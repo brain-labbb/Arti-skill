@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_pcrs_var_arch",
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 80,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "designer_system_prompt_openrouter.txt",
+    "system_prompt_sha256": "2040853b01d43d282cfac6b1369276c0054748305804d4b780e4d4dce2192a6a"
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "0ac181047612541ba8674da47e97e08b22eeac7b",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 11,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-28T07:49:41Z",
+    "record_id": "rec_pcrs_var_arch",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_pcrs_var_arch/compile_report.json",
+      "status": "success",
+      "record_id": "rec_pcrs_var_arch",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 3 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "2d1e9cf72068989d4a6a539053ba8ff1e67f6000c608b9c2a4caf84f42fb51bf",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "d1741ec34a1cb320bac13ff8ab03956739dbc49111160d713614dba8d7aa153f",
+        "model_py_mtime_ns": 1782632163535726636,
+        "model_py_size_bytes": 15852,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 655308,
+        "visual_mesh_file_count": 8,
+        "compile_elapsed_seconds": 1.5711033530533314
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 6,
+      "errors": [
+        "record.json missing creator metadata for external workflow",
+        "source.run_id must be null for external records",
+        "external records must not contain Articraft agent traces",
+        "provenance.run_summary.turn_count must be null",
+        "provenance.run_summary.tool_call_count must be null",
+        "provenance.run_summary.compile_attempt_count must be null"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

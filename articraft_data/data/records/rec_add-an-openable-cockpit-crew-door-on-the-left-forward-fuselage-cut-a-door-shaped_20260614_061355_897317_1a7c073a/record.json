@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_add-an-openable-cockpit-crew-door-on-the-left-forward-fuselage-cut-a-door-shaped_20260614_061355_897317_1a7c073a",
+  "created_at": "2026-06-14T06:13:55Z",
+  "updated_at": "2026-06-14T06:27:11Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": null,
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "external_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "tandem_rotor_helicopter",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "anthropic",
+  "model_id": "claude-opus-4-8",
+  "display": {
+    "title": "cockpit_door",
+    "prompt_preview": "Add an openable cockpit crew door on the left forward fuselage: cut a door-shaped opening in the cockpit flank and add a hull-conforming hinged door panel wi..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "e38ce9c820f2242767a97cf2ea0126f19416dc2129531a4e6e462607752fc3a5",
+    "model_py_sha256": "eae4433c80c48afcdff070ca64d90e3c2af4cff9168ebf600bbfdb1c8624af4e"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_model-a-ch-47-chinook-style-tandem-rotor-militar_20260610_080515_971792_e6faf6f7",
+    "parent_record_id": "rec_model-a-ch-47-chinook-style-tandem-rotor-militar_20260610_080515_971792_e6faf6f7",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  },
+  "creator": {
+    "mode": "external_agent",
+    "agent": "claude-code",
+    "trace_available": false
+  }
+}

@@ -1,0 +1,26 @@
+CATEGORY: Textiles_Fabric
+SUBCATEGORY: Sewing machine
+TARGET: change the drive input on part `handwheel` (articulation `handwheel_spin`) from an internal-electric hand-turned balance wheel to an external folding hand-crank turned by the operator.
+DIVERSITY_AXIS: ② joint/mechanism.
+POSITIONING: portable hand-crank domestic lockstitch machine (classic cast-body Singer 28K / modern mini hand-crank); remains a sewing machine with C-shaped head, needle bar, stitch plate and balance wheel — only the manual power input differs.
+KEEP: preserve these parent functional layers by name: bed, body, handwheel, handwheel_spin, needle_bar, needle_stroke, presser_foot, presser_lift, stitch_dial, stitch_select, needle_plate.
+STRUCTURAL_DELTA: add a crank_arm rigidly fixed to the handwheel rim at an offset from the wheel axle, and a short cylindrical crank_grip mounted on a pin at the crank_arm tip; the crank_grip spins freely on that pin (REVOLUTE/CONTINUOUS child of handwheel, axis parallel to +X) so the operator drives rotation by the offset handle. Keep handwheel_spin CONTINUOUS about +X and needle_stroke PRISMATIC driven off the same wheel; the crank rides on the rotating wheel face without colliding the pillar.
+MULTIPLICITY:
+COMPANION_VARIATIONS: optional black-japanned + gold-decal cast body finish instead of white ABS (⑥ palette only; no part-tree, joint or interface change).
+FORBIDDEN: do not become a treadle table, a computerized/electronic machine, or a serger/overlocker; do not add a treadle, band wheel, motor or pulley; do not bundle a base-form or drawer-multiplicity change.
+COMPATIBILITY_PROBE:
+
+This is a Textiles_Fabric/Sewing machine family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Textiles_Fabric/Sewing machine (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

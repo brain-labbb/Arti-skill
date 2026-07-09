@@ -1,0 +1,24 @@
+CATEGORY: <Category>
+SUBCATEGORY: <Subcategory>
+TARGET: change the access mechanism from the front side-swing wire_door to a rear-hinged top-loading upper shell (the tan kennel_upper_shell becomes a lift-up lid).
+DIVERSITY_AXIS: ② joint/mechanism type (front vertical-axis side door -> rear horizontal-axis top-load lid).
+POSITIONING: top-loading hard travel kennel (lift-the-lid top-load carrier common for cats). It stays a Pet carrier: rigid tub base, a hinged hard top cover, and a molded carry handle over one pet.
+KEEP: preserve these parent functional layers by name: kennel_body, lower_tub, tub_rim_flange, handle_base_plate, handle_riser_{i}, handle_grip_bar, side_latch_clip_{i}_{j}.
+STRUCTURAL_DELTA: split the fused body so the tan kennel_upper_shell (with its molded handle) becomes its own child part top_shell_lid hinged to the tub along the rear rim by a new body_to_top_lid REVOLUTE (axis = Y along the rear flange, opens upward to ~1.9 rad). Remove the separate wire_door and body_to_door front door so the lid is the sole access; the front flange latch clips become the lid catch. Exactly one primary-axis change: the access joint moves from front side-swing to rear top-hinge.
+COMPANION_VARIATIONS: keep vent-hole decoration (④) unchanged; no size change beyond lid clearance.
+FORBIDDEN: do not become a storage bin, cooler, or toolbox; keep the vents and pet enclosure. Do not also add wheels or convert the shell to wire or fabric.
+
+This is a <Category>/<Subcategory> family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a <Category>/<Subcategory> (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_landing_gear_var_solid_wheel",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T17:33:25Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "5e9281f63e5817b35b60eac7fb047d86ad029e628e187835adf2bbcd8b4a33db",
+  "source": {
+    "run_id": "run_20260709_173325_574552_4c4c52a3",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "5e9281f63e5817b35b60eac7fb047d86ad029e628e187835adf2bbcd8b4a33db",
+    "model_py_sha256": "7184c10fbd647ff5a4d404da106ab342d7e8d75dd3c38ef2ee404622c6ec35b4"
+  },
+  "run_summary": {
+    "turn_count": 17,
+    "tool_call_count": 18,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_astronomy__retractable_landing_gear__001_png_1a64faf20658463c8dbf85b29d826635",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_astronomy__retractable_landing_gear__001_png_1a64faf20658463c8dbf85b29d826635",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_astronomy__retractable_landing_gear__001_png_1a64faf20658463c8dbf85b29d826635",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "55175ab0639437f969fbf017a178a7a44c4ad9a33ca8ebf39e324c93a3c0ef55"
+    }
+  ]
+}

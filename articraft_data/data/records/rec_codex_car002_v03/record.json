@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_codex_car002_v03",
+  "created_at": "2026-06-14T12:34:04Z",
+  "updated_at": "2026-06-14T16:46:51Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": null,
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "external_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "sports_car",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "openai",
+  "model_id": "codex",
+  "display": {
+    "title": "Codex Car 002 widebody track",
+    "prompt_preview": "Variant 03 external-agent takeover: edit the existing model.py into a wide-body track variant. Keep scissor doors and wheel joints. Add broader wheel arches,..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "55eb24d16077a43e36e9dcd48205780552c1d6ae54d484e3e7afd7697d4b63c9",
+    "model_py_sha256": "6a38982d4f2f40f7a266b34f9c818ceef4c948d25128ead82a32f6498cdc2999"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "parent_record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  },
+  "creator": {
+    "mode": "external_agent",
+    "agent": "codex",
+    "trace_available": false
+  }
+}

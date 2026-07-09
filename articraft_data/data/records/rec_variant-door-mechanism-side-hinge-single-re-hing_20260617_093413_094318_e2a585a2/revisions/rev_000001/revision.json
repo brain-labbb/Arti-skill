@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-door-mechanism-side-hinge-single-re-hing_20260617_093413_094318_e2a585a2",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T09:34:13Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "14a4ad3ced9c8fd3b2d3878d909e55e053fe1c524019af33f97637078abb645d",
+  "source": {
+    "run_id": "run_20260617_093413_094318_e2a585a2",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "14a4ad3ced9c8fd3b2d3878d909e55e053fe1c524019af33f97637078abb645d",
+    "model_py_sha256": "feb542fe393fda994b148cd150a50e97c5649e205a4cbb9cf3a4bed39ab4b3cf"
+  },
+  "run_summary": {
+    "turn_count": 10,
+    "tool_call_count": 10,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-built-in-single-electric-wall-oven-the-k_20260610_083623_507710_363e4e6b",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-built-in-single-electric-wall-oven-the-k_20260610_083623_507710_363e4e6b",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

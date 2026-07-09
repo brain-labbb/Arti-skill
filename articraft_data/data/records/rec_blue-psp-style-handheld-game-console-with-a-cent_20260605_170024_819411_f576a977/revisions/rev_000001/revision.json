@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_blue-psp-style-handheld-game-console-with-a-cent_20260605_170024_819411_f576a977",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-05T17:00:24Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "1db7a38bc5bca70cae99667fd89ac51def96a7cb755ea37ffcec20bc22302751",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "1db7a38bc5bca70cae99667fd89ac51def96a7cb755ea37ffcec20bc22302751",
+    "model_py_sha256": "97de08285e521dd544666a9c439efcfc42f75731b110d8752e16e2b866701225"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-05T17:37:28Z",
+    "record_id": "rec_blue-psp-style-handheld-game-console-with-a-cent_20260605_170024_819411_f576a977",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_blue-psp-style-handheld-game-console-with-a-cent_20260605_170024_819411_f576a977/compile_report.json",
+      "status": "success",
+      "record_id": "rec_blue-psp-style-handheld-game-console-with-a-cent_20260605_170024_819411_f576a977",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "82b0fc9b05dae93e0f8d56e69cc18faf6073480f52faf2bec0b6b72407da81b2",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "1b9c72a64661ea4ae6e263c121ca63bd76eac50e1fc7222190474a710a41b567",
+        "model_py_mtime_ns": 1780679397915550373,
+        "model_py_size_bytes": 19095,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 2114916,
+        "visual_mesh_file_count": 11,
+        "compile_elapsed_seconds": 5.8817495768889785
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

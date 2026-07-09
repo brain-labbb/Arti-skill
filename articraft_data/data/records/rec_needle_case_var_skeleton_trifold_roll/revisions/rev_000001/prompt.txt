@@ -1,0 +1,24 @@
+CATEGORY: <Category>
+SUBCATEGORY: <Subcategory>
+TARGET: change the two-panel fold (needle_panel + pocket_panel joined by fold_hinge) to a three-panel roll-up chain (needle_panel + middle_panel + pocket_panel) linked by two revolute spine fold hinges and closed by a wrap tie strap instead of the snap cover_flap.
+DIVERSITY_AXIS: ① skeleton/topology.
+POSITIONING: leather roll-up knitting-needle organizer (tool-roll archetype) that rolls closed and ties shut; it stays a needle case because every panel keeps needle-specific storage (channel_strip tunnels, flat_pocket, cable_pocket) and the double-pointed needle bed.
+KEEP: preserve these parent functional layers by name: needle_panel, channel_strip, needle_{ci}_{si}, needle_{ci}_{si}_slide, tip_flap, tip_flap_hinge, pocket_panel, fold_hinge, flat_pocket, cable_pocket.
+STRUCTURAL_DELTA: insert a middle_panel between needle_panel and pocket_panel so three panels form a linear revolute chain (fold_hinge plus a second spine hinge fold_hinge_2), authored with a shared panel helper; replace cover_flap and its cover_flap_hinge with a wrap_tie strap anchored on the outer panel edge; each panel carries a needle sub-bed emitted through the shared strip/pocket helpers; rolling closed wraps panels around the spine axis.
+COMPANION_VARIATIONS: none.
+FORBIDDEN: generic tool roll, brush roll, or cosmetic roll without needle-specific beds; jewelry roll neighbor; do NOT also swap the needle-retention family or add tube/zip closures.
+
+This is a <Category>/<Subcategory> family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a <Category>/<Subcategory> (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

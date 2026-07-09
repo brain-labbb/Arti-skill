@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_offset-satellite-antenna-dish-light-gray-oval-of_20260708_082354_042823_4bfbfb79",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-08T08:23:54Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "43043309a2f1f631c7bb6131ac4948b562e01c6332778eb9b6f604ff2bdf4e61",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": null,
+    "thinking_level": null,
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "43043309a2f1f631c7bb6131ac4948b562e01c6332778eb9b6f604ff2bdf4e61",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T08:35:15Z",
+    "record_id": "rec_offset-satellite-antenna-dish-light-gray-oval-of_20260708_082354_042823_4bfbfb79",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_offset-satellite-antenna-dish-light-gray-oval-of_20260708_082354_042823_4bfbfb79/compile_report.json",
+      "status": "success",
+      "record_id": "rec_offset-satellite-antenna-dish-light-gray-oval-of_20260708_082354_042823_4bfbfb79",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 3 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "c3957a8bc62be3d47146cbdbb82c838f2164ce6156d0c067efc9e31f97b37c65",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "8681415b975567059975eda876ae9ad2e7c58e06614e6b0a6455ae87c78831d2",
+        "model_py_mtime_ns": 1783499703311388158,
+        "model_py_size_bytes": 13432,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 219456,
+        "visual_mesh_file_count": 2,
+        "compile_elapsed_seconds": 2.718138223513961
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

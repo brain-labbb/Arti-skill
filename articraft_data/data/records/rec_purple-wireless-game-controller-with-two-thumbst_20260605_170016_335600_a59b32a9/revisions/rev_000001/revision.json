@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_purple-wireless-game-controller-with-two-thumbst_20260605_170016_335600_a59b32a9",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-05T17:00:16Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "bd62d4437f27e051eff78fd26e6b91732252eb990596a00130f9de7e41afc423",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "bd62d4437f27e051eff78fd26e6b91732252eb990596a00130f9de7e41afc423",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-05T17:36:56Z",
+    "record_id": "rec_purple-wireless-game-controller-with-two-thumbst_20260605_170016_335600_a59b32a9",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_purple-wireless-game-controller-with-two-thumbst_20260605_170016_335600_a59b32a9/compile_report.json",
+      "status": "success",
+      "record_id": "rec_purple-wireless-game-controller-with-two-thumbst_20260605_170016_335600_a59b32a9",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 3 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "79294e74551ec7255b3b4a4a28f4f6e9cb049b2233b8192975dfa5e4226f5968",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "eaf29b3651a1322c557ff763fbf049a05e13687eaab3e2ad3ed6e5d9b7bbd312",
+        "model_py_mtime_ns": 1780679479471004240,
+        "model_py_size_bytes": 16436,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 312476,
+        "visual_mesh_file_count": 16,
+        "compile_elapsed_seconds": 5.592037007212639
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

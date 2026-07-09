@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-caster-count-6-change-the-star-base-so-i_20260618_032924_952337_8d767951",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T03:29:24Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "a1239a0623ccdcb7de4e406ff786e8d2785ef13544dd3bab9b534600ab93573f",
+  "source": {
+    "run_id": "run_20260618_032924_952337_8d767951",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a1239a0623ccdcb7de4e406ff786e8d2785ef13544dd3bab9b534600ab93573f",
+    "model_py_sha256": "830255fe849eef857fa499ae4ab79424e8ec7a4a349f0bf3c67453f8f0d09bda"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 10,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-tall-ergonomic-office-chair-ikea-markus-_20260610_085012_906733_cb37c340",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-tall-ergonomic-office-chair-ikea-markus-_20260610_085012_906733_cb37c340",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,24 @@
+CATEGORY: Camping_Outdoor Gear
+SUBCATEGORY: Folding camp table
+TARGET: change the under-table fabric/mesh storage hammock (pocket_bottom, front_mesh_panel, rear_mesh_panel, orange bindings) to a rigid slatted lower storage shelf.
+DIVERSITY_AXIS: ③ primary form family (internal storage structure: fabric hammock -> rigid shelf tier).
+POSITIONING: A two-tier folding camp table with a solid lower shelf/rack for coolers and gear instead of a soft mesh hammock; remains a folding camp table because it keeps the telescoping legs, roll-top deck, and X-braces.
+KEEP: preserve these parent functional layers by name: tabletop_frame, table_slat_{i} loop, lower_leg_0..lower_leg_3, table_to_lower_leg_i (prismatic telescoping legs), front_brace_0/1, rear_brace_0/1, leg_sleeve_i, foot_pad_i.
+STRUCTURAL_DELTA: Remove the fabric pocket assembly (pocket_bottom, mesh panels, orange bindings, hangers, suspenders) and add a rigid lower shelf: a slatted or panel deck spanning between the four legs at a low Z, tied to the leg sleeves/spreaders. Storage structure changes from a soft hanging hammock to a rigid supported shelf tier; legs, telescoping joints, and braces are unchanged.
+COMPANION_VARIATIONS: ⑥ optional matching gray/black shelf finish; no joint or leg change.
+FORBIDDEN: Do not become a serving cart, shelving unit, or workbench; keep the telescoping folding legs and the top deck; do not add wheels.
+
+This is a Camping_Outdoor Gear/Folding camp table family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Camping_Outdoor Gear/Folding camp table (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_qwen37v_toilet_001_v29",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": null,
+    "uv_lock_sha256": null
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_edit_draft"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-14T06:55:33Z",
+    "record_id": "rec_qwen37v_toilet_001_v29",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_qwen37v_toilet_001_v29/compile_report.json",
+      "status": "failure",
+      "record_id": "rec_qwen37v_toilet_001_v29",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "ValueError: URDF tests failed:\n- fail_if_parts_overlap_in_current_pose(): Part overlaps detected (overlap_tol=0.005, overlap_volume_tol=5e-07):\npair=('body','seat_ring') depth=(0.028,0.04,0.012) min_depth=0.012 vol=1.344e-05 elem_a=#3 'hinge_barrel_left':Mesh elem_b=#0 'seat_ring_shell':Mesh pose={}"
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "0dc790a0297f663427a1727725ce95e658d5096a9dec837abc32548808b6ad4e",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "efea33ca3c266d5976ed6865a0951a5e86d5e33c28498b8b2f4bc652ea656b36",
+        "model_py_mtime_ns": 1781420107115373840,
+        "model_py_size_bytes": 21425,
+        "materialization_status": "missing",
+        "visual_mesh_bytes": 0,
+        "visual_mesh_file_count": 0,
+        "compile_elapsed_seconds": 6.1452185325324535
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 2,
+      "errors": [
+        "strict external compile exited with status 1",
+        "compile report status must be 'success'"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

@@ -1,0 +1,24 @@
+CATEGORY: Pet_Animal related
+SUBCATEGORY: Hamster wheel
+TARGET: change the wheel's solid `drum_wall` (continuous annular running shell built by annular_cylinder_y) to an open-rung running ring whose running surface is discrete axial rails between the two open rims.
+DIVERSITY_AXIS: ③ primary form family (open lattice running surface vs solid drum shell).
+POSITIONING: classic open-ring exercise wheel (rung-cage / treadmill-drum style) where a hamster runs on evenly spaced cross-rungs between two open side rings; remains a stand-mounted freely-spinning running wheel.
+KEEP: preserve these parent functional layers by name: stand, base_plate, support_post_0, support_post_1, bearing_crossbar, axle_shaft, wheel, front_rim, rear_rim, rear_disk, wheel_hub, spoke_0..spoke_4, stand_to_wheel (revolute Y axle joint), helpers add_y_cylinder and add_radial_cylinder.
+STRUCTURAL_DELTA: delete the continuous drum_wall mesh; keep front_rim and rear_rim as the two edge rings; add one loop building ~20 running rails `rung_{i}` (thin axial cylinders at the wheel outer radius spanning the wheel depth, even angular spacing 2*pi*i/N) FIXED to the wheel; keep the 5 radial spokes and central hub so the open sides expose the spoke fan; preserve the revolute Y axle joint and the coaxial hub-on-axle interface.
+COMPANION_VARIATIONS: optional ⑥ palette only (e.g. amber/clear plastic or bright rim) — no change to part tree, joint graph, or interfaces.
+FORBIDDEN: do not become a Ferris wheel, water/paddle wheel, fan, turbine, gear, or bird cage; do not also change the stand type, joint axis, or add a second articulation.
+
+This is a Pet_Animal related/Hamster wheel family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Pet_Animal related/Hamster wheel (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

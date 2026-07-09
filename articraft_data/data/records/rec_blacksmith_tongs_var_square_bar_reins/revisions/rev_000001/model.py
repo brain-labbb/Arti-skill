@@ -1,0 +1,394 @@
+from __future__ import annotations
+
+"""Long slim wolf-jaw blacksmith tongs.
+
+Two identical forged halves cross at a flattened elliptical boss and are
+joined by a round-head rivet.  The tool lies flat in the XY plane:
+
+- +X runs from the boss toward the jaws, -X along the reins.
+- Z is perpendicular to the tool plane (the rivet/pivot axis).
+
+Each half is forged from one bar: a short flat wolf jaw, a half-lapped
+elliptical boss, and a very long rein made from a constant square-section
+forged bar (chunky uniform square cross-section with crisp edges and
+corners the whole length, no taper to round).  The moving arm is the same
+forging flipped 180 deg about the X axis, exactly like a real pair of
+tongs, so the two boss halves stack in Z and the jaw/rein swap sides.
+
+Articulation: one revolute joint at the rivet, axis perpendicular to the
+tool plane.  Positive q (0..0.3 rad) opens the jaws while the moving rein
+swings away from the fixed rein.
+"""
+
+import math
+
+import cadquery as cq
+from sdk import (
+    ArticulatedObject,
+    ArticulationType,
+    MotionLimits,
+    Origin,
+    TestContext,
+    TestReport,
+    mesh_from_cadquery,
+)
+
+# ---------------------------------------------------------------- dimensions
+# Tool plane is z = Z_LIFT (the tongs lie flat on the ground plane z=0).
+Z_LIFT = 0.0085
+
+JAW_T = 0.0096  # full bar thickness at the jaw (z)
+JAW_TIP_X = 0.086  # jaw tip
+BOSS_A = 0.020  # boss ellipse semi-axis along X
+BOSS_B = 0.0155  # boss ellipse semi-axis along Y
+BOSS_PLATE_T = 0.0048  # one half-lapped boss plate thickness
+
+LAP_R = 0.022  # half-lap clearance radius around the rivet
+LAP_EPS = 0.00006  # tiny z clearance between the two lapped halves
+
+REIN_TIP_X = -0.462
+REIN_TIP_Y = -0.036  # splayed fixed-rein tip (moving rein mirrors to +Y)
+REIN_BAR_HALF = 0.0065  # 0.013 m square bar side / 2 (chunky constant section)
+
+RIVET_SHAFT_R = 0.0045
+RIVET_HEAD_R = 0.0060
+
+# Jaw plan outline for the fixed (+Y) half.  The inner face converges
+# toward the centerline and chamfers back up at the very tip so the two
+# closed jaws form a narrow V notch for gripping bar stock.
+JAW_PTS = [
+    (0.010, 0.0150),
+    (0.050, 0.0100),
+    (0.086, 0.0058),
+    (0.086, 0.0036),
+    (0.073, 0.0008),
+    (0.040, 0.0016),
+    (0.010, 0.0045),
+]
+
+# Shallow transverse grooves on the jaw gripping face (x, face_y).
+GROOVE_R = 0.0014
+GROOVE_SINK = 0.0008  # center offset behind the face -> ~0.6 mm deep groove
+GROOVES = [
+    (0.047, 0.0016 - 0.0008 * (0.047 - 0.040) / 0.033),
+    (0.056, 0.0016 - 0.0008 * (0.056 - 0.040) / 0.033),
+    (0.065, 0.0016 - 0.0008 * (0.065 - 0.040) / 0.033),
+]
+
+# Hammer-mark dimples (x, y, z_face_sign) on boss and jaw faces.
+DIMPLE_R = 0.004
+DIMPLE_DEPTH = 0.0005
+BOSS_DIMPLES = [(0.006, 0.0065), (-0.0075, -0.0045), (-0.0115, 0.0060), (0.0015, -0.0105)]
+JAW_DIMPLES_TOP = [(0.024, 0.0085), (0.040, 0.0062), (0.057, 0.0048)]
+JAW_DIMPLES_BOT = [(0.031, 0.0072), (0.049, 0.0052)]
+
+# Rein path stations: (x, y_center).  The cross-section is a constant
+# chunky square bar (REIN_BAR_HALF x REIN_BAR_HALF) the whole length with
+# crisp square edges and corners; no taper, no round tip.
+REIN_STATIONS = [
+    (-0.014, -0.0090),
+    (-0.052, -0.0125),
+    (-0.130, -0.0190),
+    (-0.240, -0.0268),
+    (-0.350, -0.0322),
+    (REIN_TIP_X, REIN_TIP_Y),
+]
+
+
+# ----------------------------------------------------------------- builders
+def _lap_cutter() -> cq.Workplane:
+    """Material below z=LAP_EPS within LAP_R of the rivet is forged away."""
+    return (
+        cq.Workplane("XY")
+        .workplane(offset=-0.040)
+        .circle(LAP_R)
+        .extrude(0.040 + LAP_EPS)
+    )
+
+
+def _dimple(x: float, y: float, z_face: float, sign: int) -> cq.Workplane:
+    cz = z_face + sign * (DIMPLE_R - DIMPLE_DEPTH)
+    return cq.Workplane("XY", origin=(x, y, cz)).sphere(DIMPLE_R)
+
+
+def _jaw_solid() -> cq.Workplane:
+    jaw = cq.Workplane("XY").polyline(JAW_PTS).close().extrude(JAW_T / 2.0, both=True)
+    # Shallow transverse grooves across the gripping face (vertical, axis Z).
+    for gx, face_y in GROOVES:
+        groove = (
+            cq.Workplane("XY")
+            .center(gx, face_y + GROOVE_SINK)
+            .circle(GROOVE_R)
+            .extrude(0.02, both=True)
+        )
+        jaw = jaw.cut(groove)
+    # Hammer marks on both flat faces of the jaw.
+    for dx, dy in JAW_DIMPLES_TOP:
+        jaw = jaw.cut(_dimple(dx, dy, JAW_T / 2.0, +1))
+    for dx, dy in JAW_DIMPLES_BOT:
+        jaw = jaw.cut(_dimple(dx, dy, -JAW_T / 2.0, -1))
+    return jaw.cut(_lap_cutter())
+
+
+def _boss_solid() -> cq.Workplane:
+    boss = cq.Workplane("XY").ellipse(BOSS_A, BOSS_B).extrude(BOSS_PLATE_T)
+    for dx, dy in BOSS_DIMPLES:
+        boss = boss.cut(_dimple(dx, dy, BOSS_PLATE_T, +1))
+    return boss.cut(_lap_cutter())
+
+
+def _rein_solid() -> cq.Workplane:
+    """Constant square-section bar rein with crisp corners and no taper."""
+    hw = REIN_BAR_HALF
+    wires: list[cq.Wire] = []
+    for x, yc in REIN_STATIONS:
+        # Four-corner square profile in the YZ plane at station x.
+        pts = [
+            cq.Vector(x, yc - hw, -hw),
+            cq.Vector(x, yc + hw, -hw),
+            cq.Vector(x, yc + hw, hw),
+            cq.Vector(x, yc - hw, hw),
+            cq.Vector(x, yc - hw, -hw),
+        ]
+        wires.append(cq.Wire.makePolygon(pts))
+    rein = cq.Workplane(obj=cq.Solid.makeLoft(wires))
+    return rein.cut(_lap_cutter())
+
+
+def _rivet_solid() -> cq.Workplane:
+    shaft = (
+        cq.Workplane("XY")
+        .workplane(offset=-0.0046)
+        .circle(RIVET_SHAFT_R)
+        .extrude(0.0092)
+    )
+    head_top = cq.Workplane("XY", origin=(0.0, 0.0, 0.0022)).sphere(RIVET_HEAD_R)
+    head_bot = cq.Workplane("XY", origin=(0.0, 0.0, -0.0022)).sphere(RIVET_HEAD_R)
+    return shaft.union(head_top).union(head_bot)
+
+
+def _place(solid: cq.Workplane, *, flipped: bool) -> cq.Workplane:
+    """Lift into the lying-flat pose; the moving half is the identical
+    forging flipped 180 deg about the X axis (jaw/rein swap sides, the
+    half-lap faces the other way)."""
+    if flipped:
+        solid = solid.rotate((0.0, 0.0, 0.0), (1.0, 0.0, 0.0), 180.0)
+    return solid.translate((0.0, 0.0, Z_LIFT))
+
+
+# -------------------------------------------------------------------- model
+def build_object_model() -> ArticulatedObject:
+    model = ArticulatedObject(name="wolf_jaw_blacksmith_tongs")
+
+    steel = model.material("forged_steel_gray", rgba=(0.37, 0.38, 0.40, 1.0))
+    jaw_steel = model.material("jaw_scale_steel", rgba=(0.30, 0.31, 0.33, 1.0))
+    rivet_steel = model.material("rivet_steel", rgba=(0.25, 0.26, 0.28, 1.0))
+
+    fixed_arm = model.part("fixed_arm")
+    fixed_arm.visual(
+        mesh_from_cadquery(_place(_jaw_solid(), flipped=False), "fixed_jaw", tolerance=0.00015),
+        name="jaw",
+        material=jaw_steel,
+    )
+    fixed_arm.visual(
+        mesh_from_cadquery(_place(_boss_solid(), flipped=False), "fixed_boss", tolerance=0.00015),
+        name="boss",
+        material=steel,
+    )
+    fixed_arm.visual(
+        mesh_from_cadquery(_place(_rein_solid(), flipped=False), "fixed_rein", tolerance=0.00015),
+        name="rein",
+        material=steel,
+    )
+    fixed_arm.visual(
+        mesh_from_cadquery(_place(_rivet_solid(), flipped=False), "rivet", tolerance=0.0001),
+        name="rivet",
+        material=rivet_steel,
+    )
+
+    moving_arm = model.part("moving_arm")
+    moving_arm.visual(
+        mesh_from_cadquery(_place(_jaw_solid(), flipped=True), "moving_jaw", tolerance=0.00015),
+        name="jaw",
+        material=jaw_steel,
+    )
+    moving_arm.visual(
+        mesh_from_cadquery(_place(_boss_solid(), flipped=True), "moving_boss", tolerance=0.00015),
+        name="boss",
+        material=steel,
+    )
+    moving_arm.visual(
+        mesh_from_cadquery(_place(_rein_solid(), flipped=True), "moving_rein", tolerance=0.00015),
+        name="rein",
+        material=steel,
+    )
+
+    model.articulation(
+        "rivet_pivot",
+        ArticulationType.REVOLUTE,
+        parent=fixed_arm,
+        child=moving_arm,
+        origin=Origin(xyz=(0.0, 0.0, Z_LIFT)),
+        # Axis perpendicular to the tool plane.  The moving jaw sits on -Y
+        # and its rein on +Y, so -Z makes positive q swing the jaw away
+        # from the fixed jaw (opening) while the rein spreads away from
+        # the fixed rein.
+        axis=(0.0, 0.0, -1.0),
+        motion_limits=MotionLimits(effort=80.0, velocity=2.5, lower=0.0, upper=0.3),
+    )
+
+    return model
+
+
+# -------------------------------------------------------------------- tests
+def run_tests() -> TestReport:
+    ctx = TestContext(object_model)
+    fixed_arm = object_model.get_part("fixed_arm")
+    moving_arm = object_model.get_part("moving_arm")
+    pivot = object_model.get_articulation("rivet_pivot")
+
+    ctx.allow_overlap(
+        fixed_arm,
+        moving_arm,
+        elem_a="rivet",
+        elem_b="boss",
+        reason="The round-head rivet is the captured pivot pin and intentionally passes through the moving arm boss plate.",
+    )
+
+    # Closed jaws angle toward each other and nearly meet near the tip.
+    ctx.expect_gap(
+        fixed_arm,
+        moving_arm,
+        axis="y",
+        positive_elem="jaw",
+        negative_elem="jaw",
+        min_gap=0.0005,
+        max_gap=0.004,
+        name="closed jaws nearly meet near the tip",
+    )
+    ctx.expect_overlap(
+        fixed_arm,
+        moving_arm,
+        axes="x",
+        elem_a="jaw",
+        elem_b="jaw",
+        min_overlap=0.05,
+        name="the two flat jaws run side by side along the jaw end",
+    )
+
+    # Rivet seated at the boss, visible on both faces.
+    ctx.expect_within(
+        fixed_arm,
+        moving_arm,
+        axes="xy",
+        inner_elem="rivet",
+        outer_elem="boss",
+        margin=0.0005,
+        name="rivet centered inside the boss footprint",
+    )
+    riv = ctx.part_element_world_aabb(fixed_arm, elem="rivet")
+    boss_f = ctx.part_element_world_aabb(fixed_arm, elem="boss")
+    boss_m = ctx.part_element_world_aabb(moving_arm, elem="boss")
+    ctx.check(
+        "rivet head proud of the upper boss face",
+        riv is not None and boss_f is not None and riv[1][2] > boss_f[1][2] + 0.002,
+        details=f"rivet={riv}, fixed_boss={boss_f}",
+    )
+    ctx.check(
+        "rivet head proud of the lower boss face",
+        riv is not None and boss_m is not None and riv[0][2] < boss_m[0][2] - 0.002,
+        details=f"rivet={riv}, moving_boss={boss_m}",
+    )
+
+    # Boss is a flattened ellipse roughly 0.035 m across.
+    ctx.check(
+        "boss roughly 0.035 m across",
+        boss_f is not None
+        and 0.028 <= (boss_f[1][0] - boss_f[0][0]) <= 0.045
+        and 0.026 <= (boss_f[1][1] - boss_f[0][1]) <= 0.040,
+        details=f"fixed_boss={boss_f}",
+    )
+
+    # Overall proportions: ~0.55 m long, lying flat in one plane.
+    fa = ctx.part_world_aabb(fixed_arm)
+    ma = ctx.part_world_aabb(moving_arm)
+    assert fa is not None and ma is not None
+    length = max(fa[1][0], ma[1][0]) - min(fa[0][0], ma[0][0])
+    ctx.check("overall length about 0.55 m", 0.50 <= length <= 0.60, details=f"length={length:.4f}")
+    z_extent = max(fa[1][2], ma[1][2]) - min(fa[0][2], ma[0][2])
+    ctx.check("tool lies flat in one plane", z_extent <= 0.030, details=f"z_extent={z_extent:.4f}")
+    ctx.check(
+        "tongs rest just above the ground plane",
+        min(fa[0][2], ma[0][2]) >= -0.0005,
+        details=f"min_z={min(fa[0][2], ma[0][2]):.5f}",
+    )
+
+    # Reins: very long (~0.45 m), gently splayed, constant square-section bar.
+    rein_f = ctx.part_element_world_aabb(fixed_arm, elem="rein")
+    rein_m = ctx.part_element_world_aabb(moving_arm, elem="rein")
+    ctx.check(
+        "reins run about 0.45 m from the boss",
+        rein_f is not None and 0.40 <= (rein_f[1][0] - rein_f[0][0]) <= 0.50,
+        details=f"fixed_rein={rein_f}",
+    )
+    ctx.check(
+        "rein tips splay to opposite sides",
+        rein_f is not None
+        and rein_m is not None
+        and rein_f[0][1] < -0.030
+        and rein_m[1][1] > 0.030,
+        details=f"fixed_rein={rein_f}, moving_rein={rein_m}",
+    )
+    # Constant square bar cross-section: Z extent (thickness) must stay
+    # substantial the whole length, proving no round-tip taper.
+    ctx.check(
+        "rein is a chunky constant square bar (no taper to round)",
+        rein_f is not None
+        and (rein_f[1][2] - rein_f[0][2]) >= 0.011,
+        details=f"fixed_rein_z_extent={rein_f[1][2] - rein_f[0][2]:.4f}" if rein_f else "missing",
+    )
+    jaw_f = ctx.part_element_world_aabb(fixed_arm, elem="jaw")
+    ctx.check(
+        "jaw end is short, about 0.07 m",
+        jaw_f is not None and 0.055 <= (jaw_f[1][0] - jaw_f[0][0]) <= 0.085,
+        details=f"fixed_jaw={jaw_f}",
+    )
+
+    # Joint configuration matches the prompt: 0..0.3 rad about the rivet.
+    limits = pivot.motion_limits
+    ctx.check(
+        "pivot limits are 0 to 0.3 rad",
+        limits is not None
+        and limits.lower is not None
+        and limits.upper is not None
+        and abs(limits.lower) < 1e-9
+        and abs(limits.upper - 0.3) < 1e-6,
+        details=f"limits={limits}",
+    )
+
+    rein_m_rest_max_y = rein_m[1][1] if rein_m is not None else None
+
+    # Decisive open pose: jaws open while the moving rein swings away.
+    with ctx.pose({pivot: 0.3}):
+        ctx.expect_gap(
+            fixed_arm,
+            moving_arm,
+            axis="y",
+            positive_elem="jaw",
+            negative_elem="jaw",
+            min_gap=0.005,
+            name="jaws open apart at full pivot travel",
+        )
+        rein_m_open = ctx.part_element_world_aabb(moving_arm, elem="rein")
+        ctx.check(
+            "moving rein swings away from the fixed rein",
+            rein_m_open is not None
+            and rein_m_rest_max_y is not None
+            and rein_m_open[1][1] > rein_m_rest_max_y + 0.08,
+            details=f"rest_max_y={rein_m_rest_max_y}, open={rein_m_open}",
+        )
+
+    return ctx.report()
+
+
+object_model = build_object_model()

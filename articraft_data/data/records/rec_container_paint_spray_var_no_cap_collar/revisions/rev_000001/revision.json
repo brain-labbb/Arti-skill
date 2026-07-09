@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_container_paint_spray_var_no_cap_collar",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T17:37:25Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "841b60033e5a80c25e262f2f990fd533204e60018f90e75ed77dddebbcc9d7cc",
+  "source": {
+    "run_id": "run_20260618_173725_352497_c3738738",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "841b60033e5a80c25e262f2f990fd533204e60018f90e75ed77dddebbcc9d7cc",
+    "model_py_sha256": "214d6ad7e94d62297bcc9f028b8ec5389b53962d6acc1a15ccb65335d50d46c9"
+  },
+  "run_summary": {
+    "turn_count": 23,
+    "tool_call_count": 23,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_aerosol-spray-paint-can-with-a-lift-off-dust-cap_20260606_074905_121496_5eaf6974",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_aerosol-spray-paint-can-with-a-lift-off-dust-cap_20260606_074905_121496_5eaf6974",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

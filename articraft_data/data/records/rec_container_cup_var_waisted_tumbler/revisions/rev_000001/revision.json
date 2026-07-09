@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_container_cup_var_waisted_tumbler",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T17:20:43Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "9456707aa8836eb88b2ee1469c4aefbbdc831283d67e33ff74cc51714ff6d028",
+  "source": {
+    "run_id": "run_20260618_172043_052293_d0f5d100",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "9456707aa8836eb88b2ee1469c4aefbbdc831283d67e33ff74cc51714ff6d028",
+    "model_py_sha256": "fe089ea4e6c681566e84926541f74964e771df16a83d0210ca51278b8b921e1f"
+  },
+  "run_summary": {
+    "turn_count": 5,
+    "tool_call_count": 4,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_paper-coffee-cup-with-a-white-snap-on-sip-lid-th_20260606_074712_535833_2eedb76c",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_paper-coffee-cup-with-a-white-snap-on-sip-lid-th_20260606_074712_535833_2eedb76c",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

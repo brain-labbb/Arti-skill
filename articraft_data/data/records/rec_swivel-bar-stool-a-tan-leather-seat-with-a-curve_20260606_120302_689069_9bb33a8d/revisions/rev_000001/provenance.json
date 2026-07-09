@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_swivel-bar-stool-a-tan-leather-seat-with-a-curve_20260606_120302_689069_9bb33a8d",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "0ea5c9890f6e1c17ff89838a0485830e0b2b9e87",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_finalized"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-06T15:49:34Z",
+    "record_id": "rec_swivel-bar-stool-a-tan-leather-seat-with-a-curve_20260606_120302_689069_9bb33a8d",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_swivel-bar-stool-a-tan-leather-seat-with-a-curve_20260606_120302_689069_9bb33a8d/compile_report.json",
+      "status": "success",
+      "record_id": "rec_swivel-bar-stool-a-tan-leather-seat-with-a-curve_20260606_120302_689069_9bb33a8d",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='base_pedestal' connected=5/7 disconnected=[disc_base:Mesh, pedestal:Cylinder]"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "ac97f4e4f6bc42bcd63ef2b024f10a26894ed86fa2af2a873c915f52a9d464f9",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "b847c25a9885e6e0407548e4e99ab0c5161e65425fb301837ebebdedfa722691",
+        "model_py_mtime_ns": 1780760202448775174,
+        "model_py_size_bytes": 14212,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 1573655,
+        "visual_mesh_file_count": 8,
+        "compile_elapsed_seconds": 6.572460139170289
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

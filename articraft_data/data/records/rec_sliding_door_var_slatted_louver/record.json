@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_sliding_door_var_slatted_louver",
+  "created_at": "2026-06-21T01:26:07Z",
+  "updated_at": "2026-06-21T01:31:07Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "door",
+  "source": {
+    "run_id": "run_20260621_012607_814201_b60cc182",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "sliding_door-slatted_louver",
+    "prompt_preview": "Change ONLY the panel infill layer: fill each leaf with horizontal louver slats instead of a glass sheet, emitting the slats via a for i in range loop with a..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "5136b5b2358870e74f739a0f0a541031f59b22016dcc4bdeac70aa1115670271",
+    "model_py_sha256": "a8970348e8d6222f7888355118a23d96d3d2a0127c88eda1c9b577e892121e99"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_door_slide_2panel",
+    "parent_record_id": "rec_door_slide_2panel",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

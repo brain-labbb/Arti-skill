@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_wheelbarrow_var_slats_n2",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:43:06Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "f36bda7ff339fe82cc9170ce20f0d7aed17b2a84ee8024930b0642184a01c5c1",
+  "source": {
+    "run_id": "run_20260705_094306_046049_9995b77a",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "f36bda7ff339fe82cc9170ce20f0d7aed17b2a84ee8024930b0642184a01c5c1",
+    "model_py_sha256": "e26edb7ff37d9f10cdaf833a51774848348c370e969d32f62e37417b98002f8c"
+  },
+  "run_summary": {
+    "turn_count": 15,
+    "tool_call_count": 14,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_520600_52ff17ad",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_520600_52ff17ad",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_520600_52ff17ad",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "78ab5a14a5b690ab7f397e2a4ac0aaf22069155600b808bc60cfb7901ac8b469"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_rectangular-woven-rattan-basket-with-fitted-lift_20260618_130217_161905_99719568",
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "a1c2006796a51a2ca22c06b9201b0f6b0f94e422",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-18T13:36:06Z",
+    "record_id": "rec_rectangular-woven-rattan-basket-with-fitted-lift_20260618_130217_161905_99719568",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_rectangular-woven-rattan-basket-with-fitted-lift_20260618_130217_161905_99719568/compile_report.json",
+      "status": "success",
+      "record_id": "rec_rectangular-woven-rattan-basket-with-fitted-lift_20260618_130217_161905_99719568",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "70c02d2f684531868047be0368d91578d66345c646e452201355737665c71508",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "1fe85c449782185b3ca99c8a04a3e963d161b7a69398202605064fc7242777d4",
+        "model_py_mtime_ns": 1781789646382488329,
+        "model_py_size_bytes": 19582,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 10038638,
+        "visual_mesh_file_count": 221,
+        "compile_elapsed_seconds": 22.717133158817887
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

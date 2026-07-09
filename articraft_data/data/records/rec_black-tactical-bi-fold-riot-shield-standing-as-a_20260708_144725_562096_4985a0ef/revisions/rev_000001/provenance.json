@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_black-tactical-bi-fold-riot-shield-standing-as-a_20260708_144725_562096_4985a0ef",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "f87d931bc8ba4242e522375b7b28f383e9185f11",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T15:05:01Z",
+    "record_id": "rec_black-tactical-bi-fold-riot-shield-standing-as-a_20260708_144725_562096_4985a0ef",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_black-tactical-bi-fold-riot-shield-standing-as-a_20260708_144725_562096_4985a0ef/compile_report.json",
+      "status": "success",
+      "record_id": "rec_black-tactical-bi-fold-riot-shield-standing-as-a_20260708_144725_562096_4985a0ef",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "4f700f18bb05f1ae8eff05abb7ebfa25f671fd0ad7331c152253688c99ac5388",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "ca10b8065fb32aa438055697072a4ff0cceb7c5ce94cb1e40c0966a966d8bf5a",
+        "model_py_mtime_ns": 1783523057585638244,
+        "model_py_size_bytes": 12501,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 5185229,
+        "visual_mesh_file_count": 4,
+        "compile_elapsed_seconds": 18.026808213442564
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

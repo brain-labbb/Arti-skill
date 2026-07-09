@@ -1,0 +1,16 @@
+CATEGORY: Industrial. SUBCATEGORY: Industrial vice. TARGET (multiplicity): change the number of retaining screws on each replaceable jaw plate from N=2 rows to N=4 per plate, exposing a denser bolted jaw-plate pattern. Emit fixed_plate_screw_* on the body fixed_plate and moving_plate_screw_* on the front_jaw moving_plate via a shared screw helper and for-i-in-range(4) loops with regular vertical spacing and stable indexed names. KEEP identical: base (base_with_bolt_holes), body_casting, rear_anvil, fixed_plate itself, front_jaw front_casting, slide_bar, moving_plate itself, lead_screw, side_lock. KEEP all joints unchanged: base_to_body REVOLUTE, body_to_front_jaw PRISMATIC (non-fixed jaw travel), front_jaw_to_screw CONTINUOUS, base_to_side_lock REVOLUTE. FORBIDDEN: changing plate size family, jaw count, or drive mechanism; do not hand-copy screw blocks.
+
+This is a <Category>/<Subcategory> family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk (4)/(5)/(6) changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle (1) skeleton, (2) joint type, main (3) primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a <Category>/<Subcategory> (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

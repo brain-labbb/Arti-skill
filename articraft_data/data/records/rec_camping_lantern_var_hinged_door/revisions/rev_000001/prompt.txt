@@ -1,0 +1,24 @@
+CATEGORY: Camping_Outdoor Gear
+SUBCATEGORY: Camping Lantern
+TARGET: add a hinged access door/frame section to the lantern_body cage so one guard panel swings open on a revolute pivot.
+DIVERSITY_AXIS: ② joint / mechanism type (hinged swing-open access door instead of a fully fixed guard cage).
+POSITIONING: Barn-style camping lantern with a hinged guard door to reach the bulb/diffuser; remains a portable cage area lantern.
+KEEP: preserve these parent functional layers by name: lantern_body, carry_bail, body_to_bail joint, cylindrical_wire_cage, glowing_diffuser, led_column, vented_base, top_vent_cap, bail_ear_0, bail_ear_1.
+STRUCTURAL_DELTA: split off one front vertical guard section of the cylindrical_wire_cage as a separate hinged_door part; add a REVOLUTE articulation on a vertical hinge post at the cage edge so the door swings outward; leave the rest of the cage, diffuser, base, and carry_bail hinge intact.
+COMPANION_VARIATIONS: ④ small latch knob detail on the door edge (host-conformal, non-structural).
+FORBIDDEN: do not become a birdcage, a small oven, or a mailbox; do not change the cylindrical body family or add legs; add only the single door mechanism.
+
+This is a Camping_Outdoor Gear/Camping Lantern family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Camping_Outdoor Gear/Camping Lantern (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

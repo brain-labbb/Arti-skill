@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_container_kettle_var_trivet_stand",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T17:30:18Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "761160e89bcb2b155f50c85c5535e88ff70ef2b5d3c6bcfb13a9af8519835df9",
+  "source": {
+    "run_id": "run_20260618_173018_790577_a7b1fa85",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "761160e89bcb2b155f50c85c5535e88ff70ef2b5d3c6bcfb13a9af8519835df9",
+    "model_py_sha256": "e0200ce305501ee4656c4491cf9e6847c9ef21f071028a2cb40b7745af6a7cb1"
+  },
+  "run_summary": {
+    "turn_count": 14,
+    "tool_call_count": 14,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_stovetop-whistling-kettle-with-a-lift-off-lid-kn_20260606_074819_789268_89ab783c",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_stovetop-whistling-kettle-with-a-lift-off-lid-kn_20260606_074819_789268_89ab783c",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

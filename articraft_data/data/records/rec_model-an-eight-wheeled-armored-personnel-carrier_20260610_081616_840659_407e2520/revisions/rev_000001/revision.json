@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_model-an-eight-wheeled-armored-personnel-carrier_20260610_081616_840659_407e2520",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-10T08:16:16Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "4f90409011db19be9c894de6b9c46f928c42290c71e9eacfbe994c279f03fe6b",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": null
+  },
+  "hashes": {
+    "prompt_sha256": "4f90409011db19be9c894de6b9c46f928c42290c71e9eacfbe994c279f03fe6b",
+    "model_py_sha256": "1f856fdb51d277413cbb8d4479a76845f658efcb5e1953231ca517d7532cec1b"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-10T14:44:00Z",
+    "record_id": "rec_model-an-eight-wheeled-armored-personnel-carrier_20260610_081616_840659_407e2520",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-an-eight-wheeled-armored-personnel-carrier_20260610_081616_840659_407e2520/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-an-eight-wheeled-armored-personnel-carrier_20260610_081616_840659_407e2520",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 11 overlaps across 9 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "ad6f09083b99053a5050147059bed42f0bdcc3860abe25dfbabce157b075bba3",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "1c741d4d07c02ffc55a8cf4ead587a6a54d26ba7128efd0cf7a03cf8882ebb86",
+        "model_py_mtime_ns": 1781101851638694139,
+        "model_py_size_bytes": 24771,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 2247723,
+        "visual_mesh_file_count": 8,
+        "compile_elapsed_seconds": 43.082952729426324
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

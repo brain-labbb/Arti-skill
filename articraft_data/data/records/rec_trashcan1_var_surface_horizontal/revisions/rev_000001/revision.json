@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_trashcan1_var_surface_horizontal",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-27T04:00:37Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "7fc34d785e53182d9e114a5f67eebd8be80da03ad0d5a308676ae66b3fc0dc4f",
+  "source": {
+    "run_id": "run_20260627_040037_889958_0a996af6",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "7fc34d785e53182d9e114a5f67eebd8be80da03ad0d5a308676ae66b3fc0dc4f",
+    "model_py_sha256": "254906253aaf0ee87116e4ca9b3eee4ddb4d0304acc5f15b6486f6ad64d62041"
+  },
+  "run_summary": {
+    "turn_count": 12,
+    "tool_call_count": 12,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_galvanized-steel-trash-can-with-a-slightly-taper_20260608_164526_754874_e62b5cca",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_galvanized-steel-trash-can-with-a-slightly-taper_20260608_164526_754874_e62b5cca",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

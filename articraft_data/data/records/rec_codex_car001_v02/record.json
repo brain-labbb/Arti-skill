@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_codex_car001_v02",
+  "created_at": "2026-06-14T12:33:42Z",
+  "updated_at": "2026-06-14T16:39:41Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": null,
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "external_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "sports_car",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "openai",
+  "model_id": "codex",
+  "display": {
+    "title": "Codex Car 001 red classic coupe",
+    "prompt_preview": "Variant 02 external-agent takeover: edit the existing model.py into a glossy red classic sports coupe. Preserve the vintage two-door sports-coupe identity, c..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "f2d5a896c6eab920a3169af9e71065f4a770f21d32b1f6c4584989c31d2ad1b2",
+    "model_py_sha256": "83d7121c04c2fb578ce30d42aaa613c2e091ec387b5cedb469557ecd4603f3ae"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_classic-mercedes-300sl-gullwing-sports-car-in-de_20260608_164442_671467_88ed264e",
+    "parent_record_id": "rec_classic-mercedes-300sl-gullwing-sports-car-in-de_20260608_164442_671467_88ed264e",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  },
+  "creator": {
+    "mode": "external_agent",
+    "agent": "codex",
+    "trace_available": false
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_pcsc_var_chainhung",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-25T02:10:34Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "898cc56805e00fd66d99e663ba9eec35a011d96f69e209be7559249342355a15",
+  "source": {
+    "run_id": "run_20260625_021034_624843_e1703978",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "898cc56805e00fd66d99e663ba9eec35a011d96f69e209be7559249342355a15",
+    "model_py_sha256": "c98c2725d67006514a25951b22fcc032ee76809eed0cf261df4a444d0da0cee8"
+  },
+  "run_summary": {
+    "turn_count": 13,
+    "tool_call_count": 13,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-weathered-four-seat-playground-chair-swi_20260610_085325_366519_82f97e28",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-weathered-four-seat-playground-chair-swi_20260610_085325_366519_82f97e28",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

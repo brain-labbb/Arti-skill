@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_clamp_var_leverhandle",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T06:33:37Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "a5e10ffd636a5c0532943009dc05091f3055591358689ed197741f51491118d2",
+  "source": {
+    "run_id": "run_20260618_063337_825706_d2aa0999",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a5e10ffd636a5c0532943009dc05091f3055591358689ed197741f51491118d2",
+    "model_py_sha256": "516b2a0390ecdeb2e8a4e6fa3d85539cbd3b0f9188067735cf0078e5338b1936"
+  },
+  "run_summary": {
+    "turn_count": 29,
+    "tool_call_count": 29,
+    "compile_attempt_count": 6,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-clam_20260609_163926_720602_e34de725",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-clam_20260609_163926_720602_e34de725",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

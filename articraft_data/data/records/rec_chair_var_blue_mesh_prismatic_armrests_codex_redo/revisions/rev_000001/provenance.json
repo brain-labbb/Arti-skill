@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_chair_var_blue_mesh_prismatic_armrests_codex_redo",
+  "generation": {
+    "provider": "openai",
+    "model_id": "codex-external",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": null,
+    "uv_lock_sha256": null
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-21T15:22:48Z",
+    "record_id": "rec_chair_var_blue_mesh_prismatic_armrests_codex_redo",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_chair_var_blue_mesh_prismatic_armrests_codex_redo/compile_report.json",
+      "status": "success",
+      "record_id": "rec_chair_var_blue_mesh_prismatic_armrests_codex_redo",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 22 overlaps across 12 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "8069fa0ac3ef83179c88d1773f37776b2dc89d8fd77ebd80c0d112a08843639f",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "d2d967fa6fc8a03311ccef1346bb814eb4be95746af8279b546a2cdf8a031438",
+        "model_py_mtime_ns": 1782055322505377999,
+        "model_py_size_bytes": 43182,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 5616428,
+        "visual_mesh_file_count": 77,
+        "compile_elapsed_seconds": 12.57073170132935
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

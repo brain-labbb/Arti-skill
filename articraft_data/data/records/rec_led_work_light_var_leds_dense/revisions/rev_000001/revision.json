@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_led_work_light_var_leds_dense",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T15:48:18Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "4ebb97fde5732876a39f41fe438747dc243a7972fbeedea2d9eb3c5702394fae",
+  "source": {
+    "run_id": "run_20260623_154818_393809_0cc7bffc",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5",
+    "thinking_level": "high",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "4ebb97fde5732876a39f41fe438747dc243a7972fbeedea2d9eb3c5702394fae",
+    "model_py_sha256": "4818c8637ff883a51c39fc1b66a36f5aa3b129d7e1daade161151e7215d75ad8"
+  },
+  "run_summary": {
+    "turn_count": 7,
+    "tool_call_count": 6,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-led-_20260609_180048_908359_f7e038e0",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-led-_20260609_180048_908359_f7e038e0",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

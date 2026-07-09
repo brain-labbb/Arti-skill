@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-backdraft-multi-blade-louver-shutter-add_20260617_135024_363235_d3db9306",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T13:50:24Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "4636a48b4ab9b1cfff5bf5da4b7564eae8dd9291a3eedc03459a9818dc7e435e",
+  "source": {
+    "run_id": "run_20260617_135024_363235_d3db9306",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "4636a48b4ab9b1cfff5bf5da4b7564eae8dd9291a3eedc03459a9818dc7e435e",
+    "model_py_sha256": "5ae661ae96bd47a4476937d7a3f1f5c1cbacd3760d2eaf134f56071ea39a360a"
+  },
+  "run_summary": {
+    "turn_count": 7,
+    "tool_call_count": 8,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-square-wall-mounted-exhaust-ventilation-_20260610_084713_390960_4c3504f2",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-square-wall-mounted-exhaust-ventilation-_20260610_084713_390960_4c3504f2",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_prosthetic_var_above_knee",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:57:54Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "f6526b6f86b993150175beb7dc6f2b3a5206a889201096bb726e71721da3a957",
+  "source": {
+    "run_id": "run_20260705_095754_661769_c9280081",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 5.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "f6526b6f86b993150175beb7dc6f2b3a5206a889201096bb726e71721da3a957",
+    "model_py_sha256": "de57149f76100a2ef142514de55cfde7b286d7cb7b115c6cc1f3bf4f1025ad59"
+  },
+  "run_summary": {
+    "turn_count": 35,
+    "tool_call_count": 35,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-below-knee-trans-tibial-prosthetic-leg-a-conto_20260623_174436_819830_1fb23a2c",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-below-knee-trans-tibial-prosthetic-leg-a-conto_20260623_174436_819830_1fb23a2c",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_a-below-knee-trans-tibial-prosthetic-leg-a-conto_20260623_174436_819830_1fb23a2c",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "fbb74de3f6486dba025f66d02ed6ea19c6357005100cd5c74062926c309dcd7b"
+    }
+  ]
+}

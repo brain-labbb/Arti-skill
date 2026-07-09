@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_conduit_bender_var_hydraulic_ram_bender",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:41:30Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "37c11b1a48280701b016dcc8c300f912099c585831930505ddec907942ca63ac",
+  "source": {
+    "run_id": "run_20260705_094130_783526_f3666ca7",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "37c11b1a48280701b016dcc8c300f912099c585831930505ddec907942ca63ac",
+    "model_py_sha256": "183703c7b41f29e80a871d0841ed438c346d843c3cbfea4466a1132b50fdc9d4"
+  },
+  "run_summary": {
+    "turn_count": 20,
+    "tool_call_count": 20,
+    "compile_attempt_count": 5,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_228873_1dc8f80a",
+    "revision_id": "rev_000002"
+  },
+  "seed": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_228873_1dc8f80a",
+    "revision_id": "rev_000002",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_228873_1dc8f80a",
+      "revision_id": "rev_000002",
+      "path": "revisions/rev_000002/inputs/001.png",
+      "sha256": "ea54099e94bd87f92c9f3a9bbfc75e4b1c1ffffe024d4594833dda5d71f255db"
+    }
+  ]
+}

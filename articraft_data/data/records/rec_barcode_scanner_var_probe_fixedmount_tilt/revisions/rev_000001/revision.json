@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_barcode_scanner_var_probe_fixedmount_tilt",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T12:06:04Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "007ab27f4f6a1bf573e4818ef0d81c7f38c9461b58b68a19c319addf6e7665bd",
+  "source": {
+    "run_id": "run_20260709_120604_639888_4f6a47d2",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "007ab27f4f6a1bf573e4818ef0d81c7f38c9461b58b68a19c319addf6e7665bd",
+    "model_py_sha256": "70f30a4489202af09bfaa6551db406f10d40a175deaf82dc854a0b2181fd30a2"
+  },
+  "run_summary": {
+    "turn_count": 24,
+    "tool_call_count": 25,
+    "compile_attempt_count": 6,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_handheld-pistol-grip-barcode-scanner-black-plast_20260708_082438_119506_b32f70d1",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_handheld-pistol-grip-barcode-scanner-black-plast_20260708_082438_119506_b32f70d1",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

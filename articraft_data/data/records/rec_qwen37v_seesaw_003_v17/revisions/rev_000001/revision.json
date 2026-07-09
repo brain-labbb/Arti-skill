@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_seesaw_003_v17",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-12T07:39:09Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "a02f5a52735bc675ce7a0b4b683fe91d2d59f3e3efc6d7cc87db6a58f6dd95ae",
+  "source": {
+    "run_id": "run_20260612_073909_827778_7a6be19a",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a02f5a52735bc675ce7a0b4b683fe91d2d59f3e3efc6d7cc87db6a58f6dd95ae",
+    "model_py_sha256": "0ad63a7db77698754bdb9c200556ad4eb74748e718e0f98f9b36498b6f92e87a"
+  },
+  "run_summary": {
+    "turn_count": 23,
+    "tool_call_count": 24,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-modern-commercial-playground-seesaw-abou_20260610_085310_256700_c240aa26",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-modern-commercial-playground-seesaw-abou_20260610_085310_256700_c240aa26",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-blue-steel-jaw-ore-crusher-with-heavy-bolted-s_20260708_085942_422955_d79d8a2f",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-08T08:59:42Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "54d935abb3c01142e4cccbcf676583c2bfa33006a532b9a21166574541d01b7f",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "54d935abb3c01142e4cccbcf676583c2bfa33006a532b9a21166574541d01b7f",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T09:05:44Z",
+    "record_id": "rec_a-blue-steel-jaw-ore-crusher-with-heavy-bolted-s_20260708_085942_422955_d79d8a2f",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_a-blue-steel-jaw-ore-crusher-with-heavy-bolted-s_20260708_085942_422955_d79d8a2f/compile_report.json",
+      "status": "success",
+      "record_id": "rec_a-blue-steel-jaw-ore-crusher-with-heavy-bolted-s_20260708_085942_422955_d79d8a2f",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 3 overlaps across 3 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "1281d17a3d4d256d7d794c8dcaf5666c044d217133d0a38efecd04ff5ac39b6f",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "609776c7067ffd9104560d0da5e1d8890cdfa164dc1516b92af155391bf24624",
+        "model_py_mtime_ns": 1783501510316255553,
+        "model_py_size_bytes": 16684,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 281381,
+        "visual_mesh_file_count": 3,
+        "compile_elapsed_seconds": 1.9018388749973383
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

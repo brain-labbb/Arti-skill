@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_folding-two-panel-soft-armor-riot-shield-g-fold-_20260708_144344_902932_d961ac50",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-08T14:43:44Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "3de8753238b8be46a2df70d33c01c32b863b23026193d694df9de0ce5215f7b9",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "3de8753238b8be46a2df70d33c01c32b863b23026193d694df9de0ce5215f7b9",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T15:14:55Z",
+    "record_id": "rec_folding-two-panel-soft-armor-riot-shield-g-fold-_20260708_144344_902932_d961ac50",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_folding-two-panel-soft-armor-riot-shield-g-fold-_20260708_144344_902932_d961ac50/compile_report.json",
+      "status": "success",
+      "record_id": "rec_folding-two-panel-soft-armor-riot-shield-g-fold-_20260708_144344_902932_d961ac50",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "bad9c9a4d36ad037c6c2f0bce614753735f9adce3e21615430365a582a7ef1a2",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "d76ed61c506f545c08b707ee7daf5dd314d3347f30f962160d1c910037e4d00d",
+        "model_py_mtime_ns": 1783522790671406288,
+        "model_py_size_bytes": 10793,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 70567,
+        "visual_mesh_file_count": 2,
+        "compile_elapsed_seconds": 3.1872495599091053
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

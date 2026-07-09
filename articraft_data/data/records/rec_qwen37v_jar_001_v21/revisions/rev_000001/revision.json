@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_jar_001_v21",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-12T08:02:43Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "347cd600a570e6a623a0e7672591933809585b1ffd8451b23a4a488f1694888a",
+  "source": {
+    "run_id": "run_20260612_080243_125553_7d58369d",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "347cd600a570e6a623a0e7672591933809585b1ffd8451b23a4a488f1694888a",
+    "model_py_sha256": "0de27ec17511bc889579cbfc90b5dab62f93226ee3c413fbb5b279badc8a4516"
+  },
+  "run_summary": {
+    "turn_count": 8,
+    "tool_call_count": 10,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_cosmetic-face-cream-glass-jar-with-a-screw-on-li_20260606_074754_785987_072e38fe",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_cosmetic-face-cream-glass-jar-with-a-screw-on-li_20260606_074754_785987_072e38fe",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_cultivator_var_pneumatic_wheel",
+  "created_at": "2026-07-05T09:43:06Z",
+  "updated_at": "2026-07-05T09:58:15Z",
+  "rating": 5,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "hand_cultivator",
+  "source": {
+    "run_id": "run_20260705_094306_053638_fa389ecf",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "cultivator-pneumatic_wheel",
+    "prompt_preview": "TARGET: Replace the iron spoked rim in `tine_wheel` with a PNEUMATIC rubber tire (tire torus over a small steel hub/rim). KEEP: `frame`, `spring_claw_{i}` ti..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "6309b28557307e844f99552a6a1c00e7a92462b85d6542f0ef6c4cc5303f2a77",
+    "model_py_sha256": "dfe94d5c7e8c77ff38468ea799738d2135f4def829d206e6b1fedafcbcd821aa"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_882758_a6707f8e",
+    "parent_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_882758_a6707f8e",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

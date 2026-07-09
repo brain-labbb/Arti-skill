@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_air_fryer_var_body_square",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-19T13:16:52Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "4fded1ca578dc19ce63e512a7c6c7dae75cb12b837a45c80ce930f77d7bb14be",
+  "source": {
+    "run_id": "run_20260619_131652_585946_37708b6e",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "4fded1ca578dc19ce63e512a7c6c7dae75cb12b837a45c80ce930f77d7bb14be",
+    "model_py_sha256": "313222582cce68b5d95e4f654b1700ecc348a47a7d43ab010be17d7e310a4196"
+  },
+  "run_summary": {
+    "turn_count": 8,
+    "tool_call_count": 8,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-compact-countertop-air-fryer-approximate_20260610_080653_823182_92e8cb25",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-compact-countertop-air-fryer-approximate_20260610_080653_823182_92e8cb25",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

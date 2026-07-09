@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_codex_car002_v04",
+  "created_at": "2026-06-14T12:34:09Z",
+  "updated_at": "2026-06-14T16:46:51Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": null,
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "external_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "sports_car",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "openai",
+  "model_id": "codex",
+  "display": {
+    "title": "Codex Car 002 red wedge supercar",
+    "prompt_preview": "Variant 04 external-agent takeover: edit the existing model.py into a glossy deep red wedge supercar. Preserve both scissor-door revolute joints, all four sp..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "c1550e5742c2ddd9bd40ad77be9c6e88a209a64173080b89306ced1d078282a3",
+    "model_py_sha256": "57e1bb5417396f49141531cdd87e207a8d876c16ea274387a10c7a081ab6bc68"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "parent_record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  },
+  "creator": {
+    "mode": "external_agent",
+    "agent": "codex",
+    "trace_available": false
+  }
+}

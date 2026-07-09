@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_pcsc_var_n2",
+  "created_at": "2026-06-25T02:10:34Z",
+  "updated_at": "2026-06-25T02:14:16Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260625_021034_627019_48a7eac0",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "pcsc-n2",
+    "prompt_preview": "SEAT_COUNT multiplicity axis. Parent has FOUR seats at 90-degree spacing. Change ONLY the seat count: reduce to TWO seats spaced 180 degrees apart (one arm +..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "b9f6af466c9a1a39889ab925dc3717363dfac603bf49e238ce8d9de2943ec6e1",
+    "model_py_sha256": "e92df7bb1121feb6d44382440178161eecfed0bb8fc71b589b776e5066642fc7"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_model-a-weathered-four-seat-playground-chair-swi_20260610_085325_366519_82f97e28",
+    "parent_record_id": "rec_model-a-weathered-four-seat-playground-chair-swi_20260610_085325_366519_82f97e28",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

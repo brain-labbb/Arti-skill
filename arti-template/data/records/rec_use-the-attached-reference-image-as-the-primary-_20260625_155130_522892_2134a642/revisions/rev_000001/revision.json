@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_522892_2134a642",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-25T15:51:30Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "2cd73120d5186cf538677bfb1f44121a1e0b90b43d41a4a9546dfaf0171992e3",
+  "source": {
+    "run_id": "run_20260625_155130_522892_2134a642",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5",
+    "thinking_level": "high",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "2cd73120d5186cf538677bfb1f44121a1e0b90b43d41a4a9546dfaf0171992e3",
+    "model_py_sha256": "9f167929c60c2746524d003dac9a1ffb92ba65eda9b489c72b80debd580037a5"
+  },
+  "run_summary": {
+    "turn_count": 14,
+    "tool_call_count": 19,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-26T01:10:37Z",
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_522892_2134a642",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_522892_2134a642/compile_report.json",
+      "status": "success",
+      "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_522892_2134a642",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 6 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "1dc49d811e3667608f86172e0f736b5f82609b9a1460911d5e6080de0d5f344a",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "25b0bda15b8b7fb4d52f838b46d50845f0f47cf70945085e19a27513a6321cc1",
+        "model_py_mtime_ns": 1782436188811105133,
+        "model_py_size_bytes": 15977,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 1700668,
+        "visual_mesh_file_count": 16,
+        "compile_elapsed_seconds": 5.954614417627454
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 8,
+      "errors": [
+        "record.json missing creator metadata for external workflow",
+        "artifacts.cost_json must be unset for external records",
+        "source.run_id must be null for external records",
+        "external records must not contain Articraft agent traces",
+        "external records must not contain Articraft cost telemetry",
+        "provenance.run_summary.turn_count must be null",
+        "provenance.run_summary.tool_call_count must be null",
+        "provenance.run_summary.compile_attempt_count must be null"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

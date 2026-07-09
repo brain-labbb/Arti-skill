@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_create-a-highly-detailed-articulated-square-luxu_20260605_133604_487371_876ccf2a",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-05T13:36:04Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "ea5e6c9b698e3900a4dedfcb9b4b2bd2a14302dcb06423572ebc9e226c7dd189",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "ea5e6c9b698e3900a4dedfcb9b4b2bd2a14302dcb06423572ebc9e226c7dd189",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-05T13:59:08Z",
+    "record_id": "rec_create-a-highly-detailed-articulated-square-luxu_20260605_133604_487371_876ccf2a",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_create-a-highly-detailed-articulated-square-luxu_20260605_133604_487371_876ccf2a/compile_report.json",
+      "status": "success",
+      "record_id": "rec_create-a-highly-detailed-articulated-square-luxu_20260605_133604_487371_876ccf2a",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='lid' connected=8/9 disconnected=[inner_mirror:Cylinder]"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 4 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "6910464d2f05a11676dfe1a8c05efeb331622b5708747ed1f6a7e58bfe63758f",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "6f0189382025f1fce7ce21a9f4162305c8ee37a883986c7757f97939ea712cde",
+        "model_py_mtime_ns": 1780667721940520951,
+        "model_py_size_bytes": 5818,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 148605,
+        "visual_mesh_file_count": 5,
+        "compile_elapsed_seconds": 10.928956845775247
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_model-an-eight-wheeled-armored-personnel-carrier_20260610_081616_840659_407e2520",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "48c1acb46c6036e6eef904e4f363944751fac19e",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-10T14:44:00Z",
+    "record_id": "rec_model-an-eight-wheeled-armored-personnel-carrier_20260610_081616_840659_407e2520",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-an-eight-wheeled-armored-personnel-carrier_20260610_081616_840659_407e2520/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-an-eight-wheeled-armored-personnel-carrier_20260610_081616_840659_407e2520",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 11 overlaps across 9 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "ad6f09083b99053a5050147059bed42f0bdcc3860abe25dfbabce157b075bba3",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "1c741d4d07c02ffc55a8cf4ead587a6a54d26ba7128efd0cf7a03cf8882ebb86",
+        "model_py_mtime_ns": 1781101851638694139,
+        "model_py_size_bytes": 24771,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 2247723,
+        "visual_mesh_file_count": 8,
+        "compile_elapsed_seconds": 43.082952729426324
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

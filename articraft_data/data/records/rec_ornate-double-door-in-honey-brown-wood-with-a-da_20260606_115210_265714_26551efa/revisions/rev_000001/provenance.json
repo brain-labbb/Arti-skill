@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_ornate-double-door-in-honey-brown-wood-with-a-da_20260606_115210_265714_26551efa",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "0ea5c9890f6e1c17ff89838a0485830e0b2b9e87",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_finalized"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-06T15:49:35Z",
+    "record_id": "rec_ornate-double-door-in-honey-brown-wood-with-a-da_20260606_115210_265714_26551efa",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_ornate-double-door-in-honey-brown-wood-with-a-da_20260606_115210_265714_26551efa/compile_report.json",
+      "status": "success",
+      "record_id": "rec_ornate-double-door-in-honey-brown-wood-with-a-da_20260606_115210_265714_26551efa",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "3f9c8a64983ae38c831c89264543daa089b2c89765e254746cf51d3f31b45d69",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "16272d345a25647224aa49d8969494ee65afe04bc2b4b553585cf3cf94686653",
+        "model_py_mtime_ns": 1780760255640606054,
+        "model_py_size_bytes": 24075,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 284034,
+        "visual_mesh_file_count": 16,
+        "compile_elapsed_seconds": 6.599451811052859
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

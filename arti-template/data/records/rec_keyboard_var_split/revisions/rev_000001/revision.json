@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_keyboard_var_split",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T10:45:14Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "74cb82606630c457ab71b18c9c1438f54e2d2eb9afd9fa44f97d4ce8a496061b",
+  "source": {
+    "run_id": "run_20260705_104514_893889_af02aa8b",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "74cb82606630c457ab71b18c9c1438f54e2d2eb9afd9fa44f97d4ce8a496061b",
+    "model_py_sha256": "4d0f66494d6aeb70f2c36b9efd3c1c753527592a742cd4314376cb37b1b12f39"
+  },
+  "run_summary": {
+    "turn_count": 18,
+    "tool_call_count": 18,
+    "compile_attempt_count": 5,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-white-compact-wireless-computer-keyboard-tenke_20260624_123545_283861_38c84f4e",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-white-compact-wireless-computer-keyboard-tenke_20260624_123545_283861_38c84f4e",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_a-white-compact-wireless-computer-keyboard-tenke_20260624_123545_283861_38c84f4e",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "222fd24029573f6b4c6c5e3a3b550cfa80cc859adbf401d690dac8d8f83a9c27"
+    }
+  ]
+}

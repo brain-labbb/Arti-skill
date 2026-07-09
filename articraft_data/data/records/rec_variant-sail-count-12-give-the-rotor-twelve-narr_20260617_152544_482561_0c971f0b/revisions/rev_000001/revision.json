@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-sail-count-12-give-the-rotor-twelve-narr_20260617_152544_482561_0c971f0b",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T15:25:44Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "62e68a92584517c9629f0953ebb87c0a3ebb23341aafe32acc19e62e4aec1c98",
+  "source": {
+    "run_id": "run_20260617_152544_482561_0c971f0b",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "62e68a92584517c9629f0953ebb87c0a3ebb23341aafe32acc19e62e4aec1c98",
+    "model_py_sha256": "06a6a346a10c262de1e6a61e408a3c81d558aafdd93486adc9395561ab8321ab"
+  },
+  "run_summary": {
+    "turn_count": 13,
+    "tool_call_count": 13,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-decorative-american-style-garden-windmil_20260610_084933_134455_40ee4efc",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-decorative-american-style-garden-windmil_20260610_084933_134455_40ee4efc",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_pipeline_var_operator_5spoke",
+  "created_at": "2026-06-23T15:31:56Z",
+  "updated_at": "2026-06-23T15:32:37Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "equipment",
+  "source": {
+    "run_id": "run_20260623_153156_487436_f04853ef",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "openai",
+  "model_id": "gpt-5.5",
+  "display": {
+    "title": "rec_pipeline_var_operator_5spoke",
+    "prompt_preview": "Change only the handwheel spoke count to 5 (emit 5 radial spokes through the existing for-i-in-range(n) loop), keeping the torus rim, hub and continuous +Z j..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "5f665990d5efd326af28db708107f948c3492e93e5575115f4ed539a67686caf",
+    "model_py_sha256": "8baeba3de8cb74d24688c28cd28ed64b30bae925bbc8843289c580cc70b29222"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_build-a-realistic-articulated-3d-model-of-a-pipe_20260609_180109_734374_b30771ae",
+    "parent_record_id": "rec_build-a-realistic-articulated-3d-model-of-a-pipe_20260609_180109_734374_b30771ae",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_change-only-the-vent-replace-the-single-corner-v_20260614_083118_464997_5980d6ab",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-14T08:31:18Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "0e832a4d35adfd7f825e8113ebe9f116a51df052c87b4684d491ac9ba92f693f",
+  "source": {
+    "run_id": "run_20260614_083118_464997_5980d6ab",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 80,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "0e832a4d35adfd7f825e8113ebe9f116a51df052c87b4684d491ac9ba92f693f",
+    "model_py_sha256": "7cab2215c22f29dae248408f946fa31cc4c3f9df5dc07b579a8bf1a0543ce37f"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 10,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_portable-toilet-cabin-porta-potty-a-magenta-red-_20260612_113231_642886_5cec201b",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_portable-toilet-cabin-porta-potty-a-magenta-red-_20260612_113231_642886_5cec201b",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

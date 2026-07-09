@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_emergency_equipment__emergency_exit_door_e8695a6c2b8d4e0895742ce991243255",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-07T06:21:44Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "6c5e4dd4fdcf7e37e7c13f83b5f7b2b6256181379223f7624eda2a5a3413a406",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "6c5e4dd4fdcf7e37e7c13f83b5f7b2b6256181379223f7624eda2a5a3413a406",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-07T06:48:56Z",
+    "record_id": "rec_emergency_equipment__emergency_exit_door_e8695a6c2b8d4e0895742ce991243255",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_emergency_equipment__emergency_exit_door_e8695a6c2b8d4e0895742ce991243255/compile_report.json",
+      "status": "success",
+      "record_id": "rec_emergency_equipment__emergency_exit_door_e8695a6c2b8d4e0895742ce991243255",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='near_leaf' connected=37/77 disconnected=[near_door_skin:Box, near_upper_inset_recess_shadow:Box, near_upper_inset_top_trim:Box, near_upper_inset_bottom_trim:Box, near_upper_inset_hinge_side_trim:Box, near_upper_inset_meeting_side_trim:Box, near_lower_inset_recess_shadow:Box, near_lower_inset_top_trim:Box, near_lower_inset_bottom_trim:Box, near_lower_inset_hinge_side_trim:Box, near_lower_inset_meeting_side_trim:Box, near_bottom_kick_plate:Box, near_kick_plate_screw_12:Cylinder, near_kick_plate_screw_13:Cylinder, near_kick_plate_screw_14:Cylinder, near_kick_plate_screw_15:Cylinder, near_meeting_stile:Box, near_center_reveal_shadow:Box, near_upper_panel_reveal:Box, near_lower_panel_reveal:Box, near_upper_hinge_barrel_leaf_plate:Box, near_upper_hinge_barrel_leaf_screw_21:Cylinder, near_upper_hinge_barrel_leaf_screw_22:Cylinder, near_upper_hinge_barrel:Cylinder, near_upper_hinge_barrel_pin_shadow:Cylinder, near_lower_hinge_barrel_leaf_plate:Box, near_lower_hinge_barrel_leaf_screw_26:Cylinder, near_lower_hinge_barrel_leaf_screw_27:Cylinder, near_lower_hinge_barrel:Cylinder, near_lower_hinge_barrel_pin_shadow:Cylinder, near_lock_rosette:Cylinder, near_lock_cylinder:Cylinder, near_lock_key_slot:Box, near_lock_rosette_shadow_ring:Cylinder, near_bolt_front_guide_lip:Box, near_bolt_sleeve_slot_shadow:Box, near_bolt_upper_retainer_lip:Box, near_bolt_lower_retainer_lip:Box, near_bolt_guide_upper_screw:Cylinder, near_bolt_guide_lower_screw:Cylinder]\npart='far_leaf' connected=51/94 disconnected=[far_door_skin:Box, far_upper_inset_recess_shadow:Box, far_upper_inset_top_trim:Box, far_upper_inset_bottom_trim:Box, far_upper_inset_hinge_side_trim:Box, far_upper_inset_meeting_side_trim:Box, far_lower_inset_recess_shadow:Box, far_lower_inset_top_trim:Box, far_lower_inset_bottom_trim:Box, far_lower_inset_hinge_side_trim:Box, far_lower_inset_meeting_side_trim:Box, far_bottom_kick_plate:Box, far_kick_plate_screw_12:Cylinder, far_kick_plate_screw_13:Cylinder, far_kick_plate_screw_14:Cylinder, far_kick_plate_screw_15:Cylinder, far_upper_panel_reveal:Box, far_lower_panel_reveal:Box, far_upper_hinge_barrel_leaf_plate:Box, far_upper_hinge_barrel_leaf_screw_21:Cylinder, far_upper_hinge_barrel_leaf_screw_22:Cylinder, far_upper_hinge_barrel:Cylinder, far_upper_hinge_barrel_pin_shadow:Cylinder, far_lower_hinge_barrel_leaf_plate:Box, far_lower_hinge_barrel_leaf_screw_26:Cylinder, far_lower_hinge_barrel_leaf_screw_27:Cylinder, far_lower_hinge_barrel:Cylinder, far_lower_hinge_barrel_pin_shadow:Cylinder, far_rear_green_label__component_001:Mesh, far_rear_green_label__component_002:Mesh, far_rear_green_label__component_003:Mesh, far_rear_green_label__component_004:Mesh, far_rear_green_label__component_005:Mesh, far_rear_green_label__component_006:Mesh, far_rear_green_label__component_007:Mesh, far_rear_green_label__component_008:Mesh, far_rear_green_label__component_009:Mesh, far_label_mark_0:Box, far_label_mark_1:Box, far_label_mark_2:Box, far_label_mark_3:Box, far_label_mark_4:Box, far_label_mark_5:Box]\npart='near_push_bar' connected=17/38 disconnected=[near_silver_push_bar__component_001:Mesh, near_silver_push_bar__component_002:Mesh, near_silver_push_bar__component_003:Mesh, near_silver_push_bar__component_004:Mesh, near_silver_push_bar__component_005:Mesh, near_silver_push_bar__component_006:Mesh, near_silver_push_bar__component_007:Mesh, near_silver_push_bar__component_008:Mesh, near_silver_push_bar__component_009:Mesh, near_inner_bar_end_cap:Box, near_label_top_shadow:Box, near_label_bottom_shadow:Box, near_bar_back_contact_pad:Box, near_push_small_print_0:Box, near_push_small_print_1:Box, near_push_small_print_2:Box, near_push_small_print_3:Box, near_push_small_print_4:Box, near_push_small_print_5:Box, near_push_small_print_6:Box, near_slider_tongue_21:Box]\npart='latch_bolt' connected=10/11 disconnected=[bolt_tail:Box]"
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "4bfeb055fddadaf34e4fb290195ccd8cda9266ffbfc70bd283c9c843be937656",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "b9ccab59e233db10ac71ac8eb835296a490110708f4e2217bc6749acd3002cdf",
+        "model_py_mtime_ns": 1783406889193254812,
+        "model_py_size_bytes": 22841,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 2927718,
+        "visual_mesh_file_count": 9,
+        "compile_elapsed_seconds": 8.611173333003535
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

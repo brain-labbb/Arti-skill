@@ -1,0 +1,26 @@
+CATEGORY: Workspace
+SUBCATEGORY: Laptop stand
+TARGET: change the pitched perforated arm linkage (link_arms with side_arm segments, base_shaft/tray_shaft, and the arm_pitch revolute) to a vertical telescoping prismatic lift column.
+DIVERSITY_AXIS: ② joint / mechanism type (revolute arm pitch -> prismatic vertical height post).
+POSITIONING: sit-stand height-adjustable laptop riser with a gas-lift / telescoping post: the tray rises straight up on a vertical column. Stays a Laptop stand: a broad base + a tray holding the laptop, height-adjustable.
+KEEP: preserve these parent functional layers by name: base (base_plate, side_groove/end_groove), upper_tray (front_tray_rail, side_tray_rail, laptop_plate, front_lip, lip_foot), the turntable_yaw rotating base, tray_tilt, brushed_silver + matte_black materials, the _rounded_plate_mesh helper.
+STRUCTURAL_DELTA: replace the paired arm links and the arm_pitch revolute with an outer post + inner slider column joined by ONE prismatic joint on the vertical axis; the tray sits on the inner slider; keep the tray_tilt revolute at the top and the rotating base underneath, so height is set by the prismatic travel. Show visible telescoping tube nesting (inner tube captured inside the outer tube).
+MULTIPLICITY:
+COMPANION_VARIATIONS: base finish and proportion only.
+FORBIDDEN: do not become a monitor pole mount, a floor-standing pole stand, or a desk; keep the laptop tray + front lips; do not fold flat or add scissor bars.
+COMPATIBILITY_PROBE:
+
+This is a Workspace/Laptop stand family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Workspace/Laptop stand (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

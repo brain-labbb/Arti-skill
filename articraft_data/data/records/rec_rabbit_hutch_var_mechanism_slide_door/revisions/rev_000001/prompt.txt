@@ -1,0 +1,25 @@
+CATEGORY: Pet_Animal related
+SUBCATEGORY: Rabbit hutch
+TARGET: change the fixed hutch/run divider (divider_mesh wall on hutch_frame) to carry a vertical-sliding guillotine pop-hole door — a new PRISMATIC mechanism the parent does not have on a door.
+DIVERSITY_AXIS: ② joint/mechanism type (add a vertical prismatic slide door alongside the existing revolute doors and horizontal prismatic tray).
+POSITIONING: pop-hole guillotine door that lets the rabbit pass between the enclosed sleeping hutch and the open run — a standard multi-compartment hutch feature; stays a rabbit hutch.
+KEEP: preserve these parent functional layers by name: hutch_frame, divider_mesh, run_upper_platform, upper_door, lower_door, frame_to_upper_door, frame_to_lower_door, floor_tray, frame_to_floor_tray, internal_ramp_board, and the caster_wheel_i / fork_to_caster_wheel_i rolling parts.
+STRUCTURAL_DELTA: cut a small rectangular pop-hole opening in the divider between the left hutch and the right run; add a flat plank/acrylic slide panel captured between two visible vertical guide rails fixed to hutch_frame; connect the panel to hutch_frame with a PRISMATIC joint along +Z (lift to open, drop to close) with a small pull knob/finger-notch; guides must visibly bracket the panel travel so it does not float.
+MULTIPLICITY: not applicable.
+COMPANION_VARIATIONS: may vary panel material acrylic vs plank (④) and pop-hole size / lift travel (⑤); no other joint, body-family, or compartment-count change.
+FORBIDDEN: exterior barn-style horizontal sliding door, a whole sliding wall, adding a new compartment or wheels; do not change the main body topology or convert the hinged doors; keep it a rabbit hutch.
+
+This is a Pet_Animal related/Rabbit hutch family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Pet_Animal related/Rabbit hutch (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

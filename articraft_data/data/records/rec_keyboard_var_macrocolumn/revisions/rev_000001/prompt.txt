@@ -1,0 +1,17 @@
+MULTIPLICITY: target layout = tenkeyless + left-hand macro column, N ~= 93 keys. Prepend an extra left-hand column of ~5-6 macro keys (G1..G6, one per alpha row) to the `LAYOUT` grid, shifting the main block right. The macro caps are emitted by the SAME nested `for row_index, row in enumerate(LAYOUT)` loop as `key_r{row}_c{col:02d}` parts, each with a PRISMATIC `chassis_to_key_r{r}_c{c}` joint; ONLY the added left column (key count + left extent) changes.
+KEEP: everything else at parent baseline, named explicitly -- the `chassis` with `chassis_slab` + `rim_left` / `rim_right` / `rim_front` / `rim_back` walls (flat low-profile form, widened in X for the extra column only); the `_keycap_mesh()` helper + `keycap_mesh_cache`; per-key `keycap` visual; the PRISMATIC joint policy and limits; the existing main-block key placement.
+COMPANION_VARIATIONS: none.
+This is a <Category>/<Subcategory> family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a <Category>/<Subcategory> (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_watermill_var_paddles_n16",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T15:58:49Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "d86d809f4fb24051e1689e489d4cada7faeb403cc98e9cc2505528d51292097d",
+  "source": {
+    "run_id": "run_20260623_155849_034882_b988c9ef",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5",
+    "thinking_level": "high",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "d86d809f4fb24051e1689e489d4cada7faeb403cc98e9cc2505528d51292097d",
+    "model_py_sha256": "382f655d114b8f0424f6ca8d2eb3af3b8903651d3134a89f900064937d0cbfd8"
+  },
+  "run_summary": {
+    "turn_count": 5,
+    "tool_call_count": 4,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-stylized-wooden-watermill-waterwheel-mou_20260610_081149_220030_afe3e6a1",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-stylized-wooden-watermill-waterwheel-mou_20260610_081149_220030_afe3e6a1",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

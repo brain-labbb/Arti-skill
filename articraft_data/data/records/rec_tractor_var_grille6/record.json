@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_tractor_var_grille6",
+  "created_at": "2026-07-05T09:43:06Z",
+  "updated_at": "2026-07-05T09:46:33Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260705_094306_050715_bd79d131",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "tractor-grille6",
+    "prompt_preview": "TARGET: Re-pitch the loop `grille_slat_{idx}` from 10 -> N=6 slats across `front_grille_panel` (shared box helper, equal-pitch Y placement, FIXED decoration)..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "5ebb8f25f89e833450a346a0c10e1013f69a5120881b0da068ea4a24ea1035ee",
+    "model_py_sha256": "8a475a8a53c11c0a1f670f6f083777374ad1bc560dbbfd2ee2c3ecc008742e15"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_516579_482a6ef6",
+    "parent_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_516579_482a6ef6",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

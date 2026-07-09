@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_change-only-the-fuselage-longitudinal-proportion_20260613_173231_596812_49522ef1",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-13T17:32:31Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "eaec9ad8089cc13fcdf86fcc5fee73dc1ce7105b3d22aad5c04fae92657618c4",
+  "source": {
+    "run_id": "run_20260613_173231_596812_49522ef1",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 80,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "eaec9ad8089cc13fcdf86fcc5fee73dc1ce7105b3d22aad5c04fae92657618c4",
+    "model_py_sha256": "dc2ee595b3050be5bbf6241cee5ae5ee8b559d7bbea623b59a2e65da8374a540"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 11,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-ch-47-chinook-style-tandem-rotor-militar_20260610_080515_971792_e6faf6f7",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-ch-47-chinook-style-tandem-rotor-militar_20260610_080515_971792_e6faf6f7",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

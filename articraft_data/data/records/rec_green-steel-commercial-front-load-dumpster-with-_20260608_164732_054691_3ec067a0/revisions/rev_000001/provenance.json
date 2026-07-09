@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_green-steel-commercial-front-load-dumpster-with-_20260608_164732_054691_3ec067a0",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "48c1acb46c6036e6eef904e4f363944751fac19e",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-08T17:03:57Z",
+    "record_id": "rec_green-steel-commercial-front-load-dumpster-with-_20260608_164732_054691_3ec067a0",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_green-steel-commercial-front-load-dumpster-with-_20260608_164732_054691_3ec067a0/compile_report.json",
+      "status": "success",
+      "record_id": "rec_green-steel-commercial-front-load-dumpster-with-_20260608_164732_054691_3ec067a0",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "f27bb3c3c6664b83fdd8bb50db71b3cdd0e3bb25d71a164b9377a9a56db08e4f",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "2b4071121a4e0929fa8e09601aa2afdbf3141611ad050fb3c6ca44c945fe003b",
+        "model_py_mtime_ns": 1780938166300642097,
+        "model_py_size_bytes": 15101,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 22169,
+        "visual_mesh_file_count": 5,
+        "compile_elapsed_seconds": 1.0245381314307451
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

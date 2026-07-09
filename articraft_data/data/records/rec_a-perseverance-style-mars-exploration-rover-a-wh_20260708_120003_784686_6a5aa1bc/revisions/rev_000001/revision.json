@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-perseverance-style-mars-exploration-rover-a-wh_20260708_120003_784686_6a5aa1bc",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-08T12:00:03Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "b82588552eeb8f8246e65f46e5ff5ccc09c7e31a6373a182d23218eb8e71e279",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": null,
+    "thinking_level": null,
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "b82588552eeb8f8246e65f46e5ff5ccc09c7e31a6373a182d23218eb8e71e279",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T12:05:48Z",
+    "record_id": "rec_a-perseverance-style-mars-exploration-rover-a-wh_20260708_120003_784686_6a5aa1bc",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_a-perseverance-style-mars-exploration-rover-a-wh_20260708_120003_784686_6a5aa1bc/compile_report.json",
+      "status": "success",
+      "record_id": "rec_a-perseverance-style-mars-exploration-rover-a-wh_20260708_120003_784686_6a5aa1bc",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 12 overlaps across 10 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "807592ed79b5be7c8dbe3a219c9b88eb511ae52476631742c4e97d4dc8201db4",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "e54f2839884a648aa5ff8ef0142360359ec0bc6c93966310c48d5fc31f83ac4f",
+        "model_py_mtime_ns": 1783512314061163960,
+        "model_py_size_bytes": 22490,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 787773,
+        "visual_mesh_file_count": 13,
+        "compile_elapsed_seconds": 12.437145279720426
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

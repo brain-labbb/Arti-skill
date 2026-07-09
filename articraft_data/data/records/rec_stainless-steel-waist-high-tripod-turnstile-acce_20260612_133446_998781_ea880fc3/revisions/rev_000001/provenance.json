@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_stainless-steel-waist-high-tripod-turnstile-acce_20260612_133446_998781_ea880fc3",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "c643f986cdfa0965ab5cddd147f9830a15dad414",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-12T14:30:48Z",
+    "record_id": "rec_stainless-steel-waist-high-tripod-turnstile-acce_20260612_133446_998781_ea880fc3",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_stainless-steel-waist-high-tripod-turnstile-acce_20260612_133446_998781_ea880fc3/compile_report.json",
+      "status": "success",
+      "record_id": "rec_stainless-steel-waist-high-tripod-turnstile-acce_20260612_133446_998781_ea880fc3",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Isolated parts detected but allowed by justification: 2 part(s) ['side_railing_0', 'side_railing_1'].\n- pose_index=0 at pose (railing_mount_0=0, railing_mount_1=0, tripod_hub_left=0, tripod_hub_right=0), part 'side_railing_0' is disconnected from the grounded body rooted at 'cabinet'; nearest_grounded_part='tripod_hub_right'; approx_gap=0.2573m; backend=fcl\n- pose_index=0 at pose (railing_mount_0=0, railing_mount_1=0, tripod_hub_left=0, tripod_hub_right=0), part 'side_railing_1' is disconnected from the grounded body rooted at 'cabinet'; nearest_grounded_part='tripod_hub_left'; approx_gap=0.2573m; backend=fcl"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "e90cae281bff2fd8ab358b6e337c3951e878f5f84cc2f828638a4b663231a3d7",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "c992f2a46cfcd7b8f589be6bf366d842eb2a46db1824e65fba3120c395b65d0a",
+        "model_py_mtime_ns": 1781274454104442097,
+        "model_py_size_bytes": 33026,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 2011041,
+        "visual_mesh_file_count": 13,
+        "compile_elapsed_seconds": 5.311791038140655
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

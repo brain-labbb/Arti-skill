@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_pet_stroller_var_skeleton_double_cabin",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T14:22:18Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "e3425633563274a803fa25570bb0faf8bd89307a039fd35233497dbb2b0c2742",
+  "source": {
+    "run_id": "run_20260709_142218_810396_137e5e50",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "e3425633563274a803fa25570bb0faf8bd89307a039fd35233497dbb2b0c2742",
+    "model_py_sha256": "07acb7944030f7110ff4de097e3c50cd31ff8fa8eaf90aa303bc5d9e91d5fd11"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 11,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_pet_animal_related__pet_stroller__001_png_58f3cf9b4b654ac0ad4a0a8d4e46cb2d",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_pet_animal_related__pet_stroller__001_png_58f3cf9b4b654ac0ad4a0a8d4e46cb2d",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_pet_animal_related__pet_stroller__001_png_58f3cf9b4b654ac0ad4a0a8d4e46cb2d",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "05f8d88b2dde70c4b812f63fa12dcf7fca276c67f059cb3408bb2a15f06d0b4a"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_pswg_var_n3",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-25T02:10:35Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "c02d73d15e1d76a4635c2d7e1d9bb215a885c496ea1b069672558885e26ee6b8",
+  "source": {
+    "run_id": "run_20260625_021035_883125_1f726845",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "c02d73d15e1d76a4635c2d7e1d9bb215a885c496ea1b069672558885e26ee6b8",
+    "model_py_sha256": "a7d223fc2db6639f870ef349c1d72d6134cdea4d1f3ee758f6d276329602f06c"
+  },
+  "run_summary": {
+    "turn_count": 5,
+    "tool_call_count": 4,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-commercial-playground-swing-set-with-a-g_20260610_085408_807377_83c0a0b1",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-commercial-playground-swing-set-with-a-g_20260610_085408_807377_83c0a0b1",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

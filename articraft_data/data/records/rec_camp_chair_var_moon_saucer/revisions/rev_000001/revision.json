@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_camp_chair_var_moon_saucer",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T03:36:28Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "22770636eb7f520971e29962d28e39dba9b86dac410e7c2fd9c6fc4237b0695f",
+  "source": {
+    "run_id": "run_20260709_033628_169452_70c1b66f",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "22770636eb7f520971e29962d28e39dba9b86dac410e7c2fd9c6fc4237b0695f",
+    "model_py_sha256": "bdb248e31d3604a34df7907b6153a399dbbf6eb9deffab2b95bf1069c33f9522"
+  },
+  "run_summary": {
+    "turn_count": 15,
+    "tool_call_count": 16,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_camping-outdoor-gear-camp-chair-001-png-use-the-_20260706_151429_784260_ff85d60d",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_camping-outdoor-gear-camp-chair-001-png-use-the-_20260706_151429_784260_ff85d60d",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_camping-outdoor-gear-camp-chair-001-png-use-the-_20260706_151429_784260_ff85d60d",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "28d869ab9340667e5302cdf47bc866ad98c1668dcd99e7c5fa79f4e01230ea8a"
+    }
+  ]
+}

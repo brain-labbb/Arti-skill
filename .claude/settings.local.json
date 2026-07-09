@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(timeout 420 uv run articraft external check data/records/rec_pink-compact-hair-dryer-with-a-detachable-rotata_20260605_144857_361026_8f70ba30)",
+      "Bash(OPENBLAS_NUM_THREADS=1 uv run python scripts/sync_from_source.py --source-repo /mnt/zsn/lyb/arti-skill/articraft_data --source-map /mnt/zsn/lyb/arti-skill/articraft_data/picture_expansion/template_source_maps/Other__Air_conditioner.md --rating 5 --execute)",
+      "Bash(OPENBLAS_NUM_THREADS=1 uv run articraft external examples --rating-min 5 --category-slug air_conditioner --limit 50)"
+    ]
+  }
+}

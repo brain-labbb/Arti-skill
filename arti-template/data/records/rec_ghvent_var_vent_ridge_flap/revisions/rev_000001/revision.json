@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_ghvent_var_vent_ridge_flap",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:43:06Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "f080ea48bb04529f161c49c16f7b0bc5a3c4dda7b5bcc514dd0e6a252d123b05",
+  "source": {
+    "run_id": "run_20260705_094306_045926_c0584607",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "f080ea48bb04529f161c49c16f7b0bc5a3c4dda7b5bcc514dd0e6a252d123b05",
+    "model_py_sha256": "e80029ffa674655b25c27176bc001112adb412f5ee51ead3c181b835e924f52f"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 11,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_892757_32a39adc",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_892757_32a39adc",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_892757_32a39adc",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "97ee439c852c16a9586553221cdb5b65a224f12c60643737d4b45e70aaf9dfa8"
+    }
+  ]
+}

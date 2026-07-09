@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_harvester_var_head_mulcher",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:46:10Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "520f6d5fa419d7b0f2d3616a03b0b612ce916e9d8a84f68faa681921a18bd0f8",
+  "source": {
+    "run_id": "run_20260705_094610_320856_195b5b1a",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "520f6d5fa419d7b0f2d3616a03b0b612ce916e9d8a84f68faa681921a18bd0f8",
+    "model_py_sha256": "52dc496216e70f3467e9b7c13bc9a51a350d3d6d7259e16d898ed59765508e18"
+  },
+  "run_summary": {
+    "turn_count": 44,
+    "tool_call_count": 46,
+    "compile_attempt_count": 8,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_893521_f77bf836",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_893521_f77bf836",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_893521_f77bf836",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "902e8e98e827e0ae33f3b308cc0c2d8cc18424c5133733ecdefee210da3f691b"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+Use the attached reference image as the primary visual source. Create one high-quality articulated 3D Articraft asset for picture/Electrical_Wiring/Circuit breaker/001.png. It must remain exactly in the small class 'Circuit breaker' under Electrical_Wiring.
+
+Critical mechanism correction from the user:
+- ONLY the blue plastic switch assembly is allowed to move.
+- The three blue front toggle paddles and the long lower blue horizontal tie bar are one single continuous moving blue assembly. They rotate together as one part.
+- The white plastic between the three blue paddles is only fixed housing/separation geometry. It visually separates the three blue paddles, but it is NOT part of the moving assembly.
+- Do NOT put white plastic on, around, or as part of the rotating blue cylinder/axis. There must be no white moving cylinder/wheel/rotor.
+- Do NOT rotate the white body, white separators, white terminal blocks, white panel, or any white cylinder. All white geometry is fixed to the housing.
+- If a pivot/axis is visible, make it blue or dark/hidden hardware associated with the blue moving assembly, not a white rotating cylinder.
+- The blue assembly should rotate about a front pivot line between OFF/ON positions, carrying all three blue paddles and the lower blue horizontal bar together.
+
+Visual/detail requirements: model the full visible DIN-rail three-pole circuit breaker from the reference, including white molded case, fixed white pole separators, front label/brand area, cyan stripe, screw terminals, wire-entry ports, top/bottom terminal screws, side ribs/vents, DIN rail latch, small fasteners, and the blue linked handle assembly. Add realistic hard-surface geometry and prompt-specific run_tests() checks that enforce: small class is Circuit breaker; at least one bounded revolute joint exists; only the blue handle assembly is the child of that joint; white separators/body remain fixed; the three blue paddles and lower blue tie bar move together; no white rotor_drum/white moving cylinder exists in the moving part.

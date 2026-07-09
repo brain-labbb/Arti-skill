@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_model-a-stylized-wooden-watermill-waterwheel-mou_20260610_081149_220030_afe3e6a1",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-10T08:11:49Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "9008574b7c2b14ee9a371827880ce7d5d2c99c34d74d0fe9801a1ec88dddd540",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": null
+  },
+  "hashes": {
+    "prompt_sha256": "9008574b7c2b14ee9a371827880ce7d5d2c99c34d74d0fe9801a1ec88dddd540",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-10T15:26:10Z",
+    "record_id": "rec_model-a-stylized-wooden-watermill-waterwheel-mou_20260610_081149_220030_afe3e6a1",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-a-stylized-wooden-watermill-waterwheel-mou_20260610_081149_220030_afe3e6a1/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-a-stylized-wooden-watermill-waterwheel-mou_20260610_081149_220030_afe3e6a1",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "f2f066ed0183c9ca82e754ca3b21b7d242a9b7bfb557285e042254fba0f2671c",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "ce348267df2ea4ae2318af8742cb78a1899eb84e20fb3708c332ed713ff9b39b",
+        "model_py_mtime_ns": 1781101264139133289,
+        "model_py_size_bytes": 14460,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 61281,
+        "visual_mesh_file_count": 3,
+        "compile_elapsed_seconds": 3.9581483444198966
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

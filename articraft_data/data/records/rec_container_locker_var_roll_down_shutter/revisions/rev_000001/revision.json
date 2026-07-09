@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_container_locker_var_roll_down_shutter",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T17:35:29Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "dfc167d28c6c0201f910cc731c5eb391c6e742e4fce07b0e9ce54ad32d137363",
+  "source": {
+    "run_id": "run_20260618_173529_713429_df58d55c",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "dfc167d28c6c0201f910cc731c5eb391c6e742e4fce07b0e9ce54ad32d137363",
+    "model_py_sha256": "fef9ea40c6f99f1fecf40562a55327ec3bf615ca09b8652c19fdb8704a1b3874"
+  },
+  "run_summary": {
+    "turn_count": 10,
+    "tool_call_count": 13,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-bank-of-two-metal-storage-lockers-with-hinged-_20260606_074856_914730_d0776185",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-bank-of-two-metal-storage-lockers-with-hinged-_20260606_074856_914730_d0776185",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

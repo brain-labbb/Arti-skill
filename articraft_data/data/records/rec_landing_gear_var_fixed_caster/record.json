@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_landing_gear_var_fixed_caster",
+  "created_at": "2026-07-09T17:36:05Z",
+  "updated_at": "2026-07-09T17:38:37Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260709_173605_990777_2fde71ca",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "TARGET axis: joint / mechanism type of the steering joint. Change piston_to_fork from a limited REVOLUTE steering/caster",
+    "prompt_preview": "TARGET axis: joint / mechanism type of the steering joint. Change piston_to_fork from a limited REVOLUTE steering/caster joint to a FIXED rigid connection, p..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "0002bbf0b9dc249a2566a217ce0abfabb237887b39864859de431f09e014c282",
+    "model_py_sha256": "2f76cdb419fd74214075326e0b8021e28d09369886794ca55400a3adefee79b4"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_astronomy__retractable_landing_gear__001_png_1a64faf20658463c8dbf85b29d826635",
+    "parent_record_id": "rec_astronomy__retractable_landing_gear__001_png_1a64faf20658463c8dbf85b29d826635",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

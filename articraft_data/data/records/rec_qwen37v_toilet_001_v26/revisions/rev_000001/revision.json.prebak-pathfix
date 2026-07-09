@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_toilet_001_v26",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-14T06:54:37Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "bea7a20a19d3c9460a5b6a5122ce7b2bc1d6dc2933508e531bb7e6fe18291cd9",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "bea7a20a19d3c9460a5b6a5122ce7b2bc1d6dc2933508e531bb7e6fe18291cd9",
+    "model_py_sha256": "4c5ecdd888bfe633eddf25d719a49fc2d0a6e81fa1f9ece5cb034b368403ad01"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_edit_draft"
+  },
+  "parent": {
+    "record_id": "rec_wall-hung-white-ceramic-toilet-with-a-soft-close_20260605_154105_854794_7d51c47b",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_wall-hung-white-ceramic-toilet-with-a-soft-close_20260605_154105_854794_7d51c47b",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-14T06:54:59Z",
+    "record_id": "rec_qwen37v_toilet_001_v26",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/articraft_data/data/cache/record_materialization/rec_qwen37v_toilet_001_v26/compile_report.json",
+      "status": "failure",
+      "record_id": "rec_qwen37v_toilet_001_v26",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "AttributeError: 'Articulation' object has no attribute 'type'"
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "4c5ecdd888bfe633eddf25d719a49fc2d0a6e81fa1f9ece5cb034b368403ad01",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "242891164b829a4ea20d888584f2325890842ae3ba09c489fc05b811f9259a47",
+        "model_py_mtime_ns": 1781420081653377296,
+        "model_py_size_bytes": 20361,
+        "materialization_status": "missing",
+        "visual_mesh_bytes": 0,
+        "visual_mesh_file_count": 0,
+        "compile_elapsed_seconds": 3.875338738784194
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 2,
+      "errors": [
+        "strict external compile exited with status 1",
+        "compile report status must be 'success'"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

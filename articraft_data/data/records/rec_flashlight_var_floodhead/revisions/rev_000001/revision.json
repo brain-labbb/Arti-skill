@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_flashlight_var_floodhead",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T10:45:14Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "8974e4af77e5d5d3d3d44734dd6777cc068fb3a7f5933f1247cb578309568957",
+  "source": {
+    "run_id": "run_20260705_104514_893621_daae3a91",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "8974e4af77e5d5d3d3d44734dd6777cc068fb3a7f5933f1247cb578309568957",
+    "model_py_sha256": "92395940c4af90c6c4a965c0a18a742a80bd2b398b1b57b4bfcfd2336ca5f462"
+  },
+  "run_summary": {
+    "turn_count": 19,
+    "tool_call_count": 19,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-yellow-plastic-handheld-flashlight-torch-a-cyl_20260624_122307_472672_5b5f681c",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-yellow-plastic-handheld-flashlight-torch-a-cyl_20260624_122307_472672_5b5f681c",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_a-yellow-plastic-handheld-flashlight-torch-a-cyl_20260624_122307_472672_5b5f681c",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "bd00ddf6eaf9fa0d07e69ec6387138682280187efb2172b9395d5905225d3b62"
+    }
+  ]
+}

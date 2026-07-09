@@ -1,0 +1,26 @@
+CATEGORY: Robotics
+SUBCATEGORY: Soft pneumatic gripper
+TARGET: add a PRISMATIC span-adjust mechanism to the opposing two-jaw gripper by mounting each finger on a sliding carriage along the manifold width axis, on top of the existing REVOLUTE bend.
+DIVERSITY_AXIS: ② joint/mechanism.
+POSITIONING: adjustable-span opposing soft pneumatic gripper (parallel-slide base that widens/narrows the gap between the two soft bellows jaws to fit different object sizes); stays a soft pneumatic gripper because the two jaws remain compliant pressurized silicone bellows fingers that bend inward to grasp.
+KEEP: preserve these parent functional layers by name: manifold, machined_manifold, screw_{idx}, barb_fitting_{idx}, fixed_air_tube, swivel_socket, finger_0, finger_1, bellows, hose_swivel, elbow_tube, finger_0_bend, finger_1_bend, hose_swivel, helper _metal_manifold_shape, helper _finger_shape, helper _cq_box.
+STRUCTURAL_DELTA: insert one carriage part per jaw between the manifold and each finger (e.g. finger_carriage_0/finger_carriage_1) that slides along the X width axis; add a PRISMATIC manifold_to_carriage_{idx} joint (small bounded travel, e.g. 0.0 to 0.03 m) so the two jaws symmetrically change span; re-parent finger_0_bend/finger_1_bend REVOLUTE bend joints onto their carriages so bending is preserved and stacked on the slide; add a visible slide rail/dovetail feature on the manifold and a mating block on each carriage so the prismatic joint is supported not floating; keep the finger_1 mimic-coupled bend relationship.
+MULTIPLICITY: not the N axis; keep exactly 2 opposing fingers.
+COMPANION_VARIATIONS: none.
+FORBIDDEN: do not change finger count, bellow form family, or silicone material; the added mechanism is exactly one PRISMATIC span slide plus preserved bend, no extra unrelated joints; must not become a rigid pneumatic parallel gripper (jaws stay soft bellows), a vacuum gripper, or a linear actuator.
+COMPATIBILITY_PROBE: none.
+
+This is a Robotics/Soft pneumatic gripper family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Robotics/Soft pneumatic gripper (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

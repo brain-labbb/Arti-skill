@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_codex_car002_v07",
+  "generation": {
+    "provider": "openai",
+    "model_id": "codex",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": null,
+    "uv_lock_sha256": null
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-14T12:57:08Z",
+    "record_id": "rec_codex_car002_v07",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/articraft_data/data/cache/record_materialization/rec_codex_car002_v07/compile_report.json",
+      "status": "success",
+      "record_id": "rec_codex_car002_v07",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='body' connected=71/73 disconnected=[front_axle_bar:Cylinder, rear_axle_bar:Cylinder]\npart='headlight_cover_left' connected=3/4 disconnected=[cover_outer_seam:Box]\npart='headlight_cover_right' connected=3/4 disconnected=[cover_outer_seam:Box]"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 31 overlaps across 9 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "d99fd2411fccb474d6d1d499f1c044b4d31472577790cc6158dca0db14cf06ad",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "801b168f5a0b994ab07d0e83a7a2246c98b20d8c03ac230bcf73dce231d32aa0",
+        "model_py_mtime_ns": 1781441066507615009,
+        "model_py_size_bytes": 50445,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 2493324,
+        "visual_mesh_file_count": 16,
+        "compile_elapsed_seconds": 63.86950377654284
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

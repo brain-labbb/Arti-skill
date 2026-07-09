@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-shoe_20260609_162555_458097_523a544b",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-09T16:25:55Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "af8b329e9014c06a62db25092cbf32428d42b4320e654845779454f3d9f48858",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": null
+  },
+  "hashes": {
+    "prompt_sha256": "af8b329e9014c06a62db25092cbf32428d42b4320e654845779454f3d9f48858",
+    "model_py_sha256": "34eb2d448486a86e316296f6f2a5364071ba39852c4a340829c311f20aab61e5"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-12T13:38:05Z",
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-shoe_20260609_162555_458097_523a544b",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_build-a-realistic-articulated-3d-model-of-a-shoe_20260609_162555_458097_523a544b/compile_report.json",
+      "status": "success",
+      "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-shoe_20260609_162555_458097_523a544b",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "34eb2d448486a86e316296f6f2a5364071ba39852c4a340829c311f20aab61e5",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "bcd174e04b9a90e071fbda21e7db53a7840bf6220fc911c5e49b69a3bcc7c3b1",
+        "model_py_mtime_ns": 1781271440279949470,
+        "model_py_size_bytes": 18735,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 131756,
+        "visual_mesh_file_count": 8,
+        "compile_elapsed_seconds": 4.053655629977584
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

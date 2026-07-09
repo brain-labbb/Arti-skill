@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-tool_20260609_163949_304573_1e586d5a",
+  "created_at": "2026-06-09T16:39:49Z",
+  "updated_at": "2026-06-09T17:56:42Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "external_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "anthropic",
+  "model_id": "claude-opus-4-8",
+  "display": {
+    "title": "Build a realistic, articulated 3D model of a Tool cart, modeled faithfully from the reference image. Reference image: pi",
+    "prompt_preview": "Build a realistic, articulated 3D model of a Tool cart, modeled faithfully from the reference image. Reference image: picture/Handtools/Tool cart/001.png. St..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": null
+  },
+  "hashes": {
+    "prompt_sha256": "0522be3aa57cc54e6ae637ed0376684b5d8a84fdbefc4dd8d242bf2334211f84",
+    "model_py_sha256": "564e17eb60b96d7ca30342ee4632a06d751c4922a55589b058a566e7f5240859"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_build-a-realistic-articulated-3d-model-of-a-tool_20260609_163949_304573_1e586d5a",
+    "parent_record_id": null,
+    "parent_revision_id": null,
+    "edit_mode": "root"
+  },
+  "creator": {
+    "mode": "external_agent",
+    "agent": "claude-code",
+    "trace_available": false
+  }
+}

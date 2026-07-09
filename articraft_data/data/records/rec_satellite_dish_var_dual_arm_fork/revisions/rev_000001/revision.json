@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_satellite_dish_var_dual_arm_fork",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-27T03:52:53Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "21f72af967f4a8b6880a1e8a3e7dbcb198b907b80c3260449b4bf28400f9a9ce",
+  "source": {
+    "run_id": "run_20260627_035253_397698_f45fd359",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "21f72af967f4a8b6880a1e8a3e7dbcb198b907b80c3260449b4bf28400f9a9ce",
+    "model_py_sha256": "bbb462b30d64e7fb11e79afc61af7fd52f4f9806459aa8201ae15e89b23db04b"
+  },
+  "run_summary": {
+    "turn_count": 14,
+    "tool_call_count": 14,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_sci-fi-satellite-dish-comm-unit-a-dark-matte-rec_20260612_113210_418481_e7ad375a",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_sci-fi-satellite-dish-comm-unit-a-dark-matte-rec_20260612_113210_418481_e7ad375a",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

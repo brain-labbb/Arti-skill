@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_bucket1_var_mount_hook_ring",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-27T03:14:13Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "e2cd7a30a93b45c298874d3714aac3d11d2f45b123bd81c858a65ec1e9a21bb5",
+  "source": {
+    "run_id": "run_20260627_031413_423235_4a0a841e",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "e2cd7a30a93b45c298874d3714aac3d11d2f45b123bd81c858a65ec1e9a21bb5",
+    "model_py_sha256": "dc4a55ae10142b6e31ab52e25ece5c0d8910818fcc75546607d012f7b1d01fde"
+  },
+  "run_summary": {
+    "turn_count": 18,
+    "tool_call_count": 18,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_red-painted-sheet-metal-conical-fire-bucket-with_20260608_164532_434098_8f71e941",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_red-painted-sheet-metal-conical-fire-bucket-with_20260608_164532_434098_8f71e941",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

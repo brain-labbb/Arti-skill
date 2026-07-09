@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_a-yellow-tracked-hydraulic-excavator-with-a-craw_20260608_165329_504371_f0a015dc",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "48c1acb46c6036e6eef904e4f363944751fac19e",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_finalized"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-08T17:08:58Z",
+    "record_id": "rec_a-yellow-tracked-hydraulic-excavator-with-a-craw_20260608_165329_504371_f0a015dc",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_a-yellow-tracked-hydraulic-excavator-with-a-craw_20260608_165329_504371_f0a015dc/compile_report.json",
+      "status": "success",
+      "record_id": "rec_a-yellow-tracked-hydraulic-excavator-with-a-craw_20260608_165329_504371_f0a015dc",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 23 overlaps across 6 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "fcf7cad1785a4e396e5fe075dcfef4e47c2fc3906580dd7fd36c8a441848193b",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "0dc7ce11fb0eb2a098d3b61958cc0fe60d4028b9685fa6918c1d36639fd62afd",
+        "model_py_mtime_ns": 1780938386479459538,
+        "model_py_size_bytes": 35938,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 111033,
+        "visual_mesh_file_count": 7,
+        "compile_elapsed_seconds": 4.205023104324937
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

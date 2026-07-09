@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_rack_and_pinion_slider_var_n16_short_rack",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T14:51:51Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "cd608ff63cf685cd463656614ba291107c26c4889813c953033e8ee32b500b00",
+  "source": {
+    "run_id": "run_20260709_145151_074194_486eb53f",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "cd608ff63cf685cd463656614ba291107c26c4889813c953033e8ee32b500b00",
+    "model_py_sha256": "869979b10dec9ef534714d1d1c92695c58fcfde8bca301ed38453e0eaa349996"
+  },
+  "run_summary": {
+    "turn_count": 17,
+    "tool_call_count": 16,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_robotics__rack_and_pinion_slider__001_png_181f53f1e2d249138d855513a68bcb4c",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_robotics__rack_and_pinion_slider__001_png_181f53f1e2d249138d855513a68bcb4c",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_robotics__rack_and_pinion_slider__001_png_181f53f1e2d249138d855513a68bcb4c",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "38b3d0ff19d884f527206b1d9edf0826f481e4cf1f4b6cf1ce3c7dc13373385c"
+    }
+  ]
+}

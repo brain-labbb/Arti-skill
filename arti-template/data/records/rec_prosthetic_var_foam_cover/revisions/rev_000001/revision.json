@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_prosthetic_var_foam_cover",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:57:54Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "e93ba2cc22bfe925660c3209c84a0be32ca52425614ec9d7a4187b170b658463",
+  "source": {
+    "run_id": "run_20260705_095754_855155_5661e778",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 5.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "e93ba2cc22bfe925660c3209c84a0be32ca52425614ec9d7a4187b170b658463",
+    "model_py_sha256": "3aac72d65d839120de9eeb735877a83d19491aefba94a07000f90a30bd08d4fa"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 12,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-modern-below-knee-prosthetic-leg-with-a-blue-s_20260623_174436_819367_a594c50c",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-modern-below-knee-prosthetic-leg-with-a-blue-s_20260623_174436_819367_a594c50c",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_a-modern-below-knee-prosthetic-leg-with-a-blue-s_20260623_174436_819367_a594c50c",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "609d744126f6293d13beacd681bfa4a7cca1a4c79448f2985de46851570d35a8"
+    }
+  ]
+}

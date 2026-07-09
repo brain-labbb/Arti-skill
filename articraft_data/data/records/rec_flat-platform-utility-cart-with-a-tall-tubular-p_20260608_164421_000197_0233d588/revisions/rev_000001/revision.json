@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_flat-platform-utility-cart-with-a-tall-tubular-p_20260608_164421_000197_0233d588",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-08T16:44:21Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "868b2ebb34b392a413ad0ba0c8742a33f6b25db9de8e039ede7c91fbb3dd6b10",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "868b2ebb34b392a413ad0ba0c8742a33f6b25db9de8e039ede7c91fbb3dd6b10",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-08T16:59:40Z",
+    "record_id": "rec_flat-platform-utility-cart-with-a-tall-tubular-p_20260608_164421_000197_0233d588",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_flat-platform-utility-cart-with-a-tall-tubular-p_20260608_164421_000197_0233d588/compile_report.json",
+      "status": "success",
+      "record_id": "rec_flat-platform-utility-cart-with-a-tall-tubular-p_20260608_164421_000197_0233d588",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 4 overlaps across 4 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "bf7c4c733eb0bdf4e96ba6151ad9c768d7a5241b1632f5e2295630bf7339d907",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "ae14e85eb13c54b73a75a6a05b16f16b28a895be4ae4bcd9cb4120703c129ba2",
+        "model_py_mtime_ns": 1780937872334335809,
+        "model_py_size_bytes": 16695,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 1580275,
+        "visual_mesh_file_count": 13,
+        "compile_elapsed_seconds": 11.497963035479188
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

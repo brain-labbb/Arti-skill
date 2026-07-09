@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_container_bottle_serum_var_tall_slim_vial",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T17:11:43Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "a49783f43522f76ebb2dc13a097b78d75692c81c267ec23833ef1848cb356fc3",
+  "source": {
+    "run_id": "run_20260618_171143_358678_7cb25bf4",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a49783f43522f76ebb2dc13a097b78d75692c81c267ec23833ef1848cb356fc3",
+    "model_py_sha256": "31f11334bdb8989802708e95a782eaeb59d4267b4fd4a1fa37350d05533c7b4a"
+  },
+  "run_summary": {
+    "turn_count": 7,
+    "tool_call_count": 7,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_small-amber-glass-serum-bottle-with-a-white-rubb_20260606_074521_982612_98768519",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_small-amber-glass-serum-bottle-with-a-white-rubb_20260606_074521_982612_98768519",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

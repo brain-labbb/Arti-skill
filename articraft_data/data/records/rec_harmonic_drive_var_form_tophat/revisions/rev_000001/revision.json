@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_harmonic_drive_var_form_tophat",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T13:25:41Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "486f8ae9fead211dc39b9f2373365a2034ece73edb3041e8b56c73aa924d2c1e",
+  "source": {
+    "run_id": "run_20260709_132541_944738_ed72a28f",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "486f8ae9fead211dc39b9f2373365a2034ece73edb3041e8b56c73aa924d2c1e",
+    "model_py_sha256": "91137f24d8bf8bd59e402b4ff01a227a6558b572291665b57d46f2ddf3e314c1"
+  },
+  "run_summary": {
+    "turn_count": 15,
+    "tool_call_count": 16,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_create-exactly-one-articulated-cad-style-harmoni_20260707_090158_102372_c263187d",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_create-exactly-one-articulated-cad-style-harmoni_20260707_090158_102372_c263187d",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-knob-count-2-reduce-the-front-control-ro_20260617_093915_350227_47d387a5",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T09:39:15Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "9536a729dca83a4f6296d770c31a77aca26d75da2b9d7146d9670d0b295f6321",
+  "source": {
+    "run_id": "run_20260617_093915_350227_47d387a5",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "9536a729dca83a4f6296d770c31a77aca26d75da2b9d7146d9670d0b295f6321",
+    "model_py_sha256": "3810b9c15556e52c0f3e7b8d5916b0314f35ee432ced8f7378740414a3667a7b"
+  },
+  "run_summary": {
+    "turn_count": 7,
+    "tool_call_count": 6,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-built-in-compact-microwave-oven-brastemp_20260610_083650_171507_6c671696",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-built-in-compact-microwave-oven-brastemp_20260610_083650_171507_6c671696",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

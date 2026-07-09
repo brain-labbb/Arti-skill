@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_model-an-m84-style-stun-flashbang-grenade-about-_20260610_080253_506027_b1beda97",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-10T08:02:53Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "f5f8d108ae07d7f8c3c9f37cfc5b290f2cf906f8e9114968a59bc23313c1c645",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": null
+  },
+  "hashes": {
+    "prompt_sha256": "f5f8d108ae07d7f8c3c9f37cfc5b290f2cf906f8e9114968a59bc23313c1c645",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-10T14:55:39Z",
+    "record_id": "rec_model-an-m84-style-stun-flashbang-grenade-about-_20260610_080253_506027_b1beda97",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-an-m84-style-stun-flashbang-grenade-about-_20260610_080253_506027_b1beda97/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-an-m84-style-stun-flashbang-grenade-about-_20260610_080253_506027_b1beda97",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "4043196d5c08bca24ef212b1b1ba0bd3f8a4300c0ca87fc89e290f04168062cc",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "7ec1298a9ee449c93b87bb2993d8cdc177eb9c1897cb7a6a0d488d7f01380864",
+        "model_py_mtime_ns": 1781101553554518713,
+        "model_py_size_bytes": 19404,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 791415,
+        "visual_mesh_file_count": 6,
+        "compile_elapsed_seconds": 12.137720916420221
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

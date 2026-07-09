@@ -1,0 +1,24 @@
+CATEGORY: Pet_Animal related
+SUBCATEGORY: Aquarium
+TARGET: change the plant multiplicity loop (plant_stem_{i} / plant_leaf_{i}_0 / plant_leaf_{i}_1) count from 4 to 2 (sparse minimalist aquascape).
+DIVERSITY_AXIS: N multiplicity.
+POSITIONING: Sparsely planted aquarium (minimalist 2-plant aquascape) — same desktop aquarium with fewer rooted plants; unchanged tank, hood, filter, gravel and rockwork.
+KEEP: preserve these parent functional layers by name: tank, front_glass, rear_glass, side_glass_0, side_glass_1, bottom_glass, base_plinth, top_rim_front, water_volume, gravel_bed, filter_housing, filter_intake, front_rock, center_rock, hood, hood_shell, led_light_lens, feeding_flap, flap_panel, tank_to_hood, hood_to_flap.
+STRUCTURAL_DELTA: Reduce the rooted-plant loop from 4 to 2 iterations, keeping the same per-plant helper geometry (stem cylinder plus two leaf boxes) and stable indexed names (plant_stem_0..1, plant_leaf_0_0..plant_leaf_1_1), each rooted (base embedded) in gravel_bed with FIXED placement. Reposition the 2 remaining plants to plausible spots on the gravel bed. Change plant count only.
+MULTIPLICITY: target N=2 rooted plants; irregular placement on gravel_bed, base embedded in substrate, FIXED decoration joints (static rooted, no articulation).
+FORBIDDEN: removing all plants (do not become an empty box), terrarium/dry planter; do not change tank body form, hood mechanism, or filter type.
+
+This is a Pet_Animal related/Aquarium family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Pet_Animal related/Aquarium (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

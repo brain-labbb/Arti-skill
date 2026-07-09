@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_security_camera_var_dual_lens",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-04T13:53:36Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "4da17a4b874a19f5c990e70a37aa60a818f8a493dd7c0991f52b5d647717faba",
+  "source": {
+    "run_id": "run_20260704_135336_965795_7a5d61a0",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "4da17a4b874a19f5c990e70a37aa60a818f8a493dd7c0991f52b5d647717faba",
+    "model_py_sha256": "765a24625b72792bb35936666c95327b1d5c4195553cd85dc85e3650fc24d39a"
+  },
+  "run_summary": {
+    "turn_count": 9,
+    "tool_call_count": 8,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-silver-bullet-cctv-security-camera-a-short-cyl_20260624_124946_096010_1da3777f",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-silver-bullet-cctv-security-camera-a-short-cyl_20260624_124946_096010_1da3777f",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_a-silver-bullet-cctv-security-camera-a-short-cyl_20260624_124946_096010_1da3777f",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "861f3d2e57130f6d358b1233959e93a342bb1b57d872ee88e46ffe900f7ebac3"
+    }
+  ],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-04T14:38:11Z",
+    "record_id": "rec_security_camera_var_dual_lens",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_security_camera_var_dual_lens/compile_report.json",
+      "status": "success",
+      "record_id": "rec_security_camera_var_dual_lens",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "765a24625b72792bb35936666c95327b1d5c4195553cd85dc85e3650fc24d39a",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "eeb8450f8797053ff3fe6e753344a630d171b9c36f27844d76218380ec8514ca",
+        "model_py_mtime_ns": 1783173505899970920,
+        "model_py_size_bytes": 11841,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 40013,
+        "visual_mesh_file_count": 1,
+        "compile_elapsed_seconds": 0.9508242458105087
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 6,
+      "errors": [
+        "record.json missing creator metadata for external workflow",
+        "source.run_id must be null for external records",
+        "external records must not contain Articraft agent traces",
+        "provenance.run_summary.turn_count must be null",
+        "provenance.run_summary.tool_call_count must be null",
+        "provenance.run_summary.compile_attempt_count must be null"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

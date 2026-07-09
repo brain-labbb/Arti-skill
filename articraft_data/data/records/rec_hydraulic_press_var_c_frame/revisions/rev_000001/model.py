@@ -1,0 +1,455 @@
+from __future__ import annotations
+
+import math
+
+import cadquery as cq
+
+from sdk import (
+    ArticulatedObject,
+    ArticulationType,
+    Box,
+    Cylinder,
+    MotionLimits,
+    Origin,
+    Sphere,
+    TestContext,
+    TestReport,
+    mesh_from_cadquery,
+    mesh_from_geometry,
+    tube_from_spline_points,
+)
+
+
+def _annular_z_sleeve(outer_radius: float, inner_radius: float, length: float) -> cq.Workplane:
+    outer = cq.Workplane("XY").circle(outer_radius).extrude(length / 2.0, both=True)
+    bore = cq.Workplane("XY").circle(inner_radius).extrude(length, both=True)
+    return outer.cut(bore)
+
+
+def build_object_model() -> ArticulatedObject:
+    model = ArticulatedObject(name="industrial_c_frame_hydraulic_press")
+
+    gray = model.material("painted_warm_gray", rgba=(0.55, 0.57, 0.56, 1.0))
+    dark_gray = model.material("dark_recess_gray", rgba=(0.20, 0.21, 0.20, 1.0))
+    edge_gray = model.material("slightly_dark_seams", rgba=(0.38, 0.40, 0.39, 1.0))
+    steel = model.material("brushed_steel", rgba=(0.78, 0.78, 0.74, 1.0))
+    polished = model.material("polished_ram_rod", rgba=(0.86, 0.86, 0.82, 1.0))
+    black = model.material("black_rubber", rgba=(0.01, 0.01, 0.01, 1.0))
+    yellow = model.material("safety_yellow", rgba=(1.0, 0.72, 0.06, 1.0))
+    red = model.material("red_pushbutton", rgba=(0.85, 0.06, 0.04, 1.0))
+    green = model.material("green_pushbutton", rgba=(0.02, 0.55, 0.18, 1.0))
+    amber = model.material("amber_indicator", rgba=(1.0, 0.55, 0.03, 1.0))
+    white = model.material("white_label", rgba=(0.92, 0.92, 0.86, 1.0))
+
+    frame = model.part("frame")
+
+    def frame_box(name: str, size, xyz, material=gray, rpy=(0.0, 0.0, 0.0)) -> None:
+        frame.visual(Box(size), origin=Origin(xyz=xyz, rpy=rpy), material=material, name=name)
+
+    def frame_cyl(name: str, radius: float, length: float, xyz, material, rpy=(0.0, 0.0, 0.0)) -> None:
+        frame.visual(Cylinder(radius=radius, length=length), origin=Origin(xyz=xyz, rpy=rpy), material=material, name=name)
+
+    # ================================================================
+    # C-FRAME STRUCTURE: single rear spine with cantilever top arm
+    # and base arm — three open sides for workpiece access.
+    # ================================================================
+
+    # Single robust rear spine (replaces two H-frame columns)
+    frame_box("rear_spine", (0.40, 0.44, 2.04), (0.0, 0.52, 1.08))
+
+    # Top cantilever arm extending forward from spine top over the work area
+    frame_box("top_cantilever", (0.48, 1.04, 0.36), (0.0, 0.0, 1.92))
+
+    # Base arm extending forward from spine bottom to support bed
+    frame_box("base_arm", (0.88, 0.92, 0.24), (0.0, 0.04, 0.23))
+
+    # Wide base foot plate for stability
+    frame_box("base_foot", (0.60, 1.50, 0.12), (0.0, 0.18, 0.06))
+
+    # Front and rear base flares for load distribution
+    frame_box("front_flare", (0.50, 0.28, 0.38), (0.0, -0.54, 0.21), rpy=(math.radians(-10.0), 0.0, 0.0))
+    frame_box("rear_flare", (0.50, 0.28, 0.38), (0.0, 0.82, 0.21), rpy=(math.radians(10.0), 0.0, 0.0))
+
+    # Bed support riser connecting base arm to bed mounting surface
+    frame_box("bed_support", (0.50, 0.62, 0.22), (0.0, 0.04, 0.445))
+
+    # Steel bed ledge plate — mounting surface for the press bed
+    frame_box("bed_ledge_plate", (0.78, 0.44, 0.025), (0.0, 0.0, 0.565), material=steel)
+
+    # Top reinforcement gussets (spine-to-cantilever junction)
+    frame_box("top_gusset_0", (0.04, 0.30, 0.30), (-0.18, 0.25, 1.68), material=edge_gray, rpy=(math.radians(-25.0), 0.0, 0.0))
+    frame_box("top_gusset_1", (0.04, 0.30, 0.30), (0.18, 0.25, 1.68), material=edge_gray, rpy=(math.radians(-25.0), 0.0, 0.0))
+
+    # Base reinforcement gussets (spine-to-base-arm junction, kept below bed level)
+    frame_box("base_gusset_0", (0.04, 0.22, 0.22), (-0.20, 0.18, 0.38), material=edge_gray, rpy=(math.radians(25.0), 0.0, 0.0))
+    frame_box("base_gusset_1", (0.04, 0.22, 0.22), (0.20, 0.18, 0.38), material=edge_gray, rpy=(math.radians(25.0), 0.0, 0.0))
+
+    # Spine front wear plate
+    frame_box("spine_wear_plate", (0.36, 0.035, 1.60), (0.0, 0.315, 1.0), material=edge_gray)
+
+    # Top rear cap plate
+    frame_box("top_rear_cap", (0.44, 0.50, 0.08), (0.0, 0.30, 2.12))
+
+    # Bolted seam on cantilever front face
+    frame_box("front_cantilever_seam", (0.44, 0.014, 0.025), (0.0, -0.516, 1.76), material=edge_gray)
+    frame_box("top_logo_plate", (0.22, 0.018, 0.12), (0.0, -0.515, 2.00), material=yellow)
+    frame_box("logo_dark_slot", (0.12, 0.020, 0.030), (0.0, -0.527, 2.00), material=dark_gray)
+    for i, x in enumerate([-0.16, -0.06, 0.06, 0.16]):
+        frame_cyl(f"crosshead_bolt_{i}", 0.024, 0.018, (x, -0.528, 1.80), dark_gray, rpy=(math.pi / 2, 0.0, 0.0))
+    for i, x in enumerate([-0.22, -0.08, 0.08, 0.22]):
+        frame_cyl(f"foot_bolt_{i}", 0.026, 0.016, (x, -0.50, 0.126), dark_gray)
+
+    # Warning label on spine right side
+    frame_box("warning_label_0", (0.055, 0.008, 0.070), (0.205, 0.30, 1.05), material=yellow)
+    frame_box("warning_mark_0", (0.020, 0.010, 0.035), (0.210, 0.30, 1.05), material=black)
+
+    # Bed adjustment pins on bed support front face
+    for i, z in enumerate([0.42, 0.50]):
+        frame_cyl(f"bed_pin_{i}", 0.020, 0.032, (0.0, -0.28, z), dark_gray, rpy=(math.pi / 2, 0.0, 0.0))
+
+    # ================================================================
+    # FIXED HYDRAULIC CYLINDER (identical to parent)
+    # ================================================================
+    frame_cyl("cylinder_flange", 0.275, 0.060, (0.0, 0.0, 1.720), steel)
+    frame.visual(
+        mesh_from_cadquery(_annular_z_sleeve(0.205, 0.100, 0.300), "fixed_cylinder_hollow_shell"),
+        origin=Origin(xyz=(0.0, 0.0, 1.570)),
+        material=steel,
+        name="fixed_cylinder",
+    )
+    frame.visual(
+        mesh_from_cadquery(_annular_z_sleeve(0.150, 0.098, 0.040), "hollow_gland_ring"),
+        origin=Origin(xyz=(0.0, 0.0, 1.400)),
+        material=dark_gray,
+        name="gland_ring",
+    )
+
+    # Hose ports on right side of frame (C-frame opens from front/left/right)
+    frame.visual(
+        Cylinder(radius=0.030, length=0.070),
+        origin=Origin(xyz=(0.26, 0.20, 1.80), rpy=(0.0, math.pi / 2, 0.0)),
+        material=steel,
+        name="upper_hose_port",
+    )
+    frame.visual(Box((0.070, 0.080, 0.032)), origin=Origin(xyz=(0.26, 0.20, 1.76)), material=steel, name="upper_port_bracket")
+    frame.visual(
+        Cylinder(radius=0.022, length=0.060),
+        origin=Origin(xyz=(0.27, 0.0, 0.48), rpy=(0.0, math.pi / 2, 0.0)),
+        material=steel,
+        name="lower_hose_port",
+    )
+
+    # ================================================================
+    # BED (identical to parent)
+    # ================================================================
+    bed = model.part("bed")
+    bed.visual(Box((0.88, 0.48, 0.13)), origin=Origin(), material=edge_gray, name="bed_block")
+    bed.visual(Box((0.88, 0.035, 0.075)), origin=Origin(xyz=(0.0, -0.247, 0.042)), material=yellow, name="hazard_yellow")
+    for i, x in enumerate([-0.37, -0.25, -0.13, -0.01, 0.11, 0.23, 0.35]):
+        bed.visual(
+            Box((0.045, 0.042, 0.105)),
+            origin=Origin(xyz=(x, -0.263, 0.043), rpy=(0.0, math.radians(23.0), 0.0)),
+            material=black,
+            name=f"hazard_black_{i}",
+        )
+    bed.visual(Box((0.76, 0.38, 0.018)), origin=Origin(xyz=(0.0, 0.0, 0.060)), material=steel, name="replaceable_bed_plate")
+    bed.visual(Box((0.76, 0.018, 0.025)), origin=Origin(xyz=(0.0, -0.18, 0.074)), material=dark_gray, name="front_bed_seam")
+    model.articulation("frame_to_bed", ArticulationType.FIXED, parent=frame, child=bed, origin=Origin(xyz=(0.0, 0.0, 0.640)))
+
+    # ================================================================
+    # RAM (identical to parent)
+    # ================================================================
+    ram = model.part("ram")
+    ram.visual(Cylinder(radius=0.096, length=0.620), origin=Origin(xyz=(0.0, 0.0, -0.230)), material=polished, name="ram_rod")
+    ram.visual(Cylinder(radius=0.135, length=0.090), origin=Origin(xyz=(0.0, 0.0, -0.425)), material=steel, name="ram_collared_head")
+    ram.visual(Cylinder(radius=0.155, length=0.070), origin=Origin(xyz=(0.0, 0.0, -0.505)), material=dark_gray, name="press_platen")
+    ram.visual(Box((0.23, 0.23, 0.035)), origin=Origin(xyz=(0.0, 0.0, -0.555)), material=dark_gray, name="square_platen_face")
+    model.articulation(
+        "frame_to_ram",
+        ArticulationType.PRISMATIC,
+        parent=frame,
+        child=ram,
+        origin=Origin(xyz=(0.0, 0.0, 1.520)),
+        axis=(0.0, 0.0, -1.0),
+        motion_limits=MotionLimits(effort=180000.0, velocity=0.08, lower=0.0, upper=0.16),
+    )
+
+    # ================================================================
+    # CONTROL PEDESTAL (identical structure, updated hose routing)
+    # ================================================================
+    pedestal = model.part("control_pedestal")
+    pedestal.visual(Box((0.38, 0.34, 0.62)), origin=Origin(xyz=(0.0, 0.0, 0.31)), material=gray, name="cabinet_body")
+    pedestal.visual(Box((0.38, 0.34, 0.18)), origin=Origin(xyz=(0.0, 0.0, 0.71)), material=gray, name="control_head")
+    pedestal.visual(Box((0.34, 0.026, 0.135)), origin=Origin(xyz=(0.0, -0.185, 0.76), rpy=(math.radians(-8.0), 0.0, 0.0)), material=edge_gray, name="sloped_panel")
+    pedestal.visual(Box((0.33, 0.012, 0.32)), origin=Origin(xyz=(0.0, -0.176, 0.44)), material=edge_gray, name="front_door_seam")
+    pedestal.visual(Box((0.28, 0.010, 0.055)), origin=Origin(xyz=(0.0, -0.183, 0.45)), material=yellow, name="pedestal_warning_label")
+    pedestal.visual(Box((0.050, 0.080, 0.110)), origin=Origin(xyz=(-0.170, 0.030, 0.845)), material=gray, name="upper_hose_mount")
+    for i, x in enumerate([-0.13, 0.13]):
+        pedestal.visual(Box((0.055, 0.40, 0.080)), origin=Origin(xyz=(x, 0.0, 0.04)), material=gray, name=f"pedestal_foot_{i}")
+
+    pedestal.visual(Cylinder(radius=0.045, length=0.018), origin=Origin(xyz=(-0.125, -0.199, 0.805), rpy=(math.pi / 2, 0.0, 0.0)), material=dark_gray, name="gauge_bezel")
+    pedestal.visual(Cylinder(radius=0.035, length=0.020), origin=Origin(xyz=(-0.125, -0.211, 0.805), rpy=(math.pi / 2, 0.0, 0.0)), material=white, name="gauge_face")
+    pedestal.visual(Box((0.050, 0.006, 0.006)), origin=Origin(xyz=(-0.112, -0.224, 0.812), rpy=(0.0, 0.0, math.radians(-25.0))), material=black, name="gauge_needle")
+    for i, (x, mat) in enumerate([(-0.025, green), (0.035, red), (0.095, amber)]):
+        pedestal.visual(Sphere(radius=0.016), origin=Origin(xyz=(x, -0.197, 0.812)), material=mat, name=f"indicator_light_{i}")
+    pedestal.visual(Cylinder(radius=0.025, length=0.040), origin=Origin(xyz=(-0.190, 0.030, 0.875), rpy=(0.0, math.pi / 2, 0.0)), material=steel, name="upper_hose_fitting")
+    pedestal.visual(Cylinder(radius=0.020, length=0.035), origin=Origin(xyz=(-0.190, -0.020, 0.575), rpy=(0.0, math.pi / 2, 0.0)), material=steel, name="lower_hose_fitting")
+
+    # Hose routing for C-frame: pedestal is at world (1.36, -0.05, 0)
+    # Upper hose from right side of cantilever to pedestal fitting
+    upper_hose = tube_from_spline_points(
+        [
+            (-1.10, 0.25, 1.80),    # at upper port (world ~0.26, 0.20, 1.80)
+            (-0.75, 0.35, 1.45),    # curve down and right
+            (-0.45, 0.20, 1.10),    # continue right
+            (-0.190, 0.030, 0.875), # pedestal upper fitting
+        ],
+        radius=0.017,
+        samples_per_segment=16,
+        radial_segments=18,
+        cap_ends=True,
+    )
+    # Lower hose from right side of bed support, routed below bed to pedestal
+    lower_hose = tube_from_spline_points(
+        [
+            (-1.10, 0.05, 0.48),    # at lower port (world ~0.26, 0.0, 0.48)
+            (-0.80, 0.30, 0.32),    # down and right, below bed
+            (-0.50, 0.20, 0.38),    # curving right below bed
+            (-0.30, 0.08, 0.48),    # approaching pedestal side
+            (-0.190, -0.020, 0.575), # pedestal lower fitting
+        ],
+        radius=0.012,
+        samples_per_segment=16,
+        radial_segments=16,
+        cap_ends=True,
+    )
+    pedestal.visual(mesh_from_geometry(upper_hose, "upper_hose"), origin=Origin(), material=black, name="upper_hose")
+    pedestal.visual(mesh_from_geometry(lower_hose, "lower_hose"), origin=Origin(), material=black, name="lower_hose")
+    model.articulation(
+        "frame_to_pedestal",
+        ArticulationType.FIXED,
+        parent=frame,
+        child=pedestal,
+        origin=Origin(xyz=(1.36, -0.05, 0.0)),
+    )
+
+    # ================================================================
+    # PUSH BUTTONS (identical to parent)
+    # ================================================================
+    button_specs = [
+        ("green_button", (-0.030, -0.205, 0.755), green),
+        ("red_button", (0.035, -0.205, 0.755), red),
+        ("amber_button", (0.100, -0.205, 0.755), amber),
+    ]
+    for name, xyz, mat in button_specs:
+        button = model.part(name)
+        button.visual(
+            Cylinder(radius=0.021, length=0.018),
+            origin=Origin(xyz=(0.0, -0.009, 0.0), rpy=(math.pi / 2, 0.0, 0.0)),
+            material=mat,
+            name="button_cap",
+        )
+        button.visual(
+            Cylinder(radius=0.014, length=0.010),
+            origin=Origin(xyz=(0.0, 0.002, 0.0), rpy=(math.pi / 2, 0.0, 0.0)),
+            material=dark_gray,
+            name="button_stem",
+        )
+        model.articulation(
+            f"pedestal_to_{name}",
+            ArticulationType.PRISMATIC,
+            parent=pedestal,
+            child=button,
+            origin=Origin(xyz=xyz),
+            axis=(0.0, 1.0, 0.0),
+            motion_limits=MotionLimits(effort=12.0, velocity=0.06, lower=0.0, upper=0.008),
+        )
+
+    return model
+
+
+def run_tests() -> TestReport:
+    ctx = TestContext(object_model)
+
+    frame = object_model.get_part("frame")
+    bed = object_model.get_part("bed")
+    ram = object_model.get_part("ram")
+    pedestal = object_model.get_part("control_pedestal")
+    ram_joint = object_model.get_articulation("frame_to_ram")
+
+    # The ram rod is captured through the hydraulic cylinder bore with close clearance;
+    # in reality hydraulic seals in the gland contact the rod, but we model clearance fit.
+    ctx.allow_isolated_part(
+        ram,
+        reason="The ram rod is captured through the hydraulic cylinder bore with a close clearance fit; hydraulic seals (not modeled) contact the rod.",
+    )
+
+    # Overlap allowances (intentional embeddings)
+    ctx.allow_overlap(
+        frame, ram, elem_a="gland_ring", elem_b="ram_rod",
+        reason="The polished ram rod is intentionally captured through the cylinder gland ring.",
+    )
+    ctx.allow_overlap(
+        frame, ram, elem_a="fixed_cylinder", elem_b="ram_rod",
+        reason="The hydraulic rod intentionally remains inserted inside the upper cylinder body.",
+    )
+    ctx.allow_overlap(
+        pedestal, frame, elem_a="upper_hose", elem_b="upper_hose_port",
+        reason="The flexible hydraulic hose is intentionally seated over the press-side hose port.",
+    )
+    ctx.allow_overlap(
+        pedestal, frame, elem_a="upper_hose", elem_b="upper_port_bracket",
+        reason="The hose wraps around the port bracket as it routes to the pedestal.",
+    )
+    ctx.allow_overlap(
+        pedestal, frame, elem_a="lower_hose", elem_b="lower_hose_port",
+        reason="The return hose is intentionally seated over the lower press-side port.",
+    )
+    for button_name in ("green_button", "red_button", "amber_button"):
+        ctx.allow_overlap(
+            button_name, pedestal, elem_a="button_stem", elem_b="sloped_panel",
+            reason="The push-button stem is intentionally inserted through the control-panel face.",
+        )
+
+    frame_visuals = {v.name for v in frame.visuals}
+    bed_visuals = {v.name for v in bed.visuals}
+    pedestal_visuals = {v.name for v in pedestal.visuals}
+
+    # ---- C-frame structural assertions (variant-specific) ----
+    ctx.check(
+        "C-frame has single rear_spine and top_cantilever (no left/right columns)",
+        {"rear_spine", "top_cantilever", "base_arm", "base_foot"}.issubset(frame_visuals)
+        and "left_column" not in frame_visuals
+        and "right_column" not in frame_visuals,
+        details=f"frame visuals={sorted(frame_visuals)}",
+    )
+    ctx.check(
+        "structural gussets reinforce spine cantilever junctions",
+        {"top_gusset_0", "top_gusset_1", "base_gusset_0", "base_gusset_1"}.issubset(frame_visuals),
+        details=f"frame visuals={sorted(frame_visuals)}",
+    )
+    ctx.check(
+        "bed support riser and ledge plate are modeled",
+        {"bed_support", "bed_ledge_plate"}.issubset(frame_visuals),
+        details=f"frame visuals={sorted(frame_visuals)}",
+    )
+    ctx.check(
+        "fixed hydraulic cylinder is present above ram",
+        {"fixed_cylinder", "cylinder_flange", "gland_ring"}.issubset(frame_visuals),
+        details=f"frame visuals={sorted(frame_visuals)}",
+    )
+    ctx.check(
+        "warning label is present on spine",
+        "warning_label_0" in frame_visuals,
+        details=f"frame visuals={sorted(frame_visuals)}",
+    )
+    ctx.check(
+        "press bed has hazard-striped platen face",
+        "bed_block" in bed_visuals
+        and "hazard_yellow" in bed_visuals
+        and sum(1 for n in bed_visuals if n.startswith("hazard_black_")) >= 6,
+        details=f"bed visuals={sorted(bed_visuals)}",
+    )
+    ctx.check(
+        "control pedestal includes cabinet, gauge, lights, and hoses",
+        {"cabinet_body", "control_head", "gauge_face", "gauge_needle", "upper_hose", "lower_hose"}.issubset(pedestal_visuals),
+        details=f"pedestal visuals={sorted(pedestal_visuals)}",
+    )
+    ctx.check(
+        "ram joint is non-fixed vertical prismatic",
+        ram_joint.articulation_type == ArticulationType.PRISMATIC
+        and abs(ram_joint.axis[2]) > 0.9
+        and ram_joint.axis[2] < 0.0
+        and ram_joint.motion_limits is not None
+        and ram_joint.motion_limits.upper is not None
+        and 0.12 <= ram_joint.motion_limits.upper <= 0.17,
+        details=f"type={ram_joint.articulation_type}, axis={ram_joint.axis}, limits={ram_joint.motion_limits}",
+    )
+
+    # ---- Spatial relationship checks ----
+    ctx.expect_overlap(ram, bed, axes="xy", min_overlap=0.18, name="ram/platen is centered over bed")
+    ctx.expect_gap(ram, bed, axis="z", min_gap=0.18, max_gap=0.28, name="raised ram clears the press bed")
+    ctx.expect_gap(
+        bed, frame,
+        axis="z",
+        positive_elem="bed_block",
+        negative_elem="bed_ledge_plate",
+        max_gap=0.010,
+        max_penetration=0.010,
+        name="bed sits on frame ledge plate",
+    )
+    ctx.expect_origin_gap(pedestal, frame, axis="x", min_gap=1.20, max_gap=1.50, name="pedestal stands to the right of press")
+    ctx.expect_within(
+        ram, frame, axes="xy",
+        inner_elem="ram_rod", outer_elem="gland_ring", margin=0.001,
+        name="ram rod is centered in gland ring",
+    )
+    ctx.expect_overlap(
+        ram, frame, axes="z",
+        elem_a="ram_rod", elem_b="gland_ring", min_overlap=0.02,
+        name="ram rod remains captured through gland",
+    )
+    ctx.expect_within(
+        ram, frame, axes="xy",
+        inner_elem="ram_rod", outer_elem="fixed_cylinder", margin=0.001,
+        name="ram rod is centered inside cylinder body",
+    )
+    ctx.expect_overlap(
+        ram, frame, axes="z",
+        elem_a="ram_rod", elem_b="fixed_cylinder", min_overlap=0.08,
+        name="ram rod retains insertion in cylinder body",
+    )
+    ctx.expect_overlap(
+        pedestal, frame, axes="xyz",
+        elem_a="upper_hose", elem_b="upper_hose_port", min_overlap=0.005,
+        name="upper hose is seated on press port",
+    )
+    ctx.expect_overlap(
+        pedestal, frame, axes="xyz",
+        elem_a="lower_hose", elem_b="lower_hose_port", min_overlap=0.004,
+        name="lower hose is seated on press port",
+    )
+    for button_name in ("green_button", "red_button", "amber_button"):
+        ctx.expect_overlap(
+            button_name, pedestal, axes="xz",
+            elem_a="button_stem", elem_b="sloped_panel", min_overlap=0.020,
+            name=f"{button_name} stem is retained in panel",
+        )
+
+    # ---- Ram travel check ----
+    rest_pos = ctx.part_world_position(ram)
+    with ctx.pose({ram_joint: 0.16}):
+        lowered_pos = ctx.part_world_position(ram)
+        ctx.expect_gap(ram, bed, axis="z", min_gap=0.04, max_gap=0.10, name="lowered ram approaches bed without passing through")
+    ctx.check(
+        "positive ram travel descends vertically",
+        rest_pos is not None and lowered_pos is not None and lowered_pos[2] < rest_pos[2] - 0.13,
+        details=f"rest={rest_pos}, lowered={lowered_pos}",
+    )
+
+    # ---- Hose span check ----
+    upper_hose_aabb = ctx.part_element_world_aabb(pedestal, elem="upper_hose")
+    ctx.check(
+        "upper hydraulic hose spans from press to pedestal",
+        upper_hose_aabb is not None
+        and upper_hose_aabb[0][0] < 0.95
+        and upper_hose_aabb[1][0] > 1.15
+        and upper_hose_aabb[1][2] > 1.40,
+        details=f"upper_hose_aabb={upper_hose_aabb}",
+    )
+
+    button_joints = [
+        object_model.get_articulation("pedestal_to_green_button"),
+        object_model.get_articulation("pedestal_to_red_button"),
+        object_model.get_articulation("pedestal_to_amber_button"),
+    ]
+    ctx.check(
+        "separate push buttons are articulated controls",
+        all(j.articulation_type == ArticulationType.PRISMATIC and j.motion_limits and j.motion_limits.upper for j in button_joints),
+        details=f"button joints={[j.name for j in button_joints]}",
+    )
+
+    return ctx.report()
+
+
+object_model = build_object_model()

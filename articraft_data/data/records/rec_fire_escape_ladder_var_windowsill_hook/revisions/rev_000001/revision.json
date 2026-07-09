@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_fire_escape_ladder_var_windowsill_hook",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T04:19:20Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "1b3a2f4a477109917adc5a9bc4909070edf52b9115095b49b7bb801e8ce296e8",
+  "source": {
+    "run_id": "run_20260709_041920_363396_ac4741ba",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "1b3a2f4a477109917adc5a9bc4909070edf52b9115095b49b7bb801e8ce296e8",
+    "model_py_sha256": "878128a234725f9bc40b0a2726843bbda764dda9668e13d695ed689c1abe62f3"
+  },
+  "run_summary": {
+    "turn_count": 16,
+    "tool_call_count": 16,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_emergency_equipment__fire_escape_ladder_20b875b6a2eb4af79b8c9f7f8c71a939",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_emergency_equipment__fire_escape_ladder_20b875b6a2eb4af79b8c9f7f8c71a939",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_emergency_equipment__fire_escape_ladder_20b875b6a2eb4af79b8c9f7f8c71a939",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "c74f99ae62b39258ec53f0b07536de96ce482510a73447250c1ccfe69737d6ca"
+    }
+  ]
+}

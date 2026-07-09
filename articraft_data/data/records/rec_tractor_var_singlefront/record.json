@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_tractor_var_singlefront",
+  "created_at": "2026-07-05T09:43:06Z",
+  "updated_at": "2026-07-05T10:14:13Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260705_094306_056624_85bbd052",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "tractor-singlefront",
+    "prompt_preview": "TARGET: Replace `front_axle_beam` + `spindle_0/1` + the two front wheels with ONE centered front wheel in a steering fork/yoke (wheel count 4 -> 3). KEEP: th..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "cd169c89102a5829879a7590915a0c732300632dce24430ce3d8a2c75897a88f",
+    "model_py_sha256": "57127c77edce976731f90b039d17d78150e0e1e231bf3d82daa3c77476d29cdc"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_516579_482a6ef6",
+    "parent_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_516579_482a6ef6",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

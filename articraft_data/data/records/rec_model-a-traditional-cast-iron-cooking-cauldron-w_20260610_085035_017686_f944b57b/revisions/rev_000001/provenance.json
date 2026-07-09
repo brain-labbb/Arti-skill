@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_model-a-traditional-cast-iron-cooking-cauldron-w_20260610_085035_017686_f944b57b",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "48c1acb46c6036e6eef904e4f363944751fac19e",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-11T03:18:55Z",
+    "record_id": "rec_model-a-traditional-cast-iron-cooking-cauldron-w_20260610_085035_017686_f944b57b",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-a-traditional-cast-iron-cooking-cauldron-w_20260610_085035_017686_f944b57b/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-a-traditional-cast-iron-cooking-cauldron-w_20260610_085035_017686_f944b57b",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "d0e8541259ce35b3eb60560e6b84ccbfb6d3b906afd54b33645fa489b2061ca0",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "58bc50777fdbc1a860a6d8c6d9c01170fc2f46c4b99ecac346bf7a8b47198cec",
+        "model_py_mtime_ns": 1781145271146015892,
+        "model_py_size_bytes": 14466,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 2284237,
+        "visual_mesh_file_count": 4,
+        "compile_elapsed_seconds": 6.259445585310459
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

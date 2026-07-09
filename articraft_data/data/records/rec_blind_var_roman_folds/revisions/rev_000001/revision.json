@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_blind_var_roman_folds",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-20T16:35:25Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "3e0b03fe4ac146ce6a89487a29cba6850b13d15430475fdc24149ef0bf4de9f5",
+  "source": {
+    "run_id": "run_20260620_163525_297402_f359961e",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "3e0b03fe4ac146ce6a89487a29cba6850b13d15430475fdc24149ef0bf4de9f5",
+    "model_py_sha256": "79474fcdc1e0f6bea9bfabd0306a758f90c139e88cba73282e6ff7014b209f9c"
+  },
+  "run_summary": {
+    "turn_count": 15,
+    "tool_call_count": 16,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_horizontal-wooden-venetian-blind-a-wooden-headra_20260611_160824_216734_cc3eb44b",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_horizontal-wooden-venetian-blind-a-wooden-headra_20260611_160824_216734_cc3eb44b",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

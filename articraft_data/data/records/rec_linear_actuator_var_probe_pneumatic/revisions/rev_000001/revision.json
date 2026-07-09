@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_linear_actuator_var_probe_pneumatic",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T13:52:48Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "52ab1628a26a32909b6a5dd5a930fae7197c86295488ae0373236c585e6b7be1",
+  "source": {
+    "run_id": "run_20260709_135248_039170_c1570797",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "52ab1628a26a32909b6a5dd5a930fae7197c86295488ae0373236c585e6b7be1",
+    "model_py_sha256": "299b478761f20659407874de0423f2e6c5a05c2957b17b4168ad4a14a882b3c9"
+  },
+  "run_summary": {
+    "turn_count": 26,
+    "tool_call_count": 27,
+    "compile_attempt_count": 6,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_robotics__linear_actuator__002_png_d3d50297221542dda13617f4358bd6e3",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_robotics__linear_actuator__002_png_d3d50297221542dda13617f4358bd6e3",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_robotics__linear_actuator__002_png_d3d50297221542dda13617f4358bd6e3",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "46b8378a2a190ccb2d15a4e0b50ef7a0fbff712490c1d42e4756b4fdffa786bc"
+    }
+  ]
+}

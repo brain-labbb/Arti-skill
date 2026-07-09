@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_vintage-green-kick-scooter-with-a-tall-curved-ha_20260605_165922_546417_d68bd852",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-05T16:59:22Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "999688eb36e264d7f81835ae68610d930032cb9a3cbccd6db4c3edab14335eb4",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "999688eb36e264d7f81835ae68610d930032cb9a3cbccd6db4c3edab14335eb4",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-05T17:34:08Z",
+    "record_id": "rec_vintage-green-kick-scooter-with-a-tall-curved-ha_20260605_165922_546417_d68bd852",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_vintage-green-kick-scooter-with-a-tall-curved-ha_20260605_165922_546417_d68bd852/compile_report.json",
+      "status": "success",
+      "record_id": "rec_vintage-green-kick-scooter-with-a-tall-curved-ha_20260605_165922_546417_d68bd852",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='rear_wheel' connected=4/5 disconnected=[rear_rim__component_002:Mesh]\npart='front_wheel' connected=4/5 disconnected=[front_rim__component_002:Mesh]"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 9 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "b4d3af98c243595e844479636713b4b6aa57f9b66f1fa14595165024b84ca52c",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "a1210ee67026b3c47fe9490264fcecebdc1979c574be04c6311834acd3727e73",
+        "model_py_mtime_ns": 1780679626001747535,
+        "model_py_size_bytes": 22440,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 1175786,
+        "visual_mesh_file_count": 15,
+        "compile_elapsed_seconds": 6.926728510297835
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

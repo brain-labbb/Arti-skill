@@ -1,0 +1,24 @@
+CATEGORY: Camping_Outdoor Gear
+SUBCATEGORY: Water filter pump
+TARGET: change the body_to_plunger PRISMATIC plunger to a CONTINUOUS rotary hand-crank actuation.
+DIVERSITY_AXIS: ② joint/mechanism.
+POSITIONING: hand-crank rotary camping filter pump (e.g. barrel-mount emergency crank filter) where the user turns a folding crank handle continuously to drive the internal pump, instead of reciprocating a plunger. Remains a handheld hand-powered water filter pump.
+KEEP: preserve these parent functional layers by name: pump_body, cylindrical_body, rounded_bottom_cap, top_cap, top_manifold_disk, outlet_socket, intake_socket, black_grip_panel, green_grip_reliefs, collection_cup, sample_cup, outlet_port, intake_port; keep helpers _curved_grip_panel, _finger_scallop, _cup_shell, _hose_from_world_points; keep joints body_to_collection_cup, body_to_sample_cup, body_to_outlet_port, body_to_intake_port.
+STRUCTURAL_DELTA: replace the plunger_handle straight plunger_rod + t_handle_grip and the body_to_plunger PRISMATIC joint with a crank part (short offset crank arm + perpendicular grip knob) mounted on the top_manifold_disk via a CONTINUOUS joint with axis vertical (0,0,1) through a crank hub boss. Remove plunger_sleeve reference to a linear guide; add a crank-hub bearing boss on top_cap so the rotating arm has a visible support and swept clearance.
+COMPANION_VARIATIONS: ⑤ optional shorter overall body proportion; no other joint or body-form change.
+FORBIDDEN: do not become a coffee grinder / winch / fishing reel; keep the two cups and hose ports; only the actuation mechanism becomes rotary.
+
+This is a Camping_Outdoor Gear/Water filter pump family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Camping_Outdoor Gear/Water filter pump (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

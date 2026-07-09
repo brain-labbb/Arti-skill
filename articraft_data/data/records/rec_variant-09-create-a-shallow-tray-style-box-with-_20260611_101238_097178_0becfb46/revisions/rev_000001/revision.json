@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-09-create-a-shallow-tray-style-box-with-_20260611_101238_097178_0becfb46",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-11T10:12:38Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "c7c98ac94d5da0fd5b64021acb5969162c9203e4a2fad1773e266460a2a4807e",
+  "source": {
+    "run_id": "run_20260611_101238_097178_0becfb46",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5",
+    "thinking_level": "med",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "c7c98ac94d5da0fd5b64021acb5969162c9203e4a2fad1773e266460a2a4807e",
+    "model_py_sha256": "3d1e291844c635633362b624e68a7a6bb3c27487386357ba03625bc3fd5d1c87"
+  },
+  "run_summary": {
+    "turn_count": 6,
+    "tool_call_count": 5,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_rustic-wooden-storage-box-with-plank-sides-metal_20260605_133631_387134_1a9c91ba",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_rustic-wooden-storage-box-with-plank-sides-metal_20260605_133631_387134_1a9c91ba",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

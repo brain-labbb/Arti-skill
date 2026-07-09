@@ -1,0 +1,24 @@
+CATEGORY: Pet_Animal related
+SUBCATEGORY: Aquarium
+TARGET: change the flat front_glass pane of tank_frame to a curved bow-front glass panel (convex outward-bulging front).
+DIVERSITY_AXIS: ③ primary form family.
+POSITIONING: Bow-front glass aquarium (curved-front display tank) sold as a panoramic desktop/community tank; stays an Aquarium because it is still a transparent water-holding glass basin with black frame, hinged hood, filter, gravel bed and rooted plants.
+KEEP: preserve these parent functional layers by name: tank_frame, front_glass, rear_glass, side_glass_0, side_glass_1, bottom_glass, base_front_rail, base_rear_rail, base_side_0, base_side_1, top_front_rail, top_rear_rail, top_side_0, top_side_1, corner_post_0_0, substrate, gravel_bed, filter, filter_housing, intake_tube, hood, hood_shell, light_diffuser, control_panel, feed_flap, flap_panel, tank_to_hood, hood_to_feed_flap.
+STRUCTURAL_DELTA: Replace the flat front_glass Box with a single convex curved front panel built from a CadQuery mesh (bowed outward along +/-Y at the front), and blend the two front corner posts and base/top front rails to follow the curved footprint. Keep rear and side panes flat. Water/gravel footprint follows the bowed front edge. Do NOT add or remove joints; hood and feed flap hinges stay exactly as in the parent.
+COMPANION_VARIATIONS: optional palette of the curved front glass tint only; no part tree, joint graph, interface, or primitive-family change beyond the bow-front panel.
+FORBIDDEN: fish bowl / round goldfish bowl, cylinder tank, terrarium/vivarium (dry), aquarium cabinet stand (furniture); do not also change hood mechanism, filter type, or plant count.
+
+This is a Pet_Animal related/Aquarium family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Pet_Animal related/Aquarium (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

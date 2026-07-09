@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_hospbed_var_three_section",
+  "created_at": "2026-07-05T09:57:52Z",
+  "updated_at": "2026-07-05T10:17:14Z",
+  "rating": 5,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260705_095752_096708_ccd1f5ed",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "hospbed-three_section",
+    "prompt_preview": "TARGET: make it a three-section full-profiling hospital bed. Keep the head `backrest` section, and split the foot half of the deck into two independently hin..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "ddcf678959254641014902b62aa0570e57de13009f0125137ca8bf476652043a",
+    "model_py_sha256": "20535a4d4917f6cd56e2a28381299e0d9fff5169e7a4c421e66944c434ae569d"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_a-single-section-adjustable-hospital-bed-a-recta_20260623_174436_818326_5bfade45",
+    "parent_record_id": "rec_a-single-section-adjustable-hospital-bed-a-recta_20260623_174436_818326_5bfade45",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

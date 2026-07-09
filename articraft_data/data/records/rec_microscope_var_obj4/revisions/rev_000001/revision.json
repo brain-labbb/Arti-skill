@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_microscope_var_obj4",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T13:49:25Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "6bbead4827f0c0c8a18760788919a2584190d44e854c44b4cdb41f1cb623f4bd",
+  "source": {
+    "run_id": "run_20260623_134925_520895_5aaf3ef4",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "6bbead4827f0c0c8a18760788919a2584190d44e854c44b4cdb41f1cb623f4bd",
+    "model_py_sha256": "dd50d85639ec8f04c286d5faedf068c9bc7207c9ad71863366b9947fa55a73e5"
+  },
+  "run_summary": {
+    "turn_count": 24,
+    "tool_call_count": 23,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-micr_20260609_183637_825621_5f8b9008",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-micr_20260609_183637_825621_5f8b9008",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

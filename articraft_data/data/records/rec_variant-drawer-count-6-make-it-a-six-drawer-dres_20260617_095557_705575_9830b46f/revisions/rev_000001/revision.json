@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-drawer-count-6-make-it-a-six-drawer-dres_20260617_095557_705575_9830b46f",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T09:55:57Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "ba7de3d3b651b8e8cf6a66c3e8b260036add3d8f1c165caa34d276e1d94af35d",
+  "source": {
+    "run_id": "run_20260617_095557_705575_9830b46f",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "ba7de3d3b651b8e8cf6a66c3e8b260036add3d8f1c165caa34d276e1d94af35d",
+    "model_py_sha256": "4cfa853179d23101943a4e7ecc8d63ee1b2dffcb02c1cd0099c284b1004dfb43"
+  },
+  "run_summary": {
+    "turn_count": 7,
+    "tool_call_count": 6,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-wide-black-wooden-dresser-double-dresser_20260610_083741_441368_58f0953c",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-wide-black-wooden-dresser-double-dresser_20260610_083741_441368_58f0953c",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

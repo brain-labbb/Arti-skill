@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_container_tube_var_tapered_cone",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T17:50:48Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "ef6437ae8adaecb192292cfd139e07a6b07b7fc423f60b5ed97e70232069b6e3",
+  "source": {
+    "run_id": "run_20260618_175048_983929_4c7494bf",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "ef6437ae8adaecb192292cfd139e07a6b07b7fc423f60b5ed97e70232069b6e3",
+    "model_py_sha256": "2aeca5d09d55e6c7c020eca7a50638335f469e0cd30748d5360fa66e93ccdb5f"
+  },
+  "run_summary": {
+    "turn_count": 12,
+    "tool_call_count": 12,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_cosmetic-cream-squeeze-tube-with-a-white-screw-c_20260606_075026_811431_7c11d416",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_cosmetic-cream-squeeze-tube-with-a-white-screw-c_20260606_075026_811431_7c11d416",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

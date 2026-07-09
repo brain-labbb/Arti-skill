@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_sentry_turret_var_legs6",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T13:21:08Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "05b53e7aead2d7aeae666e23ca0ec64ebb340898f8a192e592f8ab40b6823483",
+  "source": {
+    "run_id": "run_20260623_132108_739017_5e20328e",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "05b53e7aead2d7aeae666e23ca0ec64ebb340898f8a192e592f8ab40b6823483",
+    "model_py_sha256": "42f10bcae73e3495f115192d46545af18fa387438bedf65cd7f33882b115aa2c"
+  },
+  "run_summary": {
+    "turn_count": 8,
+    "tool_call_count": 7,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-stylized-automated-sentry-gun-turret-abo_20260610_080449_802592_d996dd05",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-stylized-automated-sentry-gun-turret-abo_20260610_080449_802592_d996dd05",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

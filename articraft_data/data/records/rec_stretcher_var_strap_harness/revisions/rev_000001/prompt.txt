@@ -1,0 +1,23 @@
+CATEGORY: Emergency Equipment
+SUBCATEGORY: Stretcher
+TARGET: change the folding side_rail_0/side_rail_1 tubular guard rails and their side_rail_hinge_0/side_rail_hinge_1 revolute joints to a fixed body-restraint strap set (chest, waist, and leg cross straps plus an over-shoulder harness) mounted on the litter side tubes.
+DIVERSITY_AXIS: ① skeleton/topology.
+POSITIONING: rail-less restraint-strap ambulance cot (transport surface secured only by webbing straps, no fold-down guard rails), a common lightweight ambulance stretcher configuration.
+KEEP: preserve these parent functional layers by name: lower_carriage, litter_frame, height_slide, backrest, backrest_hinge, scissor_arm_0, scissor_arm_1, scissor_hinge_0, scissor_hinge_1, caster_0, caster_1, caster_2, caster_3, caster_spin_0, caster_spin_1, caster_spin_2, caster_spin_3, foot_strap, seat_strap, _tube, _box.
+STRUCTURAL_DELTA: remove side_rail_0/side_rail_1 parts and their revolute hinges; add several additional cross restraint straps and a Y-shaped shoulder harness as static box/tube host visuals anchored to the upper_side_tube rails; the non-fixed joints of the cot (height_slide prismatic, backrest_hinge, scissor_hinge_*, caster_spin_*) are all preserved so the object keeps real articulation.
+FORBIDDEN: do not remove the lift or backrest joints, do not change caster count, do not change surface or frame family; straps must stay host visuals, not a new mechanism.
+
+This is a Emergency Equipment/Stretcher family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Emergency Equipment/Stretcher (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

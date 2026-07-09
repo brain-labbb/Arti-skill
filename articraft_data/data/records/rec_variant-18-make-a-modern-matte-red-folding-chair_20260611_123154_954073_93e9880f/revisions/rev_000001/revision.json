@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-18-make-a-modern-matte-red-folding-chair_20260611_123154_954073_93e9880f",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-11T12:31:54Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "d94c292d9d0f11df778dcfa089ac86b07a405598c06ad3a4ac22ced38f3f85a5",
+  "source": {
+    "run_id": "run_20260611_123154_954073_93e9880f",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5",
+    "thinking_level": "med",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "d94c292d9d0f11df778dcfa089ac86b07a405598c06ad3a4ac22ced38f3f85a5",
+    "model_py_sha256": "d1a5ebd65895ca5ecec49000a2a7d88ecefde85ce3a4c40f5429ab81d6906051"
+  },
+  "run_summary": {
+    "turn_count": 14,
+    "tool_call_count": 13,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_metal-folding-chair-a-gray-powder-coated-tubular_20260606_120809_950609_cc9b62cf",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_metal-folding-chair-a-gray-powder-coated-tubular_20260606_120809_950609_cc9b62cf",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

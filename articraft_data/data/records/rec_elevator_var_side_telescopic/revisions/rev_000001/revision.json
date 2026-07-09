@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_elevator_var_side_telescopic",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-28T06:41:42Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "e282e48d864c9729f089a85870a046866c8c220079c85396c96b4d2faaead6a6",
+  "source": {
+    "run_id": "run_20260628_064142_311185_3a6e8d10",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "e282e48d864c9729f089a85870a046866c8c220079c85396c96b4d2faaead6a6",
+    "model_py_sha256": "472466b9918e868b1b85097c4437f4bd17620423bd6a4c065b4c9ab5229e4fd2"
+  },
+  "run_summary": {
+    "turn_count": 9,
+    "tool_call_count": 9,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-passenger-elevator-landing-entrance-in-a-dark-_20260608_165157_614797_f45c0537",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-passenger-elevator-landing-entrance-in-a-dark-_20260608_165157_614797_f45c0537",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

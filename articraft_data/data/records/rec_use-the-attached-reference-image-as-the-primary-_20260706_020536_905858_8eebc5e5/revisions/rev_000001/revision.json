@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260706_020536_905858_8eebc5e5",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-06T02:05:36Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "e8c5f21837c5552cbb92f5c40f5ddae752ad627c5144cd8f037a96e97bf83daf",
+  "source": {
+    "run_id": "run_20260706_020536_905858_8eebc5e5",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "claude-fable-5",
+    "thinking_level": "low",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "off",
+    "max_turns": 30,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "e8c5f21837c5552cbb92f5c40f5ddae752ad627c5144cd8f037a96e97bf83daf",
+    "model_py_sha256": "58ee09ba72cf326ec865d542d8079b35ef81ee0c4c04f454f896aa3ad1c9166a"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 11,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-06T09:33:29Z",
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260706_020536_905858_8eebc5e5",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_use-the-attached-reference-image-as-the-primary-_20260706_020536_905858_8eebc5e5/compile_report.json",
+      "status": "success",
+      "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260706_020536_905858_8eebc5e5",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 16 overlaps across 14 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "c4b8559a25a6194485ce43bf982539e5e1bdf293a6daf87808ec57b2737e4006",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "83af4ac0b5a48d2faa2e0ddf1fe2675ab802251d2945efc8bef2e09f19548e20",
+        "model_py_mtime_ns": 1783330384571817076,
+        "model_py_size_bytes": 17510,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 126765,
+        "visual_mesh_file_count": 17,
+        "compile_elapsed_seconds": 2.128308927640319
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

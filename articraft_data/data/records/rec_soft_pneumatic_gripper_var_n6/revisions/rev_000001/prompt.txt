@@ -1,0 +1,26 @@
+CATEGORY: Robotics
+SUBCATEGORY: Soft pneumatic gripper
+TARGET: change the finger multiplicity loop `for idx, yaw in enumerate((0.0, math.pi/2.0, math.pi, -math.pi/2.0))` (and the matching yoke/hinge/air_tube/hose loops) from 4 radial fingers to 6 radial fingers.
+DIVERSITY_AXIS: N multiplicity.
+POSITIONING: six-finger radial soft pneumatic gripper (dense multi-finger bellows array for large, heavy, or irregular produce and fragile items); stays a soft pneumatic gripper because it keeps compliant corrugated silicone bellows fingers that bend inward under air pressure on a central pneumatic manifold.
+KEEP: preserve these parent functional layers by name: manifold, mounting_plate, central_boss, air_manifold_block, rail_x, rail_y, yoke_cheek_{idx}_{n}, yoke_bridge_{idx}, hinge_pin_{idx}, fixed_elbow_{idx}, air_tube_{idx}, finger_{idx}, actuator_base, soft_neck, bellow, grip_valley_{j}, hose_connector_{idx}, manifold_to_finger_{idx}, finger_to_connector_{idx}, helper _rot_xy, helper _finger_bellow_geometry.
+STRUCTURAL_DELTA: set the yaw angle list to 6 evenly spaced angles (2*pi*idx/6, idx=0..5) reused by every per-finger loop so exactly 6 identical radial finger stations are copy-generated; keep finger_radius/finger_z placement, the per-finger REVOLUTE manifold_to_finger_{idx} bend joint with tangential axis, and the finger_to_connector_{idx} swivel; indexed names finger_0..finger_5.
+MULTIPLICITY: target N=6; copied object is the whole finger station (finger_{idx} + hose_connector_{idx} + its yoke cheeks/bridge/hinge_pin/fixed_elbow/air_tube); placement radial even at yaw=2*pi*idx/6 on the same bolt-circle radius; joint policy is one independent REVOLUTE bend per finger about its tangential axis.
+COMPANION_VARIATIONS: none.
+FORBIDDEN: do not change the bellow form family, the bend joint type, the manifold/plate skeleton, or the cyan silicone material; must not become a rigid parallel-jaw gripper, a vacuum/suction gripper, or a rigid multi-link robot hand.
+COMPATIBILITY_PROBE: none.
+
+This is a Robotics/Soft pneumatic gripper family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Robotics/Soft pneumatic gripper (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

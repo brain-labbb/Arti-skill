@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_surgical_bed_var_siderails",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T13:41:30Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "271002e12ecc3a893ce4855fa2d89c4c0794c082a1bbe242327b0a03e5fddd99",
+  "source": {
+    "run_id": "run_20260623_134130_440427_673c4afb",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "271002e12ecc3a893ce4855fa2d89c4c0794c082a1bbe242327b0a03e5fddd99",
+    "model_py_sha256": "8b693ba76d20e72cfeb571a6064de068be2d46bf5c136bf2acbf0a668b09e18b"
+  },
+  "run_summary": {
+    "turn_count": 7,
+    "tool_call_count": 7,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-surg_20260609_183628_574040_3fe8e15f",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-surg_20260609_183628_574040_3fe8e15f",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

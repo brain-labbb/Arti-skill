@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_model-a-wall-mounted-bathroom-faucet-in-polished_20260610_083939_878644_a684e234",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-10T08:39:39Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "9205a4a4d155339db0e18a18200eeca6662fcf8ab09bcc435e39aeb1b3c1b43c",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": null
+  },
+  "hashes": {
+    "prompt_sha256": "9205a4a4d155339db0e18a18200eeca6662fcf8ab09bcc435e39aeb1b3c1b43c",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-10T14:43:25Z",
+    "record_id": "rec_model-a-wall-mounted-bathroom-faucet-in-polished_20260610_083939_878644_a684e234",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-a-wall-mounted-bathroom-faucet-in-polished_20260610_083939_878644_a684e234/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-a-wall-mounted-bathroom-faucet-in-polished_20260610_083939_878644_a684e234",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "536fdbec20afc876b2808947c243520c26dab30dd4da9369aab2bf968bcf9d55",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "e35c33a291ee3eed28bfb3944f9f1e6836d2dcbd2737a9369464b61917d5b9df",
+        "model_py_mtime_ns": 1781102102433923480,
+        "model_py_size_bytes": 15270,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 805194,
+        "visual_mesh_file_count": 2,
+        "compile_elapsed_seconds": 7.234270100481808
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

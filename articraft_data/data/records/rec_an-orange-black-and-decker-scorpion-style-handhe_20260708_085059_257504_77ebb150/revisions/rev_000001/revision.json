@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_an-orange-black-and-decker-scorpion-style-handhe_20260708_085059_257504_77ebb150",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-08T08:50:59Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "cfe0637d4b01ca3d796a4bb89f7cc6db63e87a1a924800c6def9004205eec040",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "cfe0637d4b01ca3d796a4bb89f7cc6db63e87a1a924800c6def9004205eec040",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T09:02:52Z",
+    "record_id": "rec_an-orange-black-and-decker-scorpion-style-handhe_20260708_085059_257504_77ebb150",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_an-orange-black-and-decker-scorpion-style-handhe_20260708_085059_257504_77ebb150/compile_report.json",
+      "status": "success",
+      "record_id": "rec_an-orange-black-and-decker-scorpion-style-handhe_20260708_085059_257504_77ebb150",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "92ecb6fc69779fbe4dfb95b4832c43ef7603e30eb9b46698e813e284bb043c41",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "89521256bd73a74274d7841ad4d4177d28377ff1abc28904a01d57f96e4badbe",
+        "model_py_mtime_ns": 1783501288694732767,
+        "model_py_size_bytes": 14934,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 83816,
+        "visual_mesh_file_count": 3,
+        "compile_elapsed_seconds": 2.3044293749990175
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_sentry_turret_var_twin2",
+  "created_at": "2026-06-23T13:23:40Z",
+  "updated_at": "2026-06-23T13:28:04Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "remote_weapon_station",
+  "source": {
+    "run_id": "run_20260623_132340_516200_6510322a",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "sentry_turret-twin2",
+    "prompt_preview": "Change only the barrel weapon layer to twin side by side barrels. Rewrite the barrel emission as one loop over an explicit list of two horizontal barrel offs..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "6a47d16eb27ab42a464ed3d144a8028474e0cd9791278dd0b6f71c0de79b259e",
+    "model_py_sha256": "aa026207ccfecd0842c79aa75fc67b25fb738f6ae449379d32d03a58d5f5fd0c"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_model-a-stylized-automated-sentry-gun-turret-abo_20260610_080449_802592_d996dd05",
+    "parent_record_id": "rec_model-a-stylized-automated-sentry-gun-turret-abo_20260610_080449_802592_d996dd05",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

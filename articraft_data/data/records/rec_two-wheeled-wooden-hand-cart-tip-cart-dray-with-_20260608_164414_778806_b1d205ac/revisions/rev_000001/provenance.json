@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_two-wheeled-wooden-hand-cart-tip-cart-dray-with-_20260608_164414_778806_b1d205ac",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "48c1acb46c6036e6eef904e4f363944751fac19e",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-08T16:52:09Z",
+    "record_id": "rec_two-wheeled-wooden-hand-cart-tip-cart-dray-with-_20260608_164414_778806_b1d205ac",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_two-wheeled-wooden-hand-cart-tip-cart-dray-with-_20260608_164414_778806_b1d205ac/compile_report.json",
+      "status": "success",
+      "record_id": "rec_two-wheeled-wooden-hand-cart-tip-cart-dray-with-_20260608_164414_778806_b1d205ac",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 4 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "c4be6034672816d636b8163fe4f53f11e1aa4e676d9eeccae08649110f5e63df",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "5f2a46a4f9cf3ec7bf6ff41cf36d110fd21781f73c6015111a71d1fb0b3f3964",
+        "model_py_mtime_ns": 1780937381222271231,
+        "model_py_size_bytes": 15631,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 177714,
+        "visual_mesh_file_count": 4,
+        "compile_elapsed_seconds": 1.6160183465108275
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-gutt_20260609_185907_280318_3dcec91a",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-09T18:59:07Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "1f48d1cb13c8e480dfbe612f9f00dd9a5e716e9214535236672fa583ebbb9e50",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": null
+  },
+  "hashes": {
+    "prompt_sha256": "1f48d1cb13c8e480dfbe612f9f00dd9a5e716e9214535236672fa583ebbb9e50",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-09T19:58:19Z",
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-gutt_20260609_185907_280318_3dcec91a",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_build-a-realistic-articulated-3d-model-of-a-gutt_20260609_185907_280318_3dcec91a/compile_report.json",
+      "status": "success",
+      "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-gutt_20260609_185907_280318_3dcec91a",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "9f3465eaf14a5f249545e07e41063b221b35e9ce09dd84f9797da0c205c072c7",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "a98ff31903ca669c5d14dcc11b61b40cb6b133d2ab587d38054c3c6abf7cfae6",
+        "model_py_mtime_ns": 1781033879203415278,
+        "model_py_size_bytes": 15422,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 252571,
+        "visual_mesh_file_count": 4,
+        "compile_elapsed_seconds": 0.7250937130302191
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

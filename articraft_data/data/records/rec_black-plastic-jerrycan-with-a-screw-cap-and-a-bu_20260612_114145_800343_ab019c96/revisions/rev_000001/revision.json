@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_black-plastic-jerrycan-with-a-screw-cap-and-a-bu_20260612_114145_800343_ab019c96",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-12T11:41:45Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "3107163d98eb613e3324591bd40058d18d2ac1c26b97ff3d4e27285eff129ed8",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "3107163d98eb613e3324591bd40058d18d2ac1c26b97ff3d4e27285eff129ed8",
+    "model_py_sha256": "246dba5fab427b1b6a87a893b4bcb453e2963eb0f38c4155caf67ed44e0d06c7"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-12T11:52:41Z",
+    "record_id": "rec_black-plastic-jerrycan-with-a-screw-cap-and-a-bu_20260612_114145_800343_ab019c96",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_black-plastic-jerrycan-with-a-screw-cap-and-a-bu_20260612_114145_800343_ab019c96/compile_report.json",
+      "status": "success",
+      "record_id": "rec_black-plastic-jerrycan-with-a-screw-cap-and-a-bu_20260612_114145_800343_ab019c96",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "246dba5fab427b1b6a87a893b4bcb453e2963eb0f38c4155caf67ed44e0d06c7",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "7340290092b01a10493e98f913ee8d84657366b426e44343a6489cce4be96e15",
+        "model_py_mtime_ns": 1781264804446711308,
+        "model_py_size_bytes": 12408,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 136451,
+        "visual_mesh_file_count": 2,
+        "compile_elapsed_seconds": 2.60219687782228
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_knife_var_grip_overmold",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T06:45:30Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "1e1417da398a68a24ef53d4708a3c86d6693b6dfc4cc2c79374053901dc268a2",
+  "source": {
+    "run_id": "run_20260618_064530_285558_8fdd3d1d",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "1e1417da398a68a24ef53d4708a3c86d6693b6dfc4cc2c79374053901dc268a2",
+    "model_py_sha256": "5346e334ac8ec7e7a4b8399a76b542070ba67d36ec9c3918868fa084c9a1804d"
+  },
+  "run_summary": {
+    "turn_count": 10,
+    "tool_call_count": 11,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-knif_20260609_163936_067357_211319cd",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-knif_20260609_163936_067357_211319cd",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

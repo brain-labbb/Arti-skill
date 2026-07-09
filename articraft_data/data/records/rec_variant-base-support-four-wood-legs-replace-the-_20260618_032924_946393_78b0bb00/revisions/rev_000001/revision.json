@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-base-support-four-wood-legs-replace-the-_20260618_032924_946393_78b0bb00",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T03:29:24Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "7fe1f1a53a8f15766c64937f48ece48561ad4ad6d7cf6d3224780f0f16b9e767",
+  "source": {
+    "run_id": "run_20260618_032924_946393_78b0bb00",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "7fe1f1a53a8f15766c64937f48ece48561ad4ad6d7cf6d3224780f0f16b9e767",
+    "model_py_sha256": "dc97adc5d7c5204b0334b79c03c9c972d1158794ce86eedd070b1ad1b30cbf00"
+  },
+  "run_summary": {
+    "turn_count": 10,
+    "tool_call_count": 10,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-tall-ergonomic-office-chair-ikea-markus-_20260610_085012_906733_cb37c340",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-tall-ergonomic-office-chair-ikea-markus-_20260610_085012_906733_cb37c340",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

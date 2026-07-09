@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_point_of_sale_terminal_var_body_touchscreen",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T14:27:28Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "e0bd33ab6dd8fd65ae68ff0acdee017bf805315728e96b4f63f77118b25763c4",
+  "source": {
+    "run_id": "run_20260709_142728_846684_3255e71e",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "e0bd33ab6dd8fd65ae68ff0acdee017bf805315728e96b4f63f77118b25763c4",
+    "model_py_sha256": "dd5c326f9d37c812142d4af62a46af334316a382de27647a8ffeaf24bdc3790d"
+  },
+  "run_summary": {
+    "turn_count": 10,
+    "tool_call_count": 10,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-gray-handheld-point-of-sale-payment-terminal-w_20260708_091455_488779_4430a86e",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-gray-handheld-point-of-sale-payment-terminal-w_20260708_091455_488779_4430a86e",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

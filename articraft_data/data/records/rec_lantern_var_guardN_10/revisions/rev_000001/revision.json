@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_lantern_var_guardN_10",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T15:56:11Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "cf19e84693437d38e4d0f49902603573c08c71ec6bbd5d8228feff2968a05edd",
+  "source": {
+    "run_id": "run_20260623_155611_161034_1a0ec188",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5",
+    "thinking_level": "high",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "cf19e84693437d38e4d0f49902603573c08c71ec6bbd5d8228feff2968a05edd",
+    "model_py_sha256": "184798f1abbeb74a768d974a2787cf17d2baa87d54ccc8dc0e0cfea09c5fd71f"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 10,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-vintage-hurricane-kerosene-lantern-about_20260610_081109_101773_5da4cb46",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-vintage-hurricane-kerosene-lantern-about_20260610_081109_101773_5da4cb46",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

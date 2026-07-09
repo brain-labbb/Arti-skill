@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_container_dispenser_v01",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-19T08:25:06Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "6a9b1c6732d99f3e51a259b1b226e58c1741aa168f7e80edc620ad8edb90f31e",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "6a9b1c6732d99f3e51a259b1b226e58c1741aa168f7e80edc620ad8edb90f31e",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-19T08:53:45Z",
+    "record_id": "rec_container_dispenser_v01",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_container_dispenser_v01/compile_report.json",
+      "status": "success",
+      "record_id": "rec_container_dispenser_v01",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "aef740f388ba9aa295b7ed35887c8e3a6c4760fd566b0c78ef1815d2bd49c318",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "c3e02ca435a444194e2ca9e00d786c2984fef8d589ba4f0d8eb90526f2acbc76",
+        "model_py_mtime_ns": 1781858802745902639,
+        "model_py_size_bytes": 18522,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 366882,
+        "visual_mesh_file_count": 7,
+        "compile_elapsed_seconds": 2.0025532180443406
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

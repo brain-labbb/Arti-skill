@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_toilet_001_v16",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-14T06:49:59Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "5e9ab9fecf7ee13f002fa2cffb6bd1e881a4e1efceb06c10ddc0a18c5e7ab073",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "5e9ab9fecf7ee13f002fa2cffb6bd1e881a4e1efceb06c10ddc0a18c5e7ab073",
+    "model_py_sha256": "6c286911d36e968aecdc34de49a14de622ceb89f58cff9a103efffec0a8b1275"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_edit_draft"
+  },
+  "parent": {
+    "record_id": "rec_wall-hung-white-ceramic-toilet-with-a-soft-close_20260605_154105_854794_7d51c47b",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_wall-hung-white-ceramic-toilet-with-a-soft-close_20260605_154105_854794_7d51c47b",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-14T06:50:25Z",
+    "record_id": "rec_qwen37v_toilet_001_v16",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/articraft_data/data/cache/record_materialization/rec_qwen37v_toilet_001_v16/compile_report.json",
+      "status": "failure",
+      "record_id": "rec_qwen37v_toilet_001_v16",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "ValueError: URDF tests failed:\n- fail_if_parts_overlap_in_current_pose(): Part overlaps detected (overlap_tol=0.005, overlap_volume_tol=5e-07):\npair=('body','flush_lever') depth=(0.067,0.006,0.024) min_depth=0.006 vol=9.648e-06 elem_a=#0 'service_pod':Mesh elem_b=#0 'flush_lever_arm':Mesh pose={}"
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "6c286911d36e968aecdc34de49a14de622ceb89f58cff9a103efffec0a8b1275",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "f0066db9fa3050b5d1b051b5e710c78801333da23cf68600abaef5202f89abe0",
+        "model_py_mtime_ns": 1781419803146596154,
+        "model_py_size_bytes": 17925,
+        "materialization_status": "missing",
+        "visual_mesh_bytes": 0,
+        "visual_mesh_file_count": 0,
+        "compile_elapsed_seconds": 5.935075480490923
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 2,
+      "errors": [
+        "strict external compile exited with status 1",
+        "compile report status must be 'success'"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

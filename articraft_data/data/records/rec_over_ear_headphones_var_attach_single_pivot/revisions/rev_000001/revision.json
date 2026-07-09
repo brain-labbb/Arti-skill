@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_over_ear_headphones_var_attach_single_pivot",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-24T15:56:34Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "4789b4f834224a97ca88c707bce76929a08c986dc5cb05fd73157165f1673718",
+  "source": {
+    "run_id": "run_20260624_155634_049044_2ed3b8d8",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "4789b4f834224a97ca88c707bce76929a08c986dc5cb05fd73157165f1673718",
+    "model_py_sha256": "6436d77df5eeafcb5344508e6b36138105245f68964388ef556be349befd285b"
+  },
+  "run_summary": {
+    "turn_count": 7,
+    "tool_call_count": 7,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_over-ear-headphones-with-padded-leather-ear-cups_20260609_080248_682174_5669f0bd",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_over-ear-headphones-with-padded-leather-ear-cups_20260609_080248_682174_5669f0bd",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

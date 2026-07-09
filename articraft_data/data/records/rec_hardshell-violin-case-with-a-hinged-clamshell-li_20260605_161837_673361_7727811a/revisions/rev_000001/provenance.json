@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_hardshell-violin-case-with-a-hinged-clamshell-li_20260605_161837_673361_7727811a",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "0ea5c9890f6e1c17ff89838a0485830e0b2b9e87",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-08T15:30:18Z",
+    "record_id": "rec_hardshell-violin-case-with-a-hinged-clamshell-li_20260605_161837_673361_7727811a",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_hardshell-violin-case-with-a-hinged-clamshell-li_20260605_161837_673361_7727811a/compile_report.json",
+      "status": "success",
+      "record_id": "rec_hardshell-violin-case-with-a-hinged-clamshell-li_20260605_161837_673361_7727811a",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 8 overlaps across 4 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "d383c7152e7424033e2e21f45f78b54334ed3fdd649881829cb5a034a844601d",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "6c0e3bb81a5a551ef3f07da4cce984df42d8c5fad60a50fc0d1f5e6dccb3b1fa",
+        "model_py_mtime_ns": 1780932578804685920,
+        "model_py_size_bytes": 15819,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 1282749,
+        "visual_mesh_file_count": 8,
+        "compile_elapsed_seconds": 8.412572703324258
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

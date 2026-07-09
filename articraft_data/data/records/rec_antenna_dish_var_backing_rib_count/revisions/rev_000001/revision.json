@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_antenna_dish_var_backing_rib_count",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T15:06:07Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "21eaa6d49725fa4aa239c5d6639a4cc214f721d2f8ebe21258b4d97699da259b",
+  "source": {
+    "run_id": "run_20260709_150607_589184_8419c356",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "21eaa6d49725fa4aa239c5d6639a4cc214f721d2f8ebe21258b4d97699da259b",
+    "model_py_sha256": "6cf0530b16ba4432b0e68f6027fd33b2d0648286fd5a4bf9d5240589a4656b45"
+  },
+  "run_summary": {
+    "turn_count": 15,
+    "tool_call_count": 14,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_large-satellite-ground-station-antenna-white-par_20260708_082356_505435_4c5c4c05",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_large-satellite-ground-station-antenna-white-par_20260708_082356_505435_4c5c4c05",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

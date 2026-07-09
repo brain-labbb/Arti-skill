@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_car002_v10",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-14T11:24:04Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "65f8ebcb972299e55d5aeb8ccb5335f76299f4e03bccf92dd50e8ad88a2620b3",
+  "source": {
+    "run_id": "run_20260614_112404_750953_29b45e46",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 80,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "65f8ebcb972299e55d5aeb8ccb5335f76299f4e03bccf92dd50e8ad88a2620b3",
+    "model_py_sha256": "164cca130b7b300ec7ef5725e007c4ce95750d0521432c69a7e82f6b187209e2"
+  },
+  "run_summary": {
+    "turn_count": 52,
+    "tool_call_count": 51,
+    "compile_attempt_count": 11,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

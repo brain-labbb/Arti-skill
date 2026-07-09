@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_security_camera_var_dual_lens",
+  "created_at": "2026-07-04T13:53:36Z",
+  "updated_at": "2026-07-04T13:58:26Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "technology",
+  "source": {
+    "run_id": "run_20260704_135336_965795_7a5d61a0",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "sec-dual-lens",
+    "prompt_preview": "TARGET: change the single central lens+IR module (lens_barrel / front_lens_glass / black_led_board with one ir_led_* ring) into two side-by-side lens+IR modu..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "4da17a4b874a19f5c990e70a37aa60a818f8a493dd7c0991f52b5d647717faba",
+    "model_py_sha256": "765a24625b72792bb35936666c95327b1d5c4195553cd85dc85e3650fc24d39a"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_a-silver-bullet-cctv-security-camera-a-short-cyl_20260624_124946_096010_1da3777f",
+    "parent_record_id": "rec_a-silver-bullet-cctv-security-camera-a-short-cyl_20260624_124946_096010_1da3777f",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

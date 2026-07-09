@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-pair-of-inline-roller-skates-with-hard-boots-a_20260611_163854_397477_26f6e0cf",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-11T16:38:54Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "96583d5655780d7f7716b685319cafc822c6360ae1447bedbea238fd6fca164c",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "96583d5655780d7f7716b685319cafc822c6360ae1447bedbea238fd6fca164c",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-11T17:46:42Z",
+    "record_id": "rec_a-pair-of-inline-roller-skates-with-hard-boots-a_20260611_163854_397477_26f6e0cf",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_a-pair-of-inline-roller-skates-with-hard-boots-a_20260611_163854_397477_26f6e0cf/compile_report.json",
+      "status": "success",
+      "record_id": "rec_a-pair-of-inline-roller-skates-with-hard-boots-a_20260611_163854_397477_26f6e0cf",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Isolated parts detected but allowed by justification: 7 part(s) ['right_boot', 'right_cuff', 'right_frame', 'right_wheel_0', 'right_wheel_1', 'right_wheel_2', 'right_wheel_3'].\n- pose_index=0 at pose (left_cuff_flex=0, left_frame_mount=0, left_wheel_0_spin=0, left_wheel_1_spin=0, left_wheel_2_spin=0, left_wheel_3_spin=0, right_boot_mount=0, right_cuff_flex=0, right_frame_mount=0, right_wheel_0_spin=0, right_wheel_1_spin=0, right_wheel_2_spin=0, right_wheel_3_spin=0), floating group ['right_boot', 'right_cuff', 'right_frame', 'right_wheel_0', 'right_wheel_1', 'right_wheel_2', 'right_wheel_3'] is disconnected from the grounded body rooted at 'left_boot'; nearest_grounded_part='left_cuff'; approx_gap=0.02836m; backend=fcl"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 12 overlaps across 6 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "fb3a8d60cbeecde201d7e24e9043688d3f647ff54b915e652ad9390f81a59d43",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "8f0573dd8abce3d23852cc09fcc2d786bb5f068fa217343fa861a47903f8ca3a",
+        "model_py_mtime_ns": 1781199910940517914,
+        "model_py_size_bytes": 23476,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 495687,
+        "visual_mesh_file_count": 12,
+        "compile_elapsed_seconds": 5.968845564872026
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

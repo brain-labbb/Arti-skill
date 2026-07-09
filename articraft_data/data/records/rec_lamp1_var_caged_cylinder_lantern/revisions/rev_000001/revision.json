@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_lamp1_var_caged_cylinder_lantern",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-20T17:25:46Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "8a73ed9fc0050f347d3dcd097d1a11a0547ea5ff75f9437b696fed54857f0111",
+  "source": {
+    "run_id": "run_20260620_172546_814015_d31cca28",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "8a73ed9fc0050f347d3dcd097d1a11a0547ea5ff75f9437b696fed54857f0111",
+    "model_py_sha256": "599b22c3a0267c2bdbb5b0c0d9e76963397a87ad54db8301a46985f769832af8"
+  },
+  "run_summary": {
+    "turn_count": 29,
+    "tool_call_count": 29,
+    "compile_attempt_count": 7,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-lamp_20260609_185910_557031_f8540f5f",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-lamp_20260609_185910_557031_f8540f5f",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

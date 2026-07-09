@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_soft_pneumatic_gripper_var_mechanism_span_prismatic",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T15:17:57Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "fcfc537a650bb45978b1d01ba24f72b2bc31f1ba8c319721a2403416ca999b34",
+  "source": {
+    "run_id": "run_20260709_151757_258195_498f1fb0",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "fcfc537a650bb45978b1d01ba24f72b2bc31f1ba8c319721a2403416ca999b34",
+    "model_py_sha256": "f873dc50c235cd077b022f6d765b6b4cf468fa165b6c2fcc6c7088bd88b9d725"
+  },
+  "run_summary": {
+    "turn_count": 16,
+    "tool_call_count": 16,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_robotics__soft_pneumatic_gripper__002_png_16a0541b69674c8f87875546ee294d6b",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_robotics__soft_pneumatic_gripper__002_png_16a0541b69674c8f87875546ee294d6b",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_robotics__soft_pneumatic_gripper__002_png_16a0541b69674c8f87875546ee294d6b",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "67390cbbbccc6baff714869e2ecdf6851e05a777618c53a8d80888f2bd0d9f40"
+    }
+  ]
+}

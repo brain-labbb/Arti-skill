@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_container_gas_cylinder_var_n_feet_base",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T17:24:20Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "6ae7b4473a5ad1ef1fd12786eb136e7b9a6b8681e6efcf1481088f961f91b610",
+  "source": {
+    "run_id": "run_20260618_172420_197569_20b0a8ba",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "6ae7b4473a5ad1ef1fd12786eb136e7b9a6b8681e6efcf1481088f961f91b610",
+    "model_py_sha256": "b6a31d49484bd33adf4d06cc3c69e4e2f228ed46097a59b6a218d5ed2dc49769"
+  },
+  "run_summary": {
+    "turn_count": 14,
+    "tool_call_count": 14,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_red-lpg-gas-cylinder-with-a-top-valve-handwheel-_20260606_074732_769479_5d5b07e2",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_red-lpg-gas-cylinder-with-a-top-valve-handwheel-_20260606_074732_769479_5d5b07e2",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

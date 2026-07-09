@@ -1,0 +1,24 @@
+CATEGORY: Workspace
+SUBCATEGORY: Hole punch
+TARGET: change the two crossed stamped-steel arms (parent parts `frame` + `punch_lever` crossing at the central `rivet_shaft`) to a one-piece sprung C-loop squeeze frame with a single front pivot.
+DIVERSITY_AXIS: ① skeleton/topology.
+POSITIONING: one-hand spring-return handheld single-hole punch (the loop-handle tool on the right in reference 001). It stays a hole punch: one `punch_pin` still drives through paper into a matching die bore via a squeeze DOF.
+KEEP: preserve these parent functional layers by name: frame, punch_lever, punch_stroke (revolute squeeze DOF), die_block (die bore / paper table), punch_pin, and the open paper-slot gap at rest.
+STRUCTURAL_DELTA: move the pivot from a central rivet (handles behind, jaws ahead) to a front pivot at the working head; the two grips splay rearward and are joined by a continuous bent spring-steel loop bridge (elastic return) instead of a crossed scissor rivet. `punch_stroke` revolute stays at the head and still plunges the single `punch_pin` into the die bore; keep the chad/confetti path. Single hole only.
+COMPANION_VARIATIONS: optional ⑥ palette only (polished chrome vs nickel); no part-tree, joint, interface, or primitive-family change beyond the loop frame.
+FORBIDDEN: do not become pliers / wire cutter, eyelet or grommet setter, or stapler; do not add extra holes; do not add a desktop base; no material/color-only change as the primary delta.
+
+This is a Workspace/Hole punch family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Workspace/Hole punch (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

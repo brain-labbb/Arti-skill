@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-vane-count-2-reduce-the-louver-outlet-to_20260617_084623_518824_62841830",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T08:46:23Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "e5e0fdefbdc52455decda5fa935a3a67e0d5aa72f1f7ae998686be2ab4c6653c",
+  "source": {
+    "run_id": "run_20260617_084623_518824_62841830",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "e5e0fdefbdc52455decda5fa935a3a67e0d5aa72f1f7ae998686be2ab4c6653c",
+    "model_py_sha256": "cbe2b5109a26d8283fae10ca45c23d2c6ced877652dc02119d6fa54dba22ca1f"
+  },
+  "run_summary": {
+    "turn_count": 12,
+    "tool_call_count": 11,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-wall-mounted-mini-split-air-conditioner-_20260610_081946_833476_e9cc92a3",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-wall-mounted-mini-split-air-conditioner-_20260610_081946_833476_e9cc92a3",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

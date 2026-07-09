@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_pipeline_var_outlet_1",
+  "created_at": "2026-06-23T15:31:56Z",
+  "updated_at": "2026-06-23T15:41:12Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "equipment",
+  "source": {
+    "run_id": "run_20260623_153156_489308_7ca5096f",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "openai",
+  "model_id": "gpt-5.5",
+  "display": {
+    "title": "rec_pipeline_var_outlet_1",
+    "prompt_preview": "Reduce the outlet branches to a single capped side nozzle (one tee take-off) emitted through the existing outlet loop with N equal 1: one prismatic cap and o..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "5fcb95c0d231da6d5080532f825f59e9bc68e3c1c47ee7c96318b5392eaeda74",
+    "model_py_sha256": "e16c794fd80ad60ce8291453408dd3adaa8d4ab21627a56ea88f71d0b3ed1ec0"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_build-a-realistic-articulated-3d-model-of-a-pipe_20260609_180106_931724_6c9b7c6f",
+    "parent_record_id": "rec_build-a-realistic-articulated-3d-model-of-a-pipe_20260609_180106_931724_6c9b7c6f",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

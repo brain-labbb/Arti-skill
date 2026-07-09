@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_hospbed_var_hilo_column",
+  "created_at": "2026-07-05T09:57:52Z",
+  "updated_at": "2026-07-05T10:07:14Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260705_095752_264466_4a198347",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "hospbed-hilo_column",
+    "prompt_preview": "TARGET: replace the fixed rectangular corner leg/caster support under `base_frame` with a central hi-lo elevating column base. A wheeled cruciform floor foot..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "8f22fefbe8fa242cc48ec09e29b59993ac6ebf95791964fd20fa4517c55038da",
+    "model_py_sha256": "b93a295e1f7c87153af8ea5fe2f1dcd4233a0b1eae67dd5e0e6055090e569258"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_a-single-section-adjustable-hospital-bed-a-recta_20260623_174436_818326_5bfade45",
+    "parent_record_id": "rec_a-single-section-adjustable-hospital-bed-a-recta_20260623_174436_818326_5bfade45",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

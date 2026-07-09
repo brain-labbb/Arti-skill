@@ -1,0 +1,24 @@
+CATEGORY: Emergency Equipment
+SUBCATEGORY: Emergency exit door
+TARGET: change the frame (jamb_0, jamb_1, header, threshold) to add a fixed glazed transom panel above the header (an extended frame carrying a transom light over the doors).
+DIVERSITY_AXIS: (1) skeleton/topology.
+POSITIONING: exit door assembly with transom (egress doors topped by a fixed glazed transom light in a taller frame, common at stairwell and corridor exits) — remains an emergency exit door: same hinged leaves and panic bars, adding a static frame extension above.
+KEEP: preserve these parent functional layers by name: frame (jamb_0, jamb_1, header, threshold), add_door_leaf, door_slab, add_push_bar (bar_rail), add_exit_sign, frame_to_door_0 (REVOLUTE), frame_to_door_1 (REVOLUTE), door_0_to_push_bar_0 (PRISMATIC), door_1_to_push_bar_1 (PRISMATIC).
+STRUCTURAL_DELTA: extend jamb_0/jamb_1 upward, add a transom mullion/rail above the existing header, and fill the transom opening with a static glazed panel (glass box framed by perimeter members) rigidly attached to frame; leaves and bars remain unchanged below.
+COMPANION_VARIATIONS: (6) transom glass tint / frame color.
+FORBIDDEN: do not make the transom openable, do not turn the assembly into a curtain wall or window, keep the leaves swinging with panic bars.
+
+This is a Emergency Equipment/Emergency exit door family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Emergency Equipment/Emergency exit door (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_cultivator_var_rigid_tines",
+  "created_at": "2026-07-05T09:43:06Z",
+  "updated_at": "2026-07-05T09:44:43Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260705_094306_044494_422bf807",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "cultivator-rigid_tines",
+    "prompt_preview": "TARGET: Replace the curved spring-tine head (`spring_claw_{i}` + `worn_claw_tip_{i}` rooted on `rake_crossbar`) with straight RIGID tines dropping vertically..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "14caf9073409c8cac24eae73af3d62302eb305e94d6db1d99a4ec617fc5572ef",
+    "model_py_sha256": "186490ed1991a6d227062903780823cdae9ba489dc56e78506a2e2ccba0659ca"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_882758_a6707f8e",
+    "parent_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_882758_a6707f8e",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

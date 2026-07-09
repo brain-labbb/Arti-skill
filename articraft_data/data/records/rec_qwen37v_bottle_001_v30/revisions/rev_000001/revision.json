@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_bottle_001_v30",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-12T07:51:53Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "a7f647b34845e00c894fe38513cf793f1f3bb14534692353f22d495cbef55391",
+  "source": {
+    "run_id": "run_20260612_075153_713599_6818013c",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a7f647b34845e00c894fe38513cf793f1f3bb14534692353f22d495cbef55391",
+    "model_py_sha256": "a4358cb6238736d4e4fc4e3b777ded3b62a2cba3386c2469176c8261ea9d3e9b"
+  },
+  "run_summary": {
+    "turn_count": 8,
+    "tool_call_count": 9,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_clear-plastic-juice-bottle-with-a-black-ribbed-s_20260606_074505_241928_649aef72",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_clear-plastic-juice-bottle-with-a-black-ribbed-s_20260606_074505_241928_649aef72",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

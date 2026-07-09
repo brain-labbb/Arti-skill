@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-surg_20260609_183631_452724_821a91c4",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-09T18:36:31Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "1e36aa33871afe708c91288538b0a3949ff081b30ebd322e29e07a689d65cf78",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": null
+  },
+  "hashes": {
+    "prompt_sha256": "1e36aa33871afe708c91288538b0a3949ff081b30ebd322e29e07a689d65cf78",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-09T18:57:21Z",
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-surg_20260609_183631_452724_821a91c4",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_build-a-realistic-articulated-3d-model-of-a-surg_20260609_183631_452724_821a91c4/compile_report.json",
+      "status": "success",
+      "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-surg_20260609_183631_452724_821a91c4",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='base' connected=6/17 disconnected=[star_base__component_002:Mesh, hub_cone:Mesh, caster_0__component_001:Mesh, caster_1__component_001:Mesh, caster_2__component_001:Mesh, caster_3__component_001:Mesh, caster_4__component_001:Mesh, pedal_0:Mesh, pedal_1:Mesh, column_sleeve:Mesh, bellows_boot:Mesh]\npart='seat' connected=2/4 disconnected=[backrest_arm:Mesh, backrest_pad:Mesh]\npart='left_arm' connected=3/5 disconnected=[left_arm_frame__component_001:Mesh, left_arm_pad:Mesh]\npart='right_arm' connected=3/5 disconnected=[right_arm_frame__component_001:Mesh, right_arm_pad:Mesh]"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "e11b13b717b87e6b54fedc52ce1a93c4a2c645144825498153da6ae721b67ca8",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "09a499ce2465a0a577ec28fc18b6e4b094436aea6ef4758c538926fb7f8230ce",
+        "model_py_mtime_ns": 1781030840618520224,
+        "model_py_size_bytes": 23099,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 2859760,
+        "visual_mesh_file_count": 19,
+        "compile_elapsed_seconds": 6.536715376190841
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

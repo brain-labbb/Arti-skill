@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_model-a-gloss-black-monobloc-kitchen-mixer-tap-a_20260610_084301_301855_c023a523",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-10T08:43:01Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "ab2aa57e2cafb17ff124289b47f499aa053f1af5175df093db4d9be736baf132",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "ab2aa57e2cafb17ff124289b47f499aa053f1af5175df093db4d9be736baf132",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-10T19:20:25Z",
+    "record_id": "rec_model-a-gloss-black-monobloc-kitchen-mixer-tap-a_20260610_084301_301855_c023a523",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-a-gloss-black-monobloc-kitchen-mixer-tap-a_20260610_084301_301855_c023a523/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-a-gloss-black-monobloc-kitchen-mixer-tap-a_20260610_084301_301855_c023a523",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "a1d3fc40889212a83682cb47e391f043f257caa1776895ad4f1ef438b276ed2b",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "fbfd295338ded3a980bea79730186ce45aa9ee0352dcb857b74bbd0efa1a8150",
+        "model_py_mtime_ns": 1781116150225784562,
+        "model_py_size_bytes": 16610,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 541187,
+        "visual_mesh_file_count": 1,
+        "compile_elapsed_seconds": 7.802144446410239
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

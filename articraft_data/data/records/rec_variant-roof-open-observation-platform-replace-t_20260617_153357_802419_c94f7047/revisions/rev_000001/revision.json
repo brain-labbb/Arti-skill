@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-roof-open-observation-platform-replace-t_20260617_153357_802419_c94f7047",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T15:33:57Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "3ce39b8ea263294de567df86cf67acc0a6d0ebf23681f8199c2439ece5332bc0",
+  "source": {
+    "run_id": "run_20260617_153357_802419_c94f7047",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "3ce39b8ea263294de567df86cf67acc0a6d0ebf23681f8199c2439ece5332bc0",
+    "model_py_sha256": "688f0caf3807e98f5e9c1671bca8a3af2e02ed4ef1778e2fba110c4434211f93"
+  },
+  "run_summary": {
+    "turn_count": 20,
+    "tool_call_count": 20,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-decorative-american-style-garden-windmil_20260610_084933_134455_40ee4efc",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-decorative-american-style-garden-windmil_20260610_084933_134455_40ee4efc",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

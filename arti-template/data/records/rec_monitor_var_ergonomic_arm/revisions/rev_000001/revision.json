@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_monitor_var_ergonomic_arm",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T10:45:14Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "a59fc09a60144f610596e6e5f08d5d5112d8a867900f0b34b59cb6e427d4b632",
+  "source": {
+    "run_id": "run_20260705_104514_894234_5b473893",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a59fc09a60144f610596e6e5f08d5d5112d8a867900f0b34b59cb6e427d4b632",
+    "model_py_sha256": "c0d19484a19913e06883506525bc6a84f17d6171a562ea6c44f35a7809c20f4f"
+  },
+  "run_summary": {
+    "turn_count": 17,
+    "tool_call_count": 20,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-standard-16-10-widescreen-desktop-lcd-monitor-_20260624_123957_925849_015db054",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-standard-16-10-widescreen-desktop-lcd-monitor-_20260624_123957_925849_015db054",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_a-standard-16-10-widescreen-desktop-lcd-monitor-_20260624_123957_925849_015db054",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "272d6780e7a37f4864743dc8ab358e8b120b718fb89dbf5992dcb483f616867f"
+    }
+  ]
+}

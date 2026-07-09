@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_koenigsegg_regera_v01",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-15T17:16:08Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "d513c3e543062b4c7774416f4d3f95d0219b0746886c5c0efd67d0592d55e0e4",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "d513c3e543062b4c7774416f4d3f95d0219b0746886c5c0efd67d0592d55e0e4",
+    "model_py_sha256": "397e5654c4b18a972f7784eeb6f46ccf22f47ab97324aed72fb341b02e14ec6a"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_edit_draft"
+  },
+  "parent": {
+    "record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-16T05:17:11Z",
+    "record_id": "rec_koenigsegg_regera_v01",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_koenigsegg_regera_v01/compile_report.json",
+      "status": "failure",
+      "record_id": "rec_koenigsegg_regera_v01",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "ValueError: string is not a file: `/mnt/zsn/lyb/articraft_data/data/records/rec_koenigsegg_regera_v01/revisions/rev_000001/assets/meshes/lower_body.obj`"
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "5c48312cf71d62fffd6d0437d95df0ebd1cbd4dcf4f1276faf9c57b9ca5fe15e",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "979d6c8ee1a9ccfa57cc6a179a180a2e2c3b147aa7b500a6659ea93409458d3d",
+        "model_py_mtime_ns": 1781586816243366323,
+        "model_py_size_bytes": 47295,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 3238448,
+        "visual_mesh_file_count": 16,
+        "compile_elapsed_seconds": 61.71469790209085
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 2,
+      "errors": [
+        "strict external compile exited with status 1",
+        "compile report status must be 'success'"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

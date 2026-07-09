@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-yellow-and-black-multifunction-electrician-wir_20260705_045817_224605_a2129614",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T04:58:17Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "5e3bd0d07ecc2009fe28d2f92400c06027b542225ca97d4c853e260b6ca302a9",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "5e3bd0d07ecc2009fe28d2f92400c06027b542225ca97d4c853e260b6ca302a9",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-05T05:11:23Z",
+    "record_id": "rec_a-yellow-and-black-multifunction-electrician-wir_20260705_045817_224605_a2129614",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_a-yellow-and-black-multifunction-electrician-wir_20260705_045817_224605_a2129614/compile_report.json",
+      "status": "success",
+      "record_id": "rec_a-yellow-and-black-multifunction-electrician-wir_20260705_045817_224605_a2129614",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "35d08517a2b3c4bcfed37f03c00c5aff7a013b493226b48991469e2113b760ca",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "d6dbe6b14fb2dd80509288d5e7b2371676864998fe37bb94d4534340cd697fb9",
+        "model_py_mtime_ns": 1783228156424089550,
+        "model_py_size_bytes": 26627,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 736723,
+        "visual_mesh_file_count": 20,
+        "compile_elapsed_seconds": 6.810996204614639
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

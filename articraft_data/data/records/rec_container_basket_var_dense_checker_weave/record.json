@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_container_basket_var_dense_checker_weave",
+  "created_at": "2026-06-19T02:27:01Z",
+  "updated_at": "2026-06-19T02:27:01Z",
+  "rating": null,
+  "secondary_rating": null,
+  "kind": "external_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "openai",
+  "model_id": "gpt-5",
+  "display": {
+    "title": "container_basket-dense_checker_weave",
+    "prompt_preview": "Fork from the existing Container/Basket lift-off basket variants, using the open_lattice_weave or diagonal_twill_weave record as a seed for local SDK structure..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "cec5c460b1916a1e5e2cc241a05660dff172aece7c582586fd6585e9334ec049",
+    "model_py_sha256": "a6f2b715e476a35db2825d0ee2e132d6928d40aa7be326bb0c1d7c5bc3a1b4a5"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_rectangular-woven-rattan-basket-with-fitted-lift_20260618_130217_161905_99719568",
+    "parent_record_id": "rec_container_basket_var_open_lattice_weave",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  },
+  "creator": {
+    "mode": "external_agent",
+    "agent": "codex",
+    "trace_available": false
+  },
+  "author": null,
+  "rated_by": null,
+  "secondary_rated_by": null
+}

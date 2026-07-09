@@ -1,0 +1,27 @@
+{
+  "started_at": "2026-06-25T16:46:20Z",
+  "status": "success",
+  "item": {
+    "index": 8,
+    "category": "Electrical_Wiring",
+    "subcategory": "Distribution board panel",
+    "image_path": "/mnt/zsn/lyb/arti-skill/articraft_data/picture/Electrical_Wiring/Distribution board panel/002.png",
+    "image_rel": "picture/Electrical_Wiring/Distribution board panel/002.png",
+    "record_hint": "rec_electrical_wiring_gpt55_distribution_board_panel_002",
+    "result_path": "/mnt/zsn/lyb/arti-skill/articraft_data/logs/electrical_wiring_gpt55_batch/008_distribution_board_panel_002.json",
+    "log_path": "/mnt/zsn/lyb/arti-skill/articraft_data/logs/electrical_wiring_gpt55_batch/008_distribution_board_panel_002.log"
+  },
+  "provider": "openai",
+  "model_id": "gpt-5.5",
+  "thinking_level": "high",
+  "prompt": "Use the attached reference image as the primary visual source.\nCreate one high-quality articulated 3D Articraft asset for picture/Electrical_Wiring/Distribution board panel/002.png.\nIt must remain exactly in the small class \"Distribution board panel\" under Electrical_Wiring, not a neighboring object.\n\nQuality bar:\n- Model the full visible object, not a symbolic proxy: recognizable proportions, real hard-surface construction, panel seams, fasteners, brackets, handles, molded plastic, metal hardware, labels, terminals, and cable/conduit detail where appropriate.\n- Build real connected subassemblies with plausible supports, pivots, axles, hinges, latches, clamps, detents, bus bars, terminal screws, covers, and mounting hardware where the reference implies them.\n- Include at least one meaningful non-fixed joint matching the object mechanism, with realistic axis, limits, and visible moving geometry.\n- Use realistic electrical materials and colors: molded black/gray plastic, painted sheet metal, copper/brass terminals, galvanized conduit, rubber cable jackets, warning labels, transparent inspection windows, and small dark screws.\n- Avoid floating parts, placeholder boxes, accidental intersections, and color-only detail. Add geometry for the specific details you claim.\n- Add prompt-specific run_tests() checks for the named small class, visible mechanism, key subassemblies, electrical-specific details, and at least one non-fixed joint.\n\nObject-specific mechanism and detail requirements:\nMake an electrical distribution board panel with sheet-metal enclosure, hinged front door or transparent inspection cover, breaker rows, bus bar or neutral/earth bars, terminal screws, cable knockouts/glands, wiring channels, labels, latch/lock, mounting holes, and panel seams. The primary articulation should be the front door opening on side hinges, with optional small breaker toggles inside.",
+  "finished_at": "2026-06-25T17:04:00Z",
+  "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_232036_c548199a",
+  "record_dir": "data/records/rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_232036_c548199a",
+  "picture_binding": {
+    "category": "Electrical_Wiring",
+    "subcategory": "Distribution board panel",
+    "source": "explicit",
+    "path": "picture/Electrical_Wiring/Distribution board panel/002.png"
+  }
+}

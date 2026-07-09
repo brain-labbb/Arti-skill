@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_toilet_001_v30",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-14T06:55:36Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "ae1b270bc839160aff6bff292d446f19ec8b3876a74f760b5c11aff321e65a27",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "ae1b270bc839160aff6bff292d446f19ec8b3876a74f760b5c11aff321e65a27",
+    "model_py_sha256": "e2d7d5e88c4c74a2c5a5aab26083fd2635522e1cb8fb3cae8ac5efae9a33926f"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_edit_draft"
+  },
+  "parent": {
+    "record_id": "rec_wall-hung-white-ceramic-toilet-with-a-soft-close_20260605_154105_854794_7d51c47b",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_wall-hung-white-ceramic-toilet-with-a-soft-close_20260605_154105_854794_7d51c47b",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-14T06:56:04Z",
+    "record_id": "rec_qwen37v_toilet_001_v30",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/articraft_data/data/cache/record_materialization/rec_qwen37v_toilet_001_v30/compile_report.json",
+      "status": "failure",
+      "record_id": "rec_qwen37v_toilet_001_v30",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "ValueError: URDF tests failed:\n- flush lever rotates when actuated (tip moves downward): rest z=0.572, actuated z=0.572\n- fail_if_isolated_parts(): Isolated parts detected (floating support-disconnected component groups from the grounded body; samples=1, contact_tol=1e-06):\n- pose_index=0 at pose (body_to_flush_lever=0, body_to_lid=0, body_to_seat_ring=0), floating group ['lid', 'seat_ring'] is disconnected from the grounded body rooted at 'body'; nearest_grounded_part='body'; approx_gap=0.006m; backend=fcl"
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "e2d7d5e88c4c74a2c5a5aab26083fd2635522e1cb8fb3cae8ac5efae9a33926f",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "6a6e9bc1a6eb0f56b8171fc6f334d8ce5955d3851e4b231ee813944de1cc52d1",
+        "model_py_mtime_ns": 1781420140318973206,
+        "model_py_size_bytes": 19167,
+        "materialization_status": "missing",
+        "visual_mesh_bytes": 0,
+        "visual_mesh_file_count": 0,
+        "compile_elapsed_seconds": 4.9568148124963045
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 2,
+      "errors": [
+        "strict external compile exited with status 1",
+        "compile report status must be 'success'"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

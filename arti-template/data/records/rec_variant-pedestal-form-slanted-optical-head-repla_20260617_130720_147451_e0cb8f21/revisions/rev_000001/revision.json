@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-pedestal-form-slanted-optical-head-repla_20260617_130720_147451_e0cb8f21",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T13:07:20Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "6c5ce90b9e089e3a8cd4aec1e261a33376a70f63949c803ccebb62c46ef29eac",
+  "source": {
+    "run_id": "run_20260617_130720_147451_e0cb8f21",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "6c5ce90b9e089e3a8cd4aec1e261a33376a70f63949c803ccebb62c46ef29eac",
+    "model_py_sha256": "e4b09a5c17f38a7387a4f18f81871caa6eb446fa5d9b237f4fe3c00b1e7c5835"
+  },
+  "run_summary": {
+    "turn_count": 15,
+    "tool_call_count": 16,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_stainless-steel-waist-high-tripod-turnstile-acce_20260612_133446_998781_ea880fc3",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_stainless-steel-waist-high-tripod-turnstile-acce_20260612_133446_998781_ea880fc3",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

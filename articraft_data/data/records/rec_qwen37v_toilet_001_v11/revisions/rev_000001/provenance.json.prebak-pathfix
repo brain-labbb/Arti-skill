@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_qwen37v_toilet_001_v11",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": null,
+    "uv_lock_sha256": null
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-14T06:48:14Z",
+    "record_id": "rec_qwen37v_toilet_001_v11",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/articraft_data/data/cache/record_materialization/rec_qwen37v_toilet_001_v11/compile_report.json",
+      "status": "success",
+      "record_id": "rec_qwen37v_toilet_001_v11",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 6 overlaps across 3 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "a8c639d0c6ba9bd98d7f3809bd862ef84848a0720bfb8ebb2ac55b1db32699ee",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "4ed8ced3a9d9b63874623bc2a0e0d50ee45c50faa75659b5498482f4852a4bd5",
+        "model_py_mtime_ns": 1781419674080775637,
+        "model_py_size_bytes": 23548,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 607801,
+        "visual_mesh_file_count": 10,
+        "compile_elapsed_seconds": 5.162851013243198
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_wide-double-door-street-electrical-cabinet-on-a-_20260608_164520_373943_20824ffb",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-08T16:45:20Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "2bdbe5fb840c64b705608a36cb9dfd42c8f74ae2a681fee648ec809e5b0409fe",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "2bdbe5fb840c64b705608a36cb9dfd42c8f74ae2a681fee648ec809e5b0409fe",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-08T17:11:43Z",
+    "record_id": "rec_wide-double-door-street-electrical-cabinet-on-a-_20260608_164520_373943_20824ffb",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_wide-double-door-street-electrical-cabinet-on-a-_20260608_164520_373943_20824ffb/compile_report.json",
+      "status": "success",
+      "record_id": "rec_wide-double-door-street-electrical-cabinet-on-a-_20260608_164520_373943_20824ffb",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 12 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "8456f50b9ed852cfa02034ae609dda0b184fe8a61d067177700e9248679ed1b4",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "0bed7437791284b5219759ed96f4fbcac8ff7d967b2732415c5a567ad0234427",
+        "model_py_mtime_ns": 1780938268830699093,
+        "model_py_size_bytes": 13920,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 746262,
+        "visual_mesh_file_count": 6,
+        "compile_elapsed_seconds": 9.239677875302732
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_plank_ringpull_door_var_strapstud",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-21T01:38:26Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "fc98c743dd1f3884e1c6999509c04a4151e4bd9b7e9989b110a6b262a8670c55",
+  "source": {
+    "run_id": "run_20260621_013826_488571_8596e9f7",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "fc98c743dd1f3884e1c6999509c04a4151e4bd9b7e9989b110a6b262a8670c55",
+    "model_py_sha256": "fe466a08a87f18227dc32c85df03b52d10549282be0f8443a8b36b5c138c858d"
+  },
+  "run_summary": {
+    "turn_count": 19,
+    "tool_call_count": 19,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_door_plank_ringpull_closed",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_door_plank_ringpull_closed",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

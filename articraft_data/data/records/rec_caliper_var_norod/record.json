@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_caliper_var_norod",
+  "created_at": "2026-06-18T15:10:43Z",
+  "updated_at": "2026-06-18T15:16:26Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260618_151043_317318_b7c325c1",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "caliper-norod",
+    "prompt_preview": "TARGET STRUCTURAL AXIS: accessory configuration (simplified). Produce a SIMPLIFIED caliper: remove the depth_rod entirely (and its tail channel) and remove t..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "88936bae4371a46db81c86d4dc99256f518aabf98316f5dec8f9bd15b3d5ce9c",
+    "model_py_sha256": "9f6c105d902fc89eb11cfef35625bc24af8122d7a378117ef741e7c07f689b05"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_build-a-realistic-articulated-3d-model-of-a-dial_20260609_154006_366045_b08cf719",
+    "parent_record_id": "rec_build-a-realistic-articulated-3d-model-of-a-dial_20260609_154006_366045_b08cf719",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

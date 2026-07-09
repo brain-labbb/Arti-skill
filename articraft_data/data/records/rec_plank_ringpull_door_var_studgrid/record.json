@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_plank_ringpull_door_var_studgrid",
+  "created_at": "2026-06-21T01:38:26Z",
+  "updated_at": "2026-06-21T01:44:52Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "door",
+  "source": {
+    "run_id": "run_20260621_013826_513396_02054b78",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "plank_ringpull_door-studgrid",
+    "prompt_preview": "Change only the iron furniture: add a regular grid of round iron clavo nail-head studs across the plank face, emitted as a nested loop named stud_row_col wit..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "b34aaf70df0d795aff02a9bbe0c19daf0af6da1ce882bf84b0e69b46c8e40e85",
+    "model_py_sha256": "ca35dc6591edbe537fa3359cac8d275632a90c9776bd4d4a6ccd87a458b2d857"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_door_plank_ringpull_closed",
+    "parent_record_id": "rec_door_plank_ringpull_closed",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

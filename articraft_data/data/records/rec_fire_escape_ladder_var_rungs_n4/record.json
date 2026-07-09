@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_fire_escape_ladder_var_rungs_n4",
+  "created_at": "2026-07-09T04:13:50Z",
+  "updated_at": "2026-07-09T04:20:29Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "emergency_equipment__fire_escape_ladder",
+  "source": {
+    "run_id": "run_20260709_041350_017508_29fcc184",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "fire_escape_ladder-rungs-n4",
+    "prompt_preview": "CATEGORY: Emergency Equipment SUBCATEGORY: Fire escape ladder TARGET: change the fixed_rung_{i} loop count (rung_zs = [1.62 + 0.32 * i for i in range(14)]) i..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a4c82c4137ad45688b95c218446dab6300d46b1ea635832f0fbe548d97d02fd9",
+    "model_py_sha256": "a9dc85af59379537c5f7f6119a8bbcb74b64d067ce7069909d38e13422a3d77c"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_emergency_equipment__fire_escape_ladder_e6a5530c1933414f9994ed542b5e0784",
+    "parent_record_id": "rec_emergency_equipment__fire_escape_ladder_e6a5530c1933414f9994ed542b5e0784",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

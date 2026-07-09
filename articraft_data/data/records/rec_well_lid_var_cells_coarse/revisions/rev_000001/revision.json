@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_well_lid_var_cells_coarse",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-27T04:10:55Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "bc0b65f175b45be823f93762b9396f1eff2c4ec7fff73273d2dc141cdb5ed2b5",
+  "source": {
+    "run_id": "run_20260627_041055_887793_c584f623",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "bc0b65f175b45be823f93762b9396f1eff2c4ec7fff73273d2dc141cdb5ed2b5",
+    "model_py_sha256": "cb3a2c6b763521418c5ce41621e411dae0701eefdfc72392bfa998b1809c8512"
+  },
+  "run_summary": {
+    "turn_count": 10,
+    "tool_call_count": 10,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_round-cast-iron-manhole-well-cover-with-a-dense-_20260608_172202_787515_e3176cb1",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_round-cast-iron-manhole-well-cover-with-a-dense-_20260608_172202_787515_e3176cb1",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

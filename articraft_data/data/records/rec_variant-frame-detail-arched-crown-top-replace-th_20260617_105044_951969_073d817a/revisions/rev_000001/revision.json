@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-frame-detail-arched-crown-top-replace-th_20260617_105044_951969_073d817a",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T10:50:44Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "df0230910773da8291ff9d75f899c6a517466d650d068654ba3291c16901bf0a",
+  "source": {
+    "run_id": "run_20260617_105044_951969_073d817a",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "df0230910773da8291ff9d75f899c6a517466d650d068654ba3291c16901bf0a",
+    "model_py_sha256": "1b2ddccb6f1b9c5edede489095018e4584f0b329abc488bd3b1dfdaff10bb81a"
+  },
+  "run_summary": {
+    "turn_count": 16,
+    "tool_call_count": 17,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-three-panel-chinese-style-folding-screen_20260610_084402_869340_89fc1fef",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-three-panel-chinese-style-folding-screen_20260610_084402_869340_89fc1fef",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

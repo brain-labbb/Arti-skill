@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_microwave_var_turntable_flatbed",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-19T13:21:43Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "d26405110fb6e5152a7dd500e4c3732aa8275942a3691fb2398ea9d25fe5dda0",
+  "source": {
+    "run_id": "run_20260619_132143_113389_2b0d8d55",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "d26405110fb6e5152a7dd500e4c3732aa8275942a3691fb2398ea9d25fe5dda0",
+    "model_py_sha256": "bdba050fcda745f7018df9f900ccacad03a8cd9436b551a6a0dd8692a28af25c"
+  },
+  "run_summary": {
+    "turn_count": 15,
+    "tool_call_count": 14,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-stylized-countertop-microwave-oven-appro_20260610_080946_066456_b2de7afe",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-stylized-countertop-microwave-oven-appro_20260610_080946_066456_b2de7afe",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

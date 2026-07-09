@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_sign_var_knuckles5",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T13:04:21Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "d5959e992c227edf558ec7940e1701305034485cf9a604a54fe6f44a488074b6",
+  "source": {
+    "run_id": "run_20260623_130421_451349_0dc2313f",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "d5959e992c227edf558ec7940e1701305034485cf9a604a54fe6f44a488074b6",
+    "model_py_sha256": "07f1da6c2e8123735dc4b9b8025513550639f0ff65d1da321aa1a7b01128b898"
+  },
+  "run_summary": {
+    "turn_count": 30,
+    "tool_call_count": 30,
+    "compile_attempt_count": 7,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-sign_20260609_215026_933125_3171150b",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-sign_20260609_215026_933125_3171150b",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

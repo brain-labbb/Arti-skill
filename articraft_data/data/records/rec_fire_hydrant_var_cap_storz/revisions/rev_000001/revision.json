@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_fire_hydrant_var_cap_storz",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-27T03:20:05Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "a4a3baa6a53dbce4db81494989bbdc20c287ad7e211380a239180eb8cf8d859c",
+  "source": {
+    "run_id": "run_20260627_032005_716498_53043bdf",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a4a3baa6a53dbce4db81494989bbdc20c287ad7e211380a239180eb8cf8d859c",
+    "model_py_sha256": "29f6931d997efbc36bfdfde4790ceba502c69ab9d86a48fdf3b4251586590cb6"
+  },
+  "run_summary": {
+    "turn_count": 16,
+    "tool_call_count": 16,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_cast-iron-pillar-fire-hydrant-bright-red-body-wi_20260608_164513_388731_9a6935e0",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_cast-iron-pillar-fire-hydrant-bright-red-body-wi_20260608_164513_388731_9a6935e0",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

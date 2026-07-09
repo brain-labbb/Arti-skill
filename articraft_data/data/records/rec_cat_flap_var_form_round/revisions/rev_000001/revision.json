@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_cat_flap_var_form_round",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T12:31:57Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "5542dcea519e4c8f8e7a3ce3aea7528240d52ee4d1e9a7e7a3c80a1f2491fe45",
+  "source": {
+    "run_id": "run_20260709_123157_386823_0e09f7bb",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "5542dcea519e4c8f8e7a3ce3aea7528240d52ee4d1e9a7e7a3c80a1f2491fe45",
+    "model_py_sha256": "d8997041666d52288c5f253a228aa9e616b01ef7477ebea434bc759673f20e4b"
+  },
+  "run_summary": {
+    "turn_count": 15,
+    "tool_call_count": 15,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_pet_animal_related__cat_flap__001_png_bc9eca847b4f4feba5eab6c1d837b845",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_pet_animal_related__cat_flap__001_png_bc9eca847b4f4feba5eab6c1d837b845",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_pet_animal_related__cat_flap__001_png_bc9eca847b4f4feba5eab6c1d837b845",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "a999b546af3593ba04937dba03eb54763ed76dd419a9bb233ae77907488d97cc"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_go_kart_var_flatsling",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-25T02:14:58Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "4706ead810b1635428cd412698b97dddd7e73d41f65e88d59c1155531b435a26",
+  "source": {
+    "run_id": "run_20260625_021458_646143_ec78434d",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "4706ead810b1635428cd412698b97dddd7e73d41f65e88d59c1155531b435a26",
+    "model_py_sha256": "a379b37841be6ac67350323619b9927e3fb8086b7ac1670f6c49fc72666b2e42"
+  },
+  "run_summary": {
+    "turn_count": 14,
+    "tool_call_count": 13,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_racing-go-kart-with-a-tubular-steel-frame-a-sing_20260605_165903_685895_dbb0d663",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_racing-go-kart-with-a-tubular-steel-frame-a-sing_20260605_165903_685895_dbb0d663",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

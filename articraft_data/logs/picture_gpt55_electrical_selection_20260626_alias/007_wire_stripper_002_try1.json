@@ -1,0 +1,28 @@
+{
+  "started_at": "2026-06-26T09:31:38Z",
+  "status": "success",
+  "item": {
+    "index": 7,
+    "attempt": 1,
+    "category": "Electrical_Wiring",
+    "subcategory": "Wire stripper",
+    "image_path": "/mnt/zsn/lyb/arti-skill/articraft_data/picture/Electrical_Wiring/Wire stripper/002.png",
+    "image_rel": "picture/Electrical_Wiring/Wire stripper/002.png",
+    "record_hint": "rec_electrical_wiring_gpt55_wire_stripper_002",
+    "result_path": "/mnt/zsn/lyb/arti-skill/articraft_data/logs/picture_gpt55_electrical_selection_20260626_alias/007_wire_stripper_002_try1.json",
+    "log_path": "/mnt/zsn/lyb/arti-skill/articraft_data/logs/picture_gpt55_electrical_selection_20260626_alias/007_wire_stripper_002_try1.log"
+  },
+  "provider": "openai",
+  "model_id": "gpt-5.5",
+  "thinking_level": "high",
+  "prompt": "Use the attached reference image as the primary visual source.\nCreate one high-quality articulated 3D Articraft asset for picture/Electrical_Wiring/Wire stripper/002.png.\nIt must remain exactly in the small class \"Wire stripper\" under Electrical_Wiring, not a neighboring object.\n\nQuality bar:\n- Model the full visible object, not a symbolic proxy: recognizable proportions, real hard-surface construction, panel seams, fasteners, brackets, handles, molded plastic, metal hardware, labels, terminals, and cable/conduit detail where appropriate.\n- Build real connected subassemblies with plausible supports, pivots, axles, hinges, latches, clamps, detents, bus bars, terminal screws, covers, and mounting hardware where the reference implies them.\n- Include at least one meaningful non-fixed joint matching the object mechanism, with realistic axis, limits, and visible moving geometry.\n- Use realistic electrical materials and colors: molded black/gray plastic, painted sheet metal, copper/brass terminals, galvanized conduit, rubber cable jackets, warning labels, transparent inspection windows, and small dark screws.\n- Avoid floating parts, placeholder boxes, accidental intersections, and color-only detail. Add geometry for the specific details you claim.\n- Add prompt-specific run_tests() checks for the named small class, visible mechanism, key subassemblies, electrical-specific details, and at least one non-fixed joint.\n\nObject-specific mechanism and detail requirements:\nMake a hand wire stripper tool with two scissor-like handles, pivot screw/bolt, serrated gripping jaws, multiple gauge stripping holes, cutting notch, crimping slots, return spring or stop screw, rubberized handle grips, stamped size marks, exposed steel jaws, and layered handle plates. The primary articulation should be the two handles/jaws rotating around the central pivot with realistic limits; align the cutting and stripping features so the jaws meet plausibly.",
+  "finished_at": "2026-06-26T09:47:36Z",
+  "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260626_093150_107050_445d7ce5",
+  "record_dir": "data/records/rec_use-the-attached-reference-image-as-the-primary-_20260626_093150_107050_445d7ce5",
+  "picture_binding": {
+    "category": "Electrical_Wiring",
+    "subcategory": "Wire stripper",
+    "source": "explicit",
+    "path": "picture/Electrical_Wiring/Wire stripper/002.png"
+  }
+}

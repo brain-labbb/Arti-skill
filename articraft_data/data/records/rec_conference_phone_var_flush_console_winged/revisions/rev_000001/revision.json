@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_conference_phone_var_flush_console_winged",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-04T13:53:36Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "35ff7e3b40526fca2d920219b428e47e7d2a77b996e9f942bde2e2f219f16f06",
+  "source": {
+    "run_id": "run_20260704_135336_955372_420bb7e0",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "35ff7e3b40526fca2d920219b428e47e7d2a77b996e9f942bde2e2f219f16f06",
+    "model_py_sha256": "dacb38f43405785b4a636456a703cdd31d4f8d6593bbae7f33ed5f74cbc8d404"
+  },
+  "run_summary": {
+    "turn_count": 7,
+    "tool_call_count": 7,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-black-conference-phone-with-a-winged-trapezoid_20260624_122658_133437_e395d9a0",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-black-conference-phone-with-a-winged-trapezoid_20260624_122658_133437_e395d9a0",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_a-black-conference-phone-with-a-winged-trapezoid_20260624_122658_133437_e395d9a0",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/004.png",
+      "sha256": "2aceb87d12a214dba29677c68d6cb353bd4e0d77ce3ef67b6372c383a44c502e"
+    }
+  ],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-04T14:37:26Z",
+    "record_id": "rec_conference_phone_var_flush_console_winged",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_conference_phone_var_flush_console_winged/compile_report.json",
+      "status": "success",
+      "record_id": "rec_conference_phone_var_flush_console_winged",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "dacb38f43405785b4a636456a703cdd31d4f8d6593bbae7f33ed5f74cbc8d404",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "242a07320eef557d45e697611fb9fcde225a82759a7ae403f662761cad17a64b",
+        "model_py_mtime_ns": 1783173908169280810,
+        "model_py_size_bytes": 11636,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 13296903,
+        "visual_mesh_file_count": 11,
+        "compile_elapsed_seconds": 40.29050593264401
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 6,
+      "errors": [
+        "record.json missing creator metadata for external workflow",
+        "source.run_id must be null for external records",
+        "external records must not contain Articraft agent traces",
+        "provenance.run_summary.turn_count must be null",
+        "provenance.run_summary.tool_call_count must be null",
+        "provenance.run_summary.compile_attempt_count must be null"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

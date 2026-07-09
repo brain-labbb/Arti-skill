@@ -1,0 +1,376 @@
+from __future__ import annotations
+
+# Marshall-style mini guitar combo amplifier (black).
+# Coordinate convention:
+#   - +X  : forward, toward the front speaker grille (grille face at +X).
+#   - +Y  : cabinet width (left/right of the front face).
+#   - +Z  : up; the recessed gold control panel sits on the top (+Z) face and
+#           the four knobs point UP out of the panel (knob axis = +Z).
+# Realistic mini-amp scale:
+#   - width  (Y) ~ 0.18 m
+#   - depth  (X) ~ 0.10 m
+#   - height (Z) ~ 0.18 m
+#
+# Static body  : black vinyl cabinet (rounded, shelled at top for the recessed
+#                gold panel), dark perforated speaker grille framed by white
+#                piping, white cursive "Marshall" logo plate, black corner caps,
+#                and a top carry handle.
+# Articulations: SIX knurled control knobs on the gold panel, each a CONTINUOUS
+#                rotary joint about the vertical (+Z) axis.
+
+import math
+
+import cadquery as cq
+from sdk import (
+    ArticulatedObject,
+    ArticulationType,
+    Box,
+    BoxGeometry,
+    Cylinder,
+    CylinderGeometry,
+    Inertial,
+    KnobGeometry,
+    KnobGrip,
+    KnobIndicator,
+    KnobTopFeature,
+    MotionLimits,
+    Origin,
+    PerforatedPanelGeometry,
+    TestContext,
+    TestReport,
+    mesh_from_cadquery,
+    mesh_from_geometry,
+)
+
+# --- principal dimensions (meters) ---
+CAB_W = 0.180          # width  (Y)
+CAB_D = 0.100          # depth  (X)
+CAB_H = 0.180          # height (Z)
+WALL = 0.010           # cabinet wall thickness
+
+# Top recessed gold panel (in the top face), spanning most of the width.
+PANEL_TOP_Z = CAB_H / 2.0          # cabinet top surface
+PANEL_RECESS = 0.012               # how deep the gold panel sits below the top
+PANEL_W = 0.165                    # along Y (widened for six-knob row)
+PANEL_D = 0.060                    # along X
+PANEL_X = 0.012                    # panel center X (slightly toward the rear)
+PANEL_GOLD_Z = PANEL_TOP_Z - PANEL_RECESS  # gold surface height
+
+# Front grille opening.
+FRONT_X = CAB_D / 2.0              # front face plane
+
+# Six knobs evenly spaced across the gold panel (gain, volume, bass, mid,
+# treble, reverb).
+KNOB_COUNT = 6
+KNOB_DIAM = 0.018
+KNOB_H = 0.014
+_knob_spacing = 0.028
+KNOB_YS = tuple((-0.070 + i * _knob_spacing) for i in range(KNOB_COUNT))
+KNOB_X = PANEL_X + 0.004           # row sits a touch forward of panel center
+
+
+def _rounded_box(w_y: float, d_x: float, h_z: float, fillet: float) -> cq.Workplane:
+    # Box centered at origin, length d_x along X, width w_y along Y, height h_z
+    # along Z, with vertical edges filleted (rounded cabinet corners).
+    wp = cq.Workplane("XY").box(d_x, w_y, h_z)
+    try:
+        wp = wp.edges("|Z").fillet(fillet)
+    except Exception:
+        pass
+    return wp
+
+
+def _cabinet_solid() -> cq.Workplane:
+    # Outer black vinyl cabinet, with a rectangular gold-panel recess cut into
+    # the top face. The recess is the seat for the (separate) gold panel plate.
+    outer = _rounded_box(CAB_W, CAB_D, CAB_H, fillet=0.010)
+
+    recess = (
+        cq.Workplane("XY")
+        .box(PANEL_D, PANEL_W, PANEL_RECESS * 2.2)
+        .translate((PANEL_X, 0.0, PANEL_TOP_Z))
+    )
+    body = outer.cut(recess)
+
+    # Shallow recess on the front face where the grille seats (frame of cabinet
+    # left proud all around as the piping mount).
+    grille_pocket = (
+        cq.Workplane("XY")
+        .box(0.012, CAB_W - 0.024, CAB_H - 0.024)
+        .translate((FRONT_X, 0.0, 0.0))
+    )
+    body = body.cut(grille_pocket)
+    return body
+
+
+def _handle_mesh():
+    # Top carry handle: an arched strap spanning Y over the cabinet top, in front
+    # of the gold panel, anchored by two end mounts. Built by sweeping a small
+    # rectangular profile along a parabolic-arch spline path.
+    strap_x = PANEL_X - PANEL_D / 2.0 - 0.016
+    z0 = PANEL_TOP_Z
+    arch = 0.020
+    span = 0.104
+
+    n = 13
+    path_pts = []
+    for i in range(n):
+        t = i / (n - 1)
+        y = -span / 2.0 + t * span
+        zz = z0 + arch * (1.0 - (2.0 * t - 1.0) ** 2) + 0.002
+        path_pts.append((strap_x, y, zz))
+
+    path = cq.Workplane().add(cq.Edge.makeSpline([cq.Vector(*p) for p in path_pts]))
+    profile = (
+        cq.Workplane("XZ")
+        .center(strap_x, path_pts[0][2])
+        .rect(0.018, 0.007)
+    )
+    # Sweep the strap profile along the arched spline.
+    strap = profile.sweep(path, multisection=False, makeSolid=True)
+
+    # End mounts anchoring the strap ends to the cabinet top.
+    result = strap
+    for y in (-span / 2.0, span / 2.0):
+        mount = (
+            cq.Workplane("XY")
+            .box(0.024, 0.018, 0.014)
+            .translate((strap_x, y, z0 - 0.004))
+        )
+        result = result.union(mount)
+    return mesh_from_cadquery(result, "handle")
+
+
+def build_object_model() -> ArticulatedObject:
+    model = ArticulatedObject(name="mini_guitar_amp")
+
+    black_vinyl = model.material("black_vinyl", rgba=(0.07, 0.07, 0.08, 1.0))
+    gold_panel = model.material("gold_panel", rgba=(0.86, 0.62, 0.18, 1.0))
+    grille_dark = model.material("grille_dark", rgba=(0.10, 0.10, 0.11, 1.0))
+    white_piping = model.material("white_piping", rgba=(0.92, 0.92, 0.90, 1.0))
+    logo_cream = model.material("logo_cream", rgba=(0.95, 0.93, 0.86, 1.0))
+    metal_knob = model.material("metal_knob", rgba=(0.78, 0.78, 0.80, 1.0))
+    indicator_red = model.material("indicator_red", rgba=(0.85, 0.12, 0.10, 1.0))
+    trim_black = model.material("trim_black", rgba=(0.04, 0.04, 0.05, 1.0))
+
+    # ------------------------------------------------------------------ body
+    body = model.part("body")
+
+    cab = _cabinet_solid()
+    body.visual(mesh_from_cadquery(cab, "cabinet"), material=black_vinyl, name="cabinet")
+
+    # Gold control panel plate seated in the top recess.
+    panel = BoxGeometry((PANEL_D, PANEL_W, 0.004))
+    panel.translate(PANEL_X, 0.0, PANEL_GOLD_Z + 0.002)
+    body.visual(mesh_from_geometry(panel, "gold_panel"), material=gold_panel, name="gold_panel")
+
+    # Small red power indicator on the gold panel, beside the knob row.
+    led = CylinderGeometry(0.0035, 0.004)
+    led.translate(PANEL_X - 0.004, 0.078, PANEL_GOLD_Z + 0.004)
+    body.visual(mesh_from_geometry(led, "power_led"), material=indicator_red, name="power_led")
+
+    # Front speaker grille: dark perforated panel set into the front pocket,
+    # thickness rotated to face +X.
+    grille = PerforatedPanelGeometry(
+        (CAB_W - 0.030, CAB_H - 0.030),
+        0.006,
+        hole_diameter=0.0035,
+        pitch=0.007,
+        frame=0.006,
+        stagger=True,
+    )
+    grille.rotate_y(math.pi / 2.0)  # thickness Z -> X
+    grille.translate(FRONT_X - 0.004, 0.0, 0.0)
+    body.visual(mesh_from_geometry(grille, "speaker_grille"), material=grille_dark, name="speaker_grille")
+
+    # White piping frame around the grille (four thin bars on the front face).
+    pip_t = 0.005          # bar thickness (X protrusion)
+    pip_w = 0.006          # bar cross width
+    fx = FRONT_X - 0.001
+    fw = CAB_W - 0.020     # outer span of piping
+    fh = CAB_H - 0.020
+    # top & bottom bars (run along Y)
+    for zc in (fh / 2.0, -fh / 2.0):
+        bar = BoxGeometry((pip_t, fw, pip_w))
+        bar.translate(fx, 0.0, zc)
+        body.visual(mesh_from_geometry(bar, f"piping_h_{1 if zc > 0 else 0}"),
+                    material=white_piping, name=f"piping_h_{1 if zc > 0 else 0}")
+    # left & right bars (run along Z)
+    for yc in (fw / 2.0, -fw / 2.0):
+        bar = BoxGeometry((pip_t, pip_w, fh))
+        bar.translate(fx, yc, 0.0)
+        body.visual(mesh_from_geometry(bar, f"piping_v_{1 if yc > 0 else 0}"),
+                    material=white_piping, name=f"piping_v_{1 if yc > 0 else 0}")
+
+    # "Marshall" cursive logo plate (thin raised cream plate on the lower grille).
+    logo = BoxGeometry((0.004, 0.080, 0.022))
+    logo.translate(FRONT_X + 0.001, -0.006, -0.046)
+    body.visual(mesh_from_geometry(logo, "marshall_logo"), material=logo_cream, name="marshall_logo")
+
+    # Black corner caps on the four front vertical corners (protective trim).
+    cap_y = (CAB_W / 2.0) - 0.006
+    cap_z = (CAB_H / 2.0) - 0.006
+    for iy, yc in enumerate((-cap_y, cap_y)):
+        for iz, zc in enumerate((-cap_z, cap_z)):
+            cap = BoxGeometry((0.018, 0.016, 0.016))
+            cap.translate(FRONT_X - 0.006, yc, zc)
+            body.visual(mesh_from_geometry(cap, f"corner_cap_{iy}_{iz}"),
+                        material=trim_black, name=f"corner_cap_{iy}_{iz}")
+
+    # Top carry handle.
+    body.visual(_handle_mesh(), material=trim_black, name="handle")
+
+    body.inertial = Inertial.from_geometry(
+        Box((CAB_D, CAB_W, CAB_H)), mass=2.4, origin=Origin(xyz=(0.0, 0.0, 0.0))
+    )
+
+    # --------------------------------------------------------------- knobs
+    # Each knob: knurled cylinder with an engraved pointer line, mounting face on
+    # z=0 so it sits ON the gold panel and points UP (+Z). CONTINUOUS rotation.
+    for i, ky in enumerate(KNOB_YS):
+        knob_geo = KnobGeometry(
+            KNOB_DIAM,
+            KNOB_H,
+            body_style="cylindrical",
+            edge_radius=0.0008,
+            grip=KnobGrip(style="knurled", count=28, depth=0.0008),
+            indicator=KnobIndicator(style="line", mode="raised",
+                                    length=0.009, width=0.0014, depth=0.0010),
+            top_feature=KnobTopFeature(style="recessed_disk", diameter=0.010, depth=0.0008),
+            center=False,  # mounting face at z=0
+        )
+        # Raised pointer tab near the rim (the position marker). Sitting off the
+        # rotation axis, it makes the knob clearly non-axisymmetric so its spin is
+        # observable, and reads as the indicator dot/pointer of the knob.
+        pointer = BoxGeometry((0.0030, 0.0060, 0.0024))
+        pointer.translate(0.0, KNOB_DIAM / 2.0 - 0.0010, KNOB_H + 0.0008)
+        knob_geo.merge(pointer)
+        knob_part = model.part(f"knob_{i}")
+        knob_part.visual(mesh_from_geometry(knob_geo, f"knob_{i}"),
+                         material=metal_knob, name=f"knob_{i}")
+        knob_part.inertial = Inertial.from_geometry(
+            Cylinder(KNOB_DIAM / 2.0, KNOB_H), mass=0.01
+        )
+        # Seat the knob base slightly INTO the gold panel surface for a real
+        # press-fit look (justified overlap in tests).
+        seat_z = PANEL_GOLD_Z + 0.003 - 0.002
+        model.articulation(
+            f"panel_to_knob_{i}",
+            ArticulationType.CONTINUOUS,
+            parent=body,
+            child=knob_part,
+            origin=Origin(xyz=(KNOB_X, ky, seat_z)),
+            axis=(0.0, 0.0, 1.0),
+            motion_limits=MotionLimits(effort=0.3, velocity=8.0),
+        )
+
+    return model
+
+
+def _ext(aabb):
+    mn, mx = aabb
+    return (mx[0] - mn[0], mx[1] - mn[1], mx[2] - mn[2])
+
+
+def run_tests() -> TestReport:
+    ctx = TestContext(object_model)
+
+    body = object_model.get_part("body")
+    knobs = [object_model.get_part(f"knob_{i}") for i in range(KNOB_COUNT)]
+    joints = [object_model.get_articulation(f"panel_to_knob_{i}") for i in range(KNOB_COUNT)]
+
+    # --- exactly six knobs on the top gold panel ---
+    ctx.check(
+        "six control knobs present",
+        len(knobs) == KNOB_COUNT and all(k is not None for k in knobs),
+        details=f"knob parts={[k.name for k in knobs]}",
+    )
+
+    # --- six knobs are evenly spaced in a centered row on the panel ---
+    knob_y_positions = []
+    for k in knobs:
+        pos = ctx.part_world_position(k)
+        knob_y_positions.append(pos[1] if pos else 0.0)
+    spacings = [knob_y_positions[i + 1] - knob_y_positions[i] for i in range(len(knob_y_positions) - 1)]
+    spacing_uniform = all(abs(s - spacings[0]) < 0.002 for s in spacings) if spacings else False
+    row_centered = abs(sum(knob_y_positions) / len(knob_y_positions)) < 0.005 if knob_y_positions else False
+    ctx.check(
+        "six knobs evenly spaced and centered on panel",
+        spacing_uniform and row_centered,
+        details=f"y_positions={[f'{y:.4f}' for y in knob_y_positions]}, spacings={[f'{s:.4f}' for s in spacings]}",
+    )
+
+    # Each knob sits on the gold panel: base near the gold surface, above it,
+    # and within the panel footprint in X/Y. Allow the small press-fit overlap.
+    for i, (k, j) in enumerate(zip(knobs, joints)):
+        ctx.allow_overlap(
+            k,
+            body,
+            elem_a=f"knob_{i}",
+            elem_b="gold_panel",
+            reason="Knob base is intentionally press-fit a hair into the gold panel surface.",
+        )
+        pos = ctx.part_world_position(k)
+        on_panel = (
+            pos is not None
+            and abs(pos[0] - PANEL_X) <= PANEL_D / 2.0 + 0.006
+            and abs(pos[1]) <= PANEL_W / 2.0
+            and pos[2] > PANEL_GOLD_Z - 0.001
+        )
+        ctx.check(
+            f"knob_{i} seated on the gold panel",
+            on_panel,
+            details=f"knob_{i} world pos={pos}, gold_z={PANEL_GOLD_Z:.3f}",
+        )
+        ctx.expect_contact(k, body, name=f"knob_{i} rests on panel")
+
+    # Knobs point UP: each knob's vertical (Z) extent is its dominant axis-ish,
+    # and the top is above the gold surface (it stands proud of the panel).
+    for i, k in enumerate(knobs):
+        mn, mx = ctx.part_world_aabb(k)
+        ctx.check(
+            f"knob_{i} stands proud above the panel",
+            mx[2] > PANEL_GOLD_Z + 0.004,
+            details=f"knob_{i} top z={mx[2]:.4f}",
+        )
+
+    # --- rotary articulation about the vertical axis ---
+    # The off-axis raised pointer makes the knob non-axisymmetric. At rest the
+    # pointer sits toward +Y, so the knob AABB center is offset from the rotation
+    # axis in +Y. A quarter turn about +Z swings that offset into +X. We confirm
+    # the in-plane offset rotates ~90 deg while the top Z height is preserved.
+    for i, (k, j) in enumerate(zip(knobs, joints)):
+        ax = ctx.part_world_position(k)  # joint origin == knob axis (x,y)
+        mn0, mx0 = ctx.part_world_aabb(k)
+        z_top0 = mx0[2]
+        cen0 = ((mn0[0] + mx0[0]) / 2.0 - ax[0], (mn0[1] + mx0[1]) / 2.0 - ax[1])
+        with ctx.pose({j: math.pi / 2.0}):
+            mn1, mx1 = ctx.part_world_aabb(k)
+            z_top1 = mx1[2]
+            cen1 = ((mn1[0] + mx1[0]) / 2.0 - ax[0], (mn1[1] + mx1[1]) / 2.0 - ax[1])
+        # At rest the offset is mostly in Y; after a quarter turn mostly in X.
+        rotated = abs(cen0[1]) > abs(cen0[0]) and abs(cen1[0]) > abs(cen1[1])
+        moved = math.hypot(cen1[0] - cen0[0], cen1[1] - cen0[1])
+        ctx.check(
+            f"knob_{i} spins about the vertical axis",
+            rotated and moved > 0.0008 and abs(z_top1 - z_top0) < 0.0015,
+            details=f"rest_offset={cen0}, turn_offset={cen1}, moved={moved:.4f}, "
+                    f"dz_top={abs(z_top1 - z_top0):.5f}",
+        )
+
+    # --- grille faces the front (+X): thin panel located at the +X face ---
+    g_mn, g_mx = ctx.part_element_world_aabb(body, elem="speaker_grille")
+    gx = (g_mn[0] + g_mx[0]) / 2.0
+    gx_ext = g_mx[0] - g_mn[0]
+    gy_ext = g_mx[1] - g_mn[1]
+    gz_ext = g_mx[2] - g_mn[2]
+    ctx.check(
+        "speaker grille is a thin front-facing panel near +X",
+        gx > 0.03 and gx_ext < gy_ext and gx_ext < gz_ext,
+        details=f"grille center x={gx:.3f}, extents=({gx_ext:.3f},{gy_ext:.3f},{gz_ext:.3f})",
+    )
+
+    return ctx.report()
+
+
+object_model = build_object_model()

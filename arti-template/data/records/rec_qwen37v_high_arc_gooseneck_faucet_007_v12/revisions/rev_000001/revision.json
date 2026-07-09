@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_high_arc_gooseneck_faucet_007_v12",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-12T04:44:53Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "9d9f38096d901fb7c166209876626f9ab4c4d60b7277717fcb5bc9b8e8d8fe20",
+  "source": {
+    "run_id": "run_20260612_044453_964327_42b12e95",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "9d9f38096d901fb7c166209876626f9ab4c4d60b7277717fcb5bc9b8e8d8fe20",
+    "model_py_sha256": "3709d8c0e3c4e1218d863f92dd8d941f66a1894d9e55a5f438521914d695236b"
+  },
+  "run_summary": {
+    "turn_count": 17,
+    "tool_call_count": 20,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-gloss-black-monobloc-kitchen-mixer-tap-a_20260610_084301_301855_c023a523",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-gloss-black-monobloc-kitchen-mixer-tap-a_20260610_084301_301855_c023a523",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

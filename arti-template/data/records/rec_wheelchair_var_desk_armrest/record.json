@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_wheelchair_var_desk_armrest",
+  "created_at": "2026-07-05T09:57:52Z",
+  "updated_at": "2026-07-05T10:17:47Z",
+  "rating": 5,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260705_095752_951015_dc32a6cb",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "wheelchair-desk_armrest",
+    "prompt_preview": "TARGET: replace the fixed tubular armrests with flip-back desk-length armrests. Each armrest pivots upward/backward on a REVOLUTE hinge (axis y) at its rear..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "9659abb7d3d16306671f2179fa2eb452502452a8e5e9dc415b9c59154ac8284e",
+    "model_py_sha256": "08863b79e6f715079889fefcd685a02b2eb6441802cf1b69417c84d4640de9e0"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_a-manual-wheelchair-two-large-rear-drive-wheels-_20260623_174436_818325_dcd9a412",
+    "parent_record_id": "rec_a-manual-wheelchair-two-large-rear-drive-wheels-_20260623_174436_818325_dcd9a412",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

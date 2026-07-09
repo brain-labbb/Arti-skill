@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-caul_20260609_164004_317252_e2bcfd32",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-09T16:40:04Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "589a3fbc7616a16e49effce7e33b5c8763db605c76a87b92a5b9a77a7685cd40",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": null
+  },
+  "hashes": {
+    "prompt_sha256": "589a3fbc7616a16e49effce7e33b5c8763db605c76a87b92a5b9a77a7685cd40",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-09T17:58:59Z",
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-caul_20260609_164004_317252_e2bcfd32",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_build-a-realistic-articulated-3d-model-of-a-caul_20260609_164004_317252_e2bcfd32/compile_report.json",
+      "status": "success",
+      "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-caul_20260609_164004_317252_e2bcfd32",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 3 overlaps across 3 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "2d59b8ca6ed95b1d32af75d389442e032ffedaea6eddffc8b6a345fa9c17b5f5",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "ee6914b0b50d6cc0d186eebf87e65d981e5c24ec7444d3a5113547b3945e41d8",
+        "model_py_mtime_ns": 1781023593009392576,
+        "model_py_size_bytes": 17563,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 977572,
+        "visual_mesh_file_count": 6,
+        "compile_elapsed_seconds": 3.9198925523087382
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

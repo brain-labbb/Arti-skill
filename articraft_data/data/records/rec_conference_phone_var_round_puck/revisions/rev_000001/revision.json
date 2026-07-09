@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_conference_phone_var_round_puck",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-04T15:37:03Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "14c390ae258b3fd1cdbf43f239c54afb2d116a8176f6761e080511fe78c01862",
+  "source": {
+    "run_id": "run_20260704_153703_784040_ca73baf3",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "14c390ae258b3fd1cdbf43f239c54afb2d116a8176f6761e080511fe78c01862",
+    "model_py_sha256": "ac75453a9e6b315396c527b1d9b9e4bd8359932bdc281c9ebea3613762b3f991"
+  },
+  "run_summary": {
+    "turn_count": 7,
+    "tool_call_count": 8,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_gray-polycom-conference-room-speakerphone-a-tri-_20260605_174034_151108_9bc5796c",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_gray-polycom-conference-room-speakerphone-a-tri-_20260605_174034_151108_9bc5796c",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-04T15:52:03Z",
+    "record_id": "rec_conference_phone_var_round_puck",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_conference_phone_var_round_puck/compile_report.json",
+      "status": "success",
+      "record_id": "rec_conference_phone_var_round_puck",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "ac75453a9e6b315396c527b1d9b9e4bd8359932bdc281c9ebea3613762b3f991",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "a1dafb4a76f8d8d667e6ef81fb53e6d53c8e5723aebd3e7ad6642c6f399ec4e5",
+        "model_py_mtime_ns": 1783180241870580037,
+        "model_py_size_bytes": 17776,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 4356724,
+        "visual_mesh_file_count": 26,
+        "compile_elapsed_seconds": 13.061485448852181
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 6,
+      "errors": [
+        "record.json missing creator metadata for external workflow",
+        "source.run_id must be null for external records",
+        "external records must not contain Articraft agent traces",
+        "provenance.run_summary.turn_count must be null",
+        "provenance.run_summary.tool_call_count must be null",
+        "provenance.run_summary.compile_attempt_count must be null"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

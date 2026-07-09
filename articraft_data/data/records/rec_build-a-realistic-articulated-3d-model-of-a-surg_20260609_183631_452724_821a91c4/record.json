@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-surg_20260609_183631_452724_821a91c4",
+  "created_at": "2026-06-09T18:36:31Z",
+  "updated_at": "2026-06-09T18:57:21Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "external_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "anthropic",
+  "model_id": "claude-opus-4-8",
+  "display": {
+    "title": "Build a realistic, articulated 3D model of a Surgical chair, modeled faithfully from the reference image. Reference imag",
+    "prompt_preview": "Build a realistic, articulated 3D model of a Surgical chair, modeled faithfully from the reference image. Reference image: picture/Science/Surgical chair/001..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": null
+  },
+  "hashes": {
+    "prompt_sha256": "1e36aa33871afe708c91288538b0a3949ff081b30ebd322e29e07a689d65cf78",
+    "model_py_sha256": "e11b13b717b87e6b54fedc52ce1a93c4a2c645144825498153da6ae721b67ca8"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_build-a-realistic-articulated-3d-model-of-a-surg_20260609_183631_452724_821a91c4",
+    "parent_record_id": null,
+    "parent_revision_id": null,
+    "edit_mode": "root"
+  },
+  "creator": {
+    "mode": "external_agent",
+    "agent": "claude-code",
+    "trace_available": false
+  }
+}

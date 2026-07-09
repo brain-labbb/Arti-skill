@@ -1,0 +1,460 @@
+from __future__ import annotations
+
+# Six-wheeled wooden draft wagon.
+#
+# World frame: Z-up. The wagon rolls on SIX large spoked wooden wheels carried
+# on THREE transverse axles: a SMALLER front pair on a steerable front bolster
+# (classic wagon turntable under the front of the bed), and two pairs of LARGER
+# wheels on fixed mid and rear axles beneath the plank cargo bed. A weathered
+# plank box body with low side walls sits on the chassis. Two long wooden draw
+# poles (shafts) run forward from the front bolster, tied by rope.
+#
+# +X = forward (toward the draw poles).  +Y = left.  -Y = right.
+#
+# Articulation:
+#   PRIMARY = all six wheels rolling (CONTINUOUS spin about their axle, world Y).
+#   SECONDARY = the front axle bolster STEERS (REVOLUTE yaw about a vertical
+#     kingpin, world Z). The two front wheels are children of the steering
+#     bolster, so they swing with it; the draw poles are also children of the
+#     bolster (the team turns the front axle, which steers the wagon).
+
+import math
+
+from sdk import (
+    ArticulatedObject,
+    ArticulationType,
+    Box,
+    Cylinder,
+    Inertial,
+    MotionLimits,
+    Origin,
+    TestContext,
+    TestReport,
+    mesh_from_geometry,
+    tube_from_spline_points,
+)
+
+# ---- Wheel sizing (meters) -------------------------------------------------
+REAR_WHEEL_R = 0.34
+FRONT_WHEEL_R = 0.26
+RIM_TUBE_R = 0.024
+SPOKE_R = 0.015
+HUB_R = 0.058
+HUB_LEN = 0.13
+
+HALF_TRACK = 0.50          # wheel center distance from centerline
+N_AXLES = 3
+
+# Axle stations: x-position and wheel radius for each of the three axles.
+# Station 0 = front (steerable on bolster), 1 = mid (fixed), 2 = rear (fixed).
+# Spacing must exceed the sum of adjacent wheel radii + rim tube to avoid
+# rim-to-rim overlap: front+mid need >0.648 m, mid+rear need >0.728 m.
+AXLE_X = [0.70, -0.10, -0.90]
+AXLE_WHEEL_R = [FRONT_WHEEL_R, REAR_WHEEL_R, REAR_WHEEL_R]
+AXLE_Z = [r + RIM_TUBE_R for r in AXLE_WHEEL_R]
+
+# Body / bed (sits on the chassis above all three axles)
+BED_LEN = 1.80
+BED_WIDTH = 0.86
+BED_FLOOR_Z = max(AXLE_Z) + 0.10
+FLOOR_THK = 0.04
+SIDE_WALL_H = 0.30
+PLANK_THK = 0.028
+AXLE_R = 0.032
+
+
+def _wheel_visuals(part, mesh_prefix: str, radius: float, wood, dark_wood, iron) -> None:
+    """Spoked wooden wheel in the local X-Z plane, spinning about local Y."""
+    seg = 48
+    ring_pts = [
+        (radius * math.cos(2.0 * math.pi * i / seg), 0.0, radius * math.sin(2.0 * math.pi * i / seg))
+        for i in range(seg + 1)
+    ]
+    rim = tube_from_spline_points(
+        ring_pts, radius=RIM_TUBE_R, samples_per_segment=2, radial_segments=12, closed_spline=True
+    )
+    part.visual(mesh_from_geometry(rim, f"{mesh_prefix}_rim"), material=wood, name="rim")
+
+    inner = HUB_R - 0.015
+    outer = radius + 0.004
+    mid = 0.5 * (inner + outer)
+    length = outer - inner
+    spoke_count = 12
+    for s in range(spoke_count):
+        a = 2.0 * math.pi * s / spoke_count
+        part.visual(
+            Cylinder(radius=SPOKE_R, length=length),
+            origin=Origin(xyz=(mid * math.cos(a), 0.0, mid * math.sin(a)), rpy=(0.0, math.pi / 2.0 - a, 0.0)),
+            material=wood,
+            name=f"spoke_{s}",
+        )
+
+    part.visual(
+        Cylinder(radius=HUB_R, length=HUB_LEN),
+        origin=Origin(rpy=(math.pi / 2.0, 0.0, 0.0)),
+        material=dark_wood,
+        name="hub",
+    )
+    part.visual(
+        Cylinder(radius=HUB_R + 0.009, length=0.022),
+        origin=Origin(xyz=(0.0, HUB_LEN * 0.34, 0.0), rpy=(math.pi / 2.0, 0.0, 0.0)),
+        material=iron,
+        name="hub_band",
+    )
+
+
+def build_object_model() -> ArticulatedObject:
+    model = ArticulatedObject(name="six_wheeled_draft_wagon")
+
+    wood = model.material("weathered_wood", rgba=(0.62, 0.55, 0.45, 1.0))
+    dark_wood = model.material("dark_wood", rgba=(0.40, 0.34, 0.27, 1.0))
+    plank = model.material("plank_wood", rgba=(0.68, 0.60, 0.49, 1.0))
+    iron = model.material("wrought_iron", rgba=(0.17, 0.17, 0.18, 1.0))
+    rope = model.material("rope", rgba=(0.72, 0.64, 0.42, 1.0))
+
+    # ---- Body / chassis (root) --------------------------------------------
+    body = model.part("body")
+    body.inertial = Inertial.from_geometry(
+        Box((BED_LEN, BED_WIDTH, 0.4)),
+        mass=140.0,
+        origin=Origin(xyz=(0.0, 0.0, BED_FLOOR_Z + 0.12)),
+    )
+
+    # Floor planks (run along X).
+    n_floor = 6
+    plank_w = BED_WIDTH / n_floor
+    for i in range(n_floor):
+        y = -BED_WIDTH / 2.0 + plank_w * (i + 0.5)
+        body.visual(
+            Box((BED_LEN, plank_w + 0.002, FLOOR_THK)),
+            origin=Origin(xyz=(0.0, y, BED_FLOOR_Z)),
+            material=plank,
+            name=f"floor_plank_{i}",
+        )
+
+    # Low side walls (+/-Y), 3 horizontal planks each.
+    for side_name, ysign in (("left", 1.0), ("right", -1.0)):
+        y = ysign * (BED_WIDTH / 2.0 - PLANK_THK / 2.0)
+        for k in range(3):
+            z = BED_FLOOR_Z + FLOOR_THK / 2.0 + 0.05 + k * 0.085
+            body.visual(
+                Box((BED_LEN - 0.04, PLANK_THK, 0.075)),
+                origin=Origin(xyz=(0.0, y, z)),
+                material=plank,
+                name=f"{side_name}_side_plank_{k}",
+            )
+
+    # End walls (front +X and rear -X), shorter stacked planks + corner posts.
+    for end_name, xsign in (("front", 1.0), ("rear", -1.0)):
+        x = xsign * (BED_LEN / 2.0 - PLANK_THK / 2.0)
+        for k in range(3):
+            z = BED_FLOOR_Z + FLOOR_THK / 2.0 + 0.05 + k * 0.085
+            body.visual(
+                Box((PLANK_THK, BED_WIDTH - 0.03, 0.075)),
+                origin=Origin(xyz=(x, 0.0, z)),
+                material=plank,
+                name=f"{end_name}_end_plank_{k}",
+            )
+    # Corner posts.
+    for xsign in (1.0, -1.0):
+        for ysign in (1.0, -1.0):
+            body.visual(
+                Box((0.05, 0.05, SIDE_WALL_H + 0.04)),
+                origin=Origin(
+                    xyz=(
+                        xsign * (BED_LEN / 2.0 - 0.03),
+                        ysign * (BED_WIDTH / 2.0 - 0.03),
+                        BED_FLOOR_Z + SIDE_WALL_H / 2.0,
+                    )
+                ),
+                material=dark_wood,
+                name=f"post_{'f' if xsign > 0 else 'r'}_{'l' if ysign > 0 else 'r'}",
+            )
+
+    # Longitudinal chassis sills under the floor (carry all three axle assemblies).
+    for side_name, ysign in (("left", 1.0), ("right", -1.0)):
+        body.visual(
+            Box((BED_LEN + 0.20, 0.07, 0.09)),
+            origin=Origin(xyz=(0.0, ysign * 0.30, BED_FLOOR_Z - FLOOR_THK / 2.0 - 0.045)),
+            material=dark_wood,
+            name=f"{side_name}_sill",
+        )
+
+    # Fixed axle cross-members on body for stations 1 (mid) and 2 (rear).
+    for i in range(1, N_AXLES):
+        body.visual(
+            Cylinder(radius=AXLE_R, length=2.0 * HALF_TRACK + 0.12),
+            origin=Origin(xyz=(AXLE_X[i], 0.0, AXLE_Z[i]), rpy=(math.pi / 2.0, 0.0, 0.0)),
+            material=iron,
+            name=f"axle_{i}",
+        )
+
+    # Kingpin boss on the underside of the bed where the front bolster pivots.
+    body.visual(
+        Cylinder(radius=0.06, length=0.20),
+        origin=Origin(xyz=(AXLE_X[0], 0.0, BED_FLOOR_Z - FLOOR_THK / 2.0 - 0.10)),
+        material=iron,
+        name="kingpin_boss",
+    )
+
+    # ---- Front steering bolster (child of body; yaws about vertical kingpin) -
+    bolster = model.part("front_bolster")
+    bolster.inertial = Inertial.from_geometry(
+        Box((0.16, 2.0 * HALF_TRACK, 0.10)),
+        mass=14.0,
+        origin=Origin(xyz=(0.0, 0.0, 0.0)),
+    )
+
+    # The bolster frame sits just under the bed front; compute the front axle
+    # height in the bolster's local frame.
+    bolster_z = BED_FLOOR_Z - FLOOR_THK / 2.0 - 0.16  # world z of bolster origin
+    axle_local_z = AXLE_Z[0] - bolster_z               # front axle z in bolster frame
+
+    # Bolster beam (transverse) at the bolster origin plane.
+    bolster.visual(
+        Box((0.16, 2.0 * HALF_TRACK - 0.30, 0.10)),
+        origin=Origin(xyz=(0.0, 0.0, 0.0)),
+        material=dark_wood,
+        name="bolster_beam",
+    )
+    # Front axle through the bolster (carries the front wheels).
+    bolster.visual(
+        Cylinder(radius=AXLE_R, length=2.0 * HALF_TRACK + 0.12),
+        origin=Origin(xyz=(0.0, 0.0, axle_local_z), rpy=(math.pi / 2.0, 0.0, 0.0)),
+        material=iron,
+        name="axle_0",
+    )
+    # Two short standards connecting the bolster beam down to the front axle.
+    for ysign in (1.0, -1.0):
+        bolster.visual(
+            Box((0.07, 0.07, abs(axle_local_z) + 0.06)),
+            origin=Origin(xyz=(0.0, ysign * 0.34, axle_local_z / 2.0)),
+            material=dark_wood,
+            name=f"standard_{'l' if ysign > 0 else 'r'}",
+        )
+
+    # Two long draw poles (shafts) extending forward from the bolster.
+    pole_len = 1.30
+    for side_name, ysign in (("left", 1.0), ("right", -1.0)):
+        y = ysign * 0.20
+        pole = tube_from_spline_points(
+            [
+                (-0.06, ysign * 0.34, 0.0),
+                (0.20, ysign * 0.30, -0.01),
+                (0.55, y, -0.01),
+                (1.00, y * 0.85, 0.0),
+                (0.10 + pole_len, y * 0.70, 0.02),
+            ],
+            radius=0.028,
+            samples_per_segment=10,
+            radial_segments=12,
+        )
+        bolster.visual(mesh_from_geometry(pole, f"{side_name}_draw_pole"), material=wood)
+    # Rope tie between the two poles near their forward end.
+    rope_tie = tube_from_spline_points(
+        [
+            (1.00, 0.18, 0.04),
+            (1.02, 0.0, -0.02),
+            (1.00, -0.18, 0.04),
+        ],
+        radius=0.010,
+        samples_per_segment=10,
+        radial_segments=10,
+    )
+    bolster.visual(mesh_from_geometry(rope_tie, "rope_tie"), material=rope)
+
+    # ---- Wheels (uniform loop: 3 stations × 2 sides = 6 wheels) -----------
+    wheel_parts = {}
+    for i in range(N_AXLES):
+        radius = AXLE_WHEEL_R[i]
+        for side_idx, (side, ysign) in enumerate((("l", 1.0), ("r", -1.0))):
+            wname = f"wheel_{i}_{side}"
+            w = model.part(wname)
+            w.inertial = Inertial.from_geometry(
+                Cylinder(radius=radius, length=HUB_LEN),
+                mass=11.0,
+                origin=Origin(rpy=(math.pi / 2.0, 0.0, 0.0)),
+            )
+            _wheel_visuals(w, wname, radius, wood, dark_wood, iron)
+            wheel_parts[(i, side)] = w
+
+    # ---- Articulations -----------------------------------------------------
+
+    # Steering bolster yaws about a vertical kingpin under the front of the bed.
+    model.articulation(
+        "front_steer",
+        ArticulationType.REVOLUTE,
+        parent=body,
+        child=bolster,
+        origin=Origin(xyz=(AXLE_X[0], 0.0, bolster_z)),
+        axis=(0.0, 0.0, 1.0),
+        motion_limits=MotionLimits(effort=60.0, velocity=2.0, lower=-0.6, upper=0.6),
+    )
+
+    # All six wheel spin joints: CONTINUOUS about world Y.
+    for i in range(N_AXLES):
+        parent = bolster if i == 0 else body
+        for side, ysign in (("l", 1.0), ("r", -1.0)):
+            jname = f"spin_{i}_{side}"
+            child = wheel_parts[(i, side)]
+            if i == 0:
+                # Front wheels: joint origin in bolster local frame.
+                ox, oy, oz = 0.0, ysign * HALF_TRACK, axle_local_z
+            else:
+                # Mid / rear wheels: joint origin in body frame (= world frame).
+                ox, oy, oz = AXLE_X[i], ysign * HALF_TRACK, AXLE_Z[i]
+            model.articulation(
+                jname,
+                ArticulationType.CONTINUOUS,
+                parent=parent,
+                child=child,
+                origin=Origin(xyz=(ox, oy, oz)),
+                axis=(0.0, 1.0, 0.0),
+                motion_limits=MotionLimits(effort=50.0, velocity=20.0),
+            )
+
+    return model
+
+
+def run_tests() -> TestReport:
+    ctx = TestContext(object_model)
+
+    body = object_model.get_part("body")
+    bolster = object_model.get_part("front_bolster")
+    steer = object_model.get_articulation("front_steer")
+
+    # Collect wheel parts and spin joints for all three axles.
+    wheels = {}
+    spins = {}
+    for i in range(N_AXLES):
+        for side in ("l", "r"):
+            wname = f"wheel_{i}_{side}"
+            jname = f"spin_{i}_{side}"
+            wheels[(i, side)] = object_model.get_part(wname)
+            spins[(i, side)] = object_model.get_articulation(jname)
+
+    # --- Intentional overlaps ---
+
+    # Kingpin boss seats into the front bolster at the turntable pivot.
+    ctx.allow_overlap(body, bolster, elem_a="kingpin_boss", elem_b="bolster_beam",
+                      reason="The kingpin boss seats into the bolster beam at the steering turntable.")
+    ctx.allow_overlap(body, bolster, elem_a="kingpin_boss", elem_b="axle_0",
+                      reason="The kingpin passes down through the bolster to the front axle at the turntable hub.")
+
+    # Axle-through-hub for all six wheels.
+    for i in range(N_AXLES):
+        parent_part = bolster if i == 0 else body
+        axle_elem = f"axle_{i}"
+        for side in ("l", "r"):
+            w = wheels[(i, side)]
+            ctx.allow_overlap(parent_part, w, elem_a=axle_elem, elem_b="hub",
+                              reason=f"Axle {i} stub passes through the wheel_{i}_{side} hub.")
+            ctx.allow_overlap(parent_part, w, elem_a=axle_elem, elem_b="hub_band",
+                              reason=f"Axle {i} also passes through the wheel_{i}_{side} iron nave band.")
+
+    # --- All six spin joints: CONTINUOUS about Y ---
+    for i in range(N_AXLES):
+        for side in ("l", "r"):
+            jname = f"spin_{i}_{side}"
+            j = spins[(i, side)]
+            ctx.check(f"{jname}_continuous", str(j.joint_type).lower().endswith("continuous"),
+                      f"type={j.joint_type}")
+            ax = j.axis
+            ctx.check(f"{jname}_axis_y", abs(abs(ax[1]) - 1.0) < 1e-6 and abs(ax[0]) < 1e-6 and abs(ax[2]) < 1e-6,
+                      f"axis={ax}")
+
+    # --- Steering joint: REVOLUTE about Z ---
+    ctx.check("front_steer_revolute", str(steer.joint_type).lower().endswith("revolute"),
+              f"type={steer.joint_type}")
+    sax = steer.axis
+    ctx.check("front_steer_axis_z", abs(abs(sax[2]) - 1.0) < 1e-6 and abs(sax[0]) < 1e-6 and abs(sax[1]) < 1e-6,
+              f"axis={sax}")
+
+    # --- All six wheels touch the ground ---
+    for i in range(N_AXLES):
+        for side in ("l", "r"):
+            wname = f"wheel_{i}_{side}"
+            w = wheels[(i, side)]
+            exp_d = 2 * (AXLE_WHEEL_R[i] + RIM_TUBE_R)
+            aabb = ctx.part_world_aabb(w)
+            assert aabb is not None
+            mins, maxs = aabb
+            ctx.check(f"{wname}_touches_ground", abs(mins[2]) < 0.01, f"min_z={mins[2]:.4f}")
+            d = maxs[2] - mins[2]
+            ctx.check(f"{wname}_diameter", abs(d - exp_d) < 0.02, f"d={d:.3f} exp={exp_d:.3f}")
+
+    # Front wheels strictly smaller than rear wheels.
+    fl_aabb = ctx.part_world_aabb(wheels[(0, "l")])
+    rl_aabb = ctx.part_world_aabb(wheels[(2, "l")])
+    assert fl_aabb and rl_aabb
+    ctx.check("front_smaller_than_rear",
+              (fl_aabb[1][2] - fl_aabb[0][2]) < (rl_aabb[1][2] - rl_aabb[0][2]) - 0.05,
+              "front pair must be visibly smaller than rear pair")
+
+    # Mid wheels same size as rear wheels (both are the large pair).
+    ml_aabb = ctx.part_world_aabb(wheels[(1, "l")])
+    assert ml_aabb
+    ctx.check("mid_same_size_as_rear",
+              abs((ml_aabb[1][2] - ml_aabb[0][2]) - (rl_aabb[1][2] - rl_aabb[0][2])) < 0.02,
+              "mid pair should match rear pair diameter")
+
+    # --- Left/right symmetry for each axle ---
+    for i in range(N_AXLES):
+        lp = ctx.part_world_position(wheels[(i, "l")])
+        rp = ctx.part_world_position(wheels[(i, "r")])
+        assert lp and rp
+        ctx.check(f"axle_{i}_symmetric_y", abs(lp[1] + rp[1]) < 1e-6, f"{lp[1]} vs {rp[1]}")
+
+    # --- Three distinct axle X positions (proves 3-axle layout) ---
+    axle_x_positions = [ctx.part_world_position(wheels[(i, "l")])[0] for i in range(N_AXLES)]
+    for a in range(N_AXLES):
+        for b in range(a + 1, N_AXLES):
+            ctx.check(f"axle_{a}_{b}_distinct_x",
+                      abs(axle_x_positions[a] - axle_x_positions[b]) > 0.20,
+                      f"axle {a} x={axle_x_positions[a]:.3f} vs axle {b} x={axle_x_positions[b]:.3f}")
+
+    # --- Engagement: each wheel hub overlaps its axle (no detached gap) ---
+    for i in range(N_AXLES):
+        parent_part = bolster if i == 0 else body
+        axle_elem = f"axle_{i}"
+        for side in ("l", "r"):
+            w = wheels[(i, side)]
+            ctx.expect_overlap(w, parent_part, axes="xz", min_overlap=0.02, elem_b=axle_elem,
+                               name=f"wheel_{i}_{side}_engages_axle")
+
+    # --- Decisive spin pose: a rear wheel spoke sweeps when rolled ---
+    rear_wheel = wheels[(2, "l")]
+    rear_spin = spins[(2, "l")]
+    spoke_rest = ctx.part_element_world_aabb(rear_wheel, elem="spoke_0")
+    with ctx.pose({rear_spin: math.pi / 2.0}):
+        spoke_turned = ctx.part_element_world_aabb(rear_wheel, elem="spoke_0")
+    assert spoke_rest and spoke_turned
+    ctx.check("rear_wheel_spins",
+              abs(spoke_turned[0][0] - spoke_rest[0][0]) > 0.02 or abs(spoke_turned[0][2] - spoke_rest[0][2]) > 0.02,
+              f"rest={spoke_rest[0]} turned={spoke_turned[0]}")
+
+    # --- Decisive spin pose: a mid wheel also spins independently ---
+    mid_wheel = wheels[(1, "l")]
+    mid_spin = spins[(1, "l")]
+    mid_spoke_rest = ctx.part_element_world_aabb(mid_wheel, elem="spoke_0")
+    with ctx.pose({mid_spin: math.pi / 2.0}):
+        mid_spoke_turned = ctx.part_element_world_aabb(mid_wheel, elem="spoke_0")
+    assert mid_spoke_rest and mid_spoke_turned
+    ctx.check("mid_wheel_spins",
+              abs(mid_spoke_turned[0][0] - mid_spoke_rest[0][0]) > 0.02 or abs(mid_spoke_turned[0][2] - mid_spoke_rest[0][2]) > 0.02,
+              f"rest={mid_spoke_rest[0]} turned={mid_spoke_turned[0]}")
+
+    # --- Decisive steer pose: turning the bolster swings the front wheels ---
+    fl_wheel = wheels[(0, "l")]
+    fl_rest = ctx.part_world_position(fl_wheel)
+    with ctx.pose({steer: 0.5}):
+        fl_steered = ctx.part_world_position(fl_wheel)
+    assert fl_rest and fl_steered
+    ctx.check("front_wheels_steer_with_bolster",
+              abs(fl_steered[0] - fl_rest[0]) > 0.02 or abs(fl_steered[1] - fl_rest[1]) > 0.02,
+              f"rest={fl_rest} steered={fl_steered}")
+
+    return ctx.report()
+
+
+object_model = build_object_model()

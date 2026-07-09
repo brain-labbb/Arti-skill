@@ -1,0 +1,759 @@
+from __future__ import annotations
+
+"""Apollo Lunar Roving Vehicle (LRV) — rear three-quarter view, tri-fold variant.
+
+Modeled after the reference photo: open flat-deck chassis on four wire-mesh
+wheels with dark chevron tread, tan dust fenders on struts, a rear equipment
+rack with tool pallet behind the two webbed seats, a center console with a
+tilting T-handle controller, and the umbrella-shaped high-gain antenna dish
+on a swiveling forward mast, plus a low-gain antenna staff and TV camera.
+
+Structural topology: the deck is split at the center cross-rail into a
+forward_deck (front wheel stations, console, batteries, camera, HGA mount)
+and an aft_deck (rear wheel stations, seats, rear rack mount), joined by a
+REVOLUTE fold hinge about the lateral Y axis — reproducing the real LRV
+tri-fold stowage break.
+
+Frame convention: +X forward, +Y left, +Z up, ground at z=0.
+Articulations: 4x CONTINUOUS wheel spin, REVOLUTE antenna mast swivel,
+REVOLUTE hand-controller tilt, REVOLUTE deck fold hinge, FIXED rear rack.
+"""
+
+import math
+
+from sdk import (
+    ArticulatedObject,
+    ArticulationType,
+    Box,
+    Cylinder,
+    ExtrudeGeometry,
+    LatheGeometry,
+    Material,
+    MotionLimits,
+    Origin,
+    Sphere,
+    TestContext,
+    TestReport,
+    TireCarcass,
+    TireGeometry,
+    TireShoulder,
+    TireSidewall,
+    TireTread,
+    WheelFace,
+    WheelGeometry,
+    WheelHub,
+    WheelRim,
+    WheelSpokes,
+    mesh_from_geometry,
+)
+
+# ---------------------------------------------------------------- dimensions
+WHEEL_RADIUS = 0.41  # tire outer radius; axle height = ground contact at z=0
+WHEEL_WIDTH = 0.23
+AXLE_Z = WHEEL_RADIUS
+WHEEL_X = 1.145  # half wheelbase (2.29 m)
+WHEEL_Y = 0.915  # half track (1.83 m)
+
+DECK_TOP = 0.445
+DECK_HALF = 1.30  # half of full deck length (2.6 m)
+DECK_CENTER_FWD = DECK_HALF / 2.0  # forward floor pan center offset
+DECK_CENTER_AFT = -DECK_HALF / 2.0  # aft floor pan center offset
+FENDER_R_IN = 0.44
+FENDER_R_OUT = 0.475
+FENDER_WIDTH = 0.30
+
+# name -> (x, y) of each wheel center
+WHEEL_POSITIONS = {
+    "front_left": (WHEEL_X, WHEEL_Y),
+    "front_right": (WHEEL_X, -WHEEL_Y),
+    "rear_left": (-WHEEL_X, WHEEL_Y),
+    "rear_right": (-WHEEL_X, -WHEEL_Y),
+}
+
+DISH_TILT = -0.5  # pitch of the umbrella dish (leans back toward Earth)
+
+
+def _fender_profile() -> list[tuple[float, float]]:
+    """Annular arch sector in XY (later rotated into the XZ wheel plane)."""
+    a0, a1 = math.radians(-15.0), math.radians(195.0)
+    n = 28
+    pts: list[tuple[float, float]] = []
+    for i in range(n + 1):
+        a = a0 + (a1 - a0) * i / n
+        pts.append((FENDER_R_OUT * math.cos(a), FENDER_R_OUT * math.sin(a)))
+    for i in range(n + 1):
+        a = a1 - (a1 - a0) * i / n
+        pts.append((FENDER_R_IN * math.cos(a), FENDER_R_IN * math.sin(a)))
+    return pts
+
+
+def _dish_axis_point(dist: float) -> tuple[float, float, float]:
+    """Point on the tilted dish axis, `dist` above the dish apex (antenna-local)."""
+    return (
+        math.sin(DISH_TILT) * dist,
+        0.0,
+        0.87 + math.cos(DISH_TILT) * dist,
+    )
+
+
+def _add_wheel_station(
+    deck,
+    wname: str,
+    wx: float,
+    wy: float,
+    alum: Material,
+    fender_tan: Material,
+    fender_mesh,
+    z_off: float = 0.0,
+) -> None:
+    """Attach suspension arm, axle stub, fender arch, and fender struts.
+
+    z_off shifts all Z coordinates for decks whose local frame is offset
+    from world (e.g. the aft deck hinged at deck-top height).
+    """
+    s = 1.0 if wy > 0 else -1.0
+    deck.visual(
+        Box((0.10, 0.105, 0.06)),
+        origin=Origin(xyz=(wx, s * 0.7375, AXLE_Z + z_off)),
+        material=alum,
+        name=f"suspension_arm_{wname}",
+    )
+    # Axle stub embeds into the spinning hub (axisymmetric captured shaft).
+    deck.visual(
+        Cylinder(radius=0.03, length=0.14),
+        origin=Origin(xyz=(wx, s * 0.85, AXLE_Z + z_off), rpy=(math.pi / 2, 0.0, 0.0)),
+        material=alum,
+        name=f"axle_{wname}",
+    )
+    # Fender arch over the wheel (profile XY -> wheel plane XZ via roll +90deg).
+    deck.visual(
+        fender_mesh,
+        origin=Origin(xyz=(wx, wy, AXLE_Z + z_off), rpy=(math.pi / 2, 0.0, 0.0)),
+        material=fender_tan,
+        name=f"fender_{wname}",
+    )
+    # Fender mount: vertical post off the side rail + lateral stay into the arch.
+    deck.visual(
+        Box((0.05, 0.05, 0.44)),
+        origin=Origin(xyz=(wx, s * 0.72, 0.665 + z_off)),
+        material=alum,
+        name=f"fender_post_{wname}",
+    )
+    deck.visual(
+        Box((0.05, 0.26, 0.05)),
+        origin=Origin(xyz=(wx, s * 0.85, 0.875 + z_off)),
+        material=alum,
+        name=f"fender_stay_{wname}",
+    )
+
+
+def build_object_model() -> ArticulatedObject:
+    model = ArticulatedObject(name="apollo_lunar_roving_vehicle")
+
+    alum = Material(name="alum_frame", rgba=(0.72, 0.73, 0.76, 1.0))
+    mesh_silver = Material(name="mesh_silver", rgba=(0.82, 0.83, 0.86, 1.0))
+    tread_dark = Material(name="tread_dark", rgba=(0.16, 0.16, 0.18, 1.0))
+    fender_tan = Material(name="fender_tan", rgba=(0.80, 0.62, 0.38, 1.0))
+    webbing_tan = Material(name="webbing_tan", rgba=(0.85, 0.78, 0.62, 1.0))
+    box_black = Material(name="box_black", rgba=(0.11, 0.11, 0.12, 1.0))
+    dish_bright = Material(name="dish_bright", rgba=(0.87, 0.87, 0.90, 1.0))
+
+    # Shared mesh for the four tan fender arches.
+    fender_mesh = mesh_from_geometry(
+        ExtrudeGeometry.centered(_fender_profile(), FENDER_WIDTH),
+        "lrv_fender_arch",
+    )
+
+    # --------------------------------------------------------- forward deck
+    forward_deck = model.part("forward_deck")
+
+    # Forward floor pan: x from 0 to +1.3.
+    forward_deck.visual(
+        Box((DECK_HALF, 1.44, 0.05)),
+        origin=Origin(xyz=(DECK_CENTER_FWD, 0.0, 0.42)),
+        material=alum,
+        name="floor_pan_forward",
+    )
+    for side, sy in (("left", 1.0), ("right", -1.0)):
+        forward_deck.visual(
+            Box((DECK_HALF, 0.06, 0.10)),
+            origin=Origin(xyz=(DECK_CENTER_FWD, sy * 0.69, 0.42)),
+            material=alum,
+            name=f"side_rail_{side}_forward",
+        )
+    # Cross rails on forward deck: center hinge rail (offset +3 cm to avoid
+    # aft-deck overlap) and forward structural rail.
+    for i, cx in enumerate((0.03, 1.0)):
+        forward_deck.visual(
+            Box((0.06, 1.38, 0.08)),
+            origin=Origin(xyz=(cx, 0.0, 0.40)),
+            material=alum,
+            name=f"cross_rail_{i + 1}",
+        )
+
+    # Front wheel stations.
+    for wname in ("front_left", "front_right"):
+        wx, wy = WHEEL_POSITIONS[wname]
+        _add_wheel_station(forward_deck, wname, wx, wy, alum, fender_tan, fender_mesh)
+
+    # Center control console with display panel.
+    forward_deck.visual(
+        Box((0.30, 0.25, 0.35)),
+        origin=Origin(xyz=(0.30, 0.0, 0.6175)),
+        material=box_black,
+        name="console_body",
+    )
+    forward_deck.visual(
+        Box((0.16, 0.22, 0.02)),
+        origin=Origin(xyz=(0.24, 0.0, 0.80)),
+        material=mesh_silver,
+        name="console_panel",
+    )
+
+    # Forward equipment: blanketed battery / LCRU boxes.
+    for side, sy in (("left", 1.0), ("right", -1.0)):
+        forward_deck.visual(
+            Box((0.34, 0.44, 0.18)),
+            origin=Origin(xyz=(0.80, sy * 0.34, 0.53)),
+            material=webbing_tan,
+            name=f"battery_box_{side}",
+        )
+
+    # Low-gain antenna staff rising off the right-front equipment box.
+    forward_deck.visual(
+        Cylinder(radius=0.012, length=0.55),
+        origin=Origin(xyz=(0.85, -0.45, 0.72)),
+        material=alum,
+        name="lowgain_mast",
+    )
+    forward_deck.visual(
+        Cylinder(radius=0.025, length=0.10),
+        origin=Origin(xyz=(0.85, -0.45, 0.95)),
+        material=box_black,
+        name="lowgain_head",
+    )
+
+    # TV camera unit on a short forward post.
+    forward_deck.visual(
+        Cylinder(radius=0.015, length=0.30),
+        origin=Origin(xyz=(1.18, -0.12, 0.595)),
+        material=alum,
+        name="camera_post",
+    )
+    forward_deck.visual(
+        Box((0.12, 0.12, 0.14)),
+        origin=Origin(xyz=(1.18, -0.12, 0.79)),
+        material=box_black,
+        name="camera_body",
+    )
+    forward_deck.visual(
+        Cylinder(radius=0.03, length=0.05),
+        origin=Origin(xyz=(1.25, -0.12, 0.80), rpy=(0.0, math.pi / 2, 0.0)),
+        material=box_black,
+        name="camera_lens",
+    )
+
+    # ------------------------------------------------------------ aft deck
+    # The aft_deck local frame origin sits at the hinge point (0, 0, 0.42)
+    # in world. All aft-deck visuals are expressed relative to that origin,
+    # so Z values are shifted by -0.42 from their world positions.
+    aft_deck = model.part("aft_deck")
+    _zo = -0.42  # z_offset: world Z → aft_deck local Z
+
+    # Aft floor pan: world center (-0.65, 0, 0.42) → local (-0.65, 0, 0).
+    aft_deck.visual(
+        Box((DECK_HALF, 1.44, 0.05)),
+        origin=Origin(xyz=(DECK_CENTER_AFT, 0.0, 0.0)),
+        material=alum,
+        name="floor_pan_aft",
+    )
+    for side, sy in (("left", 1.0), ("right", -1.0)):
+        aft_deck.visual(
+            Box((DECK_HALF, 0.06, 0.10)),
+            origin=Origin(xyz=(DECK_CENTER_AFT, sy * 0.69, 0.0)),
+            material=alum,
+            name=f"side_rail_{side}_aft",
+        )
+    # Aft cross rail.
+    aft_deck.visual(
+        Box((0.06, 1.38, 0.08)),
+        origin=Origin(xyz=(-1.0, 0.0, 0.40 + _zo)),
+        material=alum,
+        name="cross_rail_0",
+    )
+
+    # Rear wheel stations (Z shifted to aft_deck local frame).
+    for wname in ("rear_left", "rear_right"):
+        wx, wy = WHEEL_POSITIONS[wname]
+        _add_wheel_station(aft_deck, wname, wx, wy, alum, fender_tan, fender_mesh, z_off=_zo)
+
+    # Two webbed seats with backrests (rear of deck, visible seatbacks in photo).
+    for side, sy in (("left", 1.0), ("right", -1.0)):
+        aft_deck.visual(
+            Box((0.45, 0.42, 0.04)),
+            origin=Origin(xyz=(-0.15, sy * 0.35, 0.72 + _zo)),
+            material=webbing_tan,
+            name=f"seat_pan_{side}",
+        )
+        aft_deck.visual(
+            Box((0.05, 0.42, 0.52)),
+            origin=Origin(xyz=(-0.385, sy * 0.35, 0.98 + _zo)),
+            material=webbing_tan,
+            name=f"seat_back_{side}",
+        )
+        for j, (lx, ly) in enumerate(((0.18, 0.17), (0.18, -0.17), (-0.18, 0.17), (-0.18, -0.17))):
+            aft_deck.visual(
+                Box((0.04, 0.04, 0.26)),
+                origin=Origin(xyz=(-0.15 + lx, sy * 0.35 + ly, 0.5725 + _zo)),
+                material=alum,
+                name=f"seat_leg_{side}_{j}",
+            )
+
+    # ------------------------------------------------ deck fold hinge
+    # REVOLUTE fold hinge about the lateral Y axis at the center cross-rail,
+    # reproducing the real LRV tri-fold stowage break.
+    # Positive q folds the aft section upward (+Z) over the forward deck.
+    model.articulation(
+        "deck_fold_hinge",
+        ArticulationType.REVOLUTE,
+        parent=forward_deck,
+        child=aft_deck,
+        origin=Origin(xyz=(0.0, 0.0, 0.42)),
+        axis=(0.0, 1.0, 0.0),
+        motion_limits=MotionLimits(effort=50.0, velocity=0.5, lower=0.0, upper=math.pi),
+    )
+
+    # -------------------------------------------------------------- wheels
+    tire_mesh = mesh_from_geometry(
+        TireGeometry(
+            WHEEL_RADIUS,
+            WHEEL_WIDTH,
+            inner_radius=0.30,
+            carcass=TireCarcass(belt_width_ratio=0.70, sidewall_bulge=0.05),
+            tread=TireTread(style="chevron", depth=0.014, count=24, angle_deg=30.0, land_ratio=0.55),
+            sidewall=TireSidewall(style="rounded", bulge=0.05),
+            shoulder=TireShoulder(width=0.012, radius=0.006),
+        ),
+        "lrv_tire",
+    )
+    disc_mesh = mesh_from_geometry(
+        WheelGeometry(
+            0.31,
+            0.20,
+            rim=WheelRim(
+                inner_radius=0.27,
+                flange_height=0.012,
+                flange_thickness=0.006,
+                bead_seat_depth=0.004,
+            ),
+            hub=WheelHub(radius=0.06, width=0.14, cap_style="domed"),
+            face=WheelFace(dish_depth=0.02, front_inset=0.01, rear_inset=0.01),
+            spokes=WheelSpokes(style="split_y", count=8, thickness=0.012, window_radius=0.04),
+        ),
+        "lrv_wheel_disc",
+    )
+
+    # Front wheels parent to forward_deck; rear wheels parent to aft_deck.
+    # Rear wheel articulation origins must be in the aft_deck local frame
+    # (shifted by -0.42 in Z from world).
+    wheel_parents = {
+        "front_left": forward_deck,
+        "front_right": forward_deck,
+        "rear_left": aft_deck,
+        "rear_right": aft_deck,
+    }
+    wheel_z_offsets = {
+        "front_left": 0.0,
+        "front_right": 0.0,
+        "rear_left": -0.42,
+        "rear_right": -0.42,
+    }
+    for wname, (wx, wy) in WHEEL_POSITIONS.items():
+        wheel = model.part(f"wheel_{wname}")
+        # Wheel helpers spin about local X; yaw +90deg aligns them to the Y axle.
+        wheel.visual(
+            tire_mesh,
+            origin=Origin(rpy=(0.0, 0.0, math.pi / 2)),
+            material=tread_dark,
+            name="tire",
+        )
+        wheel.visual(
+            disc_mesh,
+            origin=Origin(rpy=(0.0, 0.0, math.pi / 2)),
+            material=mesh_silver,
+            name="wheel_disc",
+        )
+        model.articulation(
+            f"chassis_to_wheel_{wname}",
+            ArticulationType.CONTINUOUS,
+            parent=wheel_parents[wname],
+            child=wheel,
+            origin=Origin(xyz=(wx, wy, AXLE_Z + wheel_z_offsets[wname])),
+            axis=(0.0, 1.0, 0.0),
+            motion_limits=MotionLimits(effort=30.0, velocity=10.0),
+        )
+
+    # ---------------------------------------------------- rear equipment rack
+    rack = model.part("rear_equipment_rack")
+    # Local frame at the rear deck edge, on the deck top plane.
+    for side, sy in (("left", 1.0), ("right", -1.0)):
+        rack.visual(
+            Box((0.30, 0.05, 0.04)),
+            origin=Origin(xyz=(0.08, sy * 0.45, 0.015)),
+            material=alum,
+            name=f"rack_base_rail_{side}",
+        )
+        rack.visual(
+            Box((0.05, 0.05, 0.55)),
+            origin=Origin(xyz=(-0.05, sy * 0.45, 0.29)),
+            material=alum,
+            name=f"rack_post_{side}",
+        )
+        rack.visual(
+            Box((0.08, 0.05, 0.05)),
+            origin=Origin(xyz=(-0.09, sy * 0.45, 0.455)),
+            material=alum,
+            name=f"rack_pallet_stub_{side}",
+        )
+    rack.visual(
+        Box((0.30, 0.95, 0.04)),
+        origin=Origin(xyz=(0.08, 0.0, 0.015)),
+        material=alum,
+        name="rack_base_rail_center",
+    )
+    rack.visual(
+        Box((0.05, 0.95, 0.05)),
+        origin=Origin(xyz=(-0.05, 0.0, 0.555)),
+        material=alum,
+        name="rack_top_rail",
+    )
+    # Tool pallet plate hanging off the rear of the rack.
+    rack.visual(
+        Box((0.04, 0.95, 0.50)),
+        origin=Origin(xyz=(-0.12, 0.0, 0.355)),
+        material=alum,
+        name="tool_pallet_plate",
+    )
+    # Hand-tool handles racked on the pallet, poking above it.
+    for i, ty in enumerate((-0.25, 0.0, 0.25)):
+        rack.visual(
+            Cylinder(radius=0.012, length=0.45),
+            origin=Origin(xyz=(-0.14, ty, 0.615)),
+            material=box_black,
+            name=f"tool_handle_{i}",
+        )
+    # Sample collection bag hooked on the pallet.
+    rack.visual(
+        Box((0.10, 0.18, 0.22)),
+        origin=Origin(xyz=(-0.07, -0.30, 0.495)),
+        material=webbing_tan,
+        name="sample_bag",
+    )
+    model.articulation(
+        "chassis_to_rear_rack",
+        ArticulationType.FIXED,
+        parent=aft_deck,
+        child=rack,
+        # Rack mount in aft_deck local frame: world (-1.30, 0, 0.445) → local (-1.30, 0, 0.025).
+        origin=Origin(xyz=(-1.30, 0.0, DECK_TOP - 0.42)),
+    )
+
+    # ------------------------------------------------------ high-gain antenna
+    hga = model.part("high_gain_antenna")
+    hga.visual(
+        Cylinder(radius=0.02, length=0.80),
+        origin=Origin(xyz=(0.0, 0.0, 0.355)),
+        material=alum,
+        name="hga_mast",
+    )
+    hga.visual(
+        Box((0.06, 0.06, 0.10)),
+        origin=Origin(xyz=(0.0, 0.0, 0.79)),
+        material=box_black,
+        name="hga_gimbal",
+    )
+    # Umbrella wire-mesh dish: thin revolved shell, tilted back toward Earth.
+    dish_mesh = mesh_from_geometry(
+        LatheGeometry.from_shell_profiles(
+            [(0.015, 0.0), (0.10, 0.032), (0.20, 0.072), (0.31, 0.125)],
+            [(0.015, 0.007), (0.10, 0.039), (0.20, 0.079), (0.31, 0.132)],
+            segments=40,
+        ),
+        "hga_dish",
+    )
+    hga.visual(
+        dish_mesh,
+        origin=Origin(xyz=(0.0, 0.0, 0.87), rpy=(0.0, DISH_TILT, 0.0)),
+        material=dish_bright,
+        name="hga_dish",
+    )
+    # Hub stub ties the dish apex down into the gimbal block.
+    hga.visual(
+        Cylinder(radius=0.02, length=0.12),
+        origin=Origin(xyz=_dish_axis_point(-0.03), rpy=(0.0, DISH_TILT, 0.0)),
+        material=alum,
+        name="hga_hub_stub",
+    )
+    # Feed rod + feed tip along the dish axis.
+    hga.visual(
+        Cylinder(radius=0.007, length=0.30),
+        origin=Origin(xyz=_dish_axis_point(0.15), rpy=(0.0, DISH_TILT, 0.0)),
+        material=alum,
+        name="hga_feed_rod",
+    )
+    hga.visual(
+        Sphere(radius=0.02),
+        origin=Origin(xyz=_dish_axis_point(0.30)),
+        material=box_black,
+        name="hga_feed_tip",
+    )
+    model.articulation(
+        "chassis_to_high_gain_antenna",
+        ArticulationType.REVOLUTE,
+        parent=forward_deck,
+        child=hga,
+        origin=Origin(xyz=(1.05, 0.35, DECK_TOP)),
+        axis=(0.0, 0.0, 1.0),
+        motion_limits=MotionLimits(effort=5.0, velocity=1.0, lower=-2.6, upper=2.6),
+    )
+
+    # -------------------------------------------------- T-handle hand controller
+    controller = model.part("hand_controller")
+    controller.visual(
+        Cylinder(radius=0.015, length=0.18),
+        origin=Origin(xyz=(0.0, 0.0, 0.07)),
+        material=box_black,
+        name="controller_stem",
+    )
+    controller.visual(
+        Box((0.04, 0.14, 0.035)),
+        origin=Origin(xyz=(0.0, 0.0, 0.175)),
+        material=box_black,
+        name="controller_grip",
+    )
+    model.articulation(
+        "chassis_to_hand_controller",
+        ArticulationType.REVOLUTE,
+        parent=forward_deck,
+        child=controller,
+        origin=Origin(xyz=(0.40, 0.0, 0.78)),
+        axis=(0.0, 1.0, 0.0),
+        motion_limits=MotionLimits(effort=2.0, velocity=2.0, lower=-0.35, upper=0.35),
+    )
+
+    return model
+
+
+def run_tests() -> TestReport:
+    ctx = TestContext(object_model)
+
+    forward_deck = object_model.get_part("forward_deck")
+    aft_deck = object_model.get_part("aft_deck")
+    rack = object_model.get_part("rear_equipment_rack")
+    hga = object_model.get_part("high_gain_antenna")
+    controller = object_model.get_part("hand_controller")
+    swivel = object_model.get_articulation("chassis_to_high_gain_antenna")
+    tilt = object_model.get_articulation("chassis_to_hand_controller")
+    fold = object_model.get_articulation("deck_fold_hinge")
+
+    # --- intentional embeddings -------------------------------------------
+    # Front wheel axle captures on forward_deck.
+    for wname in ("front_left", "front_right"):
+        ctx.allow_overlap(
+            forward_deck,
+            object_model.get_part(f"wheel_{wname}"),
+            elem_a=f"axle_{wname}",
+            elem_b="wheel_disc",
+            reason="Axisymmetric axle stub is intentionally captured inside the spinning hub.",
+        )
+    # Rear wheel axle captures on aft_deck.
+    for wname in ("rear_left", "rear_right"):
+        ctx.allow_overlap(
+            aft_deck,
+            object_model.get_part(f"wheel_{wname}"),
+            elem_a=f"axle_{wname}",
+            elem_b="wheel_disc",
+            reason="Axisymmetric axle stub is intentionally captured inside the spinning hub.",
+        )
+    # Rack base rails seat into aft deck floor pan.
+    for side in ("left", "right"):
+        ctx.allow_overlap(
+            aft_deck,
+            rack,
+            elem_a="floor_pan_aft",
+            elem_b=f"rack_base_rail_{side}",
+            reason="Rack base rails seat 5 mm into the deck pan as a bolted mount proxy.",
+        )
+    ctx.allow_overlap(
+        aft_deck,
+        rack,
+        elem_a="floor_pan_aft",
+        elem_b="rack_base_rail_center",
+        reason="Center rack rail seats 5 mm into the deck pan as a bolted mount proxy.",
+    )
+    # Antenna mast socketed into forward deck.
+    ctx.allow_overlap(
+        forward_deck,
+        hga,
+        elem_a="floor_pan_forward",
+        elem_b="hga_mast",
+        reason="Antenna mast root is intentionally socketed into the deck pan.",
+    )
+    # Controller stem captured in console.
+    ctx.allow_overlap(
+        forward_deck,
+        controller,
+        elem_a="console_body",
+        elem_b="controller_stem",
+        reason="Controller stem is a captured pivot shaft inside the console proxy.",
+    )
+
+    # --- deck fold hinge (primary structural topology change) -------------
+    jt = fold.articulation_type
+    ctx.check(
+        "deck_fold_hinge is REVOLUTE",
+        jt == ArticulationType.REVOLUTE or str(jt).lower() == "revolute",
+        details=f"type={jt}",
+    )
+    ctx.check(
+        "deck_fold_hinge axis is lateral Y",
+        abs(fold.axis[1]) > 0.99,
+        details=f"axis={fold.axis}",
+    )
+    # At rest (q=0), the two deck halves form one continuous flat deck.
+    ctx.expect_contact(
+        forward_deck,
+        aft_deck,
+        name="forward and aft decks meet at the fold hinge line",
+    )
+    # Pose: fold the aft section upward.
+    aft_rest_z = ctx.part_world_aabb(aft_deck)
+    with ctx.pose({fold: 1.2}):
+        aft_folded_z = ctx.part_world_aabb(aft_deck)
+        folded_up = (
+            aft_rest_z is not None
+            and aft_folded_z is not None
+            and aft_folded_z[1][2] > aft_rest_z[1][2] + 0.2
+        )
+        ctx.check(
+            "fold hinge raises the aft deck upward for stowage",
+            folded_up,
+            details=f"rest_aabb={aft_rest_z}, folded_aabb={aft_folded_z}",
+        )
+
+    # --- four spinning mesh wheels on the ground ---------------------------
+    for wname, (wx, wy) in WHEEL_POSITIONS.items():
+        wheel = object_model.get_part(f"wheel_{wname}")
+        joint = object_model.get_articulation(f"chassis_to_wheel_{wname}")
+        jt = joint.articulation_type
+        ctx.check(
+            f"wheel joint {wname} is continuous spin",
+            jt == ArticulationType.CONTINUOUS or str(jt).lower().endswith("continuous"),
+            details=f"type={jt}",
+        )
+        ctx.check(
+            f"wheel joint {wname} spins about the lateral Y axle",
+            abs(joint.axis[1]) > 0.99,
+            details=f"axis={joint.axis}",
+        )
+        aabb = ctx.part_world_aabb(wheel)
+        ctx.check(
+            f"wheel {wname} touches the lunar surface",
+            aabb is not None and abs(aabb[0][2]) <= 0.02,
+            details=f"aabb={aabb}",
+        )
+        # Tan fender covers the wheel from above.
+        deck_owner = forward_deck if wname.startswith("front") else aft_deck
+        fender_elem = f"fender_{wname}"
+        ctx.expect_overlap(
+            deck_owner,
+            wheel,
+            elem_a=fender_elem,
+            axes="xy",
+            min_overlap=0.12,
+            name=f"fender covers wheel {wname} in plan view",
+        )
+        fender_aabb = ctx.part_element_world_aabb(deck_owner, elem=fender_elem)
+        ctx.check(
+            f"fender {wname} arches above the wheel crown",
+            fender_aabb is not None and aabb is not None and fender_aabb[1][2] > aabb[1][2] + 0.02,
+            details=f"fender={fender_aabb}, wheel={aabb}",
+        )
+
+    # --- rear equipment rack / tool pallet (hero of this photo) ------------
+    ctx.expect_origin_gap(
+        aft_deck,
+        rack,
+        axis="x",
+        min_gap=1.0,
+        name="equipment rack hangs off the rear of the aft deck",
+    )
+    rack_aabb = ctx.part_world_aabb(rack)
+    ctx.check(
+        "rear rack sits fully behind the rear axle area",
+        rack_aabb is not None and rack_aabb[1][0] < -1.0,
+        details=f"aabb={rack_aabb}",
+    )
+    ctx.check(
+        "tool handles rise above the pallet",
+        rack_aabb is not None and rack_aabb[1][2] > 1.15,
+        details=f"aabb={rack_aabb}",
+    )
+    rack.get_visual("tool_pallet_plate")
+    rack.get_visual("sample_bag")
+
+    # --- seats with backrests ----------------------------------------------
+    for side in ("left", "right"):
+        pan = ctx.part_element_world_aabb(aft_deck, elem=f"seat_pan_{side}")
+        back = ctx.part_element_world_aabb(aft_deck, elem=f"seat_back_{side}")
+        ctx.check(
+            f"seat backrest {side} rises above the seat pan",
+            pan is not None and back is not None and back[1][2] > pan[1][2] + 0.3,
+            details=f"pan={pan}, back={back}",
+        )
+
+    # --- umbrella high-gain antenna swivels --------------------------------
+    dish_aabb = ctx.part_element_world_aabb(hga, elem="hga_dish")
+    ctx.check(
+        "umbrella dish rides high on the forward mast",
+        dish_aabb is not None and dish_aabb[0][2] > 1.1,
+        details=f"dish={dish_aabb}",
+    )
+    rest_center = None
+    if dish_aabb is not None:
+        rest_center = tuple((lo + hi) / 2.0 for lo, hi in zip(dish_aabb[0], dish_aabb[1]))
+    with ctx.pose({swivel: 2.0}):
+        posed = ctx.part_element_world_aabb(hga, elem="hga_dish")
+        posed_center = None
+        if posed is not None:
+            posed_center = tuple((lo + hi) / 2.0 for lo, hi in zip(posed[0], posed[1]))
+        moved = (
+            rest_center is not None
+            and posed_center is not None
+            and math.dist(rest_center, posed_center) > 0.04
+        )
+        ctx.check(
+            "mast swivel slews the tilted dish",
+            moved,
+            details=f"rest={rest_center}, posed={posed_center}",
+        )
+
+    # --- T-handle controller tilts forward/back ----------------------------
+    grip_rest = ctx.part_element_world_aabb(controller, elem="controller_grip")
+    with ctx.pose({tilt: 0.35}):
+        grip_posed = ctx.part_element_world_aabb(controller, elem="controller_grip")
+        moved = (
+            grip_rest is not None
+            and grip_posed is not None
+            and abs(grip_posed[0][0] - grip_rest[0][0]) > 0.03
+        )
+        ctx.check(
+            "hand controller grip tilts along the driving axis",
+            moved,
+            details=f"rest={grip_rest}, posed={grip_posed}",
+        )
+
+    return ctx.report()
+
+
+object_model = build_object_model()

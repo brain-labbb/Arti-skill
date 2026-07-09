@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-faucet-count-6-give-the-t-style-beverage_20260617_141101_317769_8e718f1c",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T14:11:01Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "91b900e88b9782a481e294f254231cbbaa3f3fa0b8d0e7686b48075ed4a28aa3",
+  "source": {
+    "run_id": "run_20260617_141101_317769_8e718f1c",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "91b900e88b9782a481e294f254231cbbaa3f3fa0b8d0e7686b48075ed4a28aa3",
+    "model_py_sha256": "6c60bace2e1520cdcceb1d5f650dcc12060f007967f3fa91376faf8a92f7a7a2"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 10,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-four-tap-t-style-countertop-beverage-dis_20260610_084923_661531_3f3a9da3",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-four-tap-t-style-countertop-beverage-dis_20260610_084923_661531_3f3a9da3",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

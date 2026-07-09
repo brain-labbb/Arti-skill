@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_defibrillator_case_var_hardshell_case",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T04:03:15Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "388373db31693bfdbd6c3baf7f2bce205f39c3df1e2c00e6ea6d0921e230dce4",
+  "source": {
+    "run_id": "run_20260709_040315_781526_ffe87036",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "388373db31693bfdbd6c3baf7f2bce205f39c3df1e2c00e6ea6d0921e230dce4",
+    "model_py_sha256": "ea7da1df9cd8560aa8a3cf044c018c9539861583490d72bb2f10d93a1b52b892"
+  },
+  "run_summary": {
+    "turn_count": 15,
+    "tool_call_count": 17,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_emergency_equipment__defibrillator_case_4aa24e0337dd40a396b6e21015f06fc2",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_emergency_equipment__defibrillator_case_4aa24e0337dd40a396b6e21015f06fc2",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_emergency_equipment__defibrillator_case_4aa24e0337dd40a396b6e21015f06fc2",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "9a80d51950c1da6adf036172d458428da9207e7e1dbb65a4f4efd269deb65d27"
+    }
+  ]
+}

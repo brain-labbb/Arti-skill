@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_bottle_002_v04",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-12T07:52:22Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "8e5c1aff7801e71812fd8f258236e6f3c0f3bb2c2739576df47863c78f97aa9b",
+  "source": {
+    "run_id": "run_20260612_075222_739384_28bf5a36",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "8e5c1aff7801e71812fd8f258236e6f3c0f3bb2c2739576df47863c78f97aa9b",
+    "model_py_sha256": "05fd9937e675a7731923280c9617a836c10327ce5e3f34c6679e567e61319b7e"
+  },
+  "run_summary": {
+    "turn_count": 19,
+    "tool_call_count": 21,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_clear-plastic-bottle-with-a-tapered-shoulder-and_20260606_074513_615237_520b07e4",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_clear-plastic-bottle-with-a-tapered-shoulder-and_20260606_074513_615237_520b07e4",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

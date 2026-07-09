@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_model-a-vintage-playground-seesaw-about-3-0-m-lo_20260610_085246_107703_152f9b4a",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-10T08:52:46Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "40b099f29f79b1c88cc848d5c34bbe5179ce7e27cebb4da74a9e93cab91fc1fe",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "40b099f29f79b1c88cc848d5c34bbe5179ce7e27cebb4da74a9e93cab91fc1fe",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-11T03:19:29Z",
+    "record_id": "rec_model-a-vintage-playground-seesaw-about-3-0-m-lo_20260610_085246_107703_152f9b4a",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-a-vintage-playground-seesaw-about-3-0-m-lo_20260610_085246_107703_152f9b4a/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-a-vintage-playground-seesaw-about-3-0-m-lo_20260610_085246_107703_152f9b4a",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "f72da8f2164ac668aee7495e8b8809198d189ca05e6bd51d2f3b7cb731207e6a",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "db0c4744a0be0a7870552d4e02f6f4226252fd1db70ba51bc5c62532df2fd38f",
+        "model_py_mtime_ns": 1781145293439104179,
+        "model_py_size_bytes": 13255,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 335210,
+        "visual_mesh_file_count": 7,
+        "compile_elapsed_seconds": 1.798146964982152
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

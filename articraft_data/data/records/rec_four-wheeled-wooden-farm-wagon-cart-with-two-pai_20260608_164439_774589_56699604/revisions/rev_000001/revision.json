@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_four-wheeled-wooden-farm-wagon-cart-with-two-pai_20260608_164439_774589_56699604",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-08T16:44:39Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "7c3556dabf38bab8a9476775ac36da44dfcdb33eddd6921c3ccaf8db1c376066",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "7c3556dabf38bab8a9476775ac36da44dfcdb33eddd6921c3ccaf8db1c376066",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-08T17:03:20Z",
+    "record_id": "rec_four-wheeled-wooden-farm-wagon-cart-with-two-pai_20260608_164439_774589_56699604",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_four-wheeled-wooden-farm-wagon-cart-with-two-pai_20260608_164439_774589_56699604/compile_report.json",
+      "status": "success",
+      "record_id": "rec_four-wheeled-wooden-farm-wagon-cart-with-two-pai_20260608_164439_774589_56699604",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 10 overlaps across 5 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "8eca6d744fc234cf38c7f27dc0ad7e1d2932b10bd16373b4c0c5e68755ecb8e6",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "f8214c8627d9436b947dae0b84a892e56cc191a6357964f496a9b76e95144542",
+        "model_py_mtime_ns": 1780938047871599018,
+        "model_py_size_bytes": 18672,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 339740,
+        "visual_mesh_file_count": 7,
+        "compile_elapsed_seconds": 1.4437886644154787
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

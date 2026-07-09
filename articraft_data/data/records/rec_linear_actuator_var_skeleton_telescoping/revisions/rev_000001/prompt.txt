@@ -1,0 +1,26 @@
+CATEGORY: Robotics
+SUBCATEGORY: Linear actuator
+TARGET: change the single-carriage-on-`rail_extrusion` topology (one `frame_to_carriage` PRISMATIC) into a serial telescoping nested-tube column of 3 stages, each a PRISMATIC joint.
+DIVERSITY_AXIS: ① skeleton / structural topology (single prismatic carriage on a flat rail -> serial nested telescoping prismatic chain).
+POSITIONING: real telescopic rod / multi-stage column linear actuator (nested tubes extend along one axis); it stays a linear actuator (single-axis powered extension with a visible screw drive), not a passive furniture desk/TV lift column.
+KEEP: preserve these parent functional layers by name: frame, rail_extrusion, motor_block, lead_screw, screw_core, frame_to_lead_screw.
+STRUCTURAL_DELTA: replace the flat rail + single carriage with 3 nested tubes `stage_{i}` emitted by a for-i-in-range(3) loop with a shared tube helper and regular decreasing cross-section; the base tube fixes to `frame`, and each inner `stage_{i}` is a PRISMATIC child of the next-outer stage along +X via `stage_slide_{i}` (serial chain), the outermost stage acting as the moving rod; keep the central `lead_screw` as the drivetrain that pushes the innermost stage. Each stage nests inside its parent tube with a sliding fit (no floating parts).
+MULTIPLICITY: this ① fork carries N=3 nested stages; serial coaxial chain along +X, each stage a prismatic child of its outer neighbor with uniform sliding limits.
+COMPANION_VARIATIONS: may retune tube proportion and palette only; no drive-mechanism or joint-type change.
+FORBIDDEN: do not drift into a furniture lift column, a bare screw jack, or a passive telescoping guide; do not change the drive mechanism; change only the skeleton/topology.
+COMPATIBILITY_PROBE:
+
+This is a Robotics/Linear actuator family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Robotics/Linear actuator (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_loom_shuttle_var_mechanism_spindle_arm",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T13:56:07Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "10552ba22e2df798ec37a0dbc81bf30315b4d163229faec314dd3d758391356a",
+  "source": {
+    "run_id": "run_20260709_135607_238332_eb655758",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "10552ba22e2df798ec37a0dbc81bf30315b4d163229faec314dd3d758391356a",
+    "model_py_sha256": "7ce2db369c275f6dab7b463a004b4c1ab36647433239df5da928f9823ba97fba"
+  },
+  "run_summary": {
+    "turn_count": 21,
+    "tool_call_count": 21,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_textiles_fabric__loom_shuttle__002_png_c079a66081a7476caabf59d4c24e4019",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_textiles_fabric__loom_shuttle__002_png_c079a66081a7476caabf59d4c24e4019",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_textiles_fabric__loom_shuttle__002_png_c079a66081a7476caabf59d4c24e4019",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "e8a5931004da4ad691d792a4eae811eb4d29153eab8e7252c65efa9bd9a90efd"
+    }
+  ]
+}

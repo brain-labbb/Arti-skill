@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_nokia-3310-candybar-mobile-phone-dark-blue-with-_20260605_174005_164763_8c6bf79a",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-05T17:40:05Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "82ef8c82da71a4494e7ede7278874116383bea5be2a9c8612c1f3ebfb40947d6",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "82ef8c82da71a4494e7ede7278874116383bea5be2a9c8612c1f3ebfb40947d6",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-07T14:27:57Z",
+    "record_id": "rec_nokia-3310-candybar-mobile-phone-dark-blue-with-_20260605_174005_164763_8c6bf79a",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_nokia-3310-candybar-mobile-phone-dark-blue-with-_20260605_174005_164763_8c6bf79a/compile_report.json",
+      "status": "success",
+      "record_id": "rec_nokia-3310-candybar-mobile-phone-dark-blue-with-_20260605_174005_164763_8c6bf79a",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "e6112e51e80ab2e5df6fa93e0898c6295e0cf0f04e2599fc2f86f10d169094c7",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "d3a9a954d9b73831549278e7b17e8eb995a5e4ebf2512f565366a6c23801a59d",
+        "model_py_mtime_ns": 1780842456190876786,
+        "model_py_size_bytes": 15828,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 94097,
+        "visual_mesh_file_count": 19,
+        "compile_elapsed_seconds": 1.8743434976786375
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

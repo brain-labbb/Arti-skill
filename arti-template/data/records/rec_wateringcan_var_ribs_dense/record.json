@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_wateringcan_var_ribs_dense",
+  "created_at": "2026-07-05T09:43:06Z",
+  "updated_at": "2026-07-05T09:45:07Z",
+  "rating": 5,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "watering_can",
+  "source": {
+    "run_id": "run_20260705_094306_041764_63af6abf",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "wateringcan-ribs_dense",
+    "prompt_preview": "TARGET: Re-emit the corrugation rib bands `body_seam_{i}` as a loop `for i in range(rib_count)` with rib_count=6, evenly spaced in z between `rolled_foot` an..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "65fce78359324d9cdc7ec9094c32f3d8bf9dd62166a19076b6f9e52674c13aa1",
+    "model_py_sha256": "1b250d6d10f74d8cf72fb8e0e2eb8b01f8197cb0f986e90b93b24f6b72aba39a"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_522892_2134a642",
+    "parent_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_522892_2134a642",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

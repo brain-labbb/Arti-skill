@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_cabinet_002_v30",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-12T07:04:25Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "bd7e236cd25c5c6dad4882b46eea73021961ee2840bc88b95ca4e874fce8c626",
+  "source": {
+    "run_id": "run_20260612_070425_067417_ff053d6b",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "bd7e236cd25c5c6dad4882b46eea73021961ee2840bc88b95ca4e874fce8c626",
+    "model_py_sha256": "3c8aef0b18784fff90d4970467a24cf7062420a1839feaf6de4068d9942a712b"
+  },
+  "run_summary": {
+    "turn_count": 20,
+    "tool_call_count": 19,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-wide-black-wooden-dresser-double-dresser_20260610_083741_441368_58f0953c",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-wide-black-wooden-dresser-double-dresser_20260610_083741_441368_58f0953c",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

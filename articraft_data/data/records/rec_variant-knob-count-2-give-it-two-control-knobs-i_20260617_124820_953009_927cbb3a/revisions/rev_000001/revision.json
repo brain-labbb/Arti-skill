@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-knob-count-2-give-it-two-control-knobs-i_20260617_124820_953009_927cbb3a",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T12:48:20Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "8c5483930c6074c77241ad19fb0e5c95ed26e1052baa59c7e8b0484f2cfe0e1b",
+  "source": {
+    "run_id": "run_20260617_124820_953009_927cbb3a",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "8c5483930c6074c77241ad19fb0e5c95ed26e1052baa59c7e8b0484f2cfe0e1b",
+    "model_py_sha256": "9e1ac1ba65ca6a6223ca023f4c8736d2c9c139bfdbb5d5cb1895e2e8592c7393"
+  },
+  "run_summary": {
+    "turn_count": 12,
+    "tool_call_count": 11,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-vintage-1980s-samsung-crt-television-in-_20260610_084618_066506_f8f3f341",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-vintage-1980s-samsung-crt-television-in-_20260610_084618_066506_f8f3f341",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,15 @@
+Create a highly detailed, articulated 3D model of a pair of dark browline / clubmaster-style sunglasses that PRECISELY matches the attached reference image. Match the reference closely in shape, proportion, color and material.
+
+Visible features to reproduce faithfully:
+- A chunky, glossy upper brow bar (browline) spanning across both eyes, with a marbled gunmetal-grey / dark sheen — it is the heavy, dominant top portion of the frame.
+- Large, smoky / mirrored dark-grey lenses (rounded-rectangular, slightly tapered toward the outer corners).
+- A thin polished-metal lower half-rim wrapping the bottom edge of each lens (the lenses are rimless along the bottom except this thin metal wire).
+- A short bridge connecting the two brow halves over the nose, with small nose pads on stems.
+- Broad, dark temple arms that are wide and flat near the hinge and taper toward the ear tip.
+- Metal hinge blocks at the outer top corners where the brow meets each temple arm.
+
+Primary articulation (must be real, user-facing): the folding of BOTH temple arms at the hinge blocks. Each temple arm is a separate revolute joint that swings the arm from open/extended to folded flat against the front of the frame. Both arms must actually rotate.
+
+Quality bar: use curved/compound geometry (lathe, CadQuery, lofts, sweeps) for the brow bar, lenses and lower rims instead of boxy placeholders. Dark glossy material for the brow bar and temple arms, a smoky translucent (slightly mirrored) material for the lenses, and polished metal for the lower rim wire and hinge blocks. Connected structure, no floating parts, no unintended overlaps, semantic link names.
+
+Add prompt-specific run_tests() that assert: (1) exactly two temple-arm revolute joints that fold through a meaningful angle, (2) a single continuous brow bar across the top connecting both eyes, (3) two smoky lenses, each with a thin lower metal rim, (4) the brow bar uses a dark glossy material, (5) no floating/disconnected parts. Keep it a workbench object.

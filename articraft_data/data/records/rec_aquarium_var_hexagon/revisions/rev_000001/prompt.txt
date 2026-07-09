@@ -1,0 +1,24 @@
+CATEGORY: Pet_Animal related
+SUBCATEGORY: Aquarium
+TARGET: change the four-pane rectangular glass wall of tank_frame to a six-panel hexagonal glass prism.
+DIVERSITY_AXIS: ③ primary form family.
+POSITIONING: Hexagonal corner aquarium (six-sided glass tank) sold as a corner/feature display tank; stays an Aquarium because it is a transparent water-holding glass basin with a black frame, hinged hood, filter, gravel bed and rooted plants.
+KEEP: preserve these parent functional layers by name: tank_frame, bottom_glass, base_front_rail, top_front_rail, substrate, gravel_bed, filter, filter_housing, intake_tube, hood, hood_shell, light_diffuser, control_panel, feed_flap, flap_panel, tank_to_hood, hood_to_feed_flap.
+STRUCTURAL_DELTA: Replace the four wall panes with six flat glass panels arranged as a regular (or elongated) hexagonal prism, emitted with a loop over the six sides using a shared helper and stable indexed names (wall_glass_0..5, corner_post_0..5). Give bottom_glass, base rail ring, top rim ring and gravel bed a matching hexagonal footprint. Reshape hood_shell to a hexagonal lid on the same rear tank_to_hood revolute hinge; keep the feed_flap nested revolute. Change body form only.
+COMPANION_VARIATIONS: optional glass tint palette only; no joint graph or filter change.
+FORBIDDEN: cylinder tank, fish bowl, terrarium/vivarium, aquarium stand (furniture); do not also change hood mechanism, filter type, or plant count.
+
+This is a Pet_Animal related/Aquarium family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Pet_Animal related/Aquarium (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

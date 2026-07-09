@@ -1,0 +1,26 @@
+CATEGORY: Textiles_Fabric
+SUBCATEGORY: Tailor's dummy
+TARGET: change the base part's radial tripod legs (tripod_leg_0..3, foot_cap_0..3) to a single solid domed round cast-metal disc base.
+DIVERSITY_AXIS: ① skeleton/topology.
+POSITIONING: Weighted round cast-iron / domed-disc dress-form base (common on home adjustable dress forms); it stays a tailor's dummy because the fabric torso, telescoping pole, and sizing dials are unchanged and only the floor support topology changes.
+KEEP: preserve these parent functional layers by name: torso, torso_shell, height_pole, inner_pole, outer_sleeve, height_collar, base_to_height_pole, collar_knob, neck_knob, front_dial_0, front_dial_1, front_dial_2.
+STRUCTURAL_DELTA: Remove the four radial tripod_leg cylinders and their foot_cap spheres; replace with one solid round cast disc (flat-bottomed, gently domed top, diameter ~0.30 m) centered under the pole, plus a short pedestal collar where the outer_sleeve meets the disc. The pole seats vertically at the disc center; the disc rests flat on the floor. Keep the prismatic height mechanism and all dial/knob joints intact.
+MULTIPLICITY: n/a.
+COMPANION_VARIATIONS: cast-metal palette and disc diameter only; no part-tree, joint, interface, or primitive-family change beyond the base swap.
+FORBIDDEN: do not add arms, do not change the number of sizing dials, do not add casters/wheels, do not turn it into a mannequin, coat stand, or garment rack.
+COMPATIBILITY_PROBE: n/a.
+
+This is a Textiles_Fabric/Tailor's dummy family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Textiles_Fabric/Tailor's dummy (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_hospbed_var_hilo_column",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:57:52Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "8f22fefbe8fa242cc48ec09e29b59993ac6ebf95791964fd20fa4517c55038da",
+  "source": {
+    "run_id": "run_20260705_095752_264466_4a198347",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 5.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "8f22fefbe8fa242cc48ec09e29b59993ac6ebf95791964fd20fa4517c55038da",
+    "model_py_sha256": "b93a295e1f7c87153af8ea5fe2f1dcd4233a0b1eae67dd5e0e6055090e569258"
+  },
+  "run_summary": {
+    "turn_count": 8,
+    "tool_call_count": 8,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-single-section-adjustable-hospital-bed-a-recta_20260623_174436_818326_5bfade45",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-single-section-adjustable-hospital-bed-a-recta_20260623_174436_818326_5bfade45",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_a-single-section-adjustable-hospital-bed-a-recta_20260623_174436_818326_5bfade45",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "724deb79a1fde98fea7df02dd1270a0db865587cfac6ad5b32da506378813142"
+    }
+  ]
+}

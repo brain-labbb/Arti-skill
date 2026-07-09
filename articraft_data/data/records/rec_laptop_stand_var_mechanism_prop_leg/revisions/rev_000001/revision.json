@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_laptop_stand_var_mechanism_prop_leg",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T13:35:10Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "a413d1c1e3b6f02add2149e20b0adff275f354a008de7297c17eab94546a0e19",
+  "source": {
+    "run_id": "run_20260709_133510_152224_90635371",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a413d1c1e3b6f02add2149e20b0adff275f354a008de7297c17eab94546a0e19",
+    "model_py_sha256": "7ede1df047df931f7a696e8ea573b9822c693218d546e5e7e20e2ea125e86a4b"
+  },
+  "run_summary": {
+    "turn_count": 20,
+    "tool_call_count": 20,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_foldable-adjustable-aluminum-laptop-stand-with-s_20260708_044924_835691_defb8533",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_foldable-adjustable-aluminum-laptop-stand-with-s_20260708_044924_835691_defb8533",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_foldable-adjustable-aluminum-laptop-stand-with-s_20260708_044924_835691_defb8533",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "fded924c577326643f477f82170780e01adca28500d4d4de3ae63de7896e9f3b"
+    }
+  ]
+}

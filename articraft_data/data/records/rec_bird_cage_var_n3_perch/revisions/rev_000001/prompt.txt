@@ -1,0 +1,26 @@
+CATEGORY: Pet_Animal related
+SUBCATEGORY: Bird cage
+TARGET: change the perch count (lower_wood_perch, upper_wood_perch) to three stacked interior perches.
+DIVERSITY_AXIS: N multiplicity.
+POSITIONING: real multi-perch parrot/finch cage interior; same barred box enclosure, door, tray and casters, so it stays Bird cage.
+KEEP: preserve these parent functional layers by name: cage, door, latch, base_tray, side_vertical_*, door_hinge, latch_pivot, and the _add_rod helper.
+STRUCTURAL_DELTA: emit the interior perches from a single loop over a list of heights instead of two hand-placed rods, producing three parallel wood perch rods (perch_0, perch_1, perch_2) at evenly stepped z-levels, each seated across the side wires. No change to body, roof, door, or base.
+MULTIPLICITY: target N=3 perches; copied object = wood perch rod; placement = stacked at evenly spaced interior heights spanning the cage width; joint policy = fixed (dowel ends seated through opposing side wires), loop-emitted with stable indexed names perch_{i}.
+COMPANION_VARIATIONS: may keep wood palette.
+FORBIDDEN: do not add ladders, swings, or toys; do not change body form, door mechanism, or base; only the perch count/copy layout changes.
+COMPATIBILITY_PROBE:
+
+This is a Pet_Animal related/Bird cage family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Pet_Animal related/Bird cage (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-impeller-blade-count-3-give-the-fan-impe_20260617_135024_357608_4d21d205",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T13:50:24Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "b559862c777ebf1a98a4de4135c3518f523af3cc8a2608966951bad00e5733ba",
+  "source": {
+    "run_id": "run_20260617_135024_357608_4d21d205",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "b559862c777ebf1a98a4de4135c3518f523af3cc8a2608966951bad00e5733ba",
+    "model_py_sha256": "a554d31c68d62c407429fbe68758c83a93d022fcf2fa8f40fb66a73223b79394"
+  },
+  "run_summary": {
+    "turn_count": 8,
+    "tool_call_count": 7,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-square-wall-mounted-exhaust-ventilation-_20260610_084713_390960_4c3504f2",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-square-wall-mounted-exhaust-ventilation-_20260610_084713_390960_4c3504f2",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

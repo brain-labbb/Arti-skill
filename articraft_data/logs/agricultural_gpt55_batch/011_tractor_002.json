@@ -1,0 +1,27 @@
+{
+  "started_at": "2026-06-25T15:51:13Z",
+  "status": "success",
+  "item": {
+    "index": 11,
+    "category": "Agricultural",
+    "subcategory": "Tractor",
+    "image_path": "/mnt/zsn/lyb/arti-skill/articraft_data/picture/Agricultural/Tractor/002.png",
+    "image_rel": "picture/Agricultural/Tractor/002.png",
+    "record_hint": "rec_agricultural_gpt55_tractor_002",
+    "result_path": "/mnt/zsn/lyb/arti-skill/articraft_data/logs/agricultural_gpt55_batch/011_tractor_002.json",
+    "log_path": "/mnt/zsn/lyb/arti-skill/articraft_data/logs/agricultural_gpt55_batch/011_tractor_002.log"
+  },
+  "provider": "openai",
+  "model_id": "gpt-5.5",
+  "thinking_level": "high",
+  "prompt": "Use the attached reference image as the primary visual source.\nCreate one high-quality articulated 3D Articraft asset for picture/Agricultural/Tractor/002.png.\nIt must remain exactly in the small class \"Tractor\" under Agricultural, not a neighboring object.\n\nQuality bar:\n- Model the full visible object, not a symbolic proxy: recognizable proportions, silhouettes, handles, brackets, fasteners, seams, bevels, panels, wheels/tines/vents/arms, and material separation.\n- Build real connected subassemblies with plausible supports, pivots, axles, rails, hinges, linkages, stops, and mounting hardware where the reference implies them.\n- Include at least one meaningful non-fixed joint matching the object mechanism, with realistic axis, limits, and visible moving geometry.\n- Use realistic agricultural materials and colors: painted steel, rubber tires/grips, galvanized or aluminum sheet, plastic hoppers/cans, glass/polycarbonate panels, soil-contact worn metal, and small dark hardware where appropriate.\n- Avoid floating parts, paper-thin placeholder boxes, accidental intersections, and color-only detail. Add geometry for the specific details you claim.\n- Add prompt-specific run_tests() checks for the named small class, visible mechanism, key subassemblies, and at least one non-fixed joint.\n\nObject-specific mechanism and detail requirements:\nMake a detailed tractor with hood, cab/seat/roll bar as appropriate to the reference, large rear tires, front wheels, fenders, hitch, axle housings, lights, exhaust, grille, steering column, and panel seams. The primary articulation should include wheel rotation and a believable steering/front axle or hitch linkage where visible.",
+  "finished_at": "2026-06-25T16:16:27Z",
+  "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_516579_482a6ef6",
+  "record_dir": "data/records/rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_516579_482a6ef6",
+  "picture_binding": {
+    "category": "Agricultural",
+    "subcategory": "Tractor",
+    "source": "explicit",
+    "path": "picture/Agricultural/Tractor/002.png"
+  }
+}

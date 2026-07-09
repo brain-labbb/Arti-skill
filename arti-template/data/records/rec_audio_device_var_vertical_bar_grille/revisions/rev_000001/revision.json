@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_audio_device_var_vertical_bar_grille",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T10:45:14Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "b8914adc1df03650c9dea04d0d68612f0ef64b45bcdef6bbb0c684bc8e94df4e",
+  "source": {
+    "run_id": "run_20260705_104514_891722_ded7d175",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "b8914adc1df03650c9dea04d0d68612f0ef64b45bcdef6bbb0c684bc8e94df4e",
+    "model_py_sha256": "8f4a45464f97ac790dd5660a72e9faa3733837e463cb9d67a669074076ed0b9f"
+  },
+  "run_summary": {
+    "turn_count": 5,
+    "tool_call_count": 4,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-wooden-retro-tabletop-radio-a-horizontal-recta_20260624_122658_140987_c610b240",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-wooden-retro-tabletop-radio-a-horizontal-recta_20260624_122658_140987_c610b240",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_a-wooden-retro-tabletop-radio-a-horizontal-recta_20260624_122658_140987_c610b240",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/003.png",
+      "sha256": "ea0b267a249bbc960a5a6650a818d241493e6a4c9ee037987e2bfa44c447720d"
+    }
+  ]
+}

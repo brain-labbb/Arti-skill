@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_hydraulic_press_var_round_platen",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T17:02:21Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "2a13c4b4875800292a3b83a3fee533551143d271764140fe09ead60fe8d2883d",
+  "source": {
+    "run_id": "run_20260709_170221_938735_13ac15f8",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "2a13c4b4875800292a3b83a3fee533551143d271764140fe09ead60fe8d2883d",
+    "model_py_sha256": "27199b2e2a49433b0a86ed181864169bd86669097dcfcf6197cf7308223ed23d"
+  },
+  "run_summary": {
+    "turn_count": 9,
+    "tool_call_count": 8,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_industrial__hydraulic_press__001_png_c62c5ca24c6d4f278ca68d1cd0db7c55",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_industrial__hydraulic_press__001_png_c62c5ca24c6d4f278ca68d1cd0db7c55",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_industrial__hydraulic_press__001_png_c62c5ca24c6d4f278ca68d1cd0db7c55",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "1488310c23d9f5ab7a3576d4dae89d95849d50f19202bac12a81a7a33f52df7e"
+    }
+  ]
+}

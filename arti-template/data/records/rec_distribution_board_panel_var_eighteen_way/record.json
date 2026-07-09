@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_distribution_board_panel_var_eighteen_way",
+  "created_at": "2026-07-05T09:41:30Z",
+  "updated_at": "2026-07-05T09:49:57Z",
+  "rating": 5,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "distribution_board_panel",
+  "source": {
+    "run_id": "run_20260705_094130_782523_06a51dbe",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "db-18way",
+    "prompt_preview": "TARGET: change the breaker count multiplicity to a large N=18-way board \u2014 extend the breaker field to eighteen positions (two columns \u00d7 nine rows, or a longe..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "b8e22d39aebce781a8c92f3a98e8575fa256b4534ad944d8944b63dca0800d44",
+    "model_py_sha256": "c2ee3834325f0388a9093a767405194a437a3e560890db82b1944b66315681c7"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_232036_c548199a",
+    "parent_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_232036_c548199a",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

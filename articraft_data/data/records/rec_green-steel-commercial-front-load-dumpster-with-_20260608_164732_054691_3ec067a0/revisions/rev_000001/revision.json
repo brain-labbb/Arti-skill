@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_green-steel-commercial-front-load-dumpster-with-_20260608_164732_054691_3ec067a0",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-08T16:47:32Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "ad2995857f827ae37700215cdaa90ddc86a227a95552f07f535f1de15a5bbcc7",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "ad2995857f827ae37700215cdaa90ddc86a227a95552f07f535f1de15a5bbcc7",
+    "model_py_sha256": "b96796778e0dcab6de5247d27a95f02f8f71c1a2c36eb11d1568ac18406a7099"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-08T17:03:57Z",
+    "record_id": "rec_green-steel-commercial-front-load-dumpster-with-_20260608_164732_054691_3ec067a0",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_green-steel-commercial-front-load-dumpster-with-_20260608_164732_054691_3ec067a0/compile_report.json",
+      "status": "success",
+      "record_id": "rec_green-steel-commercial-front-load-dumpster-with-_20260608_164732_054691_3ec067a0",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "f27bb3c3c6664b83fdd8bb50db71b3cdd0e3bb25d71a164b9377a9a56db08e4f",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "2b4071121a4e0929fa8e09601aa2afdbf3141611ad050fb3c6ca44c945fe003b",
+        "model_py_mtime_ns": 1780938166300642097,
+        "model_py_size_bytes": 15101,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 22169,
+        "visual_mesh_file_count": 5,
+        "compile_elapsed_seconds": 1.0245381314307451
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_costume-style-nasa-astronaut-helmet-glossy-white_20260708_144345_529219_2b95133f",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-08T14:43:45Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "b9fed58082492cdaf0046e548ddfc2b844766f37ca9ad99c511b0092d1fe3930",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "b9fed58082492cdaf0046e548ddfc2b844766f37ca9ad99c511b0092d1fe3930",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T15:26:34Z",
+    "record_id": "rec_costume-style-nasa-astronaut-helmet-glossy-white_20260708_144345_529219_2b95133f",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_costume-style-nasa-astronaut-helmet-glossy-white_20260708_144345_529219_2b95133f/compile_report.json",
+      "status": "success",
+      "record_id": "rec_costume-style-nasa-astronaut-helmet-glossy-white_20260708_144345_529219_2b95133f",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "e3a9fe5253c4960baf7d89bd743a72bd07c3637f40ba4c04a0af6142b913a2bb",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "ad32c18e7709bdf19feecb7da2b6c8d0dc95fb3b9f7185af9ef489e722d63169",
+        "model_py_mtime_ns": 1783524299342376845,
+        "model_py_size_bytes": 15935,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 1196544,
+        "visual_mesh_file_count": 6,
+        "compile_elapsed_seconds": 5.484713854268193
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

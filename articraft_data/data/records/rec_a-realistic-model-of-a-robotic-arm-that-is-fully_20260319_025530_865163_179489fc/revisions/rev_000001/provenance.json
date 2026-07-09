@@ -1,0 +1,34 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_a-realistic-model-of-a-robotic-arm-that-is-fully_20260319_025530_865163_179489fc",
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.4",
+    "thinking_level": "high",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 30
+  },
+  "prompting": {
+    "system_prompt_file": "designer_system_prompt_openai.txt",
+    "system_prompt_sha256": "3fd00d30a0f0b432c5cd87d6638d50441eb0a912c34d692431885a12172501fd",
+    "sdk_docs_mode": "full"
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.11.14",
+    "platform": "darwin-arm64",
+    "git_commit": "01f7b37b4fad3b5e492967cc3d6154830317ae87",
+    "uv_lock_sha256": "cb06eaf348b6bbc12e6f79b7897d9b49415edd448928b3de880659ee4d88857b"
+  },
+  "run_summary": {
+    "turn_count": 12,
+    "tool_call_count": 12,
+    "compile_attempt_count": 6,
+    "final_status": "success"
+  }
+}

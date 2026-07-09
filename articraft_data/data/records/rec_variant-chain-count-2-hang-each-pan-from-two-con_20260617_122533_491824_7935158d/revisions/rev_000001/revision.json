@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-chain-count-2-hang-each-pan-from-two-con_20260617_122533_491824_7935158d",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T12:25:33Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "398ab047b27d5df47058b2adde4ea31d9ce9566e173634aed33a651835dfe3e2",
+  "source": {
+    "run_id": "run_20260617_122533_491824_7935158d",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "398ab047b27d5df47058b2adde4ea31d9ce9566e173634aed33a651835dfe3e2",
+    "model_py_sha256": "b42d047c33a6e1f58c7ba2f6d939d5a85754d619a9a282788d4e6e1c0f2f3d6e"
+  },
+  "run_summary": {
+    "turn_count": 12,
+    "tool_call_count": 11,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-decorative-two-pan-balance-scale-scales-_20260610_084539_331235_58c45b51",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-decorative-two-pan-balance-scale-scales-_20260610_084539_331235_58c45b51",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

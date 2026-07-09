@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_ghvent_var_sash_x3",
+  "created_at": "2026-07-05T09:45:25Z",
+  "updated_at": "2026-07-05T09:58:23Z",
+  "rating": 5,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "greenhouse_vent_roof",
+  "source": {
+    "run_id": "run_20260705_094525_081479_0a5935ea",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "ghvent-sash_x3",
+    "prompt_preview": "TARGET: Same loop rewrite as the 2-sash variant but N=3 vent-sash bays along the ridge (`vent_sash_{i}` + `roof_to_vent_sash_{i}` + `stay_arm_{i}` + `latch_{..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "5c60e0d293725d589d328866460896d4fab3a933cf1a5674ccb12757fba7eecf",
+    "model_py_sha256": "6fe8a9bea73c2e38067343cb458a4f351d9ad65bb02bcde2a4f0f65291bcc98a"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_892757_32a39adc",
+    "parent_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_892757_32a39adc",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

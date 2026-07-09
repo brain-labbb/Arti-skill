@@ -1,0 +1,22 @@
+{
+  "started_at": "2026-06-26T09:12:42Z",
+  "status": "failed",
+  "item": {
+    "index": 3,
+    "attempt": 1,
+    "category": "Electrical_Wiring",
+    "subcategory": "Junction box",
+    "image_path": "/mnt/zsn/lyb/arti-skill/articraft_data/picture/Electrical_Wiring/Junction box/003.png",
+    "image_rel": "picture/Electrical_Wiring/Junction box/003.png",
+    "record_hint": "rec_electrical_wiring_gpt55_junction_box_003",
+    "result_path": "/mnt/zsn/lyb/arti-skill/articraft_data/logs/picture_gpt55_electrical_selection_20260626/003_junction_box_003_try1.json",
+    "log_path": "/mnt/zsn/lyb/arti-skill/articraft_data/logs/picture_gpt55_electrical_selection_20260626/003_junction_box_003_try1.log"
+  },
+  "provider": "openai",
+  "model_id": "gpt-5.5-2026-04-23",
+  "thinking_level": "high",
+  "prompt": "Use the attached reference image as the primary visual source.\nCreate one high-quality articulated 3D Articraft asset for picture/Electrical_Wiring/Junction box/003.png.\nIt must remain exactly in the small class \"Junction box\" under Electrical_Wiring, not a neighboring object.\n\nQuality bar:\n- Model the full visible object, not a symbolic proxy: recognizable proportions, real hard-surface construction, panel seams, fasteners, brackets, handles, molded plastic, metal hardware, labels, terminals, and cable/conduit detail where appropriate.\n- Build real connected subassemblies with plausible supports, pivots, axles, hinges, latches, clamps, detents, bus bars, terminal screws, covers, and mounting hardware where the reference implies them.\n- Include at least one meaningful non-fixed joint matching the object mechanism, with realistic axis, limits, and visible moving geometry.\n- Use realistic electrical materials and colors: molded black/gray plastic, painted sheet metal, copper/brass terminals, galvanized conduit, rubber cable jackets, warning labels, transparent inspection windows, and small dark screws.\n- Avoid floating parts, placeholder boxes, accidental intersections, and color-only detail. Add geometry for the specific details you claim.\n- Add prompt-specific run_tests() checks for the named small class, visible mechanism, key subassemblies, electrical-specific details, and at least one non-fixed joint.\n\nObject-specific mechanism and detail requirements:\nMake an electrical junction box with a molded or metal enclosure, removable hinged or screw-fastened cover, gasket lip, cable glands or conduit knockouts on multiple sides, internal terminal strip or wire nuts, ground lug, strain reliefs, mounting ears, screw bosses, small labels, and believable bundled wire ends. The primary articulation should be the cover opening on a hinge or a latch/cover assembly moving with clear limits; include visible hinge barrels or retained screws so the motion is mechanically grounded.",
+  "finished_at": "2026-06-26T09:13:04Z",
+  "error": "Articraft generation failed with exit_code=2",
+  "traceback": "Traceback (most recent call last):\n  File \"/mnt/zsn/lyb/arti-skill/articraft_data/scripts/run_picture_gpt55_batch.py\", line 329, in run_one\n    raise RuntimeError(f\"Articraft generation failed with exit_code={exit_code}\")\nRuntimeError: Articraft generation failed with exit_code=2\n"
+}

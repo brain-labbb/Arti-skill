@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_oval-woven-rattan-basket-with-raised-lid-handle_20260618_121200_003basket",
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5-codex",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": null,
+    "uv_lock_sha256": null
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-18T13:30:59Z",
+    "record_id": "rec_oval-woven-rattan-basket-with-raised-lid-handle_20260618_121200_003basket",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_oval-woven-rattan-basket-with-raised-lid-handle_20260618_121200_003basket/compile_report.json",
+      "status": "success",
+      "record_id": "rec_oval-woven-rattan-basket-with-raised-lid-handle_20260618_121200_003basket",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 94 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "51b4d28cee1ea06f6387c99051c88e412a927355ddb6b209c4d515069850951d",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "f85e63b5a3346a6b98ffbd5107a568e7f212e7a261e06cc7dbb4fd9d0fd99f0c",
+        "model_py_mtime_ns": 1781789367230053379,
+        "model_py_size_bytes": 16558,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 8496496,
+        "visual_mesh_file_count": 151,
+        "compile_elapsed_seconds": 13.197147157043219
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_flashlight_var_bezelN",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T10:45:14Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "cb9a1a4fe15bc13f2f2ef0ed80fd0e50be44d20012fb82a44e6ed98f34277244",
+  "source": {
+    "run_id": "run_20260705_104514_890181_aa35aec5",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "cb9a1a4fe15bc13f2f2ef0ed80fd0e50be44d20012fb82a44e6ed98f34277244",
+    "model_py_sha256": "497ca8cbe16c8a5cb5fdf26fe5f862a8d2420e9ed70512b221237d2f89b1914d"
+  },
+  "run_summary": {
+    "turn_count": 5,
+    "tool_call_count": 4,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_black-tactical-flashlight-torch-with-a-knurled-g_20260605_173847_924564_baf8fda5",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_black-tactical-flashlight-torch-with-a-knurled-g_20260605_173847_924564_baf8fda5",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_codex_car002_v06",
+  "generation": {
+    "provider": "openai",
+    "model_id": "codex",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": null,
+    "uv_lock_sha256": null
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-14T12:57:16Z",
+    "record_id": "rec_codex_car002_v06",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/articraft_data/data/cache/record_materialization/rec_codex_car002_v06/compile_report.json",
+      "status": "success",
+      "record_id": "rec_codex_car002_v06",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='body' connected=71/73 disconnected=[front_axle_bar:Cylinder, rear_axle_bar:Cylinder]"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 21 overlaps across 7 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "4d0ab99de1534eedef721da469bb026e88aeb9c49f414bda01036b3238e905c0",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "a33d97369f1b4a54dafef1d9872b0c87b09855049fa8ac62641e5d50ff42fc0a",
+        "model_py_mtime_ns": 1781440949602780553,
+        "model_py_size_bytes": 47778,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 2488749,
+        "visual_mesh_file_count": 16,
+        "compile_elapsed_seconds": 71.55856845807284
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

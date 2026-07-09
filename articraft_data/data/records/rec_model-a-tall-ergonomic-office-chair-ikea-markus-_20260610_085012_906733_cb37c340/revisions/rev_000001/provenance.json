@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_model-a-tall-ergonomic-office-chair-ikea-markus-_20260610_085012_906733_cb37c340",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "48c1acb46c6036e6eef904e4f363944751fac19e",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-11T03:18:01Z",
+    "record_id": "rec_model-a-tall-ergonomic-office-chair-ikea-markus-_20260610_085012_906733_cb37c340",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-a-tall-ergonomic-office-chair-ikea-markus-_20260610_085012_906733_cb37c340/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-a-tall-ergonomic-office-chair-ikea-markus-_20260610_085012_906733_cb37c340",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 10 overlaps across 9 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "8bcf10cf47d6f6216f602ce6ece9c7cd39485992fa5e736452dfac4a976dcd83",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "7fb5f0155b4f212bee800f2e05756d030d172d58c0445cd59318521723f3ff1e",
+        "model_py_mtime_ns": 1781145221553424504,
+        "model_py_size_bytes": 23504,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 208683,
+        "visual_mesh_file_count": 14,
+        "compile_elapsed_seconds": 1.9189090775325894
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_metal-rectangular-fuel-flask-with-a-round-screw-_20260606_074624_981526_6e35123f",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "0ea5c9890f6e1c17ff89838a0485830e0b2b9e87",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-06T09:09:38Z",
+    "record_id": "rec_metal-rectangular-fuel-flask-with-a-round-screw-_20260606_074624_981526_6e35123f",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_metal-rectangular-fuel-flask-with-a-round-screw-_20260606_074624_981526_6e35123f/compile_report.json",
+      "status": "success",
+      "record_id": "rec_metal-rectangular-fuel-flask-with-a-round-screw-_20260606_074624_981526_6e35123f",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "661807b8dbb93de4c0efe903b22816723edf972ed5ac27d05420ce601b7d780c",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "01feac51214cd4ff3367dc7496ad019ba9d35406e40e0821c6cc948a1192c36d",
+        "model_py_mtime_ns": 1780732699125027868,
+        "model_py_size_bytes": 10437,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 686314,
+        "visual_mesh_file_count": 3,
+        "compile_elapsed_seconds": 3.119767280295491
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

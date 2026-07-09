@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_adjustable_monitor_arm_var_joint_pole_prismatic",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T11:48:53Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "08e61a518bf69465e5b86c3e921db787755d5f8393da0d12e509b9b9550ce9e3",
+  "source": {
+    "run_id": "run_20260709_114853_836411_36fc5c76",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "08e61a518bf69465e5b86c3e921db787755d5f8393da0d12e509b9b9550ce9e3",
+    "model_py_sha256": "0b453b6d2a44b41eaf1937bf478511a8a763a5e2e3d3dc42731a7aded1b4b32a"
+  },
+  "run_summary": {
+    "turn_count": 22,
+    "tool_call_count": 22,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_workspace__adjustable_monitor_arm__002_png_60e0835a36174ecda3d8a7130e870d31",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_workspace__adjustable_monitor_arm__002_png_60e0835a36174ecda3d8a7130e870d31",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_workspace__adjustable_monitor_arm__002_png_60e0835a36174ecda3d8a7130e870d31",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "c928567fc81b2b83a1c502cf1f4960febb6f7cb66d231e64bdd1d88f0ba81150"
+    }
+  ]
+}

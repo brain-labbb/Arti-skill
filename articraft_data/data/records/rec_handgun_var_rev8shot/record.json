@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_handgun_var_rev8shot",
+  "created_at": "2026-06-23T13:11:45Z",
+  "updated_at": "2026-06-23T13:14:52Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260623_131145_295180_70b45d94",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "handgun-rev8shot",
+    "prompt_preview": "Change only the cylinder to an eight-shot chamber count. Refactor chamber bores, flutes and dark chamber liners into a single CHAMBER_COUNT equals 8 loop wit..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "dba51500180c16e3b497627a9c808aaee1ab8fce5dee0cfe43fabf2c2bc29476",
+    "model_py_sha256": "2d6da57d76852d1df6f03779fafecfd537e516d5aeedbfcd963238e364af4ed9"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_model-a-classic-double-action-revolver-colt-pyth_20260610_081456_135585_9e7d2f05",
+    "parent_record_id": "rec_model-a-classic-double-action-revolver-colt-pyth_20260610_081456_135585_9e7d2f05",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

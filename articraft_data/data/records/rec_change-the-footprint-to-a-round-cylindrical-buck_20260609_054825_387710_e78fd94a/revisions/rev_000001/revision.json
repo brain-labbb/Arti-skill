@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_change-the-footprint-to-a-round-cylindrical-buck_20260609_054825_387710_e78fd94a",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-09T05:48:25Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "062d5c5c6f7478fc5682383d3e94bcf0598e5f9cde2ce5cc88777329ed4429a4",
+  "source": {
+    "run_id": "run_20260609_054825_387710_e78fd94a",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 60,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "062d5c5c6f7478fc5682383d3e94bcf0598e5f9cde2ce5cc88777329ed4429a4",
+    "model_py_sha256": "a669a9f269e58cffb2316efdf395b7f9839280dedafd58bf281dfd279e7460bb"
+  },
+  "run_summary": {
+    "turn_count": 5,
+    "tool_call_count": 5,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-rectangular-red-plastic-shopping-basket-with-r_20260608_160213_314844_c383d977",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-rectangular-red-plastic-shopping-basket-with-r_20260608_160213_314844_c383d977",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

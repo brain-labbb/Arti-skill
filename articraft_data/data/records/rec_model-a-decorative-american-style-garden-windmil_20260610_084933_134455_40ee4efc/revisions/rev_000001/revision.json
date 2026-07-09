@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_model-a-decorative-american-style-garden-windmil_20260610_084933_134455_40ee4efc",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-10T08:49:33Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "6992d9eb5b02fd41e5a4ab8af2166e35af901b596c38237709474d2a17dba8db",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "6992d9eb5b02fd41e5a4ab8af2166e35af901b596c38237709474d2a17dba8db",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-10T19:09:21Z",
+    "record_id": "rec_model-a-decorative-american-style-garden-windmil_20260610_084933_134455_40ee4efc",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-a-decorative-american-style-garden-windmil_20260610_084933_134455_40ee4efc/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-a-decorative-american-style-garden-windmil_20260610_084933_134455_40ee4efc",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 3 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "c786cca0046b78fc9966964049ea9c0ac102afb9e3ebd68b1aa35aaa4ec1db91",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "252348ed3cfc2c3c74472934fa0520ede1eb537bcbb2be0c1b31744279994700",
+        "model_py_mtime_ns": 1781115591907798642,
+        "model_py_size_bytes": 25595,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 299273,
+        "visual_mesh_file_count": 4,
+        "compile_elapsed_seconds": 8.032311588525772
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

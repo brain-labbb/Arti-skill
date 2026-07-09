@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_chrome-plier-style-single-hole-punch-two-polishe_20260708_082409_296179_850c1c69",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": null,
+    "thinking_level": null,
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "f87d931bc8ba4242e522375b7b28f383e9185f11",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T13:31:36Z",
+    "record_id": "rec_chrome-plier-style-single-hole-punch-two-polishe_20260708_082409_296179_850c1c69",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_chrome-plier-style-single-hole-punch-two-polishe_20260708_082409_296179_850c1c69/compile_report.json",
+      "status": "success",
+      "record_id": "rec_chrome-plier-style-single-hole-punch-two-polishe_20260708_082409_296179_850c1c69",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "8025c913a084a23eb66d0e21df446e89f8f8362fae775d58fd57173b387fb417",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "8794b1b48b4f768ffc465bf28bbc00a923b020bb96a634af8b3907a494d50a6c",
+        "model_py_mtime_ns": 1783499744247005546,
+        "model_py_size_bytes": 10701,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 251135,
+        "visual_mesh_file_count": 5,
+        "compile_elapsed_seconds": 18.962118403986096
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

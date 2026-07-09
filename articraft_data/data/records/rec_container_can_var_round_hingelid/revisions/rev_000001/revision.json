@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_container_can_var_round_hingelid",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T17:11:43Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "0ce37fc6d584277917793385cf2db3eb45ddee8e18eb500b91d43d77470ff0e5",
+  "source": {
+    "run_id": "run_20260618_171143_345425_dedaa044",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "0ce37fc6d584277917793385cf2db3eb45ddee8e18eb500b91d43d77470ff0e5",
+    "model_py_sha256": "ef453ce5f19fe711c2c38123f78c380b010a57ca8784695450b31138314252c7"
+  },
+  "run_summary": {
+    "turn_count": 12,
+    "tool_call_count": 12,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_round-metal-canister-tin-with-a-lift-off-lid_20260606_074656_096323_fb4296aa",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_round-metal-canister-tin-with-a-lift-off-lid_20260606_074656_096323_fb4296aa",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

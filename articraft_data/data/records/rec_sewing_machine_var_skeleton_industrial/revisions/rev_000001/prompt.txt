@@ -1,0 +1,26 @@
+CATEGORY: Textiles_Fabric
+SUBCATEGORY: Sewing machine
+TARGET: change the support skeleton from the ornate cast-iron treadle stand + drawered cabinet (`treadle_stand`, `add_cabinet`, `band_wheel`, `treadle_pedal`, `pitman_rod`) to a flat industrial power-table with an underslung motor and V-belt drive.
+DIVERSITY_AXIS: ① skeleton/topology.
+POSITIONING: industrial single-needle lockstitch flatbed machine on a steel K-leg power table (clutch/servo motor slung under the table, V-belt up to the balance wheel); still a sewing machine with head, needle bar, stitch plate and handwheel.
+KEEP: preserve these parent functional layers by name: machine_head, bed, arm, pillar, nose, needle_bar, head_to_needle_bar, handwheel, head_to_handwheel, stitch_plate, presser_bar, presser_foot, table.
+STRUCTURAL_DELTA: replace the treadle stand's splayed cast legs, spoked band drive wheel, pitman rod and foot treadle with a rectangular steel K-frame leg set carrying a large flat rectangular sewing table; drop the drawered cabinet shells. Add a motor_box bolted under the table on the handwheel side and a v_belt loop from a motor_pulley (CONTINUOUS about +X) up to the head balance handwheel. Recess the machine_head bed as a flat industrial bedplate flush in a table cutout. Keep head_to_handwheel CONTINUOUS and head_to_needle_bar PRISMATIC.
+MULTIPLICITY:
+COMPANION_VARIATIONS: optional industrial grey/green enamel palette and slightly larger bed proportions (⑤/⑥ only; no joint-graph change beyond the added motor/belt drive that defines the power table).
+FORBIDDEN: do not keep the antique treadle/band-wheel/drawered cabinet; do not become a serger, a multi-needle embroidery machine, or a plain workbench/table with no machine (category drift); do not bundle a drawer-multiplicity change.
+COMPATIBILITY_PROBE:
+
+This is a Textiles_Fabric/Sewing machine family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Textiles_Fabric/Sewing machine (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

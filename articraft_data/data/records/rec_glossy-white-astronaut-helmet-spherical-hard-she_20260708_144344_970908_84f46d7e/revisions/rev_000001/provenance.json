@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_glossy-white-astronaut-helmet-spherical-hard-she_20260708_144344_970908_84f46d7e",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "f87d931bc8ba4242e522375b7b28f383e9185f11",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T15:05:23Z",
+    "record_id": "rec_glossy-white-astronaut-helmet-spherical-hard-she_20260708_144344_970908_84f46d7e",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_glossy-white-astronaut-helmet-spherical-hard-she_20260708_144344_970908_84f46d7e/compile_report.json",
+      "status": "success",
+      "record_id": "rec_glossy-white-astronaut-helmet-spherical-hard-she_20260708_144344_970908_84f46d7e",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "1d83f874ea51a4508039b20d539e5049d036430604145509cc2051a5858e1f62",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "026f4ac403f70269797b19e14842026bd794bfb95595bf72f0e0c291e486a9a5",
+        "model_py_mtime_ns": 1783523105344376248,
+        "model_py_size_bytes": 11667,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 690908,
+        "visual_mesh_file_count": 3,
+        "compile_elapsed_seconds": 3.7211697436869144
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_plank_ringpull_door_var_vgroove",
+  "created_at": "2026-06-21T01:38:36Z",
+  "updated_at": "2026-06-21T01:43:31Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "door",
+  "source": {
+    "run_id": "run_20260621_013836_572810_00bcf493",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "plank_ringpull_door-vgroove",
+    "prompt_preview": "Change only the plank profile: give each vertical plank a chamfered V-grooved seam edge so the boards read as V-jointed tongue-and-groove planks instead of f..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "6d553fefd9c3163704687979e2da1e44015f0da562651d54f017d0bfadcc2f7c",
+    "model_py_sha256": "11b0028da05f7d5295c889d8848ae9a85c9b34b27fade815b25a3c1686ea3c35"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_door_plank_ringpull_closed",
+    "parent_record_id": "rec_door_plank_ringpull_closed",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_folding_door_var_n2",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-21T01:27:42Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "f4c7377b010af8db1400a10b8373af47199cf30956a771ff9d77b86baedfe83b",
+  "source": {
+    "run_id": "run_20260621_012742_842250_d7f85215",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "f4c7377b010af8db1400a10b8373af47199cf30956a771ff9d77b86baedfe83b",
+    "model_py_sha256": "95bfd2c4111aabfbcd10810e8a8e5928ca4b0c1d357e580428812309a2ce6fab"
+  },
+  "run_summary": {
+    "turn_count": 7,
+    "tool_call_count": 7,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-4-panel-bi-fold-interior-glass-partition-door-_20260608_160138_925763_9234fbaa",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-4-panel-bi-fold-interior-glass-partition-door-_20260608_160138_925763_9234fbaa",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

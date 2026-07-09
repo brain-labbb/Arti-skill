@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_animal_feeding_bowl_stand_var_bowl_tilt",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T11:48:53Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "2bc389cced6ae0a66da0b9d8a6a9e72f59f2d292a16ec7dc1ad51b57b36a20c2",
+  "source": {
+    "run_id": "run_20260709_114853_839964_6cab97ec",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "2bc389cced6ae0a66da0b9d8a6a9e72f59f2d292a16ec7dc1ad51b57b36a20c2",
+    "model_py_sha256": "420202dfea6e9eaaa6537f7ad0dfc4d84fc9c5fc98056872c9051bd4f93d77f5"
+  },
+  "run_summary": {
+    "turn_count": 13,
+    "tool_call_count": 12,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_pet_animal_related__animal_feeding_bowl_stand__002_png_e69950e2deab410ab84b65c09610c323",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_pet_animal_related__animal_feeding_bowl_stand__002_png_e69950e2deab410ab84b65c09610c323",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_pet_animal_related__animal_feeding_bowl_stand__002_png_e69950e2deab410ab84b65c09610c323",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "d9eb8ab88cd66767ca09e5150d66fd022252796fdebba619b4de1e04d5b89e27"
+    }
+  ]
+}

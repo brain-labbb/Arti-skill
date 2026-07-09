@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_round-porthole-window-with-a-glossy-black-ring-f_20260608_163258_577022_30a4c378",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-08T16:32:58Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "5813e7242004efc48ac57d6fbb8b7d3aad4b46db64a8d02d5f1c75ae80aa59d3",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "xhigh",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "5813e7242004efc48ac57d6fbb8b7d3aad4b46db64a8d02d5f1c75ae80aa59d3",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-08T16:37:09Z",
+    "record_id": "rec_round-porthole-window-with-a-glossy-black-ring-f_20260608_163258_577022_30a4c378",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_round-porthole-window-with-a-glossy-black-ring-f_20260608_163258_577022_30a4c378/compile_report.json",
+      "status": "success",
+      "record_id": "rec_round-porthole-window-with-a-glossy-black-ring-f_20260608_163258_577022_30a4c378",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "465c3eb60afa32449d165926804d3514a4d8844681bd572580d1f61fa95eb300",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "498a6a26663da5737e19074d60c4c92a2260aea21c68af61681196751d1178f3",
+        "model_py_mtime_ns": 1780936556613214858,
+        "model_py_size_bytes": 14994,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 218761,
+        "visual_mesh_file_count": 3,
+        "compile_elapsed_seconds": 3.680442387238145
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

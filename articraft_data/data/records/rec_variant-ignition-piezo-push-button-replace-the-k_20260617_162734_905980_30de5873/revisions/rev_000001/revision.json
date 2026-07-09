@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-ignition-piezo-push-button-replace-the-k_20260617_162734_905980_30de5873",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T16:27:34Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "c7279b355c0121f723dbb8718844b2e1b4724a683d8bc6e803b295ea8285145a",
+  "source": {
+    "run_id": "run_20260617_162734_905980_30de5873",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "c7279b355c0121f723dbb8718844b2e1b4724a683d8bc6e803b295ea8285145a",
+    "model_py_sha256": "242294f73c11f7749b4964d97bb6231e4ec1edc32794d70a268131c2e3e8f812"
+  },
+  "run_summary": {
+    "turn_count": 8,
+    "tool_call_count": 8,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-classic-zippo-style-windproof-flip-light_20260610_084943_427286_231b5418",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-classic-zippo-style-windproof-flip-light_20260610_084943_427286_231b5418",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

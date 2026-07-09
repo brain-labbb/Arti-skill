@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_piano_var_spinet_upright_body",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-20T17:14:18Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "6921d3c4b12c1f1e2689e5039a9640b29b8cd11257c9611919cc74d779df8b35",
+  "source": {
+    "run_id": "run_20260620_171418_252056_8880b445",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "6921d3c4b12c1f1e2689e5039a9640b29b8cd11257c9611919cc74d779df8b35",
+    "model_py_sha256": "ed58b90b1498c2e1932e667af09255ef250262881ac12225a7ebc85f88638d48"
+  },
+  "run_summary": {
+    "turn_count": 18,
+    "tool_call_count": 17,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-glossy-black-upright-piano-standing-tall-again_20260605_132213_191152_c63fde85",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-glossy-black-upright-piano-standing-tall-again_20260605_132213_191152_c63fde85",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

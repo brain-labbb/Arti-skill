@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_circuit_breaker_var_1pole",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:41:30Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "0014826238d360d39256ad33fe660a13e2d6ac3a32c7e9a8ac429b9f6cc49ef1",
+  "source": {
+    "run_id": "run_20260705_094130_781202_ecb8b976",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "0014826238d360d39256ad33fe660a13e2d6ac3a32c7e9a8ac429b9f6cc49ef1",
+    "model_py_sha256": "edee576078333f3e2f42d03a07d0e55f0636a06d6093b112e898d080a27c0b47"
+  },
+  "run_summary": {
+    "turn_count": 8,
+    "tool_call_count": 8,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_228695_7bb9b32f",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_228695_7bb9b32f",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_228695_7bb9b32f",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "517d38cf4ea783879d70fb14acc19b6a8c68c163f4170f5dad114a35404c64f9"
+    }
+  ]
+}

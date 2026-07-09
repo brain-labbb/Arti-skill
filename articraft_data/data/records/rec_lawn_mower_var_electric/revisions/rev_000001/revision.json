@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_lawn_mower_var_electric",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T13:49:43Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "533474f7ef1545d2c9e72f3bcec79098f9a633ed3deb7c0f93476a61fd8ba90a",
+  "source": {
+    "run_id": "run_20260623_134943_352711_39c9ce06",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "533474f7ef1545d2c9e72f3bcec79098f9a633ed3deb7c0f93476a61fd8ba90a",
+    "model_py_sha256": "061ca92e86ef78ea459900dc3c8342c096c36142f1854a3c5529aa398ce2f359"
+  },
+  "run_summary": {
+    "turn_count": 16,
+    "tool_call_count": 16,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-gas-powered-walk-behind-push-lawn-mower-_20260610_085438_746371_adebd312",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-gas-powered-walk-behind-push-lawn-mower-_20260610_085438_746371_adebd312",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

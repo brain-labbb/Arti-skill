@@ -1,0 +1,25 @@
+CATEGORY: Emergency Equipment
+SUBCATEGORY: Defibrillator case
+TARGET: change the single rigid hinged door (part door, joint cabinet_to_door) to a segmented roll-up shutter of stacked slats that opens by sliding vertically upward.
+DIVERSITY_AXIS: ① skeleton / structural topology.
+POSITIONING: A roller-shutter AED cabinet whose front closes with a slatted roll-up shutter instead of a swing door (used on some secure/vandal-resistant AED enclosures). Remains a Defibrillator case: enclosure holding one AED behind an openable front.
+KEEP: preserve these parent functional layers by name: cabinet, shell, dark_back_panel, aed_shelf, aed_module, yellow_case, cabinet_to_aed, pull_handle.
+STRUCTURAL_DELTA: Replace the revolute door with a shutter part built from N loop-generated horizontal slat boxes (shared helper, stable indexed names shutter_slat_i) mounted on a single prismatic joint that raises the shutter upward to clear the opening; keep travel as one real non-fixed opening joint and keep the prismatic AED shelf. Retain a bottom lift bar reusing pull_handle.
+MULTIPLICITY: shutter built from ~7 identical slats via a loop and shared helper; slat count is internal structure, not the primary count axis.
+COMPATIBILITY_PROBE: combines a slat-multiplicity front with a prismatic opening replacing the revolute hinge; risk is slat stacking clearance in the open pose and the shutter fully clearing the front aperture without colliding with the roof or the AED module.
+FORBIDDEN: do not become a roll-top desk, garage-door prop, or window blind; do not keep a hinged door as well; do not also change the body form family.
+
+This is a Emergency Equipment/Defibrillator case family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Emergency Equipment/Defibrillator case (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

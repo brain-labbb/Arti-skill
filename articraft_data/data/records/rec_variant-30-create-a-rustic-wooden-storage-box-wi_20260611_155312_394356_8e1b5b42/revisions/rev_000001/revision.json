@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-30-create-a-rustic-wooden-storage-box-wi_20260611_155312_394356_8e1b5b42",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-11T15:53:12Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "cbc9a895bbacffe4bbf379e2a91f9f89c5f03095cbcf7ebacaa106c504a62346",
+  "source": {
+    "run_id": "run_20260611_155312_394356_8e1b5b42",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.4",
+    "thinking_level": "medium",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "cbc9a895bbacffe4bbf379e2a91f9f89c5f03095cbcf7ebacaa106c504a62346",
+    "model_py_sha256": "67385dcc736d106b4b574fb319f44297df033fa8af24248303e5e184b2421402"
+  },
+  "run_summary": {
+    "turn_count": 18,
+    "tool_call_count": 19,
+    "compile_attempt_count": 5,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_rustic-wooden-storage-box-with-plank-sides-metal_20260605_133631_387134_1a9c91ba",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_rustic-wooden-storage-box-with-plank-sides-metal_20260605_133631_387134_1a9c91ba",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_adjustable-chrome-dumbbell-with-stacked-round-st_20260605_165825_655766_e0c0e76a",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-05T16:58:25Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "adf7dd91e67afad4a7a0e6052e72a072743e4f0a701a079ae12ccba6d15f601b",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "adf7dd91e67afad4a7a0e6052e72a072743e4f0a701a079ae12ccba6d15f601b",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-05T17:30:29Z",
+    "record_id": "rec_adjustable-chrome-dumbbell-with-stacked-round-st_20260605_165825_655766_e0c0e76a",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_adjustable-chrome-dumbbell-with-stacked-round-st_20260605_165825_655766_e0c0e76a/compile_report.json",
+      "status": "success",
+      "record_id": "rec_adjustable-chrome-dumbbell-with-stacked-round-st_20260605_165825_655766_e0c0e76a",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "5140f3d720a70aa66d171c7cb4987485e154622c514391cc6af0c8970e870ec9",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "7ea90237d6d2d31bbd40e8d56ea7a8ca5e8c4ef38d714633ee7d88bf620b5c68",
+        "model_py_mtime_ns": 1780679122221112524,
+        "model_py_size_bytes": 11590,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 1149799,
+        "visual_mesh_file_count": 10,
+        "compile_elapsed_seconds": 25.03465109039098
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

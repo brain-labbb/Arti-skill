@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_handheld_game_console_var_clamshell",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-30T06:36:03Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "62c71f69a80be1b4d5bfb0ff87b882dfb7c53db89478cd11ee9c818a83002c20",
+  "source": {
+    "run_id": "run_20260630_063603_107757_6f059541",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "62c71f69a80be1b4d5bfb0ff87b882dfb7c53db89478cd11ee9c818a83002c20",
+    "model_py_sha256": "c1e1b73827b2259249add74bd079ce07674767ab1dce76ba818840d2727e9b59"
+  },
+  "run_summary": {
+    "turn_count": 16,
+    "tool_call_count": 16,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_blue-psp-style-handheld-game-console-with-a-cent_20260605_170024_819411_f576a977",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_blue-psp-style-handheld-game-console-with-a-cent_20260605_170024_819411_f576a977",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-30T07:14:15Z",
+    "record_id": "rec_handheld_game_console_var_clamshell",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_handheld_game_console_var_clamshell/compile_report.json",
+      "status": "success",
+      "record_id": "rec_handheld_game_console_var_clamshell",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "c1e1b73827b2259249add74bd079ce07674767ab1dce76ba818840d2727e9b59",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "4a09291c0646956e6acbf142815228e83a282c2ee6087dfc9ca82ab52f27e712",
+        "model_py_mtime_ns": 1782803562986050745,
+        "model_py_size_bytes": 21919,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 3280380,
+        "visual_mesh_file_count": 12,
+        "compile_elapsed_seconds": 8.502427650615573
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 6,
+      "errors": [
+        "record.json missing creator metadata for external workflow",
+        "source.run_id must be null for external records",
+        "external records must not contain Articraft agent traces",
+        "provenance.run_summary.turn_count must be null",
+        "provenance.run_summary.tool_call_count must be null",
+        "provenance.run_summary.compile_attempt_count must be null"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

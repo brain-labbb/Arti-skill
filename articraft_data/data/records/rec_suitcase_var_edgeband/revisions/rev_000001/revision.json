@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_suitcase_var_edgeband",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T16:11:46Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "c38712afbfdbb295e506bda9512485f39f3d0c49c38201416f6ff46f8567d5f6",
+  "source": {
+    "run_id": "run_20260617_161146_454661_cfc4b93a",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 30,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "c38712afbfdbb295e506bda9512485f39f3d0c49c38201416f6ff46f8567d5f6",
+    "model_py_sha256": "cd18f7eb27f4add6abc39f35fcbec199d77beba1c3fe91f73308f3bdec2a2020"
+  },
+  "run_summary": {
+    "turn_count": 7,
+    "tool_call_count": 7,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_vintage-hard-sided-travel-suitcase-with-a-hinged_20260605_131200_241451_cb7b4d8c",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_vintage-hard-sided-travel-suitcase-with-a-hinged_20260605_131200_241451_cb7b4d8c",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

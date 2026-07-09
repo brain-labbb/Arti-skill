@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_plank_ringpull_door_var_framedbrace",
+  "created_at": "2026-06-21T01:38:25Z",
+  "updated_at": "2026-06-21T01:49:15Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "door",
+  "source": {
+    "run_id": "run_20260621_013825_711533_630c9b77",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "plank_ringpull_door-framedbrace",
+    "prompt_preview": "Change only the bracing pattern into a framed-and-braced door: add two vertical iron-strapped stiles down the hinge edge and the free edge framing the planks..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a28a9c14999e4654224ec9353d7d5f12eb3280f38ed4e216a561c167f275d01e",
+    "model_py_sha256": "71ba84f98c58524b1e543b48d61bae6e9e2bceab4fbe19430b35952bc9b1dbe2"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_door_plank_ringpull_closed",
+    "parent_record_id": "rec_door_plank_ringpull_closed",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_harvester_var_track_rollers_6",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:46:58Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "b2d5450168aac234604f349ded6eec9ba9af4f3b6b770f0fd85012573fb9163f",
+  "source": {
+    "run_id": "run_20260705_094658_756979_dc190465",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "b2d5450168aac234604f349ded6eec9ba9af4f3b6b770f0fd85012573fb9163f",
+    "model_py_sha256": "c0c5c2359d8618e764b701db334c57a7c1cfae39b9761a0549d5d1504f5b20c2"
+  },
+  "run_summary": {
+    "turn_count": 5,
+    "tool_call_count": 4,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_522179_e451456d",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_522179_e451456d",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_522179_e451456d",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/003.png",
+      "sha256": "e0675b77c5376b0154aab0c6122de07e84865268c0bf6b2821a982cac4c38ab8"
+    }
+  ]
+}

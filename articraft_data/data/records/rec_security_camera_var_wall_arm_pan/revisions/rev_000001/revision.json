@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_security_camera_var_wall_arm_pan",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-04T14:55:16Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "1622c4a6464c3675fc463cb105188eab08c370aa8391d45e98d7ec0c97dc3be9",
+  "source": {
+    "run_id": "run_20260704_145516_639985_20d5093d",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "1622c4a6464c3675fc463cb105188eab08c370aa8391d45e98d7ec0c97dc3be9",
+    "model_py_sha256": "ab4f8c8c8992ea6ccaa747e795bf315c250355233bcec8dd836aba4e05e1a916"
+  },
+  "run_summary": {
+    "turn_count": 6,
+    "tool_call_count": 5,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-white-bullet-security-camera-a-cylindrical-bod_20260624_125234_670793_03a3be03",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-white-bullet-security-camera-a-cylindrical-bod_20260624_125234_670793_03a3be03",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_a-white-bullet-security-camera-a-cylindrical-bod_20260624_125234_670793_03a3be03",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/004.png",
+      "sha256": "04ccc94fec2159e4a6b636764d0ab91983bc22c1730405b8fcc28c54620588f0"
+    }
+  ],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-04T15:29:13Z",
+    "record_id": "rec_security_camera_var_wall_arm_pan",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_security_camera_var_wall_arm_pan/compile_report.json",
+      "status": "success",
+      "record_id": "rec_security_camera_var_wall_arm_pan",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "ab4f8c8c8992ea6ccaa747e795bf315c250355233bcec8dd836aba4e05e1a916",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "ba2d726b44a3ece5c5e8442f662983dff8fd3565cafc1481da204b5254a0deda",
+        "model_py_mtime_ns": 1783177621167660544,
+        "model_py_size_bytes": 12540,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 0,
+        "visual_mesh_file_count": 0,
+        "compile_elapsed_seconds": 0.03433763422071934
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 6,
+      "errors": [
+        "record.json missing creator metadata for external workflow",
+        "source.run_id must be null for external records",
+        "external records must not contain Articraft agent traces",
+        "provenance.run_summary.turn_count must be null",
+        "provenance.run_summary.tool_call_count must be null",
+        "provenance.run_summary.compile_attempt_count must be null"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

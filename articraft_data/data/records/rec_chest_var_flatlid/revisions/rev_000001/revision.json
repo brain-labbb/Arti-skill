@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_chest_var_flatlid",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T16:11:46Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "d0e5fc6a2c6e53ba4f7c16556eac16fc195fb3242d1db656f76231ea486152c5",
+  "source": {
+    "run_id": "run_20260617_161146_451000_b5895d73",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 30,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "d0e5fc6a2c6e53ba4f7c16556eac16fc195fb3242d1db656f76231ea486152c5",
+    "model_py_sha256": "b4125d4cac0754fcc2705b2e6e4915c70ff9f4d5e4f30f6f63a279c91db82cf4"
+  },
+  "run_summary": {
+    "turn_count": 9,
+    "tool_call_count": 9,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_medieval-treasure-chest-with-a-domed-curved-lid-_20260605_133633_502277_6febc2df",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_medieval-treasure-chest-with-a-domed-curved-lid-_20260605_133633_502277_6febc2df",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

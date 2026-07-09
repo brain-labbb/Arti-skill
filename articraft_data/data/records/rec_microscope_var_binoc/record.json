@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_microscope_var_binoc",
+  "created_at": "2026-06-23T13:48:00Z",
+  "updated_at": "2026-06-23T14:02:18Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260623_134800_340093_845b27f3",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "microscope-binoc",
+    "prompt_preview": "Change only the observation head from a single inclined monocular tube to a binocular head with two parallel inclined eyepiece tubes side by side on a widene..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "0453215f2d7d1996e018400cb63f81e5f577fa6d09bf7197414169ff3f87636e",
+    "model_py_sha256": "1b6ff44441be2e4df1a7deda7fae1e9223339c2af4c9ac65d9aae507476ab95a"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_build-a-realistic-articulated-3d-model-of-a-micr_20260609_183637_825621_5f8b9008",
+    "parent_record_id": "rec_build-a-realistic-articulated-3d-model-of-a-micr_20260609_183637_825621_5f8b9008",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

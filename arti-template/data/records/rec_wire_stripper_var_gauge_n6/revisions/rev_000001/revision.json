@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_wire_stripper_var_gauge_n6",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:41:30Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "5bfa4212534b523817c5ee56a37a34dc34b925dc1537f8c40b55f4229896cd95",
+  "source": {
+    "run_id": "run_20260705_094130_805178_aaa2aa49",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "5bfa4212534b523817c5ee56a37a34dc34b925dc1537f8c40b55f4229896cd95",
+    "model_py_sha256": "eba4aad90e744bc105efb2b747b3ecf99587fb1e34c31400566dbcc6e7ef8980"
+  },
+  "run_summary": {
+    "turn_count": 5,
+    "tool_call_count": 4,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-yellow-and-black-multifunction-electrician-wir_20260705_045817_224605_a2129614",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-yellow-and-black-multifunction-electrician-wir_20260705_045817_224605_a2129614",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

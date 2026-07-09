@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_cast-iron-pillar-fire-hydrant-bright-red-body-wi_20260608_164513_388731_9a6935e0",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-08T16:45:13Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "5776e2941e980bff4557002c1ccc51856840f5156fc74086d4e1315c551dd7a3",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "5776e2941e980bff4557002c1ccc51856840f5156fc74086d4e1315c551dd7a3",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-08T16:56:41Z",
+    "record_id": "rec_cast-iron-pillar-fire-hydrant-bright-red-body-wi_20260608_164513_388731_9a6935e0",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_cast-iron-pillar-fire-hydrant-bright-red-body-wi_20260608_164513_388731_9a6935e0/compile_report.json",
+      "status": "success",
+      "record_id": "rec_cast-iron-pillar-fire-hydrant-bright-red-body-wi_20260608_164513_388731_9a6935e0",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 4 overlaps across 4 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "ea712130dd91fdbc5b95312190de663d54d0da3e9b13d6097f4ec8a73eab6f35",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "729be5377f717939db0a4b32386859973d67e85c2c4b74c90c9026ec3d20fc01",
+        "model_py_mtime_ns": 1780937630742306647,
+        "model_py_size_bytes": 19273,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 352241,
+        "visual_mesh_file_count": 38,
+        "compile_elapsed_seconds": 2.4538454515859485
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_graphics_card_var_power_12vhpwr",
+  "created_at": "2026-07-05T10:45:14Z",
+  "updated_at": "2026-07-05T10:46:42Z",
+  "rating": 5,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260705_104514_879376_97cca315",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "graphics_card-power_12vhpwr",
+    "prompt_preview": "TARGET: Change the Slot D power-input FORM from legacy PCIe to a single 12VHPWR / 12V-2x6 (16-pin) connector. Replace the `power_connector_8pin` visual on th..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "c1e99d38a41e6344091227ea6ff11bcd0c4d5300f2fc35087d2a180e74784482",
+    "model_py_sha256": "fd4a3299a58ac95ae8f56bb341009a1df56d535386041285ebe24d900b062ac7"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_an-msi-gaming-trio-style-triple-fan-gaming-graph_20260704_080843_205841_e43c8fd4",
+    "parent_record_id": "rec_an-msi-gaming-trio-style-triple-fan-gaming-graph_20260704_080843_205841_e43c8fd4",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

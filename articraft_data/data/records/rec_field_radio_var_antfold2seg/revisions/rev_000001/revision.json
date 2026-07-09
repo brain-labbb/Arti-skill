@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_field_radio_var_antfold2seg",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T13:11:45Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "a2bfa482064abf5cd2887550c4e6ac99616295a13f2e006b5121bad63d8ae9d4",
+  "source": {
+    "run_id": "run_20260623_131145_572217_f58ce5b9",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a2bfa482064abf5cd2887550c4e6ac99616295a13f2e006b5121bad63d8ae9d4",
+    "model_py_sha256": "d09056276d381e3caf05459134187262f3dbedbbf9b3526d33df2cf4c3bf34f4"
+  },
+  "run_summary": {
+    "turn_count": 14,
+    "tool_call_count": 14,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-rugged-military-style-handheld-two-way-r_20260610_080423_521217_3ffa3864",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-rugged-military-style-handheld-two-way-r_20260610_080423_521217_3ffa3864",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_container_box_var_sliding_drawer",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T17:11:43Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "7aa11907ed3c36cb487cb2d8a2f2df581bc0d00f81fd304e3d4e062456ef3dfd",
+  "source": {
+    "run_id": "run_20260618_171143_356827_b2bf867b",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "7aa11907ed3c36cb487cb2d8a2f2df581bc0d00f81fd304e3d4e062456ef3dfd",
+    "model_py_sha256": "c984fbfd3d3b1236c1916e39bd04ad39c4e1a5c057b53f9716a8252f705d31d9"
+  },
+  "run_summary": {
+    "turn_count": 13,
+    "tool_call_count": 15,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_open-corrugated-cardboard-box-with-four-fold-out_20260606_074600_560733_ef4e9e5a",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_open-corrugated-cardboard-box-with-four-fold-out_20260606_074600_560733_ef4e9e5a",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

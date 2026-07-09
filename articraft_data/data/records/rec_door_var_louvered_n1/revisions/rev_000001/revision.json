@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_door_var_louvered_n1",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-21T01:26:07Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "ebacbb43fc4b458a01ed65f8818f4371bfdcc0b61df648b1f2f9f0b1eb393a63",
+  "source": {
+    "run_id": "run_20260621_012607_814425_7748c172",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "ebacbb43fc4b458a01ed65f8818f4371bfdcc0b61df648b1f2f9f0b1eb393a63",
+    "model_py_sha256": "28106612c0e43cde481323fb7aaa40e8f56369b50b27e5d2f5457725b35be241"
+  },
+  "run_summary": {
+    "turn_count": 14,
+    "tool_call_count": 13,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_single-louvered-utility-door-gray-painted-steel-_20260606_115203_244494_72379bfd",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_single-louvered-utility-door-gray-painted-steel-_20260606_115203_244494_72379bfd",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

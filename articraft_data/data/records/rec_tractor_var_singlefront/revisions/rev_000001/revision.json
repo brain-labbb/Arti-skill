@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_tractor_var_singlefront",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:43:06Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "cd169c89102a5829879a7590915a0c732300632dce24430ce3d8a2c75897a88f",
+  "source": {
+    "run_id": "run_20260705_094306_056624_85bbd052",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "cd169c89102a5829879a7590915a0c732300632dce24430ce3d8a2c75897a88f",
+    "model_py_sha256": "57127c77edce976731f90b039d17d78150e0e1e231bf3d82daa3c77476d29cdc"
+  },
+  "run_summary": {
+    "turn_count": 26,
+    "tool_call_count": 26,
+    "compile_attempt_count": 6,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_516579_482a6ef6",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_516579_482a6ef6",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_516579_482a6ef6",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "e8e407da59b6921e735d9aae21a463be3556375488de4ce10410a484fdb70ee1"
+    }
+  ]
+}

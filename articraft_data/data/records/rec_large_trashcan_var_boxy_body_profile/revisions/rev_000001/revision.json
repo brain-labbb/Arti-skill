@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_large_trashcan_var_boxy_body_profile",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-27T03:25:06Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "2b390ddba74b8ee5c4d8dc78846493ac96ff5d3f0803cb3b071d85e19a24411b",
+  "source": {
+    "run_id": "run_20260627_032506_483189_e0b59d5b",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "2b390ddba74b8ee5c4d8dc78846493ac96ff5d3f0803cb3b071d85e19a24411b",
+    "model_py_sha256": "724550743d25c2a6826b5690a7dd01b4d9edad4d3d9a88f63afca8e8b2351b14"
+  },
+  "run_summary": {
+    "turn_count": 9,
+    "tool_call_count": 9,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_gray-two-wheel-curbside-wheelie-trash-bin-lavex-_20260608_164516_642420_a2aacece",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_gray-two-wheel-curbside-wheelie-trash-bin-lavex-_20260608_164516_642420_a2aacece",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

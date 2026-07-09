@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_window_var_bank_2x2",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-21T06:03:36Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "873b5f8ac6a1b42efa08066d99de9180280029b0879296c2442eb85670477e11",
+  "source": {
+    "run_id": "run_20260621_060336_431624_7fa22e63",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "873b5f8ac6a1b42efa08066d99de9180280029b0879296c2442eb85670477e11",
+    "model_py_sha256": "63f5914e4dc4bf86609a74d7a01c9c088a2f8906d4017a8fc35f3fb8a259d5f0"
+  },
+  "run_summary": {
+    "turn_count": 4,
+    "tool_call_count": 3,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_bank-of-grey-aluminium-casement-windows-three-by_20260608_162732_561720_478f6f0c",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_bank-of-grey-aluminium-casement-windows-three-by_20260608_162732_561720_478f6f0c",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_aquarium_var_hexagon",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T11:48:53Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "3208e4606834af45857141b4066dc7069316f15edeb54dd3c65925c60dda9c27",
+  "source": {
+    "run_id": "run_20260709_114853_848128_5788bc44",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "3208e4606834af45857141b4066dc7069316f15edeb54dd3c65925c60dda9c27",
+    "model_py_sha256": "b8d7ae0b0c77d0a395f575707c0542e3900c7647dbde756d2a2f1c2f3f74468b"
+  },
+  "run_summary": {
+    "turn_count": 24,
+    "tool_call_count": 25,
+    "compile_attempt_count": 5,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_pet_animal_related__aquarium__001_png_c0bba02ab6f04b8caf4724481d67d630",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_pet_animal_related__aquarium__001_png_c0bba02ab6f04b8caf4724481d67d630",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_pet_animal_related__aquarium__001_png_c0bba02ab6f04b8caf4724481d67d630",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "19fbaf903e00368670618a66964efd00b173d0ecb0ad87edc26c18eba4e6f90b"
+    }
+  ]
+}

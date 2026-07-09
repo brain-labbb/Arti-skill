@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-base-support-casters-replace-the-four-sh_20260617_095850_910442_8bf476d7",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T09:58:50Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "468a92509c5685d65391e3a4ae6053a333e570ce4d01f2c4a67fc37bdb698d57",
+  "source": {
+    "run_id": "run_20260617_095850_910442_8bf476d7",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "468a92509c5685d65391e3a4ae6053a333e570ce4d01f2c4a67fc37bdb698d57",
+    "model_py_sha256": "7c4115cbd52fa02d099e39c13d957c437b90d55f53b6f1e44b742b5fe9642934"
+  },
+  "run_summary": {
+    "turn_count": 31,
+    "tool_call_count": 32,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-vintage-industrial-steel-locker-cabinet-_20260610_083716_659700_76107d7e",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-vintage-industrial-steel-locker-cabinet-_20260610_083716_659700_76107d7e",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

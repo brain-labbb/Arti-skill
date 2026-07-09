@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-case-shape-beveled-armor-change-the-case_20260617_162734_718920_ccb09f0d",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T16:27:34Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "e2d5cb88779f3ce9e346187c69f73aa445a3ea3abbc81a67b5d65e014c8f006a",
+  "source": {
+    "run_id": "run_20260617_162734_718920_ccb09f0d",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "e2d5cb88779f3ce9e346187c69f73aa445a3ea3abbc81a67b5d65e014c8f006a",
+    "model_py_sha256": "ce67195d0037af7c12340704ec18116386d74bb113590cec6ec9dc7db7a44ea7"
+  },
+  "run_summary": {
+    "turn_count": 17,
+    "tool_call_count": 17,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-classic-zippo-style-windproof-flip-light_20260610_084943_427286_231b5418",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-classic-zippo-style-windproof-flip-light_20260610_084943_427286_231b5418",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

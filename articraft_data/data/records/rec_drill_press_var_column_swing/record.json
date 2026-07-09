@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_drill_press_var_column_swing",
+  "created_at": "2026-07-09T15:53:13Z",
+  "updated_at": "2026-07-09T16:07:21Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260709_155313_351576_77f7d52e",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "TARGET: replace the table_tilt revolute-about-trunnion joint with a column-swing revolute joint whose axis is the vertic",
+    "prompt_preview": "TARGET: replace the table_tilt revolute-about-trunnion joint with a column-swing revolute joint whose axis is the vertical column axis (0,0,1), so the whole..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "95edb5d4c249cd011b1a1b152f623ccf3c895f47f151b97e2fa6a3a1f8f06272",
+    "model_py_sha256": "47ec67a9749dbee726929326b58f9d4432fd7fdc72af8993021e30a88a3a8fc7"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_industrial__drill_press_table__002_png_bf057f975763470b9dfd964d1d919a4a",
+    "parent_record_id": "rec_industrial__drill_press_table__002_png_bf057f975763470b9dfd964d1d919a4a",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

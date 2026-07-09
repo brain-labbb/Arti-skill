@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_model-a-classic-double-action-revolver-colt-pyth_20260610_081456_135585_9e7d2f05",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-10T08:14:56Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "741a72c6332c2b81e5d039e2f670a9dbedb072cb609f6b107bd64d88dbae5aa8",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": null
+  },
+  "hashes": {
+    "prompt_sha256": "741a72c6332c2b81e5d039e2f670a9dbedb072cb609f6b107bd64d88dbae5aa8",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-10T14:55:41Z",
+    "record_id": "rec_model-a-classic-double-action-revolver-colt-pyth_20260610_081456_135585_9e7d2f05",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-a-classic-double-action-revolver-colt-pyth_20260610_081456_135585_9e7d2f05/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-a-classic-double-action-revolver-colt-pyth_20260610_081456_135585_9e7d2f05",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 3 overlaps across 3 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "27cdbdf1a166cdd6e7d6fbe51571921bcaf069c902273a224caefef977343ed6",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "cfd7762cd1e40fc685bf610a8420aea84feaceeabecb2159c5c68da6bb0d8d02",
+        "model_py_mtime_ns": 1781103278350799287,
+        "model_py_size_bytes": 25745,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 735962,
+        "visual_mesh_file_count": 10,
+        "compile_elapsed_seconds": 11.610715840943158
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

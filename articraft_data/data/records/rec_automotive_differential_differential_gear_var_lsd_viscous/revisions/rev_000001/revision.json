@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_automotive_differential_differential_gear_var_lsd_viscous",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T11:51:09Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "cbaf51b063c1e9529789e1c76e4e64ea64222943046576fa757fa1e9820d1374",
+  "source": {
+    "run_id": "run_20260709_115109_592516_92061545",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "cbaf51b063c1e9529789e1c76e4e64ea64222943046576fa757fa1e9820d1374",
+    "model_py_sha256": "6fa82b9f2ce00f72e25efc7b1fc98b2cf2fa0ed81b2061b17584a678c0cc8c31"
+  },
+  "run_summary": {
+    "turn_count": 75,
+    "tool_call_count": 75,
+    "compile_attempt_count": 16,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_mechanical_components_drivetrain__automotive_differential_differential_gear__001_png_aeabd1e9b136406aa0eebf9bf43ee47e",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_mechanical_components_drivetrain__automotive_differential_differential_gear__001_png_aeabd1e9b136406aa0eebf9bf43ee47e",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_mechanical_components_drivetrain__automotive_differential_differential_gear__001_png_aeabd1e9b136406aa0eebf9bf43ee47e",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "16c9179241ff6514028421c61967459ca82783e8f764b0145bfc8878ec554bf3"
+    }
+  ]
+}

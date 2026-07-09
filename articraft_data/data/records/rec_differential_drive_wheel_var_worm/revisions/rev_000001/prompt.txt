@@ -1,0 +1,24 @@
+CATEGORY: Robotics
+SUBCATEGORY: Differential drive wheel
+TARGET: change the drive_carriage reduction stage (center_gearbox / side_gearbox_0 / side_gearbox_1 spur blocks and axle_stub_0 / axle_stub_1) to a right-angle worm-gear reduction, with a worm on each motor shaft meshing a worm wheel on the wheel axle.
+DIVERSITY_AXIS: ② joint/mechanism type.
+POSITIONING: A worm-geared differential drive wheel unit common on heavier AGVs and warehouse robots, where each independent motor drives its wheel through a self-locking right-angle worm set for high reduction and holding torque. Two coaxial driven wheels + limited top swivel keep it the same subcategory.
+KEEP: preserve these parent functional layers by name: mount_plate (rounded_plate, outer_bearing_ring, lift_eye_i, plate_screw_i, bearing_screw_i), drive_carriage (swivel_post, inner_bearing_flange, bearing_pedestal, upper_cross_brace), wheel_0, wheel_1 (treaded_tire, rim_shell, hub_drum, outer_hub_cap, hub_screw_j), mount_to_carriage swivel joint, carriage_to_wheel_0 and carriage_to_wheel_1 continuous joints, helpers _make_tire_mesh and _add_cyl.
+STRUCTURAL_DELTA: Reorient each motor_can so its shaft runs fore-aft (perpendicular to the axle) and terminates in a helical worm (a threaded/ridged cylinder mesh). Add a worm wheel (a toothed disc mesh, teeth cut at the rim) coaxial with each wheel axle, meshing the worm at a right angle inside a compact worm-gear housing block on each side. Keep the wheels driven by carriage_to_wheel_i continuous joints; the worm wheel is fixed to the wheel or shown as a co-rotating disc. Expose the worm-to-wheel mesh contact as visible geometry.
+COMPANION_VARIATIONS: optional gear-housing finish (cast-iron grey vs anodized); no part-tree, joint-graph, interface, or primitive-family change beyond the worm mechanism.
+FORBIDDEN: do not become a winch, a rotary table, an automotive axle, or a caster wheel; do not change wheel count, top-plate form family, or add suspension.
+
+This is a Robotics/Differential drive wheel family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Robotics/Differential drive wheel (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

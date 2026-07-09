@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_lock_var_shrouded_shackle",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-20T14:17:56Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "2ff4abbc5e8840480a66a2a5c28467d0cf6a690fbe18a064422554d1de9b4cfa",
+  "source": {
+    "run_id": "run_20260620_141756_224560_1daafbec",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "2ff4abbc5e8840480a66a2a5c28467d0cf6a690fbe18a064422554d1de9b4cfa",
+    "model_py_sha256": "b7c222c3faab17d43c135620733e1ad0b01b53815ec8736b62ef9dd4bfcb4493"
+  },
+  "run_summary": {
+    "turn_count": 12,
+    "tool_call_count": 12,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-lock_20260609_180057_850280_fa3217d6",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-lock_20260609_180057_850280_fa3217d6",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

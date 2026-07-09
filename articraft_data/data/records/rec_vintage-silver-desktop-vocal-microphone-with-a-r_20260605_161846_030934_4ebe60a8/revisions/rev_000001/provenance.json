@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_vintage-silver-desktop-vocal-microphone-with-a-r_20260605_161846_030934_4ebe60a8",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "0ea5c9890f6e1c17ff89838a0485830e0b2b9e87",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-05T16:49:05Z",
+    "record_id": "rec_vintage-silver-desktop-vocal-microphone-with-a-r_20260605_161846_030934_4ebe60a8",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_vintage-silver-desktop-vocal-microphone-with-a-r_20260605_161846_030934_4ebe60a8/compile_report.json",
+      "status": "success",
+      "record_id": "rec_vintage-silver-desktop-vocal-microphone-with-a-r_20260605_161846_030934_4ebe60a8",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "b8ce59e28b62f8bca7d71b04a03860b20b4c22e271a8c830ba21f9be1d21463b",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "d9d478d3e2f733ea225d3e97ab6c801b8a59ad9fbec54019c3c70c9742f1980c",
+        "model_py_mtime_ns": 1780676866114472493,
+        "model_py_size_bytes": 14995,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 536759,
+        "visual_mesh_file_count": 9,
+        "compile_elapsed_seconds": 6.017976422794163
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

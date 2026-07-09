@@ -1,0 +1,24 @@
+CATEGORY: Workspace
+SUBCATEGORY: Drafting table
+TARGET: change the parent side control `lock_knob_0`/`lock_knob_1` (round lobed hand knobs on `frame_to_lock_knob_{idx}`) to a folding side crank/winder handle.
+DIVERSITY_AXIS: ③ primary form family (of the user control / handle_or_grip slot).
+POSITIONING: Drafting table with a side hand-crank winder (visible on the reference photo) turning the board adjustment spindle instead of a plain round knob; still the same drafting table, only the grip form of the existing rotary control changes.
+KEEP: preserve these parent functional layers by name: frame, tabletop, wood_panel, tool_tray_rail, cup_socket, front_hinge_tube, hinge_cheek_{i}, hinge_barrel_0, center_hinge_barrel, hinge_barrel_2, side_shelf, perforated_basket, drawer_apron, pull_ring_{i}, frame_to_tabletop.
+STRUCTURAL_DELTA: Replace the lobed `lobed_knob` disk on each side spindle with a crank arm: a radial arm off the `threaded_stem` axis ending in a short revolving grip cylinder (offset-parallel handle). Keep it as a REVOLUTE child on the same spindle origin/axis as frame_to_lock_knob so the crank sweeps a circle in place; keep the threaded_stem seated in the hinge cheek. Use a shared crank helper for both sides.
+COMPANION_VARIATIONS: optional ⑥ handle grip material (black plastic vs steel) only.
+FORBIDDEN: do not delete the rotary joint or make a fixed decorative handle (zero-joint = rejected); do not change the base skeleton, the tilt hinge, or the drawer count; do not convert the crank into a linear lever/prismatic slider.
+
+This is a Workspace/Drafting table family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Workspace/Drafting table (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

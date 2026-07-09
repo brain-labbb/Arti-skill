@@ -1,0 +1,437 @@
+from __future__ import annotations
+
+# STABILO BOSS ORIGINAL highlighter.
+#
+# The reference image shows a thick rectangular-barrel highlighter: a lime /
+# fluorescent-yellow body with rounded corners and the "STABILO BOSS ORIGINAL"
+# branding, a black chisel (wedge) nib at the front, and a separate black cap.
+# The cap is the moving part: it pulls straight off the front of the barrel
+# (a push/pull friction fit), so it is modeled as a PRISMATIC joint along the
+# pen's long axis (+X). At q=0 the cap is fully seated over the nib (closed);
+# positive q draws it forward off the body.
+#
+# Frame convention:
+#   +X = pen length (front of pen at +X, rear at -X)
+#   cross-section lies in the Y-Z plane (Y = width, Z = height)
+
+import cadquery as cq
+
+from sdk import (
+    ArticulatedObject,
+    ArticulationType,
+    MotionLimits,
+    Origin,
+    TestContext,
+    TestReport,
+    mesh_from_cadquery,
+)
+
+# ---------------------------------------------------------------------------
+# Real-world dimensions (meters)
+# ---------------------------------------------------------------------------
+BARREL_LEN = 0.090  # length of the lime body (rear shoulder to front shoulder)
+BARREL_W = 0.0170  # body width (Y)
+BARREL_H = 0.0120  # body height (Z)
+BODY_CORNER_R = 0.0030  # rounded corners of the rectangular section
+
+# Front shoulder: a short stepped collar where the cap registers.
+COLLAR_LEN = 0.0060
+COLLAR_W = 0.0150
+COLLAR_H = 0.0105
+COLLAR_CORNER_R = 0.0028
+
+# Nib (black wedge / chisel point) protruding forward from the collar.
+NIB_BASE_LEN = 0.0080  # straight black holder right after the collar
+NIB_BASE_W = 0.0120
+NIB_BASE_H = 0.0090
+NIB_WEDGE_LEN = 0.0120  # tapered chisel section
+NIB_TIP_W = 0.0090
+NIB_TIP_H = 0.0018  # thin chisel edge
+
+# Cap (black, hollow, rounded-rect, closed at its front, open at its rear).
+CAP_LEN = 0.0420
+CAP_OUTER_W = 0.0182
+CAP_OUTER_H = 0.0132
+CAP_WALL = 0.0014
+CAP_CORNER_R = 0.0034
+CAP_CLIP_LEN = 0.0260  # pocket-clip flat along the cap top
+
+# Cap seats so its rear lip overlaps the front of the lime barrel.
+CAP_SEAT_OVERLAP = 0.0060  # how far the cap mouth slides back onto the barrel
+
+# Grip section: contoured rubber ribs just behind the front collar.
+GRIP_ZONE_START = 0.060  # X start of grip zone on barrel body
+GRIP_ZONE_LEN = 0.024  # total axial length of the grip zone
+GRIP_RIB_COUNT = 8  # number of raised ribs
+GRIP_RIB_WIDTH = 0.0012  # each rib thickness along X
+GRIP_RIB_PROUD = 0.0008  # how far ribs stand proud of barrel surface
+
+# Materials
+LIME = (0.82, 0.93, 0.13, 1.0)  # fluorescent yellow-green body
+BLACK = (0.07, 0.07, 0.08, 1.0)  # nib + cap
+FELT = (0.78, 0.90, 0.15, 1.0)  # exposed ink-soaked felt at the very tip
+RUBBER_GRIP = (0.22, 0.22, 0.24, 1.0)  # dark grey rubber grip ribs
+
+
+# ---------------------------------------------------------------------------
+# Geometry helpers
+# ---------------------------------------------------------------------------
+def _rounded_rect_prism(length: float, width: float, height: float, corner_r: float):
+    """A rounded-rectangle prism whose long axis is +X, centered on Y/Z,
+    spanning X in [0, length]."""
+    return (
+        cq.Workplane("YZ")
+        .rect(width, height)
+        .extrude(length)
+        .edges("|X")
+        .fillet(corner_r)
+    )
+
+
+def _build_grip_rib() -> object:
+    """One raised rubber rib ring that wraps around the barrel cross-section.
+    Authored at local X in [0, GRIP_RIB_WIDTH], centered on Y/Z.
+    The inner bore matches the barrel so the rib sits flush on the surface,
+    while the outer profile stands proud by GRIP_RIB_PROUD."""
+    outer_w = BARREL_W + 2.0 * GRIP_RIB_PROUD
+    outer_h = BARREL_H + 2.0 * GRIP_RIB_PROUD
+    outer_r = min(BODY_CORNER_R + GRIP_RIB_PROUD, min(outer_w, outer_h) / 2.0 * 0.9)
+    outer = _rounded_rect_prism(GRIP_RIB_WIDTH, outer_w, outer_h, outer_r)
+    # Bore out the barrel interior; make bore slightly undersized so the rib
+    # mesh contacts the barrel surface (ensures connectivity).
+    bore_w = BARREL_W - 0.0002
+    bore_h = BARREL_H - 0.0002
+    bore_r = min(BODY_CORNER_R, min(bore_w, bore_h) / 2.0 * 0.9)
+    bore = _rounded_rect_prism(GRIP_RIB_WIDTH + 0.0002, bore_w, bore_h, bore_r).translate(
+        (-0.0001, 0.0, 0.0)
+    )
+    return outer.cut(bore)
+
+
+def _build_barrel() -> object:
+    """Lime body + stepped front collar, as one solid (the pen body)."""
+    body = _rounded_rect_prism(BARREL_LEN, BARREL_W, BARREL_H, BODY_CORNER_R)
+
+    # Front collar steps down from the body so the cap mouth seats over it.
+    collar = _rounded_rect_prism(
+        COLLAR_LEN, COLLAR_W, COLLAR_H, COLLAR_CORNER_R
+    ).translate((BARREL_LEN, 0.0, 0.0))
+
+    body = body.union(collar)
+    return body
+
+
+def _build_nib() -> object:
+    """Black chisel nib: a straight holder then a tapered wedge to a thin edge.
+    Origin at X=0 corresponds to the front shoulder of the barrel collar."""
+    holder = _rounded_rect_prism(NIB_BASE_LEN, NIB_BASE_W, NIB_BASE_H, 0.0018)
+
+    # Tapered chisel: loft from the holder face to a thin wide edge.
+    x0 = NIB_BASE_LEN
+    wedge = (
+        cq.Workplane("YZ")
+        .workplane(offset=x0)
+        .rect(NIB_BASE_W, NIB_BASE_H)
+        .workplane(offset=NIB_WEDGE_LEN)
+        .rect(NIB_TIP_W, NIB_TIP_H)
+        .loft(combine=True)
+    )
+    return holder.union(wedge)
+
+
+def _build_felt_tip() -> object:
+    """The exposed ink-soaked felt sliver at the extreme chisel edge."""
+    x0 = NIB_BASE_LEN + NIB_WEDGE_LEN
+    felt = (
+        cq.Workplane("YZ")
+        .workplane(offset=x0 - 0.0015)
+        .rect(NIB_TIP_W * 0.96, NIB_TIP_H * 1.05)
+        .workplane(offset=0.0025)
+        .rect(NIB_TIP_W * 0.9, NIB_TIP_H * 0.8)
+        .loft(combine=True)
+    )
+    return felt
+
+
+def _build_cap() -> object:
+    """Hollow black cap, closed at its front (+X), open at its rear (-X) so it
+    slides over the nib. Authored in its own frame: rear mouth at X=0, front
+    closed end at X=CAP_LEN. Includes a flat pocket clip on top."""
+    outer = _rounded_rect_prism(CAP_LEN, CAP_OUTER_W, CAP_OUTER_H, CAP_CORNER_R)
+
+    # Hollow it out from the rear mouth, leaving the front end closed.
+    bore_w = CAP_OUTER_W - 2 * CAP_WALL
+    bore_h = CAP_OUTER_H - 2 * CAP_WALL
+    bore_len = CAP_LEN - CAP_WALL  # leave a front wall of thickness CAP_WALL
+    bore = (
+        cq.Workplane("YZ")
+        .rect(bore_w, bore_h)
+        .extrude(bore_len)
+        .edges("|X")
+        .fillet(CAP_CORNER_R - CAP_WALL)
+    )
+    cap = outer.cut(bore)
+
+    # Pocket clip: a thin flat rib running along the top, standing slightly
+    # proud and anchored to the closed front end of the cap.
+    clip_thick = 0.0016
+    clip_w = 0.0070
+    clip_x0 = CAP_LEN - CAP_CLIP_LEN
+    clip_z = CAP_OUTER_H / 2.0 + clip_thick / 2.0 - 0.0002
+    clip = (
+        cq.Workplane("YZ")
+        .workplane(offset=clip_x0)
+        .center(0.0, clip_z)
+        .rect(clip_w, clip_thick)
+        .extrude(CAP_CLIP_LEN)
+        .edges("|X")
+        .fillet(0.0006)
+    )
+    # Small connecting boss tying the clip down to the cap body at its front.
+    boss = (
+        cq.Workplane("YZ")
+        .workplane(offset=CAP_LEN - 0.0050)
+        .center(0.0, CAP_OUTER_H / 2.0 - 0.0010)
+        .rect(clip_w, 0.0040)
+        .extrude(0.0045)
+    )
+    cap = cap.union(clip).union(boss)
+    return cap
+
+
+# ---------------------------------------------------------------------------
+# Model
+# ---------------------------------------------------------------------------
+def build_object_model() -> ArticulatedObject:
+    model = ArticulatedObject(name="stabilo_boss_highlighter")
+
+    lime = model.material("lime_body", rgba=LIME)
+    black = model.material("black_plastic", rgba=BLACK)
+    felt_mat = model.material("felt_ink", rgba=FELT)
+    grip_mat = model.material("rubber_grip", rgba=RUBBER_GRIP)
+
+    # --- Pen body (root): lime barrel + collar, plus the black nib up front ---
+    barrel = model.part("barrel")
+    barrel.visual(
+        mesh_from_cadquery(_build_barrel(), "barrel_body"),
+        material=lime,
+        name="barrel_body",
+    )
+
+    # Grip section: repeated raised rubber ribs encircling the barrel,
+    # positioned just behind the front collar.
+    grip_pitch = GRIP_ZONE_LEN / GRIP_RIB_COUNT
+    for i in range(GRIP_RIB_COUNT):
+        rib_x = GRIP_ZONE_START + i * grip_pitch
+        barrel.visual(
+            mesh_from_cadquery(_build_grip_rib(), f"grip_rib_{i}"),
+            origin=Origin(xyz=(rib_x, 0.0, 0.0)),
+            material=grip_mat,
+            name=f"grip_rib_{i}",
+        )
+
+    # Nib visuals live on the barrel part (rigidly part of the pen body), shifted
+    # forward to start at the front shoulder of the collar.
+    nib_x = BARREL_LEN + COLLAR_LEN
+    barrel.visual(
+        mesh_from_cadquery(_build_nib(), "nib"),
+        origin=Origin(xyz=(nib_x, 0.0, 0.0)),
+        material=black,
+        name="nib",
+    )
+    barrel.visual(
+        mesh_from_cadquery(_build_felt_tip(), "felt_tip"),
+        origin=Origin(xyz=(nib_x, 0.0, 0.0)),
+        material=felt_mat,
+        name="felt_tip",
+    )
+
+    # --- Cap (moving part): hollow black shell that pulls off forward ---
+    cap = model.part("cap")
+    cap.visual(
+        mesh_from_cadquery(_build_cap(), "cap_shell"),
+        material=black,
+        name="cap_shell",
+    )
+
+    # Seated cap pose: cap rear mouth sits back over the front of the barrel by
+    # CAP_SEAT_OVERLAP, so the cap front fully covers the nib.
+    # Cap is authored with its mouth at local X=0; place the joint origin so that
+    # at q=0 the mouth is at (BARREL_LEN - CAP_SEAT_OVERLAP).
+    seat_x = BARREL_LEN - CAP_SEAT_OVERLAP
+    # Travel needed to fully clear the nib: past the tip plus a margin.
+    nib_tip_x = nib_x + NIB_BASE_LEN + NIB_WEDGE_LEN
+    full_clear = (nib_tip_x - seat_x) + 0.006
+
+    model.articulation(
+        "barrel_to_cap",
+        ArticulationType.PRISMATIC,
+        parent=barrel,
+        child=cap,
+        origin=Origin(xyz=(seat_x, 0.0, 0.0)),
+        axis=(1.0, 0.0, 0.0),
+        motion_limits=MotionLimits(
+            effort=15.0, velocity=0.25, lower=0.0, upper=full_clear
+        ),
+    )
+
+    return model
+
+
+# ---------------------------------------------------------------------------
+# Tests
+# ---------------------------------------------------------------------------
+def run_tests() -> TestReport:
+    ctx = TestContext(object_model)
+
+    barrel = object_model.get_part("barrel")
+    cap = object_model.get_part("cap")
+    joint = object_model.get_articulation("barrel_to_cap")
+
+    nib_x = BARREL_LEN + COLLAR_LEN
+    nib_tip_x = nib_x + NIB_BASE_LEN + NIB_WEDGE_LEN
+
+    # --- Grip section: repeated rubber ribs behind the collar ---
+    grip_rib_names = [f"grip_rib_{i}" for i in range(GRIP_RIB_COUNT)]
+    for rib_name in grip_rib_names:
+        rib_aabb = ctx.part_element_world_aabb(barrel, elem=rib_name)
+        ctx.check(
+            f"grip rib {rib_name} exists",
+            rib_aabb is not None,
+            details=f"aabb={rib_aabb}",
+        )
+
+    # First and last ribs bracket the grip zone behind the collar.
+    first_rib_aabb = ctx.part_element_world_aabb(barrel, elem="grip_rib_0")
+    last_rib_aabb = ctx.part_element_world_aabb(barrel, elem=f"grip_rib_{GRIP_RIB_COUNT - 1}")
+    if first_rib_aabb is not None and last_rib_aabb is not None:
+        ctx.check(
+            "grip ribs span the zone behind the collar",
+            first_rib_aabb[0][0] >= GRIP_ZONE_START - 0.002
+            and last_rib_aabb[1][0] <= GRIP_ZONE_START + GRIP_ZONE_LEN + 0.002,
+            details=f"first_min_x={first_rib_aabb[0][0]:.4f}, last_max_x={last_rib_aabb[1][0]:.4f}",
+        )
+        # Ribs should stand proud of the barrel body cross-section.
+        rib_w = first_rib_aabb[1][1] - first_rib_aabb[0][1]
+        rib_h = first_rib_aabb[1][2] - first_rib_aabb[0][2]
+        ctx.check(
+            "grip ribs stand proud of barrel surface",
+            rib_w > BARREL_W and rib_h > BARREL_H,
+            details=f"rib_w={rib_w:.4f} vs barrel_w={BARREL_W}, rib_h={rib_h:.4f} vs barrel_h={BARREL_H}",
+        )
+        # Grip zone should end before the collar starts.
+        ctx.check(
+            "grip zone is behind the collar",
+            last_rib_aabb[1][0] < BARREL_LEN,
+            details=f"last_rib_max_x={last_rib_aabb[1][0]:.4f}, collar_x={BARREL_LEN}",
+        )
+
+    # --- Joint contract: prismatic along the pen's long axis (+X) ---
+    ctx.check(
+        "cap joint is prismatic",
+        str(joint.joint_type).lower().endswith("prismatic"),
+        details=f"joint_type={joint.joint_type}",
+    )
+    ax = tuple(joint.axis)
+    ctx.check(
+        "cap slides along +X",
+        abs(ax[0]) > 0.99 and abs(ax[1]) < 1e-6 and abs(ax[2]) < 1e-6,
+        details=f"axis={ax}",
+    )
+
+    # --- Hero parts present and placed ---
+    # Nib lives at the front of the pen, ahead of the barrel body.
+    nib_aabb = ctx.part_element_world_aabb(barrel, elem="nib")
+    ctx.check(
+        "black nib protrudes past the barrel front",
+        nib_aabb is not None and nib_aabb[1][0] > BARREL_LEN + COLLAR_LEN - 1e-6,
+        details=f"nib_aabb={nib_aabb}",
+    )
+    # Exposed felt tip is at the extreme front of the pen.
+    felt_aabb = ctx.part_element_world_aabb(barrel, elem="felt_tip")
+    ctx.check(
+        "felt ink tip is at the chisel point",
+        felt_aabb is not None and felt_aabb[1][0] >= nib_tip_x - 0.002,
+        details=f"felt_aabb={felt_aabb}",
+    )
+
+    # Cap is a roughly rectangular body wider than the barrel (it wraps it).
+    cap_aabb = ctx.part_world_aabb(cap)
+    if cap_aabb is not None:
+        cap_w = cap_aabb[1][1] - cap_aabb[0][1]
+        cap_h = cap_aabb[1][2] - cap_aabb[0][2]
+        ctx.check(
+            "cap is a chunky rectangular shell",
+            cap_w >= BARREL_W and cap_h >= BARREL_H,
+            details=f"cap_w={cap_w:.4f}, cap_h={cap_h:.4f}",
+        )
+
+    # --- Closed pose (q=0): cap fully covers / encloses the nib ---
+    with ctx.pose({joint: 0.0}):
+        # Cap projected footprint surrounds the nib in cross-section.
+        ctx.expect_within(
+            barrel,
+            cap,
+            axes="yz",
+            inner_elem="nib",
+            outer_elem="cap_shell",
+            margin=0.001,
+            name="seated cap encloses the nib cross-section",
+        )
+        # Cap front reaches beyond the chisel tip (tip is capped, not exposed).
+        cap_closed = ctx.part_world_aabb(cap)
+        ctx.check(
+            "seated cap front covers the chisel tip",
+            cap_closed is not None and cap_closed[1][0] >= nib_tip_x - 1e-4,
+            details=f"cap_front={None if cap_closed is None else cap_closed[1][0]:.4f}, tip={nib_tip_x:.4f}",
+        )
+        seated_front = None if cap_closed is None else cap_closed[1][0]
+
+    # --- Open pose (upper limit): cap pulls forward and clears the nib ---
+    upper = joint.motion_limits.upper
+    with ctx.pose({joint: upper}):
+        cap_open = ctx.part_world_aabb(cap)
+        # Cap mouth (its rear / min X) has moved forward past the chisel tip,
+        # so the nib is fully exposed.
+        ctx.check(
+            "pulled cap clears the nib (mouth past the tip)",
+            cap_open is not None and cap_open[0][0] >= nib_tip_x - 1e-3,
+            details=f"cap_mouth={None if cap_open is None else cap_open[0][0]:.4f}, tip={nib_tip_x:.4f}",
+        )
+        # And it travelled forward relative to the seated pose.
+        open_front = None if cap_open is None else cap_open[1][0]
+        ctx.check(
+            "cap moves forward when pulled off",
+            seated_front is not None
+            and open_front is not None
+            and open_front > seated_front + 0.02,
+            details=f"seated_front={seated_front}, open_front={open_front}",
+        )
+
+    # The seated cap nests over the barrel/nib front: a genuine capture fit.
+    ctx.allow_overlap(
+        cap,
+        barrel,
+        elem_a="cap_shell",
+        elem_b="nib",
+        reason="Seated cap is a friction fit that intentionally encloses the nib (capture fit).",
+    )
+    ctx.allow_overlap(
+        cap,
+        barrel,
+        elem_a="cap_shell",
+        elem_b="barrel_body",
+        reason="Cap mouth slides back over the front collar of the barrel to seat (push-on fit).",
+    )
+    ctx.allow_overlap(
+        cap,
+        barrel,
+        elem_a="cap_shell",
+        elem_b="felt_tip",
+        reason="Seated cap encloses the felt tip to keep the highlighter from drying out.",
+    )
+
+    return ctx.report()
+
+
+object_model = build_object_model()

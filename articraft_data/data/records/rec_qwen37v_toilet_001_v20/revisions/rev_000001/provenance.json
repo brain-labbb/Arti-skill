@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_qwen37v_toilet_001_v20",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": null,
+    "uv_lock_sha256": null
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_edit_draft"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-14T06:52:17Z",
+    "record_id": "rec_qwen37v_toilet_001_v20",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_qwen37v_toilet_001_v20/compile_report.json",
+      "status": "failure",
+      "record_id": "rec_qwen37v_toilet_001_v20",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "ValueError: URDF tests failed:\n- bidet nozzle is positioned under the bowl rim: nozzle z=0.34, seat z=0.4\n- fail_if_isolated_parts(): Isolated parts detected (floating support-disconnected component groups from the grounded body; samples=1, contact_tol=1e-06):\n- pose_index=0 at pose (body_to_bidet_nozzle=0, body_to_lid=0, body_to_seat_ring=0), part 'bidet_nozzle' is disconnected from the grounded body rooted at 'body'; nearest_grounded_part='body'; approx_gap=0.03406m; backend=fcl\n- fail_if_parts_overlap_in_current_pose(): Part overlaps detected (overlap_tol=0.005, overlap_volume_tol=5e-07):\npair=('body','lid') depth=(0.38,0.37,0.018) min_depth=0.018 vol=0.002531 elem_a=#0 'bowl_shell':Mesh elem_b=#0 'lid_shell':Mesh pose={}\npair=('body','seat_ring') depth=(0.017,0.06699,0.02) min_depth=0.017 vol=2.278e-05 elem_a=#2 'flushometer_pipe__component_001':Mesh elem_b=#0 'seat_ring_shell':Mesh pose={}"
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "9e6fb693808a3bdbd637a628b0dbcf4b7d2c88421adf9247c842f24bd5a39703",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "7f11d7117aa7e90c475ff2bfae6a7f70998c88bbe48874c962aeb50c83332290",
+        "model_py_mtime_ns": 1781419904809328014,
+        "model_py_size_bytes": 18772,
+        "materialization_status": "missing",
+        "visual_mesh_bytes": 0,
+        "visual_mesh_file_count": 0,
+        "compile_elapsed_seconds": 8.375966872088611
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 2,
+      "errors": [
+        "strict external compile exited with status 1",
+        "compile report status must be 'success'"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_manhole_cover_var_rectangular_outline",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-27T03:29:55Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "af49366a42b7c61d24f6909b0fab4602e322ff756d506c4e506ff00c96d7ab13",
+  "source": {
+    "run_id": "run_20260627_032955_666886_ef4b730b",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "af49366a42b7c61d24f6909b0fab4602e322ff756d506c4e506ff00c96d7ab13",
+    "model_py_sha256": "7a9adcef757e6d9b8056e76137bb423786f550c342db7adc337bccce07ad4fb2"
+  },
+  "run_summary": {
+    "turn_count": 5,
+    "tool_call_count": 4,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_square-weathered-concrete-utility-access-cover-s_20260608_164425_869735_edad8300",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_square-weathered-concrete-utility-access-cover-s_20260608_164425_869735_edad8300",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_variant-burner-count-2-give-the-cooktop-exactly-_20260618_064925_829680_1e0fe6bf",
+  "created_at": "2026-06-18T06:49:25Z",
+  "updated_at": "2026-06-18T06:58:20Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260618_064925_829680_1e0fe6bf",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "burner-count-2",
+    "prompt_preview": "Variant (burner_count = 2): give the cooktop exactly two gas burners instead of four, burner_{i} for i in range(2) with a matching knob_{i} each. Each burner..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "9a0f4b275269ff8f61081d6531256903c133d33872c352b4449411f1731db8d9",
+    "model_py_sha256": "4c64fd8247670eb99577dd6e5be99b227e523ab2338828cdc2c12e7c56557b46"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_model-a-compact-freestanding-gas-range-cooker-ap_20260610_085103_861011_ee507c92",
+    "parent_record_id": "rec_model-a-compact-freestanding-gas-range-cooker-ap_20260610_085103_861011_ee507c92",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

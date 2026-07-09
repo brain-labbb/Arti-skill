@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_rifle_var_rails18",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T13:18:23Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "b155f6ac08f2e3bdbd0853f7b7e2f2634c25bb8c41bd4d857429e86069f7b1db",
+  "source": {
+    "run_id": "run_20260623_131823_309694_a261af83",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "b155f6ac08f2e3bdbd0853f7b7e2f2634c25bb8c41bd4d857429e86069f7b1db",
+    "model_py_sha256": "e0e615ebbd40980af0ac86b51f90cb5868c502f053680b3139370a3c4ad02593"
+  },
+  "run_summary": {
+    "turn_count": 5,
+    "tool_call_count": 4,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-an-m4-style-military-carbine-rifle-all-mat_20260610_081537_124088_497c83bd",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-an-m4-style-military-carbine-rifle-all-mat_20260610_081537_124088_497c83bd",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

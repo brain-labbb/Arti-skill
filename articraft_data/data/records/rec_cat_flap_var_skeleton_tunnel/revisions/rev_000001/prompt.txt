@@ -1,0 +1,26 @@
+CATEGORY: Pet_Animal related
+SUBCATEGORY: Cat flap
+TARGET: change the panel_frame host body (currently thin door-panel + tunnel_side_0/tunnel_side_1/tunnel_top/tunnel_sill sleeve) into a deep wall-mount tunnel liner: a front frame joined through a boxed tunnel to a matching rear frame, for mounting through a thick masonry wall.
+DIVERSITY_AXIS: ① skeleton/topology.
+POSITIONING: Wall-mount cat flap with telescoping tunnel/liner (e.g. brick-wall pet door kit). Still a cat flap: same pet opening + swinging flap; only the through-wall depth structure changes.
+KEEP: preserve these parent functional layers by name: panel_frame, front_trim, flap, flap_panel, moving_hinge_barrel, magnet_keeper, frame_to_flap, bottom_magnet, screw_i, hinge_boss_i, fixed_hinge_pin_i.
+STRUCTURAL_DELTA: extend the existing short tunnel_side_0/tunnel_side_1/tunnel_top/tunnel_sill sleeve into a full four-wall rectangular tunnel of depth ~0.15-0.30 running through Y; add a rear_frame (rear rounded trim/flange, mirror of front_trim) at the far end of the tunnel bonded to the tunnel walls; keep the flap and its top-hinge revolute on the front frame. Tunnel walls loop-emitted, indexed, rigidly fixed between front_trim and rear_frame.
+MULTIPLICITY:
+COMPANION_VARIATIONS: masonry-grey/white liner palette only; no part-tree, joint, or opening-shape change beyond the tunnel/rear-frame addition.
+FORBIDDEN: do not become a ventilation duct, air vent, mail slot, or window; do not add electronics; do not change the flap opening to circular; do not add a second flap or a sliding lock.
+COMPATIBILITY_PROBE:
+
+This is a Pet_Animal related/Cat flap family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Pet_Animal related/Cat flap (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

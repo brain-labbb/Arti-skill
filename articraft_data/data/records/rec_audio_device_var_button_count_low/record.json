@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_audio_device_var_button_count_low",
+  "created_at": "2026-07-05T10:45:14Z",
+  "updated_at": "2026-07-05T10:46:45Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "technology",
+  "source": {
+    "run_id": "run_20260705_104514_897548_1218f6f4",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "audio_device-button_count_low",
+    "prompt_preview": "MULTIPLICITY: target N = 3 (reduce the top push-button preset bank `button_{idx}` from the baseline 5 to 3). Keep the existing `for idx, x in enumerate(butto..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a49e8d14d0b155284727bcd203939f40f5a0530c4ba2763a07cf8fa72b5839d6",
+    "model_py_sha256": "51aa20ce98456db40bb7c99652f4ef3d44f85cb369a2175f471c6c352523a3da"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_a-tan-beige-minimalist-retro-portable-radio-a-re_20260624_122658_140174_25291653",
+    "parent_record_id": "rec_a-tan-beige-minimalist-retro-portable-radio-a-re_20260624_122658_140174_25291653",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

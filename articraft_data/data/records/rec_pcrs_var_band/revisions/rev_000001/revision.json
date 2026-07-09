@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_pcrs_var_band",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-28T07:28:45Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "b76c297b614e3fc096e2d23316abd72ca02c1201eb7222a70a749fe93ad87bd3",
+  "source": {
+    "run_id": "run_20260628_072845_564075_a5307061",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 80,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "b76c297b614e3fc096e2d23316abd72ca02c1201eb7222a70a749fe93ad87bd3",
+    "model_py_sha256": "f16b02f891d5ab7a50b9223a0557eef9717407cdc96d749c1533439c5096544f"
+  },
+  "run_summary": {
+    "turn_count": 14,
+    "tool_call_count": 15,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-modern-circular-ring-swing-hanging-from-_20260610_085427_611739_83a6bd25",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-modern-circular-ring-swing-hanging-from-_20260610_085427_611739_83a6bd25",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-28T07:49:50Z",
+    "record_id": "rec_pcrs_var_band",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_pcrs_var_band/compile_report.json",
+      "status": "success",
+      "record_id": "rec_pcrs_var_band",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "f16b02f891d5ab7a50b9223a0557eef9717407cdc96d749c1533439c5096544f",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "93a8ec409f268f56a58b7ae8fe9cf6a58e47cf1daefed8faad184ab03107bd4a",
+        "model_py_mtime_ns": 1782632471474790970,
+        "model_py_size_bytes": 16475,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 260386,
+        "visual_mesh_file_count": 7,
+        "compile_elapsed_seconds": 3.084340676665306
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 6,
+      "errors": [
+        "record.json missing creator metadata for external workflow",
+        "source.run_id must be null for external records",
+        "external records must not contain Articraft agent traces",
+        "provenance.run_summary.turn_count must be null",
+        "provenance.run_summary.tool_call_count must be null",
+        "provenance.run_summary.compile_attempt_count must be null"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

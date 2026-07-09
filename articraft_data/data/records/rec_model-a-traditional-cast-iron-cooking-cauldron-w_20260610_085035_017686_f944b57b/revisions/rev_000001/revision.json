@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_model-a-traditional-cast-iron-cooking-cauldron-w_20260610_085035_017686_f944b57b",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-10T08:50:35Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "4ceb98b3ebe8593b8c95acf7e50921201150c6e629e1cc8039c48b7bbe3d31ba",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "4ceb98b3ebe8593b8c95acf7e50921201150c6e629e1cc8039c48b7bbe3d31ba",
+    "model_py_sha256": "eed7afc3b262fcbdea21e0a9f8624de4647b0257f42834de5e57cf574c76f9cf"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-11T03:18:55Z",
+    "record_id": "rec_model-a-traditional-cast-iron-cooking-cauldron-w_20260610_085035_017686_f944b57b",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-a-traditional-cast-iron-cooking-cauldron-w_20260610_085035_017686_f944b57b/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-a-traditional-cast-iron-cooking-cauldron-w_20260610_085035_017686_f944b57b",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "eed7afc3b262fcbdea21e0a9f8624de4647b0257f42834de5e57cf574c76f9cf",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "f18876fbe23b9eb431a9f45d15092aae5c4017fa297e0b6c2edb4d7a7db6f27a",
+        "model_py_mtime_ns": 1782190310395033697,
+        "model_py_size_bytes": 16262,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 2926637,
+        "visual_mesh_file_count": 8,
+        "compile_elapsed_seconds": 3.3988409964367747
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

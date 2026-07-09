@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-08-create-a-long-narrow-wooden-box-varia_20260611_101233_424292_e12ddd40",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-11T10:12:33Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "fae335c058ea9b1610b90680bf03d6ed2b8b87a08c19b97769cd9e76566c5550",
+  "source": {
+    "run_id": "run_20260611_101233_424292_e12ddd40",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5",
+    "thinking_level": "med",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "fae335c058ea9b1610b90680bf03d6ed2b8b87a08c19b97769cd9e76566c5550",
+    "model_py_sha256": "4efee985a063060a598466bd29a32db60c750630bc4b6e49a913b30ef9218600"
+  },
+  "run_summary": {
+    "turn_count": 16,
+    "tool_call_count": 15,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_rustic-wooden-storage-box-with-plank-sides-metal_20260605_133631_387134_1a9c91ba",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_rustic-wooden-storage-box-with-plank-sides-metal_20260605_133631_387134_1a9c91ba",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

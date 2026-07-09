@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_skateboard_var_inverted_truck",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-25T02:20:53Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "41db7666b787dad57fbd7963d7557ade3e8d71d6a467df0fe09c564dd8d8a283",
+  "source": {
+    "run_id": "run_20260625_022053_058268_f22200b5",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "41db7666b787dad57fbd7963d7557ade3e8d71d6a467df0fe09c564dd8d8a283",
+    "model_py_sha256": "cdfe67b4484b6e0ed621cc1724368a34f2921c7387955d7c075bd937f03690fc"
+  },
+  "run_summary": {
+    "turn_count": 20,
+    "tool_call_count": 20,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_wooden-skateboard-with-a-maple-deck-two-metal-tr_20260605_165931_193582_b6b31add",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_wooden-skateboard-with-a-maple-deck-two-metal-tr_20260605_165931_193582_b6b31add",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

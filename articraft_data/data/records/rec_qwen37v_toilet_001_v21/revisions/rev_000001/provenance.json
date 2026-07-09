@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_qwen37v_toilet_001_v21",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": null,
+    "uv_lock_sha256": null
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_edit_draft"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-14T06:52:46Z",
+    "record_id": "rec_qwen37v_toilet_001_v21",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_qwen37v_toilet_001_v21/compile_report.json",
+      "status": "failure",
+      "record_id": "rec_qwen37v_toilet_001_v21",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "ValueError: URDF tests failed:\n- lid travels with seat when seat opens (lid is child of seat): lid rest z=(0.06, 0.0, 0.42800000000000005), lid with seat open z=(0.036364613927707005, 0.0, 0.40816755626400636)\n- fail_if_isolated_parts(): Isolated parts detected (floating support-disconnected component groups from the grounded body; samples=1, contact_tol=1e-06):\n- pose_index=0 at pose (body_to_flush_button_large=0, body_to_flush_button_small=0, body_to_seat_ring=0, seat_to_lid=0), part 'lid' is disconnected from the grounded body rooted at 'body'; nearest_grounded_part='seat_ring'; approx_gap=0.022m; backend=fcl\n- fail_if_parts_overlap_in_current_pose(): Part overlaps detected (overlap_tol=0.005, overlap_volume_tol=5e-07):\npair=('body','seat_ring') depth=(0.024,0.032,0.009996) min_depth=0.009996 vol=7.677e-06 elem_a=#3 'hinge_barrels__component_001':Mesh elem_b=#0 'seat_ring_shell':Mesh pose={}"
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "d6da2d25726b0af2cc31dfb930f595c3921aad1bf827d2be7f00b130e06e5d47",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "b2094c38ab77a9b8f17416ef35e6b623e5e3ab9ea5c13e1c0fe35d1161fbe34e",
+        "model_py_mtime_ns": 1781419944299370774,
+        "model_py_size_bytes": 19250,
+        "materialization_status": "missing",
+        "visual_mesh_bytes": 0,
+        "visual_mesh_file_count": 0,
+        "compile_elapsed_seconds": 4.609421635046601
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 2,
+      "errors": [
+        "strict external compile exited with status 1",
+        "compile report status must be 'success'"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

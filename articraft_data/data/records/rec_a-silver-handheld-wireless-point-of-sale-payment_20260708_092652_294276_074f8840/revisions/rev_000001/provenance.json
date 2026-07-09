@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_a-silver-handheld-wireless-point-of-sale-payment_20260708_092652_294276_074f8840",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.13",
+    "platform": "darwin-arm64",
+    "git_commit": "e07e427df84ab12b2983b648af5ead3c556d0883",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T09:32:16Z",
+    "record_id": "rec_a-silver-handheld-wireless-point-of-sale-payment_20260708_092652_294276_074f8840",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_a-silver-handheld-wireless-point-of-sale-payment_20260708_092652_294276_074f8840/compile_report.json",
+      "status": "success",
+      "record_id": "rec_a-silver-handheld-wireless-point-of-sale-payment_20260708_092652_294276_074f8840",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "5da6341ed56ed69a58aec748c64d1e04cca54956b18deb47a319e816cd856c50",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "d2ba8c299191e9bc77187c352fc2d4e909d01c2667d7bb3d06f62df61f6e00e8",
+        "model_py_mtime_ns": 1783503106999097886,
+        "model_py_size_bytes": 16193,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 1073592,
+        "visual_mesh_file_count": 4,
+        "compile_elapsed_seconds": 2.9646687080021366
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

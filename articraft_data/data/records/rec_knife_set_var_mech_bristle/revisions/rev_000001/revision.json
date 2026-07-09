@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_knife_set_var_mech_bristle",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-19T13:16:52Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "f730c4762f13ad0c200d00881f6fc2079802a66bc0c7e6b3966b9ba8cc8e9651",
+  "source": {
+    "run_id": "run_20260619_131652_579848_f4353c85",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "f730c4762f13ad0c200d00881f6fc2079802a66bc0c7e6b3966b9ba8cc8e9651",
+    "model_py_sha256": "bc62ffe26a1574dfbff9f67a434848dfd8336b63db5ed901fd44c6e29e7af7df"
+  },
+  "run_summary": {
+    "turn_count": 8,
+    "tool_call_count": 8,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-kitchen-knife-block-set-a-slanted-light-_20260610_080923_805616_1d3b3a0e",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-kitchen-knife-block-set-a-slanted-light-_20260610_080923_805616_1d3b3a0e",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

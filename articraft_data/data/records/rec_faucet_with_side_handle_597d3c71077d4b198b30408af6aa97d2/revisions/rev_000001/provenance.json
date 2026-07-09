@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_faucet_with_side_handle_597d3c71077d4b198b30408af6aa97d2",
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.4",
+    "thinking_level": "high",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 50,
+    "max_cost_usd": 2.0
+  },
+  "prompting": {
+    "system_prompt_file": "designer_system_prompt_openai.txt",
+    "system_prompt_sha256": "99627eafb80cae3fa976e953af4b0dd115b26b486ef69d9c74a5114a02beae82",
+    "sdk_docs_mode": "full",
+    "post_success_design_audit": true,
+    "scaffold_mode": "lite"
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "5a4094ac81eae7b2682eb6fde48f1630cd0e139d",
+    "uv_lock_sha256": "609c6cb5ce8a26122aaeab4bd2bdcc6e45bacfa426781165809f517f6b02bb83"
+  },
+  "run_summary": {
+    "turn_count": 6,
+    "tool_call_count": 5,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  }
+}

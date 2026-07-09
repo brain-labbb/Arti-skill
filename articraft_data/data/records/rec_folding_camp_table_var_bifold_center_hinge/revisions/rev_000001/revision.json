@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_folding_camp_table_var_bifold_center_hinge",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T04:24:40Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "16131eccbd1a3873780050411f639d559f66d00f5cf4565b88bc7a144e19d752",
+  "source": {
+    "run_id": "run_20260709_042440_549713_20e2cf9b",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "16131eccbd1a3873780050411f639d559f66d00f5cf4565b88bc7a144e19d752",
+    "model_py_sha256": "c38300ac0937cbdb51da82ed25b8fc5964490c4f65849b7aba37bfe5e0e77f0e"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 11,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_camping_outdoor_gear__folding_camp_table_1a04de6b29ee4143b411d8805aa338b9",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_camping_outdoor_gear__folding_camp_table_1a04de6b29ee4143b411d8805aa338b9",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_camping_outdoor_gear__folding_camp_table_1a04de6b29ee4143b411d8805aa338b9",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "fcd6a73e2ae6d1cd7adeca0d7a591dbdee0e940967bee05d6d64e80ed56780a4"
+    }
+  ]
+}

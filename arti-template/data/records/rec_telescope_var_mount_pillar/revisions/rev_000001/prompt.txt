@@ -1,0 +1,16 @@
+TARGET: change the mount from parent A's tall three-leg wooden tripod (leg_hub, pedestal_collar, looped leg_{index}, foot_{index}, spreader_{index}) to a short TABLETOP PILLAR STAND — a single turned brass/wood column on a round weighted base disc sitting on a desk, keeping the brass azimuth bearing on top. Remove the three splayed legs, brass feet, and triangular spreader; replace with one compact center post + base_disc pedestal.
+KEEP: hold the tube identical to parent A — leather_body, objective_ring, objective_lens, rear_collar, saddle_lug_{side}, focus_knob. Keep the azimuth_head trunnion fork (azimuth_ring, yoke_block, trunnion_plate_{side}, pivot_axle) and the draw_tube (draw_tube, eyecup). Keep articulations azimuth_rotation (continuous Z, now on the pillar), altitude_tilt (revolute -Y), drawtube_extend (prismatic -X).
+This is a <Category>/<Subcategory> family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a <Category>/<Subcategory> (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

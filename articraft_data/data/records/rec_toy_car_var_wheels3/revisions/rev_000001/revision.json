@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_toy_car_var_wheels3",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-25T02:27:11Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "d7806f4415e804501fb9a3532fc0c93299943cac1b87c13e19d9bb0940f487c7",
+  "source": {
+    "run_id": "run_20260625_022711_281639_435b25bb",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "d7806f4415e804501fb9a3532fc0c93299943cac1b87c13e19d9bb0940f487c7",
+    "model_py_sha256": "38b3003f21650471abf06c4c491211d447f11cab4f022386a0f14b92797521bd"
+  },
+  "run_summary": {
+    "turn_count": 16,
+    "tool_call_count": 15,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_wooden-push-toy-car-with-a-smiling-bug-face-a-be_20260605_165950_419759_2a7a9bf4",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_wooden-push-toy-car-with-a-smiling-bug-face-a-be_20260605_165950_419759_2a7a9bf4",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

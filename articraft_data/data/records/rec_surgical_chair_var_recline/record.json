@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_surgical_chair_var_recline",
+  "created_at": "2026-06-23T13:43:52Z",
+  "updated_at": "2026-06-23T13:52:55Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260623_134352_098060_814b3f48",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "surgical_chair-recline",
+    "prompt_preview": "Make the backrest a real reclining backrest: split it into its own part hinged to the rear of the seat by a revolute joint so it tilts back and forth, anchor..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "0f9a075450e0a8a0d5c3f58d34e23c278b1027c9297dc182b6a2b09bde028421",
+    "model_py_sha256": "d5305772ec5e7a28772c737717b39ba6192f7702ed5ade3f250b1f60e1e2c5b9"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_build-a-realistic-articulated-3d-model-of-a-surg_20260609_183631_452724_821a91c4",
+    "parent_record_id": "rec_build-a-realistic-articulated-3d-model-of-a-surg_20260609_183631_452724_821a91c4",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

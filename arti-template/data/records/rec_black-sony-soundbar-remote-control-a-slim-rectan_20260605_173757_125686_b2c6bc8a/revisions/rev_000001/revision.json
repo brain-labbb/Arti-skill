@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_black-sony-soundbar-remote-control-a-slim-rectan_20260605_173757_125686_b2c6bc8a",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-05T17:37:57Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "25d42ac23d7026ab6da164e342bcf88b234654731cb9d67bf01413c4bcb05b9e",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "25d42ac23d7026ab6da164e342bcf88b234654731cb9d67bf01413c4bcb05b9e",
+    "model_py_sha256": "1bf08773f5d5015ef052ba9f707949b5fd73cb7ba987965f5ed882d58ddd0bbb"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-05T17:59:47Z",
+    "record_id": "rec_black-sony-soundbar-remote-control-a-slim-rectan_20260605_173757_125686_b2c6bc8a",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_black-sony-soundbar-remote-control-a-slim-rectan_20260605_173757_125686_b2c6bc8a/compile_report.json",
+      "status": "success",
+      "record_id": "rec_black-sony-soundbar-remote-control-a-slim-rectan_20260605_173757_125686_b2c6bc8a",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "a914f3f0a3f3b6fdeaa433c96f6d983f2ed481e63e6856a3ef658d4d7bd39f27",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "0ecbb23d0ae915d2a61d71acc02e80997d43382ebc8986ce41df6a6c7ecdba0d",
+        "model_py_mtime_ns": 1780681742455923570,
+        "model_py_size_bytes": 13461,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 1060752,
+        "visual_mesh_file_count": 12,
+        "compile_elapsed_seconds": 7.03885333891958
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

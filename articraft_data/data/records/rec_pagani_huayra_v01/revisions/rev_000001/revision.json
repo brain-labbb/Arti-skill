@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_pagani_huayra_v01",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-16T07:15:17Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "7cd2fad71b135a0ea0be4886aafdcca5cc70059e8b5795760482fefda084c78b",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": null,
+    "thinking_level": null,
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "7cd2fad71b135a0ea0be4886aafdcca5cc70059e8b5795760482fefda084c78b",
+    "model_py_sha256": "57093138ab9f4fdd9971d7777f01c6c2262505f9a878557e2641d0f2f07d22c4"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_edit_draft"
+  },
+  "parent": {
+    "record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-16T10:18:13Z",
+    "record_id": "rec_pagani_huayra_v01",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_pagani_huayra_v01/compile_report.json",
+      "status": "success",
+      "record_id": "rec_pagani_huayra_v01",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='body' connected=118/120 disconnected=[front_axle_bar:Cylinder, rear_axle_bar:Cylinder]\npart='wheel_front_left' connected=2/3 disconnected=[rim__component_002:Mesh]\npart='wheel_front_right' connected=2/3 disconnected=[rim__component_002:Mesh]\npart='wheel_rear_left' connected=2/3 disconnected=[rim__component_002:Mesh]\npart='wheel_rear_right' connected=2/3 disconnected=[rim__component_002:Mesh]"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 18 overlaps across 7 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "a8ea6d856f51208ee21549bf2b151ec17270bd1dc70eb36f69698f652dfe36d7",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "0ff97a485c67f1f7593e60285b814c60955c02e77e44b88e510e8d36ff2201ac",
+        "model_py_mtime_ns": 1781604516819255491,
+        "model_py_size_bytes": 60679,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 2252559,
+        "visual_mesh_file_count": 16,
+        "compile_elapsed_seconds": 28.5606611315161
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

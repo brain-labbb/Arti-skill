@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_spreader_var_hopper_conical",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:43:06Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "48349d4bff5b301b1f1fc157d72b7fa3a1fb54e1eb597275ea8b9350e1798fcd",
+  "source": {
+    "run_id": "run_20260705_094306_042205_9b341e1a",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "48349d4bff5b301b1f1fc157d72b7fa3a1fb54e1eb597275ea8b9350e1798fcd",
+    "model_py_sha256": "a40a88ddc68437fad2745e0185633c5c7cea1e357878df2aa085740acc8587e0"
+  },
+  "run_summary": {
+    "turn_count": 24,
+    "tool_call_count": 24,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_513620_b14fd48a",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_513620_b14fd48a",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155130_513620_b14fd48a",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "b7504c516e7a3f99bd4429614b08168dc5d8b3de496116f21932abe0cbbe1f65"
+    }
+  ]
+}

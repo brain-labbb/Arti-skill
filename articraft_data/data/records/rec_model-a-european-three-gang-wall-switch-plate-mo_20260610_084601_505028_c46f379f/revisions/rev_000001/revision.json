@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_model-a-european-three-gang-wall-switch-plate-mo_20260610_084601_505028_c46f379f",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-10T08:46:01Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "d44886dce0490b159f2ddd50af5df3ce45c9c2f18c1aeea3b43278ec5208638e",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "d44886dce0490b159f2ddd50af5df3ce45c9c2f18c1aeea3b43278ec5208638e",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-10T19:12:39Z",
+    "record_id": "rec_model-a-european-three-gang-wall-switch-plate-mo_20260610_084601_505028_c46f379f",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-a-european-three-gang-wall-switch-plate-mo_20260610_084601_505028_c46f379f/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-a-european-three-gang-wall-switch-plate-mo_20260610_084601_505028_c46f379f",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "9297a51f7d43b8af8c025a1dca2e3654d982f9c81c5ece15bd9bb205960392e7",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "1964c56386a3b00b39a03cd9adc4b1d59f43630df6f99f54f90a3e7ff17480c5",
+        "model_py_mtime_ns": 1781114951377154184,
+        "model_py_size_bytes": 18157,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 895472,
+        "visual_mesh_file_count": 3,
+        "compile_elapsed_seconds": 7.190001916140318
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

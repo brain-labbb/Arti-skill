@@ -1,0 +1,26 @@
+CATEGORY: Workspace
+SUBCATEGORY: Whiteboard easel
+TARGET: change the support-leg count (parent hinge_points/foot_targets loop over front_leg_0, front_leg_1, rear_leg = 3 legs) from 3 to 4.
+DIVERSITY_AXIS: N multiplicity.
+POSITIONING: heavy-duty four-leg folding flip-chart / whiteboard easel; it stays the same whiteboard easel, just the identical folding tripod with one extra support leg for stability.
+KEEP: preserve these parent functional layers by name: board, brace, board_to_brace (fixed), the _add_outer_leg and _add_inner_leg helpers, the per-leg board_to_<leg> REVOLUTE fold joints and <leg>_slide PRISMATIC telescope joints, clamp_0, clamp_1, top_clamp_bar, marker_tray_base, marker_tray_lip.
+STRUCTURAL_DELTA: extend the hinge_points / foot_targets loop from 3 to 4 legs, reusing the exact folding+telescoping leg subassembly and copy logic (outer part via _add_outer_leg + board_to_<leg> revolute fold + child <leg>_lower via _add_inner_leg + <leg>_slide prismatic). No change to leg geometry, joint types, board, or board motion.
+MULTIPLICITY: target N = 4 legs; place them as 2 front + 2 rear on a regular rectangular/radial splay from the board underside; each leg keeps its own independent revolute fold and prismatic telescope; regenerate hinge blocks/pins per leg with stable indexed names leg_{i} / leg_{i}_lower, joints board_to_leg_{i} / leg_{i}_slide; all four feet reach the floor.
+COMPANION_VARIATIONS: palette only; no part-tree, joint-graph, interface or primitive-family change beyond the leg count.
+FORBIDDEN: do not change the board motion, board form, or leg geometry/type; do not switch to a wheeled or single-column base; hand-written repeated leg blocks are not acceptable (must be loop-emitted); exactly one primary structural change (the leg count).
+COMPATIBILITY_PROBE: n/a.
+
+This is a Workspace/Whiteboard easel family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Workspace/Whiteboard easel (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_plank_ringpull_door_var_planks3",
+  "created_at": "2026-06-21T01:36:43Z",
+  "updated_at": "2026-06-21T01:38:17Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "door",
+  "source": {
+    "run_id": "run_20260621_013643_652848_a5aae083",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "plank_ringpull_door-planks3",
+    "prompt_preview": "Change only the vertical plank multiplicity: rebuild the leaf with exactly 3 wide vertical planks instead of 5, keeping each plank a separate loop-emitted bo..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "62aa6cc129fceabc6341acaae1302d1925475740f01f59ae81dcd8a1b7cf1a77",
+    "model_py_sha256": "7d31f2aabc1dda224ffe106ef0be501ccba6e7f7540cb78057538db0aa3a49bf"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_door_plank_ringpull_closed",
+    "parent_record_id": "rec_door_plank_ringpull_closed",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

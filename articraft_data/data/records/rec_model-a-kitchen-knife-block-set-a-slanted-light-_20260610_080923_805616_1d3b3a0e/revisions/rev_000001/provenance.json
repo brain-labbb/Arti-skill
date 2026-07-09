@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_model-a-kitchen-knife-block-set-a-slanted-light-_20260610_080923_805616_1d3b3a0e",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "48c1acb46c6036e6eef904e4f363944751fac19e",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_finalized"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-10T15:19:11Z",
+    "record_id": "rec_model-a-kitchen-knife-block-set-a-slanted-light-_20260610_080923_805616_1d3b3a0e",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-a-kitchen-knife-block-set-a-slanted-light-_20260610_080923_805616_1d3b3a0e/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-a-kitchen-knife-block-set-a-slanted-light-_20260610_080923_805616_1d3b3a0e",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Isolated parts detected but allowed by justification: 8 part(s) ['bread_knife', 'chef_knife', 'paring_knife_0', 'paring_knife_1', 'santoku_knife', 'shears_inner_half', 'shears_outer_half', 'utility_knife'].\n- pose_index=0 at pose (bread_knife_slide=0, chef_knife_slide=0, paring_knife_0_slide=0, paring_knife_1_slide=0, santoku_knife_slide=0, shears_pivot=0, shears_slide=0, utility_knife_slide=0), part 'bread_knife' is disconnected from the grounded body rooted at 'knife_block'; nearest_grounded_part='knife_block'; approx_gap=0.00205m; backend=fcl\n- pose_index=0 at pose (bread_knife_slide=0, chef_knife_slide=0, paring_knife_0_slide=0, paring_knife_1_slide=0, santoku_knife_slide=0, shears_pivot=0, shears_slide=0, utility_knife_slide=0), part 'chef_knife' is disconnected from the grounded body rooted at 'knife_block'; nearest_grounded_part='knife_block'; approx_gap=0.00205m; backend=fcl\n- pose_index=0 at pose (bread_knife_slide=0, chef_knife_slide=0, paring_knife_0_slide=0, paring_knife_1_slide=0, santoku_knife_slide=0, shears_pivot=0, shears_slide=0, utility_knife_slide=0), part 'paring_knife_0' is disconnected from the grounded body rooted at 'knife_block'; nearest_grounded_part='knife_block'; approx_gap=0.00205m; backend=fcl\n- pose_index=0 at pose (bread_knife_slide=0, chef_knife_slide=0, paring_knife_0_slide=0, paring_knife_1_slide=0, santoku_knife_slide=0, shears_pivot=0, shears_slide=0, utility_knife_slide=0), part 'paring_knife_1' is disconnected from the grounded body rooted at 'knife_block'; nearest_grounded_part='knife_block'; approx_gap=0.00205m; backend=fcl\n- pose_index=0 at pose (bread_knife_slide=0, chef_knife_slide=0, paring_knife_0_slide=0, paring_knife_1_slide=0, santoku_knife_slide=0, shears_pivot=0, shears_slide=0, utility_knife_slide=0), part 'santoku_knife' is disconnected from the grounded body rooted at 'knife_block'; nearest_grounded_part='knife_block'; approx_gap=0.00205m; backend=fcl\n- pose_index=0 at pose (bread_knife_slide=0, chef_knife_slide=0, paring_knife_0_slide=0, paring_knife_1_slide=0, santoku_knife_slide=0, shears_pivot=0, shears_slide=0, utility_knife_slide=0), part 'shears_inner_half' is disconnected from the grounded body rooted at 'knife_block'; nearest_grounded_part='knife_block'; approx_gap=0.0015m; backend=fcl\n- pose_index=0 at pose (bread_knife_slide=0, chef_knife_slide=0, paring_knife_0_slide=0, paring_knife_1_slide=0, santoku_knife_slide=0, shears_pivot=0, shears_slide=0, utility_knife_slide=0), part 'shears_outer_half' is disconnected from the grounded body rooted at 'knife_block'; nearest_grounded_part='knife_block'; approx_gap=0.006m; backend=fcl\n- pose_index=0 at pose (bread_knife_slide=0, chef_knife_slide=0, paring_knife_0_slide=0, paring_knife_1_slide=0, santoku_knife_slide=0, shears_pivot=0, shears_slide=0, utility_knife_slide=0), part 'utility_knife' is disconnected from the grounded body rooted at 'knife_block'; nearest_grounded_part='knife_block'; approx_gap=0.00205m; backend=fcl"
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "2bf9199b2ffd2ff759c0ee646e17849e3b46f46bd1c8868a7801bef4abf3e829",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "69233066756227be451ba3a3064b226240612e942353a28c2121778b6362db2f",
+        "model_py_mtime_ns": 1781100363036006823,
+        "model_py_size_bytes": 21314,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 3639762,
+        "visual_mesh_file_count": 17,
+        "compile_elapsed_seconds": 15.802117370069027
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

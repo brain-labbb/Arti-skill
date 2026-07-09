@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_high_arc_gooseneck_faucet_002_v18",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-12T04:44:50Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "2f35b89bec8ee3865bd453aeb2121e6e2c0dc4bb09b3205160f81ece5258960c",
+  "source": {
+    "run_id": "run_20260612_044450_618226_c624cb19",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "2f35b89bec8ee3865bd453aeb2121e6e2c0dc4bb09b3205160f81ece5258960c",
+    "model_py_sha256": "cb63fc06092539150c11cbd10fac7d97526a856f0b6bc52f2b7a841e80b8b0bb"
+  },
+  "run_summary": {
+    "turn_count": 26,
+    "tool_call_count": 29,
+    "compile_attempt_count": 5,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-brushed-gold-single-hole-kitchen-faucet-_20260610_084005_029915_7b6c63f8",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-brushed-gold-single-hole-kitchen-faucet-_20260610_084005_029915_7b6c63f8",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

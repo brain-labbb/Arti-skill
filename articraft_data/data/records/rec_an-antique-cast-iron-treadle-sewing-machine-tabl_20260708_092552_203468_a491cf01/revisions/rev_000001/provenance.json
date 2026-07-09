@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_an-antique-cast-iron-treadle-sewing-machine-tabl_20260708_092552_203468_a491cf01",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.13",
+    "platform": "darwin-arm64",
+    "git_commit": "e07e427df84ab12b2983b648af5ead3c556d0883",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T10:13:47Z",
+    "record_id": "rec_an-antique-cast-iron-treadle-sewing-machine-tabl_20260708_092552_203468_a491cf01",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_an-antique-cast-iron-treadle-sewing-machine-tabl_20260708_092552_203468_a491cf01/compile_report.json",
+      "status": "success",
+      "record_id": "rec_an-antique-cast-iron-treadle-sewing-machine-tabl_20260708_092552_203468_a491cf01",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 5 overlaps across 4 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "7eea1d44809466ad2d06284bba4a966fad7813cd939e4a4d7594f33eeecea94b",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "607740ad5c97eb093cbbb5490cc60e7744f8ebe03bd2655403adbc1a0f46fc2e",
+        "model_py_mtime_ns": 1783505567426851146,
+        "model_py_size_bytes": 27549,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 844779,
+        "visual_mesh_file_count": 10,
+        "compile_elapsed_seconds": 4.715100541994616
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

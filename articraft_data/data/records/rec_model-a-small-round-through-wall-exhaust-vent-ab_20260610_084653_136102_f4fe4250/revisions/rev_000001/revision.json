@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_model-a-small-round-through-wall-exhaust-vent-ab_20260610_084653_136102_f4fe4250",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-10T08:46:53Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "3cc42bf3e70f61f84d0d3325ecd742f545d43e972bd504ef3035fc932299520a",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "3cc42bf3e70f61f84d0d3325ecd742f545d43e972bd504ef3035fc932299520a",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-11T03:15:54Z",
+    "record_id": "rec_model-a-small-round-through-wall-exhaust-vent-ab_20260610_084653_136102_f4fe4250",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-a-small-round-through-wall-exhaust-vent-ab_20260610_084653_136102_f4fe4250/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-a-small-round-through-wall-exhaust-vent-ab_20260610_084653_136102_f4fe4250",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "57faa3c1d10df4bc49bdaac40b79457d2bce3bc2969c946a99bf54d62b1d3878",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "79380a5815965d8672f9b89ca9bd068f44953d09c540f8e7ca3e0d3d033374cc",
+        "model_py_mtime_ns": 1781144230950478951,
+        "model_py_size_bytes": 13585,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 377348,
+        "visual_mesh_file_count": 4,
+        "compile_elapsed_seconds": 3.7970255659893155
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

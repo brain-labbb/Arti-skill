@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_pet_carrier_var_backpack",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T14:16:09Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "554a2ec8170d903d340782cf6e2cc640a7a02c8c7d023557df2835aa7fc367eb",
+  "source": {
+    "run_id": "run_20260709_141609_168943_d00b600d",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "554a2ec8170d903d340782cf6e2cc640a7a02c8c7d023557df2835aa7fc367eb",
+    "model_py_sha256": "ffd75c7adb3ebad0a63d345dec723b4937a2547821b9fffb05fda29ce3b4f67b"
+  },
+  "run_summary": {
+    "turn_count": 9,
+    "tool_call_count": 11,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_soft-sided-airline-pet-carrier-purple-fabric-rou_20260708_082416_982083_6d7f454b",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_soft-sided-airline-pet-carrier-purple-fabric-rou_20260708_082416_982083_6d7f454b",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

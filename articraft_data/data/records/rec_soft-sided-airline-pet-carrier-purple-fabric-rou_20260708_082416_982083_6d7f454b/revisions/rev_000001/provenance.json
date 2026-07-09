@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_soft-sided-airline-pet-carrier-purple-fabric-rou_20260708_082416_982083_6d7f454b",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": null,
+    "thinking_level": null,
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "f87d931bc8ba4242e522375b7b28f383e9185f11",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T08:32:54Z",
+    "record_id": "rec_soft-sided-airline-pet-carrier-purple-fabric-rou_20260708_082416_982083_6d7f454b",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_soft-sided-airline-pet-carrier-purple-fabric-rou_20260708_082416_982083_6d7f454b/compile_report.json",
+      "status": "success",
+      "record_id": "rec_soft-sided-airline-pet-carrier-purple-fabric-rou_20260708_082416_982083_6d7f454b",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "bc610a8d350114b7c223dc014f6588218edeff90db1638b4589cd9cd5211bda2",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "671ad9393d0476f2d26d47560f34075064abec66b9175159938a61a0d0c42882",
+        "model_py_mtime_ns": 1783499555935712863,
+        "model_py_size_bytes": 15651,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 140348,
+        "visual_mesh_file_count": 2,
+        "compile_elapsed_seconds": 6.711135061457753
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

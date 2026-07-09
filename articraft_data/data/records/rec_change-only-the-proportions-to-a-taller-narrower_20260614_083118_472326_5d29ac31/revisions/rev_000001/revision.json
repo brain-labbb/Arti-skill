@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_change-only-the-proportions-to-a-taller-narrower_20260614_083118_472326_5d29ac31",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-14T08:31:18Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "547eaddb2b3955f13a0c8d7e05337bb28922c61ce06de4289e6135c2d92bad2a",
+  "source": {
+    "run_id": "run_20260614_083118_472326_5d29ac31",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 80,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "547eaddb2b3955f13a0c8d7e05337bb28922c61ce06de4289e6135c2d92bad2a",
+    "model_py_sha256": "153d32ac485b8a77b7e304aa06daf694fffd42e69c749d23f83a5181cf7d6905"
+  },
+  "run_summary": {
+    "turn_count": 16,
+    "tool_call_count": 15,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_portable-toilet-cabin-porta-potty-a-magenta-red-_20260612_113231_642886_5cec201b",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_portable-toilet-cabin-porta-potty-a-magenta-red-_20260612_113231_642886_5cec201b",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

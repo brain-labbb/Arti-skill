@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_armored_vehicle_var_10x10",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T13:19:09Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "154b11e45e47cf374cd9eeba50e5ca970caf7d397bdc4036d77d08fd109a6324",
+  "source": {
+    "run_id": "run_20260623_131909_675811_c3a2040e",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "154b11e45e47cf374cd9eeba50e5ca970caf7d397bdc4036d77d08fd109a6324",
+    "model_py_sha256": "f0f990122767a8dfacef170f40da369027c6d32972595b71c1303a8fb5260a2b"
+  },
+  "run_summary": {
+    "turn_count": 19,
+    "tool_call_count": 18,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-an-eight-wheeled-armored-personnel-carrier_20260610_081616_840659_407e2520",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-an-eight-wheeled-armored-personnel-carrier_20260610_081616_840659_407e2520",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

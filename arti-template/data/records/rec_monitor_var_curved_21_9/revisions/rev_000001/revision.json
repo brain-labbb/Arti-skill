@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_monitor_var_curved_21_9",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T10:45:14Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "5dac738e92512b910a16ee398b8cfdf8105ddc389f0d65a2e10084535c4fc817",
+  "source": {
+    "run_id": "run_20260705_104514_892428_d8116adc",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "5dac738e92512b910a16ee398b8cfdf8105ddc389f0d65a2e10084535c4fc817",
+    "model_py_sha256": "e3541b63b67538154ffcb46d4fa2d8ff4b276803d3838cbaaf1013c8efa2e819"
+  },
+  "run_summary": {
+    "turn_count": 20,
+    "tool_call_count": 19,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_ultrawide-curved-computer-monitor-on-a-central-s_20260605_173926_571270_0ea51d17",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_ultrawide-curved-computer-monitor-on-a-central-s_20260605_173926_571270_0ea51d17",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

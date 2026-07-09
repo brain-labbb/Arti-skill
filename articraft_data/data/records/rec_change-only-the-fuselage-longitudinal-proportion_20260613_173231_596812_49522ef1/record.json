@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_change-only-the-fuselage-longitudinal-proportion_20260613_173231_596812_49522ef1",
+  "created_at": "2026-06-13T17:32:31Z",
+  "updated_at": "2026-06-13T17:44:10Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "tandem_rotor_helicopter",
+  "source": {
+    "run_id": "run_20260613_173231_596812_49522ef1",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "hull_stretch",
+    "prompt_preview": "Change ONLY the fuselage longitudinal proportions to a STRETCHED long-haul body: elongate the cargo cabin section by roughly 40-50% (add more side window sta..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "eaec9ad8089cc13fcdf86fcc5fee73dc1ce7105b3d22aad5c04fae92657618c4",
+    "model_py_sha256": "dc2ee595b3050be5bbf6241cee5ae5ee8b559d7bbea623b59a2e65da8374a540"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_model-a-ch-47-chinook-style-tandem-rotor-militar_20260610_080515_971792_e6faf6f7",
+    "parent_record_id": "rec_model-a-ch-47-chinook-style-tandem-rotor-militar_20260610_080515_971792_e6faf6f7",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_foldable-adjustable-aluminum-laptop-stand-with-s_20260708_044924_835691_defb8533",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-6",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.13",
+    "platform": "darwin-arm64",
+    "git_commit": "e07e427df84ab12b2983b648af5ead3c556d0883",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T06:29:56Z",
+    "record_id": "rec_foldable-adjustable-aluminum-laptop-stand-with-s_20260708_044924_835691_defb8533",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_foldable-adjustable-aluminum-laptop-stand-with-s_20260708_044924_835691_defb8533/compile_report.json",
+      "status": "success",
+      "record_id": "rec_foldable-adjustable-aluminum-laptop-stand-with-s_20260708_044924_835691_defb8533",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 12 overlaps across 4 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "792874f5c3225e3433a66a22e191984c3fc9225c739c26bd3da304da4e487c51",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "af91ec304efd01ca90aa4548cf4e1a5293ee3f216e8d68714872b6b3b25b89f6",
+        "model_py_mtime_ns": 1783492141921833137,
+        "model_py_size_bytes": 19643,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 474132,
+        "visual_mesh_file_count": 9,
+        "compile_elapsed_seconds": 3.843570541997906
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

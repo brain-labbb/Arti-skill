@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_circuit_breaker_var_surface_mount_base",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:41:30Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "ac58e5490f690f0bdd6f4f310f737e9ae92ef025fd1ecceceefb7a10ce2af836",
+  "source": {
+    "run_id": "run_20260705_094130_786511_a506c124",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "ac58e5490f690f0bdd6f4f310f737e9ae92ef025fd1ecceceefb7a10ce2af836",
+    "model_py_sha256": "b82740f96ce00307938bc22d2fb3d0c0b283bea680c48ce93dd93414004a6fe7"
+  },
+  "run_summary": {
+    "turn_count": 10,
+    "tool_call_count": 10,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_228695_7bb9b32f",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_228695_7bb9b32f",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_228695_7bb9b32f",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "517d38cf4ea783879d70fb14acc19b6a8c68c163f4170f5dad114a35404c64f9"
+    }
+  ]
+}

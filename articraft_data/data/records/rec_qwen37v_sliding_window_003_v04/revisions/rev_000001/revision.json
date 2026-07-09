@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_sliding_window_003_v04",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-12T06:48:25Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "3605b4ef5cdb475c1f9ebb64ea42ea3dfe808d8df260e23ed21e458ace08dd1d",
+  "source": {
+    "run_id": "run_20260612_064825_924208_37c99b99",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "3605b4ef5cdb475c1f9ebb64ea42ea3dfe808d8df260e23ed21e458ace08dd1d",
+    "model_py_sha256": "15926d6f6a348641ea49cbd13d31e53889a3694576cea7ef348374d83ae73b56"
+  },
+  "run_summary": {
+    "turn_count": 20,
+    "tool_call_count": 21,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_double-hung-sash-window-with-white-frame-two-sta_20260608_162713_405786_6c54f6e4",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_double-hung-sash-window-with-white-frame-two-sta_20260608_162713_405786_6c54f6e4",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_rabbit_hutch_var_n1",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T14:38:39Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "93a62c701f96810328cc59c72514abc400a811faae20cb9d2439e7bae405f227",
+  "source": {
+    "run_id": "run_20260709_143839_178730_74553476",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "93a62c701f96810328cc59c72514abc400a811faae20cb9d2439e7bae405f227",
+    "model_py_sha256": "2c89ce0a90549617240cc37df70d5aad8cc31edc482726c6bc8256b1d74a0add"
+  },
+  "run_summary": {
+    "turn_count": 13,
+    "tool_call_count": 13,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_pet_animal_related__rabbit_hutch__002_png_f70eb66ad04c43f49b8068585dd59cf3",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_pet_animal_related__rabbit_hutch__002_png_f70eb66ad04c43f49b8068585dd59cf3",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_pet_animal_related__rabbit_hutch__002_png_f70eb66ad04c43f49b8068585dd59cf3",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "0694adc67586543c1d009b48bf0321c986806a2a18b3d990cae304c8bc18a3bc"
+    }
+  ]
+}

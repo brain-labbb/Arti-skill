@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-gang-count-4-make-it-a-four-gang-switch-_20260617_123635_019019_e3244d88",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T12:36:35Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "e44ea159c72a33fd922b4782e4dfab63d581d3b7b9a7c654d13ae7f2bd4994c3",
+  "source": {
+    "run_id": "run_20260617_123635_019019_e3244d88",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "e44ea159c72a33fd922b4782e4dfab63d581d3b7b9a7c654d13ae7f2bd4994c3",
+    "model_py_sha256": "dc94d3163d78c241fddea15e9132c40114e090a66c8f4d9b70e5cad54449c0b1"
+  },
+  "run_summary": {
+    "turn_count": 5,
+    "tool_call_count": 4,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-european-three-gang-wall-switch-plate-mo_20260610_084601_505028_c46f379f",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-european-three-gang-wall-switch-plate-mo_20260610_084601_505028_c46f379f",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_ac_unit_var_wall_brackets",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-20T16:35:26Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "bf0e02457ce1ea9977563dc8b423ee93f0de6941336d474af2ef30500b04f3c0",
+  "source": {
+    "run_id": "run_20260620_163526_259514_bbac3f84",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "bf0e02457ce1ea9977563dc8b423ee93f0de6941336d474af2ef30500b04f3c0",
+    "model_py_sha256": "8a1228e632ff760af6546ccca4eeb6d0e41c1da1bc677a43acdde925ce5d52fb"
+  },
+  "run_summary": {
+    "turn_count": 12,
+    "tool_call_count": 13,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-air-_20260609_185849_813335_0710784e",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-air-_20260609_185849_813335_0710784e",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

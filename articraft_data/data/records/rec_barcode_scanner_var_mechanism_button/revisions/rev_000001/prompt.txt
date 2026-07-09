@@ -1,0 +1,25 @@
+CATEGORY: <Category>
+SUBCATEGORY: <Subcategory>
+TARGET: change ring_button + ring_light (the fused static top disc) into a real pressable top scan/pairing push-button on a PRISMATIC joint.
+DIVERSITY_AXIS: ② joint/mechanism.
+POSITIONING: pistol-grip scanner with a dedicated top-panel push button (scan-trigger / Bluetooth-pair / mode button) that depresses, as on many wireless retail scanners. It stays a barcode scanner: same grip, head, imager, and squeeze trigger; only a second real mechanism (a prismatic button) is added.
+KEEP: preserve these parent functional layers by name: scanner_body, grip_shell, grip_insert_wrap, head_shell, window_bezel, scan_window, top_panel, trigger (part), trigger_blade, trigger_pivot (revolute articulation).
+STRUCTURAL_DELTA: split the top ring_button disc into its own part mounted on top_panel via a PRISMATIC joint with short vertical travel (~2-3 mm) into a shallow recessed well cut in top_panel; ring_light stays as the fixed illuminated bezel ring around the button; the existing trigger_pivot revolute is unchanged. New primary mechanism = top push-button prismatic press.
+MULTIPLICITY: n/a.
+COMPANION_VARIATIONS: optional button-cap color only; no skeleton, head, or imager change.
+FORBIDDEN: do not change the pistol-grip skeleton, the squeeze-trigger joint, or the imager window; do not add unrelated extra buttons or turn the trigger into a button.
+
+This is a <Category>/<Subcategory> family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a <Category>/<Subcategory> (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

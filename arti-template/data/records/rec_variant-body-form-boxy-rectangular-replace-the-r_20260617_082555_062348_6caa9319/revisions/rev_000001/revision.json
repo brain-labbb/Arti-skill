@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-body-form-boxy-rectangular-replace-the-r_20260617_082555_062348_6caa9319",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T08:25:55Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "f7e32341e32996b1ccff7b78f2a74c2dd9b76a4e99e8543d8e0219a656254307",
+  "source": {
+    "run_id": "run_20260617_082555_062348_6caa9319",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "f7e32341e32996b1ccff7b78f2a74c2dd9b76a4e99e8543d8e0219a656254307",
+    "model_py_sha256": "a8ae045f52c5c7f90878816fbd530e032d24c7433d76e50cc6f6ad3caac38707"
+  },
+  "run_summary": {
+    "turn_count": 15,
+    "tool_call_count": 15,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-wall-mounted-mini-split-air-conditioner-_20260610_081946_833476_e9cc92a3",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-wall-mounted-mini-split-air-conditioner-_20260610_081946_833476_e9cc92a3",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

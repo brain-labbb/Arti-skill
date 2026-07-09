@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_rope_pulley_var_triple_block",
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "designer_system_prompt_openrouter.txt",
+    "system_prompt_sha256": "2040853b01d43d282cfac6b1369276c0054748305804d4b780e4d4dce2192a6a"
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "f8bcb397292953b5688820d27b70aedc04ff4c1d",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": 22,
+    "tool_call_count": 22,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-09T06:53:44Z",
+    "record_id": "rec_rope_pulley_var_triple_block",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_rope_pulley_var_triple_block/compile_report.json",
+      "status": "success",
+      "record_id": "rec_rope_pulley_var_triple_block",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "d788feb5f7d3807955cfd7b852c32f81a46f9f68d2396c030bff0056966f73eb",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "f2f244a4d69363012e0a90d703a367377a236903e088e4ccc934f2a6ed4735ed",
+        "model_py_mtime_ns": 1783572080561555727,
+        "model_py_size_bytes": 15228,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 654275,
+        "visual_mesh_file_count": 8,
+        "compile_elapsed_seconds": 2.5529188867658377
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 6,
+      "errors": [
+        "record.json missing creator metadata for external workflow",
+        "source.run_id must be null for external records",
+        "external records must not contain Articraft agent traces",
+        "provenance.run_summary.turn_count must be null",
+        "provenance.run_summary.tool_call_count must be null",
+        "provenance.run_summary.compile_attempt_count must be null"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

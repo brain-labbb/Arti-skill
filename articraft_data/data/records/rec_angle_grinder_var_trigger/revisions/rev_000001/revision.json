@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_angle_grinder_var_trigger",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T13:53:40Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "6f15f6e607ea4d8bfc6156ea1c9e23cadcd1c2361bce7cb51e1f404d0e782179",
+  "source": {
+    "run_id": "run_20260623_135340_359510_fa2073e3",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "6f15f6e607ea4d8bfc6156ea1c9e23cadcd1c2361bce7cb51e1f404d0e782179",
+    "model_py_sha256": "2d83f85d70dcc99d6d059c1036ec7294ae7467b0f46c878f0b071cf0ddee3f43"
+  },
+  "run_summary": {
+    "turn_count": 19,
+    "tool_call_count": 19,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-compact-electric-angle-grinder-in-dewalt_20260610_085450_800276_28a8a3ef",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-compact-electric-angle-grinder-in-dewalt_20260610_085450_800276_28a8a3ef",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_orange-hardtail-mountain-bike-with-a-front-suspe_20260605_165808_319413_f497242f",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "0ea5c9890f6e1c17ff89838a0485830e0b2b9e87",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-07T15:21:41Z",
+    "record_id": "rec_orange-hardtail-mountain-bike-with-a-front-suspe_20260605_165808_319413_f497242f",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_orange-hardtail-mountain-bike-with-a-front-suspe_20260605_165808_319413_f497242f/compile_report.json",
+      "status": "success",
+      "record_id": "rec_orange-hardtail-mountain-bike-with-a-front-suspe_20260605_165808_319413_f497242f",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='front_wheel' connected=3/13 disconnected=[front_hub:Mesh, front_spoke_0:Mesh, front_spoke_1:Mesh, front_spoke_2:Mesh, front_spoke_3:Mesh, front_spoke_4:Mesh, front_spoke_5:Mesh, front_spoke_6:Mesh, front_spoke_7:Mesh, front_rotor:Mesh]\npart='rear_wheel' connected=3/14 disconnected=[rear_hub:Mesh, rear_spoke_0:Mesh, rear_spoke_1:Mesh, rear_spoke_2:Mesh, rear_spoke_3:Mesh, rear_spoke_4:Mesh, rear_spoke_5:Mesh, rear_spoke_6:Mesh, rear_spoke_7:Mesh, rear_rotor:Mesh, rear_cassette:Cylinder]"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 12 overlaps across 3 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "ee11c217ebfc829d4e01fe8ffb566b89e05d48eb032bd29ab2765f3775fb9113",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "e842389288c3601112fe292b2b045441796980ba7c5a60b1960f2ce1f19d7db3",
+        "model_py_mtime_ns": 1780841879602477559,
+        "model_py_size_bytes": 24687,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 444749,
+        "visual_mesh_file_count": 44,
+        "compile_elapsed_seconds": 2.922547671943903
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

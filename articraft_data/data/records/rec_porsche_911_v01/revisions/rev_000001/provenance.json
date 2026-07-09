@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_porsche_911_v01",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": null,
+    "thinking_level": null,
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": null,
+    "uv_lock_sha256": null
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_edit_draft"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-16T10:17:17Z",
+    "record_id": "rec_porsche_911_v01",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_porsche_911_v01/compile_report.json",
+      "status": "success",
+      "record_id": "rec_porsche_911_v01",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='body' connected=73/75 disconnected=[front_axle_bar:Cylinder, rear_axle_bar:Cylinder]\npart='door_left' connected=3/6 disconnected=[door_handle:Box, mirror_stalk:Box, mirror_head:Box]\npart='door_right' connected=3/6 disconnected=[door_handle:Box, mirror_stalk:Box, mirror_head:Box]"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 11 overlaps across 7 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "2709fe81f4d70918305514e9b77a1a44478ce577a8df425b0e8b9e2faffda2d7",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "f7901409f41dd625f2e819eb03a46d4a121cabd190c1ec31b3399d90cd6f2648",
+        "model_py_mtime_ns": 1781603320681788000,
+        "model_py_size_bytes": 57565,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 2575995,
+        "visual_mesh_file_count": 16,
+        "compile_elapsed_seconds": 27.137514742091298
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

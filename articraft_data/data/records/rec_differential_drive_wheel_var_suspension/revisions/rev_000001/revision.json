@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_differential_drive_wheel_var_suspension",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T12:46:48Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "9b0ce3da48af475663338e546747848e4521d7a471269ea42ec7136688c6fa77",
+  "source": {
+    "run_id": "run_20260709_124648_619932_1ae72765",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "9b0ce3da48af475663338e546747848e4521d7a471269ea42ec7136688c6fa77",
+    "model_py_sha256": "2661b567b0885c06d87b6e2fc9d76d749c49f407ff981299787557e45211c4b3"
+  },
+  "run_summary": {
+    "turn_count": 63,
+    "tool_call_count": 65,
+    "compile_attempt_count": 12,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_robotics__differential_drive_wheel__002_png_2bafd7c2baa94629a23400f40574efad",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_robotics__differential_drive_wheel__002_png_2bafd7c2baa94629a23400f40574efad",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_robotics__differential_drive_wheel__002_png_2bafd7c2baa94629a23400f40574efad",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "220f157df7a071c8559fe00c6236de599cf08f339a4ab3f69f118e6af1bfaac7"
+    }
+  ]
+}

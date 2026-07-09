@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_orange-hardtail-mountain-bike-with-a-front-suspe_20260605_165808_319413_f497242f",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-05T16:58:08Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "af0fe86c71aca12b05a9f505afb7989e2b682ce6d545047bcbee8dbef41e7e2f",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "af0fe86c71aca12b05a9f505afb7989e2b682ce6d545047bcbee8dbef41e7e2f",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-07T15:21:41Z",
+    "record_id": "rec_orange-hardtail-mountain-bike-with-a-front-suspe_20260605_165808_319413_f497242f",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_orange-hardtail-mountain-bike-with-a-front-suspe_20260605_165808_319413_f497242f/compile_report.json",
+      "status": "success",
+      "record_id": "rec_orange-hardtail-mountain-bike-with-a-front-suspe_20260605_165808_319413_f497242f",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='front_wheel' connected=3/13 disconnected=[front_hub:Mesh, front_spoke_0:Mesh, front_spoke_1:Mesh, front_spoke_2:Mesh, front_spoke_3:Mesh, front_spoke_4:Mesh, front_spoke_5:Mesh, front_spoke_6:Mesh, front_spoke_7:Mesh, front_rotor:Mesh]\npart='rear_wheel' connected=3/14 disconnected=[rear_hub:Mesh, rear_spoke_0:Mesh, rear_spoke_1:Mesh, rear_spoke_2:Mesh, rear_spoke_3:Mesh, rear_spoke_4:Mesh, rear_spoke_5:Mesh, rear_spoke_6:Mesh, rear_spoke_7:Mesh, rear_rotor:Mesh, rear_cassette:Cylinder]"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 12 overlaps across 3 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "ee11c217ebfc829d4e01fe8ffb566b89e05d48eb032bd29ab2765f3775fb9113",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "e842389288c3601112fe292b2b045441796980ba7c5a60b1960f2ce1f19d7db3",
+        "model_py_mtime_ns": 1780841879602477559,
+        "model_py_size_bytes": 24687,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 444749,
+        "visual_mesh_file_count": 44,
+        "compile_elapsed_seconds": 2.922547671943903
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

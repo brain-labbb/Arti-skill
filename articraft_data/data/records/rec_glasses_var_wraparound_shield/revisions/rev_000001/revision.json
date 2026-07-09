@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_glasses_var_wraparound_shield",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-20T16:35:24Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "c1922d37b3bf76da5bcf3355e4b3bc58cc1622872bb805d56683836df7cb4723",
+  "source": {
+    "run_id": "run_20260620_163524_649331_1b29d417",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "c1922d37b3bf76da5bcf3355e4b3bc58cc1622872bb805d56683836df7cb4723",
+    "model_py_sha256": "a97f5eac6350758b20daaf5b7922e615024e50d569f9745a2ab6af010732af67"
+  },
+  "run_summary": {
+    "turn_count": 19,
+    "tool_call_count": 18,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_create-a-highly-detailed-articulated-3d-model-of_20260620_143104_211959_619782b5",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_create-a-highly-detailed-articulated-3d-model-of_20260620_143104_211959_619782b5",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_create-a-highly-detailed-articulated-3d-model-of_20260620_143104_211959_619782b5",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "46d9eb783d65e364ea7f7d34d2beabe32e0c34f066b53f39bdfa2b8da6aa531a"
+    }
+  ]
+}

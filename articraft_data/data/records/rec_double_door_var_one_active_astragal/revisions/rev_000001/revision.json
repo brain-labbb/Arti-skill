@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_double_door_var_one_active_astragal",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-21T01:26:07Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "11bc1d96d76b6c86a99ac48d8e3d2bedb9138d98ccad6a905a1ebd8ad5f85ec2",
+  "source": {
+    "run_id": "run_20260621_012607_823435_a8959d87",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "11bc1d96d76b6c86a99ac48d8e3d2bedb9138d98ccad6a905a1ebd8ad5f85ec2",
+    "model_py_sha256": "236344cc3171907bf30a770b17de52eca0515ad5f532fc3617d5e3b28da57543"
+  },
+  "run_summary": {
+    "turn_count": 12,
+    "tool_call_count": 12,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_classic-double-entry-door-in-dark-walnut-wood-tw_20260606_115214_146776_3b44fd42",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_classic-double-entry-door-in-dark-walnut-wood-tw_20260606_115214_146776_3b44fd42",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

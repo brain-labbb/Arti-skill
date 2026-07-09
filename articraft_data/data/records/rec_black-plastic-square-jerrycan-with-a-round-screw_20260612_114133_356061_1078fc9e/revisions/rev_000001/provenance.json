@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_black-plastic-square-jerrycan-with-a-round-screw_20260612_114133_356061_1078fc9e",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "c643f986cdfa0965ab5cddd147f9830a15dad414",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-12T11:52:17Z",
+    "record_id": "rec_black-plastic-square-jerrycan-with-a-round-screw_20260612_114133_356061_1078fc9e",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_black-plastic-square-jerrycan-with-a-round-screw_20260612_114133_356061_1078fc9e/compile_report.json",
+      "status": "success",
+      "record_id": "rec_black-plastic-square-jerrycan-with-a-round-screw_20260612_114133_356061_1078fc9e",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "0abd9ffcf4295adcc7759e30b2fd825ca181d14e34d0439e2954b782623a6b84",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "3f5b3bae28389b9403b891fa4fee82148f00c84b07b22bec5146d2bece8a1762",
+        "model_py_mtime_ns": 1781264858223261106,
+        "model_py_size_bytes": 13959,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 867663,
+        "visual_mesh_file_count": 2,
+        "compile_elapsed_seconds": 4.465768427588046
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

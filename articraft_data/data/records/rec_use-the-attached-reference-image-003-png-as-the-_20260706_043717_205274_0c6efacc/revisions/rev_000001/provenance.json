@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_use-the-attached-reference-image-003-png-as-the-_20260706_043717_205274_0c6efacc",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "356504f7033b49349e557629986423926ebd44ee",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-06T06:53:23Z",
+    "record_id": "rec_use-the-attached-reference-image-003-png-as-the-_20260706_043717_205274_0c6efacc",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_use-the-attached-reference-image-003-png-as-the-_20260706_043717_205274_0c6efacc/compile_report.json",
+      "status": "success",
+      "record_id": "rec_use-the-attached-reference-image-003-png-as-the-_20260706_043717_205274_0c6efacc",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 14 overlaps across 12 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "fca72a2a12b699b2604cd595fafa7ebccb19a89f48671125e64fe23e9064633f",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "4a0ddc6087f250c1db7f398a3d6ee354c777132b4fd7d3b8aad0b70221b263e9",
+        "model_py_mtime_ns": 1783320742253687386,
+        "model_py_size_bytes": 18415,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 121918,
+        "visual_mesh_file_count": 17,
+        "compile_elapsed_seconds": 1.5793296452611685
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

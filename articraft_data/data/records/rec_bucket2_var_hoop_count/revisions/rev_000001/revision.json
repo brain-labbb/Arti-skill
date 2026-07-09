@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_bucket2_var_hoop_count",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-27T03:14:13Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "2302255aab3fd53c175e23da280cd7f91c70a9734983eb4dc52a3cff5120e9ff",
+  "source": {
+    "run_id": "run_20260627_031413_434115_90228947",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "2302255aab3fd53c175e23da280cd7f91c70a9734983eb4dc52a3cff5120e9ff",
+    "model_py_sha256": "2ed69f8fdfbfe48ff67d4d6ac609ea269d1037b445dc4b2f423ed7e44e2f6b45"
+  },
+  "run_summary": {
+    "turn_count": 16,
+    "tool_call_count": 15,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_small-wooden-keg-barrel-with-staved-bulged-body-_20260608_164508_499567_ad0a147f",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_small-wooden-keg-barrel-with-staved-bulged-body-_20260608_164508_499567_ad0a147f",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

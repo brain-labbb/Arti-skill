@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-door-mechanism-french-double-door-replac_20260617_093413_094321_4f000702",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T09:34:13Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "59c6c4aac124a4329f4f6d2ec2f04530ad875531c62c28bbde98b0e227f6aec9",
+  "source": {
+    "run_id": "run_20260617_093413_094321_4f000702",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "59c6c4aac124a4329f4f6d2ec2f04530ad875531c62c28bbde98b0e227f6aec9",
+    "model_py_sha256": "3ab832a2c1c16e39ec2652d28d1eda81270ef7c772a769d94b5cbdc2faa83fd9"
+  },
+  "run_summary": {
+    "turn_count": 7,
+    "tool_call_count": 7,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-built-in-single-electric-wall-oven-the-k_20260610_083623_507710_363e4e6b",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-built-in-single-electric-wall-oven-the-k_20260610_083623_507710_363e4e6b",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

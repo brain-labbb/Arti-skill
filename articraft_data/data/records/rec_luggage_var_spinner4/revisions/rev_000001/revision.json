@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_luggage_var_spinner4",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T16:11:46Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "d587469bd5cb18b3602491715e50ba949a28a32a7d86dfc8c0ad1ad730b30224",
+  "source": {
+    "run_id": "run_20260617_161146_448422_3abdb658",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 30,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "d587469bd5cb18b3602491715e50ba949a28a32a7d86dfc8c0ad1ad730b30224",
+    "model_py_sha256": "aeb78dfe8806fff770da2cbe4a2be3865ae5e4c7960de4c3df73f5ff03412930"
+  },
+  "run_summary": {
+    "turn_count": 16,
+    "tool_call_count": 16,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_hard-shell-rolling-luggage-bag-with-a-retractabl_20260605_132328_146368_110d261f",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_hard-shell-rolling-luggage-bag-with-a-retractabl_20260605_132328_146368_110d261f",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

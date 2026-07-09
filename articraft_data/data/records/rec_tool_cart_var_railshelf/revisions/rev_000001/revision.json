@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_tool_cart_var_railshelf",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T07:23:44Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "bfac55d273a9f02b238df8a65828e53b4baaa38cab24c77fed2e486d8d6e3e1b",
+  "source": {
+    "run_id": "run_20260618_072344_902548_b1d5ff5a",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "bfac55d273a9f02b238df8a65828e53b4baaa38cab24c77fed2e486d8d6e3e1b",
+    "model_py_sha256": "20b3fe213006f2762e096fd51a8256fa825a90cffde65088bf2c4d179fa3de1c"
+  },
+  "run_summary": {
+    "turn_count": 18,
+    "tool_call_count": 18,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-tool_20260609_163949_304573_1e586d5a",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-tool_20260609_163949_304573_1e586d5a",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-dark-charcoal-electronic-cash-register-sitting_20260708_092443_475966_7fc07459",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-08T09:24:43Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "74f429ada41f834f812e1b6e7ceedaee6b351a4cb8e65d1eae015480a92a6b7e",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "74f429ada41f834f812e1b6e7ceedaee6b351a4cb8e65d1eae015480a92a6b7e",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T09:48:24Z",
+    "record_id": "rec_a-dark-charcoal-electronic-cash-register-sitting_20260708_092443_475966_7fc07459",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_a-dark-charcoal-electronic-cash-register-sitting_20260708_092443_475966_7fc07459/compile_report.json",
+      "status": "success",
+      "record_id": "rec_a-dark-charcoal-electronic-cash-register-sitting_20260708_092443_475966_7fc07459",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 62 overlaps across 62 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "125fcadcbb40ed67e4519b324febb0f6b4250463c777fdc347c93ed4db9ee95b",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "b719fb5c74f80f8383b6eabda4e57675ceb450da7e1f768a51cb0a626941caa2",
+        "model_py_mtime_ns": 1783504077229052292,
+        "model_py_size_bytes": 21283,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 79107,
+        "visual_mesh_file_count": 4,
+        "compile_elapsed_seconds": 2.38960829199641
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

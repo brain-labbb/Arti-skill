@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_yellow-construction-tower-crane-square-lattice-s_20260608_164453_296449_6c25a37e",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-08T16:44:53Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "ca79621ab8e38aa56d9d5930597b02c72c8bfeca3c6517350c42c62b67d71cc7",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "ca79621ab8e38aa56d9d5930597b02c72c8bfeca3c6517350c42c62b67d71cc7",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-08T17:42:23Z",
+    "record_id": "rec_yellow-construction-tower-crane-square-lattice-s_20260608_164453_296449_6c25a37e",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_yellow-construction-tower-crane-square-lattice-s_20260608_164453_296449_6c25a37e/compile_report.json",
+      "status": "success",
+      "record_id": "rec_yellow-construction-tower-crane-square-lattice-s_20260608_164453_296449_6c25a37e",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 6 overlaps across 2 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "6c7c33b9762a74b23edba8537aac85856a50cf5c5b2b2e7824a4503f50d415f9",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "08edda23da8a576ace91cc228dd93ea3b485b0df0f557b2b386d8691bc0408b6",
+        "model_py_mtime_ns": 1780940476058120068,
+        "model_py_size_bytes": 21690,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 59672,
+        "visual_mesh_file_count": 1,
+        "compile_elapsed_seconds": 1.121620999649167
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

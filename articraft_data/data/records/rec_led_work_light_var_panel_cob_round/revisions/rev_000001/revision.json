@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_led_work_light_var_panel_cob_round",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T15:46:05Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "0438861fea8b9ec717a8c5192bb8b4d7b661bd416ee4d33bde9b98f86551276e",
+  "source": {
+    "run_id": "run_20260623_154605_974536_f356ba3c",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5",
+    "thinking_level": "high",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "0438861fea8b9ec717a8c5192bb8b4d7b661bd416ee4d33bde9b98f86551276e",
+    "model_py_sha256": "fb7b5a82e613289f299b0dbee373067ea61ea8d55fca7b5a8bd9ffc5cfd3e7f3"
+  },
+  "run_summary": {
+    "turn_count": 12,
+    "tool_call_count": 11,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-led-_20260609_180048_908359_f7e038e0",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-led-_20260609_180048_908359_f7e038e0",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

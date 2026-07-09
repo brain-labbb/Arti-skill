@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_exercise_bike_var_straight_bar",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-25T02:08:11Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "6472eb14de54a5005ecfa3ba34c4849cf459a0e5008d1678ad15295a2f7952c4",
+  "source": {
+    "run_id": "run_20260625_020811_727649_bdf86761",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "6472eb14de54a5005ecfa3ba34c4849cf459a0e5008d1678ad15295a2f7952c4",
+    "model_py_sha256": "90fd1c7d08f0cd753ee498b3a47a1ba72a133ee8232296fb867684b6f73f9988"
+  },
+  "run_summary": {
+    "turn_count": 14,
+    "tool_call_count": 14,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_white-upright-stationary-exercise-bike-with-red-_20260605_165843_884664_7f5ac918",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_white-upright-stationary-exercise-bike-with-red-_20260605_165843_884664_7f5ac918",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

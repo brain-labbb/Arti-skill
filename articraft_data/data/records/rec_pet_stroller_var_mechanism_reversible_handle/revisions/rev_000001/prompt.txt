@@ -1,0 +1,23 @@
+CATEGORY: Pet_Animal related
+SUBCATEGORY: Pet stroller
+TARGET: change the rear folding handle (handle part with handle_arm_0/1, foam_grip, base_to_handle REVOLUTE limited to a fold range) into a reversible swing-over handle that rotates all the way from behind the rear wheels to over the cabin to the front.
+DIVERSITY_AXIS: ② joint/mechanism (reversible swing-over handle vs simple fold).
+POSITIONING: reversible-handle pet stroller whose handlebar swings over the top to switch the push direction (parent faces or leads the pet) - a real convertible feature. Stays a pet stroller: same jogger frame, cabin, canopy, three wheels.
+KEEP: preserve these parent functional layers by name: base, seat_floor, side_panel_0, side_panel_1, canopy, base_to_canopy, handle, handle_arm_0, handle_arm_1, foam_grip, handle_hinge_collar_0, handle_hinge_collar_1, front_wheel, rear_wheel_0, rear_wheel_1, base_to_front_wheel, base_to_rear_wheel_0, base_to_rear_wheel_1.
+STRUCTURAL_DELTA: relocate the handle pivot to a transverse hinge barrel high on the frame side rails (near the canopy hinge height) and widen the base_to_handle REVOLUTE range to roughly lower -1.4, upper 1.4 (axis (0,1,0)) so the handle sweeps in a large arc from the rear-low push position, up and over the cabin, to a front push position. Lengthen the handle side arms so the grip clears the canopy top through the whole sweep. Add two visible detent/lock bosses at the two end positions as the interface. Keep it one revolute handle part.
+FORBIDDEN: do not add a second handle joint or a telescoping prismatic, do not change wheel count, cabin or canopy body family; avoid drift toward a baby stroller reversible seat or a hand-truck.
+
+This is a Pet_Animal related/Pet stroller family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Pet_Animal related/Pet stroller (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

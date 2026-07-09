@@ -1,0 +1,26 @@
+CATEGORY: Textiles_Fabric
+SUBCATEGORY: Loom shuttle
+TARGET: change the through-axle side-delivery bobbin (body_to_bobbin revolute spool between two bearings) to an end-delivery pirn on a single fixed cantilever spindle plus a tension gate at the nose eyelet.
+DIVERSITY_AXIS: ② joint/mechanism type.
+POSITIONING: an end-delivery / end-feed cotton-mill shuttle: a tapered pirn is pushed onto one fixed tapered spindle and the weft peels off the pirn tip through a tension bracket at the nose. Still a loom shuttle feeding weft, not a new object.
+KEEP: preserve these parent functional layers by name: body, bobbin, carved_hull, cavity_floor, front_metal_tip, rear_metal_tip, rear_bearing, bobbin_core, cotton_thread, front_flange.
+STRUCTURAL_DELTA: replace the two-bearing symmetric axle with one fixed cantilever spindle rooted at the rear_bearing end; keep the pirn as part bobbin joined by a revolute about the spindle axis (spins as thread pays off) but supported only at the root; make the pirn tapered (cone-ish core) and drop the far flange; add a small metal tension gate / porcupine eyelet post near front_metal_tip as a body visual through which the end-delivered thread passes. Exactly one revolute joint (pirn spin) remains.
+MULTIPLICITY:
+COMPANION_VARIATIONS: paler pirn wood; slightly shorter tapered pirn.
+FORBIDDEN: do not become a spinning-wheel bobbin, sewing machine, or netting shuttle; do not add rollers, hinged arm, or a flat plank body; keep one revolute pirn joint.
+COMPATIBILITY_PROBE:
+
+This is a Textiles_Fabric/Loom shuttle family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Textiles_Fabric/Loom shuttle (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

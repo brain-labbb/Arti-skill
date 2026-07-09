@@ -1,0 +1,27 @@
+# Legitimate doc-only vocabulary — terms that live in markdown schemas
+# (spec tables, source maps), not in Python code. Everything else that a
+# doc backticks as an identifier must exist somewhere in agent/sdk/cli/
+# scripts/tests, or test_doc_symbols_exist_in_code fails.
+
+# Spec / source-map schema fields (SPEC_TEMPLATE.md tables, FORK_VARIANTS.md §6):
+primary_anchor
+form_subtype
+count_param
+
+# source_type vocabulary for slot candidates (VISUAL_DIVERSITY_MODEL.md §6):
+forked_anchor
+world_knowledge_extrapolation
+record_only
+compatibility_probe
+
+# Pedagogical example names — invented identifiers used inline by doc
+# walkthroughs (knob-panel example in TEMPLATE_DESIGN_RULES; the aspirational
+# N-link-arm pattern in MODULAR_TEMPLATE_AUTHORING; naming-convention
+# examples in MATURE_TEMPLATE_METHOD). Not claims about real code.
+_build_knob_part
+_build_n_link_arm
+_emit_mid_arm_link
+quint_link_arm
+tri_blade
+quad_blade
+rail_pad_i

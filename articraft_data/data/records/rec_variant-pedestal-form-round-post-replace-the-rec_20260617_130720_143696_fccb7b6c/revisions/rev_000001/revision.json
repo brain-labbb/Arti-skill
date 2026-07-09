@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-pedestal-form-round-post-replace-the-rec_20260617_130720_143696_fccb7b6c",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T13:07:20Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "7dd0ec28af0a38f2f5c42311ef623bda75da3176f92a7ce8cd09597db70fbafd",
+  "source": {
+    "run_id": "run_20260617_130720_143696_fccb7b6c",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "7dd0ec28af0a38f2f5c42311ef623bda75da3176f92a7ce8cd09597db70fbafd",
+    "model_py_sha256": "83805a15be9575426eebf655cda19fda94a197e2a88e62388584caf43fc47e97"
+  },
+  "run_summary": {
+    "turn_count": 17,
+    "tool_call_count": 19,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_stainless-steel-waist-high-tripod-turnstile-acce_20260612_133446_998781_ea880fc3",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_stainless-steel-waist-high-tripod-turnstile-acce_20260612_133446_998781_ea880fc3",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

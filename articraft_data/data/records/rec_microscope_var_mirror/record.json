@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_microscope_var_mirror",
+  "created_at": "2026-06-23T13:48:41Z",
+  "updated_at": "2026-06-23T15:03:11Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260623_134841_351551_02c491ad",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "microscope-mirror",
+    "prompt_preview": "Change only the illumination from the cylindrical sub-stage condenser lamp to a round tilting reflector mirror mounted on a swinging fork below the stage; ma..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "37c463f799fd7ccf0a93f5752706744b7e7389cbc6924ed1243606f20600047d",
+    "model_py_sha256": "740d818a92232a6957cb00b4efd3c2341f009e0dfa3c7bc5021b85ae253064de"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_build-a-realistic-articulated-3d-model-of-a-micr_20260609_183637_825621_5f8b9008",
+    "parent_record_id": "rec_build-a-realistic-articulated-3d-model-of-a-micr_20260609_183637_825621_5f8b9008",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

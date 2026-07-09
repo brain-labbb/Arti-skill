@@ -1,0 +1,24 @@
+CATEGORY: Camping_Outdoor Gear
+SUBCATEGORY: Folding camp table
+TARGET: add a hinged drop-leaf extension panel along one long edge of the tabletop (topology + fold-down leaf).
+DIVERSITY_AXIS: ① skeleton / structural topology.
+POSITIONING: A folding camp galley table with a fold-down side leaf that extends the work surface when open and drops flat for packing; still a folding camp table because the main slatted top, folding legs, and X-braces are unchanged, it just gains an auxiliary hinged leaf.
+KEEP: preserve these parent functional layers by name: tabletop, slat_{i} loop, leg_0..leg_3, tabletop_to_leg_i (revolute leg hinges), brace_0..brace_3, front_rail, rear_rail, side_rail_0/1.
+STRUCTURAL_DELTA: Add a new leaf part (drop_leaf) as a narrower slatted or panel section attached to one long side rail by a new REVOLUTE hinge (tabletop_to_drop_leaf) with a Y-axis so the leaf can fold up level with the deck or hang down. Adds one articulated extension module to the skeleton; the base table's legs, braces, and main deck are untouched.
+COMPANION_VARIATIONS: ⑤ optional note on extended vs stowed footprint; no leg or mechanism change.
+FORBIDDEN: Do not become a drafting/tilt table or a two-tier cart; do not extend into a full second tabletop; keep the main folding-leg table intact and only add one leaf.
+
+This is a Camping_Outdoor Gear/Folding camp table family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Camping_Outdoor Gear/Folding camp table (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

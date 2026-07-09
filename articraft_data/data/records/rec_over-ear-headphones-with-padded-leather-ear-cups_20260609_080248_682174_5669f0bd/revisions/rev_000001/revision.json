@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_over-ear-headphones-with-padded-leather-ear-cups_20260609_080248_682174_5669f0bd",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-09T08:02:48Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "62e4e160507d39a5fe197ebf51d31aafc65f36d601ee1154a208b6358e9af660",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-sonnet-4-6",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "62e4e160507d39a5fe197ebf51d31aafc65f36d601ee1154a208b6358e9af660",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-09T09:09:56Z",
+    "record_id": "rec_over-ear-headphones-with-padded-leather-ear-cups_20260609_080248_682174_5669f0bd",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_over-ear-headphones-with-padded-leather-ear-cups_20260609_080248_682174_5669f0bd/compile_report.json",
+      "status": "success",
+      "record_id": "rec_over-ear-headphones-with-padded-leather-ear-cups_20260609_080248_682174_5669f0bd",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 6 overlaps across 4 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "46208bf442167eb7c1ddf341e193eb2c7909a3839289ba3c798e15473c35c63b",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "39a3760f6f0df598ef5960c4d159123dc6a463dd378b58e23e5fce93de2645f6",
+        "model_py_mtime_ns": 1780996144894918799,
+        "model_py_size_bytes": 14587,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 686455,
+        "visual_mesh_file_count": 14,
+        "compile_elapsed_seconds": 3.592244740575552
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

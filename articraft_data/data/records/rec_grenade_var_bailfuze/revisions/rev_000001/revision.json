@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_grenade_var_bailfuze",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T13:11:45Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "31cd6d28f3dab54d2f6d20bf279b25fb423df8c5d389c92b57357230f5a39d8f",
+  "source": {
+    "run_id": "run_20260623_131145_294409_add5e9dc",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "31cd6d28f3dab54d2f6d20bf279b25fb423df8c5d389c92b57357230f5a39d8f",
+    "model_py_sha256": "f108043fa9f8d8fb0dca8925a93d445afbde0e0f40a5838eed66b94690455200"
+  },
+  "run_summary": {
+    "turn_count": 10,
+    "tool_call_count": 10,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-an-m84-style-stun-flashbang-grenade-about-_20260610_080253_506027_b1beda97",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-an-m84-style-stun-flashbang-grenade-about-_20260610_080253_506027_b1beda97",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

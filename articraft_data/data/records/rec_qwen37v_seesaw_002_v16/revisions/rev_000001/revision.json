@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_seesaw_002_v16",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-12T07:31:09Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "e2e3a36e3c5b2d4215b8bc07f61fa34968bc5b3a644032c44de0b290efda93c5",
+  "source": {
+    "run_id": "run_20260612_073109_517674_97c3e8cb",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "e2e3a36e3c5b2d4215b8bc07f61fa34968bc5b3a644032c44de0b290efda93c5",
+    "model_py_sha256": "8593e7cfb843432821b46ec6973bb6d67b852e79c2ed6eaa0af7c03649fa41af"
+  },
+  "run_summary": {
+    "turn_count": 25,
+    "tool_call_count": 27,
+    "compile_attempt_count": 8,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-four-seat-playground-seesaw-made-of-bent_20260610_085257_909864_2c2b677d",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-four-seat-playground-seesaw-made-of-bent_20260610_085257_909864_2c2b677d",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

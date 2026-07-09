@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-panel-infill-shoji-paper-grid-replace-th_20260617_104551_570180_c59458fc",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T10:45:51Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "68f4bb9c39016a7c3464cc883016f0bbb1323edad804d51a7e607f8706a31bff",
+  "source": {
+    "run_id": "run_20260617_104551_570180_c59458fc",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "68f4bb9c39016a7c3464cc883016f0bbb1323edad804d51a7e607f8706a31bff",
+    "model_py_sha256": "6820d045060f9b8ae7552602be1df8adfbf88b31905000f5627dbaa32d98f583"
+  },
+  "run_summary": {
+    "turn_count": 5,
+    "tool_call_count": 4,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-three-panel-chinese-style-folding-screen_20260610_084402_869340_89fc1fef",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-three-panel-chinese-style-folding-screen_20260610_084402_869340_89fc1fef",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_black-clamshell-flip-phone-for-seniors-with-a-hi_20260605_174014_810624_7ec9acc7",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-05T17:40:14Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "034810d6386665c06bb28b80af5abb8489ac99062d69565bfd0e187b1b79ec2e",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "034810d6386665c06bb28b80af5abb8489ac99062d69565bfd0e187b1b79ec2e",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-07T14:32:02Z",
+    "record_id": "rec_black-clamshell-flip-phone-for-seniors-with-a-hi_20260605_174014_810624_7ec9acc7",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_black-clamshell-flip-phone-for-seniors-with-a-hi_20260605_174014_810624_7ec9acc7/compile_report.json",
+      "status": "success",
+      "record_id": "rec_black-clamshell-flip-phone-for-seniors-with-a-hi_20260605_174014_810624_7ec9acc7",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 2 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "84042e9b1538b4abbcce1ac6d95728435545aa76089e7b6f464c40ddc3bdbc4e",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "4378867da02c03d069fc6d93e23534c6baa22e676dea9375932502018de54807",
+        "model_py_mtime_ns": 1780842700694320027,
+        "model_py_size_bytes": 19885,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 69911,
+        "visual_mesh_file_count": 25,
+        "compile_elapsed_seconds": 1.8088894300162792
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

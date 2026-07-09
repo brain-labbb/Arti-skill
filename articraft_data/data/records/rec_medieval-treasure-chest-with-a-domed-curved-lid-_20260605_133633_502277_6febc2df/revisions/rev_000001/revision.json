@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_medieval-treasure-chest-with-a-domed-curved-lid-_20260605_133633_502277_6febc2df",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-05T13:36:33Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "f35a2494483215dd5330cc5759f64d5dea7ea78a5e8caf052326627390fbdd0f",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "f35a2494483215dd5330cc5759f64d5dea7ea78a5e8caf052326627390fbdd0f",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-05T14:13:49Z",
+    "record_id": "rec_medieval-treasure-chest-with-a-domed-curved-lid-_20260605_133633_502277_6febc2df",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_medieval-treasure-chest-with-a-domed-curved-lid-_20260605_133633_502277_6febc2df/compile_report.json",
+      "status": "success",
+      "record_id": "rec_medieval-treasure-chest-with-a-domed-curved-lid-_20260605_133633_502277_6febc2df",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "a861e5423805405781b6696cfcf093f7f5b2d5ce271b359982e67c4c8d753470",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "b5051cfcf4bc7be93dde0eb07e04c3da943731d07b8ced6b703b1c1fdc0e7cc7",
+        "model_py_mtime_ns": 1780668053665697211,
+        "model_py_size_bytes": 6878,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 16477,
+        "visual_mesh_file_count": 6,
+        "compile_elapsed_seconds": 2.152185171842575
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

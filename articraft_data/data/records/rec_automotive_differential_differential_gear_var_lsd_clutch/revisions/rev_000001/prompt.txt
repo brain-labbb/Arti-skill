@@ -1,0 +1,25 @@
+CATEGORY: Mechanical Components_Drivetrain
+SUBCATEGORY: Automotive differential_Differential gear
+TARGET: change the internal mechanism by adding clutch-pack limited-slip hardware (clutch_plate_{i} stacks) between each side_gear hub and the carrier_cage cheeks.
+DIVERSITY_AXIS: ① skeleton/topology (open diff -> clutch-type limited-slip differential).
+POSITIONING: clutch-type limited-slip differential (LSD) for performance rear axles; still an open bevel differential (ring + two side gears + spider pinions) with friction clutch packs biasing torque between the two axle outputs.
+KEEP: preserve these parent functional layers by name: carrier_cage, ring_gear (toothed_ring), side_gear_0, side_gear_1 (bevel_teeth, axle_output, bearing_journal), spider_gear_0, spider_gear_1, drive_pinion, carrier_to_ring, carrier_to_side_0, carrier_to_side_1, carrier_to_spider_0, carrier_to_spider_1, carrier_to_pinion.
+STRUCTURAL_DELTA: add a loop clutch_plate_{i} for i in range(N) forming an axial friction-plate stack seated between each side-gear hub and the adjacent carrier cheek face; alternate plates key to the side gear vs the carrier; plates ride with their side gear (no new primary joint). Keep all existing CONTINUOUS gear joints.
+MULTIPLICITY: clutch plate stack N=6 per side, axial stack placement along the axle axis, shared plate helper and stable clutch_plate_{i} naming.
+COMPANION_VARIATIONS: optional plate finish/material only; no part-tree, joint-graph, or interface change beyond the clutch stack.
+FORBIDDEN: do not change the ring-gear form family, do not change spider/side gear count, do not convert to viscous or geared/Torsen or locker types; do not drift toward a plain gearbox or clutch assembly on its own.
+
+This is a Mechanical Components_Drivetrain/Automotive differential_Differential gear family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Mechanical Components_Drivetrain/Automotive differential_Differential gear (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_costume-style-nasa-astronaut-helmet-glossy-white_20260708_144345_529219_2b95133f",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "f87d931bc8ba4242e522375b7b28f383e9185f11",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T15:26:34Z",
+    "record_id": "rec_costume-style-nasa-astronaut-helmet-glossy-white_20260708_144345_529219_2b95133f",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_costume-style-nasa-astronaut-helmet-glossy-white_20260708_144345_529219_2b95133f/compile_report.json",
+      "status": "success",
+      "record_id": "rec_costume-style-nasa-astronaut-helmet-glossy-white_20260708_144345_529219_2b95133f",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "e3a9fe5253c4960baf7d89bd743a72bd07c3637f40ba4c04a0af6142b913a2bb",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "ad32c18e7709bdf19feecb7da2b6c8d0dc95fb3b9f7185af9ef489e722d63169",
+        "model_py_mtime_ns": 1783524299342376845,
+        "model_py_size_bytes": 15935,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 1196544,
+        "visual_mesh_file_count": 6,
+        "compile_elapsed_seconds": 5.484713854268193
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

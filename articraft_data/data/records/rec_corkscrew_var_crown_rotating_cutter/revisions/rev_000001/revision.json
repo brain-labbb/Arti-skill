@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_corkscrew_var_crown_rotating_cutter",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-19T13:16:52Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "40d9c701f7f87824c596130a3562fa4f021ed7da47cb358e4763185babab09d7",
+  "source": {
+    "run_id": "run_20260619_131652_578035_ab4ebaa1",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "40d9c701f7f87824c596130a3562fa4f021ed7da47cb358e4763185babab09d7",
+    "model_py_sha256": "14010b27b51c9ea5874f2dfd757131bb59baa2e855936b583e6c8ebc408bd6cc"
+  },
+  "run_summary": {
+    "turn_count": 16,
+    "tool_call_count": 16,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-classic-winged-butterfly-corkscrew-about_20260610_080758_135836_65a27fb6",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-classic-winged-butterfly-corkscrew-about_20260610_080758_135836_65a27fb6",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

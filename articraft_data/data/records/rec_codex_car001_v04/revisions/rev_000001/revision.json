@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_codex_car001_v04",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-14T12:33:52Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "b0d2aedcb9dc379aef6ee632969f44ee5b62479cdd7808aac8e1f7bd8fd5338c",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "codex",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "b0d2aedcb9dc379aef6ee632969f44ee5b62479cdd7808aac8e1f7bd8fd5338c",
+    "model_py_sha256": "199703a507cfab23afcad172b26bb54f22e4c9461ee2d36e210a9d654dff7d43"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_edit_draft"
+  },
+  "parent": {
+    "record_id": "rec_classic-mercedes-300sl-gullwing-sports-car-in-de_20260608_164442_671467_88ed264e",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_classic-mercedes-300sl-gullwing-sports-car-in-de_20260608_164442_671467_88ed264e",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-14T12:58:26Z",
+    "record_id": "rec_codex_car001_v04",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_codex_car001_v04/compile_report.json",
+      "status": "success",
+      "record_id": "rec_codex_car001_v04",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='body' connected=68/76 disconnected=[dashboard:Box, steering_column:Cylinder, front_indicator_left:Cylinder, front_indicator_right:Cylinder, rear_star_ring:Mesh, rear_star_0:Box, rear_star_1:Box, rear_star_2:Box]\npart='door_left' connected=3/4 disconnected=[door_handle:Box]\npart='door_right' connected=3/4 disconnected=[door_handle:Box]\npart='wheel_front_left' connected=3/4 disconnected=[rim__component_002:Mesh]\npart='wheel_front_right' connected=3/4 disconnected=[rim__component_002:Mesh]\npart='wheel_rear_left' connected=3/4 disconnected=[rim__component_002:Mesh]\npart='wheel_rear_right' connected=3/4 disconnected=[rim__component_002:Mesh]\npart='steering_wheel' connected=8/11 disconnected=[sw_star_0:Box, sw_star_1:Box, sw_star_2:Box]"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 32 overlaps across 7 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "c55c2a1ff6be3ebc9acb9b2cd6c50ac542bc1e0293dd32b84807f831c54e9fed",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "79f891ac2b1ff4f39afe9565acff41d92663c63e57deef851cfcddd9ea5e706f",
+        "model_py_mtime_ns": 1781441240440125114,
+        "model_py_size_bytes": 50451,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 2171595,
+        "visual_mesh_file_count": 23,
+        "compile_elapsed_seconds": 58.968245804309845
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_retro-vintage-portable-transistor-radio-bronze-a_20260605_173810_150349_43796658",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "0ea5c9890f6e1c17ff89838a0485830e0b2b9e87",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-05T18:00:22Z",
+    "record_id": "rec_retro-vintage-portable-transistor-radio-bronze-a_20260605_173810_150349_43796658",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_retro-vintage-portable-transistor-radio-bronze-a_20260605_173810_150349_43796658/compile_report.json",
+      "status": "success",
+      "record_id": "rec_retro-vintage-portable-transistor-radio-bronze-a_20260605_173810_150349_43796658",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 7 overlaps across 5 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "57e26e1c01004c219a5707e7c75f1f7c922708aeaf07e370ddef55c99f8ccb42",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "d4f4791a16b7b28253091158a9227e62e61eb9a01a4c50fc80fff823e6a3e6fc",
+        "model_py_mtime_ns": 1780681852816677408,
+        "model_py_size_bytes": 23434,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 1977090,
+        "visual_mesh_file_count": 18,
+        "compile_elapsed_seconds": 15.989822239615023
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

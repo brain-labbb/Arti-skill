@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_printer_var_workgroup",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T10:47:57Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "2cf0f8967cbd8c536423e920b727792ea8da8232c74d09d175afa8037aaa0876",
+  "source": {
+    "run_id": "run_20260705_104757_915921_a6d36289",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "2cf0f8967cbd8c536423e920b727792ea8da8232c74d09d175afa8037aaa0876",
+    "model_py_sha256": "313c46c8b7290c857cef1886275259e8c2944b56bfc724e33d9664eff3cfa97f"
+  },
+  "run_summary": {
+    "turn_count": 5,
+    "tool_call_count": 4,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-white-and-gray-hp-officejet-pro-all-in-one-ink_20260624_124702_530779_bbac26a7",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-white-and-gray-hp-officejet-pro-all-in-one-ink_20260624_124702_530779_bbac26a7",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_a-white-and-gray-hp-officejet-pro-all-in-one-ink_20260624_124702_530779_bbac26a7",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "7ac507dc5472693b2765397cc625e4668793a1131906b49b88ffd30881fb8b5d"
+    }
+  ]
+}

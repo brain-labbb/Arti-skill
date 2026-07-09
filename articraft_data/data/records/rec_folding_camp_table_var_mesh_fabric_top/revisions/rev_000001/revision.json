@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_folding_camp_table_var_mesh_fabric_top",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T04:21:58Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "80ec162ef3d14f9c3ff0d2d8e9487167eaafa26492a8d086407cce6b500ddc79",
+  "source": {
+    "run_id": "run_20260709_042158_150307_4e528061",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "80ec162ef3d14f9c3ff0d2d8e9487167eaafa26492a8d086407cce6b500ddc79",
+    "model_py_sha256": "655c07ecb215f6ee4da3c86367c1851b46d514f575e6aa74cbe41aab7329b30c"
+  },
+  "run_summary": {
+    "turn_count": 20,
+    "tool_call_count": 20,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_camping_outdoor_gear__folding_camp_table_1a04de6b29ee4143b411d8805aa338b9",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_camping_outdoor_gear__folding_camp_table_1a04de6b29ee4143b411d8805aa338b9",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_camping_outdoor_gear__folding_camp_table_1a04de6b29ee4143b411d8805aa338b9",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "fcd6a73e2ae6d1cd7adeca0d7a591dbdee0e940967bee05d6d64e80ed56780a4"
+    }
+  ]
+}

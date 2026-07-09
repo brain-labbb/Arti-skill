@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_glasses_var_keyhole_bridge",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-20T16:35:24Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "b0b61c5633f5852a00a06e1841fcb79af729d4c9ad8d363e316a8042c88d0907",
+  "source": {
+    "run_id": "run_20260620_163524_641613_55afd09e",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "b0b61c5633f5852a00a06e1841fcb79af729d4c9ad8d363e316a8042c88d0907",
+    "model_py_sha256": "77a8be616a85d9e9280a55c8a68de01567140b7b4c22d57f0359fc0177890885"
+  },
+  "run_summary": {
+    "turn_count": 17,
+    "tool_call_count": 17,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_create-a-highly-detailed-articulated-3d-model-of_20260620_143104_209562_7e979b64",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_create-a-highly-detailed-articulated-3d-model-of_20260620_143104_209562_7e979b64",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_create-a-highly-detailed-articulated-3d-model-of_20260620_143104_209562_7e979b64",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "81fb76fc0ee8852355e52055b012806cfd56cdc412630c37e0beb57110e40fd9"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_camping_lantern_var_stick_tube_body",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T03:43:32Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "acfb2483794b8faf09dc13c3a7a002d07690ee44bc1f6c037147c9579253290a",
+  "source": {
+    "run_id": "run_20260709_034332_304817_687b160c",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "acfb2483794b8faf09dc13c3a7a002d07690ee44bc1f6c037147c9579253290a",
+    "model_py_sha256": "92e6fa9a58d9ddd768aedb4376fd0b18408a6bd73720da24ad0188e3f6f28723"
+  },
+  "run_summary": {
+    "turn_count": 14,
+    "tool_call_count": 14,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_camping_outdoor_gear__camping_lantern_9f7633a6fc3d4d8e82070ee08dd075ac",
+    "revision_id": "rev_000002"
+  },
+  "seed": {
+    "record_id": "rec_camping_outdoor_gear__camping_lantern_9f7633a6fc3d4d8e82070ee08dd075ac",
+    "revision_id": "rev_000002",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_camping_outdoor_gear__camping_lantern_9f7633a6fc3d4d8e82070ee08dd075ac",
+      "revision_id": "rev_000002",
+      "path": "revisions/rev_000002/inputs/001.png",
+      "sha256": "67dbf837bdb8d9263581b60b068b1b193006a321c24adff61fe9027bdff627ad"
+    }
+  ]
+}

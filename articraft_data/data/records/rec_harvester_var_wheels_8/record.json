@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_harvester_var_wheels_8",
+  "created_at": "2026-07-05T09:46:43Z",
+  "updated_at": "2026-07-05T10:05:53Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260705_094643_680453_d4b38d3e",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "harvester-wheels_8",
+    "prompt_preview": "TARGET: Rewrite the hand-written `wheel_specs` (6) + axle list (3) + `*_fender_0/1` (6) as computed loops over `num_axles=4` -> 8 wheels, 4 axles, 8 fenders...."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "3661c6c27edc261f9284a0d5dfbe62a82dbebcac687564f09e4f381260ca725b",
+    "model_py_sha256": "0ceac4be0cd02c721f8e6df898bba198cdacc6b1e4b333454706777b96a685a8"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_893521_f77bf836",
+    "parent_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_155418_893521_f77bf836",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

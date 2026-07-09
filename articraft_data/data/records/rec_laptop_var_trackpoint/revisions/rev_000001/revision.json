@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_laptop_var_trackpoint",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T10:45:14Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "24b6490f61558c175f4bcc98d428d5c386600f8e686d8054dfb86f26348c09bf",
+  "source": {
+    "run_id": "run_20260705_104514_898114_5f485640",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "24b6490f61558c175f4bcc98d428d5c386600f8e686d8054dfb86f26348c09bf",
+    "model_py_sha256": "aa724463abbd9ad526fed6a50bc2027d14efc7bd9693a461444f8208ed2a6be8"
+  },
+  "run_summary": {
+    "turn_count": 23,
+    "tool_call_count": 23,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_silver-thin-and-light-laptop-computer-with-a-hin_20260605_173856_302145_c183f0ed",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_silver-thin-and-light-laptop-computer-with-a-hin_20260605_173856_302145_c183f0ed",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

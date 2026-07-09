@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_drying_rack_var_tiered_tower",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T16:13:49Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "3ad46a08b7de75e138c0af80a952e9b653a7754f9d0fe445f5c976f5fb536b71",
+  "source": {
+    "run_id": "run_20260709_161349_922087_b5d71898",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "3ad46a08b7de75e138c0af80a952e9b653a7754f9d0fe445f5c976f5fb536b71",
+    "model_py_sha256": "8cb35997d81a23fd766ddd7ab0947f73686035e2915f48689b68cf7e92779e8b"
+  },
+  "run_summary": {
+    "turn_count": 6,
+    "tool_call_count": 6,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_household_laundry__clothes_drying_rack_laundry_drying_rack__001_png_f2ccdd08f2c443439b7d1b190cc6a269",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_household_laundry__clothes_drying_rack_laundry_drying_rack__001_png_f2ccdd08f2c443439b7d1b190cc6a269",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_household_laundry__clothes_drying_rack_laundry_drying_rack__001_png_f2ccdd08f2c443439b7d1b190cc6a269",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "ddd35259882490ef626cbcf64054cb272f68a771a4d537abfe8a766dd87be5d9"
+    }
+  ]
+}

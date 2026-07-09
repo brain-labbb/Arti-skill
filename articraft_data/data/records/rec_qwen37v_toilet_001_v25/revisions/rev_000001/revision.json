@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_toilet_001_v25",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-14T06:53:53Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "32992c9a2c142c20612f9105997f02721dc75c1d30e7f269ba215532b13ec887",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "32992c9a2c142c20612f9105997f02721dc75c1d30e7f269ba215532b13ec887",
+    "model_py_sha256": "39c90dea0c653a3a5a2a9863d4a7983c5b6ed4b31737556f8889155de263edf6"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_edit_draft"
+  },
+  "parent": {
+    "record_id": "rec_wall-hung-white-ceramic-toilet-with-a-soft-close_20260605_154105_854794_7d51c47b",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_wall-hung-white-ceramic-toilet-with-a-soft-close_20260605_154105_854794_7d51c47b",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-14T06:54:34Z",
+    "record_id": "rec_qwen37v_toilet_001_v25",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_qwen37v_toilet_001_v25/compile_report.json",
+      "status": "failure",
+      "record_id": "rec_qwen37v_toilet_001_v25",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "ValueError: URDF tests failed:\n- lid sits above the seat ring when closed: lid bottom z=0.398002, seat top z=0.42600000000000005\n- fail_if_parts_overlap_in_current_pose(): Part overlaps detected (overlap_tol=0.005, overlap_volume_tol=5e-07):\npair=('body','flush_button_small') depth=(0.0095,0.04,0.012) min_depth=0.0095 vol=4.56e-06 elem_a=#0 'back_panel':Mesh elem_b=#0 'flush_button_small_actuator':Mesh pose={}\npair=('body','lid') depth=(0.025,0.37,0.016) min_depth=0.016 vol=0.000148 elem_a=#1 'rear_pod':Mesh elem_b=#0 'lid_shell':Mesh pose={}\npair=('body','seat_ring') depth=(0.015,0.35,0.02) min_depth=0.015 vol=0.000105 elem_a=#1 'rear_pod':Mesh elem_b=#0 'seat_ring_shell':Mesh pose={}\npair=('flush_button_large','flush_button_small') depth=(0.006,0.04,0.012) min_depth=0.006 vol=2.88e-06 elem_a=#0 'flush_button_large_actuator':Mesh elem_b=#0 'flush_button_small_actuator':Mesh pose={}\npair=('lid','seat_ring') depth=(0.016,0.0325,0.01499) min_depth=0.01499 vol=7.797e-06 elem_a=#2 'lid_hinge_barrels__component_002':Mesh elem_b=#2 'seat_hinge_barrels__component_002':Mesh pose={}"
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "39c90dea0c653a3a5a2a9863d4a7983c5b6ed4b31737556f8889155de263edf6",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "a64648c5b9c6f33d6eda5021b08cae27e31db5cf22e0e08937584f475cdd1f21",
+        "model_py_mtime_ns": 1781420038406357825,
+        "model_py_size_bytes": 22279,
+        "materialization_status": "missing",
+        "visual_mesh_bytes": 0,
+        "visual_mesh_file_count": 0,
+        "compile_elapsed_seconds": 11.656837529502809
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 2,
+      "errors": [
+        "strict external compile exited with status 1",
+        "compile report status must be 'success'"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

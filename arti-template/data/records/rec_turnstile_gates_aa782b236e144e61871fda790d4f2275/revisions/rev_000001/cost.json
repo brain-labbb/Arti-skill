@@ -1,0 +1,89 @@
+{
+  "model_id": "gpt-5.4",
+  "total": {
+    "tokens": {
+      "prompt_tokens": 128326,
+      "cached_tokens": 89088,
+      "uncached_prompt_tokens": 39238,
+      "candidates_tokens": 14810,
+      "total_tokens": 143136
+    },
+    "costs_usd": {
+      "input_uncached": 0.098095,
+      "input_cached": 0.022272,
+      "output": 0.22215,
+      "total": 0.342517
+    }
+  },
+  "pricing": {
+    "input_uncached": 2.5,
+    "input_cached": 0.25,
+    "output": 15.0,
+    "prompt_tier_threshold_tokens": 272000,
+    "input_uncached_above_threshold": 5.0,
+    "input_cached_above_threshold": 0.5,
+    "output_above_threshold": 22.5
+  },
+  "turns": [
+    {
+      "tokens": {
+        "prompt_tokens": 21512,
+        "cached_tokens": 20992,
+        "uncached_prompt_tokens": 520,
+        "candidates_tokens": 66,
+        "total_tokens": 21578
+      },
+      "costs_usd": {
+        "input_uncached": 0.0013,
+        "input_cached": 0.005248,
+        "output": 0.00099,
+        "total": 0.007538
+      }
+    },
+    {
+      "tokens": {
+        "prompt_tokens": 22057,
+        "cached_tokens": 20992,
+        "uncached_prompt_tokens": 1065,
+        "candidates_tokens": 5164,
+        "total_tokens": 27221
+      },
+      "costs_usd": {
+        "input_uncached": 0.0026625,
+        "input_cached": 0.005248,
+        "output": 0.07746,
+        "total": 0.0853705
+      }
+    },
+    {
+      "tokens": {
+        "prompt_tokens": 43751,
+        "cached_tokens": 26112,
+        "uncached_prompt_tokens": 17639,
+        "candidates_tokens": 8921,
+        "total_tokens": 52672
+      },
+      "costs_usd": {
+        "input_uncached": 0.0440975,
+        "input_cached": 0.006528,
+        "output": 0.133815,
+        "total": 0.1844405
+      }
+    },
+    {
+      "tokens": {
+        "prompt_tokens": 41006,
+        "cached_tokens": 20992,
+        "uncached_prompt_tokens": 20014,
+        "candidates_tokens": 659,
+        "total_tokens": 41665
+      },
+      "costs_usd": {
+        "input_uncached": 0.050035,
+        "input_cached": 0.005248,
+        "output": 0.009885,
+        "total": 0.065168
+      }
+    }
+  ]
+}

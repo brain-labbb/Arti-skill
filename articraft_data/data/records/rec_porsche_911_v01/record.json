@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_porsche_911_v01",
+  "created_at": "2026-06-16T07:15:13Z",
+  "updated_at": "2026-06-16T07:15:13Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": null,
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "draft_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "sports_car",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "anthropic",
+  "model_id": null,
+  "display": {
+    "title": "Porsche 911",
+    "prompt_preview": "Porsche 911: rear-engine sports car, round headlights on rounded front fenders, sloping fastback roof, wide rear haunches, ducktail"
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "b3fab89297ff5f6a12ca606d8029c5d0c13b0f1f4d3d3480ffd3bff61951bdd3",
+    "model_py_sha256": "57093138ab9f4fdd9971d7777f01c6c2262505f9a878557e2641d0f2f07d22c4"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "parent_record_id": "rec_bright-yellow-lamborghini-diablo-style-wedge-sup_20260612_133511_811503_655801c5",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  },
+  "creator": {
+    "mode": "external_agent",
+    "agent": "claude-code",
+    "trace_available": false
+  }
+}

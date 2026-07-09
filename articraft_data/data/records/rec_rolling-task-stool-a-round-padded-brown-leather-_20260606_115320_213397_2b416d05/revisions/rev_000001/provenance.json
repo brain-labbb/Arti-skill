@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_rolling-task-stool-a-round-padded-brown-leather-_20260606_115320_213397_2b416d05",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "0ea5c9890f6e1c17ff89838a0485830e0b2b9e87",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_finalized"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-06T15:49:36Z",
+    "record_id": "rec_rolling-task-stool-a-round-padded-brown-leather-_20260606_115320_213397_2b416d05",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_rolling-task-stool-a-round-padded-brown-leather-_20260606_115320_213397_2b416d05/compile_report.json",
+      "status": "success",
+      "record_id": "rec_rolling-task-stool-a-round-padded-brown-leather-_20260606_115320_213397_2b416d05",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='caster_base' connected=4/32 disconnected=[hub:Cylinder, hub_collar:Cylinder, spoke_0__component_001:Mesh, spoke_0__component_002:Mesh, spoke_1__component_001:Mesh, spoke_1__component_002:Mesh, spoke_2__component_001:Mesh, spoke_2__component_002:Mesh, spoke_3__component_001:Mesh, spoke_3__component_002:Mesh, spoke_4__component_001:Mesh, spoke_4__component_002:Mesh, caster_yoke_1__component_001:Mesh, caster_yoke_1__component_002:Mesh, caster_yoke_1__component_003:Mesh, caster_axle_1:Mesh, caster_yoke_2__component_001:Mesh, caster_yoke_2__component_002:Mesh, caster_yoke_2__component_003:Mesh, caster_axle_2:Mesh, caster_yoke_3__component_001:Mesh, caster_yoke_3__component_002:Mesh, caster_yoke_3__component_003:Mesh, caster_axle_3:Mesh, caster_yoke_4__component_001:Mesh, caster_yoke_4__component_002:Mesh, caster_yoke_4__component_003:Mesh, caster_axle_4:Mesh]"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 21 overlaps across 11 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "d68f67c684bc39e438dd09701a2e57de7bd121e482b05538cca8385cfc3b8b70",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "f796f666d8cb54308126c801c1ebc3ab3bf09002639ce09e03d9e3f40c286089",
+        "model_py_mtime_ns": 1780760525269954620,
+        "model_py_size_bytes": 19730,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 951323,
+        "visual_mesh_file_count": 19,
+        "compile_elapsed_seconds": 7.890475706197321
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

@@ -1,0 +1,26 @@
+CATEGORY: Pet_Animal related
+SUBCATEGORY: Bird cage
+TARGET: change the circular cage cross-section (CAGE_R hoops and the bar_count radial vertical bars placed on a circle) to a regular hexagonal prism ring.
+DIVERSITY_AXIS: ③ primary form family.
+POSITIONING: real hexagonal / gazebo-style decorative bird cage archetype; domed-lid barred enclosure with hinged access door, perch, base tray and top hanging hook, so it stays Bird cage.
+KEEP: preserve these parent functional layers by name: base_tray (tray_shell), wire_frame (cage_bars), perch (perch_rod), access_door, latch, frame_to_door, door_to_latch, tray_to_frame, frame_to_perch, top_hook, and the _rod_z / _rod_x / tube_from_spline_points helpers.
+STRUCTURAL_DELTA: replace the circular structural hoops (TorusGeometry rings) with hexagonal ring frames (6 corner posts + 6 edge rails per level), and replace the radial bar loop on the circle with vertical bars evenly distributed along the 6 flat faces; roof meridians rise from the 6 corners to the crown ring / hook. Door aperture cut into one face; door hinge and latch unchanged.
+MULTIPLICITY:
+COMPANION_VARIATIONS: may keep aged-brass palette and hanging hook.
+FORBIDDEN: do not become a lantern, terrarium, gazebo model, or lamp; do not also change the door mechanism or support type.
+COMPATIBILITY_PROBE:
+
+This is a Pet_Animal related/Bird cage family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Pet_Animal related/Bird cage (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

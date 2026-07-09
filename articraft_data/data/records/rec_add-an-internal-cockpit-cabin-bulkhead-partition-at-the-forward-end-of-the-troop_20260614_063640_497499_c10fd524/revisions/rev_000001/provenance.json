@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_add-an-internal-cockpit-cabin-bulkhead-partition-at-the-forward-end-of-the-troop_20260614_063640_497499_c10fd524",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": null,
+    "uv_lock_sha256": null
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-14T06:47:47Z",
+    "record_id": "rec_add-an-internal-cockpit-cabin-bulkhead-partition-at-the-forward-end-of-the-troop_20260614_063640_497499_c10fd524",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_add-an-internal-cockpit-cabin-bulkhead-partition-at-the-forward-end-of-the-troop_20260614_063640_497499_c10fd524/compile_report.json",
+      "status": "success",
+      "record_id": "rec_add-an-internal-cockpit-cabin-bulkhead-partition-at-the-forward-end-of-the-troop_20260614_063640_497499_c10fd524",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 13 overlaps across 8 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "a0dfa24dc04c9f02162bbb21fe66fe2a2221a148aebf12df693adc0177be5fa4",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "501bdf7bf281853f30522384021f15421fc63f934c3e31cce5250194fc2d3493",
+        "model_py_mtime_ns": 1781419560048477759,
+        "model_py_size_bytes": 40096,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 2221727,
+        "visual_mesh_file_count": 13,
+        "compile_elapsed_seconds": 9.656737488694489
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

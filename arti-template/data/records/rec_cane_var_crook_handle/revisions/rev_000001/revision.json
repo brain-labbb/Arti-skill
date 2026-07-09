@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_cane_var_crook_handle",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:57:55Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "0e6f330a457755a1bc941b7c7b933a15799cd056c479f1896cf18e8855b07064",
+  "source": {
+    "run_id": "run_20260705_095755_101284_b75931cf",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 5.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "0e6f330a457755a1bc941b7c7b933a15799cd056c479f1896cf18e8855b07064",
+    "model_py_sha256": "2a36d7aef4a2cd2e591468a18cdf9e9cdb175d1f15f8b4493afc0f20e6e11e09"
+  },
+  "run_summary": {
+    "turn_count": 10,
+    "tool_call_count": 10,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_a-single-point-walking-cane-with-a-narrow-base-a_20260623_180041_173109_118f96a0",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_a-single-point-walking-cane-with-a-narrow-base-a_20260623_180041_173109_118f96a0",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_a-single-point-walking-cane-with-a-narrow-base-a_20260623_180041_173109_118f96a0",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/004.png",
+      "sha256": "6902721a5823dbb2e518af573c5bd9a07566b66925496b94e2a8f0f3a2b09a3e"
+    }
+  ]
+}

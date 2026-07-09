@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_qwen37v_toilet_001_v23",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": null,
+    "uv_lock_sha256": null
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_edit_draft"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-14T06:53:50Z",
+    "record_id": "rec_qwen37v_toilet_001_v23",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/articraft_data/data/cache/record_materialization/rec_qwen37v_toilet_001_v23/compile_report.json",
+      "status": "failure",
+      "record_id": "rec_qwen37v_toilet_001_v23",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "ValueError: URDF tests failed:\n- flush handle pivots downward when actuated: rest z=(-0.10400000000000001, 0.08, 0.9945), actuated z=(-0.10400000000000001, 0.08, 0.9945)\n- fail_if_isolated_parts(): Isolated parts detected (floating support-disconnected component groups from the grounded body; samples=1, contact_tol=1e-06):\n- pose_index=0 at pose (bowl_to_lid=0, bowl_to_seat_ring=0, bowl_to_tank=0, tank_to_flush_handle=0), part 'flush_handle' is disconnected from the grounded body rooted at 'bowl'; nearest_grounded_part='bowl'; approx_gap=0.9367m; backend=fcl\n- pose_index=0 at pose (bowl_to_lid=0, bowl_to_seat_ring=0, bowl_to_tank=0, tank_to_flush_handle=0), floating group ['lid', 'seat_ring'] is disconnected from the grounded body rooted at 'bowl'; nearest_grounded_part='bowl'; approx_gap=0.006m; backend=fcl\n- pose_index=0 at pose (bowl_to_lid=0, bowl_to_seat_ring=0, bowl_to_tank=0, tank_to_flush_handle=0), part 'tank' is disconnected from the grounded body rooted at 'bowl'; nearest_grounded_part='bowl'; approx_gap=0.118m; backend=fcl"
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "8a98d621255a6f3c26062dfb6cc62df618b1c34182f12348445a311532528c3d",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "abe4b988669f0ba3275c290daba4a48afc6d25abeac8f93fee85294a55468e2b",
+        "model_py_mtime_ns": 1781420007727590361,
+        "model_py_size_bytes": 20910,
+        "materialization_status": "missing",
+        "visual_mesh_bytes": 0,
+        "visual_mesh_file_count": 0,
+        "compile_elapsed_seconds": 5.441116292029619
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 2,
+      "errors": [
+        "strict external compile exited with status 1",
+        "compile report status must be 'success'"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

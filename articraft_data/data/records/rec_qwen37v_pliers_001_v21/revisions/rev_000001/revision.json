@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_qwen37v_pliers_001_v21",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-12T07:10:13Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "501bc12e7243c9f4934e20bce592014d10f6936d8ff1ac656d0c5797603599fb",
+  "source": {
+    "run_id": "run_20260612_071013_774259_b41704cb",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "501bc12e7243c9f4934e20bce592014d10f6936d8ff1ac656d0c5797603599fb",
+    "model_py_sha256": "0435cf8b38099a08f99688de243b321ddb9accc9a279528c666497642a3068cb"
+  },
+  "run_summary": {
+    "turn_count": 23,
+    "tool_call_count": 24,
+    "compile_attempt_count": 5,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-pair-of-compact-flush-cut-wire-snips-ele_20260610_085045_783699_e0ef2013",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-pair-of-compact-flush-cut-wire-snips-ele_20260610_085045_783699_e0ef2013",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_armored_vehicle_var_6x6",
+  "created_at": "2026-06-23T13:18:48Z",
+  "updated_at": "2026-06-23T13:25:13Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260623_131848_751861_d2d95973",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "armored_vehicle-6x6",
+    "prompt_preview": "Rebuild this APC as a six-wheeled 6x6 variant. Regenerate the road-wheel axle tuple to three evenly fore-aft spaced axle pairs per side instead of four, keep..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "5c0f9d83f619aad4c17af94d26728375efc4f80d7457a1badf5527370afebb75",
+    "model_py_sha256": "5457ace3e67b7906ee13429c788ea79eb51554cf903d3d68464e164ff1323039"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_model-an-eight-wheeled-armored-personnel-carrier_20260610_081616_840659_407e2520",
+    "parent_record_id": "rec_model-an-eight-wheeled-armored-personnel-carrier_20260610_081616_840659_407e2520",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

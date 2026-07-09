@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_wood_swing_var_chainbench",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T14:00:38Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "68214452332338fe27744c05bdd6094a9671e3786756376645f8611f3c669382",
+  "source": {
+    "run_id": "run_20260623_140038_959874_807cec0e",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "68214452332338fe27744c05bdd6094a9671e3786756376645f8611f3c669382",
+    "model_py_sha256": "65f74b39a2637f296734e759e4caa355a1a73442389c919f78c4aa3d11c9c429"
+  },
+  "run_summary": {
+    "turn_count": 12,
+    "tool_call_count": 14,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_metal-a-frame-swing-bench-cad-style-tubular-stee_20260611_160923_294907_5faa70db",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_metal-a-frame-swing-bench-cad-style-tubular-stee_20260611_160923_294907_5faa70db",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

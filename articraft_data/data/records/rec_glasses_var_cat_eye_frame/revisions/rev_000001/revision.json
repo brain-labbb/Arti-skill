@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_glasses_var_cat_eye_frame",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-20T16:35:24Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "81dfe39064d1a8d85ee839fde24a33fd14feaf5c2107608804f75a38a1a52a9f",
+  "source": {
+    "run_id": "run_20260620_163524_646179_e96ae43c",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "81dfe39064d1a8d85ee839fde24a33fd14feaf5c2107608804f75a38a1a52a9f",
+    "model_py_sha256": "919b68660dfa67dc05b93f9207da2d4338b6c269fd3f23c1afb5b72b50c1b9ca"
+  },
+  "run_summary": {
+    "turn_count": 12,
+    "tool_call_count": 12,
+    "compile_attempt_count": 4,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_create-a-highly-detailed-articulated-3d-model-of_20260620_143104_211959_619782b5",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_create-a-highly-detailed-articulated-3d-model-of_20260620_143104_211959_619782b5",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_create-a-highly-detailed-articulated-3d-model-of_20260620_143104_211959_619782b5",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "46d9eb783d65e364ea7f7d34d2beabe32e0c34f066b53f39bdfa2b8da6aa531a"
+    }
+  ]
+}

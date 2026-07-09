@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_knife_set_var_count_4",
+  "created_at": "2026-06-19T13:16:52Z",
+  "updated_at": "2026-06-19T13:21:49Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "knife_block_with_sliding_knives",
+  "source": {
+    "run_id": "run_20260619_131652_601908_a2762cb1",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "knife_set-count_4",
+    "prompt_preview": "TARGET AXIS: knife count multiplicity. Reduce to a 4-KNIFE set (chef, bread, utility, paring). Emit the knives via a for-i-in-range(n) loop with knife_{i} na..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "e97b3d0f1bb3d8e295635b78a8fcf82472b8d1ea74282d6a5806784b2562ba94",
+    "model_py_sha256": "a03223e30becbcdd8e75d2856ef217ceebf0e3fec93161a6481123ec3c757502"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_model-a-kitchen-knife-block-set-a-slanted-light-_20260610_080923_805616_1d3b3a0e",
+    "parent_record_id": "rec_model-a-kitchen-knife-block-set-a-slanted-light-_20260610_080923_805616_1d3b3a0e",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

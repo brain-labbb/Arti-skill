@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_classic-mercedes-300sl-gullwing-sports-car-in-de_20260608_164442_671467_88ed264e",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "48c1acb46c6036e6eef904e4f363944751fac19e",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-16T04:04:09Z",
+    "record_id": "rec_classic-mercedes-300sl-gullwing-sports-car-in-de_20260608_164442_671467_88ed264e",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/articraft_data/data/cache/record_materialization/rec_classic-mercedes-300sl-gullwing-sports-car-in-de_20260608_164442_671467_88ed264e/compile_report.json",
+      "status": "success",
+      "record_id": "rec_classic-mercedes-300sl-gullwing-sports-car-in-de_20260608_164442_671467_88ed264e",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 2,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='body' connected=64/72 disconnected=[dashboard:Box, steering_column:Cylinder, front_indicator_left:Cylinder, front_indicator_right:Cylinder, rear_star_ring:Mesh, rear_star_0:Box, rear_star_1:Box, rear_star_2:Box]\npart='wheel_front_left' connected=3/4 disconnected=[rim__component_002:Mesh]\npart='wheel_front_right' connected=3/4 disconnected=[rim__component_002:Mesh]\npart='wheel_rear_left' connected=3/4 disconnected=[rim__component_002:Mesh]\npart='wheel_rear_right' connected=3/4 disconnected=[rim__component_002:Mesh]\npart='steering_wheel' connected=8/11 disconnected=[sw_star_0:Box, sw_star_1:Box, sw_star_2:Box]"
+        },
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 18 overlaps across 5 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "61f5ae4d7f13b106146005d8217ee9c65292107f640e9da9c27860ae2ebbec24",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "462cdbeffc514837586b014fd0c80187bcc7efa80285034e4ee5f06baf16620d",
+        "model_py_mtime_ns": 1781582603935540594,
+        "model_py_size_bytes": 50593,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 2152091,
+        "visual_mesh_file_count": 19,
+        "compile_elapsed_seconds": 22.75047787744552
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

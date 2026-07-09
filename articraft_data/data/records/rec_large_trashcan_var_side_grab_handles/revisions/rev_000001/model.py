@@ -1,0 +1,569 @@
+from __future__ import annotations
+
+# Gray two-wheel curbside wheelie trash bin (Lavex-style ~240 L cart).
+#
+# Coordinate convention:
+#   - up is +Z; the wheels touch the ground at z=0.
+#   - the bin "front" (the flat labelled face) looks toward +X.
+#   - the hinge / handle / wheels are at the rear (-X).
+#
+# Structure:
+#   - body (root, static): tapered hollow plastic shell, slightly wider at the
+#     top than the bottom, with a thick top rim, vertical reinforcing ribs near
+#     the upper sides, the molded wheel-axle housing at the rear-bottom, and a
+#     fixed steel axle bar across the back.
+#   - lid (REVOLUTE about +Y at the rear top rim): a slightly domed flip lid
+#     with a front grab lip; opens upward/rearward.
+#   - left_wheel / right_wheel (CONTINUOUS about +Y): the two molded plastic
+#     road wheels on the rear axle.
+
+import math
+
+import cadquery as cq
+
+from sdk import (
+    ArticulatedObject,
+    ArticulationType,
+    Box,
+    Cylinder,
+    Inertial,
+    MotionLimits,
+    Origin,
+    TestContext,
+    TestReport,
+    TireGeometry,
+    TireSidewall,
+    TireTread,
+    WheelBore,
+    WheelFace,
+    WheelGeometry,
+    WheelHub,
+    WheelRim,
+    WheelSpokes,
+    mesh_from_cadquery,
+    mesh_from_geometry,
+)
+
+# --- key dimensions (meters) ---
+BODY_H = 0.940  # height of the molded body shell (top rim above the floor)
+TOP_W = 0.580  # outside width (Y) at the top rim
+TOP_D = 0.610  # outside depth (X) at the top rim
+BOT_W = 0.480  # outside width (Y) at the bottom (tapered in)
+BOT_D = 0.520  # outside depth (X) at the bottom
+WALL = 0.018  # plastic wall thickness
+RIM_H = 0.045  # thick reinforcing top rim band
+CORNER_R = 0.045  # exterior corner radius
+
+WHEEL_DIA = 0.200
+WHEEL_R = WHEEL_DIA / 2.0
+WHEEL_W = 0.050
+AXLE_R = 0.012  # fills the wheel bore so the axle is captured (no float gap)
+WHEEL_GAP = 0.006  # axle/wheel sits just outboard of the body wall
+
+# Body sits so its bottom is just above the wheel contact patch.
+BODY_BOTTOM_Z = WHEEL_DIA - 0.040  # bottom of the shell clears the floor a bit
+BODY_TOP_Z = BODY_BOTTOM_Z + BODY_H
+
+# Hinge axis is along the rear top edge of the rim.
+HINGE_X = -TOP_D / 2.0 + 0.022
+HINGE_Z = BODY_TOP_Z + 0.010  # lid plate rests just above the rim top
+
+# Axle is at the rear-bottom of the body.
+AXLE_X = -BOT_D / 2.0 + 0.020
+AXLE_Z = WHEEL_R  # world height of the axle center
+AXLE_Z_LOCAL = AXLE_Z - BODY_BOTTOM_Z  # axle height in the body-mesh local frame
+HALF_AXLE_Y = BOT_W / 2.0 + WHEEL_GAP + WHEEL_W / 2.0
+
+# --- side grab handle dimensions (meters) ---
+HANDLE_Z_FRAC = 0.62      # height fraction up body for handle center
+HANDLE_X = 0.040           # slightly forward of body center for ergonomics
+GRIP_L = 0.130             # grip bar length along X (depth)
+GRIP_D = 0.028             # grip bar cross-section
+STANDOFF = 0.032           # grip center standoff from wall (Y)
+POST_SPACING = 0.098       # mounting post center-to-center along X
+POST_DX = 0.026            # post X extent
+POST_DZ = 0.030            # post Z extent
+
+
+def _rounded_rect_wire(wp: cq.Workplane, dx: float, dy: float, r: float) -> cq.Workplane:
+    return wp.rect(dx, dy).val()
+
+
+def _rrect(dx: float, dy: float, r: float) -> cq.Sketch:
+    """Centered rounded-rectangle sketch in the workplane XY."""
+    r = min(r, dx / 2.0 - 1e-4, dy / 2.0 - 1e-4)
+    return cq.Sketch().rect(dx, dy).vertices().fillet(r)
+
+
+def _build_body_mesh():
+    """Tapered hollow bin shell with thick rim, ribs and the rear axle housing."""
+    # Outer tapered shell: loft between rounded-rect bottom and top sketches so
+    # the vertical corners are already rounded (no fragile edge fillet needed).
+    outer = (
+        cq.Workplane("XY")
+        .placeSketch(
+            _rrect(BOT_D, BOT_W, CORNER_R),
+            _rrect(TOP_D, TOP_W, CORNER_R).moved(cq.Location(cq.Vector(0, 0, BODY_H))),
+        )
+        .loft()
+    )
+
+    # Hollow it out: subtract an inner loft, leaving the floor and walls.
+    inner = (
+        cq.Workplane("XY")
+        .placeSketch(
+            _rrect(BOT_D - 2 * WALL, BOT_W - 2 * WALL, max(CORNER_R - WALL, 0.006)).moved(
+                cq.Location(cq.Vector(0, 0, WALL))
+            ),
+            _rrect(TOP_D - 2 * WALL, TOP_W - 2 * WALL, max(CORNER_R - WALL, 0.006)).moved(
+                cq.Location(cq.Vector(0, 0, BODY_H + 0.002))
+            ),
+        )
+        .loft()
+    )
+    shell = outer.cut(inner)
+
+    # Thick reinforcing top rim band (slightly proud of the wall on the outside).
+    rim = (
+        cq.Workplane("XY")
+        .placeSketch(_rrect(TOP_D + 0.014, TOP_W + 0.014, CORNER_R).moved(
+            cq.Location(cq.Vector(0, 0, BODY_H - RIM_H))
+        ))
+        .extrude(RIM_H)
+    )
+    rim_inner = (
+        cq.Workplane("XY")
+        .workplane(offset=BODY_H - RIM_H - 0.001)
+        .rect(TOP_D - 2 * WALL, TOP_W - 2 * WALL)
+        .extrude(RIM_H + 0.004)
+    )
+    rim = rim.cut(rim_inner)
+    shell = shell.union(rim)
+
+    # Vertical reinforcing ribs proud of the upper front face, spread across Y.
+    # These sit on the OUTSIDE of the front (+X) wall only; they must never
+    # protrude into the hollow cavity.
+    rib_w = 0.018
+    rib_proud = 0.012
+    rib_top = BODY_H - RIM_H - 0.014
+    rib_bot = rib_top - 0.230
+    rib_h = rib_top - rib_bot
+    rib_cz = (rib_top + rib_bot) / 2.0
+    # Front-face X at the rib-band mid height (taper interpolation).
+    frac = rib_cz / BODY_H
+    face_x = (BOT_D + (TOP_D - BOT_D) * frac) / 2.0
+    for yy in (-0.18, -0.06, 0.06, 0.18):
+        # Box grows from just inside the wall (face_x - 0.006) outward in +X,
+        # so it laps onto the wall and stands proud of the front face.
+        rib = (
+            cq.Workplane("XY")
+            .center(face_x - 0.006, yy)
+            .box(rib_proud + 0.010, rib_w, rib_h, centered=(False, True, True))
+            .edges("|X")
+            .fillet(0.004)
+            .translate((0.0, 0.0, rib_cz))
+        )
+        shell = shell.union(rib)
+
+    # Molded rear axle support: a leg block descending from the shell bottom
+    # (local z=0) down past the axle center (local AXLE_Z_LOCAL < 0), spanning
+    # the rear width so the axle is captured in it. This connects shell to axle.
+    leg_top = 0.030  # overlaps up into the shell bottom
+    leg_bot = AXLE_Z_LOCAL - 0.018  # a bit below the axle
+    housing = (
+        cq.Workplane("XY")
+        .center(AXLE_X + 0.018, 0.0)
+        .box(
+            0.085,
+            BOT_W - 0.060,  # stays inboard of the wheels
+            leg_top - leg_bot,
+            centered=(True, True, False),
+        )
+        .edges("|Y")
+        .fillet(0.018)
+        .translate((0, 0, leg_bot))
+    )
+    shell = shell.union(housing)
+
+    return mesh_from_cadquery(shell, "bin_body", unit_scale=1.0)
+
+
+def _build_lid_mesh():
+    """Slightly domed flip lid with a front grab lip, hinged at the rear edge."""
+    lid_d = TOP_D + 0.018
+    lid_w = TOP_W + 0.018
+    plate_t = 0.022
+    # Main plate: a rounded-corner slab; the top is gently crowned by adding a
+    # shallow second slab on top.
+    plate = (
+        cq.Workplane("XY")
+        .placeSketch(_rrect(lid_d, lid_w, CORNER_R + 0.004))
+        .extrude(plate_t)
+    )
+    crown = (
+        cq.Workplane("XY")
+        .placeSketch(_rrect(lid_d - 0.10, lid_w - 0.10, CORNER_R).moved(
+            cq.Location(cq.Vector(0, 0, plate_t))
+        ))
+        .extrude(0.012)
+    )
+    lid = plate.union(crown)
+
+    # Down-turned skirt around the perimeter so the lid laps just over the rim
+    # outer lip. Kept shallow so it only grazes the proud rim edge.
+    skirt_drop = 0.014
+    skirt_outer = (
+        cq.Workplane("XY")
+        .placeSketch(_rrect(lid_d, lid_w, CORNER_R + 0.004).moved(
+            cq.Location(cq.Vector(0, 0, -skirt_drop))
+        ))
+        .extrude(skirt_drop)
+    )
+    skirt_inner = (
+        cq.Workplane("XY")
+        .placeSketch(_rrect(lid_d - 0.024, lid_w - 0.024, CORNER_R).moved(
+            cq.Location(cq.Vector(0, 0, -skirt_drop - 0.002))
+        ))
+        .extrude(skirt_drop + 0.004)
+    )
+    skirt = skirt_outer.cut(skirt_inner)
+    lid = lid.union(skirt)
+
+    # Front grab lip (overhang at the +X front edge for lifting).
+    lip = (
+        cq.Workplane("XY")
+        .center(lid_d / 2.0 - 0.006, 0.0)
+        .box(0.034, 0.180, 0.032, centered=(True, True, False))
+        .edges("|Y")
+        .fillet(0.008)
+        .translate((0, 0, -0.008))
+    )
+    lid = lid.union(lip)
+
+    return mesh_from_cadquery(lid, "bin_lid", unit_scale=1.0)
+
+
+def _wheel_mesh(name: str):
+    wheel = WheelGeometry(
+        WHEEL_R - 0.018,
+        WHEEL_W - 0.014,
+        rim=WheelRim(inner_radius=WHEEL_R - 0.040, flange_height=0.006, flange_thickness=0.004),
+        hub=WheelHub(radius=0.020, width=0.030, cap_style="domed"),
+        face=WheelFace(dish_depth=0.006, front_inset=0.003),
+        spokes=WheelSpokes(style="split_y", count=6, thickness=0.004, window_radius=0.009),
+        bore=WheelBore(style="round", diameter=2 * AXLE_R - 0.004),
+    )
+    return mesh_from_geometry(wheel, name)
+
+
+def _tire_mesh(name: str):
+    tire = TireGeometry(
+        WHEEL_R,
+        WHEEL_W,
+        inner_radius=WHEEL_R - 0.018,
+        tread=TireTread(style="block", depth=0.005, count=22, land_ratio=0.6),
+        sidewall=TireSidewall(style="rounded", bulge=0.03),
+    )
+    return mesh_from_geometry(tire, name)
+
+
+def _build_handle_mesh(name: str):
+    """Shared side-grab handle geometry: rounded grip bar with two mounting posts.
+
+    Local frame: wall mounting surface at Y=0, grip extends outward in +Y,
+    centered at X=0 and Z=0.  The grip is a box whose long-axis edges are
+    heavily filleted to approximate a round cross-section.  Two short posts
+    connect the grip to the wall with a small overlap into the grip body.
+    """
+    # Grip bar: long along X, rounded cross-section in YZ.
+    grip = (
+        cq.Workplane("XY")
+        .box(GRIP_L, GRIP_D, GRIP_D, centered=(True, True, True))
+        .edges("|X")
+        .fillet(GRIP_D / 2.0 - 0.002)
+        .translate((0, STANDOFF, 0))
+    )
+
+    # Two mounting posts from wall (Y=0) up to just inside the grip bottom.
+    post_h = STANDOFF - GRIP_D / 2.0 + 0.004  # 4 mm overlap into the grip
+    result = grip
+    for sx in (-1, 1):
+        px = sx * POST_SPACING / 2.0
+        post = (
+            cq.Workplane("XY")
+            .box(POST_DX, post_h, POST_DZ, centered=(True, False, True))
+            .edges("|Y")
+            .fillet(0.005)
+            .translate((px, 0, 0))
+        )
+        result = result.union(post)
+
+    return mesh_from_cadquery(result, name, unit_scale=1.0)
+
+
+def build_object_model() -> ArticulatedObject:
+    model = ArticulatedObject(name="wheelie_trash_bin")
+
+    body_gray = model.material("bin_gray", rgba=(0.42, 0.43, 0.45, 1.0))
+    lid_gray = model.material("lid_gray", rgba=(0.34, 0.35, 0.37, 1.0))
+    wheel_black = model.material("wheel_black", rgba=(0.12, 0.12, 0.13, 1.0))
+    tire_black = model.material("tire_black", rgba=(0.08, 0.08, 0.09, 1.0))
+    steel = model.material("axle_steel", rgba=(0.55, 0.56, 0.58, 1.0))
+
+    # --- body (root) ---
+    body = model.part("body")
+    body.visual(
+        _build_body_mesh(),
+        origin=Origin(xyz=(0.0, 0.0, BODY_BOTTOM_Z)),
+        material=body_gray,
+        name="shell",
+    )
+    # Fixed steel axle bar running across the rear-bottom housing.
+    body.visual(
+        Cylinder(radius=AXLE_R, length=2 * HALF_AXLE_Y - 0.010),
+        origin=Origin(xyz=(AXLE_X, 0.0, AXLE_Z), rpy=(math.pi / 2.0, 0.0, 0.0)),
+        material=steel,
+        name="axle",
+    )
+    # --- side grab handles: two molded grips via a single for loop ---
+    handle_half_w = (BOT_W + (TOP_W - BOT_W) * HANDLE_Z_FRAC) / 2.0
+    handle_z = BODY_BOTTOM_Z + HANDLE_Z_FRAC * BODY_H
+    side_signs = [("handle_0", 1.0), ("handle_1", -1.0)]
+    for i, (hname, sign) in enumerate(side_signs):
+        rpy = (0.0, 0.0, 0.0) if sign > 0 else (0.0, 0.0, math.pi)
+        body.visual(
+            _build_handle_mesh(f"side_handle_{i}"),
+            origin=Origin(
+                xyz=(HANDLE_X, sign * (handle_half_w - 0.004), handle_z),
+                rpy=rpy,
+            ),
+            material=body_gray,
+            name=hname,
+        )
+
+    body.inertial = Inertial.from_geometry(
+        Box((TOP_D, TOP_W, BODY_H)),
+        mass=11.0,
+        origin=Origin(xyz=(0.0, 0.0, BODY_BOTTOM_Z + BODY_H / 2.0)),
+    )
+
+    # --- lid ---
+    lid = model.part("lid")
+    # Lid mesh frame: hinge edge at local origin, plate extends toward +X.
+    lid.visual(
+        _build_lid_mesh(),
+        origin=Origin(xyz=((TOP_D + 0.018) / 2.0 - 0.022, 0.0, 0.0)),
+        material=lid_gray,
+        name="lid_plate",
+    )
+    lid.inertial = Inertial.from_geometry(Box((TOP_D, TOP_W, 0.04)), mass=2.4)
+
+    model.articulation(
+        "lid_hinge",
+        ArticulationType.REVOLUTE,
+        parent=body,
+        child=lid,
+        origin=Origin(xyz=(HINGE_X, 0.0, HINGE_Z)),
+        # Lid plate extends along local +X from the hinge; -Y lifts the free
+        # front edge up and back as q increases.
+        axis=(0.0, -1.0, 0.0),
+        motion_limits=MotionLimits(effort=20.0, velocity=2.0, lower=0.0, upper=1.95),
+    )
+
+    # --- wheels ---
+    for name, sign in (("left_wheel", 1.0), ("right_wheel", -1.0)):
+        wheel = model.part(name)
+        # WheelGeometry/TireGeometry spin about local X; rotate so the spin axis
+        # aligns with world +Y, and the outer face points outboard.
+        rpy = (0.0, 0.0, -math.pi / 2.0) if sign > 0 else (0.0, 0.0, math.pi / 2.0)
+        wheel.visual(
+            _wheel_mesh(f"{name}_wheel"),
+            origin=Origin(xyz=(0.0, 0.0, 0.0), rpy=rpy),
+            material=wheel_black,
+            name="wheel",
+        )
+        wheel.visual(
+            _tire_mesh(f"{name}_tire"),
+            origin=Origin(xyz=(0.0, 0.0, 0.0), rpy=rpy),
+            material=tire_black,
+            name="tire",
+        )
+        wheel.inertial = Inertial.from_geometry(
+            Cylinder(radius=WHEEL_R, length=WHEEL_W), mass=0.9
+        )
+        model.articulation(
+            f"{name}_spin",
+            ArticulationType.CONTINUOUS,
+            parent=body,
+            child=wheel,
+            origin=Origin(xyz=(AXLE_X, sign * HALF_AXLE_Y, AXLE_Z)),
+            axis=(0.0, 1.0, 0.0),
+            motion_limits=MotionLimits(effort=5.0, velocity=20.0),
+        )
+
+    return model
+
+
+def run_tests() -> TestReport:
+    ctx = TestContext(object_model)
+
+    body = object_model.get_part("body")
+    lid = object_model.get_part("lid")
+    left = object_model.get_part("left_wheel")
+    right = object_model.get_part("right_wheel")
+    hinge = object_model.get_articulation("lid_hinge")
+    left_spin = object_model.get_articulation("left_wheel_spin")
+
+    # --- hero parts present ---
+    ctx.check("has_body", body is not None, "Expected a body part.")
+    ctx.check("has_lid", lid is not None, "Expected a lid part.")
+    ctx.check("has_wheels", left is not None and right is not None, "Expected two wheels.")
+
+    # --- joint types/axes ---
+    ctx.check(
+        "lid_is_revolute",
+        str(hinge.articulation_type).endswith("REVOLUTE"),
+        f"type={hinge.articulation_type}",
+    )
+    ctx.check(
+        "lid_axis_y",
+        abs(abs(hinge.axis[1]) - 1.0) < 1e-6 and abs(hinge.axis[0]) < 1e-6 and abs(hinge.axis[2]) < 1e-6,
+        f"axis={hinge.axis}",
+    )
+    ctx.check(
+        "wheel_is_continuous",
+        str(left_spin.articulation_type).endswith("CONTINUOUS"),
+        f"type={left_spin.articulation_type}",
+    )
+    ctx.check(
+        "wheel_axis_y",
+        abs(abs(left_spin.axis[1]) - 1.0) < 1e-6,
+        f"axis={left_spin.axis}",
+    )
+
+    # --- wheels touch the ground (z approx 0) ---
+    for w in (left, right):
+        aabb = ctx.part_world_aabb(w)
+        if aabb is not None:
+            ctx.check(
+                f"{w.name}_on_ground",
+                abs(aabb[0][2]) < 0.012,
+                f"min_z={aabb[0][2]:.4f}",
+            )
+
+    # --- overall scale sanity ---
+    full = ctx.part_world_aabb(body)
+    if full is not None:
+        size = tuple(full[1][i] - full[0][i] for i in range(3))
+        ctx.check("body_height", 0.85 <= size[2] <= 1.15, f"size={size!r}")
+        ctx.check("body_width", 0.50 <= size[1] <= 0.70, f"size={size!r}")
+
+    # --- left/right wheel symmetry across Y ---
+    lp = ctx.part_world_position(left)
+    rp = ctx.part_world_position(right)
+    if lp is not None and rp is not None:
+        ctx.check(
+            "wheels_symmetric_y",
+            abs(lp[1] + rp[1]) < 0.01 and abs(lp[0] - rp[0]) < 0.01,
+            f"lp={lp}, rp={rp}",
+        )
+
+    # --- lid closed: caps the body, footprint covers the rim ---
+    ctx.expect_overlap(lid, body, axes="xy", min_overlap=0.30, name="lid_caps_body")
+    # The lid plate sits right at the rim top; its skirt laps a few mm over the
+    # proud rim lip. Allow that shallow intentional nesting and prove contact.
+    ctx.allow_overlap(
+        lid,
+        body,
+        reason="The lid skirt laps a few mm over the proud rim outer lip when closed.",
+    )
+    ctx.expect_contact(lid, body, contact_tol=0.012, name="lid_seated_on_rim")
+
+    # --- lid opens upward: free front edge rises when the hinge opens ---
+    rest_aabb = ctx.part_world_aabb(lid)
+    with ctx.pose({hinge: 1.6}):
+        open_aabb = ctx.part_world_aabb(lid)
+    if rest_aabb is not None and open_aabb is not None:
+        ctx.check(
+            "lid_opens_upward",
+            open_aabb[1][2] > rest_aabb[1][2] + 0.15,
+            f"rest_top={rest_aabb[1][2]:.3f}, open_top={open_aabb[1][2]:.3f}",
+        )
+        # When open, the lid swings rearward (its front edge moves toward -X).
+        ctx.check(
+            "lid_swings_rearward",
+            open_aabb[1][0] < rest_aabb[1][0],
+            f"rest_maxx={rest_aabb[1][0]:.3f}, open_maxx={open_aabb[1][0]:.3f}",
+        )
+
+    # The axle pin is intentionally captured inside each wheel hub bore.
+    for w in (left, right):
+        ctx.allow_overlap(
+            body,
+            w,
+            elem_a="axle",
+            elem_b="wheel",
+            reason="The fixed axle bar is captured inside the wheel hub bore.",
+        )
+        # Prove the axle actually reaches into each wheel hub (retained capture).
+        ctx.expect_overlap(
+            body,
+            w,
+            axes="y",
+            elem_a="axle",
+            elem_b="wheel",
+            min_overlap=0.006,
+            name=f"axle_engages_{w.name}",
+        )
+
+    # --- side grab handles: present, proud of body sides, symmetric ---
+    shell_aabb = ctx.part_element_world_aabb(body, elem="shell")
+    handle_names = ["handle_0", "handle_1"]
+    handle_aabbs = []
+    for hname in handle_names:
+        h_aabb = ctx.part_element_world_aabb(body, elem=hname)
+        handle_aabbs.append(h_aabb)
+        ctx.check(
+            f"has_{hname}",
+            h_aabb is not None,
+            f"Expected visual '{hname}' on body.",
+        )
+
+    # Each handle must extend outward (in Y) beyond the shell outer wall.
+    if shell_aabb is not None and all(a is not None for a in handle_aabbs):
+        shell_max_y = shell_aabb[1][1]
+        shell_min_y = shell_aabb[0][1]
+        # handle_0 is on the +Y side, handle_1 is on the -Y side
+        h0 = handle_aabbs[0]
+        h1 = handle_aabbs[1]
+        ctx.check(
+            "handle_0_proud_of_shell",
+            h0[1][1] > shell_max_y + 0.010,
+            f"handle_0 max_y={h0[1][1]:.4f}, shell max_y={shell_max_y:.4f}",
+        )
+        ctx.check(
+            "handle_1_proud_of_shell",
+            h1[0][1] < shell_min_y - 0.010,
+            f"handle_1 min_y={h1[0][1]:.4f}, shell min_y={shell_min_y:.4f}",
+        )
+        # Symmetry: handle centers should be approximately equidistant from Y=0
+        h0_cy = (h0[0][1] + h0[1][1]) / 2.0
+        h1_cy = (h1[0][1] + h1[1][1]) / 2.0
+        ctx.check(
+            "handles_symmetric_y",
+            abs(h0_cy + h1_cy) < 0.020,
+            f"h0_cy={h0_cy:.4f}, h1_cy={h1_cy:.4f}",
+        )
+        # Both handles at roughly the same height (Z) and depth (X)
+        h0_cz = (h0[0][2] + h0[1][2]) / 2.0
+        h1_cz = (h1[0][2] + h1[1][2]) / 2.0
+        ctx.check(
+            "handles_same_height",
+            abs(h0_cz - h1_cz) < 0.010,
+            f"h0_cz={h0_cz:.4f}, h1_cz={h1_cz:.4f}",
+        )
+
+    return ctx.report()
+
+
+object_model = build_object_model()

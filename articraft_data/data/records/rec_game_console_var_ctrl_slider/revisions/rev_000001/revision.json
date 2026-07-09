@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_game_console_var_ctrl_slider",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T15:31:56Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "54f3068fd7292a07f28710a61a3d84139e18f5af2a5dbc3873484bed42940fc8",
+  "source": {
+    "run_id": "run_20260623_153156_491675_6ce30a9e",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5",
+    "thinking_level": "high",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "54f3068fd7292a07f28710a61a3d84139e18f5af2a5dbc3873484bed42940fc8",
+    "model_py_sha256": "4f5b551112c1d88fb2272e127695e11ba94126b3c044dea0a94e0c8f28558f6c"
+  },
+  "run_summary": {
+    "turn_count": 15,
+    "tool_call_count": 16,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-game_20260609_180045_745274_a5689b50",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-game_20260609_180045_745274_a5689b50",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

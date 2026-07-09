@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_model-a-tall-ergonomic-office-chair-ikea-markus-_20260610_085012_906733_cb37c340",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-10T08:50:12Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "f43b3984cbac918f0dcc8fc559b83d425fa3d925ac7f5b74de9e902159e9c5f1",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "f43b3984cbac918f0dcc8fc559b83d425fa3d925ac7f5b74de9e902159e9c5f1",
+    "model_py_sha256": "a5226110bbd7f7206e2cc05f9861b7d6ae419d337521e12ed0aa21ee22f8ea23"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-11T03:18:01Z",
+    "record_id": "rec_model-a-tall-ergonomic-office-chair-ikea-markus-_20260610_085012_906733_cb37c340",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-a-tall-ergonomic-office-chair-ikea-markus-_20260610_085012_906733_cb37c340/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-a-tall-ergonomic-office-chair-ikea-markus-_20260610_085012_906733_cb37c340",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 10 overlaps across 9 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "8bcf10cf47d6f6216f602ce6ece9c7cd39485992fa5e736452dfac4a976dcd83",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "7fb5f0155b4f212bee800f2e05756d030d172d58c0445cd59318521723f3ff1e",
+        "model_py_mtime_ns": 1781145221553424504,
+        "model_py_size_bytes": 23504,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 208683,
+        "visual_mesh_file_count": 14,
+        "compile_elapsed_seconds": 1.9189090775325894
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

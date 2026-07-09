@@ -1,0 +1,25 @@
+CATEGORY: Retail_Shop Fixtures
+SUBCATEGORY: Cash register
+TARGET: change the register_body / _register_shell (the tall lofted wedge register housing) to a flat POS base with an upright post-mounted tilting terminal.
+DIVERSITY_AXIS: ③ primary form family.
+POSITIONING: modern point-of-sale (POS) cash register — a low flat drawer base carrying a small control deck plus an upright tilting screen terminal on a short neck; it stays a cash register because it keeps the sliding lockable cash drawer with its bill/coin till and an operator display, only the body envelope becomes flat instead of a raised wedge.
+KEEP: preserve these parent functional layers by name: drawer_housing, housing_to_body, cash_drawer, till, drawer_slide, lock_cylinder, lcd_display, lcd_tilt, customer_display_head, display_head_yaw, the add_key keypad helper and deck_point.
+STRUCTURAL_DELTA: replace the tall lofted _register_shell wedge profile with a shallow flat control deck (a low box roughly 0.04-0.06 m tall) seated flush on the drawer_housing top via the existing housing_to_body FIXED joint; relocate the pressable keypad onto this flat deck (keep the numeric_key and total_key clusters, drop or thin the other key blocks) with each key still on its own <name>_press PRISMATIC joint; raise lcd_display onto a short vertical neck/arm so lcd_tilt now hinges an upright operator screen; keep drawer_slide PRISMATIC, lcd_tilt and display_head_yaw REVOLUTE. Keep at least one receipt paper roll on the flat deck even if the twin roll wells are removed.
+MULTIPLICITY: n/a.
+COMPANION_VARIATIONS: optional lighter POS palette (white/light gray shell) only; no change to the joint graph, till copy logic, or drawer travel.
+FORBIDDEN: do not become a bare POS computer, a standalone monitor or tablet stand, a self-checkout kiosk, or a handheld barcode scanner; must keep the physical sliding cash drawer + till and at least one real non-fixed drawer/keypad/display joint; do not also change coin/bill compartment counts.
+
+This is a Retail_Shop Fixtures/Cash register family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Retail_Shop Fixtures/Cash register (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

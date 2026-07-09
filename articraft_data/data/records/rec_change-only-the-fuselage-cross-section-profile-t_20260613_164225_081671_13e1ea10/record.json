@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_change-only-the-fuselage-cross-section-profile-t_20260613_164225_081671_13e1ea10",
+  "created_at": "2026-06-13T16:42:25Z",
+  "updated_at": "2026-06-13T17:00:19Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "tandem_rotor_helicopter",
+  "source": {
+    "run_id": "run_20260613_164225_081671_13e1ea10",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "hull_humpback",
+    "prompt_preview": "Change ONLY the fuselage cross-section profile to a ROUNDER, fatter / more bulbous hull (rounder cross-sections); keep everything else unchanged. Use a mediu..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "539581bacf7c4be6acb8462d506fa6264c01a04676b853d9d85c21fc7f3fc149",
+    "model_py_sha256": "08a66a9c06f0ffcdeaa71aa45f1c2df0868017bc328d6044c932ddd18933a759"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_model-a-ch-47-chinook-style-tandem-rotor-militar_20260610_080515_971792_e6faf6f7",
+    "parent_record_id": "rec_model-a-ch-47-chinook-style-tandem-rotor-militar_20260610_080515_971792_e6faf6f7",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

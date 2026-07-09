@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_container_glass_bottle_var_cork",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T17:26:32Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "1421d63bc0cb17f7b475be6970dd533442cfb5954496cf8cbcf5fba0d45473c9",
+  "source": {
+    "run_id": "run_20260618_172632_957629_905b2f04",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "1421d63bc0cb17f7b475be6970dd533442cfb5954496cf8cbcf5fba0d45473c9",
+    "model_py_sha256": "c2546b851e11131e03c6b813bc778e96d0492510a93a51af54a0ee3e864b070d"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 11,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_dark-glass-beer-bottle-with-a-crimped-metal-crow_20260606_074746_219040_2a24ec81",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_dark-glass-beer-bottle-with-a-crimped-metal-crow_20260606_074746_219040_2a24ec81",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

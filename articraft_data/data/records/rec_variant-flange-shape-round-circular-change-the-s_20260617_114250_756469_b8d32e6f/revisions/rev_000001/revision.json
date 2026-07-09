@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-flange-shape-round-circular-change-the-s_20260617_114250_756469_b8d32e6f",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-17T11:42:50Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "637d34a36132ddc0bdd7dee08366dd1464b75d15ab3abe8a300e57869f965189",
+  "source": {
+    "run_id": "run_20260617_114250_756469_b8d32e6f",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 4.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "637d34a36132ddc0bdd7dee08366dd1464b75d15ab3abe8a300e57869f965189",
+    "model_py_sha256": "7856be0c9df8a1dc1b0288bae08e49f6065375ef799e66f5b6cae92f8969b974"
+  },
+  "run_summary": {
+    "turn_count": 15,
+    "tool_call_count": 15,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-square-stainless-steel-bathroom-floor-dr_20260610_084452_893664_1f470a4a",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-square-stainless-steel-bathroom-floor-dr_20260610_084452_893664_1f470a4a",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

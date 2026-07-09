@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_soft_pneumatic_gripper_var_n3",
+  "created_at": "2026-07-09T15:10:31Z",
+  "updated_at": "2026-07-09T15:26:44Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260709_151031_666605_dc78de94",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "soft_pneumatic_gripper-n3",
+    "prompt_preview": "CATEGORY: Robotics SUBCATEGORY: Soft pneumatic gripper TARGET: change the finger multiplicity loop `for idx, yaw in enumerate((0.0, math.pi/2.0, math.pi, -ma..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "e5f77706f66606fc297d38eaaf5e970eb434f80ec1367f9bc18039f57aa3dd78",
+    "model_py_sha256": "6c345271571f1a1e89d296ecfee6239a906c09d9a57ab9eb3daa81e1af238c6d"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_robotics__soft_pneumatic_gripper__001_png_220a1418d3af41bba9fac002123e7ea5",
+    "parent_record_id": "rec_robotics__soft_pneumatic_gripper__001_png_220a1418d3af41bba9fac002123e7ea5",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

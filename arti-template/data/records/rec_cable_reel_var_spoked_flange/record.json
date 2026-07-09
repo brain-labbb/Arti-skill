@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_cable_reel_var_spoked_flange",
+  "created_at": "2026-07-05T09:41:30Z",
+  "updated_at": "2026-07-05T09:49:29Z",
+  "rating": 5,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "cable_reel",
+  "source": {
+    "run_id": "run_20260705_094130_783808_3a6a732d",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "cr-spoked_flange",
+    "prompt_preview": "TARGET: change the flange (side-disc) form from a solid cheek to a SPOKED disc \u2014 replace the solid annular spool_cheek discs with spoked/cutout side flanges..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "a2bd4265ebe5dcd6dfd6e4d2b08c4d93e03b34df7d7eaed62854e7e536ac1afb",
+    "model_py_sha256": "a9ab7be3da5fcd85ca139971de255ec17769365495428000545717f947d1ecae"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_234180_ea686860",
+    "parent_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_234180_ea686860",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_rabbit_hutch_var_probe_cabinet_run",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T14:39:17Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "20f56ef63e472653c68633ff43a77a999180d9717c4225373739fc5a8225c3c1",
+  "source": {
+    "run_id": "run_20260709_143917_724533_18295616",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "20f56ef63e472653c68633ff43a77a999180d9717c4225373739fc5a8225c3c1",
+    "model_py_sha256": "fb1f2cc8e61caa347983e944f0c4de68e982658cfd519ad3b64a1ef757e99b22"
+  },
+  "run_summary": {
+    "turn_count": 64,
+    "tool_call_count": 64,
+    "compile_attempt_count": 12,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_pet_animal_related__rabbit_hutch__002_png_f70eb66ad04c43f49b8068585dd59cf3",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_pet_animal_related__rabbit_hutch__002_png_f70eb66ad04c43f49b8068585dd59cf3",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_pet_animal_related__rabbit_hutch__002_png_f70eb66ad04c43f49b8068585dd59cf3",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "0694adc67586543c1d009b48bf0321c986806a2a18b3d990cae304c8bc18a3bc"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_differential_drive_wheel_var_spider_n4",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T12:54:25Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "bdad90962fbc665b4e6e2f3613429c041916e0aeefc9ab63c10cf375f8b9771c",
+  "source": {
+    "run_id": "run_20260709_125425_942851_3b18c23d",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "bdad90962fbc665b4e6e2f3613429c041916e0aeefc9ab63c10cf375f8b9771c",
+    "model_py_sha256": "106d33923529dad6fbfa552261e8a85358c141227ae2f1d595736a03cd2816a4"
+  },
+  "run_summary": {
+    "turn_count": 28,
+    "tool_call_count": 27,
+    "compile_attempt_count": 6,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_use-the-attached-reference-image-picture-robotic_20260707_084323_751535_ed8a6961",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_use-the-attached-reference-image-picture-robotic_20260707_084323_751535_ed8a6961",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_use-the-attached-reference-image-picture-robotic_20260707_084323_751535_ed8a6961",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "97405da840d9f584f2cd3e1fa867cb98fe2cd21db8b622ed3c2f121d27f5930f"
+    }
+  ]
+}

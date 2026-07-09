@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_variant-11-create-a-minimalist-white-folding-cha_20260611_122532_065690_364067f0",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-11T12:25:32Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "5e01308fb2e176dd66e739d3185f92c2f4835ebdd7411ee77e6d39cc91d8d30a",
+  "source": {
+    "run_id": "run_20260611_122532_065690_364067f0",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "openai",
+    "model_id": "gpt-5.5",
+    "thinking_level": "med",
+    "openai_transport": "http",
+    "openai_reasoning_summary": "auto",
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": "revisions/rev_000001/cost.json",
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "5e01308fb2e176dd66e739d3185f92c2f4835ebdd7411ee77e6d39cc91d8d30a",
+    "model_py_sha256": "3b0a83323dc28ea17657e4f6254a638b0ac146d5da054b46d63b62d3b3bda78b"
+  },
+  "run_summary": {
+    "turn_count": 11,
+    "tool_call_count": 10,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_metal-folding-chair-a-gray-powder-coated-tubular_20260606_120809_950609_cc9b62cf",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_metal-folding-chair-a-gray-powder-coated-tubular_20260606_120809_950609_cc9b62cf",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

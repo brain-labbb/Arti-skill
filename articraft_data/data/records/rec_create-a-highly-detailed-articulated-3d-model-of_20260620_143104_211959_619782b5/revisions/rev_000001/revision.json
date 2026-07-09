@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_create-a-highly-detailed-articulated-3d-model-of_20260620_143104_211959_619782b5",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-20T14:31:04Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "eacaea5b44fe33ba580b2ca66f45d2a069002b123fb51ea7615ca5795fecf627",
+  "source": {
+    "run_id": "run_20260620_143104_211959_619782b5",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "eacaea5b44fe33ba580b2ca66f45d2a069002b123fb51ea7615ca5795fecf627",
+    "model_py_sha256": "48d1df66d30e6b9d527d2f6314ea2aea837d94e6d72ef7b257ba5db20a1b49e0"
+  },
+  "run_summary": {
+    "turn_count": 14,
+    "tool_call_count": 16,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-20T14:43:44Z",
+    "record_id": "rec_create-a-highly-detailed-articulated-3d-model-of_20260620_143104_211959_619782b5",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_create-a-highly-detailed-articulated-3d-model-of_20260620_143104_211959_619782b5/compile_report.json",
+      "status": "success",
+      "record_id": "rec_create-a-highly-detailed-articulated-3d-model-of_20260620_143104_211959_619782b5",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "48d1df66d30e6b9d527d2f6314ea2aea837d94e6d72ef7b257ba5db20a1b49e0",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "281c5fa27e11bae2009e1d3ac057e4b27d5c89066d9b8e0188a6ef9aab8de136",
+        "model_py_mtime_ns": 1781966300019790841,
+        "model_py_size_bytes": 17731,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 380677,
+        "visual_mesh_file_count": 20,
+        "compile_elapsed_seconds": 1.9209087640047073
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 6,
+      "errors": [
+        "record.json missing creator metadata for external workflow",
+        "source.run_id must be null for external records",
+        "external records must not contain Articraft agent traces",
+        "provenance.run_summary.turn_count must be null",
+        "provenance.run_summary.tool_call_count must be null",
+        "provenance.run_summary.compile_attempt_count must be null"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

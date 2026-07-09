@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_corkscrew_var_wing_paddle",
+  "created_at": "2026-06-19T13:16:52Z",
+  "updated_at": "2026-06-19T13:24:50Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "winged_corkscrew_with_lever_arms",
+  "source": {
+    "run_id": "run_20260619_131652_585652_8612f594",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "corkscrew-wing_paddle",
+    "prompt_preview": "TARGET AXIS: wing blade geometry. Keep the winged-butterfly mechanism (two REVOLUTE wing levers geared to the PRISMATIC rack + CONTINUOUS worm), but change b..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "53c2e335c91483d996573ea5c341492ba31bd9b8c1bf711eefbd0377e486621f",
+    "model_py_sha256": "2f64e751834a7639d7e98367775807913ca19024fec3bf07150befdace87dfd2"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_model-a-classic-winged-butterfly-corkscrew-about_20260610_080758_135836_65a27fb6",
+    "parent_record_id": "rec_model-a-classic-winged-butterfly-corkscrew-about_20260610_080758_135836_65a27fb6",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

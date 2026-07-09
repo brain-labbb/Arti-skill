@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_wheelchair_var_transit",
+  "created_at": "2026-07-05T09:57:52Z",
+  "updated_at": "2026-07-05T10:03:25Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260705_095752_706742_d8a4d697",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "wheelchair-transit",
+    "prompt_preview": "TARGET: convert the two large spoked rear DRIVE wheels into small solid rear wheels of a transit / attendant-propelled wheelchair (four small wheels total, N..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "74dfd85d5456b9f2d116271c2d5716964be1578570b54f942ab530e84192c30c",
+    "model_py_sha256": "12ad9a344686803517fe7828622b6fe4ef17768abb047652e3db59b9584b1d21"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_a-manual-wheelchair-two-large-rear-drive-wheels-_20260623_174436_818325_dcd9a412",
+    "parent_record_id": "rec_a-manual-wheelchair-two-large-rear-drive-wheels-_20260623_174436_818325_dcd9a412",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

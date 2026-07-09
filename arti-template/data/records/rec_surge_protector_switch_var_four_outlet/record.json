@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_surge_protector_switch_var_four_outlet",
+  "created_at": "2026-07-05T09:41:30Z",
+  "updated_at": "2026-07-05T09:45:10Z",
+  "rating": 5,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "surge_protector_switch",
+  "source": {
+    "run_id": "run_20260705_094130_787712_2c74fb6d",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "sp-4outlet",
+    "prompt_preview": "TARGET: change the outlet multiplicity to N=4 \u2014 shorten the outlet-x list to four outlets (with four per-outlet rockers) and recompute the bar LENGTH and lin..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "d169227f19a05e2f08a01cc01037392fea716b9b453d91119ecda897d75ee243",
+    "model_py_sha256": "84566cd57f16641a9da9228d6b7aa55e43a082924a90454cd12a0e2b887a74d6"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260626_102016_767543_d5decd1b",
+    "parent_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260626_102016_767543_d5decd1b",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

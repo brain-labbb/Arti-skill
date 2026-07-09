@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-pipe_20260609_180106_931724_6c9b7c6f",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-09T18:01:06Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "df1ae580ed93166efd434907156a1e1912aa049f9dd88f793a53fd48ed1b8464",
+  "source": {
+    "run_id": null,
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-opus-4-8",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": null
+  },
+  "hashes": {
+    "prompt_sha256": "df1ae580ed93166efd434907156a1e1912aa049f9dd88f793a53fd48ed1b8464",
+    "model_py_sha256": "ffa74ea9803acdac956309fcab3ac2897e56698e88daaf8982c27d2d6c89eb3f"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "parent": null,
+  "seed": null,
+  "inherited_inputs": [],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-09T18:34:10Z",
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-pipe_20260609_180106_931724_6c9b7c6f",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_build-a-realistic-articulated-3d-model-of-a-pipe_20260609_180106_931724_6c9b7c6f/compile_report.json",
+      "status": "success",
+      "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-pipe_20260609_180106_931724_6c9b7c6f",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "ffa74ea9803acdac956309fcab3ac2897e56698e88daaf8982c27d2d6c89eb3f",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "f98e8260244f22c114eeed32904bf8be67aad2df2227ede233256b564c24ec39",
+        "model_py_mtime_ns": 1782201618205581771,
+        "model_py_size_bytes": 29706,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 4083315,
+        "visual_mesh_file_count": 20,
+        "compile_elapsed_seconds": 4.750683302991092
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

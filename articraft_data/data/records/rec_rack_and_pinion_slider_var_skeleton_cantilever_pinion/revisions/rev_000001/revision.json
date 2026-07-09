@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_rack_and_pinion_slider_var_skeleton_cantilever_pinion",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T14:46:27Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "4609882613af2cfd04cc09be87437fbe4c6bc180204789189ca945f6d698caa9",
+  "source": {
+    "run_id": "run_20260709_144627_400309_ad02d571",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "4609882613af2cfd04cc09be87437fbe4c6bc180204789189ca945f6d698caa9",
+    "model_py_sha256": "db05487646ab3dacd65ab44fd94fe9f285cb059dd591152acfbb6ce1e9939e1c"
+  },
+  "run_summary": {
+    "turn_count": 7,
+    "tool_call_count": 7,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_robotics__rack_and_pinion_slider__002_png_74acaa0d7f234f268f9a71467cd6a0bb",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_robotics__rack_and_pinion_slider__002_png_74acaa0d7f234f268f9a71467cd6a0bb",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_robotics__rack_and_pinion_slider__002_png_74acaa0d7f234f268f9a71467cd6a0bb",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "f14e410005edf8f9bc884e5bc5fcb447eca5747801f5533102f125b26dabf740"
+    }
+  ]
+}

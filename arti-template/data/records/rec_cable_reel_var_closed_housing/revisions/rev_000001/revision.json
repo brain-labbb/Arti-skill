@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_cable_reel_var_closed_housing",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-05T09:41:30Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "68f143154102195ed3318d46564f65cb1fa2bf0b6673b33c8b96d4e511cbe51c",
+  "source": {
+    "run_id": "run_20260705_094130_794814_799ae667",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "68f143154102195ed3318d46564f65cb1fa2bf0b6673b33c8b96d4e511cbe51c",
+    "model_py_sha256": "7c7dbdb6572e02316bb15b4d497b00dd8f8da12093901ba2ab1be69db762c07c"
+  },
+  "run_summary": {
+    "turn_count": 29,
+    "tool_call_count": 29,
+    "compile_attempt_count": 11,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_234180_ea686860",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_234180_ea686860",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260625_164631_234180_ea686860",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "3afcd0828cd6c08aad2c4787edb31bacfba1eca761ae894f834241fbbe1d6a6b"
+    }
+  ]
+}

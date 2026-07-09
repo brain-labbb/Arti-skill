@@ -1,0 +1,135 @@
+# Motion-QC Census — 2026-07-02
+
+Report-only `harness_motion_qc` pass over all 289 registry templates, 6 seeds each.
+Not a retrofit mandate — calibration corpus for the newly-added motion gate.
+
+- **119** fully clean
+- **120** motion-QC offenders — **59** genuine 穿模 (non-mechanism), **61** mechanism-only (need `allow_overlap`)
+- **50** only non-motion baseline failures (pre-existing, unrelated to gate)
+- 0 errored
+
+## Genuine 穿模 suspects (non-mechanism collision, worst depth mm, ranked)
+
+- `Military_Turret` — 180.0mm, 6/6 seeds
+- `Military_Tank` — 139.5mm, 4/6 seeds
+- `Urban_Environment_Manhole_cover` — 120.0mm, 1/6 seeds
+- `Door_folding_door` — 89.8mm, 2/6 seeds
+- `Stationary_Folder` — 82.5mm, 6/6 seeds
+- `Bag_Suitcase_Suitcase` — 79.3mm, 5/6 seeds
+- `turnstile_gates` — 71.6mm, 3/6 seeds
+- `Other_Scale` — 61.5mm, 6/6 seeds
+- `Science_Surgical_chair` — 58.0mm, 3/6 seeds
+- `folding_arm_chain` — 40.8mm, 5/6 seeds
+- `Bag_Suitcase_Shopping_bucket` — 40.0mm, 3/6 seeds
+- `camcorder_with_flipout_screen` — 38.3mm, 1/6 seeds
+- `Facade_Element_Gutter_downchain` — 35.8mm, 1/6 seeds
+- `Container_Kettle` — 35.6mm, 4/6 seeds
+- `astronomical_telescope_on_tripod` — 35.5mm, 1/6 seeds
+- `Urban_Environment_Phone_box` — 33.6mm, 6/6 seeds
+- `Other_cauldron` — 33.4mm, 4/6 seeds
+- `miter_saw_arm_assembly` — 33.3mm, 6/6 seeds
+- `globe` — 32.0mm, 2/6 seeds
+- `Chair_Folding_chair` — 30.0mm, 6/6 seeds
+- `branching_tree_with_three_independent_rotary_branches` — 25.8mm, 2/6 seeds
+- `robotic_arms` — 25.0mm, 2/6 seeds
+- `Military_Rifle` — 24.9mm, 1/6 seeds
+- `Container_Gas_cylinder` — 24.0mm, 2/6 seeds
+- `missile_launcher` — 21.9mm, 1/6 seeds
+- `Container_Locker` — 20.6mm, 4/6 seeds
+- `Door_Garage_shutter` — 20.5mm, 6/6 seeds
+- `Other_Tripod_Turnstile` — 20.0mm, 2/6 seeds
+- `Curtain_blind` — 20.0mm, 5/6 seeds
+- `Bag_Suitcase_Treasure_chest` — 19.7mm, 4/6 seeds
+- `ferris_wheel` — 19.0mm, 1/6 seeds
+- `wall_safe_with_hinged_door_and_dial` — 18.3mm, 3/6 seeds
+- `Urban_Environment_Public_toilet1` — 18.0mm, 3/6 seeds
+- `Others_Safe` — 18.0mm, 2/6 seeds
+- `Handtools_Clamp` — 18.0mm, 2/6 seeds
+- `Bag_Suitcase_Box` — 18.0mm, 4/6 seeds
+- `multisegment_foldout_arm` — 17.1mm, 1/6 seeds
+- `Sports_Table_football` — 17.0mm, 6/6 seeds
+- `Stationary_Calculater` — 15.4mm, 2/6 seeds
+- `Music_Headphone` — 15.3mm, 1/6 seeds
+- `drone` — 14.0mm, 2/6 seeds
+- `lever_chain` — 12.8mm, 6/6 seeds
+- `Military_Granade` — 12.3mm, 1/6 seeds
+- `Container_Barrel` — 11.1mm, 1/6 seeds
+- `dishwasher_with_dropdown_door_and_sliding_racks` — 10.0mm, 2/6 seeds
+- `Kitchen_Dish_washer` — 10.0mm, 4/6 seeds
+- `ceiling_light_fixture_adjustable` — 9.1mm, 4/6 seeds
+- `Sports_Skateboard` — 9.0mm, 6/6 seeds
+- `Other_Built_in_oven` — 9.0mm, 6/6 seeds
+- `Sports_Carabiner` — 8.5mm, 2/6 seeds
+- `Container_Dispenser` — 8.4mm, 6/6 seeds
+- `windshield_wiper_assembly` — 8.0mm, 3/6 seeds
+- `Door_Folding_gate` — 8.0mm, 1/6 seeds
+- `Accessories_Cushion` — 8.0mm, 1/6 seeds
+- `metronome` — 7.5mm, 1/6 seeds
+- `zippo_lighter` — 6.9mm, 1/6 seeds
+- `dual_independent_finger_chains` — 6.9mm, 4/6 seeds
+- `Kitchen_Corkscrew` — 6.6mm, 2/6 seeds
+- `Container_Bottle` — 5.0mm, 1/6 seeds
+
+## Mechanism-only overlaps (likely legal; declare element-scoped allow_overlap)
+
+- `Other_Folding_screen` — 250.0mm, 6/6 seeds
+- `Door_Gate` — 180.4mm, 6/6 seeds
+- `Science_Dental_setup` — 160.0mm, 6/6 seeds
+- `Fence_Cascade_fences_MORE_THAN_1` — 158.5mm, 4/6 seeds
+- `Powertools_Lawn_mower` — 127.2mm, 6/6 seeds
+- `Sports_Bike` — 109.8mm, 6/6 seeds
+- `Military_helicopter` — 100.0mm, 3/6 seeds
+- `Door_wooden_plank_door_with_a_ring_pull` — 83.8mm, 6/6 seeds
+- `Headwear_Racing_helmet` — 82.0mm, 2/6 seeds
+- `elevator_shaft` — 60.0mm, 6/6 seeds
+- `Container_Shipping_container` — 56.0mm, 6/6 seeds
+- `Sign_sign` — 53.4mm, 5/6 seeds
+- `studio_spotlight_on_yoke` — 44.1mm, 6/6 seeds
+- `candy_vending_machine` — 40.9mm, 4/6 seeds
+- `Structure_Elevator` — 40.0mm, 5/6 seeds
+- `monitor_mount` — 35.5mm, 6/6 seeds
+- `bell_tower_with_swinging_bell` — 31.7mm, 4/6 seeds
+- `Window_Sliding_window` — 30.0mm, 2/6 seeds
+- `casino_machine` — 19.7mm, 6/6 seeds
+- `Equipment_LED_work_light` — 19.4mm, 4/6 seeds
+- `Sports_Roller_scates` — 19.3mm, 6/6 seeds
+- `twojoint_revolute_chain` — 18.0mm, 2/6 seeds
+- `Urban_Environment_utility_box` — 18.0mm, 5/6 seeds
+- `Music_Vocal_mic` — 18.0mm, 2/6 seeds
+- `camera_flash` — 16.8mm, 3/6 seeds
+- `Container_Glass_bottle` — 16.7mm, 1/6 seeds
+- `Other_high_arc_gooseneck_faucet` — 16.0mm, 4/6 seeds
+- `Military_Gun` — 16.0mm, 4/6 seeds
+- `Other_Air_conditioner` — 15.3mm, 3/6 seeds
+- `Urban_Environment_Fire_Extinguisher` — 13.0mm, 4/6 seeds
+- `Music_Violin_case` — 12.0mm, 6/6 seeds
+- `chest_freezer_with_hinged_lid` — 11.9mm, 6/6 seeds
+- `Container_laundry_detergent_bottle` — 11.0mm, 1/6 seeds
+- `Military_Radio` — 10.3mm, 1/6 seeds
+- `Urban_Environment_Fire_cabinet` — 10.0mm, 1/6 seeds
+- `Bag_Suitcase_Luggage_bag` — 10.0mm, 3/6 seeds
+- `Light_Latern` — 9.9mm, 6/6 seeds
+- `vane_array_with_independent_pivots` — 9.6mm, 1/6 seeds
+- `turntable` — 9.6mm, 2/6 seeds
+- `Bar_Piano` — 9.0mm, 6/6 seeds
+- `Music_CD_case` — 8.9mm, 1/6 seeds
+- `Door_Door` — 8.5mm, 1/6 seeds
+- `Container_Plastic_can` — 8.4mm, 1/6 seeds
+- `Kitchen_Toaster` — 8.0mm, 3/6 seeds
+- `Accessories_glasses` — 8.0mm, 6/6 seeds
+- `Music_Amplifier` — 7.8mm, 1/6 seeds
+- `Science_Syringe` — 7.5mm, 2/6 seeds
+- `pushpull_plunger_chain` — 7.4mm, 1/6 seeds
+- `Container_Jar` — 7.1mm, 3/6 seeds
+- `Science_First_aid_cabinet` — 7.0mm, 1/6 seeds
+- `Equipment_Game_console` — 6.8mm, 1/6 seeds
+- `Other_widespread_two_handle_faucet` — 6.2mm, 1/6 seeds
+- `Equipment_Power_switch` — 6.2mm, 2/6 seeds
+- `Bathroom_Hair_dryer` — 6.1mm, 3/6 seeds
+- `Others_Binocular` — 6.0mm, 1/6 seeds
+- `Kitchen_Coffee_machine` — 6.0mm, 3/6 seeds
+- `Equipment_Control_panel` — 6.0mm, 1/6 seeds
+- `Other_TV` — 5.5mm, 1/6 seeds
+- `Container_Pump` — 5.2mm, 2/6 seeds
+- `Powertools_angle_grinder` — 5.1mm, 2/6 seeds
+- `Container_Bottle_serum` — 5.0mm, 1/6 seeds

@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_model-a-vintage-industrial-steel-locker-cabinet-_20260610_083716_659700_76107d7e",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "linux-x86_64",
+    "git_commit": "48c1acb46c6036e6eef904e4f363944751fac19e",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "draft"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-06-10T14:43:27Z",
+    "record_id": "rec_model-a-vintage-industrial-steel-locker-cabinet-_20260610_083716_659700_76107d7e",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_model-a-vintage-industrial-steel-locker-cabinet-_20260610_083716_659700_76107d7e/compile_report.json",
+      "status": "success",
+      "record_id": "rec_model-a-vintage-industrial-steel-locker-cabinet-_20260610_083716_659700_76107d7e",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 4 overlaps across 4 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "b566117c4bf19bc887a75559bd14a00bb0f3915787a335aa6b74d70140286d81",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "e2979f44bd579f3d935239bdf8e3286b5b86fda9bed29e270682c7fb5fffa771",
+        "model_py_mtime_ns": 1781101707921584039,
+        "model_py_size_bytes": 19597,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 1396091,
+        "visual_mesh_file_count": 9,
+        "compile_elapsed_seconds": 9.628963323310018
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

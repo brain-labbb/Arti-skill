@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_differential_drive_wheel_var_caster",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T12:46:00Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "4edee9efb5209f3820c907ee731314d0f75f58bc37d2990129ac2003a5ccd2f9",
+  "source": {
+    "run_id": "run_20260709_124600_080342_67de0941",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "4edee9efb5209f3820c907ee731314d0f75f58bc37d2990129ac2003a5ccd2f9",
+    "model_py_sha256": "7df4582f3a472455e0429b600849eafaa8e580e9eed4860adfcdbcc4b76ab795"
+  },
+  "run_summary": {
+    "turn_count": 24,
+    "tool_call_count": 24,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_robotics__differential_drive_wheel__002_png_2bafd7c2baa94629a23400f40574efad",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_robotics__differential_drive_wheel__002_png_2bafd7c2baa94629a23400f40574efad",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_robotics__differential_drive_wheel__002_png_2bafd7c2baa94629a23400f40574efad",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/002.png",
+      "sha256": "220f157df7a071c8559fe00c6236de599cf08f339a4ab3f69f118e6af1bfaac7"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "record_id": "rec_a-dark-charcoal-electronic-cash-register-sitting_20260708_092443_475966_7fc07459",
+  "generation": {
+    "provider": "anthropic",
+    "model_id": "claude-fable-5",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": null,
+    "max_cost_usd": null
+  },
+  "prompting": {
+    "system_prompt_file": "EXTERNAL_AGENT_DATA.md",
+    "system_prompt_sha256": null
+  },
+  "sdk": {
+    "sdk_package": "sdk",
+    "sdk_version": "workspace",
+    "sdk_fingerprint": null
+  },
+  "environment": {
+    "python_version": "3.12.13",
+    "platform": "darwin-arm64",
+    "git_commit": "e07e427df84ab12b2983b648af5ead3c556d0883",
+    "uv_lock_sha256": "b58b12834c30a894ce4d7fdf6ae41e0fc2947fb3a10ff6acf653344223b9a0fc"
+  },
+  "run_summary": {
+    "turn_count": null,
+    "tool_call_count": null,
+    "compile_attempt_count": null,
+    "final_status": "external_ready"
+  },
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-08T09:48:24Z",
+    "record_id": "rec_a-dark-charcoal-electronic-cash-register-sitting_20260708_092443_475966_7fc07459",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "data/cache/record_materialization/rec_a-dark-charcoal-electronic-cash-register-sitting_20260708_092443_475966_7fc07459/compile_report.json",
+      "status": "success",
+      "record_id": "rec_a-dark-charcoal-electronic-cash-register-sitting_20260708_092443_475966_7fc07459",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 62 overlaps across 62 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "125fcadcbb40ed67e4519b324febb0f6b4250463c777fdc347c93ed4db9ee95b",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "b719fb5c74f80f8383b6eabda4e57675ceb450da7e1f768a51cb0a626941caa2",
+        "model_py_mtime_ns": 1783504077229052292,
+        "model_py_size_bytes": 21283,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 79107,
+        "visual_mesh_file_count": 4,
+        "compile_elapsed_seconds": 2.38960829199641
+      }
+    },
+    "validation": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

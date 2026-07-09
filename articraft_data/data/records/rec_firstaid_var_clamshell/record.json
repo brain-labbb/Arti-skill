@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_firstaid_var_clamshell",
+  "created_at": "2026-07-05T09:57:53Z",
+  "updated_at": "2026-07-05T10:15:45Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": null,
+  "source": {
+    "run_id": "run_20260705_095753_903678_acd29d51",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "firstaid-clamshell",
+    "prompt_preview": "TARGET: change the single top-hinged `lid` into a clamshell where the case splits at the middle and BOTH halves open. Keep the top `lid` (REVOLUTE) and make..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "ee3f5594c6e206965fdd87d1b9e35df3a04a2df35277cc3219e69a57ad000ebb",
+    "model_py_sha256": "1088ec0e464595a996a56e0b9a18cc663fe9519e24516d51eec81563cf9672e8"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_a-portable-first-aid-hard-case-a-rigid-rectangul_20260623_175416_875087_f2b56491",
+    "parent_record_id": "rec_a-portable-first-aid-hard-case-a-rigid-rectangul_20260623_175416_875087_f2b56491",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

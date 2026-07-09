@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_sword_var_broadsword",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-23T13:29:23Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "213d5ec2cfe2d10c8390f7c8f4f1304770184218d11ec48b61092fdcb56ef1ea",
+  "source": {
+    "run_id": "run_20260623_132923_166193_72760d06",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "213d5ec2cfe2d10c8390f7c8f4f1304770184218d11ec48b61092fdcb56ef1ea",
+    "model_py_sha256": "da7e2763ba7c7306bd9a8f5850fd83b7f29d7b651e5186ee1478b12621807a27"
+  },
+  "run_summary": {
+    "turn_count": 19,
+    "tool_call_count": 19,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_model-a-roman-gladius-style-short-sword-sheathed_20260610_080621_578517_42984874",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_model-a-roman-gladius-style-short-sword-sheathed_20260610_080621_578517_42984874",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

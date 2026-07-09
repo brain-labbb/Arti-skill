@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_rope_pulley_var_becket",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T04:38:47Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "6e356a6555e4e8b39eb5c1140d1145e891732d58c56b71935ed3007fbf3a65f4",
+  "source": {
+    "run_id": "run_20260709_043847_625768_636653f2",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "6e356a6555e4e8b39eb5c1140d1145e891732d58c56b71935ed3007fbf3a65f4",
+    "model_py_sha256": "f96de0af4e5b0d1c6846811ca36c4a8c864551b0828fa2aabaff2aa75e21d281"
+  },
+  "run_summary": {
+    "turn_count": 18,
+    "tool_call_count": 18,
+    "compile_attempt_count": 3,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_camping_outdoor_gear__rope_pulley_3508f00573934a1e82b506b8bf7688c2",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_camping_outdoor_gear__rope_pulley_3508f00573934a1e82b506b8bf7688c2",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_camping_outdoor_gear__rope_pulley_3508f00573934a1e82b506b8bf7688c2",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/003.png",
+      "sha256": "357040d718023475ba2bbad8a63e0f14d5bf50ddbfba6b8af648edef3836fc32"
+    }
+  ]
+}

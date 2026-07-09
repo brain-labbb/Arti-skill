@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "record_id": "rec_military_aircraft_var_singleengine",
+  "created_at": "2026-06-23T13:11:42Z",
+  "updated_at": "2026-06-23T13:34:42Z",
+  "rating": null,
+  "secondary_rating": null,
+  "author": "simon0923456",
+  "rated_by": null,
+  "secondary_rated_by": null,
+  "kind": "generated_model",
+  "prompt_kind": "single_prompt",
+  "category_slug": "toy_model_planes",
+  "source": {
+    "run_id": "run_20260623_131142_592927_9d5a72a3",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "sdk_package": "sdk",
+  "provider": "dashscope",
+  "model_id": "qwen3.7-max",
+  "display": {
+    "title": "military_aircraft-singleengine",
+    "prompt_preview": "Change the engine count from two to one: rewrite the engine emission as a for loop over a single centerline nose nacelle station using engine_0 and propeller..."
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "44c06338fa8787d66167fdd8b3d5e781060f818b8da794f7b1bfbabd35c00641",
+    "model_py_sha256": "a36498c9252313697c89bb94e0f391362b509c6090706c2d3515293b55531c4d"
+  },
+  "collections": [
+    "workbench"
+  ],
+  "active_revision_id": "rev_000001",
+  "lineage": {
+    "origin_record_id": "rec_model-a-wwii-twin-engine-attack-bomber-douglas-a_20260610_080147_111738_a4aa2b11",
+    "parent_record_id": "rec_model-a-wwii-twin-engine-attack-bomber-douglas-a_20260610_080147_111738_a4aa2b11",
+    "parent_revision_id": "rev_000001",
+    "edit_mode": "copy"
+  }
+}

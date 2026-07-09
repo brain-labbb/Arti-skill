@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_landing_gear_var_blade_leg",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T17:32:19Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "698f13e4fe8323a2949fc594bca2d36b1cc1d66942b9f73514a19da9516f8768",
+  "source": {
+    "run_id": "run_20260709_173219_822564_bf93b5c1",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": 3.0
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "698f13e4fe8323a2949fc594bca2d36b1cc1d66942b9f73514a19da9516f8768",
+    "model_py_sha256": "3550891443e658a0b88dbdcd807153df63c580e55f43d2ec95d9bbd4d4b748ed"
+  },
+  "run_summary": {
+    "turn_count": 6,
+    "tool_call_count": 5,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_astronomy__retractable_landing_gear__001_png_1a64faf20658463c8dbf85b29d826635",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_astronomy__retractable_landing_gear__001_png_1a64faf20658463c8dbf85b29d826635",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_astronomy__retractable_landing_gear__001_png_1a64faf20658463c8dbf85b29d826635",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "55175ab0639437f969fbf017a178a7a44c4ad9a33ca8ebf39e324c93a3c0ef55"
+    }
+  ]
+}

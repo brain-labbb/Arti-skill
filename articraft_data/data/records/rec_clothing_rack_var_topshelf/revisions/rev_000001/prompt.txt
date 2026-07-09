@@ -1,0 +1,26 @@
+CATEGORY: Retail_Shop Fixtures
+SUBCATEGORY: Clothing rack
+TARGET: add an overhead top_storage_shelf (a slatted rod shelf) mounted above the top_hanging_rail on extended upper_post_{i} for hats/boxes/folded items.
+DIVERSITY_AXIS: ① skeleton / topology (add an upper storage-shelf structural layer above the rail).
+POSITIONING: real garment rack with a top shelf (very common retail/closet rack that stores boxes and hats above the hanging span); still a wheeled hanging clothing rack.
+KEEP: preserve these parent functional layers by name: base_frame, upper_frame, upper_post_{i}, top_hanging_rail, height_slide (prismatic telescoping), lower_sleeve_{i}, sliding_bushing_{i}, top_hanger_{idx} + top_hanger_{idx}_swing (revolute), wheel_{i} + wheel_spin_{i} (continuous casters).
+STRUCTURAL_DELTA: extend the two upper_post_{i} upward and add a horizontal top_storage_shelf built from a loop of parallel shelf rods shelf_rod_{i} on two side rails, spanning between the extended posts above the hanging rail; rods are FIXED slats on the upper_frame (a real welded wire shelf), evenly spaced via a for-i-in-range loop. Hanging rail and hangers unchanged below.
+MULTIPLICITY: shelf slats emitted with a for-i-in-range loop, indexed shelf_rod_{i}, uniform spacing, FIXED to the frame; count is a shelf detail, not the primary axis.
+COMPANION_VARIATIONS: none beyond palette.
+FORBIDDEN: do not become a shelving unit whose primary function is shelves (keep the hanging rail dominant); do not add solid cabinet panels; do not change base, casters, or telescoping; do not remove the hanging rail.
+COMPATIBILITY_PROBE:
+
+This is a Retail_Shop Fixtures/Clothing rack family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Retail_Shop Fixtures/Clothing rack (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

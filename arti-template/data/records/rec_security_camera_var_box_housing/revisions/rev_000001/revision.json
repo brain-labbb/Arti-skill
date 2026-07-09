@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_security_camera_var_box_housing",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-04T13:53:36Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "99a2cc502bbbc398cb84ee45c08db4ed3b45de7940bcc9123d05743da739b836",
+  "source": {
+    "run_id": "run_20260704_135336_968732_387aaa6e",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "99a2cc502bbbc398cb84ee45c08db4ed3b45de7940bcc9123d05743da739b836",
+    "model_py_sha256": "d9fab8a0d99c04f5eb0fc0f8064a37b67cee0479180cd969d44e057107b03268"
+  },
+  "run_summary": {
+    "turn_count": 8,
+    "tool_call_count": 8,
+    "compile_attempt_count": 1,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_gray-cctv-bullet-security-camera-with-a-cylindri_20260624_134448_028125_4e6dbba3",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_gray-cctv-bullet-security-camera-with-a-cylindri_20260624_134448_028125_4e6dbba3",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_gray-cctv-bullet-security-camera-with-a-cylindri_20260624_134448_028125_4e6dbba3",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "ea5427816c35b057ce827e053104fb92c10ae8d3dc85c65a120f4d13ab1f1102"
+    }
+  ],
+  "external_quality": {
+    "schema_version": 1,
+    "checked_at": "2026-07-04T14:38:07Z",
+    "record_id": "rec_security_camera_var_box_housing",
+    "workflow": "external_agent_quality_parity",
+    "compile": {
+      "target": "full",
+      "validate": true,
+      "strict_geom_qc": true,
+      "report_path": "/mnt/zsn/lyb/arti-skill/articraft_data/data/cache/record_materialization/rec_security_camera_var_box_housing/compile_report.json",
+      "status": "success",
+      "record_id": "rec_security_camera_var_box_housing",
+      "urdf_path": "model.urdf",
+      "checks_run": [
+        "compile_urdf"
+      ],
+      "warning_count": 1,
+      "warnings": [
+        {
+          "code": "warning",
+          "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+        }
+      ],
+      "metrics": {
+        "compile_level": "full",
+        "validation_level": "full",
+        "fingerprint_inputs": {
+          "model_py_sha256": "d9fab8a0d99c04f5eb0fc0f8064a37b67cee0479180cd969d44e057107b03268",
+          "sdk_fingerprint": null
+        },
+        "materialization_fingerprint": "2130e9b6f2ab13aa442e08d0ee2b8d7751a878ccdb460e47d4a1766a622d5253",
+        "model_py_mtime_ns": 1783173950878676684,
+        "model_py_size_bytes": 11136,
+        "materialization_status": "available",
+        "visual_mesh_bytes": 50587,
+        "visual_mesh_file_count": 3,
+        "compile_elapsed_seconds": 2.9940052684396505
+      }
+    },
+    "validation": {
+      "passed": false,
+      "error_count": 6,
+      "errors": [
+        "record.json missing creator metadata for external workflow",
+        "source.run_id must be null for external records",
+        "external records must not contain Articraft agent traces",
+        "provenance.run_summary.turn_count must be null",
+        "provenance.run_summary.tool_call_count must be null",
+        "provenance.run_summary.compile_attempt_count must be null"
+      ]
+    },
+    "telemetry": {
+      "source": "external_agent",
+      "trace_available": false,
+      "cost_available": false,
+      "turn_count": null,
+      "tool_call_count": null,
+      "compile_attempt_count": null
+    }
+  }
+}

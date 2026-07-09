@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_wrench_var_thumbslide",
+  "revision_id": "rev_000001",
+  "created_at": "2026-06-18T07:28:04Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "57b0bd9b6fb981bc1fde8fbda4069e4c0f515e8e2376439eb866357e155afa62",
+  "source": {
+    "run_id": "run_20260618_072804_276551_97084830",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "medium",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "57b0bd9b6fb981bc1fde8fbda4069e4c0f515e8e2376439eb866357e155afa62",
+    "model_py_sha256": "63af2b1cc93101464acdda55c96817791cb130379cb204dd0b7f2d20300688ea"
+  },
+  "run_summary": {
+    "turn_count": 7,
+    "tool_call_count": 7,
+    "compile_attempt_count": 2,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-wren_20260609_163952_100145_6f106d91",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_build-a-realistic-articulated-3d-model-of-a-wren_20260609_163952_100145_6f106d91",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": []
+}

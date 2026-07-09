@@ -1,0 +1,24 @@
+CATEGORY: Emergency Equipment
+SUBCATEGORY: Emergency exit door
+TARGET: change the plain frame/leaf interface by adding a surface-mounted overhead door closer with an articulated arm connecting the frame top_jamb to near_leaf.
+DIVERSITY_AXIS: (1) skeleton/topology.
+POSITIONING: exit door with overhead closer (a self-closing fire door fitted with a surface hydraulic closer and scissor/slide arm) — remains an emergency exit door; adds the near-universal self-closing device as an extra articulated linkage.
+KEEP: preserve these parent functional layers by name: frame, top_jamb, near_leaf, _add_leaf_panel, near_door_skin, near_push_bar, latch_bolt, frame_to_near_leaf (REVOLUTE), near_leaf_to_push_bar (PRISMATIC), near_leaf_to_latch_bolt (PRISMATIC).
+STRUCTURAL_DELTA: add a closer body box mounted on near_leaf near top_jamb plus an articulated closer arm as a child part; add a REVOLUTE articulation (closer_arm to frame/leaf) so the arm folds as the door swings; keep the main door hinge frame_to_near_leaf and the bar/latch mechanism intact.
+COMPANION_VARIATIONS: (6) closer body finish.
+FORBIDDEN: do not replace the door hinge with the closer, do not remove the panic bar, keep a single body family and leaf count.
+
+This is a Emergency Equipment/Emergency exit door family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Emergency Equipment/Emergency exit door (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.

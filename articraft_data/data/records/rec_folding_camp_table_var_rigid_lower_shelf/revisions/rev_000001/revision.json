@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_folding_camp_table_var_rigid_lower_shelf",
+  "revision_id": "rev_000001",
+  "created_at": "2026-07-09T04:27:25Z",
+  "prompt_kind": "single_prompt",
+  "prompt_sha256": "0123799d4ac81d42cbebbc5f6eb81aa636eddd77b0dede1627ec0190ed3a8de2",
+  "source": {
+    "run_id": "run_20260709_042725_273638_4853af31",
+    "prompt_batch_id": null,
+    "batch_spec_id": null,
+    "row_id": null,
+    "prompt_index": null
+  },
+  "generation": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max",
+    "thinking_level": "high",
+    "openai_transport": null,
+    "openai_reasoning_summary": null,
+    "max_turns": 100,
+    "max_cost_usd": null
+  },
+  "artifacts": {
+    "prompt_txt": "revisions/rev_000001/prompt.txt",
+    "prompt_series_json": null,
+    "model_py": "revisions/rev_000001/model.py",
+    "provenance_json": "revisions/rev_000001/provenance.json",
+    "cost_json": null,
+    "inputs_dir": "revisions/rev_000001/inputs",
+    "traces_dir": "revisions/rev_000001/traces"
+  },
+  "hashes": {
+    "prompt_sha256": "0123799d4ac81d42cbebbc5f6eb81aa636eddd77b0dede1627ec0190ed3a8de2",
+    "model_py_sha256": "07c43cfbeb4cc10f7752c27fe381f1b5951efa876f115255af031e7be613d6aa"
+  },
+  "run_summary": {
+    "turn_count": 39,
+    "tool_call_count": 38,
+    "compile_attempt_count": 9,
+    "final_status": "success"
+  },
+  "parent": {
+    "record_id": "rec_camping_outdoor_gear__folding_camp_table_e67ceec6b1ae4b31a958e16fdae9b35c",
+    "revision_id": "rev_000001"
+  },
+  "seed": {
+    "record_id": "rec_camping_outdoor_gear__folding_camp_table_e67ceec6b1ae4b31a958e16fdae9b35c",
+    "revision_id": "rev_000001",
+    "artifact": "model.py"
+  },
+  "inherited_inputs": [
+    {
+      "record_id": "rec_camping_outdoor_gear__folding_camp_table_e67ceec6b1ae4b31a958e16fdae9b35c",
+      "revision_id": "rev_000001",
+      "path": "revisions/rev_000001/inputs/001.png",
+      "sha256": "2e0ffdb0d048a4fdb4c5ff32d907267b36dd85364053d1062ccd0365d701b6d5"
+    }
+  ]
+}

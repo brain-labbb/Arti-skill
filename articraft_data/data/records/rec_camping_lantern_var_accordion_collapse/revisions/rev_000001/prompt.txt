@@ -1,0 +1,25 @@
+CATEGORY: Camping_Outdoor Gear
+SUBCATEGORY: Camping Lantern
+TARGET: change the telescoping base_to_lantern_slide skirt collapse to a concertina/accordion silicone bellows that squeezes flat.
+DIVERSITY_AXIS: ② joint / mechanism type (accordion bellows squeeze-collapse instead of a smooth telescoping skirt slide).
+POSITIONING: Packable collapsible silicone camping lantern that concertinas down flat for storage; remains a portable battery camping lantern with a top hang loop.
+KEEP: preserve these parent functional layers by name: lower_base, upper_lantern, wire_handle, base_to_lantern_slide joint, lantern_to_handle_hinge joint, led_board, top_cap, handle_boss_0, handle_boss_1.
+STRUCTURAL_DELTA: replace the smooth skirt_sleeve/clear_chamber tube with a ribbed accordion bellows wall (stacked ring folds) between lower_base and upper_lantern; keep the base_to_lantern_slide PRISMATIC joint but reinterpret its travel as the bellows compression stroke (folds nest as it closes); keep the wire_bail hang hinge.
+MULTIPLICITY: not the primary axis, but emit the bellows folds as a loop of stacked ring segments with stable indexed names so copy logic is extractable.
+COMPANION_VARIATIONS: ⑥ translucent colored silicone bellows (palette only).
+FORBIDDEN: do not become a bellows camera, a squeezebox, or a collapsible cup; do not change the body form family or add legs; keep exactly one collapse mechanism.
+
+This is a Camping_Outdoor Gear/Camping Lantern family fork variant. Keep it workbench-only.
+
+HARD CONSTRAINTS — breaking any one means the variant is rejected:
+1. One primary structural axis. Change ONLY the primary structural layer named in TARGET above; keep every functional layer listed in KEEP identical to the parent baseline. Optional COMPANION_VARIATIONS are allowed only for low-risk ④/⑤/⑥ changes that do not alter part tree, joint graph, interfaces, or primitive family. Do not bundle ① skeleton, ② joint type, main ③ primary form family, or multiplicity N changes unless the prompt explicitly marks this fork as COMPATIBILITY_PROBE.
+2. Stays in category. A layperson must still call it a Camping_Outdoor Gear/Camping Lantern (a basket variant is still a basket, not a crate or a cart).
+3. At least one real non-fixed joint. Zero moving joints = rejected. Beware "fixed handle" / "no moving parts" phrasings that silently produce zero-joint models.
+
+CODE SHAPE — so the template pipeline can mechanically extract the parent-vs-variant diff:
+- Structure the code by functional layer with semantic part/visual names that map to the planned slots (base_*, lid_*, handle_*).
+- Emit any repeated sub-parts via a for-i-in-range(n) loop with name_{i} naming, a shared geometry helper, regular placement, and a uniform joint policy — never copy-paste N near-identical blocks.
+- Inline non-moving decorations as parent visuals (no FIXED-joint decoration parts).
+- Anchor every jointed child on a real visible parent face with the joint origin at the actual contact surface (no invisible millimeter-scale anchor pads).
+- Use lathe/CadQuery/mesh geometry where the real object is curved or compound — no boxy placeholders.
+- Add a run_tests assertion that specifically references the changed part/joint name (from TARGET) and the visible geometry claim of this axis — a generic "it compiles" check does not satisfy this.
