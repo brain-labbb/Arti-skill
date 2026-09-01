@@ -1,0 +1,516 @@
+{
+  "classification": "SMOKE",
+  "cohort_label": "Ours per-class N=5 (supplementary)",
+  "created_at": "2026-08-24T04:13:17.417189Z",
+  "dataset": "Ours per-class N=5 (supplementary)",
+  "evaluation": {
+    "adapter_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_ours_pva_per_class_n5.py",
+    "adapter_sha256": "fcd940f851d5b6d544712a9d39bdcc2f9816c14302e729d5689dd876b340b77e",
+    "child_python": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+    "child_timeout_seconds": 900.0,
+    "core_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+    "core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+    "pair_policy": "all-pair and non-adjacent (direct parent-child excluded); surface contact allowed; penetration > threshold illegal; no method-specific allowlist",
+    "penetration_threshold_m": 1e-06,
+    "protocol_path": "/mnt/zsn/lyb/arti-skill/exp/URDF-Sim-Ready-Automatic-Evaluation.md",
+    "reset_tolerance": 1e-09,
+    "rest_state_policy": "q=0 for every evaluable joint",
+    "runtime_identity": {
+      "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_ours_pva_per_class_n5.py",
+      "adapter_runner_sha256": "fcd940f851d5b6d544712a9d39bdcc2f9816c14302e729d5689dd876b340b77e",
+      "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+      "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+      "core_runtime": {
+        "numpy_version": "2.5.1",
+        "pybullet_api_version": 202010061,
+        "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+        "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+        "python_cache_tag": "cpython-312",
+        "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+        "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+        "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+        "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+        "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+        "scipy_version": "1.18.0"
+      },
+      "hostname": "dedicated-developjob-saining-4au54-66f4bf865-dzjb7",
+      "pybullet_api_version": 202010061,
+      "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+      "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+      "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+      "python_version": "3.12.3"
+    },
+    "scale_protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+    "single_samples": 21,
+    "sobol_samples": 64,
+    "sobol_seed": 20260813,
+    "workers": 2
+  },
+  "items": [
+    {
+      "asset_id": "PV-A/Accessories_Cushion/seed_0021",
+      "asset_root_relpath": "seed_0021",
+      "audit_issue": null,
+      "category": "Accessories_Cushion",
+      "collision_mesh_files": [
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/compact_base.obj",
+          "resolved_relpath": "assets/meshes/compact_base.obj",
+          "safe": true,
+          "sha256": "d2ccbb13eb8e3bd6ce4e5ec5f9cb5abe81dd44037275210f425b1a67755e8281",
+          "size_bytes": 47295
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/lid_black_edge.obj",
+          "resolved_relpath": "assets/meshes/lid_black_edge.obj",
+          "safe": true,
+          "sha256": "05f8f4b4f2b47ea114f63e9088ef36324bfa2506ec0a0b00d7f74e479da723df",
+          "size_bytes": 23623
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/lid_white_top.obj",
+          "resolved_relpath": "assets/meshes/lid_white_top.obj",
+          "safe": true,
+          "sha256": "4b4b07669a059089b968b3f48a912259477fc98d63acc3ac301ee8ea9721ccb4",
+          "size_bytes": 23596
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/logo_ring_0.obj",
+          "resolved_relpath": "assets/meshes/logo_ring_0.obj",
+          "safe": true,
+          "sha256": "a9a27f9ec3c93e8c2d24d479ff03d925d94c5ee47a9a9a605a2dac66a53e3942",
+          "size_bytes": 27042
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/logo_ring_1.obj",
+          "resolved_relpath": "assets/meshes/logo_ring_1.obj",
+          "safe": true,
+          "sha256": "a9a27f9ec3c93e8c2d24d479ff03d925d94c5ee47a9a9a605a2dac66a53e3942",
+          "size_bytes": 27042
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/rim_gasket.obj",
+          "resolved_relpath": "assets/meshes/rim_gasket.obj",
+          "safe": true,
+          "sha256": "755999a4ad8f4f9e1ad98dd8c13f2e5f916a2c2270b45173b93cd9a6e7d4e40e",
+          "size_bytes": 38664
+        }
+      ],
+      "collision_mesh_inventory_sha256": "6c426de46e3f6366c0cf9232a391fbe057d935b93f47cb7560a0030d7feb2d20",
+      "dataset_id": "PV-A/Accessories_Cushion/seed_0021",
+      "input_identity_sha256": "015cb796222ecf8bdafdaded26905e778220d16f4b9cd0ff1927f399a4db03a0",
+      "joint_specs_sha256": "80d1b8904ef3cc0fb08596d851214616923f1ab3439e6c96553bb248d19e2d0b",
+      "missing_collision_mesh_reference_count": 0,
+      "movable_dof_count": 1,
+      "object_bbox_diagonal_m": 0.21424822072501815,
+      "order": 0,
+      "package": "/mnt/zsn/lyb/arti-skill/exp/PV-A-per-class-n5/assets/Accessories_Cushion/seed_0021",
+      "package_audit_success": true,
+      "package_binding_content_manifest_sha256": "4a828326dcd516bd5a051205a3237a20ae16202688857673b6c88f755893528d",
+      "package_binding_file_count": 9,
+      "package_binding_total_bytes": 329015,
+      "primary_urdf_relpath": "seed_0021/model.urdf",
+      "protocol_id": "urdf-sim-ready-table4-ours-per-class-n5-max-joints-v1",
+      "range_evaluable_dof_count": 1,
+      "raw_category": "Accessories_Cushion",
+      "rest_state_expected": 1,
+      "runtime_binding": {
+        "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_ours_pva_per_class_n5.py",
+        "adapter_runner_sha256": "fcd940f851d5b6d544712a9d39bdcc2f9816c14302e729d5689dd876b340b77e",
+        "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+        "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+        "core_runtime": {
+          "numpy_version": "2.5.1",
+          "pybullet_api_version": 202010061,
+          "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+          "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+          "python_cache_tag": "cpython-312",
+          "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+          "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+          "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+          "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+          "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+          "scipy_version": "1.18.0"
+        },
+        "hostname": "dedicated-developjob-saining-4au54-66f4bf865-dzjb7",
+        "pybullet_api_version": 202010061,
+        "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+        "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+        "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+        "python_version": "3.12.3"
+      },
+      "scale_derivation": {
+        "collision_link_indices": [
+          -1,
+          0
+        ],
+        "diagonal_m": 0.21424822072501815,
+        "joint_state": "q=0 for every simulator joint",
+        "load_flags": 1048578,
+        "maximum_m": [
+          0.07638899916410447,
+          0.0694825,
+          0.0530080001899898
+        ],
+        "minimum_m": [
+          -0.07638899916410447,
+          -0.0694825,
+          -0.0040000000000000036
+        ],
+        "protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+        "status": "PASS"
+      },
+      "scale_derivation_sha256": "72143e04887149fc3fb8ff44be9bfe27fa63670985b027823a8c06b5c60eceaa",
+      "seed_name": "seed_0021",
+      "selection_rank": 1,
+      "single_state_expected": 21,
+      "sobol_state_expected": 64,
+      "unsafe_collision_mesh_reference_count": 0,
+      "urdf_sha256": "df9d68cf7b73a72ad33a8b4999adbdd586dc2f0d0529644fa6ddc9d538b8d97a",
+      "valid_tree": true
+    },
+    {
+      "asset_id": "PV-A/Accessories_Cushion/seed_0019",
+      "asset_root_relpath": "seed_0019",
+      "audit_issue": null,
+      "category": "Accessories_Cushion",
+      "collision_mesh_files": [
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/base_rail_0.obj",
+          "resolved_relpath": "assets/meshes/base_rail_0.obj",
+          "safe": true,
+          "sha256": "84aef45bc164969a44a5abdfcf87544d7036772f34fd2d9519787430617c6a21",
+          "size_bytes": 1731
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/base_rail_1.obj",
+          "resolved_relpath": "assets/meshes/base_rail_1.obj",
+          "safe": true,
+          "sha256": "84aef45bc164969a44a5abdfcf87544d7036772f34fd2d9519787430617c6a21",
+          "size_bytes": 1731
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/lid_slider_0.obj",
+          "resolved_relpath": "assets/meshes/lid_slider_0.obj",
+          "safe": true,
+          "sha256": "4d8a220358ff440aa26587e09a8786cc781b9f4fa3507e837078ad2a0fc908dd",
+          "size_bytes": 1732
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/lid_slider_1.obj",
+          "resolved_relpath": "assets/meshes/lid_slider_1.obj",
+          "safe": true,
+          "sha256": "4d8a220358ff440aa26587e09a8786cc781b9f4fa3507e837078ad2a0fc908dd",
+          "size_bytes": 1732
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/rim_gasket.obj",
+          "resolved_relpath": "assets/meshes/rim_gasket.obj",
+          "safe": true,
+          "sha256": "dbbf0ede0d22f8b0eb7b93475b99a9ee2dd209737aca3771af9d3c91c0dffaf5",
+          "size_bytes": 38664
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/slide_lid_edge.obj",
+          "resolved_relpath": "assets/meshes/slide_lid_edge.obj",
+          "safe": true,
+          "sha256": "911a5d88a1f1f4c40c22ab7a865661ee4f9e79d1adafec32c9c359678d08124e",
+          "size_bytes": 23591
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/slide_lid_top.obj",
+          "resolved_relpath": "assets/meshes/slide_lid_top.obj",
+          "safe": true,
+          "sha256": "d86e56f66cabe66bc026668c7a56a9997a14a1133d837db9994536a0368cd1ca",
+          "size_bytes": 23617
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/translucent_bowl.obj",
+          "resolved_relpath": "assets/meshes/translucent_bowl.obj",
+          "safe": true,
+          "sha256": "327cb99d1613372d34cfb75601f77adad3f8dc57998df1a037d5e2ec8a6d8928",
+          "size_bytes": 54459
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/tray_disc.obj",
+          "resolved_relpath": "assets/meshes/tray_disc.obj",
+          "safe": true,
+          "sha256": "6b6a2cd891d6b7ad5606ca2b7eb091b3a692cffec857eb06959dece1477e9604",
+          "size_bytes": 187349
+        }
+      ],
+      "collision_mesh_inventory_sha256": "70b0f05991e6c9331cadf115945aee3dd61f05ac99ce382b09d7a1eb7bbb4a70",
+      "dataset_id": "PV-A/Accessories_Cushion/seed_0019",
+      "input_identity_sha256": "e63070118bbe3a3a03f1174e05e620f32aa34cb3af38e808118f476627380728",
+      "joint_specs_sha256": "d2bd8a303e35e25b821fc785fed10f9f08101c1f91f88ac62acc1d390282c2af",
+      "missing_collision_mesh_reference_count": 0,
+      "movable_dof_count": 2,
+      "object_bbox_diagonal_m": 0.21791777294895537,
+      "order": 1,
+      "package": "/mnt/zsn/lyb/arti-skill/exp/PV-A-per-class-n5/assets/Accessories_Cushion/seed_0019",
+      "package_audit_success": true,
+      "package_binding_content_manifest_sha256": "dd077dd1827ca27bef4097668d4a9bedeb67f1cabcf589f62a667588e205b3ba",
+      "package_binding_file_count": 12,
+      "package_binding_total_bytes": 569994,
+      "primary_urdf_relpath": "seed_0019/model.urdf",
+      "protocol_id": "urdf-sim-ready-table4-ours-per-class-n5-max-joints-v1",
+      "range_evaluable_dof_count": 2,
+      "raw_category": "Accessories_Cushion",
+      "rest_state_expected": 1,
+      "runtime_binding": {
+        "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_ours_pva_per_class_n5.py",
+        "adapter_runner_sha256": "fcd940f851d5b6d544712a9d39bdcc2f9816c14302e729d5689dd876b340b77e",
+        "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+        "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+        "core_runtime": {
+          "numpy_version": "2.5.1",
+          "pybullet_api_version": 202010061,
+          "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+          "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+          "python_cache_tag": "cpython-312",
+          "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+          "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+          "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+          "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+          "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+          "scipy_version": "1.18.0"
+        },
+        "hostname": "dedicated-developjob-saining-4au54-66f4bf865-dzjb7",
+        "pybullet_api_version": 202010061,
+        "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+        "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+        "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+        "python_version": "3.12.3"
+      },
+      "scale_derivation": {
+        "collision_link_indices": [
+          -1,
+          0,
+          1
+        ],
+        "diagonal_m": 0.21791777294895537,
+        "joint_state": "q=0 for every simulator joint",
+        "load_flags": 1048578,
+        "maximum_m": [
+          0.07107499921321869,
+          0.08011200213432312,
+          0.03607819994412065
+        ],
+        "minimum_m": [
+          -0.07108700209856034,
+          -0.0801124,
+          -0.004000000000000002
+        ],
+        "protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+        "status": "PASS"
+      },
+      "scale_derivation_sha256": "2f057c4d585d42f1f87baf8127360fed978e558f382bcc80669bfebab5cfda40",
+      "seed_name": "seed_0019",
+      "selection_rank": 2,
+      "single_state_expected": 42,
+      "sobol_state_expected": 64,
+      "unsafe_collision_mesh_reference_count": 0,
+      "urdf_sha256": "86d7341a7f47ab03593ba5b3d817ebdbcef868f0beba59150e1da64035132062",
+      "valid_tree": true
+    },
+    {
+      "asset_id": "PV-A/Accessories_Cushion/seed_0024",
+      "asset_root_relpath": "seed_0024",
+      "audit_issue": null,
+      "category": "Accessories_Cushion",
+      "collision_mesh_files": [
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/compact_base.obj",
+          "resolved_relpath": "assets/meshes/compact_base.obj",
+          "safe": true,
+          "sha256": "7d2e1f3c92348524637ef921bcf9b90912c4768ef7d8b387e8108b4c515c0d30",
+          "size_bytes": 47296
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/lid_black_edge.obj",
+          "resolved_relpath": "assets/meshes/lid_black_edge.obj",
+          "safe": true,
+          "sha256": "daf0cb95441c72e8698f87b1c7eede917398f5dc002298094ac4505583aedbf9",
+          "size_bytes": 23617
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/lid_white_top.obj",
+          "resolved_relpath": "assets/meshes/lid_white_top.obj",
+          "safe": true,
+          "sha256": "7aa7d8a5b8939ace2c6d4472e0d329e45a66a6365f2fcc1c68478ebc35eceee7",
+          "size_bytes": 23589
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/logo_ring_0.obj",
+          "resolved_relpath": "assets/meshes/logo_ring_0.obj",
+          "safe": true,
+          "sha256": "a9a27f9ec3c93e8c2d24d479ff03d925d94c5ee47a9a9a605a2dac66a53e3942",
+          "size_bytes": 27042
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/logo_ring_1.obj",
+          "resolved_relpath": "assets/meshes/logo_ring_1.obj",
+          "safe": true,
+          "sha256": "a9a27f9ec3c93e8c2d24d479ff03d925d94c5ee47a9a9a605a2dac66a53e3942",
+          "size_bytes": 27042
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/rim_gasket.obj",
+          "resolved_relpath": "assets/meshes/rim_gasket.obj",
+          "safe": true,
+          "sha256": "a3861beddf44b25f34024574cc95474004b77dc506ead5bb2e46df111bbcf819",
+          "size_bytes": 38664
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/tray_disc.obj",
+          "resolved_relpath": "assets/meshes/tray_disc.obj",
+          "safe": true,
+          "sha256": "6b6a2cd891d6b7ad5606ca2b7eb091b3a692cffec857eb06959dece1477e9604",
+          "size_bytes": 187349
+        }
+      ],
+      "collision_mesh_inventory_sha256": "06dd24d6edc47efa6bcac74e79ca8820f83efa9b7ce667f90fb66dd9fe9e7e3d",
+      "dataset_id": "PV-A/Accessories_Cushion/seed_0024",
+      "input_identity_sha256": "c68aff5c9c12efb788f4b98254324851d3be56cae598da830c5a4646b2f637c3",
+      "joint_specs_sha256": "e37c62a83c6cbc1d8463011845dae0b105fa7397ca6ad250af034b4668e7aaa2",
+      "missing_collision_mesh_reference_count": 0,
+      "movable_dof_count": 2,
+      "object_bbox_diagonal_m": 0.21558945117810005,
+      "order": 2,
+      "package": "/mnt/zsn/lyb/arti-skill/exp/PV-A-per-class-n5/assets/Accessories_Cushion/seed_0024",
+      "package_audit_success": true,
+      "package_binding_content_manifest_sha256": "24bf5c5accbd6181955b1baaac1f52bcf98c385bd8bf9563b3879987af33ee54",
+      "package_binding_file_count": 10,
+      "package_binding_total_bytes": 562889,
+      "primary_urdf_relpath": "seed_0024/model.urdf",
+      "protocol_id": "urdf-sim-ready-table4-ours-per-class-n5-max-joints-v1",
+      "range_evaluable_dof_count": 2,
+      "raw_category": "Accessories_Cushion",
+      "rest_state_expected": 1,
+      "runtime_binding": {
+        "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_ours_pva_per_class_n5.py",
+        "adapter_runner_sha256": "fcd940f851d5b6d544712a9d39bdcc2f9816c14302e729d5689dd876b340b77e",
+        "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+        "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+        "core_runtime": {
+          "numpy_version": "2.5.1",
+          "pybullet_api_version": 202010061,
+          "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+          "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+          "python_cache_tag": "cpython-312",
+          "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+          "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+          "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+          "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+          "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+          "scipy_version": "1.18.0"
+        },
+        "hostname": "dedicated-developjob-saining-4au54-66f4bf865-dzjb7",
+        "pybullet_api_version": 202010061,
+        "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+        "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+        "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+        "python_version": "3.12.3"
+      },
+      "scale_derivation": {
+        "collision_link_indices": [
+          -1,
+          0,
+          1
+        ],
+        "diagonal_m": 0.21558945117810005,
+        "joint_state": "q=0 for every simulator joint",
+        "load_flags": 1048578,
+        "maximum_m": [
+          0.0718739994764328,
+          0.07618920000000001,
+          0.04695360018998981
+        ],
+        "minimum_m": [
+          -0.0718739994764328,
+          -0.0761888,
+          -0.0040000000000000036
+        ],
+        "protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+        "status": "PASS"
+      },
+      "scale_derivation_sha256": "85cdac3165b819876ab0f2a83899471e32cbfbe8a69a8c1205e594476fb76144",
+      "seed_name": "seed_0024",
+      "selection_rank": 3,
+      "single_state_expected": 42,
+      "sobol_state_expected": 64,
+      "unsafe_collision_mesh_reference_count": 0,
+      "urdf_sha256": "c43ae531d588d0a4cdd1c2275f25e58edc56e46ec5d33f93984b55eb6163b417",
+      "valid_tree": true
+    }
+  ],
+  "manifest_content_sha256": "c36092ad0cb7d0571e9024914e48ed473f60ff662ceac185d718a87181e0048f",
+  "protocol_document_at_freeze_sha256": "b05a4edbe61037f2dc4bc1bc1580e66f13f852fc24a3b979e130e8a7aa30ef00",
+  "protocol_id": "urdf-sim-ready-table4-ours-per-class-n5-max-joints-v1",
+  "schema_version": "table4_ours_pva_per_class_n5_frozen_manifest_v1",
+  "selection": {
+    "algorithm": "exact frozen Ours per-class N=5 cohort .assets[] order; optional smoke prefix only",
+    "ordered_identities_sha256": "9bfded199c9ea033c8e59abaab26e3e71bf841e6b7523369878dee8765204454",
+    "ordered_input_identities_sha256": "2c4273fb7bbd2d1373c066141c15e7a1befae30ecea18682b4c7e8b1de916c94",
+    "outcome_based_reselection": false,
+    "selected_asset_ids_sha256": "dd61cbd09d074c13c09c389e61975e987ae0b926815984d7c21e4b38d6873d21"
+  },
+  "source": {
+    "cohort_manifest_content_sha256": "eea55287dd70b710a7c03b11b16c6685208bbaa63cde925232293cb9012c8158",
+    "cohort_manifest_file_sha256": "e78f4b767023f8a5c1517d96bfab35a39482d6eee28238820a9b91ac3ea8d293",
+    "cohort_manifest_path": "/mnt/zsn/lyb/arti-skill/exp/PV-A-per-class-n5-max-joints/manifest.json",
+    "cohort_type": "CATEGORY_STRATIFIED_N5_WITH_FENCE_FERRIS_MAX_JOINT_OVERRIDES",
+    "eval_category_count": 1,
+    "expected_state_count": 300,
+    "j_eval": 5,
+    "n_eval": 3,
+    "n_release": 302440,
+    "per_class": 5,
+    "per_item_package_paths": true,
+    "release_category_count": 531
+  }
+}

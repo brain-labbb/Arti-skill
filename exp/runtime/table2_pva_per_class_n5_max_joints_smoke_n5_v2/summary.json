@@ -1,0 +1,169 @@
+{
+  "category_macro": {
+    "categories": {
+      "Accessories_Cushion": {
+        "denominator": 5,
+        "metrics": {
+          "collision_coverage": {
+            "denominator": 5,
+            "passed": 5,
+            "rate": 1.0
+          },
+          "finite_fields": {
+            "denominator": 5,
+            "passed": 5,
+            "rate": 1.0
+          },
+          "inertia_validity": {
+            "denominator": 5,
+            "passed": 5,
+            "rate": 1.0
+          },
+          "inertial_coverage": {
+            "denominator": 5,
+            "passed": 5,
+            "rate": 1.0
+          },
+          "parse_rate": {
+            "denominator": 5,
+            "passed": 5,
+            "rate": 1.0
+          },
+          "resource_resolution": {
+            "denominator": 5,
+            "passed": 5,
+            "rate": 1.0
+          },
+          "strict_urdf_pass": {
+            "denominator": 5,
+            "passed": 5,
+            "rate": 1.0
+          },
+          "valid_joint_spec": {
+            "denominator": 5,
+            "passed": 5,
+            "rate": 1.0
+          },
+          "valid_tree": {
+            "denominator": 5,
+            "passed": 5,
+            "rate": 1.0
+          }
+        }
+      }
+    },
+    "category_count": 1,
+    "category_field": "raw_category",
+    "denominator_policy": "unweighted mean of per-raw_category asset rates; all frozen assets and failures retained",
+    "metrics": {
+      "collision_coverage": {
+        "category_denominator": 1,
+        "rate": 1.0
+      },
+      "finite_fields": {
+        "category_denominator": 1,
+        "rate": 1.0
+      },
+      "inertia_validity": {
+        "category_denominator": 1,
+        "rate": 1.0
+      },
+      "inertial_coverage": {
+        "category_denominator": 1,
+        "rate": 1.0
+      },
+      "parse_rate": {
+        "category_denominator": 1,
+        "rate": 1.0
+      },
+      "resource_resolution": {
+        "category_denominator": 1,
+        "rate": 1.0
+      },
+      "strict_urdf_pass": {
+        "category_denominator": 1,
+        "rate": 1.0
+      },
+      "valid_joint_spec": {
+        "category_denominator": 1,
+        "rate": 1.0
+      },
+      "valid_tree": {
+        "category_denominator": 1,
+        "rate": 1.0
+      }
+    },
+    "state": "evaluated"
+  },
+  "classification": "SMOKE",
+  "cohort": {
+    "N_eval": 5,
+    "N_release": 302440,
+    "cohort_manifest_sha256": "e78f4b767023f8a5c1517d96bfab35a39482d6eee28238820a9b91ac3ea8d293",
+    "cohort_type": "CATEGORY_STRATIFIED_N5_WITH_FENCE_FERRIS_MAX_JOINT_OVERRIDES",
+    "eval_raw_categories": 1,
+    "release_raw_categories": 531,
+    "table1_manifest_sha256": "4b0360a398a5efba3532e9ca87c37bbedc5a3416783679f9f26f89e930e19644"
+  },
+  "completed_at_utc": "2026-08-24T02:16:28.549833Z",
+  "dataset": "PV-A-per-class-n5-max-joints",
+  "error_count": 0,
+  "metrics": {
+    "collision_coverage": {
+      "denominator": 5,
+      "passed": 5,
+      "rate": 1.0
+    },
+    "finite_fields": {
+      "denominator": 5,
+      "passed": 5,
+      "rate": 1.0
+    },
+    "inertia_validity": {
+      "denominator": 5,
+      "passed": 5,
+      "rate": 1.0
+    },
+    "inertial_coverage": {
+      "denominator": 5,
+      "passed": 5,
+      "rate": 1.0
+    },
+    "parse_rate": {
+      "denominator": 5,
+      "passed": 5,
+      "rate": 1.0
+    },
+    "resource_resolution": {
+      "denominator": 5,
+      "passed": 5,
+      "rate": 1.0
+    },
+    "strict_urdf_pass": {
+      "denominator": 5,
+      "passed": 5,
+      "rate": 1.0
+    },
+    "valid_joint_spec": {
+      "denominator": 5,
+      "passed": 5,
+      "rate": 1.0
+    },
+    "valid_tree": {
+      "denominator": 5,
+      "passed": 5,
+      "rate": 1.0
+    }
+  },
+  "n_eval": 5,
+  "records_missing_counted_as_failures": 0,
+  "records_present": 5,
+  "status_counts": {
+    "completed": 5
+  },
+  "strict_urdf_pass": {
+    "denominator": 5,
+    "passed": 5,
+    "rate": 1.0
+  }
+}

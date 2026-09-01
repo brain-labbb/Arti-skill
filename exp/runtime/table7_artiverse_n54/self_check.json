@@ -1,0 +1,35 @@
+{
+  "artifact_hash_scope": "required outputs except self_check.json to avoid a circular hash",
+  "artifact_hashes": {
+    "asset_records.json": "5538d084df67fb9b8950a7fac163cbb591569c1f9a2a40ac7b8706c54f1f1d7b",
+    "manifest.json": "efa6be377eb03c64f963f724ea171b1304a12f7c783ff034c6e87636869b2c73",
+    "protocol_snapshot.json": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+    "report.md": "307556623d7e185381d874a5b15b19569091a93f1ae310128f7648d0bc057274",
+    "summary.json": "6bd8a71f8376d20da87f4c1cc29d253ca5ff46b75761001d415bcb93f85d5074"
+  },
+  "checks": {
+    "all_required_outputs_exist": true,
+    "availability_conserved": true,
+    "manifest_assets_match_selection": true,
+    "mesh_component_denominator_explicit": true,
+    "parent_manifest_hash_expected": true,
+    "parent_records_hash_expected": true,
+    "protocol_hash_expected": true,
+    "protocol_snapshot_exact": true,
+    "records_are_exact_parent_subset": true,
+    "report_exactly_regenerated": true,
+    "requested_denominator_fixed": true,
+    "required_outputs_match_protocol": true,
+    "selected_id_hash_expected": true,
+    "selected_identities_unique_n54": true,
+    "selection_is_outcome_independent": true,
+    "state_partitions_conserve_assets": true,
+    "summary_exactly_reaggregated": true
+  },
+  "manifest_sha256": "efa6be377eb03c64f963f724ea171b1304a12f7c783ff034c6e87636869b2c73",
+  "protocol_id": "nano3d_table7_production_readiness_v1",
+  "protocol_sha256": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+  "schema_version": "1.0.0",
+  "selected_asset_ids_sha256": "ed2b4076dbb142d21932be3dbb715426b3d77d5c39b0c7444999d16ba8b128b6",
+  "status": "PASS"
+}

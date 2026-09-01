@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "amendment_id": "table4_constraints_v2_physx_mobility_clip_retrieval_v1",
+  "frozen_utc": "2026-08-12T09:18:00Z",
+  "status": "pre_result_frozen",
+  "scope": {
+    "panel": "fixed_dataset_retrieval_reference_supplementary",
+    "method_id": "physx_mobility_geometry_clip_retrieval_v1",
+    "method_type": "prompt_only_retrieval_from_a_fixed_released_dataset",
+    "same_prompt_generation_method": false,
+    "interpretation": "PhysX-Mobility is a fixed released dataset. This arm evaluates whether prompt-only CLIP retrieval finds an existing reference asset. It is not a generation method and must not be placed in the same-prompt generation ranking."
+  },
+  "benchmark": {
+    "prompt_manifest": "exp/reference/table4_constraints_v2/prompts.jsonl",
+    "prompt_manifest_sha256": "0b46c15c65c46550cc25654ccca10e4de87f1b97e6bde89796ea3cc9b439065e",
+    "protocol": "exp/reference/table4_constraints_v2/protocol.json",
+    "protocol_sha256": "6857194072ccb0ba3943d14a62f29c2364920ec01381a5475311535c1831031f",
+    "task_count": 18,
+    "prompt_field": "prompt",
+    "prompt_template": null,
+    "prompt_policy": "Use each exact complete English prompt. Do not rewrite, summarize, add a category, or read task specs during render or candidate selection."
+  },
+  "dataset": {
+    "id": "Caoza/PhysX-Mobility",
+    "revision": "d0768ee9e1415f6be8db78d6389ba018b85134c0",
+    "source_root": "/mnt/zsn/zsn_workspace/Ctrl-3D-trellis2-controlnet-dev/demo/physical_edit_demo/third_party/physx_mobility/extracted/PhysX_mobility",
+    "archive": "/mnt/zsn/zsn_workspace/Ctrl-3D-trellis2-controlnet-dev/demo/physical_edit_demo/third_party/physx_mobility/PhysX-Mobility.zip",
+    "archive_bytes": 937374668,
+    "archive_sha256": "88308cc2a4cc6177c59e32c2de51e881e6b961737295e5082d7ed01cca221908",
+    "local_huggingface_metadata": "/mnt/zsn/zsn_workspace/Ctrl-3D-trellis2-controlnet-dev/demo/physical_edit_demo/third_party/physx_mobility/.cache/huggingface/download/PhysX-Mobility.zip.metadata",
+    "local_huggingface_metadata_sha256": "2e9fe98c3a42737ba25d6791d39fc6aa7201cc595ea761b6023d99645479f439",
+    "license": "cc-by-nc-4.0",
+    "license_boundary": "The official Hugging Face dataset API identifies the asset release as CC-BY-NC-4.0. The pinned local archive has no license text, so local license evidence is absent and the license is externally verified. The official code repository license is separate from the dataset asset license.",
+    "provenance_evidence": "exp/baselines/physx_mobility/provenance_evidence.json",
+    "provenance_evidence_sha256": "4d43f29b1b086d969551fbcd6adbf68557bea4ee2ff8373d56ebafab57e06ecb",
+    "official_code_repository": "https://github.com/ziangcao0312/PhysX-Anything.git",
+    "official_code_commit": "e221826e6176d940905126d1894f9c1c933b70a8"
+  },
+  "source_preflight": {
+    "archive_extraction_gate": "Require exact regular-file set equality between the pinned ZIP and extraction, reject absolute, dot, parent, non-normalized, duplicate, and symlink members, reject extraction symlinks, and compare every extracted file byte-for-byte against its ZIP member before rendering.",
+    "archive_extraction_manifest": "exp/baselines/physx_mobility/archive_extraction_manifest.jsonl",
+    "source_inventory": "exp/baselines/physx_mobility/source_inventory.jsonl",
+    "source_audit": "exp/baselines/physx_mobility/source_audit.json",
+    "identity_closure": {
+      "partseg_directories": 2024,
+      "finaljson_files": 2024,
+      "base_urdf_files": 2024,
+      "candidate_intersection": 2024,
+      "finaljson_content_used_before_selection": false,
+      "finaljson_filename_existence_used_for_identity_closure": true
+    },
+    "native_render_coverage": {
+      "assets_with_precomputed_object_views": 0,
+      "candidate_assets": 2024,
+      "policy": "Existing JPG and PNG files are material textures, not object views; therefore all candidates receive the same result-independent geometry-only renderer before prompt selection."
+    },
+    "zero_pose_geometry_invariant": {
+      "base_urdfs": 2024,
+      "mesh_bearing_links": 14096,
+      "visuals": 91855,
+      "all_visual_origins_identity": true,
+      "all_mesh_scales_one": true,
+      "all_mesh_bearing_link_world_transforms_identity_at_q0": true,
+      "maximum_transform_error": 0.0,
+      "consequence": "Direct concatenation of URDF-referenced raw OBJ geometry is exactly equivalent to the official zero-pose URDF visual geometry for this frozen cohort.",
+      "formal_gate": "The snapshot builder must recheck every identity and exact aggregate counts before rendering."
+    },
+    "units_and_axes": {
+      "metric_unit": "unestablished",
+      "dimension_axis_mapping": "unestablished",
+      "conversion_to_meters": false,
+      "reason": "Official evaluation code uses max raw dimension values and official preprocessing unit-normalizes geometry, but neither establishes a metric unit nor XYZ annotation mapping."
+    }
+  },
+  "render_snapshot": {
+    "purpose": "Freeze prompt-independent image evidence before retrieval.",
+    "run1_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/physx_mobility_clip_retrieval_v1_snapshot",
+    "run1_staging_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/physx_mobility_clip_retrieval_v1_snapshot.staging",
+    "run2_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/physx_mobility_clip_retrieval_v1_snapshot_replay",
+    "run2_staging_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/physx_mobility_clip_retrieval_v1_snapshot_replay.staging",
+    "freshness": "Both final and staging roots must be absent. Each run creates a fresh staging tree and atomically renames it only after snapshot.lock.json is written last. Existing images are never resumed.",
+    "geometry_only": true,
+    "geometry_vertices_unchanged": true,
+    "geometry_policy": "Concatenate only the raw OBJ meshes referenced by each base URDF. Do not translate, rotate, normalize, rescale, or otherwise modify vertices for rendering.",
+    "camera_framing": "Use raw geometry bounds only to compute AABB center, half diagonal, orthographic half-frame = 1.15 times half diagonal, camera radius = 3.2 times half diagonal, and near/far from the same half diagonal.",
+    "views": {
+      "count": 8,
+      "azimuth_degrees": [0, 45, 90, 135, 180, 225, 270, 315],
+      "elevation_degrees": 22.5,
+      "resolution": [256, 256],
+      "scientific_reason": "Match the independent PartNet-Mobility fixed-dataset reference arm's view count and resolution so retrieval image evidence has the same view budget."
+    },
+    "appearance": {
+      "source_textures_used": false,
+      "base_color_rgba": [0.62, 0.66, 0.7, 1.0],
+      "background_rgb": [255, 255, 255],
+      "ambient_light_rgb": [0.42, 0.42, 0.42],
+      "key_directional_intensity": 2.4,
+      "fill_directional_intensity": 1.2,
+      "png_compress_level": 6
+    },
+    "forbidden_inputs": [
+      "prompt manifest or prompt text",
+      "task specs or scorer",
+      "category or part labels",
+      "dimension annotations",
+      "prior outputs or scores",
+      "source textures"
+    ],
+    "workers_run1": 4,
+    "workers_run2": 4,
+    "multiprocessing_start_method": "spawn",
+    "egl_context_policy": "The parent creates no EGL context. A one-worker spawned probe and each spawned render worker create independent EGL contexts.",
+    "physical_gpu": {
+      "index": 1,
+      "uuid": "GPU-7390aec1-d177-6672-4136-d998c85f489d",
+      "name": "NVIDIA L20X",
+      "driver_version": "570.172.08"
+    },
+    "runtime": {
+      "python": "3.13.2",
+      "numpy": "2.4.4",
+      "pillow": "12.3.0",
+      "pyrender": "0.1.45",
+      "trimesh": "4.12.2",
+      "pyopengl": "3.1.10",
+      "gl_vendor": "NVIDIA Corporation",
+      "gl_renderer": "NVIDIA L20X/PCIe/SSE2",
+      "gl_version": "4.1.0 NVIDIA 570.172.08",
+      "glsl_version": "4.10 NVIDIA via Cg compiler",
+      "egl_version": "1.5",
+      "egl_vendor": "NVIDIA",
+      "mesa_version": null
+    },
+    "thread_environment": {
+      "PYOPENGL_PLATFORM": "egl",
+      "EGL_DEVICE_ID": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "replay_gate": "Run the complete 2024-asset renderer twice from fresh roots. Candidate inventories, every PNG name/byte size/SHA-256, and render runtime fingerprints must be exactly equal before embedding."
+  },
+  "retriever": {
+    "model_id": "openai/clip-vit-base-patch32",
+    "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "implementation": "transformers.CLIPModel and transformers.CLIPProcessor, local files only",
+    "model_files_sha256": {
+      "config.json": "b575ef3c36f2a057fa19e221650105052d61cc9c1a972ec15019c6261ec98770",
+      "merges.txt": "f526393189112391ce6f9795d4695f704121ce452c3aad1f5335cc41337eba85",
+      "preprocessor_config.json": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd",
+      "pytorch_model.bin": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+      "special_tokens_map.json": "f8c0d6c39aee3f8431078ef6646567b0aba7f2246e9c54b8b99d55c22b707cbf",
+      "tokenizer.json": "b556ac8c99757ffb677208af34bc8c6721572114111a6e0aaf5fa69ff0b8d842",
+      "tokenizer_config.json": "34b7336e4bee12e0a9730eaf5189f582ef3c3eea5027f65730e5717256755aad",
+      "vocab.json": "5047b556ce86ccaf6aa22b3ffccfc52d391ea4accdab9c2f2407da5b742d4363"
+    },
+    "view_aggregation": "Encode 8 RGB views; L2-normalize each float64 view vector; arithmetic mean; L2-normalize the mean.",
+    "text_aggregation": "Encode each exact prompt once and L2-normalize its float64 vector.",
+    "score": "exact float64 dot product of normalized text and asset vectors",
+    "selection": "global top-1 over every eligible identity, with no category filter",
+    "tie_rule": "Descending exact float64 score, then ascending identity SHA-256, then ascending identity.",
+    "selected_failure_policy": "The selected rank-1 identity is fixed before materialization. A failure is reported for that task; no fallback is permitted.",
+    "device": "cuda:0 with CUDA_VISIBLE_DEVICES=1",
+    "batch_assets": 8,
+    "runtime": {
+      "python": "3.13.2",
+      "numpy": "2.4.4",
+      "torch": "2.6.0+cu124",
+      "transformers": "5.12.0",
+      "pillow": "12.3.0",
+      "torch_cuda": "12.4",
+      "cudnn": 90100,
+      "visible_device_count": 1,
+      "physical_gpu_uuid": "GPU-7390aec1-d177-6672-4136-d998c85f489d",
+      "physical_gpu_name": "NVIDIA L20X",
+      "driver_version": "570.172.08",
+      "total_memory_bytes": 150121021440,
+      "capability": [9, 0]
+    },
+    "determinism": "Seed Python, NumPy, and Torch with zero; disable TF32 and cuDNN benchmark; require deterministic algorithms. The two fresh snapshots are independently embedded and tokens, processor config, asset/text embeddings, and top-1 selections must be exactly equal."
+  },
+  "materialization_and_reporting": {
+    "attempts_per_task": 1,
+    "repair_attempts": 0,
+    "fallbacks": 0,
+    "source_scale_policy": "Use raw released OBJ/URDF coordinates with canonicalizer unit-scale parameter 1.0 solely as a source-coordinate preservation policy; make no metric claim.",
+    "hierarchy_policy": "Copy the selected source URDF and complete selected partseg tree, canonicalize the URDF, and require semantic nodes to preserve the frozen source mesh-bearing link and visual mapping.",
+    "numeric_constraints": "N/A",
+    "numeric_reason": "Official evidence does not establish dimension units or dimension-axis mapping; no Table 4 numeric scorer is run or reported.",
+    "count_proxy": "N/R",
+    "count_reason": "Source link names are structural l_N identifiers rather than frozen mappings to Table 4 semantic roles.",
+    "primary_report": "Artifact coverage and retrieval reproducibility only.",
+    "publication_boundary": "Report this fixed-dataset reference separately from generation methods. Do not substitute raw metadata, category, CLIP score, or structural node count for Table 4 constraint satisfaction."
+  },
+  "formal_paths": {
+    "output_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/physx_mobility_clip_retrieval_v1",
+    "selection_staging": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/physx_mobility_clip_retrieval_v1/.selection_staging",
+    "materialization_staging": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/physx_mobility_clip_retrieval_v1/.materialization_staging",
+    "pre_result_audit": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/physx_mobility_clip_retrieval_v1/protocol_audit_pre_result.json",
+    "audit_bootstrap": "Before formal rendering, the independent auditor alone creates output_root containing exactly protocol_audit_pre_result.json and report.md. The audit must be PASS and bind this amendment and every implementation hash."
+  },
+  "implementation": {
+    "snapshot_builder": "exp/scripts/prepare_physx_mobility_clip_retrieval_snapshot.py",
+    "snapshot_builder_sha256": "d45b98257c68de6a2d61a609168af1c92bc0fbccf64544c80e973b5aabd832b5",
+    "selector": "exp/scripts/run_physx_mobility_clip_retrieval_selection.py",
+    "selector_sha256": "25fdc69ba910a6b0f5b6178d04bd341952976eabbeb25e9b5143ddad75b53bb5",
+    "materializer": "exp/scripts/run_physx_mobility_clip_retrieval_materialize.py",
+    "materializer_sha256": "ae45490fd184bc43c4e0d531832b49badcd9b14b2e9593e3f2ee5f30979dd839",
+    "canonicalizer": "exp/scripts/canonicalize_table4_artifact.py",
+    "canonicalizer_sha256": "e46308fe8f3b653967ede6d4a75c881c012f55732542806fea2dde5003281b31",
+    "verifier": "exp/scripts/verify_physx_mobility_clip_retrieval_v1.py",
+    "verifier_sha256": "f83fe50dd8854f42deff99c10e1ad472a14b1f3c4204e4554d2be308d1a6aa89"
+  },
+  "pre_result_state": {
+    "formal_rendered_images": 0,
+    "run1_root_absent": true,
+    "run1_staging_root_absent": true,
+    "run2_root_absent": true,
+    "run2_staging_root_absent": true,
+    "output_root_absent": true,
+    "formal_execution_allowed_before_independent_pass": false
+  }
+}

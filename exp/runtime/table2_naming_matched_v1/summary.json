@@ -1,0 +1,146 @@
+{
+  "comparison_scope": {
+    "assets_per_category_per_method": 7,
+    "assets_per_method": 35,
+    "categories": [
+      "microwave",
+      "dishwasher",
+      "oven",
+      "faucet",
+      "refrigerator"
+    ],
+    "category_matched": true,
+    "equal_n": true,
+    "same_prompt": false,
+    "same_seed_semantics": false,
+    "total_assets": 140
+  },
+  "input_self_check_sha256": {
+    "Articraft": "7ec0bd0b057347416b0e844bbda86bbc99987b218d785ff2f340e71bf017badd",
+    "Infinite Mobility": "5907041a9d27471b6b933f5e16cd9ca3a1091d76a9069f21071ce01235e183a2",
+    "LAM": "5fe32629ca50255e3090d183051cea5628d23c9d46a8babada462dc76cc11278",
+    "Ours": "92dbbabb22f05453acc2515c45c2aff9084c4f89b2c2daf9047195905af5f13f"
+  },
+  "input_summary_sha256": {
+    "Articraft": "c3d60201e0a4fd40b2f995bf1d6b819ba9e9a2dca6ffef475e275b02aee636f9",
+    "Infinite Mobility": "582e58d49c7adcc02eed14c90bb43e6b257f590d5ee22aa291b9de2ff9b19c9c",
+    "LAM": "3da390bc798f826e05aa2cd1a6eb6d12e8c5141b0c1d93bfc659c2401fe7192b",
+    "Ours": "999dce2bdbe1912b862f2c627b2ac0f9118b8a63de9cf120102c5a4a3bde3ab8"
+  },
+  "methods": [
+    {
+      "assets": 35,
+      "cross_seed": {
+        "category_macro_95ci": null,
+        "exact_multiset_mode_category_macro": 0.22857142857142856,
+        "set_jaccard_category_macro": 0.3899865478436907,
+        "set_jaccard_pair_micro": 0.3899865478436907,
+        "status": "measured raw-name proxy"
+      },
+      "method": "Ours",
+      "nameability_micro": 1.0,
+      "named_parts": 172,
+      "opaque_generated_index_name_rate": null,
+      "parts_per_asset_95ci": [
+        3.4285714285714284,
+        6.485714285714286
+      ],
+      "parts_per_asset_mean": 4.914285714285715,
+      "parts_total": 172,
+      "semantic_metrics": {
+        "functional_core_coverage": null,
+        "instance_discriminability": null,
+        "naming_richness": null,
+        "over_segmentation_rate": null,
+        "reason": "No matched-cohort output-independent role gold plus three blind judge verdict sets.",
+        "semantic_precision": null,
+        "semantic_recall": null
+      },
+      "source_scope": "reusable frozen templates, seeds 0..6; visual compile"
+    },
+    {
+      "assets": 35,
+      "cross_seed": {
+        "status": "N/A: no reusable release seed identity"
+      },
+      "method": "LAM",
+      "nameability_micro": 1.0,
+      "named_parts": 289,
+      "opaque_generated_index_name_rate": null,
+      "parts_per_asset_95ci": [
+        5.428571428571429,
+        11.085714285714285
+      ],
+      "parts_per_asset_mean": 8.257142857142858,
+      "parts_total": 289,
+      "semantic_metrics": {
+        "functional_core_coverage": null,
+        "instance_discriminability": null,
+        "naming_richness": null,
+        "over_segmentation_rate": null,
+        "semantic_precision": null,
+        "semantic_recall": null
+      },
+      "source_scope": "deterministic official-release resample; not same-prompt or same-seed"
+    },
+    {
+      "assets": 35,
+      "cross_seed": {
+        "status": "N/A: no reusable release seed identity"
+      },
+      "method": "Articraft",
+      "nameability_micro": 1.0,
+      "named_parts": 215,
+      "opaque_generated_index_name_rate": null,
+      "parts_per_asset_95ci": [
+        3.6,
+        9.428571428571429
+      ],
+      "parts_per_asset_mean": 6.142857142857143,
+      "parts_total": 215,
+      "semantic_metrics": {
+        "functional_core_coverage": null,
+        "instance_discriminability": null,
+        "naming_richness": null,
+        "over_segmentation_rate": null,
+        "semantic_precision": null,
+        "semantic_recall": null
+      },
+      "source_scope": "deterministic official-release resample; not same-prompt or same-seed"
+    },
+    {
+      "assets": 35,
+      "cross_seed": {
+        "category_macro_95ci": [
+          0.7161638373791964,
+          0.8959183673469387
+        ],
+        "exact_multiset_mode_category_macro": 0.4857142857142857,
+        "set_jaccard_category_macro": 0.8133698052034963,
+        "set_jaccard_pair_micro": 0.8133698052034963,
+        "status": "measured raw-name proxy"
+      },
+      "method": "Infinite Mobility",
+      "nameability_micro": 1.0,
+      "named_parts": 431,
+      "opaque_generated_index_name_rate": 1.0,
+      "parts_per_asset_95ci": [
+        5.942857142857143,
+        22.057142857142857
+      ],
+      "parts_per_asset_mean": 12.314285714285715,
+      "parts_total": 431,
+      "semantic_metrics": {
+        "functional_core_coverage": null,
+        "instance_discriminability": null,
+        "naming_richness": null,
+        "over_segmentation_rate": null,
+        "semantic_precision": null,
+        "semantic_recall": null
+      },
+      "source_scope": "official reusable factories, seeds 0..6"
+    }
+  ],
+  "protocol_id": "nano3d_table2_naming_matched_v1",
+  "protocol_sha256": "f4c4d915ce2e1bed5c99efd9dcebb97526a7d2639ad5021e3b068c3cf6105113"
+}

@@ -1,0 +1,17 @@
+[project]
+name = "articraft-eval-pilot"
+version = "0.1.0"
+description = "Small reproducible evaluation harness for Articraft template exports"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "networkx>=3.6.1",
+    "numpy>=2.4.1",
+    "pillow>=11.0.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

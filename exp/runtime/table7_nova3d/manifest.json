@@ -1,0 +1,109 @@
+{
+  "assets": [],
+  "axis": "Table 7 Production Readiness",
+  "blocker_codes": [
+    "CLOSED_BACKEND",
+    "PAPER_ASSETS_UNRELEASED"
+  ],
+  "input_evidence": {
+    "official_app_readme": {
+      "path": "arti-skill/.cache/table6_sources/nova3d/code/app/README.md",
+      "sha256": "9471b6f8f89ce45034755893ece26d60d66d7ff7fff2ef3287630528597ba946"
+    },
+    "official_license": {
+      "path": "arti-skill/.cache/table6_sources/nova3d/code/LICENSE",
+      "sha256": "10f51bebdb241489cca901c0a4b4986667a2747cf074553971f5f65bf388fff9"
+    },
+    "official_readme": {
+      "path": "arti-skill/.cache/table6_sources/nova3d/code/README.md",
+      "sha256": "292daf0204f7ed74847fce091ca8d0f13695fa3a0a59dd154c18587b0b0f4227"
+    },
+    "table6_preflight": {
+      "path": "arti-skill/exp/runtime/table6_nova3d/preflight.json",
+      "sha256": "747434b8eb54f56a526fd99738571466f756253ef993570b2f9756336d3f7a6c"
+    },
+    "table_document": {
+      "path": "arti-skill/exp/Nano3dresults.md",
+      "sha256": "d97767fc15a7fafe6e4494e08398edece2c6a6ca5b6004486ca9768996336049"
+    }
+  },
+  "manifest_frozen_before_scoring": true,
+  "method": "Nova3D",
+  "official_checkout": {
+    "branch": "main",
+    "commit": "042ee613aa2fb745d287261eab029d42c704646e",
+    "commit_sha256_role": "canonical checkout identity",
+    "inventory": {
+      "examples_directory_present": false,
+      "final_asset_count": 0,
+      "final_asset_suffix_counts": {
+        ".blend": 0,
+        ".fbx": 0,
+        ".glb": 0,
+        ".gltf": 0,
+        ".obj": 0,
+        ".off": 0,
+        ".ply": 0,
+        ".stl": 0,
+        ".urdf": 0,
+        ".usd": 0,
+        ".usda": 0,
+        ".usdc": 0
+      },
+      "final_assets": [],
+      "scope": "official public checkout; .git excluded from asset scan",
+      "top_level_entries": [
+        {
+          "kind": "directory",
+          "path": ".git"
+        },
+        {
+          "kind": "directory",
+          "path": ".github"
+        },
+        {
+          "kind": "file",
+          "path": ".gitignore"
+        },
+        {
+          "kind": "file",
+          "path": "LICENSE"
+        },
+        {
+          "kind": "file",
+          "path": "README.md"
+        },
+        {
+          "kind": "directory",
+          "path": "app"
+        },
+        {
+          "kind": "directory",
+          "path": "blender-plugin"
+        },
+        {
+          "kind": "directory",
+          "path": "docs"
+        },
+        {
+          "kind": "directory",
+          "path": "mcp"
+        }
+      ]
+    },
+    "path": "arti-skill/.cache/table6_sources/nova3d/code",
+    "readme_backend_line": 31,
+    "readme_examples_line": 38,
+    "repository_url": "https://github.com/RareSense/Nova3D"
+  },
+  "protocol_id": "nano3d_table7_production_readiness_v1",
+  "protocol_sha256": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+  "protocol_snapshot": "arti-skill/exp/runtime/table7_nova3d/protocol_snapshot.json",
+  "schema_version": "1.0.0",
+  "selection_policy": {
+    "outcome_based_filtering": false,
+    "paper_cohort_is_not_a_local_cohort": true,
+    "reason": "no released or locally generated attributable final package",
+    "requested_assets": 0
+  }
+}

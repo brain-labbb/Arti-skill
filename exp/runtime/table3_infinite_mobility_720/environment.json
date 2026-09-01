@@ -1,0 +1,33 @@
+{
+  "child_thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "core_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table3_lam.py",
+  "core_sha256": "0da075f077ce13c78bb6b4ee66b0abe77668ccf7bb3c105660b321e667fc2acf",
+  "numpy": "2.5.1",
+  "platform": "Linux-5.10.134-19.103.al8.x86_64-x86_64-with-glibc2.39",
+  "python": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+  "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+  "python_prefix": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium",
+  "spawn_eagain_retry_policy": {
+    "backoff_multiplier": 2.0,
+    "exhaustion": "raise nonzero with running checkpoint preserved for --resume",
+    "initial_backoff_seconds": 1.0,
+    "maximum_backoff_seconds": 30.0,
+    "other_spawn_failures": "fail-closed asset and declared-joint record",
+    "popen_action": "retry the same job/run_token spawn in place",
+    "retryable_errno": 11,
+    "retryable_exception": "BlockingIOError",
+    "scope": "one shared cumulative backoff budget per run across all workers",
+    "total_backoff_wait_seconds": 1800.0
+  },
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "trimesh": "5.0.0"
+}

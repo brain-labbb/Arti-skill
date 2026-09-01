@@ -1,0 +1,36 @@
+{
+  "command": [
+    "exp/scripts/run_table4a_urdf_sketch_mobility.py",
+    "--mode",
+    "smoke",
+    "--n",
+    "5",
+    "--output-dir",
+    "exp/runtime/table4a_urdf_sketch_mobility_smoke_n5_20260821T183900Z",
+    "--resume"
+  ],
+  "created_at_utc": "2026-08-22T05:42:39.366430Z",
+  "dataset": "SketchMobility",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "10e3f78218dc5da94f24d68046884fae97d16772ca23458088490b42b36f6788",
+  "manifest_self_sha256_at_write": "5e8f2c5f741046b680f408229d84b066359d3ae523676c53b68b830680643783",
+  "mode": "smoke",
+  "outputs": {
+    "asset_records_sha256": "c109f141907b75b51597456cc2486781d16945917947929a06bc53e9a2dc3042",
+    "joint_records_sha256": "a23aeb603853a4366c4882db00633f737d1a01338f3be9ca8d54e3c6c38aad42",
+    "summary_md_sha256": "4deffa93e31ea9552daac1e5ed616f634a0a24178ed709c1acb144d026e78c65",
+    "summary_sha256": "391c4ba14103e20f480b273fd2939d90bae8f068ea7804599004ceb383d62ec8"
+  },
+  "protocol_id": "table4a-sketchmobility-table1-cohort-n800-v1",
+  "record_count": 5,
+  "status_counts": {
+    "completed": 1,
+    "error": 4,
+    "total": 5
+  },
+  "verification": {
+    "all_pass": null,
+    "note": "smoke mode: formal verification skipped"
+  },
+  "wall_seconds": 0.002
+}

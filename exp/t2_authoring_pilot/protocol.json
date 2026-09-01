@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "experiment_id": "t2_authoring_development_pilot_v1",
+  "title": "T2 template-authoring reconstruction and infrastructure pilot",
+  "scope": "development_reconstruction_pilot",
+  "claim_boundary": "This cohort validates the authoring experiment machinery on previously completed tasks. It is not fresh-task paper evidence and must not be pooled with the final unseen-task cohort.",
+  "expected_task_count": 12,
+  "expected_methods": 4,
+  "repeat_seeds": [2026080701, 2026080702, 2026080703],
+  "authoring_model": "TO_BE_FROZEN_BEFORE_PAID_RUN",
+  "model_policy": "Use the exact same provider, model identifier, sampling settings, context budget, repair budget, and shared instructions for all four arms.",
+  "authoring_budget": {
+    "max_repair_turns": 3,
+    "max_wall_seconds": 3600,
+    "max_total_tokens": 200000,
+    "human_intervention_policy": "No human edits are allowed before the final automated verdict; any intervention makes human_intervention=true."
+  },
+  "shared_context_paths": [
+    "arti-template/articraft_template_authoring/AUTHORING.md",
+    "arti-template/articraft_template_authoring/MECHANICAL_PRIORS.md",
+    "arti-template/articraft_template_authoring/VISUAL_DIVERSITY_MODEL.md",
+    "arti-template/sdk"
+  ],
+  "methods": [
+    {
+      "method_id": "naive_same_llm",
+      "display_name": "Naive same-LLM",
+      "expose_source_map": false,
+      "expose_template_design": false,
+      "description": "Raw source records plus the common authoring contract; no task SourceMap or TemplateDesign."
+    },
+    {
+      "method_id": "without_source_map",
+      "display_name": "w/o Source Map",
+      "expose_source_map": false,
+      "expose_template_design": true,
+      "description": "Raw source records and the independently frozen TemplateDesign; task SourceMap is withheld."
+    },
+    {
+      "method_id": "without_template_design",
+      "display_name": "w/o TemplateDesign / slot abstraction",
+      "expose_source_map": true,
+      "expose_template_design": false,
+      "description": "Raw source records and SourceMap; the task TemplateDesign, including slot and cross-component decisions, is withheld."
+    },
+    {
+      "method_id": "full_ours",
+      "display_name": "Full Ours",
+      "expose_source_map": true,
+      "expose_template_design": true,
+      "description": "Raw source records, SourceMap, and TemplateDesign."
+    }
+  ],
+  "distribution_protocol": {
+    "coverage_seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+    "held_boundary_slots": ["numeric_min", "numeric_max", "categorical_low", "categorical_high"],
+    "note": "The four boundary cases are explicit configs produced after the 32-seed coverage run; they are not additional pseudorandom seeds."
+  },
+  "evaluation_contract": {
+    "first_shot": "Run the common hidden evaluator on the first emitted template before any repair feedback.",
+    "final_success": "Run the same evaluator after at most max_repair_turns automated repairs.",
+    "first_shot_gates": ["template_contract", "domain_resolution", "random_16"],
+    "final_gates": ["template_contract", "domain_resolution", "random_16"],
+    "distribution_gates": ["random_36", "corner", "regression_retention"],
+    "artifact_saved_definition": "At least one evaluator seed produces a complete URDF and mesh package.",
+    "hidden_evaluator_policy": "No evaluator report, target template, target-template hash, historical output, or other arm's output is visible before a repair request is issued. Repair feedback is normalized across arms."
+  },
+  "tasks": [
+    {
+      "slug": "Bag_Suitcase_Shopping_bucket",
+      "complexity": "simple",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/Bag_Suitcase_Shopping_bucket.md",
+      "template_design": "arti-template/articraft_template_authoring/designs/Bag_Suitcase_Shopping_bucket.json",
+      "hidden_reference_template": "arti-template/agent/templates/Bag_Suitcase_Shopping_bucket.py"
+    },
+    {
+      "slug": "Urban_Environment_bucket1",
+      "complexity": "simple",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/Urban_Environment_bucket1.md",
+      "template_design": "arti-template/articraft_template_authoring/designs/Urban_Environment_bucket1.json",
+      "hidden_reference_template": "arti-template/agent/templates/Urban_Environment_bucket1.py"
+    },
+    {
+      "slug": "pictureX_0611_garlic_press",
+      "complexity": "simple",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_garlic_press.md",
+      "template_design": "arti-template/articraft_template_authoring/designs/pictureX_0611_garlic_press.json",
+      "hidden_reference_template": "arti-template/agent/templates/pictureX_0611_garlic_press.py"
+    },
+    {
+      "slug": "riot_shield",
+      "complexity": "simple",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/riot_shield.md",
+      "template_design": "arti-template/articraft_template_authoring/designs/riot_shield.json",
+      "hidden_reference_template": "arti-template/agent/templates/riot_shield.py"
+    },
+    {
+      "slug": "pictureX_0611_Dressing_table",
+      "complexity": "medium",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_Dressing_table.md",
+      "template_design": "arti-template/articraft_template_authoring/designs/pictureX_0611_Dressing_table.json",
+      "hidden_reference_template": "arti-template/agent/templates/pictureX_0611_Dressing_table.py"
+    },
+    {
+      "slug": "pictureX_0611_Garden_pruner",
+      "complexity": "medium",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_Garden_pruner.md",
+      "template_design": "arti-template/articraft_template_authoring/designs/pictureX_0611_Garden_pruner.json",
+      "hidden_reference_template": "arti-template/agent/templates/pictureX_0611_Garden_pruner.py"
+    },
+    {
+      "slug": "pictureX_0611_bi_fold_closet_door_system",
+      "complexity": "medium",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_bi_fold_closet_door_system.md",
+      "template_design": "arti-template/articraft_template_authoring/designs/pictureX_0611_bi_fold_closet_door_system.json",
+      "hidden_reference_template": "arti-template/agent/templates/pictureX_0611_bi_fold_closet_door_system.py"
+    },
+    {
+      "slug": "pictureX_0611_Hole_punch",
+      "complexity": "medium",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_Hole_punch.md",
+      "template_design": "arti-template/articraft_template_authoring/designs/pictureX_0611_Hole_punch.json",
+      "hidden_reference_template": "arti-template/agent/templates/pictureX_0611_Hole_punch.py"
+    },
+    {
+      "slug": "Household_Laundry_Clothes_drying_rack_Laundry_drying_rack",
+      "complexity": "complex",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/Household_Laundry_Clothes_drying_rack_Laundry_drying_rack.md",
+      "template_design": "arti-template/articraft_template_authoring/designs/Household_Laundry_Clothes_drying_rack_Laundry_drying_rack.json",
+      "hidden_reference_template": "arti-template/agent/templates/Household_Laundry_Clothes_drying_rack_Laundry_drying_rack.py"
+    },
+    {
+      "slug": "pictureX_0611_drawing_compass_with_adjustable_legs",
+      "complexity": "complex",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_drawing_compass_with_adjustable_legs.md",
+      "template_design": "arti-template/articraft_template_authoring/designs/pictureX_0611_drawing_compass_with_adjustable_legs.json",
+      "hidden_reference_template": "arti-template/agent/templates/pictureX_0611_drawing_compass_with_adjustable_legs.py"
+    },
+    {
+      "slug": "pictureX_0611_ergonomic_clamp_with_adjustable_components",
+      "complexity": "complex",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_ergonomic_clamp_with_adjustable_components.md",
+      "template_design": "arti-template/articraft_template_authoring/designs/pictureX_0611_ergonomic_clamp_with_adjustable_components.json",
+      "hidden_reference_template": "arti-template/agent/templates/pictureX_0611_ergonomic_clamp_with_adjustable_components.py"
+    },
+    {
+      "slug": "pictureX_0611_Hand_crank_clothes_wringer",
+      "complexity": "complex",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_Hand_crank_clothes_wringer.md",
+      "template_design": "arti-template/articraft_template_authoring/designs/pictureX_0611_Hand_crank_clothes_wringer.json",
+      "hidden_reference_template": "arti-template/agent/templates/pictureX_0611_Hand_crank_clothes_wringer.py"
+    }
+  ]
+}

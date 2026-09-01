@@ -1,0 +1,67 @@
+{
+  "protocol_id": "nano3d_infinite_mobility_hierarchy_correctness_panel_v1",
+  "baseline": "Infinite Mobility",
+  "official_repository": "https://github.com/InternRobotics/Infinite-Mobility.git",
+  "official_commit": "5f5961736fcf5b7a6e6fd0a9b3b7af586f39e151",
+  "independent_ontology": {
+    "path": "exp/reference/partnet_hierarchy_correctness_v1.json",
+    "sha256": "468eb3e8676454907468aae0e0427d2eb806a38f937682a2b414dee439f8adc4",
+    "protocol_id": "partnet_hierarchy_correctness_v1",
+    "source_repository": "https://github.com/daerduoCarey/partnet_dataset",
+    "source_commit": "f321bc9d1533945ad4b22c5c1e7b27a7cccb4edb",
+    "scoring_status": "WAIT_FOR_SHARED_SCORER"
+  },
+  "source_seed_protocol": "nano3d_infinite_mobility_seed_reliability_v1",
+  "seeds": [0, 1, 2, 3, 4, 5],
+  "categories": [
+    {
+      "category_id": "storage_furniture_cabinet",
+      "common_category": "storage furniture/cabinet",
+      "ontology_category": "storage_furniture",
+      "factory": "KitchenCabinetFactory",
+      "selection_origin": "unchanged from the frozen hierarchy paper main30"
+    },
+    {
+      "category_id": "table",
+      "common_category": "table",
+      "ontology_category": "table",
+      "factory": "TableDiningFactory",
+      "selection_origin": "unchanged from the frozen hierarchy paper main30"
+    },
+    {
+      "category_id": "refrigerator",
+      "common_category": "refrigerator",
+      "ontology_category": "refrigerator",
+      "factory": "BeverageFridgeFactory",
+      "selection_origin": "unchanged from the frozen hierarchy paper main30"
+    },
+    {
+      "category_id": "dishwasher",
+      "common_category": "dishwasher",
+      "ontology_category": "dishwasher",
+      "factory": "DishwasherFactory",
+      "selection_origin": "unchanged from the frozen hierarchy paper main30"
+    },
+    {
+      "category_id": "microwave",
+      "common_category": "microwave",
+      "ontology_category": "microwave",
+      "factory": "MicrowaveFactory",
+      "selection_origin": "replaces OvenFactory using already generated seeds 0-5 from the same frozen 720-case runtime"
+    }
+  ],
+  "asset_policy": "Reuse existing terminal packages only. Do not invoke Blender or regenerate failed assets.",
+  "role_assignment_policy": {
+    "status": "PREDICTION_ONLY_NOT_GOLD",
+    "source": "package-local data_infos_<seed>.json",
+    "linkage": "Join each URDF visual mesh basename to the unique metadata file_name; l_<index> must also agree with the mesh filename stem.",
+    "normalization": "Lowercase part_name, remove one trailing _part, map microwave_body to body, and repair the authored botton typo to button.",
+    "gold_prohibition": "Package-local metadata and factory source are generator outputs/provenance. They may assign predicted semantic roles but cannot serve as independent hierarchy gold."
+  },
+  "correctness_status": "PENDING_INDEPENDENT_GOLD",
+  "notes": [
+    "The panel freezes 30 requested assets: five categories x six seeds.",
+    "The first four categories preserve the previous paper-main selection exactly.",
+    "MicrowaveFactory seeds 0-5 are existing assets from the same source runtime, not a new run."
+  ]
+}

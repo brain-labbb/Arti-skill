@@ -1,0 +1,78 @@
+{
+  "protocol_id": "nano3d_nova3d_naming_preflight_v1.1",
+  "status": "BLOCKED",
+  "generated_at_utc": "2026-08-11T03:03:24.433965+00:00",
+  "workspace_root": "/mnt/zsn/lyb",
+  "repository_root": "/mnt/zsn/lyb/arti-skill",
+  "network_accessed": false,
+  "evaluation_policy": {
+    "urdf_part": "one link with at least one valid renderable visual geometry; multiple visuals on one link are merged",
+    "glb_part": "one mesh-bearing GLB scene node",
+    "representations_reported_separately": true,
+    "method_attribution_required": true,
+    "semantic_metrics_require_output_independent_gold_and_three_blind_judges": true,
+    "cross_seed_consistency": "N/A for per-asset Nova3D generation",
+    "paper_values_reused": false,
+    "existing_nano3d_outputs_relabelled": false
+  },
+  "search": {
+    "checkout_scope": [
+      ". (direct non-symlink directories and their git remotes)",
+      "arti-skill (direct non-symlink directories and their git remotes)",
+      "arti-skill/.cache (direct non-symlink directories and their git remotes)"
+    ],
+    "artifact_scope": [
+      "arti-skill/exp/reference (non-symlink files, depth <= 5)",
+      "arti-skill/exp/runtime (non-symlink files, depth <= 5)"
+    ],
+    "checkout_name_candidates": [
+      "nova-3d",
+      "nova3d",
+      "nova_3d"
+    ],
+    "checkout_candidates": [],
+    "matching_git_remote_configs": [],
+    "nova3d_structured_assets": [],
+    "nova3d_attributed_records": [],
+    "nova3d_manifest_candidates": []
+  },
+  "requirements": {
+    "official_checkout": false,
+    "nova3d_attributed_structured_assets": false,
+    "shared_naming_manifest": false,
+    "independent_output_blind_role_gold": false,
+    "three_complete_blind_judges": false
+  },
+  "blockers": [
+    "official Nova3D checkout or Nova3D git remote not found in the authorized workspace",
+    "no Nova3D-attributed GLB/URDF artifacts or generation records found",
+    "no shared Naming manifest attributes frozen inputs and outputs to Nova3D",
+    "no output-independent Nova3D role gold is linked to a shared artifact manifest",
+    "three complete independent blind-judge verdict sets are not available for Nova3D outputs"
+  ],
+  "metrics": {
+    "assets": 0,
+    "parts": null,
+    "named_nameability": null,
+    "semantic_precision": null,
+    "semantic_recall": null,
+    "naming_richness": null,
+    "functional_core_coverage": null,
+    "instance_discriminability": null,
+    "cross_seed_consistency": null,
+    "over_segmentation_rate": null
+  },
+  "evidence": {
+    "table_document": "arti-skill/exp/Nano3dresults.md",
+    "table_document_sha256": "c7c93a6126f79f7827b89571bccb5d437150f4c63fd1f758a6fc9b62ff0fba9f",
+    "baseline_naming_protocol": "arti-skill/exp/reference/baseline_naming_protocol_v1.json",
+    "baseline_naming_protocol_id": "nano3d_table2_baseline_naming_v1.1",
+    "baseline_naming_protocol_sha256": "4e9d90300018ea47dd0473fc09cb866656b42cdc749377e5a46fb0a9c699cb1e",
+    "blind_judge_protocol": "arti-skill/exp/reference/naming_protocol_v2.json",
+    "blind_judge_protocol_sha256": "6e8b50435b7ac30d2b96be0f882a3d59bc62108f5da19d2709ddf1dd140645e8",
+    "existing_arti_skill_manifest": "arti-skill/exp/runtime/nano3d_glb_n33/input_packages/input_manifest.json",
+    "existing_arti_skill_manifest_sha256": "4ca61644aa96f158fdee70271e218312f4e6fadb2df948692d8b1698f266b80d",
+    "existing_manifest_method": "arti-skill seed_exports / seed_exports_physics_10",
+    "existing_manifest_is_nova3d_attributed": false
+  }
+}

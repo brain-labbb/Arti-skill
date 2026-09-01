@@ -1,0 +1,190 @@
+{
+  "bootstrap_ci": {
+    "assets_per_cluster": 7,
+    "cluster_count": 5,
+    "confidence": 0.95,
+    "method": "canonical-category cluster bootstrap with replacement",
+    "nameability_category_macro": [
+      1.0,
+      1.0
+    ],
+    "nameability_micro": [
+      1.0,
+      1.0
+    ],
+    "parts_per_asset_mean": [
+      3.6,
+      9.428571428571429
+    ],
+    "resamples": 10000,
+    "seed": 260811002
+  },
+  "comparison_scope": "five-category equal-N deterministic official-release resample; not same-prompt and not same-seed",
+  "coverage": {
+    "assets_per_category": 7,
+    "canonical_categories": 5,
+    "category_names": [
+      "microwave",
+      "dishwasher",
+      "oven",
+      "faucet",
+      "refrigerator"
+    ],
+    "evaluable_assets": 35,
+    "expected_assets": 35,
+    "selected_assets": 35,
+    "status_counts": {
+      "PASS": 35
+    }
+  },
+  "cross_seed": {
+    "eligible": false,
+    "reason": "Articraft official release records expose no frozen reusable seed interface",
+    "status": "N/A",
+    "value": null
+  },
+  "direct_metrics": {
+    "assets": 35,
+    "assets_with_placeholder_parts": 0,
+    "fully_nameable_assets": 35,
+    "invalid_visual_geometries": 0,
+    "mesh_only_links": 11,
+    "mixed_links": 36,
+    "nameability_asset_macro": 1.0,
+    "nameability_category_macro": 1.0,
+    "nameability_micro": 1.0,
+    "parts_per_asset_mean": 6.142857142857143,
+    "parts_per_asset_median": 4,
+    "placeholder_renderable_parts": 0,
+    "primitive_only_links": 168,
+    "total_named_renderable_parts": 215,
+    "total_renderable_parts": 215
+  },
+  "generated_code_executed": true,
+  "generation_preflight": {
+    "credentials_or_environment_inspected": false,
+    "evidence": {
+      "external_agent_route_documented": true,
+      "readme_requires_provider_keys_for_builtin_generation": true,
+      "runner_resolves_model_and_provider": true,
+      "runner_validates_provider_credentials": true
+    },
+    "generation_attempted": false,
+    "network_accessed": false,
+    "reason": "Built-in prompt generation selects an LLM provider and validates provider credentials. The documented no-key route delegates authoring to an external AI agent, which is outside this no-new-model baseline.",
+    "source_sha256": {
+      "articraft_data/README.md": "d1144c940bc894b2cfe2cae17e41690f0c18472869856ea74dfe329ed1c295e0",
+      "articraft_data/agent/runner_cli.py": "86920541a5e268042f6efe281a59b86f63164be00ddcc0db5f01ce53904159a4"
+    },
+    "specified_common_prompt_generation_without_external_api_or_model": false,
+    "status": "BLOCKED_EXTERNAL_MODEL_REQUIRED"
+  },
+  "network_accessed": false,
+  "new_model_generation_executed": false,
+  "paper_values_reused": false,
+  "per_category": {
+    "dishwasher": {
+      "assets": 7,
+      "assets_with_placeholder_parts": 0,
+      "fully_nameable_assets": 7,
+      "invalid_visual_geometries": 0,
+      "mesh_only_links": 5,
+      "mixed_links": 6,
+      "nameability_asset_macro": 1.0,
+      "nameability_micro": 1.0,
+      "parts_per_asset_mean": 12.571428571428571,
+      "parts_per_asset_median": 13,
+      "placeholder_renderable_parts": 0,
+      "primitive_only_links": 77,
+      "total_named_renderable_parts": 88,
+      "total_renderable_parts": 88
+    },
+    "faucet": {
+      "assets": 7,
+      "assets_with_placeholder_parts": 0,
+      "fully_nameable_assets": 7,
+      "invalid_visual_geometries": 0,
+      "mesh_only_links": 0,
+      "mixed_links": 10,
+      "nameability_asset_macro": 1.0,
+      "nameability_micro": 1.0,
+      "parts_per_asset_mean": 2.7142857142857144,
+      "parts_per_asset_median": 3,
+      "placeholder_renderable_parts": 0,
+      "primitive_only_links": 9,
+      "total_named_renderable_parts": 19,
+      "total_renderable_parts": 19
+    },
+    "microwave": {
+      "assets": 7,
+      "assets_with_placeholder_parts": 0,
+      "fully_nameable_assets": 7,
+      "invalid_visual_geometries": 0,
+      "mesh_only_links": 2,
+      "mixed_links": 5,
+      "nameability_asset_macro": 1.0,
+      "nameability_micro": 1.0,
+      "parts_per_asset_mean": 6.714285714285714,
+      "parts_per_asset_median": 6,
+      "placeholder_renderable_parts": 0,
+      "primitive_only_links": 40,
+      "total_named_renderable_parts": 47,
+      "total_renderable_parts": 47
+    },
+    "oven": {
+      "assets": 7,
+      "assets_with_placeholder_parts": 0,
+      "fully_nameable_assets": 7,
+      "invalid_visual_geometries": 0,
+      "mesh_only_links": 3,
+      "mixed_links": 8,
+      "nameability_asset_macro": 1.0,
+      "nameability_micro": 1.0,
+      "parts_per_asset_mean": 4.857142857142857,
+      "parts_per_asset_median": 5,
+      "placeholder_renderable_parts": 0,
+      "primitive_only_links": 23,
+      "total_named_renderable_parts": 34,
+      "total_renderable_parts": 34
+    },
+    "refrigerator": {
+      "assets": 7,
+      "assets_with_placeholder_parts": 0,
+      "fully_nameable_assets": 7,
+      "invalid_visual_geometries": 0,
+      "mesh_only_links": 1,
+      "mixed_links": 7,
+      "nameability_asset_macro": 1.0,
+      "nameability_micro": 1.0,
+      "parts_per_asset_mean": 3.857142857142857,
+      "parts_per_asset_median": 4,
+      "placeholder_renderable_parts": 0,
+      "primitive_only_links": 19,
+      "total_named_renderable_parts": 27,
+      "total_renderable_parts": 27
+    }
+  },
+  "protocol_id": "nano3d_articraft_naming_matched_v1",
+  "provenance": {
+    "cohort_manifest_sha256": "80c2afe7b2908183b51c336e163c7225d7ec6d51e82f8cb46ae42e49d57d8096",
+    "records_sha256": "13570fec8d82e3d999dbea2a291d7112850bd583fff189393ac303e6d1f1bb2f",
+    "runner_sha256": "e2e89708f2c361b272d11b56e0683901760a88545a8e814c8da651ac31fb4cd0",
+    "source_hashes": {
+      "exp/reference/baseline_naming_protocol_v1.json": "4e9d90300018ea47dd0473fc09cb866656b42cdc749377e5a46fb0a9c699cb1e",
+      "exp/runtime/articraft_naming_v1/cohort_manifest.json": "7a49511679075c4f440b5cf35a7addac245c2a0ffdaca48a4a9618bb7c491fb4",
+      "shared_protocol": "f4c4d915ce2e1bed5c99efd9dcebb97526a7d2639ad5021e3b068c3cf6105113"
+    }
+  },
+  "semantic_metrics": {
+    "functional_core_coverage": null,
+    "instance_discriminability": null,
+    "naming_richness": null,
+    "over_segmentation_rate": null,
+    "semantic_precision": null,
+    "semantic_recall": null
+  },
+  "semantic_status": "N/A: no output-independent role gold and no three complete independent blind judges",
+  "shared_protocol_id": "nano3d_table2_naming_matched_v1",
+  "shared_protocol_sha256": "f4c4d915ce2e1bed5c99efd9dcebb97526a7d2639ad5021e3b068c3cf6105113",
+  "status": "COMPLETE"
+}

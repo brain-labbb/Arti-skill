@@ -1,0 +1,35 @@
+{
+  "command": [
+    "exp/scripts/run_urdf_table4a_artiverse.py",
+    "--mode",
+    "smoke",
+    "--n",
+    "3",
+    "--workers",
+    "3"
+  ],
+  "created_at_utc": "2026-08-19T15:27:57.518149Z",
+  "dataset": "Artiverse",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "55229742e10a304b8d4915c370005949fdeda95b64e139ccb90b0facf5243e8f",
+  "manifest_self_sha256_at_write": "3b7d16b9ab02f995f7402654f4f2d50b14e718cb331e277042d87f7cb0d7170e",
+  "mode": "smoke",
+  "outputs": {
+    "asset_records_sha256": "2d7f27eba6e67932a548b8ddd8dad5eee5ff39fdb1b48e7afccb86b720101c5e",
+    "joint_records_sha256": "3e9ecaf46296ccf7548a7db3708f8f630396c0f943c47c685c0c8667fc32ecc9",
+    "summary_md_sha256": "754109d4f6553bf016e6aad5d02b82e9aa006d225358d0d4c2f1ad9fbb718e63",
+    "summary_sha256": "6c590174ef54598807ac681fa03d89c04a3208f446bf0561b613592c6fb75fb5"
+  },
+  "protocol_id": "table4a_artiverse_table1cohort_n800_seed20260813_v1",
+  "record_count": 3,
+  "status_counts": {
+    "completed": 2,
+    "error": 1,
+    "total": 3
+  },
+  "verification": {
+    "all_pass": null,
+    "note": "smoke mode: formal verification skipped"
+  },
+  "wall_seconds": 2109.769
+}

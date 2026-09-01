@@ -1,0 +1,35 @@
+{
+  "command": [
+    "exp/scripts/run_urdf_table4a_ours_500k.py",
+    "--mode",
+    "smoke",
+    "--n",
+    "4",
+    "--workers",
+    "4"
+  ],
+  "created_at_utc": "2026-08-21T03:45:15.948052Z",
+  "dataset": "Ours-500K",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "ab91a8836a77859c7a13898210ca7f3a0d135cd54194d991f3f70194bd90223c",
+  "manifest_self_sha256_at_write": "bba4dd9a6fb9047fd8a8b38389fc397dae6dc407ba0c18d1834cf1430a378ad8",
+  "mode": "smoke",
+  "outputs": {
+    "asset_records_sha256": "8824314741ec1c409dae09962e17f6aaf13ed2f1ecae6ba070929abeb9d144d6",
+    "joint_records_sha256": "199588959dedcdc481edaa44df7294ce390eb9d0a88d64e54e7c2dede61a69e9",
+    "summary_md_sha256": "64b495cb3a6521809a3b98303e742b04c9f8b0127fb41625e90a7607caac18b5",
+    "summary_sha256": "0578faa30a2173681ab9eec5ad9fba40041a37ac21bc1bf3828126e46c5a22f1"
+  },
+  "protocol_id": "table4a_ours_500k_table2cohort_n500_v1",
+  "record_count": 4,
+  "status_counts": {
+    "completed": 4,
+    "error": 0,
+    "total": 4
+  },
+  "verification": {
+    "all_pass": null,
+    "note": "smoke mode: formal verification skipped"
+  },
+  "wall_seconds": 487.778
+}

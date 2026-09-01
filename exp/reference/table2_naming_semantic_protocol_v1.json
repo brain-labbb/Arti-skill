@@ -1,0 +1,97 @@
+{
+  "protocol_id": "nano3d_table2_naming_semantic_v1",
+  "frozen_at_utc": "2026-08-11T07:15:00Z",
+  "parent_matched_protocol": {
+    "path": "exp/reference/table2_naming_matched_protocol_v1.json",
+    "sha256": "f4c4d915ce2e1bed5c99efd9dcebb97526a7d2639ad5021e3b068c3cf6105113"
+  },
+  "semantic_gold": {
+    "path": "exp/reference/table2_naming_semantic_gold_v1.json",
+    "sha256": "4b7a7e8060a17a636d92073b8f0e31675a1ee8b87c3e3bb2100b7e8fb1f1eff2",
+    "construction": "Frozen from category definitions and public product terminology by an isolated agent that did not inspect evaluated outputs."
+  },
+  "cohort": {
+    "methods": [
+      "Ours",
+      "LAM",
+      "Articraft",
+      "Infinite Mobility"
+    ],
+    "categories": [
+      "microwave",
+      "dishwasher",
+      "oven",
+      "faucet",
+      "refrigerator"
+    ],
+    "assets_per_category_method": 7,
+    "asset_count": 140,
+    "selection": "Exactly the frozen matched Table 2 cohort; no post-outcome reselection."
+  },
+  "part_unit": "One URDF link with at least one valid renderable visual geometry, identical to the matched direct Naming evaluator.",
+  "judge_design": {
+    "judge_count": 3,
+    "judge_type": "three isolated Codex judge sessions",
+    "method_blind": true,
+    "independent_context": true,
+    "inputs": [
+      "anonymous asset and item identifiers",
+      "canonical category",
+      "URDF link name",
+      "target-highlighted context and isolated geometry previews",
+      "frozen semantic role definitions"
+    ],
+    "forbidden_inputs": [
+      "method identity",
+      "source record identity",
+      "method-level aggregate results",
+      "other judges' annotations"
+    ],
+    "allowed_name_verdicts": [
+      "spec_match",
+      "extra_real_part",
+      "invalid_or_hallucinated",
+      "uncertain"
+    ],
+    "consensus": "At least two judges must give the same non-uncertain name verdict. Required semantic fields use at least two identical votes among judges supporting that verdict.",
+    "readiness": "Headline metrics are emitted only when every task has a name-verdict consensus and every metric-specific annotation has consensus."
+  },
+  "annotation_fields": {
+    "judge_verdict": "Whether the link name truthfully identifies a required role, another real part, is opaque/incorrect, or cannot be decided.",
+    "judge_matched_role": "Required role ID for spec_match; null otherwise.",
+    "judge_geometry_role": "Role visible in geometry independent of naming: a frozen role ID, other_real_part:<short_label>, or unknown.",
+    "judge_geometry_is_real_part": "Whether highlighted geometry is a coherent physical/functional part rather than a stray fragment or artifact.",
+    "judge_instance_id": "For repeated geometry-role instances, identity actually conveyed by the name; ambiguous when not distinguished, not_applicable for singleton roles.",
+    "judge_same_semantic_part_as": "none or another node name in the same asset when both links are fragments of the same semantic part."
+  },
+  "formulas": {
+    "semantic_precision_micro": "consensus truthfully named nodes / all consensus-judged renderable nodes",
+    "semantic_recall_asset_macro": "mean over assets of min(1, consensus spec-match count for each required role) / required role count",
+    "semantic_recall_micro": "sum covered required roles / sum required roles",
+    "judge_validated_naming_richness_asset_macro": "mean over assets of consensus truthfully named nodes / required role count",
+    "judge_validated_naming_richness_micro": "sum consensus truthfully named nodes / sum required roles",
+    "functional_core_coverage_asset_macro": "mean over assets of covered required functional roles / required functional role count",
+    "functional_core_coverage_micro": "sum covered required functional roles / sum required functional roles",
+    "instance_discriminability_micro": "over geometry-role groups with at least two consensus real-part nodes, sum nodes with a distinct non-ambiguous name-conveyed instance ID / sum nodes",
+    "over_segmentation_rate_micro": "consensus same-semantic-part excess fragments / consensus geometry-real renderable nodes",
+    "over_segmentation_rate_asset_macro": "mean per-asset excess fragments / geometry-real renderable nodes"
+  },
+  "aggregation": {
+    "primary": "micro for precision, instance discriminability, and over-segmentation; asset macro for recall, richness, and functional coverage",
+    "also_report": "Both micro and asset-macro variants wherever defined, raw counts, applicability denominators, and judge agreement.",
+    "zero_applicability": "Instance discriminability is reported as null, not one, when a method has no repeated geometry-role group.",
+    "bootstrap": {
+      "resamples": 10000,
+      "confidence": 0.95,
+      "seed": 260811003,
+      "unit": "canonical category cluster; resample five categories with replacement and retain all method assets within sampled categories"
+    }
+  },
+  "interpretation_limits": [
+    "Judges are LLM agents, not human annotators; report this explicitly.",
+    "Point-cloud previews show zero-pose geometry and do not establish articulation correctness.",
+    "Semantic recall uses minimal category roles and does not penalize absent optional components.",
+    "A role fused into another link may be covered only when the link name truthfully identifies the required role or an inclusive category term under the frozen gold.",
+    "Cross-seed consistency is a separate direct-output metric and is not inferred from semantic judgments."
+  ]
+}

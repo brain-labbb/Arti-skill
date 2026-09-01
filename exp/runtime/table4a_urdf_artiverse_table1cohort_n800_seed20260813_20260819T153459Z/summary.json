@@ -1,0 +1,129 @@
+{
+  "classification": "FORMAL",
+  "cohort": {
+    "j_eval": 3875,
+    "n_eval": 800,
+    "ordered_ids_sha256": "118038a746cafb91251afde5eb4f1164915d141acb3b529ea721a9d376bde3fa",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_artiverse_table1_n800_20260814/frozen_manifest.json",
+    "source_manifest_sha256": "0e69335a3d1574a1e1510124ade6e743cfd66fe894c1da3816b072954c75aedb"
+  },
+  "completed_at_utc": "2026-08-19T21:59:57.159279Z",
+  "dataset": "Artiverse",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "4aeda0c4db358be1c92d60f12f60baf4837d9996aa4c195a81f46df31e0bfd89",
+  "metrics": {
+    "collision_safe_dof_retention": {
+      "denominator": 3875,
+      "numerator": 2256,
+      "percent": 58.2194
+    },
+    "dof_bins": {
+      "0": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      },
+      "1": {
+        "joints_intended": 170,
+        "joints_passed": 109,
+        "n_eval": 170,
+        "safe": 103,
+        "strict_pass": 108
+      },
+      "2--3": {
+        "joints_intended": 858,
+        "joints_passed": 500,
+        "n_eval": 363,
+        "safe": 492,
+        "strict_pass": 102
+      },
+      "4--7": {
+        "joints_intended": 979,
+        "joints_passed": 522,
+        "n_eval": 196,
+        "safe": 514,
+        "strict_pass": 37
+      },
+      ">=8": {
+        "joints_intended": 1868,
+        "joints_passed": 1147,
+        "n_eval": 71,
+        "safe": 1147,
+        "strict_pass": 7
+      },
+      "unknown/unparseable": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      }
+    },
+    "executable_cf_dof_per_asset": {
+      "mean": 2.82,
+      "median": 1.0,
+      "n_assets": 800,
+      "p90": 5.0,
+      "total_safe_dof": 2256
+    },
+    "joint_level_full_range_cf": {
+      "denominator": 3875,
+      "numerator": 2278,
+      "percent": 58.7871
+    },
+    "limit_reachability": {
+      "continuous_excluded": 133,
+      "denominator": 3742,
+      "numerator": 2217,
+      "percent": 59.2464
+    },
+    "normalized_clearance_p5": {
+      "asset_coverage": {
+        "denominator": 800,
+        "numerator": 595,
+        "percent": 74.375
+      },
+      "coverage_status": "PARTIAL",
+      "reason": "genesis_contact_penetration_has_no_signed_clearance_no_independent_exact_distance_backend_registered",
+      "state_coverage": {
+        "denominator": 81375,
+        "numerator": 58548,
+        "percent": 71.9484
+      },
+      "status": "N/E"
+    },
+    "state_counts": {
+      "executed": 58548,
+      "hash_cross_check": {
+        "mismatch": 0,
+        "no_reference": 0,
+        "verified": 58548
+      },
+      "intended": 81375
+    },
+    "status_counts": {
+      "completed": 595,
+      "error": 205,
+      "total": 800
+    }
+  },
+  "mode": "formal",
+  "notes": [
+    "Joint-level Full-range CF reuses the exact frozen Table 4 single-joint sweep states (K=21, endpoints included, other joints q=0); per-state q-vector hashes are cross-checked against Table 4 state_records where available.",
+    "State collision oracle = Genesis contact-penetration backend (genesis_contact_penetration_v1), direct kinematic detection only, illegal iff eligible-pair penetration > 1e-6 m.",
+    "Headline pair policy = distinct source links excluding direct parent-child; no method-specific allowance.",
+    "Normalized Clearance P5 is N/E under this oracle (no signed clearance for separated pairs; no independent exact-distance backend registered).",
+    "Existing Strict Collision Pass values in DoF bins are historical Table 4 (PyBullet) results reported alongside, not re-executed."
+  ],
+  "protocol_id": "table4a_artiverse_table1cohort_n800_seed20260813_v1",
+  "run_directory": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4a_urdf_artiverse_table1cohort_n800_seed20260813_20260819T153459Z",
+  "started_at_utc": "2026-08-19T15:35:00.916445Z",
+  "status_counts": {
+    "completed": 595,
+    "error": 205,
+    "total": 800
+  },
+  "wall_seconds": 23096.165
+}

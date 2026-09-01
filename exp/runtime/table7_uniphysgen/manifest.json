@@ -1,0 +1,105 @@
+{
+  "assets": [],
+  "audit_type": "frozen_official_release_static_audit",
+  "blockers": [
+    {
+      "evidence": "The exhaustive checkout inventory contains no executable method source or inference entrypoint.",
+      "id": "RUNNABLE_CODE_UNRELEASED"
+    },
+    {
+      "evidence": "The exhaustive checkout inventory contains no checkpoint or weight payload.",
+      "id": "COMPATIBLE_CHECKPOINT_UNRELEASED"
+    },
+    {
+      "evidence": "The checkout defines no prediction/final-package schema or dependency contract.",
+      "id": "OUTPUT_PACKAGE_CONTRACT_UNRELEASED"
+    },
+    {
+      "evidence": "No tracked or local checkout file is a candidate URDF/USD/SDF/MJCF or mesh-bearing final simulation package.",
+      "id": "FINAL_SIMULATION_PACKAGE_UNAVAILABLE"
+    }
+  ],
+  "evaluation_axis": "Table 7 Production Readiness",
+  "frozen_input": {
+    "table6_preflight": "arti-skill/exp/runtime/table6_uniphysgen/preflight.json",
+    "table6_preflight_sha256": "f34188f6e8265b9c2c4e9bf1915ce02f16d5a518b9dde65561e053ee9c88128c"
+  },
+  "interpretation": "NOT_AN_EXPERIMENTAL_ZERO",
+  "method": "UniPhysGen",
+  "official_checkout": {
+    "attributable_final_simulation_packages": [],
+    "branch": "main",
+    "checkpoint_candidates": [],
+    "clean_worktree": true,
+    "expected_placeholder_files": [
+      ".gitignore",
+      "LICENSE",
+      "README.md"
+    ],
+    "git_status_porcelain": [],
+    "head_commit": "742d4e6170ee132144880afb374dac2c1bc46c8a",
+    "head_matches_table6_pin": true,
+    "local_path": "arti-skill/.cache/table6_sources/uniphysgen/repo",
+    "output_contract_candidates": [],
+    "release_placeholder": true,
+    "runnable_code_candidates": [],
+    "simulation_package_candidates": [],
+    "table6_pinned_head": "742d4e6170ee132144880afb374dac2c1bc46c8a",
+    "tracked_file_count": 3,
+    "tracked_files": [
+      {
+        "bytes": 4628,
+        "git_blob_oid": "83972fadc2724842e111d0d3e2829a59ae3d3f45",
+        "git_mode": "100644",
+        "path": ".gitignore",
+        "sha256": "fe07aeae2cfd1ff2ce4c0c5911dfbb550a3f1065e213175039abadfc3a5a15bb"
+      },
+      {
+        "bytes": 11357,
+        "git_blob_oid": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+        "git_mode": "100644",
+        "path": "LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      {
+        "bytes": 71,
+        "git_blob_oid": "eca8a10e1d0eac87d4dda85b07d6831a8e98e3fd",
+        "git_mode": "100644",
+        "path": "README.md",
+        "sha256": "f4b1bd0a9994eb830b0acbbb7dbf81aa0be7f8638b22fddb72fc3335594f0424"
+      }
+    ],
+    "worktree_file_count_excluding_git": 3,
+    "worktree_files_excluding_git": [
+      {
+        "bytes": 4628,
+        "path": ".gitignore",
+        "sha256": "fe07aeae2cfd1ff2ce4c0c5911dfbb550a3f1065e213175039abadfc3a5a15bb"
+      },
+      {
+        "bytes": 11357,
+        "path": "LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      {
+        "bytes": 71,
+        "path": "README.md",
+        "sha256": "f4b1bd0a9994eb830b0acbbb7dbf81aa0be7f8638b22fddb72fc3335594f0424"
+      }
+    ]
+  },
+  "paper_value_policy": "No paper-reported value is substituted for a local Table 7 measurement.",
+  "protocol_id": "nano3d_table7_production_readiness_v1",
+  "protocol_snapshot": "exp/runtime/table7_uniphysgen/protocol_snapshot.json",
+  "protocol_snapshot_sha256": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+  "schema_version": "1.0.0",
+  "selection_policy": {
+    "available_assets": 0,
+    "geometry_evaluable_assets": 0,
+    "outcome_based_reselection": false,
+    "package_evaluable_assets": 0,
+    "reason": "No official final simulation package was released or locally generated.",
+    "requested_assets": 0
+  },
+  "status": "RELEASE_BLOCKED"
+}

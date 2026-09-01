@@ -1,0 +1,105 @@
+{
+  "command": [
+    "exp/scripts/run_urdf_table4a_articraft10k.py",
+    "--mode",
+    "formal",
+    "--workers",
+    "12"
+  ],
+  "created_at_utc": "2026-08-19T22:38:07.736226Z",
+  "dataset": "Articraft-10K",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "baca350a7bc423746f2bbcd4a658c205f36256cc765832a3d655608fb9293467",
+  "manifest_self_sha256_at_write": "b037978591645e7aefbeb6ca55da2c80c88358f6257011293a5497598fd6faf7",
+  "mode": "formal",
+  "outputs": {
+    "asset_records_sha256": "89d6a0bdc6ea16c3e8a7dda1f1d91240e9b74f5688bffad07ccbedefda431d16",
+    "joint_records_sha256": "5c6025dd700c9500ea8d94ad191796577d2d93f355d492457b619949a7910238",
+    "summary_md_sha256": "cf108adce4f396867703c043e0929319211988ef9e223397c93082ca50aa2044",
+    "summary_sha256": "3412beac05a9da63b322f4562706414d23ff25faf0a54ecc15309d764d408217"
+  },
+  "protocol_id": "table4a_articraft10k_table2cohort_n800_v1",
+  "record_count": 800,
+  "status_counts": {
+    "completed": 776,
+    "error": 24,
+    "total": 800
+  },
+  "verification": {
+    "all_pass": true,
+    "check_count": 14,
+    "checks": [
+      {
+        "check": "source_manifest_file_sha256",
+        "detail": "6b4275cf3da29244af70c04acecd87094f0c158dee992db20b04e90c05292c20",
+        "pass": true
+      },
+      {
+        "check": "ordered_ids_sha256",
+        "detail": "8417b0874f111bfe16b63c2702358ea501ced723b22fd328c9ad21e80e6115de",
+        "pass": true
+      },
+      {
+        "check": "table2_cohort_file_sha256",
+        "detail": "13c47e2b2affadb951a01cab826bae139852fca5769e99ec081cc916ffa6373d",
+        "pass": true
+      },
+      {
+        "check": "cohort_is_exact_table2_sample",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "record_count",
+        "detail": "800",
+        "pass": true
+      },
+      {
+        "check": "frozen_order_preserved",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "j_eval_denominator",
+        "detail": "2865",
+        "pass": true
+      },
+      {
+        "check": "retention_denominator",
+        "detail": "2865",
+        "pass": true
+      },
+      {
+        "check": "urdf_identity_matches_frozen_manifest",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "state_hash_cross_check_no_mismatch",
+        "detail": "{'verified': 16191, 'mismatch': 0, 'no_reference': 41517}",
+        "pass": true
+      },
+      {
+        "check": "state_intended_count",
+        "detail": "60165",
+        "pass": true
+      },
+      {
+        "check": "category_mapping_sha256",
+        "detail": "0305569f49d2aa1acb72fbb7bc8dcaf68ca3dd4a5bd7eba140b5bac4c8c0f449",
+        "pass": true
+      },
+      {
+        "check": "category_records_revision",
+        "detail": "677ca9722427dce500873730255874c8c3f07eb2",
+        "pass": true
+      },
+      {
+        "check": "aggregate_recomputation_matches",
+        "detail": "",
+        "pass": true
+      }
+    ]
+  },
+  "wall_seconds": 6369.845
+}

@@ -1,0 +1,1777 @@
+{
+  "classification": "INCOMPLETE",
+  "dataset_order": [
+    "articraft_10k",
+    "lam_released_outputs",
+    "artiverse",
+    "partnet_mobility",
+    "physx_mobility",
+    "sketchmobility",
+    "infinigen_sim",
+    "pva"
+  ],
+  "datasets": [
+    {
+      "classification": "COMPLETE",
+      "dataset_name": "Articraft-10K",
+      "dataset_slug": "articraft_10k",
+      "declared_scalar_dof_count": 593,
+      "declared_trajectory_joint_count": 415,
+      "failure_reason_counts": {
+        "genesis": {
+          "DIAGNOSTIC_FAILURE": 4,
+          "PASS": 195,
+          "WORKER_ERROR": 1
+        },
+        "mujoco": {
+          "DIAGNOSTIC_FAILURE": 16,
+          "PASS": 184
+        },
+        "pybullet": {
+          "DIAGNOSTIC_FAILURE": 4,
+          "PASS": 196
+        }
+      },
+      "n": 200,
+      "table5a": {
+        "dof_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 593,
+          "passed": 590,
+          "percentage": 99.49409780775717
+        },
+        "import_success": {
+          "bootstrap_95_ci_percentage": [
+            95.5,
+            99.5
+          ],
+          "denominator": 200,
+          "passed": 196,
+          "percentage": 98.0
+        },
+        "limit_violation_p95": {
+          "candidate_units": 415,
+          "coverage_percentage": 100.0,
+          "evaluated_units": 415,
+          "median": 0.8768872065148514,
+          "p95": 24.945321582533744,
+          "p95_asset_cluster_bootstrap_95_ci": [
+            21.257897406816486,
+            145.7242503397258
+          ],
+          "sample_count": 415,
+          "unit": "percent_joint_range"
+        },
+        "stable_rollout": {
+          "bootstrap_95_ci_percentage": [
+            95.0,
+            99.5
+          ],
+          "denominator": 200,
+          "passed": 195,
+          "percentage": 97.5
+        },
+        "tracking_nrmse_p95": {
+          "candidate_units": 415,
+          "coverage_percentage": 100.0,
+          "evaluated_units": 415,
+          "median": 18.002647774092186,
+          "p95": 76.91486995762861,
+          "p95_asset_cluster_bootstrap_95_ci": [
+            76.91549914015256,
+            144.14028947584893
+          ],
+          "sample_count": 415,
+          "unit": "percent_joint_range"
+        },
+        "trajectory_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 415,
+          "passed": 415,
+          "percentage": 100.0
+        }
+      },
+      "table5b": {
+        "genesis": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 593,
+            "passed": 590,
+            "percentage": 99.49409780775717
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 3295,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 3295,
+            "median": 1.1905254246824868e-06,
+            "p95": 1.8440187998247215e-05,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              1.5267230873655674e-05,
+              2.870578315631865e-05
+            ],
+            "sample_count": 3295,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 3295,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 3295,
+            "median": 7.2445096183544e-06,
+            "p95": 3.4363726387495736e-05,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              3.6287616962591076e-05,
+              6.375351403689249e-05
+            ],
+            "sample_count": 3295,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              96.0,
+              99.5
+            ],
+            "denominator": 200,
+            "passed": 196,
+            "percentage": 98.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              95.0,
+              99.5
+            ],
+            "denominator": 200,
+            "passed": 195,
+            "percentage": 97.5
+          }
+        },
+        "mujoco": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 593,
+            "passed": 564,
+            "percentage": 95.10961214165262
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 3295,
+            "coverage_percentage": 90.44006069802731,
+            "evaluated_units": 2980,
+            "median": 0.0,
+            "p95": 7.884708996333704e-15,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              7.829040142025003e-15,
+              1.1196508323362521e-14
+            ],
+            "sample_count": 2980,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 3295,
+            "coverage_percentage": 90.44006069802731,
+            "evaluated_units": 2980,
+            "median": 0.0,
+            "p95": 0.0,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              0.0,
+              0.0
+            ],
+            "sample_count": 2980,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              88.5,
+              95.49999999999999
+            ],
+            "denominator": 200,
+            "passed": 184,
+            "percentage": 92.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              88.0,
+              95.49999999999999
+            ],
+            "denominator": 200,
+            "passed": 184,
+            "percentage": 92.0
+          }
+        },
+        "pybullet": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 593,
+            "passed": 593,
+            "percentage": 100.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 3295,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 3295,
+            "median": 1.0581758355621927e-06,
+            "p95": 3.6959596579783713e-06,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              4.809377342665877e-06,
+              5.2714610385338296e-06
+            ],
+            "sample_count": 3295,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 3295,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 3295,
+            "median": 0.0,
+            "p95": 9.195423586105976e-06,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              1.3675832227191082e-05,
+              1.5835142153691186e-05
+            ],
+            "sample_count": 3295,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              96.0,
+              99.5
+            ],
+            "denominator": 200,
+            "passed": 196,
+            "percentage": 98.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              96.0,
+              99.5
+            ],
+            "denominator": 200,
+            "passed": 196,
+            "percentage": 98.0
+          }
+        }
+      },
+      "trusted_terminal_records": {
+        "genesis": 200,
+        "mujoco": 200,
+        "pybullet": 200
+      }
+    },
+    {
+      "classification": "INCOMPLETE",
+      "dataset_name": "LAM released outputs",
+      "dataset_slug": "lam_released_outputs",
+      "declared_scalar_dof_count": 467,
+      "declared_trajectory_joint_count": 379,
+      "failure_reason_counts": {
+        "genesis": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        },
+        "mujoco": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        },
+        "pybullet": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        }
+      },
+      "n": 200,
+      "table5a": {
+        "dof_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 467,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "import_success": {
+          "bootstrap_95_ci_percentage": [
+            0.0,
+            0.0
+          ],
+          "denominator": 200,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "limit_violation_p95": {
+          "candidate_units": 379,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "stable_rollout": {
+          "bootstrap_95_ci_percentage": [
+            0.0,
+            0.0
+          ],
+          "denominator": 200,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "tracking_nrmse_p95": {
+          "candidate_units": 379,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "trajectory_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 379,
+          "passed": 0,
+          "percentage": 0.0
+        }
+      },
+      "table5b": {
+        "genesis": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 467,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 3065,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 3065,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "mujoco": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 467,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 3065,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 3065,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "pybullet": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 467,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 3065,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 3065,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        }
+      },
+      "trusted_terminal_records": {
+        "genesis": 0,
+        "mujoco": 0,
+        "pybullet": 0
+      }
+    },
+    {
+      "classification": "INCOMPLETE",
+      "dataset_name": "Artiverse",
+      "dataset_slug": "artiverse",
+      "declared_scalar_dof_count": 635,
+      "declared_trajectory_joint_count": 600,
+      "failure_reason_counts": {
+        "genesis": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        },
+        "mujoco": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        },
+        "pybullet": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        }
+      },
+      "n": 200,
+      "table5a": {
+        "dof_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 635,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "import_success": {
+          "bootstrap_95_ci_percentage": [
+            0.0,
+            0.0
+          ],
+          "denominator": 200,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "limit_violation_p95": {
+          "candidate_units": 600,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "stable_rollout": {
+          "bootstrap_95_ci_percentage": [
+            0.0,
+            0.0
+          ],
+          "denominator": 200,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "tracking_nrmse_p95": {
+          "candidate_units": 600,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "trajectory_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 600,
+          "passed": 0,
+          "percentage": 0.0
+        }
+      },
+      "table5b": {
+        "genesis": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 635,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5300,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5300,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "mujoco": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 635,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5300,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5300,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "pybullet": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 635,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5300,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5300,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        }
+      },
+      "trusted_terminal_records": {
+        "genesis": 0,
+        "mujoco": 0,
+        "pybullet": 0
+      }
+    },
+    {
+      "classification": "INCOMPLETE",
+      "dataset_name": "PartNet-Mobility",
+      "dataset_slug": "partnet_mobility",
+      "declared_scalar_dof_count": 639,
+      "declared_trajectory_joint_count": 396,
+      "failure_reason_counts": {
+        "genesis": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        },
+        "mujoco": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        },
+        "pybullet": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        }
+      },
+      "n": 200,
+      "table5a": {
+        "dof_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 639,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "import_success": {
+          "bootstrap_95_ci_percentage": [
+            0.0,
+            0.0
+          ],
+          "denominator": 200,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "limit_violation_p95": {
+          "candidate_units": 396,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "stable_rollout": {
+          "bootstrap_95_ci_percentage": [
+            0.0,
+            0.0
+          ],
+          "denominator": 200,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "tracking_nrmse_p95": {
+          "candidate_units": 396,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "trajectory_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 396,
+          "passed": 0,
+          "percentage": 0.0
+        }
+      },
+      "table5b": {
+        "genesis": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 639,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "mujoco": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 639,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "pybullet": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 639,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        }
+      },
+      "trusted_terminal_records": {
+        "genesis": 0,
+        "mujoco": 0,
+        "pybullet": 0
+      }
+    },
+    {
+      "classification": "INCOMPLETE",
+      "dataset_name": "PhysX-Mobility",
+      "dataset_slug": "physx_mobility",
+      "declared_scalar_dof_count": 479,
+      "declared_trajectory_joint_count": 479,
+      "failure_reason_counts": {
+        "genesis": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        },
+        "mujoco": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        },
+        "pybullet": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        }
+      },
+      "n": 200,
+      "table5a": {
+        "dof_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 479,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "import_success": {
+          "bootstrap_95_ci_percentage": [
+            0.0,
+            0.0
+          ],
+          "denominator": 200,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "limit_violation_p95": {
+          "candidate_units": 479,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "stable_rollout": {
+          "bootstrap_95_ci_percentage": [
+            0.0,
+            0.0
+          ],
+          "denominator": 200,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "tracking_nrmse_p95": {
+          "candidate_units": 479,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "trajectory_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 479,
+          "passed": 0,
+          "percentage": 0.0
+        }
+      },
+      "table5b": {
+        "genesis": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 479,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5405,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5405,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "mujoco": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 479,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5405,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5405,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "pybullet": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 479,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5405,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5405,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        }
+      },
+      "trusted_terminal_records": {
+        "genesis": 0,
+        "mujoco": 0,
+        "pybullet": 0
+      }
+    },
+    {
+      "classification": "INCOMPLETE",
+      "dataset_name": "SketchMobility",
+      "dataset_slug": "sketchmobility",
+      "declared_scalar_dof_count": 410,
+      "declared_trajectory_joint_count": 292,
+      "failure_reason_counts": {
+        "genesis": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        },
+        "mujoco": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        },
+        "pybullet": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        }
+      },
+      "n": 200,
+      "table5a": {
+        "dof_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 410,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "import_success": {
+          "bootstrap_95_ci_percentage": [
+            0.0,
+            0.0
+          ],
+          "denominator": 200,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "limit_violation_p95": {
+          "candidate_units": 292,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "stable_rollout": {
+          "bootstrap_95_ci_percentage": [
+            0.0,
+            0.0
+          ],
+          "denominator": 200,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "tracking_nrmse_p95": {
+          "candidate_units": 292,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "trajectory_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 292,
+          "passed": 0,
+          "percentage": 0.0
+        }
+      },
+      "table5b": {
+        "genesis": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 410,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 1415,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 1415,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "mujoco": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 410,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 1415,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 1415,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "pybullet": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 410,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 1415,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 1415,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        }
+      },
+      "trusted_terminal_records": {
+        "genesis": 0,
+        "mujoco": 0,
+        "pybullet": 0
+      }
+    },
+    {
+      "classification": "INCOMPLETE",
+      "dataset_name": "Infinigen-Sim",
+      "dataset_slug": "infinigen_sim",
+      "declared_scalar_dof_count": 813,
+      "declared_trajectory_joint_count": 813,
+      "failure_reason_counts": {
+        "genesis": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        },
+        "mujoco": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        },
+        "pybullet": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        }
+      },
+      "n": 200,
+      "table5a": {
+        "dof_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 813,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "import_success": {
+          "bootstrap_95_ci_percentage": [
+            0.0,
+            0.0
+          ],
+          "denominator": 200,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "limit_violation_p95": {
+          "candidate_units": 813,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "stable_rollout": {
+          "bootstrap_95_ci_percentage": [
+            0.0,
+            0.0
+          ],
+          "denominator": 200,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "tracking_nrmse_p95": {
+          "candidate_units": 813,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "trajectory_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 813,
+          "passed": 0,
+          "percentage": 0.0
+        }
+      },
+      "table5b": {
+        "genesis": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 813,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "mujoco": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 813,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "pybullet": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 813,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        }
+      },
+      "trusted_terminal_records": {
+        "genesis": 0,
+        "mujoco": 0,
+        "pybullet": 0
+      }
+    },
+    {
+      "classification": "INCOMPLETE",
+      "dataset_name": "Ours (PV-A)",
+      "dataset_slug": "pva",
+      "declared_scalar_dof_count": 827,
+      "declared_trajectory_joint_count": 628,
+      "failure_reason_counts": {
+        "genesis": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        },
+        "mujoco": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        },
+        "pybullet": {
+          "MISSING_OR_UNTRUSTED_RECORD": 200
+        }
+      },
+      "n": 200,
+      "table5a": {
+        "dof_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 827,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "import_success": {
+          "bootstrap_95_ci_percentage": [
+            0.0,
+            0.0
+          ],
+          "denominator": 200,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "limit_violation_p95": {
+          "candidate_units": 628,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "stable_rollout": {
+          "bootstrap_95_ci_percentage": [
+            0.0,
+            0.0
+          ],
+          "denominator": 200,
+          "passed": 0,
+          "percentage": 0.0
+        },
+        "tracking_nrmse_p95": {
+          "candidate_units": 628,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "trajectory_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 628,
+          "passed": 0,
+          "percentage": 0.0
+        }
+      },
+      "table5b": {
+        "genesis": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 827,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5115,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5115,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "mujoco": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 827,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5115,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5115,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "pybullet": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 827,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5115,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5115,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              0.0,
+              0.0
+            ],
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        }
+      },
+      "trusted_terminal_records": {
+        "genesis": 0,
+        "mujoco": 0,
+        "pybullet": 0
+      }
+    }
+  ],
+  "prepared_cohort_sha256": "5c50d54434d3b64a3fb373a1ef2e90de076e724063b9b86f0bd66232f74deb31",
+  "prepared_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_v2_articraft_diagnostic_resample_20260830/prepared/manifest.json",
+  "prepared_manifest_sha256": "5f047c147f25d18dad21b1c7402893b2794ba6f4f31dd2ea6521ec6503b0a5e4",
+  "protocol_sha256": "18e782b59d8ff0469e40d7a8e4ea6773e4db3fb03d64c79a5125736aa6b3832b",
+  "schema_version": "table5_v2_aggregate_v3",
+  "summary_sha256": "f2ff2ec0b244afe6f4137f89d2581c3e0f4aa5d337b8b689b649de23dbdaae4a"
+}

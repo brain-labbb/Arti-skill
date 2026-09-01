@@ -1,0 +1,175 @@
+{
+  "created_utc": "2026-08-06T06:42:26.739650+00:00",
+  "protocol": "nano3d_editability_reduced_v1",
+  "schema_version": 1,
+  "scope": "6 templates x 3 edit kinds x seeds 0-15",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "source_edit_policy": "read-only; wrappers and outputs are exp-local",
+  "source_template_root": "/mnt/zsn/lyb/arti-skill/arti-template",
+  "templates": [
+    {
+      "component": {
+        "field": "drawer_front",
+        "target": "drawer front hardware"
+      },
+      "parameter": {
+        "factor": 1.1,
+        "field": "body_width_m",
+        "max": 1.299,
+        "target": "carcass width"
+      },
+      "slug": "pictureX_0611_Dressing_table",
+      "stem": "picturex_0611_dressing_table",
+      "structure": {
+        "field": "drawer_count",
+        "target": "number of drawers"
+      },
+      "target_tokens": [
+        "drawer",
+        "vanity__body"
+      ]
+    },
+    {
+      "component": {
+        "field": "leaf_face",
+        "target": "leaf face"
+      },
+      "parameter": {
+        "factor": 1.1,
+        "field": "opening_width_m",
+        "max": 2.45,
+        "target": "opening width"
+      },
+      "slug": "pictureX_0611_bi_fold_closet_door_system",
+      "stem": "picturex_0611_bi_fold_closet_door_system",
+      "structure": {
+        "field": "bifold_pair_count",
+        "target": "folding leaf pair count"
+      },
+      "target_tokens": [
+        "leaf",
+        "door",
+        "panel",
+        "closet"
+      ]
+    },
+    {
+      "component": {
+        "field": "grip_style",
+        "target": "operator grip"
+      },
+      "parameter": {
+        "factor": 1.1,
+        "field": "base_width_m",
+        "max": 0.3,
+        "target": "base width"
+      },
+      "slug": "pictureX_0611_juicer_press_with_handle",
+      "stem": "pictureX_0611_juicer_press_with_handle",
+      "structure": {
+        "field": "base_support_count",
+        "target": "base support count"
+      },
+      "target_tokens": [
+        "grip",
+        "handle",
+        "actuator",
+        "support",
+        "foot",
+        "mount"
+      ]
+    },
+    {
+      "component": {
+        "field": "handle_build",
+        "target": "handle build"
+      },
+      "parameter": {
+        "factor": 1.1,
+        "field": "tool_length_m",
+        "max": 0.259,
+        "target": "tool length"
+      },
+      "slug": "pictureX_0611_Garden_pruner",
+      "stem": "picturex_0611_garden_pruner",
+      "structure": {
+        "field": "spring_stage_count",
+        "target": "spring stage count"
+      },
+      "target_tokens": [
+        "handle",
+        "spring",
+        "catch",
+        "blade",
+        "jaw"
+      ]
+    },
+    {
+      "component": {
+        "field": "tray_head",
+        "target": "tray head"
+      },
+      "parameter": {
+        "factor": 1.1,
+        "field": "clamp_throat_m",
+        "max": 0.059,
+        "target": "clamp throat"
+      },
+      "slug": "pictureX_0611_ergonomic_clamp_with_adjustable_components",
+      "stem": "picturex_0611_ergonomic_clamp_with_adjustable_components",
+      "structure": {
+        "field": "clamp_form",
+        "target": "clamp form"
+      },
+      "target_tokens": [
+        "tray",
+        "arm",
+        "clamp",
+        "screw",
+        "cam"
+      ]
+    },
+    {
+      "component": {
+        "field": "feed_module",
+        "target": "feed module"
+      },
+      "parameter": {
+        "factor": 1.1,
+        "field": "roller_length_m",
+        "max": 0.419,
+        "target": "roller length"
+      },
+      "slug": "pictureX_0611_Hand_crank_clothes_wringer",
+      "stem": "picturex_0611_hand_crank_clothes_wringer",
+      "structure": {
+        "field": "roller_count",
+        "target": "roller count"
+      },
+      "target_tokens": [
+        "roller",
+        "feed",
+        "apron",
+        "shelf",
+        "crank"
+      ]
+    }
+  ]
+}

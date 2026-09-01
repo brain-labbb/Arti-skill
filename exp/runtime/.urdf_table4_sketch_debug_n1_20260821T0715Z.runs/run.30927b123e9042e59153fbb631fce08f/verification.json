@@ -1,0 +1,34 @@
+{
+  "check_count": 20,
+  "checks": {
+    "all_live_packages_match": true,
+    "artifact_manifest_closes": true,
+    "checkpoint_complete": true,
+    "checkpoint_readable": true,
+    "classification_consistent": true,
+    "exact_upstream_cohort": false,
+    "formal_runtime_identity": true,
+    "frozen_state_denominators": true,
+    "item_order_and_upstream_bindings": false,
+    "manifest_readable": true,
+    "manifest_self_hash": true,
+    "pair_policy_receipt_readable": true,
+    "pair_policy_semantics": true,
+    "protocol_identity": true,
+    "record_and_state_semantic_closure": true,
+    "report_matches_reaggregation": true,
+    "source_snapshots_match": true,
+    "summary_matches_reaggregation": true,
+    "summary_readable": true,
+    "summary_reaggregation_available": true
+  },
+  "errors": {
+    "exact_upstream_cohort": "FileNotFoundError: [Errno 2] No such file or directory: '/mnt/zsn/lyb/arti-skill/exp/runtime/.urdf_table4_sketch_debug_n1_20260821T0715Z.runs/exp'",
+    "item_order_and_upstream_bindings": "upstream cohort unavailable"
+  },
+  "formal_evaluation": false,
+  "manifest_content_sha256": "b089d387377c5b80c651cd4cb472001108425070e433ce114f147a0469407d3b",
+  "passed_check_count": 18,
+  "schema_version": "table4-sketch-mobility-verification/v1",
+  "status": "FAIL"
+}

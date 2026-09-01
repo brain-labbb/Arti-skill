@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "retrieved_utc": "2026-08-12T09:13:43Z",
+  "dataset": {
+    "id": "Caoza/PhysX-Mobility",
+    "official_api": "https://huggingface.co/api/datasets/Caoza/PhysX-Mobility",
+    "official_api_response_sha256": "755ad14e8be418fe2542749d914335c868e9f9918397b0adadc567f437da8065",
+    "revision": "d0768ee9e1415f6be8db78d6389ba018b85134c0",
+    "last_modified": "2025-12-11T03:31:43.000Z",
+    "public": true,
+    "gated": false,
+    "license": "cc-by-nc-4.0",
+    "license_evidence": "official Hugging Face dataset API tags and cardData",
+    "license_local_archive_status": "license text absent from the pinned local archive; license is externally verified, not inferred from archive contents"
+  },
+  "archive": {
+    "path": "/mnt/zsn/zsn_workspace/Ctrl-3D-trellis2-controlnet-dev/demo/physical_edit_demo/third_party/physx_mobility/PhysX-Mobility.zip",
+    "bytes": 937374668,
+    "sha256": "88308cc2a4cc6177c59e32c2de51e881e6b961737295e5082d7ed01cca221908",
+    "official_resolve_revision": "d0768ee9e1415f6be8db78d6389ba018b85134c0",
+    "official_resolve_x_linked_size": 937374668,
+    "official_resolve_x_linked_etag": "88308cc2a4cc6177c59e32c2de51e881e6b961737295e5082d7ed01cca221908",
+    "local_huggingface_metadata": {
+      "path": "/mnt/zsn/zsn_workspace/Ctrl-3D-trellis2-controlnet-dev/demo/physical_edit_demo/third_party/physx_mobility/.cache/huggingface/download/PhysX-Mobility.zip.metadata",
+      "sha256": "2e9fe98c3a42737ba25d6791d39fc6aa7201cc595ea761b6023d99645479f439",
+      "exact_lines": [
+        "d0768ee9e1415f6be8db78d6389ba018b85134c0",
+        "88308cc2a4cc6177c59e32c2de51e881e6b961737295e5082d7ed01cca221908",
+        "1785855923.371339"
+      ]
+    }
+  },
+  "official_code": {
+    "repository": "https://github.com/ziangcao0312/PhysX-Anything.git",
+    "commit": "e221826e6176d940905126d1894f9c1c933b70a8",
+    "commit_tree": "b7c4268d93b8ab1cecbad816f99a92cf749099fb",
+    "commit_date": "2026-04-28T18:54:38+08:00",
+    "evidence_from_local_git_objects": true,
+    "worktree_checkout_status": "files absent at freeze time; evidence read from immutable commit objects",
+    "files": {
+      "LICENSE": "68547d681a125a219b114aaa50464f8365d60f2d2949cdfc099477dab5d3af34",
+      "dataset/1voxel_mobility.py": "db24f80e230f8f2e3d2f53fd575b47fdfd180252d2cd80d3440bf56a51a6e7bc",
+      "dataset_toolkits/blender_script/render_mobility.py": "4c8d0ee0660f26163ee1c00ad5cdbf422751df06e02eceab989499ed27b404ad",
+      "dataset_toolkits/render_cond_mobility.py": "35287323951a562cad8e4f0dfa44657eba16e5e6c4a227c36ccc9211a083d0e1",
+      "evaluation_phy.py": "00aff423dc89447d9cd8a452c715e125d6efdac5dc880875dd59281a53eab60c"
+    },
+    "code_license_boundary": "The repository LICENSE governs official code. Dataset asset licensing is reported separately from the official dataset card."
+  },
+  "units_and_axes": {
+    "metric_unit": "unestablished",
+    "dimension_axis_mapping": "unestablished",
+    "evidence": "evaluation_phy.py compares max raw dimension values only; dataset/1voxel_mobility.py performs unit-cube normalization and a 90-degree X rotation but does not recover metric scale or establish XYZ annotation order",
+    "table4_numeric_policy": "N/A",
+    "conversion_to_meters": false
+  }
+}

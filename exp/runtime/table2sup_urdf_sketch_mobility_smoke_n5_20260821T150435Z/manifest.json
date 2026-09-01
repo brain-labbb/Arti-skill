@@ -1,0 +1,134 @@
+{
+  "classification": "SMOKE",
+  "created_at_utc": "2026-08-21T15:04:51.712817Z",
+  "dataset": "SketchMobility",
+  "evaluator": {
+    "numpy_version": "2.4.4",
+    "protocol_version": "lam-supplementary-static/v1.2",
+    "python_executable": "/mnt/zsn/miniconda3/bin/python",
+    "python_version": "3.13.2",
+    "static_module": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_static.py",
+    "static_module_sha256": "4701415dad8a5c0a434c16887979bcb70c250ba0b25772014e8db73789098e5f",
+    "trimesh_version": "4.12.2"
+  },
+  "execution": {
+    "asset_timeout_seconds": 120.0,
+    "fresh_child_per_asset": true,
+    "placeholder_registry": [],
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "workers": 4
+  },
+  "items": [
+    {
+      "asset_id": "data/Shape2Motion/Kettle/kettle_0057",
+      "category": "Shape2Motion/Kettle",
+      "dataset_id": "data/Shape2Motion/Kettle/kettle_0057",
+      "expected_movable_joints": 1,
+      "expected_package_content_manifest_sha256": "b1e55aa48e8120a9e94e82d4400881054adf749c2cbcf09b7dcb7a0d301c1eae",
+      "expected_urdf_sha256": "150fb5b16442ad363223d045fcddfa385d1d164851c6f37602a1c5cb64602711",
+      "frozen_joint_spec_count": 1,
+      "package": "/mnt/zsn/lyb/arti-skill/exp/SketchMobility/data/Shape2Motion/Kettle/kettle_0057",
+      "selection_index": 0,
+      "selection_rank": 1,
+      "source": "Shape2Motion",
+      "table3_declared_joint_count": 1,
+      "urdf_relative_path": "mobility.urdf"
+    },
+    {
+      "asset_id": "data/PartNeXt/Bottle/bottle_0324",
+      "category": "PartNeXt/Bottle",
+      "dataset_id": "data/PartNeXt/Bottle/bottle_0324",
+      "expected_movable_joints": 1,
+      "expected_package_content_manifest_sha256": "d8280714d2bc3af9f3a745113e138ecc04a6e28e1b483fab0dabd92becbfac6f",
+      "expected_urdf_sha256": "eafed2717ff28f68ab86702d4ef9e93c3ae7f3b641e8b67518da2f6a73ba664b",
+      "frozen_joint_spec_count": 1,
+      "package": "/mnt/zsn/lyb/arti-skill/exp/SketchMobility/data/PartNeXt/Bottle/bottle_0324",
+      "selection_index": 1,
+      "selection_rank": 2,
+      "source": "PartNeXt",
+      "table3_declared_joint_count": 1,
+      "urdf_relative_path": "mobility.urdf"
+    },
+    {
+      "asset_id": "data/PartNeXt/Monitor/monitor_0169",
+      "category": "PartNeXt/Monitor",
+      "dataset_id": "data/PartNeXt/Monitor/monitor_0169",
+      "expected_movable_joints": 1,
+      "expected_package_content_manifest_sha256": "49477b9b1aa7810cf4cde127a9bf94eeb9154d9c0e56848d6f93274c43085245",
+      "expected_urdf_sha256": "eae14203572e94ff555449a9487fbfe7f735db31b6338305a6da62fa36cbbd16",
+      "frozen_joint_spec_count": 1,
+      "package": "/mnt/zsn/lyb/arti-skill/exp/SketchMobility/data/PartNeXt/Monitor/monitor_0169",
+      "selection_index": 2,
+      "selection_rank": 3,
+      "source": "PartNeXt",
+      "table3_declared_joint_count": 1,
+      "urdf_relative_path": "mobility.urdf"
+    },
+    {
+      "asset_id": "data/PartNeXt/Bottle/bottle_0339",
+      "category": "PartNeXt/Bottle",
+      "dataset_id": "data/PartNeXt/Bottle/bottle_0339",
+      "expected_movable_joints": 1,
+      "expected_package_content_manifest_sha256": "5b45c95b49dae181a19869484df406bde9f4d7f3b140e75e313b2c7dcc45a05c",
+      "expected_urdf_sha256": "9333913c002a0cd49c389db4184649faba7056042e99fb9d66093a8785498bae",
+      "frozen_joint_spec_count": 1,
+      "package": "/mnt/zsn/lyb/arti-skill/exp/SketchMobility/data/PartNeXt/Bottle/bottle_0339",
+      "selection_index": 3,
+      "selection_rank": 4,
+      "source": "PartNeXt",
+      "table3_declared_joint_count": 1,
+      "urdf_relative_path": "mobility.urdf"
+    },
+    {
+      "asset_id": "data/PartNeXt/Bucket/bucket_0099",
+      "category": "PartNeXt/Bucket",
+      "dataset_id": "data/PartNeXt/Bucket/bucket_0099",
+      "expected_movable_joints": 1,
+      "expected_package_content_manifest_sha256": "db7b58ebcf724b12dc2b4a1e939163750267a0ea7e12906feb638623198b2eb5",
+      "expected_urdf_sha256": "1f06d837200bf017e44614cbfe7be4aae06ada885506521ef22743d711cfd94d",
+      "frozen_joint_spec_count": 1,
+      "package": "/mnt/zsn/lyb/arti-skill/exp/SketchMobility/data/PartNeXt/Bucket/bucket_0099",
+      "selection_index": 4,
+      "selection_rank": 5,
+      "source": "PartNeXt",
+      "table3_declared_joint_count": 1,
+      "urdf_relative_path": "mobility.urdf"
+    }
+  ],
+  "manifest_content_sha256": "001e7cf894b20f409571b9a57e9f798470b470abd12ce25ae420f238b93d8a51",
+  "mode": "smoke",
+  "protocol_id": "table2-supplementary-sketchmobility-table1-cohort-n800-v1",
+  "protocol_snapshot_sha256": "c8f547e7d72dad46f9878358c8b24bfc53c32bc1269313c9b776ca824180ce59",
+  "schema_version": "table2sup-sketchmobility/v1",
+  "selection": {
+    "full_cohort_ordered_asset_ids_sha256": "a88506e1da8e7e8b61a740965dea2faba4e9ab8280f47417e17550024b6dde17",
+    "j_eval": 5,
+    "n_eval": 5,
+    "ordered_asset_ids_sha256": "d30c2c324fa081c6143ed78401c4902a3daaca4292fb070f70afa2b596821386",
+    "policy": "exact frozen Table 4 order; smoke uses prefix only"
+  },
+  "source": {
+    "dataset_root": "/mnt/zsn/lyb/arti-skill/exp/SketchMobility",
+    "table2_manifest_sha256": "0be3e21f079bd86ba9ab680f1d709dd676b623bea01d8e43a3db85943a64a8e5",
+    "table2_records_sha256": "03b6d5e0d335052f123664a7a85dcdbc33ffbad8143ffb4bb62560e9b44ea2d1",
+    "table3_manifest_sha256": "0f90fbdec03cf4be69dc2b870b2aa7eaa3c00de93e49c005394e402907276f4a",
+    "table3_records_sha256": "13124125cbdef565efc95c7526e052576aead73fa6499d7b0b81bcc0490a24f7",
+    "table4_asset_records_sha256": "6b51d10a094bea63d20829cf16a4a4034b5cbe31ebdc3852617fc7690ebed58a",
+    "table4_manifest_content_sha256": "a4dd5597daa79170880f517d0e0058cd58f8828037ff14b0ae9e5515cf967904",
+    "table4_manifest_file_sha256": "71b895dea4c9ce220825928a89205a05cb7875e2bfce6372687a52eee596de17",
+    "table4_manifest_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/.urdf_table4_sketch_mobility_table1cohort_n800_20260821T090554Z.runs/run.d8f094e4cc5441bd8da7830c48f26608/manifest.json",
+    "table4_state_records_sha256": "91a1b9b676436f5ff753c0fec6f1dfcc9f4e1c32b60cad1172c14f1ce5c12a40"
+  },
+  "source_snapshots": {
+    "exp/scripts/lam_supplementary_static.py": "4701415dad8a5c0a434c16887979bcb70c250ba0b25772014e8db73789098e5f",
+    "exp/scripts/run_table2sup_urdf_sketch_mobility.py": "644c641d3fd95fc4cb4b0cd212cd75a5689fb0fa15334b603e740cf021ac05a2",
+    "exp/scripts/run_urdf_table2sup_partnet_mobility.py": "0c00a1c4d0be55016a4b56d5913621bc2ffae2aab0dd1c27db30e4e64f32c1bc",
+    "exp/scripts/sketchmobility_supplementary_common.py": "c2bdfbb064dc72abf950ccba79caf389b78c38d5e3849d24213c699e7af739ff",
+    "exp/scripts/verify_table2sup_urdf_sketch_mobility.py": "5ce853590f061f336f5280c90e1906a04dafa072769801f33e7bd8c1191e3d46"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "protocol": "nano3d_hierarchy_paper_equivalent_v1",
+  "paper_source": "Nova3D arXiv:2607.22738v1, Section 7.2 and Table 10",
+  "representation": "URDF-equivalent mapping; not the paper's native GLB evaluator",
+  "mapping": {
+    "scene_node": "named URDF link",
+    "flat_depth": 1,
+    "semantic_depth": "maximum named-link root-to-leaf path length; root counts as 1",
+    "unnamed_wrapper_collapse": "not applicable: URDF links must be named",
+    "named_group": "named link with children and no visual geometry",
+    "pivot": "named non-fixed URDF joint",
+    "has_tree": "valid tree and semantic_depth > 1"
+  },
+  "selected_assets": {
+    "asset_count": 33,
+    "valid_tree_count": 33,
+    "has_tree_count": 33,
+    "has_tree_rate": 1,
+    "semantic_depth_mean": 3.121212121212121,
+    "semantic_depth_min": 2,
+    "semantic_depth_max": 6,
+    "named_groups_mean": 0.06060606060606061,
+    "named_groups_total": 2,
+    "pivots_mean": 5.636363636363637,
+    "pivots_total": 186
+  },
+  "cross_seed_supplement": {
+    "cohort_count": 33,
+    "multi_seed_cohort_count": 23,
+    "single_seed_cohort_count": 10,
+    "multi_seed_record_count": 261,
+    "raw_edge_signature_mode_rate_mean": 0.278804347826087,
+    "pairwise_raw_edge_exact_rate_mean": 0.14437137173710063,
+    "claim": "supplementary raw-topology stability only; variable-topology legality is not scored"
+  },
+  "unsupported_by_paper_protocol": {
+    "parent_child_edge_f1": "paper explicitly does not score provable nesting correctness",
+    "hierarchy_exact_match": "paper has no hierarchy gold comparison metric",
+    "semantic_nesting_accuracy": "paper dropped the LLM-judge correctness rung",
+    "formal_cross_seed_consistency": "paper reports no cross-seed hierarchy metric"
+  }
+}

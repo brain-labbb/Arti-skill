@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "protocol": "nano3d_source_derived_constraints_v1",
+  "evaluation_unit": "frozen existing-template seed package",
+  "cohort": "33 templates x seeds 0-35 = 1,188 final URDF packages",
+  "categories": {
+    "count": "For assets with structured design JSON, select applicable category_anchors from resolved config and require each declared exact_count/count_from role as a one-to-one matched visual-bearing URDF-link lower bound. This does not detect extra decomposition.",
+    "numeric": "For every movable URDF joint, require a finite non-zero axis and, for revolute/prismatic joints, finite ordered lower/upper limits.",
+    "relational": "For applicable structured design-JSON anchors, require each declared parent-role/child-role joint relation, joint type, and declared axis in the final URDF.",
+    "interface": "Per seed, require a valid connected URDF tree, resolvable mesh references, and a passing strict compiler policy gate. This is an operational interface-integrity proxy, not mating-surface metrology.",
+    "kinematic": "Per seed, require motion-QC collision_free=true, no missing required joint edges or poses, and every reported joint edge covered.",
+    "compatibility": "Per seed, require the resolved valid configuration to pass strict Full-QC. This measures valid-combination acceptance only.",
+    "invalid_combination_rejection": "Unsupported in v1: no independently frozen negative configuration manifest and no uniform invalid-config injection API."
+  },
+  "matching": "Reuse naming_protocol_v2 global maximum-cardinality role assignment for count; relation roles use frozen token-subset matching against final URDF link names.",
+  "axis_tolerance": {
+    "minimum_norm": 1e-09,
+    "direction_cosine": 0.999
+  },
+  "inputs": [
+    "exp/reference/naming_gold_v2.json",
+    "exp/reference/naming_sources/designs/*.json referenced by naming_gold_v2",
+    "exp/runtime/nano3d_seed_reliability/templates/*/outcomes.json",
+    "exp/runtime/nano3d_seed_reliability/qc_artifacts/*/seed_*/model.urdf"
+  ],
+  "limitations": [
+    "Source-derived evidence is not an independent hidden benchmark spec.",
+    "Count constraints cover only structured design-JSON assets, are required-role lower bounds, and do not detect extra decomposition.",
+    "Numeric constraints validate URDF joint values, not target dimensions from geometry.",
+    "Relational constraints cover only assets with structured required_relations in copied design JSON.",
+    "Interface and compatibility are operational proxies and partially depend on existing strict QC.",
+    "Results are not directly comparable to the paper's 52 hidden GLB constraints."
+  ]
+}

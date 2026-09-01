@@ -1,0 +1,87 @@
+{
+  "config": {
+    "batch_size": 128,
+    "data_dir": "/mnt/zsn/lyb/arti-skill/articraft_data/picture",
+    "dataset_format": "picture",
+    "device": "cuda:0",
+    "expected_views": 16,
+    "force_extract": false,
+    "model_name_or_path": "/root/.cache/huggingface/hub/models--openai--clip-vit-base-patch32/snapshots/3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "num_workers": 16,
+    "output_dir": "/mnt/zsn/lyb/arti-skill/exp/runtime/articraft_picture_clip_vit_b32",
+    "plot_dpi": 180,
+    "random_state": 42,
+    "requested_perplexity": 30.0,
+    "tsne_jobs": 8,
+    "tsne_max_iter": 1000,
+    "tsne_verbose": 0,
+    "use_amp": true
+  },
+  "dataset": {
+    "category_count": 54,
+    "image_count": 914,
+    "leaf_subcategory_count": 451,
+    "semantic_category_count": 53,
+    "semantic_leaf_subcategory_count": 305,
+    "semantic_taxonomy_node_count": 358,
+    "subcategory_count": 451,
+    "taxonomy_node_count": 505,
+    "unmapped_batch_image_count": 347
+  },
+  "feature_cache_reused": true,
+  "feature_manifest": {
+    "data_dir": "/mnt/zsn/lyb/arti-skill/articraft_data/picture",
+    "dtype": "float32",
+    "extraction": {
+      "amp": true,
+      "batch_size": 128,
+      "device": "cuda:0",
+      "encoder_label": "CLIP ViT-B/32",
+      "feature_dim": 512,
+      "feature_source": "visual_projection",
+      "model_name_or_path": "/root/.cache/huggingface/hub/models--openai--clip-vit-base-patch32/snapshots/3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+      "model_type": "clip",
+      "num_workers": 8,
+      "sample_count": 914
+    },
+    "feature_dim": 512,
+    "feature_file": "image_features.npy",
+    "model_fingerprint": "1820ec13bca1c4e2c727adf4f97f0de249039e55e90593a2e47dd22f648650a9",
+    "model_name_or_path": "/root/.cache/huggingface/hub/models--openai--clip-vit-base-patch32/snapshots/3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "sample_count": 914,
+    "sample_fingerprint": "6f55c612a08a584fa974897b58b3f9006b49bd3df0d14eebb02718c0b59cec50",
+    "schema_version": 1
+  },
+  "schema_version": 1,
+  "visualization": {
+    "artifacts": {
+      "image_class_index": "image_tsne_class_index.csv",
+      "image_coordinates": "image_tsne_coordinates.csv",
+      "image_plot_by_category": "image_tsne_by_category.png",
+      "image_plot_by_subcategory": "image_tsne_by_subcategory.png",
+      "image_plot_by_subcategory_grouped": "image_tsne_by_subcategory_grouped.png"
+    },
+    "category_count": 54,
+    "dataset_format": "picture",
+    "displayed_grouped_subcategory_label_count": 13,
+    "displayed_subcategory_label_count": 451,
+    "encoder_label": "CLIP ViT-B/32",
+    "image_count": 914,
+    "image_tsne": {
+      "max_iter": 1000,
+      "n_jobs": 8,
+      "pca_components": 50,
+      "perplexity": 30.0,
+      "random_state": 42
+    },
+    "leaf_subcategory_count": 451,
+    "schema_version": 1,
+    "semantic_category_count": 53,
+    "semantic_leaf_subcategory_count": 305,
+    "semantic_taxonomy_node_count": 358,
+    "subcategory_count": 451,
+    "subcategory_label_min_count": 5,
+    "taxonomy_node_count": 505,
+    "unmapped_batch_image_count": 347
+  }
+}

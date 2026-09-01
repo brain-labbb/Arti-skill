@@ -1,0 +1,41 @@
+{
+  "datasets": [
+    "pva"
+  ],
+  "intent_count": 156,
+  "manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_tipover_eligible_20260831/pva/manifest.json",
+  "manifest_sha256": "297e3a3c14a8b9ce696a9f2c8e0ed706785e904e09193ec446a70f74ee2f670e",
+  "protocol_sha256": "5abe4976f3bd9554365699366bebbe2eba76d52c00da8dd6ca6c88e6f8041e84",
+  "runs": [
+    {
+      "complete": true,
+      "dataset_name": "Ours (PV-A)",
+      "dataset_slug": "pva",
+      "effective_workers": 4,
+      "intent_count": 156,
+      "launched_or_retained_count": 156,
+      "metric_denominator": 156,
+      "metric_pass_counts": {
+        "actuation": 0,
+        "constraint_drift": 0,
+        "limit_enforcement": 0,
+        "load": 0,
+        "reset": 0,
+        "settling": 0,
+        "simulator_pass": 0
+      },
+      "requested_workers": 4,
+      "resumed_count": 0,
+      "simulator": "genesis",
+      "terminal_count": 156,
+      "terminal_status_counts": {
+        "completed": 156
+      }
+    }
+  ],
+  "schema_version": "table5_n200_runtime_summary_v1",
+  "simulators": [
+    "genesis"
+  ],
+  "terminal_count": 156
+}

@@ -1,0 +1,279 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "nano3d_table6_artiverse_articulation_reference_v1",
+  "status": "FROZEN_DESIGN_NOT_EXECUTED",
+  "method": "Artiverse",
+  "role": "pre-release real-data reference; excluded from generated-method rankings",
+  "release": {
+    "data_root": "exp/artiverse/data",
+    "chunk_manifest": "exp/artiverse/dataset_chunks/manifest.json",
+    "chunk_manifest_sha256": "8fa6468254a1f74c58f0c25699598bf88f622fabdaf74f0cd9268ee5663c5586",
+    "readme": "exp/artiverse/README.md",
+    "readme_sha256": "2033582ef71f0b12bb15ca2a61d56edcf07414db5e7c3fe5437f6132ec4fea73",
+    "release_state": "pre-release subset under active verification",
+    "declared_model_count": 3544,
+    "declared_file_count": 531937,
+    "declared_input_bytes": 86992752890,
+    "declared_category_count": 84,
+    "declared_source_count": 10,
+    "declared_chunk_count": 2,
+    "chunk_sha256": {
+      "artiverse_data-00001-of-00002.tar.gz": "695d2d602faafab922ce66359ea104d81505f5b0fdee8f461d8905f0ccb4ef3b",
+      "artiverse_data-00002-of-00002.tar.gz": "56dffa50f1c8c20d3b1eef626046805a6c7cd997141e8ab5fac9ebdae8ffab81"
+    }
+  },
+  "readiness_gate": {
+    "fail_closed": true,
+    "requirements": [
+      "chunk manifest SHA-256 matches the frozen value",
+      "manifest declares exactly 3544 unique model roots, 531937 files, and 86992752890 input bytes",
+      "manifest declares exactly 84 categories, 10 sources, and 2 chunks",
+      "every declared model root exists and no extra category/source/model root is present",
+      "the extracted data tree contains exactly 531937 regular non-symlink files totaling 86992752890 bytes",
+      "each frozen chunk exists and matches its declared SHA-256 for a paper-final run"
+    ],
+    "on_failure": "write readiness evidence only; do not freeze a cohort or report Table 6 scores"
+  },
+  "native_package_contract": {
+    "model_root": "data/{category}/{source}/{model_id}",
+    "required_direct_files": [
+      "{model_id}.segmented.glb",
+      "{model_id}.articulations.json",
+      "material.json"
+    ],
+    "required_direct_directories": [
+      "urdf_w_collider"
+    ],
+    "required_urdf_count": 1,
+    "optional_files": [
+      "mass_furniture_heuristic.json"
+    ],
+    "payload_is_read_only": true,
+    "no_collision_or_inertial_repair": true
+  },
+  "denominators": {
+    "release_asset": "one unique model root in the frozen chunk manifest",
+    "annotation_record": "one raw object in articulations.json::articulations, including fixed/free marker records",
+    "semantic_joint": "one unique pid with at least one supported motion-bearing annotation after composite grouping",
+    "semantic_dof": "scalar degrees of freedom implied by a semantic joint after the frozen type policy",
+    "exported_movable_joint_element": "one non-fixed URDF joint element",
+    "exported_scalar_dof": "one scalar executable coordinate in the URDF export",
+    "motion_intent_asset": "one asset identity frozen into the N=100 cohort before any load, contact, or FCL outcome",
+    "motion_evaluable_asset": "one frozen motion-intent asset whose native collision package and all required joint trajectories are supported by the evaluator",
+    "collision_state": "one recorded native-package configuration; absence of collision geometry never counts as collision-free"
+  },
+  "joint_type_policy": {
+    "aliases": {
+      "rotation": "revolute",
+      "translation": "prismatic"
+    },
+    "fixed": {
+      "semantic_dof": 0,
+      "motion_denominator": false
+    },
+    "free": {
+      "semantic_dof": 0,
+      "motion_denominator": false,
+      "state": "FREE_MARKER_NOT_6DOF",
+      "reason": "the released official renderer maps free to fixed and released free records can lack axes and ranges; this protocol does not invent six executable DoFs"
+    },
+    "multi_dof": {
+      "semantic_dof": null,
+      "motion_denominator": false,
+      "state": "RAW_UNSUPPORTED_MOTION_RECORD",
+      "reason": "the release renderer defines no deterministic scalar-coordinate schema for this label; keep it in the raw-record/type inventory and do not invent a DoF count"
+    },
+    "revolute": {
+      "semantic_dof": 1,
+      "expected_urdf": [
+        "revolute"
+      ]
+    },
+    "continuous": {
+      "semantic_dof": 1,
+      "expected_urdf": [
+        "continuous"
+      ],
+      "evaluation_range_rad": [
+        -3.141592653589793,
+        3.141592653589793
+      ]
+    },
+    "prismatic": {
+      "semantic_dof": 1,
+      "expected_urdf": [
+        "prismatic"
+      ]
+    },
+    "screw": {
+      "semantic_dof": 1,
+      "expected_urdf": [
+        "revolute"
+      ],
+      "coupling": "rotation and translation are one coupled coordinate",
+      "standard_urdf_execution": "projection_only_unless_artiverse_screw_pitch_and_translation_extension_is_applied",
+      "motion_state_without_extension": "not_evaluable"
+    },
+    "cylindrical": {
+      "semantic_dof": 2,
+      "expected_urdf": [
+        "prismatic",
+        "continuous"
+      ],
+      "mapping": "one annotation pid may map to two proxy URDF joints; count one semantic joint, two semantic DoFs, and two exported movable joint elements"
+    },
+    "universal": {
+      "semantic_dof": 2,
+      "expected_urdf": [
+        "revolute",
+        "revolute"
+      ],
+      "mapping": "explicit universal records, or exactly two revolute records sharing one pid, map to two ordered scalar coordinates; missing second-axis/origin/range metadata is not repaired"
+    },
+    "composite_grouping": {
+      "key": "pid",
+      "precedence": [
+        "screw",
+        "cylindrical",
+        "universal",
+        "continuous",
+        "revolute",
+        "prismatic"
+      ],
+      "derived_cylindrical": "the same pid containing both revolute and prismatic records and no explicit higher-precedence composite",
+      "free_with_supported_motion": "ignore the free marker for DoF counting but retain it in raw annotation-record diagnostics"
+    }
+  },
+  "annotation_to_urdf_audit": {
+    "purpose": "release self-consistency and export fidelity diagnostics only",
+    "not_accuracy_gold": true,
+    "mapping_keys": [
+      "URDF joint attribute artiverse_pid",
+      "URDF joint attribute artiverse_original_type",
+      "fallback joint name joint_{pid}_to_* recorded as heuristic"
+    ],
+    "coordinate_note": "annotation axes/origins are Y-up; the released renderer applies a +90 degree X rotation for Z-up use",
+    "origin_comparison": "do not compare raw origins by a single global rotation when URDF origins are parent-link-relative; a full frame reconstruction is required",
+    "reported_diagnostics": [
+      "semantic joint to exported element mapping coverage",
+      "expected composite decomposition coverage",
+      "axis metadata presence and finite nonzero rate",
+      "origin metadata presence and finite rate",
+      "declared range presence and finite ordered rate",
+      "parent/base and graphParentByPid structural consistency"
+    ],
+    "forbidden_claims": [
+      "joint type accuracy against the source annotation",
+      "joint recall against the source annotation",
+      "semantic parent-child accuracy against the source annotation",
+      "axis, origin, or limit accuracy without independent gold"
+    ]
+  },
+  "full_release_static_audit": {
+    "cohort": "all 3544 frozen manifest roots",
+    "cpu_only": true,
+    "metrics": [
+      "core package availability",
+      "annotation JSON parseability and type distribution",
+      "annotation records, semantic joints, and semantic DoFs",
+      "URDF XML parseability, connected acyclic tree, and movable exported DoFs",
+      "annotation-to-URDF mapping diagnostics",
+      "visual and collision element coverage",
+      "all referenced collision mesh paths resolve to nonempty files",
+      "positive finite mass and inertia-diagonal coverage",
+      "material and heuristic-mass sidecar presence"
+    ],
+    "static_motion_eligibility": [
+      "core package complete and parseable",
+      "at least one semantic joint",
+      "at least one exported scalar DoF",
+      "all visual-bearing links have native collision geometry",
+      "all collision mesh references resolve to nonempty native files",
+      "semantic-joint to exported-element mapping is complete"
+    ]
+  },
+  "motion_cohort": {
+    "intent_size": 100,
+    "selection_salt": "nano3d-table6-artiverse-reference-v1",
+    "selection_uses_motion_or_collision_outcome": false,
+    "failure_replacement": false,
+    "candidate_pool": "assets passing the frozen static motion-eligibility gate",
+    "category_policy": "first allocate one asset to every eligible category, up to 84 categories",
+    "source_policy": "Hamilton source quotas proportional to the eligible pool; category selections and extra selections prefer the largest remaining source quota",
+    "tie_break": "SHA-256(selection_salt + '|' + category + '/' + source + '/' + model_id)",
+    "extra_slots": "after category coverage, fill to 100 by largest remaining source quota, then lowest selected count in the candidate category, then tie-break hash",
+    "post_freeze_state_accounting": [
+      "pass",
+      "fail",
+      "not_evaluable"
+    ],
+    "unsupported_composite_policy": "retain the frozen asset; unsupported screw/universal/free execution is not_evaluable and never replaced"
+  },
+  "motion_evaluation": {
+    "adapter": {
+      "runner": "exp/scripts/run_artiverse_articulation_motion.py",
+      "input": "content-hashed motion_cohort_manifest.json plus its bound static/readiness/protocol artifacts",
+      "semantic_coordinate_policy": "sample semantic DoFs and map them to exported coordinates; aggregate joint pass by pid",
+      "composite_proxy_policy": "collapse no-geometry joint chains sharing artiverse_pid before semantic parent-child collision exclusion",
+      "shape_load_failure": "not_evaluable; never collision-free",
+      "screw_execution": "execution-only prismatic plus revolute proxy driven by frozen pitch coupling; inconsistent or incomplete coupling is not_evaluable"
+    },
+    "discrete_proxy": {
+      "reuse_from": "exp/scripts/run_nano3d_articulation_paper.py",
+      "reuse_sha256": "3c72eaa27f2a4642ee35b5fdd866061d2b57d42061be3c0a1c5b65554fce67aa",
+      "single_joint_states": 11,
+      "multi_joint_sobol_states": 64,
+      "self_collision_flags": "PyBullet URDF_USE_SELF_COLLISION | URDF_USE_SELF_COLLISION_INCLUDE_PARENT",
+      "pair_filter": "exclude contacts within the same fixed-link cluster and contacts across semantic parent-child adjacency after transparent artiverse_pid composite-proxy collapse",
+      "contact_distance_semantics": "PyBullet contact tuple field 8; negative is penetration and positive is distance",
+      "penetration_tolerance_m": 1e-06,
+      "failure_predicate": "retained contactDistance < -1e-6 m",
+      "within_tolerance_contact_policy": "retained contact manifolds with contactDistance >= -1e-6 m are reported separately and do not fail the penetration-free proxy",
+      "witness_policy": "each penetration-failing asset stores first and deepest witnesses with trajectory, state index, semantic configuration hash, link pair, signed contactDistance, and penetration depth; each scalar coordinate and semantic pid stores its single-sweep result",
+      "label": "discrete penetration-free proxy on frozen paths",
+      "gpu_required": false
+    },
+    "strict_continuous": {
+      "reuse_from": "exp/scripts/run_t5_ccd_adaptive.py",
+      "reuse_sha256": "825889d7598a7563f62fceecb8f8a9c336a6d56a258bbfbb8333c21f633a0207",
+      "collision_engine": "python-fcl 0.7 exact BVH collide and signed distance",
+      "certificate": "clearance-Lipschitz rigid-motion bound with adaptive bisection",
+      "adaptive_max_depth": 4,
+      "clearance_threshold_m": 0.002,
+      "clearance_bbox_fraction": 0.005,
+      "timeout_s_per_asset": 3600,
+      "timeout_or_uncertified": "fail",
+      "unsupported_joint_execution": "not_evaluable",
+      "gpu_required": false
+    }
+  },
+  "table6_reporting": {
+    "articulable": "load-and-drive rate on the frozen N=100 cohort with pass/fail/not_evaluable counts",
+    "joints_per_asset": "report semantic joints/asset, semantic DoFs/asset, and exported movable elements/asset separately",
+    "native_joint_exposure": "direct package and mapping coverage, not semantic correctness",
+    "joint_type_accuracy": "N/A for a reference evaluated against its own annotations",
+    "joint_recall": "N/A for a reference evaluated against its own annotations",
+    "parent_child_accuracy": "N/A without independent gold",
+    "axis_valid": "metadata-valid and export-consistency diagnostics only; semantic accuracy N/A",
+    "origin_valid": "metadata-valid diagnostics only; semantic accuracy N/A",
+    "limit_valid": "metadata-valid diagnostics only; semantic accuracy N/A",
+    "joint_geom_valid": "strict continuous collision certificate on supported native trajectories; axis-on-moving-part semantic correctness remains N/A",
+    "asset_geom_valid": "all supported joints certified and no unsupported trajectory; otherwise fail or not_evaluable as declared",
+    "full_range_collision_free": "strict certificate result; N/E until strict is executed, and never filled from the PyBullet penetration-free proxy",
+    "generic_range": "revolute annotations with declared span at least 300 degrees, plus continuous joints reported separately"
+  },
+  "resource_plan": {
+    "gpu": "not required",
+    "full_static_estimate": "5-20 minutes on local SSD, dominated by 531937-file traversal and XML/JSON parsing",
+    "n100_discrete_estimate": "10-60 minutes with 4 CPU workers, subject to mesh load tails",
+    "n100_strict_estimate": "1-8 wall-clock hours with 4 CPU workers and 3600-second per-asset timeout",
+    "full_3544_strict": "not recommended before the frozen N=100 run; observed exact-FCL runtime has a heavy tail"
+  },
+  "required_outputs": [
+    "readiness.json",
+    "static_asset_records.jsonl",
+    "static_summary.json",
+    "motion_cohort_manifest.json",
+    "report.md"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "protocol": "nano3d_naming_paper_aligned_v2.2",
+  "paper_alignment": {
+    "capability_staircase": [
+      "produced mesh-bearing parts",
+      "non-placeholder nameability",
+      "named-part richness relative to frozen spec instances"
+    ],
+    "semantic_validation": "three independent judges over exported GLB mesh-node names, node previews, and frozen reference roles",
+    "not_segmentation_iou": true
+  },
+  "units": {
+    "part": "mesh-bearing node in the frozen converted GLB; empty hierarchy/group nodes are excluded",
+    "named_part": "GLB mesh node whose name is not a generic placeholder",
+    "spec_part": "one required role instance after expanding min_count",
+    "repeated_instance": "required role with min_count greater than one"
+  },
+  "formulas": {
+    "parts_per_asset": "mean(mesh_bearing_link_count)",
+    "nameability": "sum(named_mesh_link_count) / sum(mesh_bearing_link_count)",
+    "paper_aligned_richness_candidate": "mean(named_mesh_link_count / required_spec_instance_count)",
+    "paper_aligned_richness_candidate_micro": "sum(named_mesh_link_count) / sum(required_spec_instance_count)",
+    "source_role_recall_macro": "mean(matched_required_instances / required_spec_instances)",
+    "source_role_recall_micro": "sum(matched_required_instances) / sum(required_spec_instances)",
+    "strong_match_sensitivity": "assignments whose canonical role tokens occur in the link name or whose actually matched pattern has at least two tokens / required spec instances",
+    "functional_core_coverage": "sum(matched_functional_instances) / sum(required_functional_instances)",
+    "instance_discriminability": "sum(min(distinct_instance_keys, required_count)) / sum(required_count) over repeated roles",
+    "semantic_precision": "three-judge consensus real named parts / judged named parts",
+    "semantic_recall": "three-judge consensus matched spec instances / required spec instances",
+    "judge_functional_core_coverage": "three-judge consensus matched functional instances / required functional instances",
+    "judge_instance_discriminability": "sum(min(distinct consensus instance IDs, required count)) / sum(required count) over repeated roles",
+    "over_segmentation_rate_micro": "same-part consensus component excess fragments / three-judge consensus real mesh nodes"
+  },
+  "matching": {
+    "algorithm": "maximum-cardinality, maximum-specificity bipartite assignment between named links and expanded required role instances",
+    "specificity": "score only patterns actually matched by the link; longer token patterns outrank generic aliases",
+    "equal_score_link_tie_breaker": "lexicographic link/node name; independent of URDF XML or glTF node order",
+    "unmatched_named_links": "extra-real-part candidates sent to judges, never automatic false positives",
+    "confidence_audit": "report exact/specific matches, single-token aliases, runner-up margins, and a conservative strong-match sensitivity score"
+  },
+  "cross_seed_aggregation": {
+    "pair_micro": "mean over all within-cohort seed pairs; cohorts with more seeds receive more weight",
+    "cohort_macro": "mean of each cohort's pairwise mean; every cohort receives equal weight",
+    "primary_reporting": "report both pair-micro and cohort-macro, plus cohort median and bootstrap CI"
+  },
+  "bootstrap": {
+    "unit": "asset",
+    "resamples": 10000,
+    "confidence": 0.95,
+    "seed": 260722738
+  },
+  "judge_contract": {
+    "judge_count": 3,
+    "independent_context": true,
+    "allowed_verdicts": [
+      "spec_match",
+      "extra_real_part",
+      "invalid_or_hallucinated",
+      "uncertain"
+    ],
+    "consensus": "at least two identical non-uncertain verdicts",
+    "missing_consensus": "exclude from precision numerator and report coverage; do not force a verdict",
+    "instance_id": "for a spec_match role with min_count>1, record the instance identity distinguishable from node name and preview; same-instance fragments share an ID; otherwise use not_applicable",
+    "same_semantic_part_as": "for each real node, explicitly use none or another node name in the same asset; invalid uses not_applicable; null means unannotated, never no-duplicate",
+    "metric_readiness": "a formal metric is emitted only when verdict consensus and every additional field required by that metric are complete"
+  },
+  "limitations": [
+    "N=33 Parts/Named were independently recomputed from converted GLB mesh nodes; local visual-to-link merge policy may still differ from the paper's unreleased converter.",
+    "The frozen role references are copied authoring/spec evidence, not independent hidden annotations.",
+    "Paper-equivalent semantic precision and recall remain unavailable until three independent judge files are completed.",
+    "Cross-seed consistency and over-segmentation are local extensions, not metrics reported in the paper's Naming table."
+  ]
+}

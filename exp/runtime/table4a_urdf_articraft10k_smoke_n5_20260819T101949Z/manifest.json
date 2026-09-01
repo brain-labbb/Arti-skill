@@ -1,0 +1,35 @@
+{
+  "command": [
+    "exp/scripts/run_urdf_table4a_articraft10k.py",
+    "--mode",
+    "smoke",
+    "--n",
+    "5",
+    "--workers",
+    "3"
+  ],
+  "created_at_utc": "2026-08-19T10:22:24.461000Z",
+  "dataset": "Articraft-10K",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "7c449309b16e6b9a70874815d5c53ba608707883bd5c0150d4490a57eafc31e4",
+  "manifest_self_sha256_at_write": "790c89b3b614321c10e6631f9e69c9004361b0f635f4faa5001b7ed9c1de1a81",
+  "mode": "smoke",
+  "outputs": {
+    "asset_records_sha256": "fb9a2ecc3dbf83d7a033327ef1dee2509534657b44693b7e9ecca81623af03b2",
+    "joint_records_sha256": "d30086603e4b30353298b69fdff8bb2fbaf0d5eb9eac80ad287c9664aac39e44",
+    "summary_md_sha256": "e52d80b7f2f72510266d77431f74f6f8f48e13e92aab7afbc1d7ad90dda524e1",
+    "summary_sha256": "04ad1e5c6471c0306ef5dfb634b26eab17ea5c4826cbfd0ad466b38296fb9b5a"
+  },
+  "protocol_id": "table4a_articraft10k_table2cohort_n800_v1",
+  "record_count": 5,
+  "status_counts": {
+    "completed": 4,
+    "error": 1,
+    "total": 5
+  },
+  "verification": {
+    "all_pass": null,
+    "note": "smoke mode: formal verification skipped"
+  },
+  "wall_seconds": 152.814
+}

@@ -1,0 +1,1171 @@
+{
+  "articraft_source": "diagnostic_resample_20260830",
+  "datasets": [
+    {
+      "all_three_load": {
+        "denominator": 200,
+        "passed": 184,
+        "percentage": 92.0
+      },
+      "all_three_runtime": {
+        "denominator": 200,
+        "passed": 0,
+        "percentage": 0.0
+      },
+      "cross_sim_joint_rmse": {
+        "evaluated_joints": 415,
+        "median": 0.3838214690944851,
+        "p95": 2.930218688846281,
+        "pass_rate": {
+          "denominator": 415,
+          "passed": 120,
+          "percentage": 28.91566265060241
+        },
+        "pass_threshold": 0.1
+      },
+      "cross_sim_pose_error": {
+        "evaluated_links": 659,
+        "rotation_deg_median": 19.49217085996266,
+        "rotation_deg_p95": 154.0745100509053,
+        "translation_over_bbox_median": 0.010802779412939128,
+        "translation_over_bbox_p95": 0.6207364428154509
+      },
+      "dataset_slug": "articraft_10k",
+      "n": 200,
+      "per_simulator_runtime": {
+        "genesis": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 66,
+            "percentage": 33.0
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 114,
+            "percentage": 57.0
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 13,
+            "percentage": 6.5
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 196,
+            "percentage": 98.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 195,
+            "percentage": 97.5
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 77,
+            "percentage": 38.5
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 1,
+            "percentage": 0.5
+          }
+        },
+        "mujoco": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 33,
+            "percentage": 16.5
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 24,
+            "percentage": 12.0
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 18,
+            "percentage": 9.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 184,
+            "percentage": 92.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 184,
+            "percentage": 92.0
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 65,
+            "percentage": 32.5
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "pybullet": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 58,
+            "percentage": 29.0
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 114,
+            "percentage": 57.0
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 19,
+            "percentage": 9.5
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 196,
+            "percentage": 98.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 196,
+            "percentage": 98.0
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 82,
+            "percentage": 41.0
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 4,
+            "percentage": 2.0
+          }
+        }
+      },
+      "record_source": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_v2_articraft_diagnostic_resample_20260830"
+    },
+    {
+      "all_three_load": {
+        "denominator": 200,
+        "passed": 83,
+        "percentage": 41.5
+      },
+      "all_three_runtime": {
+        "denominator": 200,
+        "passed": 0,
+        "percentage": 0.0
+      },
+      "cross_sim_joint_rmse": {
+        "evaluated_joints": 375,
+        "median": 0.27328704546026633,
+        "p95": 1.5797570061713468,
+        "pass_rate": {
+          "denominator": 375,
+          "passed": 86,
+          "percentage": 22.933333333333334
+        },
+        "pass_threshold": 0.1
+      },
+      "cross_sim_pose_error": {
+        "evaluated_links": 610,
+        "rotation_deg_median": 10.740063096001675,
+        "rotation_deg_p95": 163.02633557864382,
+        "translation_over_bbox_median": 8.50401977986851e-09,
+        "translation_over_bbox_p95": 0.4890266444882742
+      },
+      "dataset_slug": "lam_released_outputs",
+      "n": 200,
+      "per_simulator_runtime": {
+        "genesis": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 75,
+            "percentage": 37.5
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 125,
+            "percentage": 62.5
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 36,
+            "percentage": 18.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 175,
+            "percentage": 87.5
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 174,
+            "percentage": 87.0
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 110,
+            "percentage": 55.0
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 10,
+            "percentage": 5.0
+          }
+        },
+        "mujoco": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 9,
+            "percentage": 4.5
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 10,
+            "percentage": 5.0
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 18,
+            "percentage": 9.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 88,
+            "percentage": 44.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 84,
+            "percentage": 42.0
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 19,
+            "percentage": 9.5
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "pybullet": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 56,
+            "percentage": 28.0
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 125,
+            "percentage": 62.5
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 62,
+            "percentage": 31.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 176,
+            "percentage": 88.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 175,
+            "percentage": 87.5
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 110,
+            "percentage": 55.0
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 23,
+            "percentage": 11.5
+          }
+        }
+      },
+      "record_source": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_v2_r2_formal_eight_datasets"
+    },
+    {
+      "all_three_load": {
+        "denominator": 200,
+        "passed": 170,
+        "percentage": 85.0
+      },
+      "all_three_runtime": {
+        "denominator": 200,
+        "passed": 0,
+        "percentage": 0.0
+      },
+      "cross_sim_joint_rmse": {
+        "evaluated_joints": 587,
+        "median": 0.6864827660806787,
+        "p95": 2.319164804180137,
+        "pass_rate": {
+          "denominator": 587,
+          "passed": 75,
+          "percentage": 12.776831345826235
+        },
+        "pass_threshold": 0.1
+      },
+      "cross_sim_pose_error": {
+        "evaluated_links": 1042,
+        "rotation_deg_median": 0.0,
+        "rotation_deg_p95": 94.2206630947677,
+        "translation_over_bbox_median": 0.003080359809571316,
+        "translation_over_bbox_p95": 0.3218879614451147
+      },
+      "dataset_slug": "artiverse",
+      "n": 200,
+      "per_simulator_runtime": {
+        "genesis": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 145,
+            "percentage": 72.5
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 179,
+            "percentage": 89.5
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 10,
+            "percentage": 5.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 192,
+            "percentage": 96.0
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 159,
+            "percentage": 79.5
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "mujoco": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 41,
+            "percentage": 20.5
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 15,
+            "percentage": 7.5
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 36,
+            "percentage": 18.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 170,
+            "percentage": 85.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 168,
+            "percentage": 84.0
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 23,
+            "percentage": 11.5
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "pybullet": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 121,
+            "percentage": 60.5
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 187,
+            "percentage": 93.5
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 10,
+            "percentage": 5.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 161,
+            "percentage": 80.5
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 5,
+            "percentage": 2.5
+          }
+        }
+      },
+      "record_source": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_v2_r2_formal_eight_datasets"
+    },
+    {
+      "all_three_load": {
+        "denominator": 200,
+        "passed": 84,
+        "percentage": 42.0
+      },
+      "all_three_runtime": {
+        "denominator": 200,
+        "passed": 0,
+        "percentage": 0.0
+      },
+      "cross_sim_joint_rmse": {
+        "evaluated_joints": 0,
+        "median": null,
+        "p95": null,
+        "pass_rate": null,
+        "pass_threshold": 0.1
+      },
+      "cross_sim_pose_error": {
+        "evaluated_links": 0,
+        "rotation_deg_median": null,
+        "rotation_deg_p95": null,
+        "translation_over_bbox_median": null,
+        "translation_over_bbox_p95": null
+      },
+      "dataset_slug": "partnet_mobility",
+      "n": 200,
+      "per_simulator_runtime": {
+        "genesis": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 190,
+            "percentage": 95.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 190,
+            "percentage": 95.0
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 190,
+            "percentage": 95.0
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "mujoco": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 84,
+            "percentage": 42.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 84,
+            "percentage": 42.0
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 84,
+            "percentage": 42.0
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "pybullet": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 197,
+            "percentage": 98.5
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 197,
+            "percentage": 98.5
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 197,
+            "percentage": 98.5
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        }
+      },
+      "record_source": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_v2_r2_formal_eight_datasets"
+    },
+    {
+      "all_three_load": {
+        "denominator": 200,
+        "passed": 200,
+        "percentage": 100.0
+      },
+      "all_three_runtime": {
+        "denominator": 200,
+        "passed": 0,
+        "percentage": 0.0
+      },
+      "cross_sim_joint_rmse": {
+        "evaluated_joints": 479,
+        "median": 0.00016469326244213198,
+        "p95": 18.75851574793411,
+        "pass_rate": {
+          "denominator": 479,
+          "passed": 350,
+          "percentage": 73.06889352818372
+        },
+        "pass_threshold": 0.1
+      },
+      "cross_sim_pose_error": {
+        "evaluated_links": 1081,
+        "rotation_deg_median": 1.916717082078121e-05,
+        "rotation_deg_p95": 1.1257606891642804,
+        "translation_over_bbox_median": 1.766860052951196e-07,
+        "translation_over_bbox_p95": 0.02025728447239967
+      },
+      "dataset_slug": "physx_mobility",
+      "n": 200,
+      "per_simulator_runtime": {
+        "genesis": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 197,
+            "percentage": 98.5
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 4,
+            "percentage": 2.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 68,
+            "percentage": 34.0
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 1,
+            "percentage": 0.5
+          }
+        },
+        "mujoco": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 197,
+            "percentage": 98.5
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 2,
+            "percentage": 1.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 68,
+            "percentage": 34.0
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "pybullet": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 197,
+            "percentage": 98.5
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 4,
+            "percentage": 2.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 68,
+            "percentage": 34.0
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        }
+      },
+      "record_source": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_v2_r2_formal_eight_datasets"
+    },
+    {
+      "all_three_load": {
+        "denominator": 200,
+        "passed": 84,
+        "percentage": 42.0
+      },
+      "all_three_runtime": {
+        "denominator": 200,
+        "passed": 0,
+        "percentage": 0.0
+      },
+      "cross_sim_joint_rmse": {
+        "evaluated_joints": 231,
+        "median": 0.5027998699867412,
+        "p95": 576.2781573247958,
+        "pass_rate": {
+          "denominator": 231,
+          "passed": 52,
+          "percentage": 22.51082251082251
+        },
+        "pass_threshold": 0.1
+      },
+      "cross_sim_pose_error": {
+        "evaluated_links": 280,
+        "rotation_deg_median": 12.837144154417988,
+        "rotation_deg_p95": 171.71017133135467,
+        "translation_over_bbox_median": 3.2039968795358244e-08,
+        "translation_over_bbox_p95": 14.017164315585948
+      },
+      "dataset_slug": "sketchmobility",
+      "n": 200,
+      "per_simulator_runtime": {
+        "genesis": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 107,
+            "percentage": 53.5
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 132,
+            "percentage": 66.0
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 8,
+            "percentage": 4.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 130,
+            "percentage": 65.0
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 3,
+            "percentage": 1.5
+          }
+        },
+        "mujoco": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 94,
+            "percentage": 47.0
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 19,
+            "percentage": 9.5
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 29,
+            "percentage": 14.5
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 171,
+            "percentage": 85.5
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 171,
+            "percentage": 85.5
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 84,
+            "percentage": 42.0
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "pybullet": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 38,
+            "percentage": 19.0
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 46,
+            "percentage": 23.0
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 13,
+            "percentage": 6.5
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 110,
+            "percentage": 55.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 110,
+            "percentage": 55.0
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 85,
+            "percentage": 42.5
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 7,
+            "percentage": 3.5
+          }
+        }
+      },
+      "record_source": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_v2_r2_formal_eight_datasets"
+    },
+    {
+      "all_three_load": {
+        "denominator": 200,
+        "passed": 186,
+        "percentage": 93.0
+      },
+      "all_three_runtime": {
+        "denominator": 200,
+        "passed": 0,
+        "percentage": 0.0
+      },
+      "cross_sim_joint_rmse": {
+        "evaluated_joints": 0,
+        "median": null,
+        "p95": null,
+        "pass_rate": null,
+        "pass_threshold": 0.1
+      },
+      "cross_sim_pose_error": {
+        "evaluated_links": 0,
+        "rotation_deg_median": null,
+        "rotation_deg_p95": null,
+        "translation_over_bbox_median": null,
+        "translation_over_bbox_p95": null
+      },
+      "dataset_slug": "infinigen_sim",
+      "n": 200,
+      "per_simulator_runtime": {
+        "genesis": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 186,
+            "percentage": 93.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 186,
+            "percentage": 93.0
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 186,
+            "percentage": 93.0
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "mujoco": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "pybullet": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        }
+      },
+      "record_source": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_v2_r2_formal_eight_datasets"
+    },
+    {
+      "all_three_load": {
+        "denominator": 200,
+        "passed": 200,
+        "percentage": 100.0
+      },
+      "all_three_runtime": {
+        "denominator": 200,
+        "passed": 0,
+        "percentage": 0.0
+      },
+      "cross_sim_joint_rmse": {
+        "evaluated_joints": 628,
+        "median": 0.6242191518795054,
+        "p95": 18.928164076677998,
+        "pass_rate": {
+          "denominator": 628,
+          "passed": 90,
+          "percentage": 14.331210191082803
+        },
+        "pass_threshold": 0.1
+      },
+      "cross_sim_pose_error": {
+        "evaluated_links": 1019,
+        "rotation_deg_median": 34.82092624641631,
+        "rotation_deg_p95": 166.66794541899108,
+        "translation_over_bbox_median": 0.024340460931552427,
+        "translation_over_bbox_p95": 0.44805867214078665
+      },
+      "dataset_slug": "pva",
+      "n": 200,
+      "per_simulator_runtime": {
+        "genesis": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 66,
+            "percentage": 33.0
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 110,
+            "percentage": 55.0
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 12,
+            "percentage": 6.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 94,
+            "percentage": 47.0
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 2,
+            "percentage": 1.0
+          }
+        },
+        "mujoco": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 14,
+            "percentage": 7.0
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 21,
+            "percentage": 10.5
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 36,
+            "percentage": 18.0
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 68,
+            "percentage": 34.0
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 0,
+            "percentage": 0.0
+          }
+        },
+        "pybullet": {
+          "actuation": {
+            "denominator": 200,
+            "passed": 57,
+            "percentage": 28.5
+          },
+          "constraint_drift": {
+            "denominator": 200,
+            "passed": 111,
+            "percentage": 55.5
+          },
+          "limit_enforcement": {
+            "denominator": 200,
+            "passed": 15,
+            "percentage": 7.5
+          },
+          "load": {
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "reset": {
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "settling": {
+            "denominator": 200,
+            "passed": 80,
+            "percentage": 40.0
+          },
+          "simulator_pass": {
+            "denominator": 200,
+            "passed": 2,
+            "percentage": 1.0
+          }
+        }
+      },
+      "record_source": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_v2_r2_formal_eight_datasets"
+    }
+  ],
+  "legacy_diagnostic_note": "reset/settling/actuation/limit_enforcement/constraint_drift are legacy stress-test diagnostics and are not the paper's primary Table 5a metrics",
+  "load_definition": "native simulator import success (evaluation.v2.import.passed)",
+  "other_datasets_source": "formal_eight_datasets",
+  "rmse_threshold": 0.1,
+  "schema_version": "table5_cross_sim_summary_v2",
+  "summary_sha256": "251a7e5b30d773bc17091be7a9d60600cddb453cc7017c91bad404f3fb02a71a"
+}

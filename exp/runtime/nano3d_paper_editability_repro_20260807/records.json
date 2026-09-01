@@ -1,0 +1,3617 @@
+[
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E001/base/model.glb",
+    "base_parse": {
+      "joint_count": 2,
+      "joints": [
+        {
+          "child": "top_lid_0",
+          "name": "tub_to_lid_0",
+          "parent": "basket_tub",
+          "type": "revolute"
+        },
+        {
+          "child": "top_lid_1",
+          "name": "tub_to_lid_1",
+          "parent": "basket_tub",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 3,
+      "links": [
+        "basket_tub",
+        "top_lid_0",
+        "top_lid_1"
+      ],
+      "roots": [
+        "basket_tub"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/blind_review_packet/previews/E001_base.png",
+    "base_run": {
+      "elapsed_s": 6.011042566969991,
+      "error": null,
+      "package_sha256": "3aa97100708fc2e081cfd7810122ab2c0ab5d93aa119003a5fc6259396511bad",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E001/base/model.urdf",
+      "urdf_sha256": "642d9a133816b1a1760703e8f5d61fbb08193382141cd1596cf4c06b08a26bf6",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E001/base/source.py"
+    },
+    "changes": {
+      "secondary_storage": "two_compartment_divider"
+    },
+    "deterministic_gate_pass": false,
+    "edit": {
+      "edit_class": "additive",
+      "field": "secondary_storage",
+      "instruction": "Add an internal divider compartment to the bucket.",
+      "new": "two_compartment_divider",
+      "old": "none"
+    },
+    "edit_class": "additive",
+    "edit_parse": {
+      "joint_count": 2,
+      "joints": [
+        {
+          "child": "top_lid_0",
+          "name": "tub_to_lid_0",
+          "parent": "basket_tub",
+          "type": "revolute"
+        },
+        {
+          "child": "top_lid_1",
+          "name": "tub_to_lid_1",
+          "parent": "basket_tub",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 3,
+      "links": [
+        "basket_tub",
+        "top_lid_0",
+        "top_lid_1"
+      ],
+      "roots": [
+        "basket_tub"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 6.21533814445138,
+      "error": null,
+      "package_sha256": "3502d2e3c50b94fc9795767e877b6cc4beb2593e025620e1df917104271b1016",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E001/edited/model.urdf",
+      "urdf_sha256": "642d9a133816b1a1760703e8f5d61fbb08193382141cd1596cf4c06b08a26bf6",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E001/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E001/edited/model.glb",
+    "edited_preview": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/blind_review_packet/previews/E001_edited.png",
+    "field": "secondary_storage",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Add an internal divider compartment to the bucket.",
+    "seed": 3,
+    "slug": "Bag_Suitcase_Shopping_bucket",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "shopping_bucket",
+    "target_handle": false,
+    "target_tokens": [
+      "divider",
+      "compartment",
+      "caddy"
+    ],
+    "target_value": "two_compartment_divider",
+    "task_id": "E001"
+  },
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E002/base/model.glb",
+    "base_parse": {
+      "joint_count": 2,
+      "joints": [
+        {
+          "child": "closure__hinged_lid__hatch",
+          "name": "closure__hinged_lid__hinge",
+          "parent": "keg_body",
+          "type": "revolute"
+        },
+        {
+          "child": "handle__swing_bail__bail",
+          "name": "handle__swing_bail__pivot",
+          "parent": "keg_body",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 3,
+      "links": [
+        "closure__hinged_lid__hatch",
+        "handle__swing_bail__bail",
+        "keg_body"
+      ],
+      "roots": [
+        "keg_body"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": null,
+    "base_run": {
+      "elapsed_s": 2.601049968972802,
+      "error": null,
+      "package_sha256": "cf24b62cabd59da16d8a94cfeccb39855b6e6226fadb05def5e932007d0788e5",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E002/base/model.urdf",
+      "urdf_sha256": "98ce850d38575c359ecbe19a69c3b46b18f2f34901ac3ef786e0c5b555fb680f",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E002/base/source.py"
+    },
+    "changes": {
+      "hoop_count": 6
+    },
+    "deterministic_gate_pass": false,
+    "edit": {
+      "edit_class": "additive",
+      "field": "hoop_count",
+      "instruction": "Add one additional reinforcement hoop around the bucket.",
+      "new": 6,
+      "old": 5
+    },
+    "edit_class": "additive",
+    "edit_parse": {
+      "joint_count": 2,
+      "joints": [
+        {
+          "child": "closure__hinged_lid__hatch",
+          "name": "closure__hinged_lid__hinge",
+          "parent": "keg_body",
+          "type": "revolute"
+        },
+        {
+          "child": "handle__swing_bail__bail",
+          "name": "handle__swing_bail__pivot",
+          "parent": "keg_body",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 3,
+      "links": [
+        "closure__hinged_lid__hatch",
+        "handle__swing_bail__bail",
+        "keg_body"
+      ],
+      "roots": [
+        "keg_body"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 2.196361528709531,
+      "error": null,
+      "package_sha256": "02fbb7a0584ac3236c5eb48423b0870e2793ab98303575e351f893176196b191",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E002/edited/model.urdf",
+      "urdf_sha256": "62476031da90bec88f36afa7dda9aac3ab67a95e5ca2534b16685f42ff379b1e",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E002/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E002/edited/model.glb",
+    "edited_preview": null,
+    "field": "hoop_count",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Add one additional reinforcement hoop around the bucket.",
+    "seed": 1,
+    "slug": "Urban_Environment_bucket2",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "bucket2",
+    "target_handle": false,
+    "target_tokens": [
+      "hoop",
+      "band"
+    ],
+    "target_value": 6,
+    "task_id": "E002"
+  },
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E003/base/model.glb",
+    "base_parse": {
+      "joint_count": 4,
+      "joints": [
+        {
+          "child": "pivot_pin",
+          "name": "frame_to_pin",
+          "parent": "press_frame",
+          "type": "fixed"
+        },
+        {
+          "child": "lever_arm",
+          "name": "frame_to_lever",
+          "parent": "press_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "plunger",
+          "name": "lever_to_plunger",
+          "parent": "lever_arm",
+          "type": "revolute"
+        },
+        {
+          "child": "storage_latch",
+          "name": "frame_to_latch",
+          "parent": "press_frame",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 5,
+      "links": [
+        "lever_arm",
+        "pivot_pin",
+        "plunger",
+        "press_frame",
+        "storage_latch"
+      ],
+      "roots": [
+        "press_frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": null,
+    "base_run": {
+      "elapsed_s": 5.698171174153686,
+      "error": null,
+      "package_sha256": "b1fc16ed6d00bcc0e9dd5f59d5ec152632f4ee8f7c22ce5381a0c99861232e2e",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E003/base/model.urdf",
+      "urdf_sha256": "d881eb8ec3b20ce25e600aaf16b356a09376a3234fa2aa5249c285f8a80a0c7d",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E003/base/source.py"
+    },
+    "changes": {
+      "screen_rows": 6
+    },
+    "deterministic_gate_pass": false,
+    "edit": {
+      "edit_class": "additive",
+      "field": "screen_rows",
+      "instruction": "Add one row of holes to the press screen.",
+      "new": 6,
+      "old": 5
+    },
+    "edit_class": "additive",
+    "edit_parse": {
+      "joint_count": 4,
+      "joints": [
+        {
+          "child": "pivot_pin",
+          "name": "frame_to_pin",
+          "parent": "press_frame",
+          "type": "fixed"
+        },
+        {
+          "child": "lever_arm",
+          "name": "frame_to_lever",
+          "parent": "press_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "plunger",
+          "name": "lever_to_plunger",
+          "parent": "lever_arm",
+          "type": "revolute"
+        },
+        {
+          "child": "storage_latch",
+          "name": "frame_to_latch",
+          "parent": "press_frame",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 5,
+      "links": [
+        "lever_arm",
+        "pivot_pin",
+        "plunger",
+        "press_frame",
+        "storage_latch"
+      ],
+      "roots": [
+        "press_frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 5.508444968611002,
+      "error": null,
+      "package_sha256": "636a9825b3b80095194372fb7a9e88bc675a2771f839b313d3966a49b4f7ec8c",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E003/edited/model.urdf",
+      "urdf_sha256": "d881eb8ec3b20ce25e600aaf16b356a09376a3234fa2aa5249c285f8a80a0c7d",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E003/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E003/edited/model.glb",
+    "edited_preview": null,
+    "field": "screen_rows",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Add one row of holes to the press screen.",
+    "seed": 0,
+    "slug": "pictureX_0611_garlic_press",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "pictureX_0611_garlic_press",
+    "target_handle": false,
+    "target_tokens": [
+      "screen",
+      "row",
+      "hole"
+    ],
+    "target_value": 6,
+    "task_id": "E003"
+  },
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E004/base/model.glb",
+    "base_parse": {
+      "joint_count": 3,
+      "joints": [
+        {
+          "child": "worm_rotor_0",
+          "name": "mount_to_worm_0",
+          "parent": "mount",
+          "type": "continuous"
+        },
+        {
+          "child": "string_post_0",
+          "name": "mount_to_post_0",
+          "parent": "mount",
+          "type": "continuous"
+        },
+        {
+          "child": "lock_screw_0",
+          "name": "post_to_lock_screw_0",
+          "parent": "string_post_0",
+          "type": "continuous"
+        }
+      ],
+      "link_count": 4,
+      "links": [
+        "lock_screw_0",
+        "mount",
+        "string_post_0",
+        "worm_rotor_0"
+      ],
+      "roots": [
+        "mount"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": null,
+    "base_run": {
+      "elapsed_s": 6.2722461726516485,
+      "error": null,
+      "package_sha256": "7747fc60f98e3da7a7b2af72ac75d54f15d7ab8d84c2a62366fc0719c358f7df",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E004/base/model.urdf",
+      "urdf_sha256": "5f13551adde6e9327469565328807ebb61b48b4c163609765eb09bb82c2d5227",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E004/base/source.py"
+    },
+    "changes": {
+      "tuner_count": 2
+    },
+    "deterministic_gate_pass": true,
+    "edit": {
+      "edit_class": "additive",
+      "field": "tuner_count",
+      "instruction": "Add one additional tuning-peg mechanism.",
+      "new": 2,
+      "old": 1
+    },
+    "edit_class": "additive",
+    "edit_parse": {
+      "joint_count": 6,
+      "joints": [
+        {
+          "child": "worm_rotor_0",
+          "name": "mount_to_worm_0",
+          "parent": "mount",
+          "type": "continuous"
+        },
+        {
+          "child": "string_post_0",
+          "name": "mount_to_post_0",
+          "parent": "mount",
+          "type": "continuous"
+        },
+        {
+          "child": "lock_screw_0",
+          "name": "post_to_lock_screw_0",
+          "parent": "string_post_0",
+          "type": "continuous"
+        },
+        {
+          "child": "worm_rotor_1",
+          "name": "mount_to_worm_1",
+          "parent": "mount",
+          "type": "continuous"
+        },
+        {
+          "child": "string_post_1",
+          "name": "mount_to_post_1",
+          "parent": "mount",
+          "type": "continuous"
+        },
+        {
+          "child": "lock_screw_1",
+          "name": "post_to_lock_screw_1",
+          "parent": "string_post_1",
+          "type": "continuous"
+        }
+      ],
+      "link_count": 7,
+      "links": [
+        "lock_screw_0",
+        "lock_screw_1",
+        "mount",
+        "string_post_0",
+        "string_post_1",
+        "worm_rotor_0",
+        "worm_rotor_1"
+      ],
+      "roots": [
+        "mount"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 9.731912104412913,
+      "error": null,
+      "package_sha256": "bb621bb62e525c40d4cc74f45e9d0a91fe95d408d39f1eb2630ba2759cc503b7",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E004/edited/model.urdf",
+      "urdf_sha256": "03637f1c970bf0de661ffcef8f995051af33a3ced3052d56e5a6a78670162256",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E004/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E004/edited/model.glb",
+    "edited_preview": null,
+    "field": "tuner_count",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Add one additional tuning-peg mechanism.",
+    "seed": 0,
+    "slug": "pictureX_0611_guitar_tuning_peg_mechanism",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "pictureX_0611_guitar_tuning_peg_mechanism",
+    "target_handle": true,
+    "target_tokens": [
+      "tuner",
+      "gear",
+      "post",
+      "worm",
+      "lock"
+    ],
+    "target_value": 2,
+    "task_id": "E004"
+  },
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E005/base/model.glb",
+    "base_parse": {
+      "joint_count": 2,
+      "joints": [
+        {
+          "child": "table_frame__loop_frame__table_0",
+          "name": "table_frame__loop_frame__table_0__slide",
+          "parent": "sofa__frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "platform__front",
+          "name": "platform__front_slide",
+          "parent": "sofa__frame",
+          "type": "prismatic"
+        }
+      ],
+      "link_count": 3,
+      "links": [
+        "platform__front",
+        "sofa__frame",
+        "table_frame__loop_frame__table_0"
+      ],
+      "roots": [
+        "sofa__frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": null,
+    "base_run": {
+      "elapsed_s": 3.187368106096983,
+      "error": null,
+      "package_sha256": "da0522076b11e4190053d7aa7bdc8861d8a2cd425ad100a3ba41aa46eeb42cf7",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E005/base/model.urdf",
+      "urdf_sha256": "5465b480e99792982b1139f311355c6344a9842dbb60ed026cbe1fcba1a1e9a7",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E005/base/source.py"
+    },
+    "changes": {
+      "side_table_count": 2
+    },
+    "deterministic_gate_pass": true,
+    "edit": {
+      "edit_class": "additive",
+      "field": "side_table_count",
+      "instruction": "Add a second side table beside the sofa.",
+      "new": 2,
+      "old": 1
+    },
+    "edit_class": "additive",
+    "edit_parse": {
+      "joint_count": 3,
+      "joints": [
+        {
+          "child": "table_frame__loop_frame__table_0",
+          "name": "table_frame__loop_frame__table_0__slide",
+          "parent": "sofa__frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "table_frame__loop_frame__table_1",
+          "name": "table_frame__loop_frame__table_1__slide",
+          "parent": "sofa__frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "platform__front",
+          "name": "platform__front_slide",
+          "parent": "sofa__frame",
+          "type": "prismatic"
+        }
+      ],
+      "link_count": 4,
+      "links": [
+        "platform__front",
+        "sofa__frame",
+        "table_frame__loop_frame__table_0",
+        "table_frame__loop_frame__table_1"
+      ],
+      "roots": [
+        "sofa__frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 3.2446755338460207,
+      "error": null,
+      "package_sha256": "ac1b9c569532f76bffe7bfd28df93e84488db46175908687904f3a26c2b8a7fc",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E005/edited/model.urdf",
+      "urdf_sha256": "b0f0e69f79f7ec920ada51ea5be6d96be34694e69e0801c49789dcca39ff3505",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E005/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E005/edited/model.glb",
+    "edited_preview": null,
+    "field": "side_table_count",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Add a second side table beside the sofa.",
+    "seed": 1,
+    "slug": "pictureX_0611_C_shaped_sofa_side_table",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "picturex_0611_c_shaped_sofa_side_table",
+    "target_handle": true,
+    "target_tokens": [
+      "table",
+      "side"
+    ],
+    "target_value": 2,
+    "task_id": "E005"
+  },
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E006/base/model.glb",
+    "base_parse": {
+      "joint_count": 5,
+      "joints": [
+        {
+          "child": "drawer_front__bar_handle_front__drawer_0",
+          "name": "drawer_front__bar_handle_front__drawer_0__slide",
+          "parent": "vanity__body",
+          "type": "prismatic"
+        },
+        {
+          "child": "drawer_front__bar_handle_front__drawer_1",
+          "name": "drawer_front__bar_handle_front__drawer_1__slide",
+          "parent": "vanity__body",
+          "type": "prismatic"
+        },
+        {
+          "child": "drawer_front__bar_handle_front__drawer_2",
+          "name": "drawer_front__bar_handle_front__drawer_2__slide",
+          "parent": "vanity__body",
+          "type": "prismatic"
+        },
+        {
+          "child": "drawer_front__bar_handle_front__drawer_3",
+          "name": "drawer_front__bar_handle_front__drawer_3__slide",
+          "parent": "vanity__body",
+          "type": "prismatic"
+        },
+        {
+          "child": "mirror_form__swing_ring_mirror__mirror",
+          "name": "mirror_form__swing_ring_mirror__mirror_tilt",
+          "parent": "vanity__body",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 6,
+      "links": [
+        "drawer_front__bar_handle_front__drawer_0",
+        "drawer_front__bar_handle_front__drawer_1",
+        "drawer_front__bar_handle_front__drawer_2",
+        "drawer_front__bar_handle_front__drawer_3",
+        "mirror_form__swing_ring_mirror__mirror",
+        "vanity__body"
+      ],
+      "roots": [
+        "vanity__body"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/blind_review_packet/previews/E006_base.png",
+    "base_run": {
+      "elapsed_s": 3.327715178951621,
+      "error": null,
+      "package_sha256": "54f606c5a3609e3d01936507e302d2ebcf1b59db9362a0b16e54e64ee9dbfb7d",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E006/base/model.urdf",
+      "urdf_sha256": "61771d2e141030315b600a56c831e2338ffccad35fce66eb224c45834a8f13a6",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E006/base/source.py"
+    },
+    "changes": {
+      "drawer_count": 5
+    },
+    "deterministic_gate_pass": true,
+    "edit": {
+      "edit_class": "additive",
+      "field": "drawer_count",
+      "instruction": "Add one drawer to the dressing table.",
+      "new": 5,
+      "old": 4
+    },
+    "edit_class": "additive",
+    "edit_parse": {
+      "joint_count": 6,
+      "joints": [
+        {
+          "child": "drawer_front__bar_handle_front__drawer_0",
+          "name": "drawer_front__bar_handle_front__drawer_0__slide",
+          "parent": "vanity__body",
+          "type": "prismatic"
+        },
+        {
+          "child": "drawer_front__bar_handle_front__drawer_1",
+          "name": "drawer_front__bar_handle_front__drawer_1__slide",
+          "parent": "vanity__body",
+          "type": "prismatic"
+        },
+        {
+          "child": "drawer_front__bar_handle_front__drawer_2",
+          "name": "drawer_front__bar_handle_front__drawer_2__slide",
+          "parent": "vanity__body",
+          "type": "prismatic"
+        },
+        {
+          "child": "drawer_front__bar_handle_front__drawer_3",
+          "name": "drawer_front__bar_handle_front__drawer_3__slide",
+          "parent": "vanity__body",
+          "type": "prismatic"
+        },
+        {
+          "child": "drawer_front__bar_handle_front__drawer_4",
+          "name": "drawer_front__bar_handle_front__drawer_4__slide",
+          "parent": "vanity__body",
+          "type": "prismatic"
+        },
+        {
+          "child": "mirror_form__swing_ring_mirror__mirror",
+          "name": "mirror_form__swing_ring_mirror__mirror_tilt",
+          "parent": "vanity__body",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 7,
+      "links": [
+        "drawer_front__bar_handle_front__drawer_0",
+        "drawer_front__bar_handle_front__drawer_1",
+        "drawer_front__bar_handle_front__drawer_2",
+        "drawer_front__bar_handle_front__drawer_3",
+        "drawer_front__bar_handle_front__drawer_4",
+        "mirror_form__swing_ring_mirror__mirror",
+        "vanity__body"
+      ],
+      "roots": [
+        "vanity__body"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 3.404046842828393,
+      "error": null,
+      "package_sha256": "88180e114542d7d149393c3dda6d96ba48f6585fe1b1140eaca24cb3f7f89cc8",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E006/edited/model.urdf",
+      "urdf_sha256": "c746f4ce5ccc1281b353df6d9b0797cea0b19938b7b4f79b8b879ae14237a112",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E006/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E006/edited/model.glb",
+    "edited_preview": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/blind_review_packet/previews/E006_edited.png",
+    "field": "drawer_count",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Add one drawer to the dressing table.",
+    "seed": 0,
+    "slug": "pictureX_0611_Dressing_table",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "picturex_0611_dressing_table",
+    "target_handle": true,
+    "target_tokens": [
+      "drawer"
+    ],
+    "target_value": 5,
+    "task_id": "E006"
+  },
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E007/base/model.glb",
+    "base_parse": {
+      "joint_count": 5,
+      "joints": [
+        {
+          "child": "churn__lid",
+          "name": "churn__vessel_to_lid",
+          "parent": "churn__vessel",
+          "type": "fixed"
+        },
+        {
+          "child": "churn__shaft",
+          "name": "churn__dasher_drive",
+          "parent": "churn__lid",
+          "type": "continuous"
+        },
+        {
+          "child": "churn__crank",
+          "name": "churn__crank_turn",
+          "parent": "churn__lid",
+          "type": "continuous"
+        },
+        {
+          "child": "dasher_form__perforated_blade__blade_0",
+          "name": "dasher_form__perforated_blade__blade_0__mount",
+          "parent": "churn__shaft",
+          "type": "fixed"
+        },
+        {
+          "child": "dasher_form__perforated_blade__blade_1",
+          "name": "dasher_form__perforated_blade__blade_1__mount",
+          "parent": "churn__shaft",
+          "type": "fixed"
+        }
+      ],
+      "link_count": 6,
+      "links": [
+        "churn__crank",
+        "churn__lid",
+        "churn__shaft",
+        "churn__vessel",
+        "dasher_form__perforated_blade__blade_0",
+        "dasher_form__perforated_blade__blade_1"
+      ],
+      "roots": [
+        "churn__vessel"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": null,
+    "base_run": {
+      "elapsed_s": 5.098492354154587,
+      "error": null,
+      "package_sha256": "bfcb6fec83b09916d3662818d38d71079831867c9a0cb212f5414711c8cdf153",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E007/base/model.urdf",
+      "urdf_sha256": "0f12624065fac986a03f32a367fa69698b75d343ded8f05e3224d8ef880b74bc",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E007/base/source.py"
+    },
+    "changes": {
+      "paddle_count": 3
+    },
+    "deterministic_gate_pass": true,
+    "edit": {
+      "edit_class": "additive",
+      "field": "paddle_count",
+      "instruction": "Add one additional dasher paddle.",
+      "new": 3,
+      "old": 2
+    },
+    "edit_class": "additive",
+    "edit_parse": {
+      "joint_count": 6,
+      "joints": [
+        {
+          "child": "churn__lid",
+          "name": "churn__vessel_to_lid",
+          "parent": "churn__vessel",
+          "type": "fixed"
+        },
+        {
+          "child": "churn__shaft",
+          "name": "churn__dasher_drive",
+          "parent": "churn__lid",
+          "type": "continuous"
+        },
+        {
+          "child": "churn__crank",
+          "name": "churn__crank_turn",
+          "parent": "churn__lid",
+          "type": "continuous"
+        },
+        {
+          "child": "dasher_form__perforated_blade__blade_0",
+          "name": "dasher_form__perforated_blade__blade_0__mount",
+          "parent": "churn__shaft",
+          "type": "fixed"
+        },
+        {
+          "child": "dasher_form__perforated_blade__blade_1",
+          "name": "dasher_form__perforated_blade__blade_1__mount",
+          "parent": "churn__shaft",
+          "type": "fixed"
+        },
+        {
+          "child": "dasher_form__perforated_blade__blade_2",
+          "name": "dasher_form__perforated_blade__blade_2__mount",
+          "parent": "churn__shaft",
+          "type": "fixed"
+        }
+      ],
+      "link_count": 7,
+      "links": [
+        "churn__crank",
+        "churn__lid",
+        "churn__shaft",
+        "churn__vessel",
+        "dasher_form__perforated_blade__blade_0",
+        "dasher_form__perforated_blade__blade_1",
+        "dasher_form__perforated_blade__blade_2"
+      ],
+      "roots": [
+        "churn__vessel"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 5.626840466633439,
+      "error": null,
+      "package_sha256": "6ed7b60216232c6753f540232dce484fae7dae86a26400f2d513e03e135da304",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E007/edited/model.urdf",
+      "urdf_sha256": "533fce8440f570cae5948d75c3d756ff60c3f74d301beeb891f54b678f2ac7a7",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E007/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E007/edited/model.glb",
+    "edited_preview": null,
+    "field": "paddle_count",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Add one additional dasher paddle.",
+    "seed": 2,
+    "slug": "pictureX_0611_Butter_maker",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "picturex_0611_butter_maker",
+    "target_handle": true,
+    "target_tokens": [
+      "paddle",
+      "dasher",
+      "blade"
+    ],
+    "target_value": 3,
+    "task_id": "E007"
+  },
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E008/base/model.glb",
+    "base_parse": {
+      "joint_count": 4,
+      "joints": [
+        {
+          "child": "head_build__bypass_blade__cutting_half",
+          "name": "frame_to_cutting_half",
+          "parent": "pivot_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "head_build__bypass_blade__counter_half",
+          "name": "frame_to_counter_half",
+          "parent": "pivot_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "return_build__torsion_coil__return_spring_0",
+          "name": "counter_to_return_spring_0",
+          "parent": "head_build__bypass_blade__counter_half",
+          "type": "revolute"
+        },
+        {
+          "child": "catch_build__ratchet_pawl__locking_catch",
+          "name": "counter_to_locking_catch",
+          "parent": "head_build__bypass_blade__counter_half",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 5,
+      "links": [
+        "catch_build__ratchet_pawl__locking_catch",
+        "head_build__bypass_blade__counter_half",
+        "head_build__bypass_blade__cutting_half",
+        "pivot_frame",
+        "return_build__torsion_coil__return_spring_0"
+      ],
+      "roots": [
+        "pivot_frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/blind_review_packet/previews/E008_base.png",
+    "base_run": {
+      "elapsed_s": 1.1488349810242653,
+      "error": null,
+      "package_sha256": "a2fd47aff9325b5c7088f4e20843dc766c210da6f9dc84c779eac38555b5c151",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E008/base/model.urdf",
+      "urdf_sha256": "3839cef38ecac8217a31b1f7f37c4641d9103acacdbdcb55c0e7f9f766d82344",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E008/base/source.py"
+    },
+    "changes": {
+      "spring_stage_count": 2
+    },
+    "deterministic_gate_pass": true,
+    "edit": {
+      "edit_class": "additive",
+      "field": "spring_stage_count",
+      "instruction": "Add a second return-spring stage.",
+      "new": 2,
+      "old": 1
+    },
+    "edit_class": "additive",
+    "edit_parse": {
+      "joint_count": 5,
+      "joints": [
+        {
+          "child": "head_build__bypass_blade__cutting_half",
+          "name": "frame_to_cutting_half",
+          "parent": "pivot_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "head_build__bypass_blade__counter_half",
+          "name": "frame_to_counter_half",
+          "parent": "pivot_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "return_build__torsion_coil__return_spring_0",
+          "name": "counter_to_return_spring_0",
+          "parent": "head_build__bypass_blade__counter_half",
+          "type": "revolute"
+        },
+        {
+          "child": "return_build__torsion_coil__return_spring_1",
+          "name": "counter_to_return_spring_1",
+          "parent": "head_build__bypass_blade__counter_half",
+          "type": "revolute"
+        },
+        {
+          "child": "catch_build__ratchet_pawl__locking_catch",
+          "name": "counter_to_locking_catch",
+          "parent": "head_build__bypass_blade__counter_half",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 6,
+      "links": [
+        "catch_build__ratchet_pawl__locking_catch",
+        "head_build__bypass_blade__counter_half",
+        "head_build__bypass_blade__cutting_half",
+        "pivot_frame",
+        "return_build__torsion_coil__return_spring_0",
+        "return_build__torsion_coil__return_spring_1"
+      ],
+      "roots": [
+        "pivot_frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 1.1090432647615671,
+      "error": null,
+      "package_sha256": "ad79abbb9fcff181cad7a14382ef252d65113753c0b2a8b74d0f92806694bfda",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E008/edited/model.urdf",
+      "urdf_sha256": "7166d1a91b7ee6ea452d82240e33802297aa5f53e11e22bff26276303630bb2f",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E008/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E008/edited/model.glb",
+    "edited_preview": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/blind_review_packet/previews/E008_edited.png",
+    "field": "spring_stage_count",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Add a second return-spring stage.",
+    "seed": 2,
+    "slug": "pictureX_0611_Garden_pruner",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "picturex_0611_garden_pruner",
+    "target_handle": true,
+    "target_tokens": [
+      "spring"
+    ],
+    "target_value": 2,
+    "task_id": "E008"
+  },
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E009/base/model.glb",
+    "base_parse": {
+      "joint_count": 4,
+      "joints": [
+        {
+          "child": "drive_mount",
+          "name": "vessel_to_drive_mount",
+          "parent": "vessel",
+          "type": "fixed"
+        },
+        {
+          "child": "drive",
+          "name": "drive_mount_to_drive",
+          "parent": "drive_mount",
+          "type": "continuous"
+        },
+        {
+          "child": "dasher",
+          "name": "drive_mount_to_dasher",
+          "parent": "drive_mount",
+          "type": "continuous"
+        },
+        {
+          "child": "access_lid",
+          "name": "vessel_to_access_lid",
+          "parent": "vessel",
+          "type": "prismatic"
+        }
+      ],
+      "link_count": 5,
+      "links": [
+        "access_lid",
+        "dasher",
+        "drive",
+        "drive_mount",
+        "vessel"
+      ],
+      "roots": [
+        "vessel"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/blind_review_packet/previews/E009_base.png",
+    "base_run": {
+      "elapsed_s": 4.061473431065679,
+      "error": null,
+      "package_sha256": "f31f7073a2e07bd88a96c00bde9af3a4c50901e0b57531707d484f02f0b61d62",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E009/base/model.urdf",
+      "urdf_sha256": "6844f70290626c69b6e554b52a7f59204085838372a91623742fb1e566f8ff87",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E009/base/source.py"
+    },
+    "changes": {
+      "dasher_blade_count": 4
+    },
+    "deterministic_gate_pass": true,
+    "edit": {
+      "edit_class": "additive",
+      "field": "dasher_blade_count",
+      "instruction": "Add one blade to the dasher.",
+      "new": 4,
+      "old": 3
+    },
+    "edit_class": "additive",
+    "edit_parse": {
+      "joint_count": 4,
+      "joints": [
+        {
+          "child": "drive_mount",
+          "name": "vessel_to_drive_mount",
+          "parent": "vessel",
+          "type": "fixed"
+        },
+        {
+          "child": "drive",
+          "name": "drive_mount_to_drive",
+          "parent": "drive_mount",
+          "type": "continuous"
+        },
+        {
+          "child": "dasher",
+          "name": "drive_mount_to_dasher",
+          "parent": "drive_mount",
+          "type": "continuous"
+        },
+        {
+          "child": "access_lid",
+          "name": "vessel_to_access_lid",
+          "parent": "vessel",
+          "type": "prismatic"
+        }
+      ],
+      "link_count": 5,
+      "links": [
+        "access_lid",
+        "dasher",
+        "drive",
+        "drive_mount",
+        "vessel"
+      ],
+      "roots": [
+        "vessel"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 3.565452706068754,
+      "error": null,
+      "package_sha256": "797b6c322e058908c4167ac148e0584d0270481030b4ea72509ab232f10469e4",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E009/edited/model.urdf",
+      "urdf_sha256": "577a3d52ec0068656c9be96d6f74426cc6ece175934adeb7ec41e8d294e77fe0",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E009/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E009/edited/model.glb",
+    "edited_preview": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/blind_review_packet/previews/E009_edited.png",
+    "field": "dasher_blade_count",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Add one blade to the dasher.",
+    "seed": 0,
+    "slug": "pictureX_0611_Ice_crream_machine",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "picturex_0611_ice_crream_machine",
+    "target_handle": true,
+    "target_tokens": [
+      "dasher",
+      "blade",
+      "paddle"
+    ],
+    "target_value": 4,
+    "task_id": "E009"
+  },
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E010/base/model.glb",
+    "base_parse": {
+      "joint_count": 10,
+      "joints": [
+        {
+          "child": "cup",
+          "name": "frame_to_cup",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "strainer",
+          "name": "cup_to_strainer",
+          "parent": "cup",
+          "type": "prismatic"
+        },
+        {
+          "child": "ram",
+          "name": "frame_to_ram",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "mount_style__corner_foot_pads__foot_0",
+          "name": "mount_style__corner_foot_pads__frame_to_foot_0",
+          "parent": "frame",
+          "type": "fixed"
+        },
+        {
+          "child": "mount_style__corner_foot_pads__foot_1",
+          "name": "mount_style__corner_foot_pads__frame_to_foot_1",
+          "parent": "frame",
+          "type": "fixed"
+        },
+        {
+          "child": "mount_style__corner_foot_pads__foot_2",
+          "name": "mount_style__corner_foot_pads__frame_to_foot_2",
+          "parent": "frame",
+          "type": "fixed"
+        },
+        {
+          "child": "mount_style__corner_foot_pads__foot_3",
+          "name": "mount_style__corner_foot_pads__frame_to_foot_3",
+          "parent": "frame",
+          "type": "fixed"
+        },
+        {
+          "child": "mount_style__corner_foot_pads__foot_4",
+          "name": "mount_style__corner_foot_pads__frame_to_foot_4",
+          "parent": "frame",
+          "type": "fixed"
+        },
+        {
+          "child": "actuator_style__lever_linkage__lever",
+          "name": "actuator_style__lever_linkage__frame_to_lever",
+          "parent": "frame",
+          "type": "revolute"
+        },
+        {
+          "child": "actuator_style__lever_linkage__linkage",
+          "name": "actuator_style__lever_linkage__lever_to_linkage",
+          "parent": "actuator_style__lever_linkage__lever",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 11,
+      "links": [
+        "actuator_style__lever_linkage__lever",
+        "actuator_style__lever_linkage__linkage",
+        "cup",
+        "frame",
+        "mount_style__corner_foot_pads__foot_0",
+        "mount_style__corner_foot_pads__foot_1",
+        "mount_style__corner_foot_pads__foot_2",
+        "mount_style__corner_foot_pads__foot_3",
+        "mount_style__corner_foot_pads__foot_4",
+        "ram",
+        "strainer"
+      ],
+      "roots": [
+        "frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": null,
+    "base_run": {
+      "elapsed_s": 7.663063108921051,
+      "error": null,
+      "package_sha256": "f831a65799fd7492ee91aa8569c76045e61857de1ef668fb6c03bbdbdfb60506",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E010/base/model.urdf",
+      "urdf_sha256": "608b10e740ba270b1fa864df02f8e51dfb0936826e2950a47db68d12ac95533f",
+      "verdict": "pass",
+      "warnings": [
+        "Isolated parts detected but allowed by justification: 2 part(s) ['cup', 'strainer'].\n- pose_index=1 at pose (actuator_style__lever_linkage__frame_to_lever=0, actuator_style__lever_linkage__lever_to_linkage=0, cup_to_strainer=0, frame_to_cup=0.008647, frame_to_ram=0, mount_style__corner_foot_pads__frame_to_foot_0=0, mount_style__corner_foot_pads__frame_to_foot_1=0, mount_style__corner_foot_pads__frame_to_foot_2=0, mount_style__corner_foot_pads__frame_to_foot_3=0, mount_style__corner_foot_pads__frame_to_foot_4=0), floating group ['cup', 'strainer'] is disconnected from the grounded body rooted at 'frame'; nearest_grounded_part='frame'; approx_gap=0.008647m; backend=fcl\n- pose_index=2 at pose (actuator_style__lever_linkage__frame_to_lever=0, actuator_style__lever_linkage__lever_to_linkage=0, cup_to_strainer=0.008647, frame_to_cup=0, frame_to_ram=0, mount_style__corner_foot_pads__frame_to_foot_0=0, mount_style__corner_foot_pads__frame_to_foot_1=0, mount_style__corner_foot_pads__frame_to_foot_2=0, mount_style__corner_foot_pads__frame_to_foot_3=0, mount_style__corner_foot_pads__frame_to_foot_4=0), part 'strainer' is disconnected from the grounded body rooted at 'frame'; nearest_grounded_part='cup'; approx_gap=0.00713m; backend=fcl"
+      ],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E010/base/source.py"
+    },
+    "changes": {
+      "base_support_count": 6
+    },
+    "deterministic_gate_pass": true,
+    "edit": {
+      "edit_class": "additive",
+      "field": "base_support_count",
+      "instruction": "Add one additional base support.",
+      "new": 6,
+      "old": 5
+    },
+    "edit_class": "additive",
+    "edit_parse": {
+      "joint_count": 11,
+      "joints": [
+        {
+          "child": "cup",
+          "name": "frame_to_cup",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "strainer",
+          "name": "cup_to_strainer",
+          "parent": "cup",
+          "type": "prismatic"
+        },
+        {
+          "child": "ram",
+          "name": "frame_to_ram",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "mount_style__corner_foot_pads__foot_0",
+          "name": "mount_style__corner_foot_pads__frame_to_foot_0",
+          "parent": "frame",
+          "type": "fixed"
+        },
+        {
+          "child": "mount_style__corner_foot_pads__foot_1",
+          "name": "mount_style__corner_foot_pads__frame_to_foot_1",
+          "parent": "frame",
+          "type": "fixed"
+        },
+        {
+          "child": "mount_style__corner_foot_pads__foot_2",
+          "name": "mount_style__corner_foot_pads__frame_to_foot_2",
+          "parent": "frame",
+          "type": "fixed"
+        },
+        {
+          "child": "mount_style__corner_foot_pads__foot_3",
+          "name": "mount_style__corner_foot_pads__frame_to_foot_3",
+          "parent": "frame",
+          "type": "fixed"
+        },
+        {
+          "child": "mount_style__corner_foot_pads__foot_4",
+          "name": "mount_style__corner_foot_pads__frame_to_foot_4",
+          "parent": "frame",
+          "type": "fixed"
+        },
+        {
+          "child": "mount_style__corner_foot_pads__foot_5",
+          "name": "mount_style__corner_foot_pads__frame_to_foot_5",
+          "parent": "frame",
+          "type": "fixed"
+        },
+        {
+          "child": "actuator_style__lever_linkage__lever",
+          "name": "actuator_style__lever_linkage__frame_to_lever",
+          "parent": "frame",
+          "type": "revolute"
+        },
+        {
+          "child": "actuator_style__lever_linkage__linkage",
+          "name": "actuator_style__lever_linkage__lever_to_linkage",
+          "parent": "actuator_style__lever_linkage__lever",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 12,
+      "links": [
+        "actuator_style__lever_linkage__lever",
+        "actuator_style__lever_linkage__linkage",
+        "cup",
+        "frame",
+        "mount_style__corner_foot_pads__foot_0",
+        "mount_style__corner_foot_pads__foot_1",
+        "mount_style__corner_foot_pads__foot_2",
+        "mount_style__corner_foot_pads__foot_3",
+        "mount_style__corner_foot_pads__foot_4",
+        "mount_style__corner_foot_pads__foot_5",
+        "ram",
+        "strainer"
+      ],
+      "roots": [
+        "frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 7.788596659898758,
+      "error": null,
+      "package_sha256": "23864111d8601be6b9383289bd53a8920c3043d62db7c827d77b2047172bab9d",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E010/edited/model.urdf",
+      "urdf_sha256": "76a5ec6ce732bcd291a50d2f0ed656f9b88223b52363b2a902e97eba61b8e654",
+      "verdict": "pass",
+      "warnings": [
+        "Isolated parts detected but allowed by justification: 2 part(s) ['cup', 'strainer'].\n- pose_index=1 at pose (actuator_style__lever_linkage__frame_to_lever=0, actuator_style__lever_linkage__lever_to_linkage=0, cup_to_strainer=0, frame_to_cup=0.008647, frame_to_ram=0, mount_style__corner_foot_pads__frame_to_foot_0=0, mount_style__corner_foot_pads__frame_to_foot_1=0, mount_style__corner_foot_pads__frame_to_foot_2=0, mount_style__corner_foot_pads__frame_to_foot_3=0, mount_style__corner_foot_pads__frame_to_foot_4=0, mount_style__corner_foot_pads__frame_to_foot_5=0), floating group ['cup', 'strainer'] is disconnected from the grounded body rooted at 'frame'; nearest_grounded_part='frame'; approx_gap=0.008647m; backend=fcl\n- pose_index=2 at pose (actuator_style__lever_linkage__frame_to_lever=0, actuator_style__lever_linkage__lever_to_linkage=0, cup_to_strainer=0.008647, frame_to_cup=0, frame_to_ram=0, mount_style__corner_foot_pads__frame_to_foot_0=0, mount_style__corner_foot_pads__frame_to_foot_1=0, mount_style__corner_foot_pads__frame_to_foot_2=0, mount_style__corner_foot_pads__frame_to_foot_3=0, mount_style__corner_foot_pads__frame_to_foot_4=0, mount_style__corner_foot_pads__frame_to_foot_5=0), part 'strainer' is disconnected from the grounded body rooted at 'frame'; nearest_grounded_part='cup'; approx_gap=0.00713m; backend=fcl"
+      ],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E010/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E010/edited/model.glb",
+    "edited_preview": null,
+    "field": "base_support_count",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Add one additional base support.",
+    "seed": 2,
+    "slug": "pictureX_0611_juicer_press_with_handle",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "pictureX_0611_juicer_press_with_handle",
+    "target_handle": true,
+    "target_tokens": [
+      "support",
+      "foot",
+      "mount"
+    ],
+    "target_value": 6,
+    "task_id": "E010"
+  },
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E011/base/model.glb",
+    "base_parse": {
+      "joint_count": 6,
+      "joints": [
+        {
+          "child": "leaf_face__raised_panel__pivot_leaf_0",
+          "name": "frame_to_pivot_leaf_0",
+          "parent": "opening_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "leaf_face__raised_panel__mid_leaf_0",
+          "name": "pivot_leaf_to_mid_leaf_0",
+          "parent": "leaf_face__raised_panel__pivot_leaf_0",
+          "type": "revolute"
+        },
+        {
+          "child": "leaf_face__raised_panel__handle_leaf_0",
+          "name": "mid_leaf_to_handle_leaf_0",
+          "parent": "leaf_face__raised_panel__mid_leaf_0",
+          "type": "revolute"
+        },
+        {
+          "child": "leaf_face__raised_panel__pivot_leaf_1",
+          "name": "frame_to_pivot_leaf_1",
+          "parent": "opening_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "leaf_face__raised_panel__mid_leaf_1",
+          "name": "pivot_leaf_to_mid_leaf_1",
+          "parent": "leaf_face__raised_panel__pivot_leaf_1",
+          "type": "revolute"
+        },
+        {
+          "child": "leaf_face__raised_panel__handle_leaf_1",
+          "name": "mid_leaf_to_handle_leaf_1",
+          "parent": "leaf_face__raised_panel__mid_leaf_1",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 7,
+      "links": [
+        "leaf_face__raised_panel__handle_leaf_0",
+        "leaf_face__raised_panel__handle_leaf_1",
+        "leaf_face__raised_panel__mid_leaf_0",
+        "leaf_face__raised_panel__mid_leaf_1",
+        "leaf_face__raised_panel__pivot_leaf_0",
+        "leaf_face__raised_panel__pivot_leaf_1",
+        "opening_frame"
+      ],
+      "roots": [
+        "opening_frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/blind_review_packet/previews/E011_base.png",
+    "base_run": {
+      "elapsed_s": 3.1722612641751766,
+      "error": null,
+      "package_sha256": "b559095a6295628df3d259b977ea6aac2cfa0bf703dd37115cfee31f040c7d05",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E011/base/model.urdf",
+      "urdf_sha256": "169dd8d68251be3180e971e5ee3a0d185f4a555ff0ddf99e7a024a326d8303c0",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E011/base/source.py"
+    },
+    "changes": {
+      "bifold_pair_count": 3
+    },
+    "deterministic_gate_pass": true,
+    "edit": {
+      "edit_class": "additive",
+      "field": "bifold_pair_count",
+      "instruction": "Add one folding door pair to the closet system.",
+      "new": 3,
+      "old": 2
+    },
+    "edit_class": "additive",
+    "edit_parse": {
+      "joint_count": 9,
+      "joints": [
+        {
+          "child": "leaf_face__raised_panel__pivot_leaf_0",
+          "name": "frame_to_pivot_leaf_0",
+          "parent": "opening_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "leaf_face__raised_panel__mid_leaf_0",
+          "name": "pivot_leaf_to_mid_leaf_0",
+          "parent": "leaf_face__raised_panel__pivot_leaf_0",
+          "type": "revolute"
+        },
+        {
+          "child": "leaf_face__raised_panel__handle_leaf_0",
+          "name": "mid_leaf_to_handle_leaf_0",
+          "parent": "leaf_face__raised_panel__mid_leaf_0",
+          "type": "revolute"
+        },
+        {
+          "child": "leaf_face__raised_panel__pivot_leaf_1",
+          "name": "frame_to_pivot_leaf_1",
+          "parent": "opening_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "leaf_face__raised_panel__mid_leaf_1",
+          "name": "pivot_leaf_to_mid_leaf_1",
+          "parent": "leaf_face__raised_panel__pivot_leaf_1",
+          "type": "revolute"
+        },
+        {
+          "child": "leaf_face__raised_panel__handle_leaf_1",
+          "name": "mid_leaf_to_handle_leaf_1",
+          "parent": "leaf_face__raised_panel__mid_leaf_1",
+          "type": "revolute"
+        },
+        {
+          "child": "leaf_face__raised_panel__pivot_leaf_2",
+          "name": "frame_to_pivot_leaf_2",
+          "parent": "opening_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "leaf_face__raised_panel__mid_leaf_2",
+          "name": "pivot_leaf_to_mid_leaf_2",
+          "parent": "leaf_face__raised_panel__pivot_leaf_2",
+          "type": "revolute"
+        },
+        {
+          "child": "leaf_face__raised_panel__handle_leaf_2",
+          "name": "mid_leaf_to_handle_leaf_2",
+          "parent": "leaf_face__raised_panel__mid_leaf_2",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 10,
+      "links": [
+        "leaf_face__raised_panel__handle_leaf_0",
+        "leaf_face__raised_panel__handle_leaf_1",
+        "leaf_face__raised_panel__handle_leaf_2",
+        "leaf_face__raised_panel__mid_leaf_0",
+        "leaf_face__raised_panel__mid_leaf_1",
+        "leaf_face__raised_panel__mid_leaf_2",
+        "leaf_face__raised_panel__pivot_leaf_0",
+        "leaf_face__raised_panel__pivot_leaf_1",
+        "leaf_face__raised_panel__pivot_leaf_2",
+        "opening_frame"
+      ],
+      "roots": [
+        "opening_frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 3.9271142948418856,
+      "error": null,
+      "package_sha256": "2a594ff1fea19eca7ea91cda02d8b3f9e8d6176b7cc9f3058e9325be54e68889",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E011/edited/model.urdf",
+      "urdf_sha256": "7d469eadabc53434e37cf29adf5f17ad1cc4399a9cd67bec4ce7193983e9a062",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E011/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E011/edited/model.glb",
+    "edited_preview": null,
+    "field": "bifold_pair_count",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Add one folding door pair to the closet system.",
+    "seed": 0,
+    "slug": "pictureX_0611_bi_fold_closet_door_system",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "picturex_0611_bi_fold_closet_door_system",
+    "target_handle": true,
+    "target_tokens": [
+      "leaf",
+      "door",
+      "fold"
+    ],
+    "target_value": 3,
+    "task_id": "E011"
+  },
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E012/base/model.glb",
+    "base_parse": {
+      "joint_count": 5,
+      "joints": [
+        {
+          "child": "drum",
+          "name": "frame_to_drum",
+          "parent": "frame",
+          "type": "continuous"
+        },
+        {
+          "child": "crank",
+          "name": "frame_to_crank",
+          "parent": "frame",
+          "type": "continuous"
+        },
+        {
+          "child": "grip",
+          "name": "crank_to_grip",
+          "parent": "crank",
+          "type": "revolute"
+        },
+        {
+          "child": "pawl_0",
+          "name": "frame_to_pawl_0",
+          "parent": "frame",
+          "type": "revolute"
+        },
+        {
+          "child": "pawl_1",
+          "name": "frame_to_pawl_1",
+          "parent": "frame",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 6,
+      "links": [
+        "crank",
+        "drum",
+        "frame",
+        "grip",
+        "pawl_0",
+        "pawl_1"
+      ],
+      "roots": [
+        "frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": null,
+    "base_run": {
+      "elapsed_s": 10.749370232224464,
+      "error": null,
+      "package_sha256": "0184e31bb673430b3a9fc802fb6ed6fa305f05a03c2aff606e285fe0650b1e1a",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E012/base/model.urdf",
+      "urdf_sha256": "0c5072cf50ec60d758211c15da2e8c55c2afd7ea85dde0b910ce11e43baa3a91",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E012/base/source.py"
+    },
+    "changes": {
+      "pawl_count": 3
+    },
+    "deterministic_gate_pass": true,
+    "edit": {
+      "edit_class": "additive",
+      "field": "pawl_count",
+      "instruction": "Add one additional ratchet pawl.",
+      "new": 3,
+      "old": 2
+    },
+    "edit_class": "additive",
+    "edit_parse": {
+      "joint_count": 6,
+      "joints": [
+        {
+          "child": "drum",
+          "name": "frame_to_drum",
+          "parent": "frame",
+          "type": "continuous"
+        },
+        {
+          "child": "crank",
+          "name": "frame_to_crank",
+          "parent": "frame",
+          "type": "continuous"
+        },
+        {
+          "child": "grip",
+          "name": "crank_to_grip",
+          "parent": "crank",
+          "type": "revolute"
+        },
+        {
+          "child": "pawl_0",
+          "name": "frame_to_pawl_0",
+          "parent": "frame",
+          "type": "revolute"
+        },
+        {
+          "child": "pawl_1",
+          "name": "frame_to_pawl_1",
+          "parent": "frame",
+          "type": "revolute"
+        },
+        {
+          "child": "pawl_2",
+          "name": "frame_to_pawl_2",
+          "parent": "frame",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 7,
+      "links": [
+        "crank",
+        "drum",
+        "frame",
+        "grip",
+        "pawl_0",
+        "pawl_1",
+        "pawl_2"
+      ],
+      "roots": [
+        "frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 13.049865132197738,
+      "error": null,
+      "package_sha256": "dc770b0be9db74b50f4f91ab7350c952ea687cacebfe56f543c6e589d81d7e53",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E012/edited/model.urdf",
+      "urdf_sha256": "a0b7121a1cbdbeee58b592bd340982ac544f93707263ebe85b92fe8805598479",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E012/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E012/edited/model.glb",
+    "edited_preview": null,
+    "field": "pawl_count",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Add one additional ratchet pawl.",
+    "seed": 0,
+    "slug": "sailboat_winch_with_pawl_and_handle",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "sailboat_winch_with_pawl_and_handle",
+    "target_handle": true,
+    "target_tokens": [
+      "pawl",
+      "ratchet"
+    ],
+    "target_value": 3,
+    "task_id": "E012"
+  },
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E013/base/model.glb",
+    "base_parse": {
+      "joint_count": 17,
+      "joints": [
+        {
+          "child": "leg_family__a_frame_legs__frame_0",
+          "name": "spine_to_leg_0",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "leg_family__a_frame_legs__frame_0__caster_wheel_0",
+          "name": "leg_family__a_frame_legs__frame_0__to_caster_wheel_0",
+          "parent": "leg_family__a_frame_legs__frame_0",
+          "type": "continuous"
+        },
+        {
+          "child": "leg_family__a_frame_legs__frame_0__caster_wheel_1",
+          "name": "leg_family__a_frame_legs__frame_0__to_caster_wheel_1",
+          "parent": "leg_family__a_frame_legs__frame_0",
+          "type": "continuous"
+        },
+        {
+          "child": "leg_family__a_frame_legs__frame_1",
+          "name": "spine_to_leg_1",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "leg_family__a_frame_legs__frame_1__caster_wheel_0",
+          "name": "leg_family__a_frame_legs__frame_1__to_caster_wheel_0",
+          "parent": "leg_family__a_frame_legs__frame_1",
+          "type": "continuous"
+        },
+        {
+          "child": "leg_family__a_frame_legs__frame_1__caster_wheel_1",
+          "name": "leg_family__a_frame_legs__frame_1__to_caster_wheel_1",
+          "parent": "leg_family__a_frame_legs__frame_1",
+          "type": "continuous"
+        },
+        {
+          "child": "leg_family__a_frame_legs__frame_2",
+          "name": "spine_to_leg_2",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "leg_family__a_frame_legs__frame_2__caster_wheel_0",
+          "name": "leg_family__a_frame_legs__frame_2__to_caster_wheel_0",
+          "parent": "leg_family__a_frame_legs__frame_2",
+          "type": "continuous"
+        },
+        {
+          "child": "leg_family__a_frame_legs__frame_2__caster_wheel_1",
+          "name": "leg_family__a_frame_legs__frame_2__to_caster_wheel_1",
+          "parent": "leg_family__a_frame_legs__frame_2",
+          "type": "continuous"
+        },
+        {
+          "child": "wing_form__single_rail_arm__tier0_front",
+          "name": "spine_to_wing_t0_front",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "wing_form__single_rail_arm__tier0_rear",
+          "name": "spine_to_wing_t0_rear",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "wing_form__single_rail_arm__tier1_front",
+          "name": "spine_to_wing_t1_front",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "wing_form__single_rail_arm__tier1_rear",
+          "name": "spine_to_wing_t1_rear",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "hanger_type__sock_clip_ring__hanger_0",
+          "name": "rail_to_hanger_0",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "hanger_type__sock_clip_ring__hanger_1",
+          "name": "rail_to_hanger_1",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "hanger_type__sock_clip_ring__hanger_2",
+          "name": "rail_to_hanger_2",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "hanger_type__sock_clip_ring__hanger_3",
+          "name": "rail_to_hanger_3",
+          "parent": "main_frame",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 18,
+      "links": [
+        "hanger_type__sock_clip_ring__hanger_0",
+        "hanger_type__sock_clip_ring__hanger_1",
+        "hanger_type__sock_clip_ring__hanger_2",
+        "hanger_type__sock_clip_ring__hanger_3",
+        "leg_family__a_frame_legs__frame_0",
+        "leg_family__a_frame_legs__frame_0__caster_wheel_0",
+        "leg_family__a_frame_legs__frame_0__caster_wheel_1",
+        "leg_family__a_frame_legs__frame_1",
+        "leg_family__a_frame_legs__frame_1__caster_wheel_0",
+        "leg_family__a_frame_legs__frame_1__caster_wheel_1",
+        "leg_family__a_frame_legs__frame_2",
+        "leg_family__a_frame_legs__frame_2__caster_wheel_0",
+        "leg_family__a_frame_legs__frame_2__caster_wheel_1",
+        "main_frame",
+        "wing_form__single_rail_arm__tier0_front",
+        "wing_form__single_rail_arm__tier0_rear",
+        "wing_form__single_rail_arm__tier1_front",
+        "wing_form__single_rail_arm__tier1_rear"
+      ],
+      "roots": [
+        "main_frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": null,
+    "base_run": {
+      "elapsed_s": 22.278597556054592,
+      "error": null,
+      "package_sha256": "2b264bb7680eb922c870ba00441c48bcb1ac0600a7dfd31b866e04af2b481cfa",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E013/base/model.urdf",
+      "urdf_sha256": "2363da0601cc66bd79bc75ee6fcc6ca32ea12ebd3ff24b5db12b305419d4c61d",
+      "verdict": "pass",
+      "warnings": [
+        "Isolated parts detected but allowed by justification: 6 part(s) ['leg_family__a_frame_legs__frame_0__caster_wheel_0', 'leg_family__a_frame_legs__frame_0__caster_wheel_1', 'leg_family__a_frame_legs__frame_1__caster_wheel_0', 'leg_family__a_frame_legs__frame_1__caster_wheel_1', 'leg_family__a_frame_legs__frame_2__caster_wheel_0', 'leg_family__a_frame_legs__frame_2__caster_wheel_1'].\n- pose_index=0 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, spine_to_leg_0=0, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_0__caster_wheel_0' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_0'; approx_gap=0.001046m; backend=fcl\n- pose_index=0 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, spine_to_leg_0=0, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_0__caster_wheel_1' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_0'; approx_gap=0.001046m; backend=fcl\n- pose_index=0 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, spine_to_leg_0=0, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_1__caster_wheel_0' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_1'; approx_gap=0.001046m; backend=fcl\n- pose_index=0 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, spine_to_leg_0=0, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_1__caster_wheel_1' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_1'; approx_gap=0.001046m; backend=fcl\n- pose_index=0 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, spine_to_leg_0=0, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_2__caster_wheel_0' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_2'; approx_gap=0.001046m; backend=fcl\n- pose_index=0 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, spine_to_leg_0=0, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_2__caster_wheel_1' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_2'; approx_gap=0.001046m; backend=fcl\n- pose_index=1 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, spine_to_leg_0=0.15, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_0__caster_wheel_0' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_0'; approx_gap=0.001046m; backend=fcl\n- pose_index=1 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, spine_to_leg_0=0.15, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_0__caster_wheel_1' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_0'; approx_gap=0.001046m; backend=fcl\n- pose_index=1 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, spine_to_leg_0=0.15, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_1__caster_wheel_0' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_1'; approx_gap=0.001046m; backend=fcl\n- pose_index=1 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, spine_to_leg_0=0.15, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_1__caster_wheel_1' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_1'; approx_gap=0.001046m; backend=fcl\n... (218 more)"
+      ],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E013/base/source.py"
+    },
+    "changes": {
+      "hanger_count": 5
+    },
+    "deterministic_gate_pass": true,
+    "edit": {
+      "edit_class": "additive",
+      "field": "hanger_count",
+      "instruction": "Add one additional hanger to the drying rack.",
+      "new": 5,
+      "old": 4
+    },
+    "edit_class": "additive",
+    "edit_parse": {
+      "joint_count": 18,
+      "joints": [
+        {
+          "child": "leg_family__a_frame_legs__frame_0",
+          "name": "spine_to_leg_0",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "leg_family__a_frame_legs__frame_0__caster_wheel_0",
+          "name": "leg_family__a_frame_legs__frame_0__to_caster_wheel_0",
+          "parent": "leg_family__a_frame_legs__frame_0",
+          "type": "continuous"
+        },
+        {
+          "child": "leg_family__a_frame_legs__frame_0__caster_wheel_1",
+          "name": "leg_family__a_frame_legs__frame_0__to_caster_wheel_1",
+          "parent": "leg_family__a_frame_legs__frame_0",
+          "type": "continuous"
+        },
+        {
+          "child": "leg_family__a_frame_legs__frame_1",
+          "name": "spine_to_leg_1",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "leg_family__a_frame_legs__frame_1__caster_wheel_0",
+          "name": "leg_family__a_frame_legs__frame_1__to_caster_wheel_0",
+          "parent": "leg_family__a_frame_legs__frame_1",
+          "type": "continuous"
+        },
+        {
+          "child": "leg_family__a_frame_legs__frame_1__caster_wheel_1",
+          "name": "leg_family__a_frame_legs__frame_1__to_caster_wheel_1",
+          "parent": "leg_family__a_frame_legs__frame_1",
+          "type": "continuous"
+        },
+        {
+          "child": "leg_family__a_frame_legs__frame_2",
+          "name": "spine_to_leg_2",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "leg_family__a_frame_legs__frame_2__caster_wheel_0",
+          "name": "leg_family__a_frame_legs__frame_2__to_caster_wheel_0",
+          "parent": "leg_family__a_frame_legs__frame_2",
+          "type": "continuous"
+        },
+        {
+          "child": "leg_family__a_frame_legs__frame_2__caster_wheel_1",
+          "name": "leg_family__a_frame_legs__frame_2__to_caster_wheel_1",
+          "parent": "leg_family__a_frame_legs__frame_2",
+          "type": "continuous"
+        },
+        {
+          "child": "wing_form__single_rail_arm__tier0_front",
+          "name": "spine_to_wing_t0_front",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "wing_form__single_rail_arm__tier0_rear",
+          "name": "spine_to_wing_t0_rear",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "wing_form__single_rail_arm__tier1_front",
+          "name": "spine_to_wing_t1_front",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "wing_form__single_rail_arm__tier1_rear",
+          "name": "spine_to_wing_t1_rear",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "hanger_type__sock_clip_ring__hanger_0",
+          "name": "rail_to_hanger_0",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "hanger_type__sock_clip_ring__hanger_1",
+          "name": "rail_to_hanger_1",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "hanger_type__sock_clip_ring__hanger_2",
+          "name": "rail_to_hanger_2",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "hanger_type__sock_clip_ring__hanger_3",
+          "name": "rail_to_hanger_3",
+          "parent": "main_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "hanger_type__sock_clip_ring__hanger_4",
+          "name": "rail_to_hanger_4",
+          "parent": "main_frame",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 19,
+      "links": [
+        "hanger_type__sock_clip_ring__hanger_0",
+        "hanger_type__sock_clip_ring__hanger_1",
+        "hanger_type__sock_clip_ring__hanger_2",
+        "hanger_type__sock_clip_ring__hanger_3",
+        "hanger_type__sock_clip_ring__hanger_4",
+        "leg_family__a_frame_legs__frame_0",
+        "leg_family__a_frame_legs__frame_0__caster_wheel_0",
+        "leg_family__a_frame_legs__frame_0__caster_wheel_1",
+        "leg_family__a_frame_legs__frame_1",
+        "leg_family__a_frame_legs__frame_1__caster_wheel_0",
+        "leg_family__a_frame_legs__frame_1__caster_wheel_1",
+        "leg_family__a_frame_legs__frame_2",
+        "leg_family__a_frame_legs__frame_2__caster_wheel_0",
+        "leg_family__a_frame_legs__frame_2__caster_wheel_1",
+        "main_frame",
+        "wing_form__single_rail_arm__tier0_front",
+        "wing_form__single_rail_arm__tier0_rear",
+        "wing_form__single_rail_arm__tier1_front",
+        "wing_form__single_rail_arm__tier1_rear"
+      ],
+      "roots": [
+        "main_frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 25.080408185720444,
+      "error": null,
+      "package_sha256": "96ce35e826753697687b23ccd3b7aacf3ec97a18f82a1d02dfb49b280229b949",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E013/edited/model.urdf",
+      "urdf_sha256": "cb400cfee4aed7bda14490a3bf1e0f0db83ba9e274d08e6dfaa725491a1c713b",
+      "verdict": "pass",
+      "warnings": [
+        "Isolated parts detected but allowed by justification: 6 part(s) ['leg_family__a_frame_legs__frame_0__caster_wheel_0', 'leg_family__a_frame_legs__frame_0__caster_wheel_1', 'leg_family__a_frame_legs__frame_1__caster_wheel_0', 'leg_family__a_frame_legs__frame_1__caster_wheel_1', 'leg_family__a_frame_legs__frame_2__caster_wheel_0', 'leg_family__a_frame_legs__frame_2__caster_wheel_1'].\n- pose_index=0 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, rail_to_hanger_4=0, spine_to_leg_0=0, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_0__caster_wheel_0' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_0'; approx_gap=0.001046m; backend=fcl\n- pose_index=0 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, rail_to_hanger_4=0, spine_to_leg_0=0, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_0__caster_wheel_1' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_0'; approx_gap=0.001046m; backend=fcl\n- pose_index=0 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, rail_to_hanger_4=0, spine_to_leg_0=0, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_1__caster_wheel_0' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_1'; approx_gap=0.001046m; backend=fcl\n- pose_index=0 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, rail_to_hanger_4=0, spine_to_leg_0=0, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_1__caster_wheel_1' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_1'; approx_gap=0.001046m; backend=fcl\n- pose_index=0 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, rail_to_hanger_4=0, spine_to_leg_0=0, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_2__caster_wheel_0' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_2'; approx_gap=0.001046m; backend=fcl\n- pose_index=0 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, rail_to_hanger_4=0, spine_to_leg_0=0, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_2__caster_wheel_1' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_2'; approx_gap=0.001046m; backend=fcl\n- pose_index=1 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, rail_to_hanger_4=0, spine_to_leg_0=0.15, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_0__caster_wheel_0' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_0'; approx_gap=0.001046m; backend=fcl\n- pose_index=1 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, rail_to_hanger_4=0, spine_to_leg_0=0.15, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_0__caster_wheel_1' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_0'; approx_gap=0.001046m; backend=fcl\n- pose_index=1 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, rail_to_hanger_4=0, spine_to_leg_0=0.15, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_1__caster_wheel_0' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_1'; approx_gap=0.001046m; backend=fcl\n- pose_index=1 at pose (leg_family__a_frame_legs__frame_0__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_0__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_1__to_caster_wheel_1=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_0=0, leg_family__a_frame_legs__frame_2__to_caster_wheel_1=0, rail_to_hanger_0=0, rail_to_hanger_1=0, rail_to_hanger_2=0, rail_to_hanger_3=0, rail_to_hanger_4=0, spine_to_leg_0=0.15, spine_to_leg_1=0, spine_to_leg_2=0, spine_to_wing_t0_front=0, spine_to_wing_t0_rear=0, spine_to_wing_t1_front=0, spine_to_wing_t1_rear=0), part 'leg_family__a_frame_legs__frame_1__caster_wheel_1' is disconnected from the grounded body rooted at 'main_frame'; nearest_grounded_part='leg_family__a_frame_legs__frame_1'; approx_gap=0.001046m; backend=fcl\n... (230 more)"
+      ],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E013/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E013/edited/model.glb",
+    "edited_preview": null,
+    "field": "hanger_count",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Add one additional hanger to the drying rack.",
+    "seed": 0,
+    "slug": "Household_Laundry_Clothes_drying_rack_Laundry_drying_rack",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "household_laundry_clothes_drying_rack_laundry_drying_rack",
+    "target_handle": true,
+    "target_tokens": [
+      "hanger",
+      "clip"
+    ],
+    "target_value": 5,
+    "task_id": "E013"
+  },
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E014/base/model.glb",
+    "base_parse": {
+      "joint_count": 16,
+      "joints": [
+        {
+          "child": "caster_swivel_0",
+          "name": "frame_to_caster_swivel_0",
+          "parent": "frame",
+          "type": "continuous"
+        },
+        {
+          "child": "caster_wheel_0",
+          "name": "caster_swivel_to_wheel_0",
+          "parent": "caster_swivel_0",
+          "type": "continuous"
+        },
+        {
+          "child": "caster_brake_0",
+          "name": "caster_swivel_to_brake_0",
+          "parent": "caster_swivel_0",
+          "type": "revolute"
+        },
+        {
+          "child": "caster_swivel_1",
+          "name": "frame_to_caster_swivel_1",
+          "parent": "frame",
+          "type": "continuous"
+        },
+        {
+          "child": "caster_wheel_1",
+          "name": "caster_swivel_to_wheel_1",
+          "parent": "caster_swivel_1",
+          "type": "continuous"
+        },
+        {
+          "child": "caster_brake_1",
+          "name": "caster_swivel_to_brake_1",
+          "parent": "caster_swivel_1",
+          "type": "revolute"
+        },
+        {
+          "child": "caster_swivel_2",
+          "name": "frame_to_caster_swivel_2",
+          "parent": "frame",
+          "type": "continuous"
+        },
+        {
+          "child": "caster_wheel_2",
+          "name": "caster_swivel_to_wheel_2",
+          "parent": "caster_swivel_2",
+          "type": "continuous"
+        },
+        {
+          "child": "caster_brake_2",
+          "name": "caster_swivel_to_brake_2",
+          "parent": "caster_swivel_2",
+          "type": "revolute"
+        },
+        {
+          "child": "caster_swivel_3",
+          "name": "frame_to_caster_swivel_3",
+          "parent": "frame",
+          "type": "continuous"
+        },
+        {
+          "child": "caster_wheel_3",
+          "name": "caster_swivel_to_wheel_3",
+          "parent": "caster_swivel_3",
+          "type": "continuous"
+        },
+        {
+          "child": "caster_brake_3",
+          "name": "caster_swivel_to_brake_3",
+          "parent": "caster_swivel_3",
+          "type": "revolute"
+        },
+        {
+          "child": "worktop",
+          "name": "frame_to_worktop",
+          "parent": "frame",
+          "type": "fixed"
+        },
+        {
+          "child": "storage_module__pegboard_rack__item_0",
+          "name": "frame_to_storage_item_0",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "storage_module__pegboard_rack__item_1",
+          "name": "frame_to_storage_item_1",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "bench_accessory__equipment_shelf__module",
+          "name": "frame_to_bench_accessory",
+          "parent": "frame",
+          "type": "fixed"
+        }
+      ],
+      "link_count": 17,
+      "links": [
+        "bench_accessory__equipment_shelf__module",
+        "caster_brake_0",
+        "caster_brake_1",
+        "caster_brake_2",
+        "caster_brake_3",
+        "caster_swivel_0",
+        "caster_swivel_1",
+        "caster_swivel_2",
+        "caster_swivel_3",
+        "caster_wheel_0",
+        "caster_wheel_1",
+        "caster_wheel_2",
+        "caster_wheel_3",
+        "frame",
+        "storage_module__pegboard_rack__item_0",
+        "storage_module__pegboard_rack__item_1",
+        "worktop"
+      ],
+      "roots": [
+        "frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": null,
+    "base_run": {
+      "elapsed_s": 7.980191122740507,
+      "error": null,
+      "package_sha256": "8f7b074c9cb160d83162ffa4892ff6ea7dd4e328ba80c0035d89864b4528695e",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E014/base/model.urdf",
+      "urdf_sha256": "d0c046300693f432d4d4da5ef026bb92e4d5a473d89fe1902e35605031ab3138",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E014/base/source.py"
+    },
+    "changes": {
+      "storage_module": "drawer_bank"
+    },
+    "deterministic_gate_pass": true,
+    "edit": {
+      "edit_class": "modified-existing",
+      "field": "storage_module",
+      "instruction": "Replace the open storage rack with a drawer bank.",
+      "new": "drawer_bank",
+      "old": "pegboard_rack"
+    },
+    "edit_class": "modified-existing",
+    "edit_parse": {
+      "joint_count": 16,
+      "joints": [
+        {
+          "child": "caster_swivel_0",
+          "name": "frame_to_caster_swivel_0",
+          "parent": "frame",
+          "type": "continuous"
+        },
+        {
+          "child": "caster_wheel_0",
+          "name": "caster_swivel_to_wheel_0",
+          "parent": "caster_swivel_0",
+          "type": "continuous"
+        },
+        {
+          "child": "caster_brake_0",
+          "name": "caster_swivel_to_brake_0",
+          "parent": "caster_swivel_0",
+          "type": "revolute"
+        },
+        {
+          "child": "caster_swivel_1",
+          "name": "frame_to_caster_swivel_1",
+          "parent": "frame",
+          "type": "continuous"
+        },
+        {
+          "child": "caster_wheel_1",
+          "name": "caster_swivel_to_wheel_1",
+          "parent": "caster_swivel_1",
+          "type": "continuous"
+        },
+        {
+          "child": "caster_brake_1",
+          "name": "caster_swivel_to_brake_1",
+          "parent": "caster_swivel_1",
+          "type": "revolute"
+        },
+        {
+          "child": "caster_swivel_2",
+          "name": "frame_to_caster_swivel_2",
+          "parent": "frame",
+          "type": "continuous"
+        },
+        {
+          "child": "caster_wheel_2",
+          "name": "caster_swivel_to_wheel_2",
+          "parent": "caster_swivel_2",
+          "type": "continuous"
+        },
+        {
+          "child": "caster_brake_2",
+          "name": "caster_swivel_to_brake_2",
+          "parent": "caster_swivel_2",
+          "type": "revolute"
+        },
+        {
+          "child": "caster_swivel_3",
+          "name": "frame_to_caster_swivel_3",
+          "parent": "frame",
+          "type": "continuous"
+        },
+        {
+          "child": "caster_wheel_3",
+          "name": "caster_swivel_to_wheel_3",
+          "parent": "caster_swivel_3",
+          "type": "continuous"
+        },
+        {
+          "child": "caster_brake_3",
+          "name": "caster_swivel_to_brake_3",
+          "parent": "caster_swivel_3",
+          "type": "revolute"
+        },
+        {
+          "child": "worktop",
+          "name": "frame_to_worktop",
+          "parent": "frame",
+          "type": "fixed"
+        },
+        {
+          "child": "storage_module__drawer_bank__item_0",
+          "name": "frame_to_storage_item_0",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "storage_module__drawer_bank__item_1",
+          "name": "frame_to_storage_item_1",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "bench_accessory__equipment_shelf__module",
+          "name": "frame_to_bench_accessory",
+          "parent": "frame",
+          "type": "fixed"
+        }
+      ],
+      "link_count": 17,
+      "links": [
+        "bench_accessory__equipment_shelf__module",
+        "caster_brake_0",
+        "caster_brake_1",
+        "caster_brake_2",
+        "caster_brake_3",
+        "caster_swivel_0",
+        "caster_swivel_1",
+        "caster_swivel_2",
+        "caster_swivel_3",
+        "caster_wheel_0",
+        "caster_wheel_1",
+        "caster_wheel_2",
+        "caster_wheel_3",
+        "frame",
+        "storage_module__drawer_bank__item_0",
+        "storage_module__drawer_bank__item_1",
+        "worktop"
+      ],
+      "roots": [
+        "frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 3.697726985439658,
+      "error": null,
+      "package_sha256": "9cbed33ab2c978a7f045f8d67c653632e72628d4e2ed47e0fedcfd0f85759c0c",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E014/edited/model.urdf",
+      "urdf_sha256": "9196892d6ad2184ce420598a91c561a76d54bd8f3d4f51bf3ad439acaeb3a55c",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E014/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E014/edited/model.glb",
+    "edited_preview": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/blind_review_packet/previews/E014_edited.png",
+    "field": "storage_module",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Replace the open storage rack with a drawer bank.",
+    "seed": 0,
+    "slug": "pictureX_0611_Industrial_rolling_work_table",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "picturex_0611_industrial_rolling_work_table",
+    "target_handle": true,
+    "target_tokens": [
+      "drawer",
+      "storage",
+      "module"
+    ],
+    "target_value": "drawer_bank",
+    "task_id": "E014"
+  },
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E015/base/model.glb",
+    "base_parse": {
+      "joint_count": 11,
+      "joints": [
+        {
+          "child": "frame",
+          "name": "base_to_frame",
+          "parent": "base",
+          "type": "fixed"
+        },
+        {
+          "child": "punch_station__collared_pin__carriage_0",
+          "name": "frame_to_punch_carriage_0",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "punch_station__collared_pin__carriage_1",
+          "name": "frame_to_punch_carriage_1",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "punch_station__collared_pin__carriage_2",
+          "name": "frame_to_punch_carriage_2",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "punch_station__collared_pin__carriage_3",
+          "name": "frame_to_punch_carriage_3",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "actuation__lever_linkage__handle",
+          "name": "frame_to_handle",
+          "parent": "frame",
+          "type": "revolute"
+        },
+        {
+          "child": "actuation__lever_linkage__drag_link",
+          "name": "handle_to_drag_link",
+          "parent": "actuation__lever_linkage__handle",
+          "type": "revolute"
+        },
+        {
+          "child": "chip_tray",
+          "name": "base_to_chip_tray",
+          "parent": "base",
+          "type": "fixed"
+        },
+        {
+          "child": "guide_rail",
+          "name": "base_to_guide_rail",
+          "parent": "base",
+          "type": "fixed"
+        },
+        {
+          "child": "paper_guide__rail_guides__paper_stop_0",
+          "name": "guide_rail_to_paper_stop_0",
+          "parent": "guide_rail",
+          "type": "prismatic"
+        },
+        {
+          "child": "paper_guide__rail_guides__paper_stop_1",
+          "name": "guide_rail_to_paper_stop_1",
+          "parent": "guide_rail",
+          "type": "prismatic"
+        }
+      ],
+      "link_count": 12,
+      "links": [
+        "actuation__lever_linkage__drag_link",
+        "actuation__lever_linkage__handle",
+        "base",
+        "chip_tray",
+        "frame",
+        "guide_rail",
+        "paper_guide__rail_guides__paper_stop_0",
+        "paper_guide__rail_guides__paper_stop_1",
+        "punch_station__collared_pin__carriage_0",
+        "punch_station__collared_pin__carriage_1",
+        "punch_station__collared_pin__carriage_2",
+        "punch_station__collared_pin__carriage_3"
+      ],
+      "roots": [
+        "base"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": null,
+    "base_run": {
+      "elapsed_s": 4.144832519814372,
+      "error": null,
+      "package_sha256": "75b3a4f7d9d504c041c6d5489ba5ab3ca7caf182210ce7e622bb272c51280967",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E015/base/model.urdf",
+      "urdf_sha256": "eb9c3b493dd371d786af15d7633a20e098f64e4706acbd85d4a3eff93e021fd6",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E015/base/source.py"
+    },
+    "changes": {
+      "punch_station": "long_pin"
+    },
+    "deterministic_gate_pass": true,
+    "edit": {
+      "edit_class": "modified-existing",
+      "field": "punch_station",
+      "instruction": "Replace the collared punch pin with a long punch pin.",
+      "new": "long_pin",
+      "old": "collared_pin"
+    },
+    "edit_class": "modified-existing",
+    "edit_parse": {
+      "joint_count": 11,
+      "joints": [
+        {
+          "child": "frame",
+          "name": "base_to_frame",
+          "parent": "base",
+          "type": "fixed"
+        },
+        {
+          "child": "punch_station__long_pin__carriage_0",
+          "name": "frame_to_punch_carriage_0",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "punch_station__long_pin__carriage_1",
+          "name": "frame_to_punch_carriage_1",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "punch_station__long_pin__carriage_2",
+          "name": "frame_to_punch_carriage_2",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "punch_station__long_pin__carriage_3",
+          "name": "frame_to_punch_carriage_3",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "actuation__lever_linkage__handle",
+          "name": "frame_to_handle",
+          "parent": "frame",
+          "type": "revolute"
+        },
+        {
+          "child": "actuation__lever_linkage__drag_link",
+          "name": "handle_to_drag_link",
+          "parent": "actuation__lever_linkage__handle",
+          "type": "revolute"
+        },
+        {
+          "child": "chip_tray",
+          "name": "base_to_chip_tray",
+          "parent": "base",
+          "type": "fixed"
+        },
+        {
+          "child": "guide_rail",
+          "name": "base_to_guide_rail",
+          "parent": "base",
+          "type": "fixed"
+        },
+        {
+          "child": "paper_guide__rail_guides__paper_stop_0",
+          "name": "guide_rail_to_paper_stop_0",
+          "parent": "guide_rail",
+          "type": "prismatic"
+        },
+        {
+          "child": "paper_guide__rail_guides__paper_stop_1",
+          "name": "guide_rail_to_paper_stop_1",
+          "parent": "guide_rail",
+          "type": "prismatic"
+        }
+      ],
+      "link_count": 12,
+      "links": [
+        "actuation__lever_linkage__drag_link",
+        "actuation__lever_linkage__handle",
+        "base",
+        "chip_tray",
+        "frame",
+        "guide_rail",
+        "paper_guide__rail_guides__paper_stop_0",
+        "paper_guide__rail_guides__paper_stop_1",
+        "punch_station__long_pin__carriage_0",
+        "punch_station__long_pin__carriage_1",
+        "punch_station__long_pin__carriage_2",
+        "punch_station__long_pin__carriage_3"
+      ],
+      "roots": [
+        "base"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 4.262907415628433,
+      "error": null,
+      "package_sha256": "6b487270ec60cba86e1729745f6ccc57420d523ee913157c57a43280954fb49c",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E015/edited/model.urdf",
+      "urdf_sha256": "175dbd6c7cd15c5a779afe0b3036be3ab878712e2a47b94929e0ab9abd30ba50",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E015/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E015/edited/model.glb",
+    "edited_preview": null,
+    "field": "punch_station",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Replace the collared punch pin with a long punch pin.",
+    "seed": 0,
+    "slug": "pictureX_0611_Hole_punch",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "picturex_0611_hole_punch",
+    "target_handle": true,
+    "target_tokens": [
+      "punch",
+      "pin",
+      "station"
+    ],
+    "target_value": "long_pin",
+    "task_id": "E015"
+  },
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E016/base/model.glb",
+    "base_parse": {
+      "joint_count": 16,
+      "joints": [
+        {
+          "child": "clamp__spindle_0",
+          "name": "clamp__spindle_adjust_0",
+          "parent": "clamp__frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "clamp__pressure_pad_0",
+          "name": "clamp__pad_swivel_0",
+          "parent": "clamp__spindle_0",
+          "type": "continuous"
+        },
+        {
+          "child": "clamp__spindle_1",
+          "name": "clamp__spindle_adjust_1",
+          "parent": "clamp__frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "clamp__pressure_pad_1",
+          "name": "clamp__pad_swivel_1",
+          "parent": "clamp__spindle_1",
+          "type": "continuous"
+        },
+        {
+          "child": "clamp__post_lock",
+          "name": "clamp__post_lock_turn",
+          "parent": "clamp__frame",
+          "type": "continuous"
+        },
+        {
+          "child": "clamp__carriage",
+          "name": "clamp__carriage_height",
+          "parent": "clamp__frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "clamp__carriage_lock",
+          "name": "clamp__carriage_lock_turn",
+          "parent": "clamp__carriage",
+          "type": "continuous"
+        },
+        {
+          "child": "arm_form__gas_spring_parallelogram__lower_link",
+          "name": "arm_form__gas_spring_parallelogram__shoulder_lift",
+          "parent": "clamp__carriage",
+          "type": "revolute"
+        },
+        {
+          "child": "arm_form__gas_spring_parallelogram__upper_link",
+          "name": "arm_form__gas_spring_parallelogram__upper_link_hinge",
+          "parent": "arm_form__gas_spring_parallelogram__lower_link",
+          "type": "revolute"
+        },
+        {
+          "child": "arm_form__gas_spring_parallelogram__gas_cylinder",
+          "name": "arm_form__gas_spring_parallelogram__gas_spring_base",
+          "parent": "clamp__carriage",
+          "type": "revolute"
+        },
+        {
+          "child": "arm_form__gas_spring_parallelogram__gas_piston",
+          "name": "arm_form__gas_spring_parallelogram__gas_spring_extend",
+          "parent": "arm_form__gas_spring_parallelogram__gas_cylinder",
+          "type": "prismatic"
+        },
+        {
+          "child": "tray_head__fixed_tilt_tray__yoke",
+          "name": "tray_head__fixed_tilt_tray__head_yaw",
+          "parent": "arm_form__gas_spring_parallelogram__upper_link",
+          "type": "revolute"
+        },
+        {
+          "child": "tray_head__fixed_tilt_tray__tray",
+          "name": "tray_head__fixed_tilt_tray__tray_tilt",
+          "parent": "tray_head__fixed_tilt_tray__yoke",
+          "type": "revolute"
+        },
+        {
+          "child": "tray_head__fixed_tilt_tray__tilt_pawl",
+          "name": "tray_head__fixed_tilt_tray__pawl_release",
+          "parent": "tray_head__fixed_tilt_tray__tray",
+          "type": "revolute"
+        },
+        {
+          "child": "tray_head__fixed_tilt_tray__side_rail_0",
+          "name": "tray_head__fixed_tilt_tray__side_rail_slide_0",
+          "parent": "tray_head__fixed_tilt_tray__tray",
+          "type": "prismatic"
+        },
+        {
+          "child": "tray_head__fixed_tilt_tray__side_rail_1",
+          "name": "tray_head__fixed_tilt_tray__side_rail_slide_1",
+          "parent": "tray_head__fixed_tilt_tray__tray",
+          "type": "prismatic"
+        }
+      ],
+      "link_count": 17,
+      "links": [
+        "arm_form__gas_spring_parallelogram__gas_cylinder",
+        "arm_form__gas_spring_parallelogram__gas_piston",
+        "arm_form__gas_spring_parallelogram__lower_link",
+        "arm_form__gas_spring_parallelogram__upper_link",
+        "clamp__carriage",
+        "clamp__carriage_lock",
+        "clamp__frame",
+        "clamp__post_lock",
+        "clamp__pressure_pad_0",
+        "clamp__pressure_pad_1",
+        "clamp__spindle_0",
+        "clamp__spindle_1",
+        "tray_head__fixed_tilt_tray__side_rail_0",
+        "tray_head__fixed_tilt_tray__side_rail_1",
+        "tray_head__fixed_tilt_tray__tilt_pawl",
+        "tray_head__fixed_tilt_tray__tray",
+        "tray_head__fixed_tilt_tray__yoke"
+      ],
+      "roots": [
+        "clamp__frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": null,
+    "base_run": {
+      "elapsed_s": 6.765853002667427,
+      "error": null,
+      "package_sha256": "97c02eaf4ead686165b9d49159f60841f3f06583960be619a0e03815dd5acc42",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E016/base/model.urdf",
+      "urdf_sha256": "af764dcea2f840d5cefd565072460d9d84113984385e009b3708b707ae11c4c2",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E016/base/source.py"
+    },
+    "changes": {
+      "tray_head": "sliding_rails"
+    },
+    "deterministic_gate_pass": true,
+    "edit": {
+      "edit_class": "modified-existing",
+      "field": "tray_head",
+      "instruction": "Replace the fixed tray head with sliding rails.",
+      "new": "sliding_rails",
+      "old": "fixed_tilt_tray"
+    },
+    "edit_class": "modified-existing",
+    "edit_parse": {
+      "joint_count": 18,
+      "joints": [
+        {
+          "child": "clamp__spindle_0",
+          "name": "clamp__spindle_adjust_0",
+          "parent": "clamp__frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "clamp__pressure_pad_0",
+          "name": "clamp__pad_swivel_0",
+          "parent": "clamp__spindle_0",
+          "type": "continuous"
+        },
+        {
+          "child": "clamp__spindle_1",
+          "name": "clamp__spindle_adjust_1",
+          "parent": "clamp__frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "clamp__pressure_pad_1",
+          "name": "clamp__pad_swivel_1",
+          "parent": "clamp__spindle_1",
+          "type": "continuous"
+        },
+        {
+          "child": "clamp__post_lock",
+          "name": "clamp__post_lock_turn",
+          "parent": "clamp__frame",
+          "type": "continuous"
+        },
+        {
+          "child": "clamp__carriage",
+          "name": "clamp__carriage_height",
+          "parent": "clamp__frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "clamp__carriage_lock",
+          "name": "clamp__carriage_lock_turn",
+          "parent": "clamp__carriage",
+          "type": "continuous"
+        },
+        {
+          "child": "arm_form__gas_spring_parallelogram__lower_link",
+          "name": "arm_form__gas_spring_parallelogram__shoulder_lift",
+          "parent": "clamp__carriage",
+          "type": "revolute"
+        },
+        {
+          "child": "arm_form__gas_spring_parallelogram__upper_link",
+          "name": "arm_form__gas_spring_parallelogram__upper_link_hinge",
+          "parent": "arm_form__gas_spring_parallelogram__lower_link",
+          "type": "revolute"
+        },
+        {
+          "child": "arm_form__gas_spring_parallelogram__gas_cylinder",
+          "name": "arm_form__gas_spring_parallelogram__gas_spring_base",
+          "parent": "clamp__carriage",
+          "type": "revolute"
+        },
+        {
+          "child": "arm_form__gas_spring_parallelogram__gas_piston",
+          "name": "arm_form__gas_spring_parallelogram__gas_spring_extend",
+          "parent": "arm_form__gas_spring_parallelogram__gas_cylinder",
+          "type": "prismatic"
+        },
+        {
+          "child": "tray_head__sliding_rails__yoke",
+          "name": "tray_head__sliding_rails__head_yaw",
+          "parent": "arm_form__gas_spring_parallelogram__upper_link",
+          "type": "revolute"
+        },
+        {
+          "child": "tray_head__sliding_rails__rail_carriage",
+          "name": "tray_head__sliding_rails__tray_slide",
+          "parent": "tray_head__sliding_rails__yoke",
+          "type": "prismatic"
+        },
+        {
+          "child": "tray_head__sliding_rails__slide_latch",
+          "name": "tray_head__sliding_rails__slide_latch_pivot",
+          "parent": "tray_head__sliding_rails__rail_carriage",
+          "type": "revolute"
+        },
+        {
+          "child": "tray_head__sliding_rails__tray",
+          "name": "tray_head__sliding_rails__tray_tilt",
+          "parent": "tray_head__sliding_rails__rail_carriage",
+          "type": "revolute"
+        },
+        {
+          "child": "tray_head__sliding_rails__tilt_pawl",
+          "name": "tray_head__sliding_rails__pawl_release",
+          "parent": "tray_head__sliding_rails__tray",
+          "type": "revolute"
+        },
+        {
+          "child": "tray_head__sliding_rails__side_rail_0",
+          "name": "tray_head__sliding_rails__side_rail_slide_0",
+          "parent": "tray_head__sliding_rails__tray",
+          "type": "prismatic"
+        },
+        {
+          "child": "tray_head__sliding_rails__side_rail_1",
+          "name": "tray_head__sliding_rails__side_rail_slide_1",
+          "parent": "tray_head__sliding_rails__tray",
+          "type": "prismatic"
+        }
+      ],
+      "link_count": 19,
+      "links": [
+        "arm_form__gas_spring_parallelogram__gas_cylinder",
+        "arm_form__gas_spring_parallelogram__gas_piston",
+        "arm_form__gas_spring_parallelogram__lower_link",
+        "arm_form__gas_spring_parallelogram__upper_link",
+        "clamp__carriage",
+        "clamp__carriage_lock",
+        "clamp__frame",
+        "clamp__post_lock",
+        "clamp__pressure_pad_0",
+        "clamp__pressure_pad_1",
+        "clamp__spindle_0",
+        "clamp__spindle_1",
+        "tray_head__sliding_rails__rail_carriage",
+        "tray_head__sliding_rails__side_rail_0",
+        "tray_head__sliding_rails__side_rail_1",
+        "tray_head__sliding_rails__slide_latch",
+        "tray_head__sliding_rails__tilt_pawl",
+        "tray_head__sliding_rails__tray",
+        "tray_head__sliding_rails__yoke"
+      ],
+      "roots": [
+        "clamp__frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 6.054016824811697,
+      "error": null,
+      "package_sha256": "230497c5b0ebd1190b544a054daa3e373b5b6e783698f2eddb0af746377e7041",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E016/edited/model.urdf",
+      "urdf_sha256": "14f9c6529eaf3af03bae500eac20a3f2ea618806f8ea52b3b36ff234da07078c",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E016/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E016/edited/model.glb",
+    "edited_preview": null,
+    "field": "tray_head",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Replace the fixed tray head with sliding rails.",
+    "seed": 0,
+    "slug": "pictureX_0611_ergonomic_clamp_with_adjustable_components",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "picturex_0611_ergonomic_clamp_with_adjustable_components",
+    "target_handle": true,
+    "target_tokens": [
+      "tray",
+      "rail"
+    ],
+    "target_value": "sliding_rails",
+    "task_id": "E016"
+  },
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E017/base/model.glb",
+    "base_parse": {
+      "joint_count": 9,
+      "joints": [
+        {
+          "child": "pressure_block_0",
+          "name": "pressure_slide_0",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "pressure_block_1",
+          "name": "pressure_slide_1",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "crank_drive",
+          "name": "crank_rotation",
+          "parent": "pressure_block_1",
+          "type": "continuous"
+        },
+        {
+          "child": "roller_bank__indexed_parallel_roller_bank__roller_0",
+          "name": "roller_spin_0",
+          "parent": "frame",
+          "type": "continuous"
+        },
+        {
+          "child": "roller_bank__indexed_parallel_roller_bank__roller_1",
+          "name": "roller_spin_1",
+          "parent": "pressure_block_0",
+          "type": "continuous"
+        },
+        {
+          "child": "pressure_mechanism__overhead_screw_bridge__screw",
+          "name": "bridge_screw_turn",
+          "parent": "frame",
+          "type": "continuous"
+        },
+        {
+          "child": "feed_module__fold_down_shelf__shelf",
+          "name": "feed_shelf_fold",
+          "parent": "frame",
+          "type": "revolute"
+        },
+        {
+          "child": "support_mount__classic_boss_clamps__clamp_0",
+          "name": "clamp_adjust_0",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "support_mount__classic_boss_clamps__clamp_1",
+          "name": "clamp_adjust_1",
+          "parent": "frame",
+          "type": "prismatic"
+        }
+      ],
+      "link_count": 10,
+      "links": [
+        "crank_drive",
+        "feed_module__fold_down_shelf__shelf",
+        "frame",
+        "pressure_block_0",
+        "pressure_block_1",
+        "pressure_mechanism__overhead_screw_bridge__screw",
+        "roller_bank__indexed_parallel_roller_bank__roller_0",
+        "roller_bank__indexed_parallel_roller_bank__roller_1",
+        "support_mount__classic_boss_clamps__clamp_0",
+        "support_mount__classic_boss_clamps__clamp_1"
+      ],
+      "roots": [
+        "frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": null,
+    "base_run": {
+      "elapsed_s": 4.738575870171189,
+      "error": null,
+      "package_sha256": "ca4b2155c72fb5305ae35315c9c58b9824926f43b08f4c289bd71719e4f6235e",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E017/base/model.urdf",
+      "urdf_sha256": "0e06807bc1396f291616e265b112ab55cfd8fed14d56c55ef6dea1235263f654",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E017/base/source.py"
+    },
+    "changes": {
+      "feed_module": "plain_front_apron"
+    },
+    "deterministic_gate_pass": false,
+    "edit": {
+      "edit_class": "modified-existing",
+      "field": "feed_module",
+      "instruction": "Replace the fold-down feed shelf with a plain front apron.",
+      "new": "plain_front_apron",
+      "old": "fold_down_shelf"
+    },
+    "edit_class": "modified-existing",
+    "edit_parse": {
+      "joint_count": 8,
+      "joints": [
+        {
+          "child": "pressure_block_0",
+          "name": "pressure_slide_0",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "pressure_block_1",
+          "name": "pressure_slide_1",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "crank_drive",
+          "name": "crank_rotation",
+          "parent": "pressure_block_1",
+          "type": "continuous"
+        },
+        {
+          "child": "roller_bank__indexed_parallel_roller_bank__roller_0",
+          "name": "roller_spin_0",
+          "parent": "frame",
+          "type": "continuous"
+        },
+        {
+          "child": "roller_bank__indexed_parallel_roller_bank__roller_1",
+          "name": "roller_spin_1",
+          "parent": "pressure_block_0",
+          "type": "continuous"
+        },
+        {
+          "child": "pressure_mechanism__overhead_screw_bridge__screw",
+          "name": "bridge_screw_turn",
+          "parent": "frame",
+          "type": "continuous"
+        },
+        {
+          "child": "support_mount__classic_boss_clamps__clamp_0",
+          "name": "clamp_adjust_0",
+          "parent": "frame",
+          "type": "prismatic"
+        },
+        {
+          "child": "support_mount__classic_boss_clamps__clamp_1",
+          "name": "clamp_adjust_1",
+          "parent": "frame",
+          "type": "prismatic"
+        }
+      ],
+      "link_count": 9,
+      "links": [
+        "crank_drive",
+        "frame",
+        "pressure_block_0",
+        "pressure_block_1",
+        "pressure_mechanism__overhead_screw_bridge__screw",
+        "roller_bank__indexed_parallel_roller_bank__roller_0",
+        "roller_bank__indexed_parallel_roller_bank__roller_1",
+        "support_mount__classic_boss_clamps__clamp_0",
+        "support_mount__classic_boss_clamps__clamp_1"
+      ],
+      "roots": [
+        "frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 4.64097841270268,
+      "error": null,
+      "package_sha256": "be77fe8d0c6a6b35a4d5abc75255a6457241c724bc2b651d192f7633f1970747",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E017/edited/model.urdf",
+      "urdf_sha256": "375776ba8005585b8992906955ee4ba078b46332a7a667f47fd81565da8145aa",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E017/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E017/edited/model.glb",
+    "edited_preview": null,
+    "field": "feed_module",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Replace the fold-down feed shelf with a plain front apron.",
+    "seed": 0,
+    "slug": "pictureX_0611_Hand_crank_clothes_wringer",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "picturex_0611_hand_crank_clothes_wringer",
+    "target_handle": false,
+    "target_tokens": [
+      "feed",
+      "apron",
+      "shelf"
+    ],
+    "target_value": "plain_front_apron",
+    "task_id": "E017"
+  },
+  {
+    "artifact_valid": true,
+    "base_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E018/base/model.glb",
+    "base_parse": {
+      "joint_count": 16,
+      "joints": [
+        {
+          "child": "frame_build__open_spine__drop_leaf_0",
+          "name": "frame_to_leaf_0",
+          "parent": "table_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "frame_build__open_spine__drop_leaf_1",
+          "name": "frame_to_leaf_1",
+          "parent": "table_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "support_build__cross_trestle__unit_0_0",
+          "name": "frame_to_leaf_support_0_0",
+          "parent": "table_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "support_build__cross_trestle__unit_1_0",
+          "name": "frame_to_leaf_support_1_0",
+          "parent": "table_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__caster_fork_0",
+          "name": "frame_to_caster_swivel_0",
+          "parent": "table_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__caster_wheel_0",
+          "name": "caster_0_roll",
+          "parent": "foot_build__braked_caster__caster_fork_0",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__brake_pedal_0",
+          "name": "caster_0_brake",
+          "parent": "foot_build__braked_caster__caster_fork_0",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__caster_fork_1",
+          "name": "frame_to_caster_swivel_1",
+          "parent": "table_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__caster_wheel_1",
+          "name": "caster_1_roll",
+          "parent": "foot_build__braked_caster__caster_fork_1",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__brake_pedal_1",
+          "name": "caster_1_brake",
+          "parent": "foot_build__braked_caster__caster_fork_1",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__caster_fork_2",
+          "name": "frame_to_caster_swivel_2",
+          "parent": "table_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__caster_wheel_2",
+          "name": "caster_2_roll",
+          "parent": "foot_build__braked_caster__caster_fork_2",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__brake_pedal_2",
+          "name": "caster_2_brake",
+          "parent": "foot_build__braked_caster__caster_fork_2",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__caster_fork_3",
+          "name": "frame_to_caster_swivel_3",
+          "parent": "table_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__caster_wheel_3",
+          "name": "caster_3_roll",
+          "parent": "foot_build__braked_caster__caster_fork_3",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__brake_pedal_3",
+          "name": "caster_3_brake",
+          "parent": "foot_build__braked_caster__caster_fork_3",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 17,
+      "links": [
+        "foot_build__braked_caster__brake_pedal_0",
+        "foot_build__braked_caster__brake_pedal_1",
+        "foot_build__braked_caster__brake_pedal_2",
+        "foot_build__braked_caster__brake_pedal_3",
+        "foot_build__braked_caster__caster_fork_0",
+        "foot_build__braked_caster__caster_fork_1",
+        "foot_build__braked_caster__caster_fork_2",
+        "foot_build__braked_caster__caster_fork_3",
+        "foot_build__braked_caster__caster_wheel_0",
+        "foot_build__braked_caster__caster_wheel_1",
+        "foot_build__braked_caster__caster_wheel_2",
+        "foot_build__braked_caster__caster_wheel_3",
+        "frame_build__open_spine__drop_leaf_0",
+        "frame_build__open_spine__drop_leaf_1",
+        "support_build__cross_trestle__unit_0_0",
+        "support_build__cross_trestle__unit_1_0",
+        "table_frame"
+      ],
+      "roots": [
+        "table_frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "base_preview": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/blind_review_packet/previews/E018_base.png",
+    "base_run": {
+      "elapsed_s": 1.8186358399689198,
+      "error": null,
+      "package_sha256": "9af69fbe687bc3d8f2a3582ced51e8ccce06a30227baaf9a35806440ee0212c9",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E018/base/model.urdf",
+      "urdf_sha256": "56220237ce50dbbf38f8bed7b5b59d1bb151acee5163e1f1f081f63ee1604752",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E018/base/source.py"
+    },
+    "changes": {
+      "support_build": "telescoping_brace"
+    },
+    "deterministic_gate_pass": true,
+    "edit": {
+      "edit_class": "modified-existing",
+      "field": "support_build",
+      "instruction": "Replace the cross-trestle support with a telescoping brace.",
+      "new": "telescoping_brace",
+      "old": "cross_trestle"
+    },
+    "edit_class": "modified-existing",
+    "edit_parse": {
+      "joint_count": 18,
+      "joints": [
+        {
+          "child": "frame_build__open_spine__drop_leaf_0",
+          "name": "frame_to_leaf_0",
+          "parent": "table_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "frame_build__open_spine__drop_leaf_1",
+          "name": "frame_to_leaf_1",
+          "parent": "table_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "support_build__telescoping_brace__unit_0_0",
+          "name": "frame_to_leaf_support_0_0",
+          "parent": "table_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "support_build__telescoping_brace__unit_1_0",
+          "name": "frame_to_leaf_support_1_0",
+          "parent": "table_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "support_build__telescoping_brace__lock_rod_0_0",
+          "name": "support_0_0_brace_extend",
+          "parent": "support_build__telescoping_brace__unit_0_0",
+          "type": "prismatic"
+        },
+        {
+          "child": "support_build__telescoping_brace__lock_rod_1_0",
+          "name": "support_1_0_brace_extend",
+          "parent": "support_build__telescoping_brace__unit_1_0",
+          "type": "prismatic"
+        },
+        {
+          "child": "foot_build__braked_caster__caster_fork_0",
+          "name": "frame_to_caster_swivel_0",
+          "parent": "table_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__caster_wheel_0",
+          "name": "caster_0_roll",
+          "parent": "foot_build__braked_caster__caster_fork_0",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__brake_pedal_0",
+          "name": "caster_0_brake",
+          "parent": "foot_build__braked_caster__caster_fork_0",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__caster_fork_1",
+          "name": "frame_to_caster_swivel_1",
+          "parent": "table_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__caster_wheel_1",
+          "name": "caster_1_roll",
+          "parent": "foot_build__braked_caster__caster_fork_1",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__brake_pedal_1",
+          "name": "caster_1_brake",
+          "parent": "foot_build__braked_caster__caster_fork_1",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__caster_fork_2",
+          "name": "frame_to_caster_swivel_2",
+          "parent": "table_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__caster_wheel_2",
+          "name": "caster_2_roll",
+          "parent": "foot_build__braked_caster__caster_fork_2",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__brake_pedal_2",
+          "name": "caster_2_brake",
+          "parent": "foot_build__braked_caster__caster_fork_2",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__caster_fork_3",
+          "name": "frame_to_caster_swivel_3",
+          "parent": "table_frame",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__caster_wheel_3",
+          "name": "caster_3_roll",
+          "parent": "foot_build__braked_caster__caster_fork_3",
+          "type": "revolute"
+        },
+        {
+          "child": "foot_build__braked_caster__brake_pedal_3",
+          "name": "caster_3_brake",
+          "parent": "foot_build__braked_caster__caster_fork_3",
+          "type": "revolute"
+        }
+      ],
+      "link_count": 19,
+      "links": [
+        "foot_build__braked_caster__brake_pedal_0",
+        "foot_build__braked_caster__brake_pedal_1",
+        "foot_build__braked_caster__brake_pedal_2",
+        "foot_build__braked_caster__brake_pedal_3",
+        "foot_build__braked_caster__caster_fork_0",
+        "foot_build__braked_caster__caster_fork_1",
+        "foot_build__braked_caster__caster_fork_2",
+        "foot_build__braked_caster__caster_fork_3",
+        "foot_build__braked_caster__caster_wheel_0",
+        "foot_build__braked_caster__caster_wheel_1",
+        "foot_build__braked_caster__caster_wheel_2",
+        "foot_build__braked_caster__caster_wheel_3",
+        "frame_build__open_spine__drop_leaf_0",
+        "frame_build__open_spine__drop_leaf_1",
+        "support_build__telescoping_brace__lock_rod_0_0",
+        "support_build__telescoping_brace__lock_rod_1_0",
+        "support_build__telescoping_brace__unit_0_0",
+        "support_build__telescoping_brace__unit_1_0",
+        "table_frame"
+      ],
+      "roots": [
+        "table_frame"
+      ],
+      "valid_tree": true,
+      "valid_urdf": true
+    },
+    "edit_run": {
+      "elapsed_s": 1.8387273289263248,
+      "error": null,
+      "package_sha256": "e84577a704168f624011405660339c08c9ea7069d637bcb2e3d79176d21ae0e7",
+      "signal_status": "success",
+      "traceback": null,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E018/edited/model.urdf",
+      "urdf_sha256": "75a86794d3effa2a0859082dc6b771471f5089ae26098be71eebee376a2f239c",
+      "verdict": "pass",
+      "warnings": [],
+      "wrapper": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E018/edited/source.py"
+    },
+    "edited_glb": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/tasks/E018/edited/model.glb",
+    "edited_preview": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/blind_review_packet/previews/E018_edited.png",
+    "field": "support_build",
+    "glb_changed": true,
+    "hierarchy_preserved": true,
+    "instruction": "Replace the cross-trestle support with a telescoping brace.",
+    "seed": 2,
+    "slug": "pictureX_0611_Folding_table5",
+    "source_changed": true,
+    "source_glb_changed": true,
+    "stem": "picturex_0611_folding_table5",
+    "target_handle": true,
+    "target_tokens": [
+      "brace",
+      "support",
+      "spine"
+    ],
+    "target_value": "telescoping_brace",
+    "task_id": "E018"
+  }
+]

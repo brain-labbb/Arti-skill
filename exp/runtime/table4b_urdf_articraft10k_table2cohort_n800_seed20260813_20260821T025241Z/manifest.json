@@ -1,0 +1,64 @@
+{
+  "command": [
+    "exp/scripts/run_urdf_table4b_articraft10k.py",
+    "--mode",
+    "formal",
+    "--workers",
+    "16"
+  ],
+  "created_at_utc": "2026-08-21T02:55:34.654991Z",
+  "dataset": "Articraft-10K",
+  "frozen_config_sha256": "643d8cece0c953cb2e6c3d353b853532bd6b9ef1ed124396046ab81f3f687f3d",
+  "geometry_protocol_id": "lam_supplementary_geometry_v1",
+  "manifest_self_sha256_at_write": "b63413147671e2db71d6e296b74f457de0b07e7c6eb766f728e0497217804e9a",
+  "mode": "formal",
+  "outputs": {
+    "asset_records_sha256": "859f624b47e6c375aef0b66c70d7eb68b3eb3fc78fb1da7a1ab3f7f8d143ade0",
+    "summary_md_sha256": "c13b120c2b883dd545eb2be28434c151fdf5780171066699d33776147f6a5eeb",
+    "summary_sha256": "2b26a5180ec926c380cfc61914ceab5b82fe3c511361846fdaad47aa2e46c24b"
+  },
+  "protocol_id": "table4b_articraft10k_table2cohort_n800_seed20260813_v1",
+  "record_count": 800,
+  "status_counts": {
+    "completed": 800,
+    "error": 0,
+    "total": 800
+  },
+  "verification": {
+    "all_pass": true,
+    "check_count": 6,
+    "checks": [
+      {
+        "check": "source_manifest_sha256",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "ordered_ids_sha256",
+        "detail": "79c44441600077513d3cde1cda8fef38324e1a0ee660730b860d5313f0ae9784",
+        "pass": true
+      },
+      {
+        "check": "record_count",
+        "detail": "800",
+        "pass": true
+      },
+      {
+        "check": "frozen_order_preserved",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "urdf_identity_matches_frozen_manifest",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "aggregate_recomputation_matches",
+        "detail": "",
+        "pass": true
+      }
+    ]
+  },
+  "wall_seconds": 166.934
+}

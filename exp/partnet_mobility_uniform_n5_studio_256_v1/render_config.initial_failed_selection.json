@@ -1,0 +1,107 @@
+{
+  "balanced_n5_eligible": true,
+  "balanced_n5_eligible_class_count": 46,
+  "base_renderer": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_articraft10k_asset_blender.py",
+  "base_renderer_sha256": "24669921702ddf11c9668e16692f3a4cb7e5b40e040e215a878b92cdd294fe22",
+  "blender": "/mnt/zsn/zsn_workspace/VoxHammer/third_party/blender-4.2.19-linux-x64/blender",
+  "blender_version": "Blender 4.2.19 LTS",
+  "class_count": 46,
+  "dataset": "PartNet-Mobility",
+  "dataset_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/rosters/partnet/full_release_manifest.json",
+  "dataset_manifest_content_sha256": "e8c5ccc17c50489b1d9c01c2ab03f3068e510fffc191dfcf5f05e0182a1de1c8",
+  "dataset_manifest_sha256": "0ee8fac27ab97d3ec4a4914693ce14324bd7820f3c3f39a2e3bee64278377c5b",
+  "dataset_roster_sha256": "ae54292dc68b313f7b05def4c961f9fa520ae3e735770a32d2bca4a34e9cee4e",
+  "driver": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_partnet_mobility_n5_uniform.py",
+  "driver_sha256": "3eb3cb9bfb94c474d511cec98a0913a5bb41e5efa9b298e4f312f5185f276a48",
+  "full_category_count": 46,
+  "full_model_count": 2347,
+  "input_validation": "selected package exact manifest closure, byte count, and SHA-256",
+  "material_policy": "native OBJ/MTL diffuse materials, forced opaque; neutral fallback",
+  "output_root": "/mnt/zsn/lyb/arti-skill/exp/partnet_mobility_uniform_n5_studio_256_v1",
+  "per_class_count_values": [
+    5
+  ],
+  "pose_policy": "URDF rest pose; all movable joint coordinates are zero",
+  "release_provenance": {
+    "archive_bytes_from_frozen_audit": 3268124298,
+    "archive_rehashed_by_this_runner": false,
+    "archive_sha256_from_frozen_audit": "b47247a44246111e8d09f2c0e64b4012ae35e0dcf4bb55f68a05b604455119ff",
+    "official_inventory_matches_local": true,
+    "official_numeric_asset_count": 2347,
+    "official_revision": "ee0aa3ef1df16181d76d83f7415aa8c94ed1da8f",
+    "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table6_partnet_mobility/provenance.json",
+    "provenance_status": "PROVENANCE_LIMITED",
+    "required": true,
+    "sha256": "4e7bd2c75f2010905fef8d253b2d8915207ceb4434e6f1d0dbf0178dc7db48c6"
+  },
+  "render_contract": "partnet_mobility_uniform_studio_v1",
+  "renderer": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_partnet_mobility_asset_blender.py",
+  "renderer_sha256": "eb3f2a3c79ba7f27490ab819922de24aad4e0b2fd82268cdb0f4a2071a2c605a",
+  "resolution": 256,
+  "samples": 4,
+  "samples_per_category": 5,
+  "sampling_contract": "partnet_mobility_category_n5_hash_rank_v1",
+  "schema_version": 1,
+  "selected_category_count": 46,
+  "selected_count": 230,
+  "selection_rule": "first N by (SHA256(asset_id UTF-8), asset_id) within category",
+  "selection_sha256": "681196608c276a22b12bbbad30eadd2037d31f093f773169bd66474254efac4c",
+  "shared_renderer": "/mnt/zsn/lyb/arti-skill/arti-template/scripts/render_exported_asset_blender.py",
+  "shared_renderer_sha256": "f418515a9817218b08d577d95983ec934c34ddf19f17bb89c73bf52aa60bb3a7",
+  "studio": {
+    "camera_direction": [
+      1.25,
+      -1.35,
+      0.85
+    ],
+    "camera_distance_policy": "bounding_sphere_auto_frame_1.18",
+    "camera_vertical_fov_degrees": 42.0,
+    "cycles_denoising": true,
+    "ground_rgba": [
+      0.32,
+      0.35,
+      0.4,
+      1.0
+    ],
+    "ground_roughness": 0.82,
+    "lights": [
+      {
+        "direction": [
+          0.4,
+          -0.8,
+          1.5
+        ],
+        "gain": 42.0,
+        "size_ratio": 1.5
+      },
+      {
+        "direction": [
+          -1.2,
+          -0.3,
+          0.6
+        ],
+        "gain": 15.0,
+        "size_ratio": 1.8
+      },
+      {
+        "direction": [
+          0.2,
+          1.0,
+          1.2
+        ],
+        "gain": 24.0,
+        "size_ratio": 1.2
+      }
+    ],
+    "look": "AgX - Medium High Contrast",
+    "mode": "opaque_studio",
+    "view_transform": "AgX",
+    "world_rgba": [
+      0.8,
+      0.84,
+      0.9,
+      1.0
+    ],
+    "world_strength": 0.55
+  }
+}

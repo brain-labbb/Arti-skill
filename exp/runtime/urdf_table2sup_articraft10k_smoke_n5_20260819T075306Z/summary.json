@@ -1,0 +1,369 @@
+{
+  "n_eval": 5,
+  "j_eval": 16,
+  "status_counts": {
+    "completed": 5
+  },
+  "metrics": {
+    "visual_bearing_collision_coverage": {
+      "passed": 1,
+      "denominator": 5,
+      "rate": 0.2,
+      "link_micro_covered": 4,
+      "link_micro_denominator": 23,
+      "link_micro_rate": 0.17391304347826086,
+      "link_extraction_coverage": {
+        "complete_assets": 5,
+        "denominator": 5,
+        "rate": 1.0
+      },
+      "status": "COMPLETE"
+    },
+    "joint_limit_portability": {
+      "passed": 16,
+      "denominator": 16,
+      "rate": 1.0,
+      "joints_extracted": 16,
+      "extraction_complete_assets": 5
+    },
+    "joint_dynamics_coverage": {
+      "passed": 0,
+      "denominator": 16,
+      "rate": 0.0
+    },
+    "placeholder_mass_incidence": {
+      "status": "N/E",
+      "placeholder": null,
+      "denominator": 0,
+      "rate": null,
+      "reason": "placeholder registry is empty; no mass values are evaluable",
+      "registry_ids": [],
+      "complete_inertial_coverage": {
+        "complete_inertial_links": 9,
+        "dynamic_links": 23,
+        "rate": 0.391304347826087,
+        "assets_with_declared_links": 5
+      }
+    }
+  },
+  "category_macro": {
+    "category_count": 5,
+    "visual_bearing_collision_coverage": {
+      "macro_rate": 0.2,
+      "categories": 5
+    },
+    "joint_limit_portability": {
+      "macro_rate": 1.0,
+      "categories": 5
+    },
+    "joint_dynamics_coverage": {
+      "macro_rate": 0.0,
+      "categories": 5
+    },
+    "placeholder_mass_incidence": {
+      "status": "N/E",
+      "reason": "placeholder registry is empty; no mass values are evaluable"
+    },
+    "categories": {
+      "box_fan_with_control_knob": {
+        "assets": 1,
+        "joints_intended": 3,
+        "visual_bearing_collision_coverage": {
+          "passed": 1,
+          "denominator": 1,
+          "rate": 1.0
+        },
+        "joint_limit_portability": {
+          "passed": 3,
+          "denominator": 3,
+          "rate": 1.0
+        },
+        "joint_dynamics_coverage": {
+          "passed": 0,
+          "denominator": 3,
+          "rate": 0.0
+        },
+        "placeholder_mass_incidence": {
+          "status": "N/E",
+          "reason": "placeholder registry is empty; no mass values are evaluable"
+        }
+      },
+      "fidget_toy": {
+        "assets": 1,
+        "joints_intended": 2,
+        "visual_bearing_collision_coverage": {
+          "passed": 0,
+          "denominator": 1,
+          "rate": 0.0
+        },
+        "joint_limit_portability": {
+          "passed": 2,
+          "denominator": 2,
+          "rate": 1.0
+        },
+        "joint_dynamics_coverage": {
+          "passed": 0,
+          "denominator": 2,
+          "rate": 0.0
+        },
+        "placeholder_mass_incidence": {
+          "status": "N/E",
+          "reason": "placeholder registry is empty; no mass values are evaluable"
+        }
+      },
+      "mastmounted_fork_carriage": {
+        "assets": 1,
+        "joints_intended": 1,
+        "visual_bearing_collision_coverage": {
+          "passed": 0,
+          "denominator": 1,
+          "rate": 0.0
+        },
+        "joint_limit_portability": {
+          "passed": 1,
+          "denominator": 1,
+          "rate": 1.0
+        },
+        "joint_dynamics_coverage": {
+          "passed": 0,
+          "denominator": 1,
+          "rate": 0.0
+        },
+        "placeholder_mass_incidence": {
+          "status": "N/E",
+          "reason": "placeholder registry is empty; no mass values are evaluable"
+        }
+      },
+      "single_prismatic_slider": {
+        "assets": 1,
+        "joints_intended": 1,
+        "visual_bearing_collision_coverage": {
+          "passed": 0,
+          "denominator": 1,
+          "rate": 0.0
+        },
+        "joint_limit_portability": {
+          "passed": 1,
+          "denominator": 1,
+          "rate": 1.0
+        },
+        "joint_dynamics_coverage": {
+          "passed": 0,
+          "denominator": 1,
+          "rate": 0.0
+        },
+        "placeholder_mass_incidence": {
+          "status": "N/E",
+          "reason": "placeholder registry is empty; no mass values are evaluable"
+        }
+      },
+      "top_load_washing_machine_with_hinged_lid": {
+        "assets": 1,
+        "joints_intended": 9,
+        "visual_bearing_collision_coverage": {
+          "passed": 0,
+          "denominator": 1,
+          "rate": 0.0
+        },
+        "joint_limit_portability": {
+          "passed": 9,
+          "denominator": 9,
+          "rate": 1.0
+        },
+        "joint_dynamics_coverage": {
+          "passed": 0,
+          "denominator": 9,
+          "rate": 0.0
+        },
+        "placeholder_mass_incidence": {
+          "status": "N/E",
+          "reason": "placeholder registry is empty; no mass values are evaluable"
+        }
+      }
+    }
+  },
+  "breakdown": {
+    "declared_dof_bins": {
+      "0": {
+        "assets": 0,
+        "joints_intended": 0,
+        "visual_bearing_collision_coverage": {
+          "passed": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "joint_limit_portability": {
+          "passed": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "joint_dynamics_coverage": {
+          "passed": 0,
+          "denominator": 0,
+          "rate": null
+        }
+      },
+      "1": {
+        "assets": 2,
+        "joints_intended": 2,
+        "visual_bearing_collision_coverage": {
+          "passed": 0,
+          "denominator": 2,
+          "rate": 0.0
+        },
+        "joint_limit_portability": {
+          "passed": 2,
+          "denominator": 2,
+          "rate": 1.0
+        },
+        "joint_dynamics_coverage": {
+          "passed": 0,
+          "denominator": 2,
+          "rate": 0.0
+        }
+      },
+      "2-3": {
+        "assets": 2,
+        "joints_intended": 5,
+        "visual_bearing_collision_coverage": {
+          "passed": 1,
+          "denominator": 2,
+          "rate": 0.5
+        },
+        "joint_limit_portability": {
+          "passed": 5,
+          "denominator": 5,
+          "rate": 1.0
+        },
+        "joint_dynamics_coverage": {
+          "passed": 0,
+          "denominator": 5,
+          "rate": 0.0
+        }
+      },
+      "4-7": {
+        "assets": 0,
+        "joints_intended": 0,
+        "visual_bearing_collision_coverage": {
+          "passed": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "joint_limit_portability": {
+          "passed": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "joint_dynamics_coverage": {
+          "passed": 0,
+          "denominator": 0,
+          "rate": null
+        }
+      },
+      ">=8": {
+        "assets": 1,
+        "joints_intended": 9,
+        "visual_bearing_collision_coverage": {
+          "passed": 0,
+          "denominator": 1,
+          "rate": 0.0
+        },
+        "joint_limit_portability": {
+          "passed": 9,
+          "denominator": 9,
+          "rate": 1.0
+        },
+        "joint_dynamics_coverage": {
+          "passed": 0,
+          "denominator": 9,
+          "rate": 0.0
+        }
+      }
+    },
+    "declared_link_count_bins_same_edges_as_dof_bins": {
+      "0": {
+        "assets": 0,
+        "visual_bearing_collision_coverage": {
+          "passed": 0,
+          "denominator": 0,
+          "rate": null
+        }
+      },
+      "1": {
+        "assets": 0,
+        "visual_bearing_collision_coverage": {
+          "passed": 0,
+          "denominator": 0,
+          "rate": null
+        }
+      },
+      "2-3": {
+        "assets": 2,
+        "visual_bearing_collision_coverage": {
+          "passed": 0,
+          "denominator": 2,
+          "rate": 0.0
+        }
+      },
+      "4-7": {
+        "assets": 2,
+        "visual_bearing_collision_coverage": {
+          "passed": 1,
+          "denominator": 2,
+          "rate": 0.5
+        }
+      },
+      ">=8": {
+        "assets": 1,
+        "visual_bearing_collision_coverage": {
+          "passed": 0,
+          "denominator": 1,
+          "rate": 0.0
+        }
+      }
+    },
+    "joint_type": {
+      "joint_limit_portability": {
+        "continuous": {
+          "passed": 10,
+          "denominator": 10,
+          "rate": 1.0
+        },
+        "prismatic": {
+          "passed": 4,
+          "denominator": 4,
+          "rate": 1.0
+        },
+        "revolute": {
+          "passed": 2,
+          "denominator": 2,
+          "rate": 1.0
+        }
+      },
+      "joint_dynamics_coverage": {
+        "continuous": {
+          "passed": 0,
+          "denominator": 10,
+          "rate": 0.0
+        },
+        "prismatic": {
+          "passed": 0,
+          "denominator": 4,
+          "rate": 0.0
+        },
+        "revolute": {
+          "passed": 0,
+          "denominator": 2,
+          "rate": 0.0
+        }
+      }
+    }
+  },
+  "schema_version": 1,
+  "status": "completed",
+  "classification": "NON_FORMAL_SMOKE",
+  "dataset": "Articraft-10K",
+  "table": "table2_supplementary",
+  "manifest_content_sha256": "99d3f766cc34280e868edc2f972927c2cdb1fcfa9cb0fed843f6960346b36cf9",
+  "completed_at": "2026-08-19T07:53:21.096773Z"
+}

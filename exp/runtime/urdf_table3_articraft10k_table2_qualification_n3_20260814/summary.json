@@ -1,0 +1,86 @@
+{
+  "category_macro": {
+    "category_count": 3,
+    "joint_metric_category_count": 3,
+    "metrics": {
+      "joint_level_pass": {
+        "category_count": 3,
+        "rate": 1.0
+      },
+      "joint_sweep_success": {
+        "category_count": 3,
+        "rate": 1.0
+      },
+      "non_degenerate_motion": {
+        "category_count": 3,
+        "rate": 1.0
+      },
+      "strict_kinematic_pass": {
+        "category_count": 3,
+        "rate": 1.0
+      },
+      "subtree_consistency": {
+        "category_count": 3,
+        "rate": 1.0
+      },
+      "valid_range": {
+        "category_count": 3,
+        "rate": 1.0
+      }
+    },
+    "state": "evaluated"
+  },
+  "classification": "NON_FORMAL_SMOKE",
+  "completed_at": "2026-08-14T04:02:36Z",
+  "dataset": "Articraft-10K",
+  "j_eval": 12,
+  "manifest_content_sha256": "a5f7cd8e4bcb711a0896cb731a0324134747fe526032cde109aec1405ef70f9f",
+  "metrics": {
+    "fk_roundtrip_error": {
+      "denominator": 12,
+      "max_normalized_translation": 0.0,
+      "max_rotation_rad": 0.0,
+      "measured_joint_count": 12,
+      "passed_threshold": 12,
+      "status": "COMPLETE"
+    },
+    "joint_level_pass": {
+      "denominator": 12,
+      "passed": 12,
+      "rate": 1.0
+    },
+    "joint_sweep_success": {
+      "denominator": 12,
+      "passed": 12,
+      "rate": 1.0
+    },
+    "non_degenerate_motion": {
+      "denominator": 12,
+      "passed": 12,
+      "rate": 1.0
+    },
+    "strict_kinematic_pass": {
+      "denominator": 3,
+      "passed": 3,
+      "rate": 1.0
+    },
+    "subtree_consistency": {
+      "denominator": 12,
+      "passed": 12,
+      "rate": 1.0
+    },
+    "valid_range": {
+      "denominator": 12,
+      "passed": 12,
+      "rate": 1.0
+    }
+  },
+  "n_eval": 3,
+  "parse_success": 3,
+  "schema_version": 1,
+  "status": "completed",
+  "status_counts": {
+    "completed": 3
+  },
+  "valid_tree": 3
+}

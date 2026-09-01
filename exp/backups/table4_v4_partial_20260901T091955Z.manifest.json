@@ -1,0 +1,119 @@
+{
+  "archive_scope": "committed_prefix_and_resume_materials",
+  "archive_status": "PAUSED_FOR_RESTART",
+  "child_scratch_at_pause": {
+    "child_jobs": {
+      "count": 128,
+      "max_ordinal": 152191,
+      "min_ordinal": 152064
+    },
+    "child_logs": {
+      "count": 128,
+      "max_ordinal": 152191,
+      "min_ordinal": 152064
+    },
+    "children": {
+      "count": 126,
+      "max_ordinal": 152191,
+      "min_ordinal": 152064
+    }
+  },
+  "created_at_utc": "2026-09-01T09:19:55Z",
+  "database": {
+    "authority": "results table contiguous prefix; progress.json is informational and may lag one batch",
+    "bytes": 8128688128,
+    "journal_mode_after_checkpoint": "wal",
+    "pragma_quick_check": "ok",
+    "relative_path": "results.sqlite3",
+    "sha256": "234ec794d331926b22eb576db045332a1b93cba8e3e852b57344b419c4984b7d",
+    "shm_sidecar": {
+      "bytes": 0,
+      "exists": false
+    },
+    "wal_sidecar": {
+      "bytes": 0,
+      "exists": false
+    }
+  },
+  "external_dependencies": {
+    "package_mirror_observed_size": "approximately 311G",
+    "package_root_logical": "/mnt/zsn/data/particulate/datasets/PV-A/extracted",
+    "package_root_note": "manifest binds the physical path and frozen file hashes; preserve this path/content or restore it by same-path bind mount before resume",
+    "package_root_physical": "/tmp/pva_table4_local_mirror_20260827/extracted",
+    "roster_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table1234_full_release_20260826/roster/roster_manifest.json",
+    "source_evaluation": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table1234_full_release_20260826/evaluation",
+    "source_receipt": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table1234_full_release_20260826/evaluation/full_release_receipt.json",
+    "source_result_database_sha256": "85ade479b5babe8aacb1c9c19e70a2fa553c81617bb3c69b803d9e066e6f3781"
+  },
+  "final_receipt_present": false,
+  "final_summary_present": false,
+  "formal_full_release": false,
+  "manifest_binding": {
+    "intended_contact_registry_sha256": "71a3143da1fec80156569a9f3e15a85540db7eb008fa80d4b5eecfd8d3461d65",
+    "kinematic_constraint_registry_sha256": "c91251ce883c6c3d8aeac7125c76fe2d8ffc7f2ffae526643787eb3d799a161c",
+    "manifest_content_sha256": "1af13531f37a9ce228608ede0b12dab70f2e3eb10726f3dfc505cd90f8d22c5f",
+    "package_binding_content_sha256": "134a19ae94a9b12348f699ac5decf9d598cd007fe21ed5deedba04ba4fa64a11",
+    "protocol_snapshot_sha256": "8fad82c4eef2250183feca665f061a1feb871c6ec385564d5eefae4e5e93bf9d"
+  },
+  "manifest_content_sha256": "7d80ff515782218e81a527baaaa4282d5996c84ea6d8c67d7d9d73048b7ca382",
+  "output_files": {
+    "manifest.json": {
+      "bytes": 10382,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_simulator_free_full_release_v4/manifest.json",
+      "sha256": "2ccadb1b708344a3834b80deab5df8f59313f9bed64b54b66db96f7493f5b661"
+    },
+    "progress.json": {
+      "bytes": 570,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_simulator_free_full_release_v4/progress.json",
+      "sha256": "d0eb2199b9f09866cbc3a72c77464c6dc1b46750938402c56e3dee2777a9214a"
+    },
+    "protocol_snapshot.md": {
+      "bytes": 355692,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_simulator_free_full_release_v4/protocol_snapshot.md",
+      "sha256": "8fad82c4eef2250183feca665f061a1feb871c6ec385564d5eefae4e5e93bf9d"
+    },
+    "results.sqlite3": {
+      "bytes": 8128688128,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_simulator_free_full_release_v4/results.sqlite3",
+      "sha256": "234ec794d331926b22eb576db045332a1b93cba8e3e852b57344b419c4984b7d"
+    }
+  },
+  "resume": {
+    "command": "/mnt/zsn/lyb/arti-skill/arti-template/.venv/bin/python -u /mnt/zsn/lyb/arti-skill/exp/scripts/run_pva_table4_simulator_free_full_release.py --source-evaluation /mnt/zsn/lyb/arti-skill/exp/runtime/pva_table1234_full_release_20260826/evaluation --output /mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_simulator_free_full_release_v4 --workers 32 --batch-size 128 --timeout-seconds 600 --resume --package-root-override /tmp/pva_table4_local_mirror_20260827/extracted",
+    "must_keep_parameters": true,
+    "required": true,
+    "tmux_recreate": "tmux -S /tmp/codex_table4.sock new-session -d -s pva_v4_full"
+  },
+  "run": {
+    "J_eval": 1453516,
+    "category_count": 531,
+    "committed_assets": 152064,
+    "committed_ordinal_range": [
+      0,
+      152063
+    ],
+    "dataset": "Ours / PV-A",
+    "last_progress_updated_at_utc": "2026-09-01T09:05:30.782054Z",
+    "protocol_id": "urdf_sim_ready_table4_pva_full_release_v4_simulator_free",
+    "runner_started_at_utc": "2026-08-31T15:48:20.743780Z",
+    "sampling_protocol": "mimic_aware_independent_sampling_v2",
+    "state_records": 24673685,
+    "total_assets": 302440,
+    "uncommitted_batch": {
+      "action_on_resume": "reuse_valid_children_and_rerun_missing_or_invalid",
+      "ordinal_range": [
+        152064,
+        152191
+      ]
+    },
+    "worker_status_counts": {
+      "completed": 152002,
+      "timeout": 62
+    }
+  },
+  "schema_version": "pva_table4_simulator_free_partial_archive_v1",
+  "uncommitted_children_missing": [
+    152137,
+    152182
+  ]
+}

@@ -1,0 +1,476 @@
+{
+  "assembly_notes": "The host-level topology is a single `shield_system` slot. `soft_bifold` and `tactical_bifold` each own one source-matched top hinge and one child support panel whose local body extends along -Z; the registered axis mate applies the source deploy pitch at q=0 so the support reaches rearward/downward instead of stacking above the shield. `curved_handheld` and `round_handheld` own no fold rail, support leaf, or support joint. Viewport, grip, and grip_mount remain independent and adapt to every structural family through real aperture and rear-seat interfaces. core_domain = 4 x 3 x 3 x 2 = 72; there is no multiplicity axis. Palette is decorative and excluded.",
+  "bindings": [
+    {
+      "binding_id": "system_to_viewport",
+      "provider": "shield_system.viewport_opening",
+      "consumer": "viewport.face_interface",
+      "joint_type": "candidate_specific_fixed_or_revolute",
+      "derived": [
+        {
+          "name": "viewport_width_m",
+          "mode": "derived",
+          "minimum": null,
+          "maximum": null,
+          "choices": [],
+          "expression": "min(0.44 * shield_scale * viewport_scale, body_clear_width_m - 0.060 * shield_scale)",
+          "depends_on": ["body_clear_width_m", "shield_scale", "viewport_scale"],
+          "rationale": "The opening follows the actual rectangular, bowed, or circular chord and retains a structural border.",
+          "unit": "m",
+          "value_type": "float"
+        },
+        {
+          "name": "viewport_height_m",
+          "mode": "derived",
+          "minimum": null,
+          "maximum": null,
+          "choices": [],
+          "expression": "0.145 * shield_scale * viewport_scale",
+          "depends_on": ["shield_scale", "viewport_scale"],
+          "rationale": "Preserves the source vision-band and tactical-window height envelope.",
+          "unit": "m",
+          "value_type": "float"
+        }
+      ]
+    },
+    {
+      "binding_id": "system_to_grip",
+      "provider": "shield_system.grip_seat",
+      "consumer": "grip.mount_seat",
+      "joint_type": "candidate_specific_fixed_or_revolute",
+      "derived": [
+        {
+          "name": "grip_seat_x_m",
+          "mode": "derived",
+          "minimum": null,
+          "maximum": null,
+          "choices": [],
+          "expression": "body_rear_x_m - 0.004 * shield_scale",
+          "depends_on": ["body_rear_x_m", "shield_scale"],
+          "rationale": "A local transition pad presents one rear mounting plane without flattening the host silhouette.",
+          "unit": "m",
+          "value_type": "float"
+        },
+        {
+          "name": "grip_pad_width_m",
+          "mode": "derived",
+          "minimum": null,
+          "maximum": null,
+          "choices": [],
+          "expression": "0.225 * grip_scale",
+          "depends_on": ["grip_scale"],
+          "rationale": "The rear seat follows the selected grip and mount footprint.",
+          "unit": "m",
+          "value_type": "float"
+        }
+      ]
+    }
+  ],
+  "category_anchors": [
+    {
+      "anchor_id": "standing_bifold_identity",
+      "applies_to": {
+        "slot": "shield_system",
+        "candidates": ["soft_bifold", "tactical_bifold"]
+      },
+      "required_author_checks": [
+        "category_anchor: one detailed shield panel is the root",
+        "category_anchor: viewport stays seated within its opening",
+        "category_anchor: support topology matches the structural family",
+        "category_anchor: rear support uses the top transverse hinge axis",
+        "category_anchor: standing-family hinge hardware matches the source",
+        "category_anchor: rear support splays backward and reaches the ground",
+        "category_anchor: rest pose has no panel stacked above the shield"
+      ],
+      "required_relations": [
+        {
+          "parent_role": "shield_panel",
+          "child_role": "fold_leaf",
+          "joint_type": "revolute",
+          "axis": [0.0, 1.0, 0.0]
+        }
+      ],
+      "required_roles": [
+        {"role": "shield_panel", "exact_count": 1, "count_from": null},
+        {"role": "fold_leaf", "exact_count": 1, "count_from": null},
+        {"role": "carry_handle", "exact_count": 1, "count_from": null},
+        {"role": "viewport_element", "exact_count": 1, "count_from": null}
+      ]
+    },
+    {
+      "anchor_id": "handheld_identity",
+      "applies_to": {
+        "slot": "shield_system",
+        "candidates": ["curved_handheld", "round_handheld"]
+      },
+      "required_author_checks": [
+        "category_anchor: one detailed shield panel is the root",
+        "category_anchor: viewport stays seated within its opening",
+        "category_anchor: support topology matches the structural family",
+        "category_anchor: handheld shields have no folding tower"
+      ],
+      "required_relations": [],
+      "required_roles": [
+        {"role": "shield_panel", "exact_count": 1, "count_from": null},
+        {"role": "fold_leaf", "exact_count": 0, "count_from": null},
+        {"role": "carry_handle", "exact_count": 1, "count_from": null},
+        {"role": "viewport_element", "exact_count": 1, "count_from": null}
+      ]
+    },
+    {
+      "anchor_id": "fixed_viewport_identity",
+      "applies_to": {
+        "slot": "viewport",
+        "candidates": ["tinted_lens", "perforated_screen"]
+      },
+      "required_author_checks": [
+        "category_anchor: viewport occupies a real face opening",
+        "category_anchor: viewport stays seated within its opening"
+      ],
+      "required_relations": [
+        {
+          "parent_role": "shield_panel",
+          "child_role": "viewport_element",
+          "joint_type": "fixed",
+          "axis": null
+        }
+      ],
+      "required_roles": [
+        {"role": "viewport_element", "exact_count": 1, "count_from": null}
+      ]
+    },
+    {
+      "anchor_id": "shutter_viewport_identity",
+      "applies_to": {
+        "slot": "viewport",
+        "candidates": ["gunport_shutter"]
+      },
+      "required_author_checks": [
+        "category_anchor: viewport occupies a real face opening",
+        "category_anchor: viewport stays seated within its opening",
+        "category_anchor: gunport shutter opens outward"
+      ],
+      "required_relations": [
+        {
+          "parent_role": "shield_panel",
+          "child_role": "viewport_element",
+          "joint_type": "revolute",
+          "axis": [0.0, 1.0, 0.0]
+        }
+      ],
+      "required_roles": [
+        {"role": "viewport_element", "exact_count": 1, "count_from": null}
+      ]
+    },
+    {
+      "anchor_id": "strap_grip_identity",
+      "applies_to": {
+        "slot": "grip",
+        "candidates": ["loop_with_strap"]
+      },
+      "required_author_checks": [
+        "category_anchor: rear carry grip is mounted and supported",
+        "category_anchor: forearm strap pivots from the grip rail"
+      ],
+      "required_relations": [
+        {
+          "parent_role": "carry_handle",
+          "child_role": "forearm_strap",
+          "joint_type": "revolute",
+          "axis": [0.0, 1.0, 0.0]
+        }
+      ],
+      "required_roles": [
+        {"role": "carry_handle", "exact_count": 1, "count_from": null},
+        {"role": "forearm_strap", "exact_count": 1, "count_from": null}
+      ]
+    },
+    {
+      "anchor_id": "fixed_grip_mount_identity",
+      "applies_to": {
+        "slot": "grip_mount",
+        "candidates": ["four_bolt_fixed"]
+      },
+      "required_author_checks": [
+        "category_anchor: rear carry grip is mounted and supported",
+        "category_anchor: grip mount hardware matches selected mount"
+      ],
+      "required_relations": [
+        {
+          "parent_role": "shield_panel",
+          "child_role": "carry_handle",
+          "joint_type": "fixed",
+          "axis": null
+        }
+      ],
+      "required_roles": [
+        {"role": "carry_handle", "exact_count": 1, "count_from": null}
+      ]
+    },
+    {
+      "anchor_id": "rotating_grip_mount_identity",
+      "applies_to": {
+        "slot": "grip_mount",
+        "candidates": ["rotating_boss"]
+      },
+      "required_author_checks": [
+        "category_anchor: rear carry grip is mounted and supported",
+        "category_anchor: grip mount hardware matches selected mount",
+        "category_anchor: rotating grip uses shield-normal axis"
+      ],
+      "required_relations": [
+        {
+          "parent_role": "shield_panel",
+          "child_role": "carry_handle",
+          "joint_type": "revolute",
+          "axis": [1.0, 0.0, 0.0]
+        }
+      ],
+      "required_roles": [
+        {"role": "carry_handle", "exact_count": 1, "count_from": null}
+      ]
+    }
+  ],
+  "multiplicities": [],
+  "schema_version": 1,
+  "slots": [
+    {
+      "name": "shield_system",
+      "component_type": "complete shield/support topology",
+      "required": true,
+      "candidates": [
+        {
+          "name": "soft_bifold",
+          "record_id": "rec_folding-two-panel-soft-armor-riot-shield-g-fold-_20260708_144344_902932_d961ac50",
+          "revision": "rev_000001",
+          "source_spans": ["model.py:L90-L106", "model.py:L122-L237"],
+          "evidence": "A bound ballistic root slab owns one full-width sleeve hinge and one downward-extending child slab in a rearward A-frame zero pose.",
+          "implementation_function": "_shield_system_soft_bifold_build",
+          "notes": "Keep body, hinge, support direction, bindings, patch, pull strap, grommets and ground-contact edge in one family.",
+          "parameters": [
+            {"name": "shield_scale", "mode": "independent", "minimum": 0.9, "maximum": 1.1, "choices": [], "expression": "", "depends_on": [], "rationale": "Source-proportion size variation.", "unit": "ratio", "value_type": "float"},
+            {"name": "leaf_height_ratio", "mode": "independent", "minimum": 0.96, "maximum": 1.04, "choices": [], "expression": "", "depends_on": [], "rationale": "Small support-length variation while keeping the zero-pose foot near ground.", "unit": "ratio", "value_type": "float"},
+            {"name": "hinge_scale", "mode": "independent", "minimum": 0.9, "maximum": 1.1, "choices": [], "expression": "", "depends_on": [], "rationale": "Source sleeve-hardware size variation.", "unit": "ratio", "value_type": "float"},
+            {"name": "body_width_m", "mode": "derived", "minimum": null, "maximum": null, "choices": [], "expression": "0.50 * shield_scale", "depends_on": ["shield_scale"], "rationale": "Source soft-panel width.", "unit": "m", "value_type": "float"},
+            {"name": "body_height_m", "mode": "derived", "minimum": null, "maximum": null, "choices": [], "expression": "0.82 * shield_scale", "depends_on": ["shield_scale"], "rationale": "Protective root-panel height.", "unit": "m", "value_type": "float"},
+            {"name": "support_deploy_tilt_rad", "mode": "derived", "minimum": null, "maximum": null, "choices": [], "expression": "0.62", "depends_on": [], "rationale": "A-frame zero-pose pitch.", "unit": "rad", "value_type": "float"},
+            {"name": "fold_leaf_height_m", "mode": "derived", "minimum": null, "maximum": null, "choices": [], "expression": "((body_height_m + 0.040 * hinge_scale - 0.012 * shield_scale) / cos(0.62) - hinge_edge_relief_m) * leaf_height_ratio", "depends_on": ["body_height_m", "hinge_scale", "shield_scale", "hinge_edge_relief_m", "leaf_height_ratio"], "rationale": "Derives a rear support that reaches the ground in the photographed stance.", "unit": "m", "value_type": "float"}
+          ],
+          "interfaces": [
+            {"name": "viewport_opening", "kind": "plane", "role": "provider", "part": "shield_system__soft_bifold__panel", "frame": {"normal": [1.0, 0.0, 0.0], "tangent_u": [0.0, 1.0, 0.0]}, "dimensions": {"extent": "[viewport_width_m + 0.010, viewport_height_m + 0.010]"}, "surface_relation": {"subject_role": "viewport_element", "opening_expression": "viewport_width_m x viewport_height_m aperture plus 5 mm land", "normal_band_expression": "closed/rest element spans [-0.010,+0.024] m about the face", "motion_expression": "fixed inserts remain seated; shutter rotates outward", "required_author_check": "category_anchor: viewport stays seated within its opening"}},
+            {"name": "grip_seat", "kind": "plane", "role": "provider", "part": "shield_system__soft_bifold__panel", "frame": {"normal": [-1.0, 0.0, 0.0], "tangent_u": [0.0, 1.0, 0.0]}, "dimensions": {"extent": "[grip_pad_width_m, 0.190 * grip_scale]"}},
+            {"name": "support_axis", "kind": "axis", "role": "provider", "part": "shield_system__soft_bifold__panel", "frame": {"axis": [0.0, 1.0, 0.0]}, "dimensions": {"radius": "hinge_radius_m", "rest_pitch": "support_deploy_tilt_rad"}}
+          ]
+        },
+        {
+          "name": "tactical_bifold",
+          "record_id": "rec_black-tactical-bi-fold-riot-shield-standing-as-a_20260708_144725_562096_4985a0ef",
+          "revision": "rev_000001",
+          "source_spans": ["model.py:L52-L148", "model.py:L160-L261"],
+          "evidence": "The faceted front, offset clamp-clevis rail, bored tongues and rigid rear support form one grounded A-frame mechanism.",
+          "implementation_function": "_shield_system_tactical_bifold_build",
+          "notes": "Preserve the 25-degree top bend, 30-degree kick flare, three ribs, offset top axis, paired clamps, rear vision insert and foot rail.",
+          "parameters": [
+            {"name": "shield_scale", "mode": "independent", "minimum": 0.9, "maximum": 1.1, "choices": [], "expression": "", "depends_on": [], "rationale": "Source-proportion size variation.", "unit": "ratio", "value_type": "float"},
+            {"name": "leaf_height_ratio", "mode": "independent", "minimum": 0.96, "maximum": 1.04, "choices": [], "expression": "", "depends_on": [], "rationale": "Small rear-support length variation while preserving ground reach.", "unit": "ratio", "value_type": "float"},
+            {"name": "hinge_scale", "mode": "independent", "minimum": 0.9, "maximum": 1.1, "choices": [], "expression": "", "depends_on": [], "rationale": "Clamp and pin envelope variation.", "unit": "ratio", "value_type": "float"},
+            {"name": "body_width_m", "mode": "derived", "minimum": null, "maximum": null, "choices": [], "expression": "0.55 * shield_scale", "depends_on": ["shield_scale"], "rationale": "Source tactical width.", "unit": "m", "value_type": "float"},
+            {"name": "body_height_m", "mode": "derived", "minimum": null, "maximum": null, "choices": [], "expression": "1.04 * shield_scale", "depends_on": ["shield_scale"], "rationale": "Three-facet total height.", "unit": "m", "value_type": "float"},
+            {"name": "root_fold_axis_x_m", "mode": "derived", "minimum": null, "maximum": null, "choices": [], "expression": "-0.115 * shield_scale", "depends_on": ["shield_scale"], "rationale": "Source hinge is offset rearward on the top bend.", "unit": "m", "value_type": "float"},
+            {"name": "root_fold_axis_z_m", "mode": "derived", "minimum": null, "maximum": null, "choices": [], "expression": "1.02 * shield_scale", "depends_on": ["shield_scale"], "rationale": "Source clamp-pin height.", "unit": "m", "value_type": "float"},
+            {"name": "support_deploy_tilt_rad", "mode": "derived", "minimum": null, "maximum": null, "choices": [], "expression": "0.42", "depends_on": [], "rationale": "Source A-frame zero-pose pitch.", "unit": "rad", "value_type": "float"},
+            {"name": "fold_leaf_height_m", "mode": "derived", "minimum": null, "maximum": null, "choices": [], "expression": "((root_fold_axis_z_m - 0.012 * shield_scale) / cos(0.42) - hinge_edge_relief_m) * leaf_height_ratio", "depends_on": ["root_fold_axis_z_m", "shield_scale", "hinge_edge_relief_m", "leaf_height_ratio"], "rationale": "Rear rigid panel reaches the ground in the source stance.", "unit": "m", "value_type": "float"}
+          ],
+          "interfaces": [
+            {"name": "viewport_opening", "kind": "plane", "role": "provider", "part": "shield_system__tactical_bifold__panel", "frame": {"normal": [1.0, 0.0, 0.0], "tangent_u": [0.0, 1.0, 0.0]}, "dimensions": {"extent": "[viewport_width_m + 0.010, viewport_height_m + 0.010]"}, "surface_relation": {"subject_role": "viewport_element", "opening_expression": "viewport_width_m x viewport_height_m aperture plus 5 mm land", "normal_band_expression": "closed/rest element spans [-0.010,+0.024] m about the face", "motion_expression": "fixed inserts remain seated; shutter rotates outward", "required_author_check": "category_anchor: viewport stays seated within its opening"}},
+            {"name": "grip_seat", "kind": "plane", "role": "provider", "part": "shield_system__tactical_bifold__panel", "frame": {"normal": [-1.0, 0.0, 0.0], "tangent_u": [0.0, 1.0, 0.0]}, "dimensions": {"extent": "[grip_pad_width_m, 0.190 * grip_scale]"}},
+            {"name": "support_axis", "kind": "axis", "role": "provider", "part": "shield_system__tactical_bifold__panel", "frame": {"axis": [0.0, 1.0, 0.0]}, "dimensions": {"radius": "hinge_radius_m", "rest_pitch": "support_deploy_tilt_rad"}}
+          ]
+        },
+        {
+          "name": "curved_handheld",
+          "record_id": "rec_riot_shield_var_form_curved",
+          "revision": "rev_000001",
+          "source_spans": ["model.py:L87-L216", "model.py:L233-L372"],
+          "evidence": "A closed bowed shell with rubber channels and surface ribs is a single-body handheld shield without fold hardware.",
+          "implementation_function": "_shield_system_curved_handheld_build",
+          "notes": "No rear support, top fold rail, or host-level fold joint.",
+          "parameters": [
+            {"name": "shield_scale", "mode": "independent", "minimum": 0.9, "maximum": 1.1, "choices": [], "expression": "", "depends_on": [], "rationale": "Source-proportion size variation.", "unit": "ratio", "value_type": "float"},
+            {"name": "curve_depth_ratio", "mode": "independent", "minimum": 0.85, "maximum": 1.15, "choices": [], "expression": "", "depends_on": [], "rationale": "Bow-depth variation without changing topology.", "unit": "ratio", "value_type": "float"},
+            {"name": "body_width_m", "mode": "derived", "minimum": null, "maximum": null, "choices": [], "expression": "0.60 * shield_scale", "depends_on": ["shield_scale"], "rationale": "Source width.", "unit": "m", "value_type": "float"},
+            {"name": "body_height_m", "mode": "derived", "minimum": null, "maximum": null, "choices": [], "expression": "0.90 * shield_scale", "depends_on": ["shield_scale"], "rationale": "Source height.", "unit": "m", "value_type": "float"},
+            {"name": "body_curve_depth_m", "mode": "derived", "minimum": null, "maximum": null, "choices": [], "expression": "0.032 * shield_scale * curve_depth_ratio", "depends_on": ["shield_scale", "curve_depth_ratio"], "rationale": "Characteristic cylindrical bow.", "unit": "m", "value_type": "float"}
+          ],
+          "interfaces": [
+            {"name": "viewport_opening", "kind": "plane", "role": "provider", "part": "shield_system__curved_handheld__panel", "frame": {"normal": [1.0, 0.0, 0.0], "tangent_u": [0.0, 1.0, 0.0]}, "dimensions": {"extent": "[viewport_width_m + 0.010, viewport_height_m + 0.010]"}, "surface_relation": {"subject_role": "viewport_element", "opening_expression": "viewport_width_m x viewport_height_m aperture plus 5 mm land", "normal_band_expression": "closed/rest element spans [-0.010,+0.024] m about the face", "motion_expression": "fixed inserts remain seated; shutter rotates outward", "required_author_check": "category_anchor: viewport stays seated within its opening"}},
+            {"name": "grip_seat", "kind": "plane", "role": "provider", "part": "shield_system__curved_handheld__panel", "frame": {"normal": [-1.0, 0.0, 0.0], "tangent_u": [0.0, 1.0, 0.0]}, "dimensions": {"extent": "[grip_pad_width_m, 0.190 * grip_scale]"}}
+          ]
+        },
+        {
+          "name": "round_handheld",
+          "record_id": "rec_riot_shield_var_form_round",
+          "revision": "rev_000001",
+          "source_spans": ["model.py:L59-L89", "model.py:L132-L220"],
+          "evidence": "A shallow spherical-cap disc, toroidal rim and unit ring form a single-body handheld shield without fold hardware.",
+          "implementation_function": "_shield_system_round_handheld_build",
+          "notes": "No rear support, top fold rail, or host-level fold joint.",
+          "parameters": [
+            {"name": "shield_scale", "mode": "independent", "minimum": 0.9, "maximum": 1.1, "choices": [], "expression": "", "depends_on": [], "rationale": "Source-proportion size variation.", "unit": "ratio", "value_type": "float"},
+            {"name": "curve_depth_ratio", "mode": "independent", "minimum": 0.85, "maximum": 1.15, "choices": [], "expression": "", "depends_on": [], "rationale": "Bubble-depth variation without changing the circular outline.", "unit": "ratio", "value_type": "float"},
+            {"name": "body_width_m", "mode": "derived", "minimum": null, "maximum": null, "choices": [], "expression": "0.60 * shield_scale", "depends_on": ["shield_scale"], "rationale": "Source disc diameter.", "unit": "m", "value_type": "float"},
+            {"name": "body_height_m", "mode": "derived", "minimum": null, "maximum": null, "choices": [], "expression": "body_width_m", "depends_on": ["body_width_m"], "rationale": "Circular YZ outline.", "unit": "m", "value_type": "float"},
+            {"name": "body_curve_depth_m", "mode": "derived", "minimum": null, "maximum": null, "choices": [], "expression": "0.058 * shield_scale * curve_depth_ratio", "depends_on": ["shield_scale", "curve_depth_ratio"], "rationale": "Source spherical-cap depth.", "unit": "m", "value_type": "float"}
+          ],
+          "interfaces": [
+            {"name": "viewport_opening", "kind": "plane", "role": "provider", "part": "shield_system__round_handheld__panel", "frame": {"normal": [1.0, 0.0, 0.0], "tangent_u": [0.0, 1.0, 0.0]}, "dimensions": {"extent": "[viewport_width_m + 0.010, viewport_height_m + 0.010]"}, "surface_relation": {"subject_role": "viewport_element", "opening_expression": "viewport_width_m x viewport_height_m aperture plus 5 mm land", "normal_band_expression": "closed/rest element spans [-0.010,+0.024] m about the face", "motion_expression": "fixed inserts remain seated; shutter rotates outward", "required_author_check": "category_anchor: viewport stays seated within its opening"}},
+            {"name": "grip_seat", "kind": "plane", "role": "provider", "part": "shield_system__round_handheld__panel", "frame": {"normal": [-1.0, 0.0, 0.0], "tangent_u": [0.0, 1.0, 0.0]}, "dimensions": {"extent": "[grip_pad_width_m, 0.190 * grip_scale]"}}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "viewport",
+      "component_type": "vision aperture",
+      "required": true,
+      "candidates": [
+        {
+          "name": "tinted_lens",
+          "record_id": "rec_riot_shield_var_form_curved",
+          "revision": "rev_000001",
+          "source_spans": ["model.py:L243-L252"],
+          "evidence": "A broad smoke-tinted band is visually distinct from punched steel and a moving opaque shutter.",
+          "implementation_function": "_viewport_tinted_lens_build",
+          "notes": "",
+          "parameters": [
+            {"name": "viewport_scale", "mode": "independent", "minimum": 0.85, "maximum": 1.15, "choices": [], "expression": "", "depends_on": [], "rationale": "Opening-size variation within host capacity.", "unit": "ratio", "value_type": "float"}
+          ],
+          "interfaces": [
+            {"name": "face_interface", "kind": "plane", "role": "consumer", "part": "viewport__tinted_lens__element", "frame": {"normal": [-1.0, 0.0, 0.0], "tangent_u": [0.0, 1.0, 0.0]}, "dimensions": {"extent": "[viewport_width_m, viewport_height_m]"}}
+          ]
+        },
+        {
+          "name": "perforated_screen",
+          "record_id": "rec_black-tactical-bi-fold-riot-shield-standing-as-a_20260708_144725_562096_4985a0ef",
+          "revision": "rev_000001",
+          "source_spans": ["model.py:L102-L119", "model.py:L234-L248"],
+          "evidence": "A real aperture carries a framed staggered punched steel screen.",
+          "implementation_function": "_viewport_perforated_screen_build",
+          "notes": "",
+          "parameters": [
+            {"name": "viewport_scale", "mode": "independent", "minimum": 0.85, "maximum": 1.15, "choices": [], "expression": "", "depends_on": [], "rationale": "Opening-size variation within host capacity.", "unit": "ratio", "value_type": "float"}
+          ],
+          "interfaces": [
+            {"name": "face_interface", "kind": "plane", "role": "consumer", "part": "viewport__perforated_screen__element", "frame": {"normal": [-1.0, 0.0, 0.0], "tangent_u": [0.0, 1.0, 0.0]}, "dimensions": {"extent": "[viewport_width_m, viewport_height_m]"}}
+          ]
+        },
+        {
+          "name": "gunport_shutter",
+          "record_id": "rec_riot_shield_var_mechanism_gunport",
+          "revision": "rev_000001",
+          "source_spans": ["model.py:L110-L202", "model.py:L287-L306"],
+          "evidence": "A latch-bearing plate pivots outward from the top of a framed opening.",
+          "implementation_function": "_viewport_gunport_shutter_build",
+          "notes": "",
+          "parameters": [
+            {"name": "viewport_scale", "mode": "independent", "minimum": 0.85, "maximum": 1.15, "choices": [], "expression": "", "depends_on": [], "rationale": "Opening-size variation within host capacity.", "unit": "ratio", "value_type": "float"}
+          ],
+          "interfaces": [
+            {"name": "face_interface", "kind": "plane", "role": "consumer", "part": "viewport__gunport_shutter__element", "frame": {"normal": [-1.0, 0.0, 0.0], "tangent_u": [0.0, 1.0, 0.0]}, "dimensions": {"extent": "[viewport_width_m, viewport_height_m]"}},
+            {"name": "shutter_axis", "kind": "axis", "role": "consumer", "part": "viewport__gunport_shutter__element", "frame": {"axis": [0.0, 1.0, 0.0]}, "dimensions": {"travel": "1.40"}}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "grip",
+      "component_type": "rear carry grip",
+      "required": true,
+      "candidates": [
+        {
+          "name": "open_loop",
+          "record_id": "rec_folding-two-panel-soft-armor-riot-shield-g-fold-_20260708_144344_902932_d961ac50",
+          "revision": "rev_000001",
+          "source_spans": ["model.py:L65-L87", "model.py:L174-L185"],
+          "evidence": "A filleted cast annular frame provides a true hand opening.",
+          "implementation_function": "_grip_open_loop_build",
+          "notes": "",
+          "parameters": [
+            {"name": "grip_scale", "mode": "independent", "minimum": 0.9, "maximum": 1.1, "choices": [], "expression": "", "depends_on": [], "rationale": "Source hand-hardware size variation.", "unit": "ratio", "value_type": "float"}
+          ],
+          "interfaces": [
+            {"name": "mount_seat", "kind": "plane", "role": "consumer", "part": "grip__open_loop__handle", "frame": {"normal": [1.0, 0.0, 0.0], "tangent_u": [0.0, 1.0, 0.0]}, "dimensions": {"extent": "[0.210 * grip_scale, 0.150 * grip_scale]"}}
+          ]
+        },
+        {
+          "name": "cradle_bar",
+          "record_id": "rec_riot_shield_var_grip_forearm",
+          "revision": "rev_000001",
+          "source_spans": ["model.py:L75-L148", "model.py:L236-L257"],
+          "evidence": "A hollow C-channel forearm cradle is paired with a separate supported grip bar.",
+          "implementation_function": "_grip_cradle_bar_build",
+          "notes": "",
+          "parameters": [
+            {"name": "grip_scale", "mode": "independent", "minimum": 0.9, "maximum": 1.1, "choices": [], "expression": "", "depends_on": [], "rationale": "Source hand-hardware size variation.", "unit": "ratio", "value_type": "float"}
+          ],
+          "interfaces": [
+            {"name": "mount_seat", "kind": "plane", "role": "consumer", "part": "grip__cradle_bar__handle", "frame": {"normal": [1.0, 0.0, 0.0], "tangent_u": [0.0, 1.0, 0.0]}, "dimensions": {"extent": "[0.210 * grip_scale, 0.150 * grip_scale]"}}
+          ]
+        },
+        {
+          "name": "loop_with_strap",
+          "record_id": "rec_riot_shield_var_form_curved",
+          "revision": "rev_000001",
+          "source_spans": ["model.py:L194-L216", "model.py:L287-L372"],
+          "evidence": "An open loop carries a separate webbing strap and buckle on a captured transverse pin.",
+          "implementation_function": "_grip_loop_with_strap_build",
+          "notes": "",
+          "parameters": [
+            {"name": "grip_scale", "mode": "independent", "minimum": 0.9, "maximum": 1.1, "choices": [], "expression": "", "depends_on": [], "rationale": "Source hand-hardware size variation.", "unit": "ratio", "value_type": "float"}
+          ],
+          "interfaces": [
+            {"name": "mount_seat", "kind": "plane", "role": "consumer", "part": "grip__loop_with_strap__handle", "frame": {"normal": [1.0, 0.0, 0.0], "tangent_u": [0.0, 1.0, 0.0]}, "dimensions": {"extent": "[0.210 * grip_scale, 0.150 * grip_scale]"}},
+            {"name": "strap_axis", "kind": "axis", "role": "provider", "part": "grip__loop_with_strap__handle", "frame": {"axis": [0.0, 1.0, 0.0]}, "dimensions": {"travel": "0.55"}}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "grip_mount",
+      "component_type": "grip mounting hardware",
+      "required": true,
+      "candidates": [
+        {
+          "name": "four_bolt_fixed",
+          "record_id": "rec_folding-two-panel-soft-armor-riot-shield-g-fold-_20260708_144344_902932_d961ac50",
+          "revision": "rev_000001",
+          "source_spans": ["model.py:L174-L210"],
+          "evidence": "Four visible shanks, washers and domed heads fix the grip plate to the rear seat.",
+          "implementation_function": "_grip_mount_four_bolt_fixed_build",
+          "notes": "",
+          "parameters": [],
+          "interfaces": []
+        },
+        {
+          "name": "rotating_boss",
+          "record_id": "rec_riot_shield_var_form_round",
+          "revision": "rev_000001",
+          "source_spans": ["model.py:L169-L220"],
+          "evidence": "A central bearing boss carries the handle on a shield-normal adjustment axis.",
+          "implementation_function": "_grip_mount_rotating_boss_build",
+          "notes": "",
+          "parameters": [
+            {"name": "grip_rotation_ratio", "mode": "independent", "minimum": 0.85, "maximum": 1.15, "choices": [], "expression": "", "depends_on": [], "rationale": "Source forearm-angle travel variation.", "unit": "ratio", "value_type": "float"},
+            {"name": "grip_rotation_rad", "mode": "derived", "minimum": null, "maximum": null, "choices": [], "expression": "0.70 * grip_rotation_ratio", "depends_on": ["grip_rotation_ratio"], "rationale": "Source symmetric boss travel.", "unit": "rad", "value_type": "float"}
+          ],
+          "interfaces": [
+            {"name": "rotation_axis", "kind": "axis", "role": "provider", "part": "grip_mount__rotating_boss__hardware", "frame": {"axis": [1.0, 0.0, 0.0]}, "dimensions": {"travel": "grip_rotation_rad"}}
+          ]
+        }
+      ]
+    }
+  ],
+  "slug": "riot_shield",
+  "source_map_path": "articraft_template_authoring/source_maps/riot_shield.md",
+  "source_map_sha256": "65abbfff6cfe712eac8c1d0ba666d151338f4794cfb89fac532b5385e47a7de8"
+}

@@ -1,0 +1,109 @@
+{
+  "config": {
+    "gap_fraction": 0.002,
+    "geometry_role": "collision",
+    "penetration_depth_fraction": 0.0,
+    "pose_samples": 9,
+    "roi_fraction": 0.02,
+    "skip_penetration": false,
+    "support_threshold": 0.1,
+    "surface_samples": 64
+  },
+  "datasets": {
+    "pva": {
+      "asset_count": 10,
+      "axis_rooted_assets": {
+        "denominator": 10,
+        "passed": 3,
+        "percentage": 30.0
+      },
+      "complete_asset_count": 10,
+      "geometry_coverage": {
+        "complete_assets": 10,
+        "denominator": 10,
+        "percentage": 100.0
+      },
+      "joint_axis_support_asset_macro": {
+        "denominator": 10,
+        "evaluable_assets": 10,
+        "mean_rate": 65.02564102564102
+      },
+      "joint_axis_support_micro": {
+        "candidate": 59,
+        "percentage": 71.1864406779661,
+        "supported": 42
+      },
+      "joint_gap_p95_fraction": {
+        "asset_evaluable": 9,
+        "denominator": 10,
+        "unit": "% asset bbox diagonal",
+        "value": 0.6200241277926654
+      },
+      "joint_roi_coverage": {
+        "candidate": 59,
+        "evaluable": 32,
+        "percentage": 54.23728813559322
+      },
+      "joint_self_collision_free": {
+        "denominator": 10,
+        "evaluable_assets": 10,
+        "evaluable_poses": 432,
+        "free_poses": 264,
+        "passed": 5,
+        "percentage": 50.0
+      },
+      "joint_support_asset_macro": {
+        "denominator": 10,
+        "evaluable_assets": 10,
+        "mean_rate": 26.42307692307692
+      },
+      "joint_support_micro": {
+        "candidate": 59,
+        "percentage": 32.20338983050848,
+        "supported": 19
+      },
+      "pose_swept_axis_support_valid": {
+        "candidate_poses": 432,
+        "denominator": 10,
+        "passed": 3,
+        "passed_poses": 198,
+        "percentage": 30.0,
+        "pose_percentage": 45.833333333333336
+      },
+      "pose_swept_support_gap_valid": {
+        "candidate_poses": 432,
+        "denominator": 10,
+        "passed": 0,
+        "passed_poses": 0,
+        "percentage": 0.0,
+        "pose_percentage": 0.0
+      },
+      "pose_swept_valid": {
+        "denominator": 10,
+        "evaluable_assets": 10,
+        "passed": 0,
+        "percentage": 0.0
+      },
+      "rooted_assets": {
+        "denominator": 10,
+        "passed": 0,
+        "percentage": 0.0
+      },
+      "settings": {
+        "gap_fraction": 0.002,
+        "geometry_role": "collision",
+        "penetration_depth_fraction": 0.0,
+        "pose_samples": 9,
+        "roi_fraction": 0.02,
+        "skip_penetration": false,
+        "support_threshold": 0.1,
+        "surface_samples": 64
+      }
+    }
+  },
+  "manifest_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_v2_core200_prepared_five_full_release_articraft10787_infinigen_paired_official_metrics_r2/manifest.json",
+  "manifest_sha256": "d25debf0cd4e1ef6be0e30906730c73455c5a7ab231cefbabd45e4226c3c3b3b",
+  "protocol_id": "structural-integrity-urdf-v1-pilot",
+  "schema_version": "structural_integrity_eval_v1",
+  "script_sha256": "a6e0f6672c13d0c3e0f956f2c5b85e2dd087fa5c3eb5e3cc130943b44673067e"
+}

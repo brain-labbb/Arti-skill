@@ -1,0 +1,3515 @@
+{
+  "balanced_n5_eligible": 93,
+  "balanced_only": false,
+  "base_renderer": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_articraft10k_asset_blender.py",
+  "base_renderer_sha256": "24669921702ddf11c9668e16692f3a4cb7e5b40e040e215a878b92cdd294fe22",
+  "blender": "/mnt/zsn/zsn_workspace/VoxHammer/third_party/blender-4.2.19-linux-x64/blender",
+  "blender_version": "Blender 4.2.19 LTS",
+  "candidate_model_count": 2832,
+  "category_count": 660,
+  "dataset": "LAM",
+  "dataset_alias": "Articulated-Object-Code",
+  "dataset_manifest": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/manifest.csv",
+  "dataset_manifest_sha256": "70216593ec02b71d596e456498ff9863ad0f8e519d5d27d2cf4f58792d412412",
+  "driver": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_lam_n5_uniform.py",
+  "driver_sha256": "929103bcb7dab4b336a4526fad9605588f38a65030bb0e6e335da2ae1a42b32c",
+  "gpu_visibility": "6",
+  "image_layout": "category/asset_id/imgs/000.png",
+  "material_policy": "native OBJ/MTL diffuse materials, forced opaque; neutral fallback",
+  "official_model_count": 3217,
+  "output_root": "/mnt/zsn/lyb/arti-skill/exp/lam_n5_uniform_studio_256_v1",
+  "per_class_count_values": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "pose_policy": "URDF rest pose; all movable joint coordinates are zero",
+  "render_contract": "lam_articulated_object_code_uniform_studio_n5_v1",
+  "render_roster_rows": 1279,
+  "render_roster_sha256": "5ea036795b34a1060cdb87ff68c0b250ad30e7a343ab203f481421e8a2a475b2",
+  "renderer": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_articulated_object_code_asset_blender.py",
+  "renderer_sha256": "42312b45545922198339da13308ece6057dd64c2af9bcb33517bbc533368ea64",
+  "resolution": 256,
+  "reuse_manifest": "/mnt/zsn/data/particulate/datasets/Articulated-Object-Code/renders/uniform660_one_per_category_studio_256_v1/render_manifest.csv",
+  "reuse_root": "/mnt/zsn/data/particulate/datasets/Articulated-Object-Code/renders/uniform660_one_per_category_studio_256_v1",
+  "samples": 4,
+  "samples_per_category_target": 5,
+  "sampling_contract": "lam_category_viable_first_hash_rank_fill_min5_v1",
+  "schema_version": 1,
+  "selected_category_count": 660,
+  "selected_count": 1279,
+  "selection": {
+    "count": 1279,
+    "identity_category_sha256": "de78c9825c8416c039c1dab4ff0bf01f0eb56a2d71db338fda1db1589748a4d1",
+    "ordering": "ordinal (category, tier priority, SHA256(rel_path), rel_path)",
+    "schema_version": 1
+  },
+  "shared_renderer": "/mnt/zsn/lyb/arti-skill/arti-template/scripts/render_exported_asset_blender.py",
+  "shared_renderer_sha256": "f418515a9817218b08d577d95983ec934c34ddf19f17bb89c73bf52aa60bb3a7",
+  "short_categories": [
+    {
+      "category": "accordion_with_bellows_and_buttons",
+      "class_id": "L0001",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "acoustic_piano_key_is_a_lever_that_pivots_on_a",
+      "class_id": "L0003",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "adjustable_desk_lamp_features_a_weighted_base",
+      "class_id": "L0007",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "adjustable_led_spotlight_with_focusing",
+      "class_id": "L0009",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "adjustable_led_spotlight_with_focusing_lens",
+      "class_id": "L0010",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "adjustable_set_square",
+      "class_id": "L0011",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "adjustable_wrench_features_a_handle_integrated",
+      "class_id": "L0014",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "advanced_excavator_arm_constructed",
+      "class_id": "L0015",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "advanced_gaming_console_with_custom",
+      "class_id": "L0016",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "advanced_gear_system_with_precision_machined",
+      "class_id": "L0017",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "advanced_microwave_oven_with_inverter",
+      "class_id": "L0018",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "advanced_smartphone_with_foldable_display",
+      "class_id": "L0019",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "advanced_smartphone_with_foldable_display_technolo",
+      "class_id": "L0020",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "advanced_universal_remote_with_touchscreen",
+      "class_id": "L0021",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "ak_47",
+      "class_id": "L0022",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "all_in_one_printer_featuring_scanning_and",
+      "class_id": "L0023",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "all_in_one_printer_featuring_scanning_and_copying",
+      "class_id": "L0024",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "architect_s_scale_ruler_with_triangular_profile",
+      "class_id": "L0025",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "architectural_door_incorporating_precision_engineered",
+      "class_id": "L0026",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "architectural_door_system_with_precision_engineered",
+      "class_id": "L0027",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "articulated_robot_arm_with",
+      "class_id": "L0028",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "articulated_robot_arm_with_multiple_joints",
+      "class_id": "L0029",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "automated_conveyor_belt_featuring_variable",
+      "class_id": "L0030",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "automated_conveyor_belt_featuring_variable_speed_c",
+      "class_id": "L0031",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "automatic_espresso_machine_with",
+      "class_id": "L0032",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "automatic_espresso_machine_with_programmable_se",
+      "class_id": "L0033",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "automotive_hydraulic_jack_with_pumping",
+      "class_id": "L0034",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "baby_stroller_with_folding_frame_and_canopy",
+      "class_id": "L0035",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "ball_joint_with_stud_and_housing",
+      "class_id": "L0036",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "ball_transfer_unit_with_spring_loaded_ball",
+      "class_id": "L0037",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "ball_valve_with_quarter_turn_handle",
+      "class_id": "L0038",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bank_vault_safe_with",
+      "class_id": "L0039",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "bank_vault_safe_with_mechanical_combination_dial",
+      "class_id": "L0040",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "barber_chair_with_hydraulic_lift_and_reclining_b",
+      "class_id": "L0041",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "barn_style_sliding_door_with_decorative_hardware",
+      "class_id": "L0042",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bathroom_faucet_with_single_handle",
+      "class_id": "L0043",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "bathroom_faucet_with_single_handle_lever_operati",
+      "class_id": "L0044",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "beautiful_ferris_wheel",
+      "class_id": "L0045",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "bench_grinder_with_tool_rest_and_eye_shield",
+      "class_id": "L0047",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bench_vise_with_swiveling",
+      "class_id": "L0048",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bench_vise_with_swiveling_base_and_pipe_jaw_atta",
+      "class_id": "L0049",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bevel_gear_pair_with_perpendicular_shafts",
+      "class_id": "L0050",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bi_fold_closet_door_system",
+      "class_id": "L0051",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "bicycle",
+      "class_id": "L0052",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "bicycle_bell_with_spring_hammer",
+      "class_id": "L0053",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bicycle_brake_caliper_with_pivot_arms",
+      "class_id": "L0054",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bicycle_chain_is_composed_of_many_interconnected",
+      "class_id": "L0057",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bicycle_derailleur_with_parallelogram_linkage",
+      "class_id": "L0058",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bicycle_handlebar_end_shifter_with_lever",
+      "class_id": "L0059",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bicycle_headset_with_bearing_cups_and_lockring",
+      "class_id": "L0060",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bicycle_kickstand_with_spring_return",
+      "class_id": "L0061",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bicycle_pump_with_handle_and_pressure_gauge",
+      "class_id": "L0062",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bicycle_quick_release_skewer_mechanism",
+      "class_id": "L0063",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bicycle_seatpost_with_micro_adjust_clamp",
+      "class_id": "L0064",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bicycle_stem_with_angle_adjustment",
+      "class_id": "L0065",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "blood_pressure_cuff_with_squeeze_bulb_and_valve",
+      "class_id": "L0068",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "boat_anchor_windlass_with_chain_gypsy",
+      "class_id": "L0069",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bookshelf",
+      "class_id": "L0070",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bottle_jack_featuring_hydraulic",
+      "class_id": "L0072",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bow_compass_for_large_circles",
+      "class_id": "L0073",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "bread_slicer_with_guide_frame_and_cutting_blade",
+      "class_id": "L0074",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "built_in_dishwasher_with_sliding_racks",
+      "class_id": "L0075",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "butterfly_valve_with_lever_operator",
+      "class_id": "L0076",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "cabinet_soft_close_hinge",
+      "class_id": "L0078",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "cabinet_with_two_drawers_two_door",
+      "class_id": "L0083",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "camera_lens_with_manual_aperture_ring",
+      "class_id": "L0086",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "car_door_equipped_with_safety",
+      "class_id": "L0090",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "car_door_equipped_with_safety_locks_and_weather_se",
+      "class_id": "L0091",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "car_hood_bonnet_or_trunk_boot_lid_is_a_large",
+      "class_id": "L0093",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "car_scissor_jack_with_screw_mechanism",
+      "class_id": "L0094",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "casement_window_stay_arm",
+      "class_id": "L0095",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "casement_window_with_crank",
+      "class_id": "L0096",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "centrifugal_juicer_with_pulp_ejection",
+      "class_id": "L0098",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "centrifugal_juicer_with_pulp_ejection_system",
+      "class_id": "L0099",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "chafing_dish_with_hinged_lid_and_fuel_holder",
+      "class_id": "L0100",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "chair",
+      "class_id": "L0101",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "check_valve_with_swing_gate",
+      "class_id": "L0102",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "clutch_disc_with_friction_plates",
+      "class_id": "L0105",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "coffee_machine",
+      "class_id": "L0106",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "collapsible_umbrella_with_auto_open_button",
+      "class_id": "L0107",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "combination_lock_with_rotating_dials",
+      "class_id": "L0108",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "combination_safe_dial_mechanism",
+      "class_id": "L0109",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "comfort_height_toilet_with_powerful",
+      "class_id": "L0110",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "commercial_faucet_featuring_articulated_spout",
+      "class_id": "L0111",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "commercial_golf_cart_with",
+      "class_id": "L0112",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "commercial_grade_blender_featuring_high_torque_mot",
+      "class_id": "L0113",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "commercial_grade_blender_featuring_high_torque_motor",
+      "class_id": "L0114",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "commercial_grade_faucet_with_brass_construction",
+      "class_id": "L0115",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "commercial_grade_retractable_awning_with_powder_co",
+      "class_id": "L0116",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "commercial_grade_retractable_awning_with_powder_coated",
+      "class_id": "L0117",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "commercial_ironing_board_with",
+      "class_id": "L0118",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "commercial_mechanical_press_with",
+      "class_id": "L0119",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "commercial_mechanical_press_with_adjustable_spee",
+      "class_id": "L0120",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "commercial_microwave_featuring_programmable_cooking",
+      "class_id": "L0121",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "common_ironing_board_features_a_flat_board_and_f",
+      "class_id": "L0123",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "common_ironing_board_features_a_flat_board_top",
+      "class_id": "L0124",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "compact_camera_system_with",
+      "class_id": "L0126",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "compact_folding_chair_that",
+      "class_id": "L0127",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "compact_folding_chair_that_transforms_from_flat",
+      "class_id": "L0128",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "compass",
+      "class_id": "L0129",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "compound_pulley_with_multiple_sheaves",
+      "class_id": "L0130",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "constant_velocity_joint_with_cage_and_balls",
+      "class_id": "L0131",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "contemporary_laptop_computer_with",
+      "class_id": "L0133",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "contemporary_laptop_computer_with_a",
+      "class_id": "L0134",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "convection_toaster_oven_with_multiple",
+      "class_id": "L0135",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "convection_toaster_oven_with_multiple_cooking_func",
+      "class_id": "L0136",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "convertible_roof_system_involves_multiple_panels",
+      "class_id": "L0137",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "convertible_roof_system_soft_top_or_hardtop_in",
+      "class_id": "L0139",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "conveyor_belt_roller_with_bearing_mount",
+      "class_id": "L0140",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "conveyor_system",
+      "class_id": "L0141",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "corkscrew_wine_opener_with_fold_out_lever_arms",
+      "class_id": "L0142",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "countertop_microwave_with_turntable",
+      "class_id": "L0143",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "cruiser_skateboard_with_flexible_deck_and_smooth_r",
+      "class_id": "L0145",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "crutch_with_adjustable_height_mechanism",
+      "class_id": "L0146",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "cutting_scissors",
+      "class_id": "L0147",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "decorative_ceiling_fan_with_integrated",
+      "class_id": "L0148",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "decorative_ceiling_fan_with_integrated_lighting_fi",
+      "class_id": "L0149",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "designer_eyeglasses_featuring_spring_loaded_hinges",
+      "class_id": "L0150",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "desk_monitor_arm_with_gas_spring",
+      "class_id": "L0151",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "digital_caliper_with_sliding",
+      "class_id": "L0152",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "digital_camera_with_articulating_lcd_screen",
+      "class_id": "L0154",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "disc_brake_caliper_with_piston_and_pads",
+      "class_id": "L0155",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "dishwasher",
+      "class_id": "L0156",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "dispenser",
+      "class_id": "L0157",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "door",
+      "class_id": "L0159",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "door_knob_with_latch_mechanism",
+      "class_id": "L0160",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "drafting_table_with_adjustable_tilt_surface",
+      "class_id": "L0161",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "drawer",
+      "class_id": "L0162",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "drawer_with_five_cabinets",
+      "class_id": "L0163",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "drawer_with_three_cabinets",
+      "class_id": "L0164",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "drawer_with_two_doors_on_the_downside_and_one_ca",
+      "class_id": "L0166",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "drum_brake_with_shoes_and_cylinder",
+      "class_id": "L0168",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "drum_pedal_with_beater_and_spring_return",
+      "class_id": "L0169",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "dslr_camera_with_interchangeable",
+      "class_id": "L0170",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "dual_flush_toilet_with_water_conservation",
+      "class_id": "L0171",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "dual_sport_motorcycle_featuring_chain_drive",
+      "class_id": "L0172",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "dual_sport_motorcycle_featuring_chain_drive_and_di",
+      "class_id": "L0173",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "dutch_door_with_split_panels",
+      "class_id": "L0174",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "electric_ceiling_fan_with_reversible",
+      "class_id": "L0175",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "electric_ceiling_fan_with_reversible_motor",
+      "class_id": "L0176",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "electric_golf_cart_with_regenerative",
+      "class_id": "L0177",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "electric_skateboard_featuring_regenerative_braking",
+      "class_id": "L0178",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "electric_stapler_featuring_automatic_feeding",
+      "class_id": "L0179",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "electric_stapler_featuring_automatic_feeding_and_p",
+      "class_id": "L0180",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "elevator_call_button_panel",
+      "class_id": "L0181",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "energy_efficient_dishwasher_featuring_adjustable_upper",
+      "class_id": "L0182",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "energy_efficient_refrigerator_with_adjustable_shel",
+      "class_id": "L0183",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "energy_efficient_refrigerator_with_adjustable_shelving",
+      "class_id": "L0184",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "ergonomic_clamp_with_adjustable",
+      "class_id": "L0185",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "ergonomic_clamp_with_adjustable_components",
+      "class_id": "L0186",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "ergonomic_crimping_tool_with",
+      "class_id": "L0187",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "ergonomic_office_chair",
+      "class_id": "L0188",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "ergonomic_office_chair_incorporating",
+      "class_id": "L0189",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "ergonomic_office_chair_incorporating_a_pneumati",
+      "class_id": "L0190",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "ergonomic_tool_chest_with_adjustable_components",
+      "class_id": "L0191",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "escalator_step_with_track_system",
+      "class_id": "L0192",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "espresso_machine_with_steam",
+      "class_id": "L0193",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "espresso_machine_with_steam_wand",
+      "class_id": "L0194",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "excavator_arm_is_a",
+      "class_id": "L0196",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "excavator_arm_is_a_multi_jointed_appendage_atta",
+      "class_id": "L0197",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "expandable_binder_with_adjustable_capacity",
+      "class_id": "L0199",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "exterior_door_with_deadbolt",
+      "class_id": "L0200",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "exterior_door_with_deadbolt_locking_system",
+      "class_id": "L0201",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "exterior_shutter_with_weather_resistant_constructi",
+      "class_id": "L0202",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "exterior_shutter_with_weather_resistant_construction",
+      "class_id": "L0203",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "fan",
+      "class_id": "L0205",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "fancy_window",
+      "class_id": "L0206",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "faucet",
+      "class_id": "L0207",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "ferris_wheel_consists_of",
+      "class_id": "L0209",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "ferris_wheel_good",
+      "class_id": "L0210",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "file_drawer_with_full_extension_slides",
+      "class_id": "L0211",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "fire_extinguisher_with_squeeze_handle_and_nozzle",
+      "class_id": "L0212",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "fireproof_safe_with_digital_lock",
+      "class_id": "L0213",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "flaring_tool_with_cone_and_clamp",
+      "class_id": "L0214",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "flatbed_scanner_with_high_resolution_imaging",
+      "class_id": "L0215",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "flexible_conveyor_system_with_articulated",
+      "class_id": "L0216",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "flexible_track_lighting_system_with",
+      "class_id": "L0217",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "flexible_track_lighting_system_with_dimming_capabi",
+      "class_id": "L0218",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "folding_camping_stove_with_wind_guards",
+      "class_id": "L0219",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "folding_chair_typically_has_a_seat_frame_a_back",
+      "class_id": "L0222",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "folding_fan_with_pivot_and_slats",
+      "class_id": "L0223",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "folding_ironing_board_with",
+      "class_id": "L0224",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "folding_ironing_board_with_heat_resistant_cover",
+      "class_id": "L0225",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "folding_screen",
+      "class_id": "L0226",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "food_processor",
+      "class_id": "L0227",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "four_wheeled_golf_cart_with",
+      "class_id": "L0228",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "four_wheeled_golf_cart_with_bag_storage_compartm",
+      "class_id": "L0229",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "french_press_coffee_maker_with_plunger_mechanism",
+      "class_id": "L0230",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "functional_compass_featuring_articulated",
+      "class_id": "L0231",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "functional_conveyor_system_featuring",
+      "class_id": "L0232",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "functional_door_featuring_articulated",
+      "class_id": "L0233",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "functional_hydraulic_jack_featuring",
+      "class_id": "L0234",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "functional_microwave_featuring_articulated",
+      "class_id": "L0235",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "functional_remote_control_featuring",
+      "class_id": "L0236",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "gaming_console",
+      "class_id": "L0237",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "gaming_laptop",
+      "class_id": "L0238",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "gaming_remote_featuring_motion_sensors",
+      "class_id": "L0239",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "garage_door",
+      "class_id": "L0240",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "garlic_press_with_hinged_handles_and_pressing_pl",
+      "class_id": "L0241",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "gas_oven_with_broiler",
+      "class_id": "L0242",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "gate_leg_table_has_a_fixed_top_center_section_an",
+      "class_id": "L0244",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "gate_valve_with_handwheel",
+      "class_id": "L0245",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "gear_system",
+      "class_id": "L0246",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "geometric_compass_for_precise",
+      "class_id": "L0247",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "golf_cart",
+      "class_id": "L0249",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "guitar_tuning_peg_mechanism",
+      "class_id": "L0250",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "gyroscope_with_spinning_wheel_and_gimbal_rings",
+      "class_id": "L0251",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hand_cranked_pencil_sharpener_mounted_to_desk",
+      "class_id": "L0252",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hand_held_compass_with_rotating_bezel",
+      "class_id": "L0253",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hand_held_eggbeater_with_rotating_whisks",
+      "class_id": "L0254",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hand_operated_adding_machine_with_handle_pull",
+      "class_id": "L0255",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hand_operated_bellows_for_fireplace",
+      "class_id": "L0256",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hand_operated_bilge_pump_with_piston_mechanism",
+      "class_id": "L0257",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hand_operated_cash_register_with_drawer_and_keys",
+      "class_id": "L0258",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hand_operated_chain_breaker_tool",
+      "class_id": "L0259",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hand_operated_drill_press_with_quill_feed",
+      "class_id": "L0260",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hand_operated_meat_grinder_with_crank_handle",
+      "class_id": "L0261",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hand_operated_pasta_maker_with_rollers_and_crank",
+      "class_id": "L0262",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hand_operated_printing_press_with_platen",
+      "class_id": "L0263",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hand_operated_rivet_gun_with_squeeze_lever",
+      "class_id": "L0264",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hand_operated_seed_drill_with_wheel_and_hopper",
+      "class_id": "L0265",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hand_riveter_with_mandrel_collection",
+      "class_id": "L0266",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hand_truck_dolly_with_folding_nose_plate",
+      "class_id": "L0267",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hand_winch_with_crank_handle_and_cable_drum",
+      "class_id": "L0268",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "heavy_duty_binder_featuring_reinforced_covers",
+      "class_id": "L0269",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "heavy_duty_binder_featuring_reinforced_covers_and",
+      "class_id": "L0270",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "heavy_duty_clothespin_with_corrosion_resistant_spr",
+      "class_id": "L0271",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "heavy_duty_clothespin_with_corrosion_resistant_spring",
+      "class_id": "L0272",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "heavy_duty_conveyor_system_with",
+      "class_id": "L0273",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "heavy_duty_conveyor_system_with_synchronized_dri",
+      "class_id": "L0274",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "heavy_duty_hydraulic_jack_with_dual_stage",
+      "class_id": "L0275",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "heavy_duty_nutcracker_featuring_adjustable_cracking",
+      "class_id": "L0276",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "heavy_duty_snips_featuring_ergonomic_handles",
+      "class_id": "L0277",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "heavy_duty_snips_featuring_ergonomic_handles_and_p",
+      "class_id": "L0278",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "heavy_duty_vise_with_hardened_steel",
+      "class_id": "L0279",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "heavy_duty_vise_with_hardened_steel_construction_a",
+      "class_id": "L0280",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "heavy_duty_wire_cutter_featuring_compound",
+      "class_id": "L0281",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "heavy_duty_wire_cutter_featuring_compound_leverage",
+      "class_id": "L0282",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "high_end_digital_camera_with_weather_sealed",
+      "class_id": "L0283",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "high_performance_gaming_console_with_liquid",
+      "class_id": "L0284",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "high_performance_laptop_featuring_advanced",
+      "class_id": "L0285",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "high_performance_laptop_featuring_advanced_hinge",
+      "class_id": "L0286",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "high_precision_digital_caliper_with_hardened_stain",
+      "class_id": "L0288",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "high_resolution_tablet_with_multi_angle",
+      "class_id": "L0289",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "household_scissors_with_comfortable_grip",
+      "class_id": "L0291",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "human_arm_comprises_the_upper_arm_forearm_an",
+      "class_id": "L0293",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "human_arm_comprises_the_upper_arm_humerus_bon",
+      "class_id": "L0294",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "human_leg_includes_the_thigh_femur_bone_low",
+      "class_id": "L0296",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "human_leg_includes_the_thigh_lower_leg_and_f",
+      "class_id": "L0297",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "hydraulic_jack",
+      "class_id": "L0298",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "illuminated_medicine_cabinet_with_integrated",
+      "class_id": "L0299",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "illuminated_medicine_cabinet_with_integrated_led_l",
+      "class_id": "L0300",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "industrial_belt_conveyor_with_motorized",
+      "class_id": "L0301",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "industrial_crane_featuring_advanced_hydraulic",
+      "class_id": "L0302",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "industrial_crane_featuring_advanced_hydraulic_syst",
+      "class_id": "L0303",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "industrial_gripper_featuring_precise_positioning",
+      "class_id": "L0304",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "industrial_gripper_featuring_precise_positioning_a",
+      "class_id": "L0305",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "interior_shutter_system_with_tilt",
+      "class_id": "L0306",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "interior_shutter_system_with_tilt_rod_control_for",
+      "class_id": "L0307",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "kick_scooter_with_adjustable",
+      "class_id": "L0310",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "kitchen_drawer_featuring_soft_close_mechanism",
+      "class_id": "L0311",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "kitchen_faucet_with_pull_out_spray",
+      "class_id": "L0312",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "laptop_comprises_a_base_lower_rectangular_block",
+      "class_id": "L0315",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "laser_level_with_tripod_mount_and_rotating_head",
+      "class_id": "L0316",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "laser_printer_with_automatic",
+      "class_id": "L0317",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "laser_printer_with_automatic_duplex_printing_cap",
+      "class_id": "L0318",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "lateral_filing_cabinet_with_hanging",
+      "class_id": "L0319",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "led_desk_lamp_with",
+      "class_id": "L0320",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "led_desk_lamp_with_flexible_positioning",
+      "class_id": "L0321",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "lever_style_nutcracker_with_mechanical",
+      "class_id": "L0322",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "lighter",
+      "class_id": "L0323",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "linear_track_lighting_with_movable_led_spotlight",
+      "class_id": "L0324",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "locking_pliers_feature_jaws_handles_and_a_comple",
+      "class_id": "L0326",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "magnificent_ferris_wheel_standing",
+      "class_id": "L0327",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "makeup_compact_is_typically_a_small_flattened_ca",
+      "class_id": "L0329",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "mandoline_slicer_with_adjustable_blade_height",
+      "class_id": "L0330",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "manual_air_pump_for_inflatables",
+      "class_id": "L0331",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "manual_can_opener_with_turning_handle_and_cuttin",
+      "class_id": "L0332",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "manual_citrus_juicer_press_with_lever_handle",
+      "class_id": "L0333",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "manual_clothes_wringer_with_rollers",
+      "class_id": "L0334",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "manual_hand_drill_with_rotating_handle_and_chuck",
+      "class_id": "L0335",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "manual_hydraulic_floor_jack_with_pump_handle",
+      "class_id": "L0336",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "manual_pencil_lead_holder_with_click_advance",
+      "class_id": "L0337",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "manual_pipe_bender_with_forming_die",
+      "class_id": "L0338",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "masticating_juicer_with_slow_speed",
+      "class_id": "L0339",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "masticating_juicer_with_slow_speed_extraction",
+      "class_id": "L0340",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "mechanical_caliper_featuring_smooth_jaw",
+      "class_id": "L0341",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "mechanical_coin_sorter_with_rotating_disc",
+      "class_id": "L0342",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "mechanical_keyboard_switch_mechanism",
+      "class_id": "L0343",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "mechanical_metronome_with_pendulum",
+      "class_id": "L0344",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "mechanical_press",
+      "class_id": "L0345",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "mechanical_robot_arm_with",
+      "class_id": "L0346",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "mechanical_robot_arm_with_multiple_rotational_jo",
+      "class_id": "L0347",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "metal_link_watch_band_consists_of_numerous_small",
+      "class_id": "L0349",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "meticulously_crafted_bicycle_incorporating",
+      "class_id": "L0350",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "meticulously_crafted_clamp_incorporating",
+      "class_id": "L0351",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "meticulously_crafted_clamp_incorporating_advance",
+      "class_id": "L0352",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "meticulously_crafted_compass_incorporating",
+      "class_id": "L0353",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "meticulously_crafted_crimping_tool",
+      "class_id": "L0354",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "meticulously_crafted_espresso_machine_incorporat",
+      "class_id": "L0355",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "meticulously_crafted_hydraulic_jack",
+      "class_id": "L0356",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "meticulously_crafted_microwave_incorporating",
+      "class_id": "L0357",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "meticulously_crafted_remote_control",
+      "class_id": "L0358",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "mirrored_closet_door_featuring_smooth",
+      "class_id": "L0360",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "mirrored_closet_door_featuring_smooth_gliding_oper",
+      "class_id": "L0361",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "mirrorless_camera_featuring_tilting_viewfinder",
+      "class_id": "L0362",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "mobile_crane_with_telescopic",
+      "class_id": "L0363",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "mobile_crane_with_telescopic_boom_extension",
+      "class_id": "L0364",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "modern_car_equipped_with_power",
+      "class_id": "L0365",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "modern_gaming_console_with",
+      "class_id": "L0366",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "modern_gaming_console_with_ventilation_fans_and",
+      "class_id": "L0367",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "modern_office_chair_featuring",
+      "class_id": "L0368",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "modern_office_chair_featuring_pneumatic_height_a",
+      "class_id": "L0369",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "motorcycle_chain_tension_adjuster",
+      "class_id": "L0370",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "motorized_venetian_blind_system",
+      "class_id": "L0371",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "motorized_venetian_blind_system_with_remote_cont",
+      "class_id": "L0372",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "multi_speed_bicycle_with_front_and",
+      "class_id": "L0373",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "museum_display_case_with",
+      "class_id": "L0374",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "museum_display_case_with_adjustable_shelving",
+      "class_id": "L0375",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "musical_jewelry_box_with",
+      "class_id": "L0376",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "musical_jewelry_box_with_rotating_figurine",
+      "class_id": "L0377",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "newton_s_cradle_with_swinging_balls",
+      "class_id": "L0378",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "one_piece_toilet_with_elongated",
+      "class_id": "L0380",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "over_range_microwave_with_exhaust_fan",
+      "class_id": "L0383",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "over_range_microwave_with_exhaust_fan_and_interior",
+      "class_id": "L0384",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "pair_of_binoculars_with_focus_adjustment_wheel",
+      "class_id": "L0385",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "pair_of_loppers_with_compound_leverage",
+      "class_id": "L0386",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "pair_of_sharp_scissors",
+      "class_id": "L0387",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "pair_of_stainless_steel",
+      "class_id": "L0388",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "passenger_vehicle_with_opening_doors",
+      "class_id": "L0389",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "patio_sliding_door_with_track",
+      "class_id": "L0390",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "patio_sliding_door_with_track_system",
+      "class_id": "L0391",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "pen",
+      "class_id": "L0392",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "pepper_mill_with_rotating_grinder_mechanism",
+      "class_id": "L0393",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "phone",
+      "class_id": "L0394",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "piano_bench_with_adjustable_height",
+      "class_id": "L0395",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "plastic_water_bottle_with",
+      "class_id": "L0397",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "pneumatic_gripper_with_parallel_jaw",
+      "class_id": "L0400",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "pneumatic_gripper_with_parallel_jaw_action",
+      "class_id": "L0401",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "pocket_knife_comprises_a_handle_case_housing_o",
+      "class_id": "L0404",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "pop_rivet_tool_with_compound_leverage",
+      "class_id": "L0405",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "portable_bbq_grill_with_hinged_lid_and_adjustabl",
+      "class_id": "L0406",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "portable_folding_chair",
+      "class_id": "L0407",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "portable_scooter_with_lightweight",
+      "class_id": "L0408",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "portable_scooter_with_lightweight_frame_and_quic",
+      "class_id": "L0409",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "powerful_blender_with_tempered",
+      "class_id": "L0410",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "powerful_blender_with_tempered_glass_pitcher_and",
+      "class_id": "L0411",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "precision_compass_featuring_smooth_joint",
+      "class_id": "L0413",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "precision_excavator_arm_assembly_with",
+      "class_id": "L0414",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "precision_excavator_arm_assembly_with_independent",
+      "class_id": "L0415",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "precision_hydraulic_jack_with",
+      "class_id": "L0416",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "precision_hydraulic_jack_with_overload_protectio",
+      "class_id": "L0417",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "precision_measuring_caliper",
+      "class_id": "L0418",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "precision_multi_tool_with_mechanical",
+      "class_id": "L0419",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "precision_multi_tool_with_mechanical_joints",
+      "class_id": "L0420",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "precision_scissors_featuring_crossed_blade",
+      "class_id": "L0421",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "precision_scissors_featuring_crossed_blade_mechani",
+      "class_id": "L0422",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "precision_wire_cutter_with",
+      "class_id": "L0423",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "premium_dishwasher_with_third_level_rack",
+      "class_id": "L0424",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "premium_dishwasher_with_third_level_rack_system_a",
+      "class_id": "L0425",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "premium_drawer_system_with_precision",
+      "class_id": "L0426",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "premium_drawer_system_with_precision_ball_bearing",
+      "class_id": "L0427",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "premium_ironing_board_with_height_adjustable",
+      "class_id": "L0428",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "premium_ironing_board_with_height_adjustable_legs",
+      "class_id": "L0429",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "premium_pocket_knife_with_stainless",
+      "class_id": "L0430",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "premium_pocket_knife_with_stainless_steel_blade_p",
+      "class_id": "L0431",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "premium_ring_binder_with_reinforced",
+      "class_id": "L0432",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "premium_storage_furniture_with_solid",
+      "class_id": "L0433",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "premium_storage_furniture_with_solid_wood_construc",
+      "class_id": "L0434",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "premium_toilet_with_advanced_flushing",
+      "class_id": "L0435",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "premium_travel_suitcase_with_aircraft_grade",
+      "class_id": "L0436",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "premium_travel_suitcase_with_aircraft_grade_alumin",
+      "class_id": "L0437",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "premium_umbrella_with_carbon_fiber",
+      "class_id": "L0439",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "premium_umbrella_with_carbon_fiber_frame_automati",
+      "class_id": "L0440",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "premium_wardrobe_system_with_solid",
+      "class_id": "L0441",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "premium_wardrobe_system_with_solid_wood_constructi",
+      "class_id": "L0442",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "presentation_binder_with_clear",
+      "class_id": "L0443",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "printer",
+      "class_id": "L0444",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "professional_binder_with_precision_aligned",
+      "class_id": "L0445",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "professional_binder_with_precision_aligned_rings",
+      "class_id": "L0446",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_caliper_with_fine_adjustment",
+      "class_id": "L0447",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_camera_with_adjustable_viewfinder",
+      "class_id": "L0448",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_compass_with_lead_and",
+      "class_id": "L0449",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_desk_lamp_with_brushed",
+      "class_id": "L0450",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "professional_desk_lamp_with_brushed_aluminum_const",
+      "class_id": "L0451",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_display_featuring_height_adjustable_m",
+      "class_id": "L0452",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_display_featuring_height_adjustable_mounting",
+      "class_id": "L0453",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "professional_drafting_compass_with_micro_adjustmen",
+      "class_id": "L0454",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_drafting_compass_with_micro_adjustment",
+      "class_id": "L0455",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "professional_food_processor_with",
+      "class_id": "L0456",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "professional_food_processor_with_direct_drive_mo",
+      "class_id": "L0457",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_grade_crimping_tool_engineered",
+      "class_id": "L0458",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "professional_grade_crimping_tool_engineered_with",
+      "class_id": "L0459",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_grade_hydraulic_jack_engineered",
+      "class_id": "L0460",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_grade_microwave_engineered_with",
+      "class_id": "L0461",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_grade_remote_control_engineered",
+      "class_id": "L0462",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_grade_scissors_constructed_from_high",
+      "class_id": "L0463",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_grade_scissors_constructed_from_high_carbon",
+      "class_id": "L0464",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "professional_hydraulic_jack_with_safety",
+      "class_id": "L0465",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "professional_hydraulic_jack_with_safety_valve_and",
+      "class_id": "L0466",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_ironing_board_featuring_steam_permeable",
+      "class_id": "L0467",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_keyboard_with_individual",
+      "class_id": "L0468",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "professional_keyboard_with_individual_key_switch",
+      "class_id": "L0469",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_kitchen_faucet_with",
+      "class_id": "L0470",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_mixer_with_variable",
+      "class_id": "L0471",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "professional_mixer_with_variable_speed_control_a",
+      "class_id": "L0472",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_multi_tool_featuring_pivot",
+      "class_id": "L0473",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "professional_multi_tool_featuring_pivot_mechanis",
+      "class_id": "L0474",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_museum_display_case_with",
+      "class_id": "L0475",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "professional_museum_display_case_with_climate_cont",
+      "class_id": "L0476",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_nutcracker_with_hardened_steel",
+      "class_id": "L0477",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "professional_oven_with_steam",
+      "class_id": "L0478",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "professional_oven_with_steam_injection_and_preci",
+      "class_id": "L0479",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_remote_control_with",
+      "class_id": "L0480",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_scanner_with_color",
+      "class_id": "L0481",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "professional_tin_snips_with_hardened",
+      "class_id": "L0482",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_tin_snips_with_hardened_steel_blades",
+      "class_id": "L0483",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_tool_chest_featuring",
+      "class_id": "L0484",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "professional_tool_chest_featuring_pivot_mechanis",
+      "class_id": "L0485",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "pulley_block_and_tackle_system",
+      "class_id": "L0486",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "pulley_system",
+      "class_id": "L0487",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "reclining_lounge_chair_with_extending_footrest",
+      "class_id": "L0488",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "refrigerater",
+      "class_id": "L0490",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "remote_control",
+      "class_id": "L0491",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "remote_with_many_buttons",
+      "class_id": "L0492",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "retractable_clothesline_with_spring_rewind",
+      "class_id": "L0493",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "retractable_patio_awning",
+      "class_id": "L0494",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "retractable_tape_measure_with_locking_mechanism",
+      "class_id": "L0495",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "revolving_door_with",
+      "class_id": "L0496",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "ring_binder_features_a_rigid_cover_and_a_ring_me",
+      "class_id": "L0499",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "robot_arm_consists_of_a_base_fixed_or_mobile",
+      "class_id": "L0502",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "robust_excavator_arm_system",
+      "class_id": "L0503",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "rolling_office_file_cart_with_stacking_trays",
+      "class_id": "L0504",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "safe",
+      "class_id": "L0505",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "scissors_consist_of_two_main_parts_blades_with_in",
+      "class_id": "L0508",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "scissors_main_comparision",
+      "class_id": "L0509",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "scroll_saw_with_reciprocating_blade_and_table",
+      "class_id": "L0510",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "sectional_garage_door_with_track",
+      "class_id": "L0511",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "sectional_garage_door_with_track_system",
+      "class_id": "L0512",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "security_door_featuring_multi_point_locking",
+      "class_id": "L0513",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "security_door_featuring_multi_point_locking_and_re",
+      "class_id": "L0514",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "sensor_controlled_microwave_with_automatic",
+      "class_id": "L0515",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "sewing_machine_with_needle_mechanism_and_foot_pe",
+      "class_id": "L0516",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "sheet_metal_nibbler_with_punch_mechanism",
+      "class_id": "L0517",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "similar_to_a_house_door_but_smaller_a_cabinet_doo",
+      "class_id": "L0519",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "slide_projector_with_carousel_tray_mechanism",
+      "class_id": "L0520",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "sliding_barn_door_with_top_rail_trolley",
+      "class_id": "L0521",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "smart_toilet_featuring_automatic_flushing",
+      "class_id": "L0522",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "smart_toilet_featuring_automatic_flushing_and_bide",
+      "class_id": "L0523",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "socket_wrench_set_includes_a_handle_often_with",
+      "class_id": "L0525",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "socket_wrench_set_includes_a_handle_with_ratchet",
+      "class_id": "L0526",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "solid_wood_dining_table",
+      "class_id": "L0527",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "solid_wood_dining_table_with_a_rectangular_top_s",
+      "class_id": "L0528",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "solid_wood_door_with",
+      "class_id": "L0529",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "sophisticated_excavator_arm_featuring",
+      "class_id": "L0530",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "spinning_wheel_with_treadle_and_flyer",
+      "class_id": "L0531",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "sport_motorcycle_with_adjustable_suspension",
+      "class_id": "L0532",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "spring_type_clothespin_consists_of_two_identical",
+      "class_id": "L0535",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "stainless_steel_caliper_with",
+      "class_id": "L0536",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "stainless_steel_dishwasher_with_fold_down",
+      "class_id": "L0537",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "stainless_steel_medicine_cabinet",
+      "class_id": "L0538",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "stainless_steel_medicine_cabinet_with_magnetic_d",
+      "class_id": "L0539",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "stainless_steel_refrigerator_with",
+      "class_id": "L0540",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "stainless_steel_refrigerator_with_water_dispense",
+      "class_id": "L0541",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "stand_mixer_with_planetary_mixing",
+      "class_id": "L0542",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "stand_mixer_with_planetary_mixing_action",
+      "class_id": "L0543",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "standard_stapler_has_a_base_a_magazine_arm_asse",
+      "class_id": "L0545",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "standing_desk_with_motorized_height_adjustment",
+      "class_id": "L0546",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "steering_rack_and_pinion_assembly",
+      "class_id": "L0548",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "step",
+      "class_id": "L0549",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "step1_a_cabinet_with_a_drawer",
+      "class_id": "L0550",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "step4_a_cabinet_with_five_drawers",
+      "class_id": "L0551",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "storage",
+      "class_id": "L0552",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "storage_cabinet_with_multiple",
+      "class_id": "L0553",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "storage_cabinet_with_multiple_compartments_and_a",
+      "class_id": "L0554",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "storage_furniture",
+      "class_id": "L0555",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "street_legal_golf_cart_featuring_headlights",
+      "class_id": "L0556",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "sturdy_door_constructed_with",
+      "class_id": "L0558",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "suitcase",
+      "class_id": "L0559",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "swing_set_comprises_a_support_frame_and_swings_s",
+      "class_id": "L0562",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "swiss_army_pocket_knife",
+      "class_id": "L0563",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "swiss_army_pocket_knife_with_multiple_tools",
+      "class_id": "L0564",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "switch",
+      "class_id": "L0565",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "t_square_drafting_ruler",
+      "class_id": "L0567",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "table_with_some_cabinets",
+      "class_id": "L0568",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "table_with_some_cabinets_or_doors",
+      "class_id": "L0569",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "tall_bookcase_featuring_adjustable_shelf",
+      "class_id": "L0570",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "tall_bookcase_featuring_adjustable_shelf_brackets",
+      "class_id": "L0571",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "tall_wooden_cabinet_featuring",
+      "class_id": "L0573",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "tall_wooden_cabinet_featuring_two_hinged_doors_w",
+      "class_id": "L0574",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "television_remote_with_ergonomic_design",
+      "class_id": "L0575",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "this_cutter_has_a_flat_base_a_cutting_arm_hinged",
+      "class_id": "L0577",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "this_cutter_has_a_flat_base_often_with_a_grid_and",
+      "class_id": "L0578",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "this_knife_has_a_handle_body_often_metal_or_plast",
+      "class_id": "L0579",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "this_knife_has_a_handle_body_that_houses_a_replace",
+      "class_id": "L0580",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "three_ring_binder_with_snap_open_mechanism",
+      "class_id": "L0582",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "toaster",
+      "class_id": "L0583",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "toilet",
+      "class_id": "L0584",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "tongs_are_typically_made_of_two_arms_joined_at_one",
+      "class_id": "L0586",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "torsion_bar_suspension_element",
+      "class_id": "L0587",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "touchless_faucet_with_sensor_activation",
+      "class_id": "L0588",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "touchless_faucet_with_sensor_activation_and_temper",
+      "class_id": "L0589",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "touchscreen_tablet_with_adjustable_stand",
+      "class_id": "L0590",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "touring_bicycle_equipped_with_handlebar_steering",
+      "class_id": "L0592",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "towering_ferris_wheel_structure",
+      "class_id": "L0593",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "track_mounted_spotlight_with_precision_beam",
+      "class_id": "L0594",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "track_mounted_spotlight_with_precision_beam_contro",
+      "class_id": "L0595",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "traditional_folding_screen_with",
+      "class_id": "L0596",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "traditional_folding_screen_with_wooden_frame_and",
+      "class_id": "L0597",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "traditional_nutcracker_with_hardwood",
+      "class_id": "L0598",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "traditional_wardrobe_with_solid",
+      "class_id": "L0599",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "traditional_wardrobe_with_solid_wood_constructio",
+      "class_id": "L0600",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "trailer_hitch_coupler_with_latch_mechanism",
+      "class_id": "L0601",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "tripod_that_can_put_a_camera",
+      "class_id": "L0603",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "trombone_with_slide_mechanism",
+      "class_id": "L0604",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "trumpet_with_valve_pistons",
+      "class_id": "L0605",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "trupod_camera_surveying",
+      "class_id": "L0606",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "tube_cutter_with_cutting_wheel_and_rollers",
+      "class_id": "L0608",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "turnbuckle_with_threaded_end_fittings",
+      "class_id": "L0609",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "turnstile_gate_with_rotating_arms",
+      "class_id": "L0610",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "tv_wall_mount_with_tilt_and_swivel",
+      "class_id": "L0611",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "universal_joint_with_cross_and_bearing_cups",
+      "class_id": "L0612",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "universal_remote_with_programmable_buttons",
+      "class_id": "L0613",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "usb",
+      "class_id": "L0614",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "venetian_blinds",
+      "class_id": "L0615",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "venetian_blinds_consist_of_multiple_horizontal_sla",
+      "class_id": "L0617",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "vernier_protractor_with_fine_adjustment",
+      "class_id": "L0618",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "versatile_compass_with_hinged",
+      "class_id": "L0619",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "versatile_door_with_hinged",
+      "class_id": "L0620",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "versatile_excavator_arm_with",
+      "class_id": "L0621",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "versatile_hydraulic_jack_with",
+      "class_id": "L0622",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "versatile_microwave_with_hinged",
+      "class_id": "L0623",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "versatile_remote_control_with",
+      "class_id": "L0624",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "vertical_filing_cabinet_with",
+      "class_id": "L0625",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "video_game_console_with_disc",
+      "class_id": "L0626",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "video_game_console_with_disc_loading_mechanism",
+      "class_id": "L0627",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "vintage_rotary_telephone_with_dial_mechanism",
+      "class_id": "L0628",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "vintage_typewriter_with_key_levers_and_carriage",
+      "class_id": "L0629",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "voice_activated_remote_with_microphone",
+      "class_id": "L0630",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "voice_activated_remote_with_microphone_and_smart",
+      "class_id": "L0631",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "waffle_iron_with_hinged_plates_and_latch",
+      "class_id": "L0632",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "walking_cane_with_folding_mechanism",
+      "class_id": "L0633",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "wall_mounted_toilet_with_concealed_tank",
+      "class_id": "L0634",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "wall_mounted_toilet_with_concealed_tank_and_flush",
+      "class_id": "L0635",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "washing_machine",
+      "class_id": "L0636",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "water_spigot_with_handle_valve",
+      "class_id": "L0637",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "well_designed_car",
+      "class_id": "L0638",
+      "selected": 3,
+      "support": 3
+    },
+    {
+      "category": "well_designed_compass_with_moving",
+      "class_id": "L0639",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "well_designed_conveyor_system_with",
+      "class_id": "L0640",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "well_designed_door_with_moving",
+      "class_id": "L0641",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "well_designed_excavator_arm_with",
+      "class_id": "L0642",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "well_designed_hydraulic_jack_with",
+      "class_id": "L0643",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "well_designed_microwave_with_moving",
+      "class_id": "L0644",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "well_designed_remote_control_with",
+      "class_id": "L0645",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "wheelchair_with_large_rear_wheels_and_footrests",
+      "class_id": "L0647",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "wind_up_alarm_clock_with_bell_and_hammer",
+      "class_id": "L0648",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "window",
+      "class_id": "L0649",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "wireless_gaming_console_featuring_bluetooth",
+      "class_id": "L0650",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "wireless_keyboard_with_ergonomic",
+      "class_id": "L0651",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "wireless_keyboard_with_ergonomic_key_layout",
+      "class_id": "L0652",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "wooden_dining_table",
+      "class_id": "L0653",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "wooden_jewelry_box_with_compartmented",
+      "class_id": "L0654",
+      "selected": 2,
+      "support": 2
+    },
+    {
+      "category": "wooden_jewelry_box_with_compartmented_interior",
+      "class_id": "L0655",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "wooden_nutcracker_with_hinged_jaw",
+      "class_id": "L0656",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "worm_gear_and_wheel_assembly",
+      "class_id": "L0657",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "wristwatch_with_rotating_bezel_and_crown",
+      "class_id": "L0658",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "zipper_consists_of_two_rows_of_interlocking_teet",
+      "class_id": "L0660",
+      "selected": 1,
+      "support": 1
+    }
+  ],
+  "short_category_count": 567,
+  "source_root": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/released_outputs",
+  "studio": {
+    "camera_direction": [
+      1.25,
+      -1.35,
+      0.85
+    ],
+    "camera_distance_policy": "bounding_sphere_auto_frame_1.18",
+    "camera_vertical_fov_degrees": 42.0,
+    "cycles_denoising": true,
+    "ground_rgba": [
+      0.32,
+      0.35,
+      0.4,
+      1.0
+    ],
+    "ground_roughness": 0.82,
+    "lights": [
+      {
+        "direction": [
+          0.4,
+          -0.8,
+          1.5
+        ],
+        "gain": 42.0,
+        "size_ratio": 1.5
+      },
+      {
+        "direction": [
+          -1.2,
+          -0.3,
+          0.6
+        ],
+        "gain": 15.0,
+        "size_ratio": 1.8
+      },
+      {
+        "direction": [
+          0.2,
+          1.0,
+          1.2
+        ],
+        "gain": 24.0,
+        "size_ratio": 1.2
+      }
+    ],
+    "look": "AgX - Medium High Contrast",
+    "mode": "opaque_studio",
+    "view_transform": "AgX",
+    "world_rgba": [
+      0.8,
+      0.84,
+      0.9,
+      1.0
+    ],
+    "world_strength": 0.55
+  },
+  "timeout_seconds": 900.0,
+  "workers": 8
+}

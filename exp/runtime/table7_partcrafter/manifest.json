@@ -1,0 +1,48 @@
+{
+  "assets": [],
+  "axis": "Table 7 Production Readiness",
+  "bounded_local_inventory": {
+    "attributable_final_asset_count": 0,
+    "checked_exact_method_locations": [
+      "arti-skill/PartCrafter",
+      "arti-skill/.cache/PartCrafter",
+      "arti-skill/.cache/table6_sources/partcrafter",
+      "arti-skill/.cache/table6_sources/PartCrafter",
+      "arti-skill/exp/baselines/PartCrafter",
+      "arti-skill/exp/baselines/PartCrafter-official",
+      "arti-skill/exp/runtime/table6_partcrafter",
+      "arti-skill/exp/runtime/partcrafter",
+      "arti-skill/exp/runtime/partcrafter_outputs"
+    ],
+    "existing_method_locations": [],
+    "method_execution_runner_candidates": [],
+    "method_runtime_candidates": [],
+    "scope": "bounded top-level checks only; no recursive workspace scan"
+  },
+  "input_evidence": {
+    "paper_table": {
+      "path": "arti-skill/exp/Nano3dresults.md",
+      "sha256": "d97767fc15a7fafe6e4494e08398edece2c6a6ca5b6004486ca9768996336049"
+    },
+    "table6_representation_preflight": {
+      "path": "arti-skill/exp/runtime/table6_mesh_cad_segmentation/preflight.json",
+      "sha256": "8bd9608fe0301c3fdcfbf4d80c26f31f5a69caf94d8d3b4d9b518004d17808b9"
+    }
+  },
+  "interpretation": "NOT_AN_EXPERIMENTAL_ZERO",
+  "manifest_frozen_before_scoring": true,
+  "method": "PartCrafter",
+  "protocol_id": "nano3d_table7_production_readiness_v1",
+  "protocol_sha256": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+  "protocol_snapshot": "arti-skill/exp/runtime/table7_partcrafter/protocol_snapshot.json",
+  "role": "supplementary representation control",
+  "schema_version": "1.0.0",
+  "selection_policy": {
+    "outcome_based_filtering": false,
+    "paper_cohort_is_not_a_local_cohort": true,
+    "reason": "no attributable released or locally generated PartCrafter final package",
+    "requested_assets": 0
+  },
+  "status": "PAPER_ONLY_LOCAL_OUTPUTS_UNAVAILABLE",
+  "table6_evidence_status": "PAPER_ONLY"
+}

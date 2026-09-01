@@ -1,0 +1,106 @@
+{
+  "J_eval": 1453516,
+  "N_eval": 302440,
+  "artifact_manifest": "artifact_manifest.json",
+  "artifact_manifest_sha256": "2a1eb64b83f27180b290fa1e4edd93a13861fba198739a22b2b0628d1838235d",
+  "classification": "FORMAL_FULL_RELEASE_SPARSE_CORRECTION",
+  "completed_at_utc": "2026-08-28T06:43:19.863798Z",
+  "dataset": "Ours / PV-A",
+  "dataset_slug": "pva",
+  "effective_protocol_id": "urdf_sim_ready_table4_pva_full_release_v2_corrected_r1",
+  "effective_records_sha256": "8f23852ba63758690d6b7a740a9ae3f6f1e31e9a85d4395fc5e719b69c4d4e4d",
+  "manifest": "manifest.json",
+  "manifest_sha256": "2b48f66c4d33a2b9033c4419d302be6bd39069abc081c6c7d05b46ae283fe362",
+  "metrics": {
+    "aor": {
+      "reason": "exact_overlap_volume_backend_not_registered",
+      "status": "N/E"
+    },
+    "collision_free_range": {
+      "denominator": 28431585,
+      "passed_states": 19187701,
+      "rate": 0.6748727163821503
+    },
+    "collision_state_rate": {
+      "collision_states": 14543876,
+      "denominator": 48090121,
+      "executed_states": 48084014,
+      "rate": 0.3024295987943137,
+      "unexecuted_states": 6107
+    },
+    "max_penetration": {
+      "denominator": 302440,
+      "maximum_observed_normalized": 0.8451219060259535,
+      "measured_assets": 302377,
+      "observed_assets": 302377,
+      "status": "PARTIAL"
+    },
+    "multi_joint_sobol_cf": {
+      "denominator": 302440,
+      "passed": 197245,
+      "rate": 0.6521789445840497
+    },
+    "rest_all_pair_cf": {
+      "denominator": 302440,
+      "passed": 3335,
+      "rate": 0.011026980558127232
+    },
+    "rest_non_adjacent_cf": {
+      "denominator": 302440,
+      "passed": 217613,
+      "rate": 0.7195245337918265
+    },
+    "single_joint_sweep_cf": {
+      "denominator": 302440,
+      "passed": 199157,
+      "rate": 0.6585008596746462
+    },
+    "strict_collision_pass": {
+      "denominator": 302440,
+      "passed": 195136,
+      "rate": 0.6452056606269012
+    }
+  },
+  "overlay_database": "overlay.sqlite3",
+  "overlay_database_sha256": "7b42df08faf1e93de321ccff01a362c31b025680251d825f5ebb17a20720290a",
+  "overlay_policy": "selected_parent_ordinal_atomic_record_and_state_group_replacement_v1",
+  "parent": {
+    "files": {
+      "artifact_manifest": {
+        "bytes": 1243,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_mimic_aware_full_release_20260827/artifact_manifest.json",
+        "sha256": "3eafa57778153f0ca641da4cb9a6e62b1c7c05b932c6750e6a0f18d12a5a92a1"
+      },
+      "manifest": {
+        "bytes": 3540,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_mimic_aware_full_release_20260827/manifest.json",
+        "sha256": "379af4afdac70c4a0e7dd1500a84914f0ac9f4e513f9d16ce5bf41f51c90d27f"
+      },
+      "receipt": {
+        "bytes": 3712,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_mimic_aware_full_release_20260827/full_release_receipt.json",
+        "sha256": "bedd501f101146bd766d0fdfdc7302a375c105bd61b8b2223f97307a383c483f"
+      },
+      "summary": {
+        "bytes": 2132,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_mimic_aware_full_release_20260827/summary.json",
+        "sha256": "cc1ed40222850645047b5ab6150abeeb933480e70b5497f347f1f6cc91f818e5"
+      }
+    },
+    "receipt_content_sha256": "dd3f11a4e492abd82aa3ca0bba51a035f31b84323c287aaf14ea625d5e217aba",
+    "result_database": {
+      "bytes": 4278513664,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_mimic_aware_full_release_20260827/results.sqlite3",
+      "sha256": "7e6ede5d1507a38c4da2c269b2b7dfe1f7c1b76957dbd90d23f7ca12d79cd8e8"
+    },
+    "root": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_mimic_aware_full_release_20260827"
+  },
+  "receipt_content_sha256": "4e678621a4af29183a6f6e904e7ad63652183e5fd78bc78be757c18df36a8bef",
+  "schema_version": "pva_table4_v2_sparse_correction_receipt_v1",
+  "selected_correction_assets": 847,
+  "selection_audit": "selection_audit.jsonl",
+  "selection_audit_sha256": "eea935d587e30c96ca4c41a4a69d1cf0f40e8757293aef1e9dce5a7bb4bb9242",
+  "status": "COMPLETE_WITH_RETAINED_FAILURES",
+  "summary": "summary.json",
+  "summary_sha256": "00f330882de960e34c68bd0a66c5e63c9476b112ccbb117a4cb28e67194deefb"
+}

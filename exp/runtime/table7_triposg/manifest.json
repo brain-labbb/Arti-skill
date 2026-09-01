@@ -1,0 +1,72 @@
+{
+  "assets": [],
+  "axis": "Table 7 Production Readiness",
+  "control_type": "paper-only mesh-native representation control",
+  "input_evidence": {
+    "protocol": {
+      "path": "arti-skill/exp/reference/table7_production_readiness_protocol_v1.json",
+      "sha256": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c"
+    },
+    "runner": {
+      "path": "arti-skill/exp/scripts/run_table7_triposg.py",
+      "sha256": "7aa1d39687a82225785c96a18801e58cfe7b9d7dcecba087a2502d45e3c3e57a"
+    },
+    "table_document": {
+      "path": "arti-skill/exp/Nano3dresults.md",
+      "sha256": "d97767fc15a7fafe6e4494e08398edece2c6a6ca5b6004486ca9768996336049"
+    }
+  },
+  "manifest_frozen_before_scoring": true,
+  "method": "TripoSG",
+  "protocol_id": "nano3d_table7_production_readiness_v1",
+  "protocol_sha256": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+  "protocol_snapshot": "arti-skill/exp/runtime/table7_triposg/protocol_snapshot.json",
+  "reason_codes": [
+    "PAPER_ONLY_LOCAL_OUTPUTS_UNAVAILABLE",
+    "NOT_AN_EXPERIMENTAL_ZERO"
+  ],
+  "schema_version": "1.0.0",
+  "selection_policy": {
+    "outcome_based_filtering": false,
+    "paper_cohort_is_not_a_local_cohort": true,
+    "reason": "no local attributable TripoSG outputs or runnable generation path",
+    "requested_assets": 0
+  },
+  "targeted_local_inventory": {
+    "attributable_final_asset_count": 0,
+    "attributable_generation_runner_count": 0,
+    "entries": [
+      {
+        "path": "arti-skill/.cache/TripoSG",
+        "present": false
+      },
+      {
+        "path": "arti-skill/.cache/table6_sources/triposg",
+        "present": false
+      },
+      {
+        "path": "arti-skill/.cache/table7_sources/triposg",
+        "present": false
+      },
+      {
+        "path": "arti-skill/exp/baselines/TripoSG",
+        "present": false
+      },
+      {
+        "path": "arti-skill/exp/runtime/table6_triposg",
+        "present": false
+      },
+      {
+        "path": "arti-skill/exp/scripts/run_table6_triposg.py",
+        "present": false
+      },
+      {
+        "path": "arti-skill/exp/scripts/run_triposg.py",
+        "present": false
+      }
+    ],
+    "inventory_sha256": "b33cac4d80e27fdcbe1187bfd85d9b9c9fa033a219eef672ad19cded8d6e34fd",
+    "present_candidates": [],
+    "scope": "fixed TripoSG-specific checkout, output, and generation-runner candidates"
+  }
+}

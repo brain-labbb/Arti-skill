@@ -1,0 +1,70 @@
+{
+  "anti_leakage": [
+    "Do not infer targets or tolerances from generated artifacts.",
+    "Do not edit prompts/specs after any common-task generation starts.",
+    "Score final exported artifacts rather than source constants or self-reports.",
+    "Keep modality-incompatible metrics N/A rather than zero."
+  ],
+  "benchmark_id": "table4_constraints_v2",
+  "constraint_count": 52,
+  "count_constraint_count": 32,
+  "frozen_at": "2026-08-11T00:00:00Z",
+  "generation_policy": {
+    "method_native_default_decoding": true,
+    "note": "Every scored target is stated in the prompt; measurement recipes and tolerances are frozen before generation.",
+    "one_final_artifact_per_method_task": true,
+    "repair_budget": 0,
+    "specs_hidden_from_generation": false,
+    "timeout_seconds": 1800
+  },
+  "metrics": {
+    "conditional_accuracy": "passed / measurable constraints",
+    "count_pass": "passed / all exact-count constraints",
+    "coverage": "measurable / all applicable constraints",
+    "numeric_pass": "passed / all applicable numeric constraints",
+    "satisfaction": "passed / all applicable constraints"
+  },
+  "numeric_constraint_count": 20,
+  "panels": {
+    "cad_numeric": [
+      "text_to_cadquery",
+      "text2cad"
+    ],
+    "image_count": [
+      "cad_coder"
+    ],
+    "paper_reference_only": [
+      "nova3d"
+    ],
+    "structured_main": [
+      "ours",
+      "naive_same_llm",
+      "articraft",
+      "lam",
+      "blenderllm"
+    ]
+  },
+  "prompt_manifest_sha256": "0b46c15c65c46550cc25654ccca10e4de87f1b97e6bde89796ea3cc9b439065e",
+  "schema_version": 2,
+  "spec_sha256": {
+    "T4C001": "ae18d59a4738567f3e36722478be4f56d427c1d516c247f64f5c9e7454ed334c",
+    "T4C002": "6c54d777575f078f1ee06ae809c37c8c4d43114e63a28f8ce27f1b6ee4667f25",
+    "T4C003": "7eef356c99cf8a06dace1c0f1039f9c9fd5d3336b2078baf41c476ab215a6ef7",
+    "T4C004": "aba78318592ebf4151ae39848665fe388e09be7902636a938029c7a3fbfc7fe6",
+    "T4C005": "d74ba8831c890eed5a4c0c2454f03b08b74e75eb3fab67c09385e0bc98b928a6",
+    "T4C006": "3a6a52f2fc7b8d4e4871af5ae681d9309c41415c6e3f38dd0d2c994771d47c8a",
+    "T4C007": "1b2dad270564cc4df6cd5edd17b426563473828bf318868716d797bf2cecc6dd",
+    "T4C008": "9561905bd174d8b9615828ed3156fb129d5b7994d6d90bf47c0a714ab014afc4",
+    "T4C009": "c15fb43d0064866fcaee1c868bc7e5b0e1479575a07fb206e8838a5ddb1b9099",
+    "T4C010": "f19d3baeafd20f626693af9710e3d53875da98c64794a1b49260b754e6f14c72",
+    "T4C011": "e1ed25570194c2a285780e45ce1f9ad4ff8a1ee636384477d6bf27e5419ae27d",
+    "T4C012": "76b07afc3cfbdf54d9a899f9093742fc2a3c5a99d54f1a98c6dbf6d7bd4bee11",
+    "T4C013": "cd4bc00da77284c0ffb818da6bbfc02d2d4e233ceded4ddfe1a3e513a099fccc",
+    "T4C014": "24fac81ee3ae863e8fb33f87519856a0ed343ffa6593666c460955e1d2d0ed3f",
+    "T4C015": "290182bb31c0c852ca69f1557d1015d448b3af51f9d2ff0ee0cbb8dad538f07d",
+    "T4C016": "f1dd40948c56e468070bd44dbdecb64c2fb6340b3f6d4733180a05ebc5542b1f",
+    "T4C017": "402c0acecf92b5c15f137b10c585a4d84a3eafb93d2e1e688ef8528aacbd3cb2",
+    "T4C018": "368ecc6d19ea9e3a7a396ebb362defe3a7957da20cee606669614a3ecc759cf4"
+  },
+  "task_count": 18
+}

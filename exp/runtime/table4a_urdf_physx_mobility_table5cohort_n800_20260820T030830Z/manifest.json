@@ -1,0 +1,79 @@
+{
+  "command": [
+    "exp/scripts/run_table4a_urdf_physx_mobility.py",
+    "--mode",
+    "formal"
+  ],
+  "created_at_utc": "2026-08-20T04:04:03.677658Z",
+  "dataset": "PhysX-Mobility",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "c6c39d5558bc2fdea6ec3f70bf209008f91eb122229ba43016915333e3783124",
+  "manifest_self_sha256_at_write": "41c0962536c3de0df08e024a5de83f791d4bc39d8ba3f6ea5ba805fa732cfc4b",
+  "mode": "formal",
+  "outputs": {
+    "asset_records_sha256": "cd3c64ae780e895f2ea9ae2176cc4839469afcd3270205eb565a23f77819e24d",
+    "joint_records_sha256": "19144e2343bd6e1bdb06711c665305450e641308b3fd3458cdb6ff83bc077d07",
+    "summary_md_sha256": "f99b1f2dbc3aef84cf5bbb8aa3923161e72ec1b2dc3a685f2fb4709b7f0defc5",
+    "summary_sha256": "3cf9652d04d4365c75e389f5abf9e3f63b393c58dd9fa9ef049f4fc2966af0d8",
+    "verification_sha256": "335242a1f0b8aaacaaf1613febeb467391ed7d6b47f0396ad3e631902d51b0bf"
+  },
+  "protocol_id": "table4a_physx_mobility_table5cohort_n800_v1",
+  "record_count": 800,
+  "status_counts": {
+    "completed": 799,
+    "error": 1,
+    "total": 800
+  },
+  "verification": {
+    "all_pass": true,
+    "check_count": 9,
+    "checks": [
+      {
+        "check": "record_count",
+        "detail": "800",
+        "pass": true
+      },
+      {
+        "check": "frozen_order_preserved",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "j_eval_denominator",
+        "detail": "3809",
+        "pass": true
+      },
+      {
+        "check": "retention_denominator",
+        "detail": "3809",
+        "pass": true
+      },
+      {
+        "check": "urdf_identity_matches_frozen_manifest",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "state_hash_cross_check_no_mismatch",
+        "detail": "{'verified': 53340, 'mismatch': 0, 'no_reference': 26607}",
+        "pass": true
+      },
+      {
+        "check": "state_intended_count",
+        "detail": "79989",
+        "pass": true
+      },
+      {
+        "check": "claim_boundary_zero_collision_elements",
+        "detail": "assets_with_eligible_pairs_reported=799",
+        "pass": true
+      },
+      {
+        "check": "aggregate_recomputation_matches",
+        "detail": "",
+        "pass": true
+      }
+    ]
+  },
+  "wall_seconds": 2455.155
+}

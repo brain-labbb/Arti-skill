@@ -1,0 +1,245 @@
+{
+  "assets": [],
+  "blockers": [
+    {
+      "evidence": "The pinned four-shard 8B checkpoint (16,584,414,544 bytes) is not downloaded.",
+      "id": "PHYSX_OMNI_8B_WEIGHTS_MISSING"
+    },
+    {
+      "evidence": "The pinned TRELLIS-image-large repository (3,300,497,168 bytes) is not downloaded.",
+      "id": "TRELLIS_DECODER_WEIGHTS_MISSING"
+    },
+    {
+      "evidence": "No GLB/OBJ/URDF/MJCF output exists in the official default output scope.",
+      "id": "METHOD_GENERATED_FINAL_OUTPUTS_MISSING"
+    },
+    {
+      "evidence": "No frozen adapter maps a PhysX-Omni run into a complete attributable Table 7 package and dependency manifest.",
+      "id": "TABLE7_OUTPUT_ADAPTER_MISSING"
+    }
+  ],
+  "evidence_files": [
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/api/github_commit_main.json",
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/api/github_repo.json",
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/api/github_tree.json",
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/api/hf_model.json",
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/api/hf_physx_mobility.json",
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/api/hf_physxbench.json",
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/api/hf_physxverse.json",
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/api/hf_trellis_image_large.json",
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/hf/model/README.md",
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/hf/model/config.json",
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/hf/model/model.safetensors.index.json",
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/hf/physx_mobility/README.md",
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/hf/physxbench/README.md",
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/hf/physxbench/descript_inthewild.json",
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/hf/physxbench/descript_mobility.json",
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/hf/physxbench/descript_verse.json",
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/hf/physxverse/README.md",
+    "arti-skill/.cache/table6_sources/physx_omni/metadata/hf/physxverse/merge.sh",
+    "arti-skill/.cache/table6_sources/physx_omni/source-46fa1cd0.tar.gz",
+    "arti-skill/.cache/table6_sources/physx_omni/source/1vlm_demo.py",
+    "arti-skill/.cache/table6_sources/physx_omni/source/2infer_geo.py",
+    "arti-skill/.cache/table6_sources/physx_omni/source/3jsongen_update.py",
+    "arti-skill/.cache/table6_sources/physx_omni/source/README.md",
+    "arti-skill/.cache/table6_sources/physx_omni/source/decoder_each.py",
+    "arti-skill/.cache/table6_sources/physx_omni/source/download.py",
+    "arti-skill/exp/reference/table7_production_readiness_protocol_v1.json",
+    "arti-skill/exp/runtime/table6_physx_omni/preflight.json"
+  ],
+  "frozen_inputs": {
+    "runner": "arti-skill/exp/scripts/run_table7_physx_omni.py",
+    "runner_sha256": "9ea113b72bef946ec206a0765c334d898c8fb8cfce87fc5a215fe72df4444ece",
+    "table6_preflight": "arti-skill/exp/runtime/table6_physx_omni/preflight.json",
+    "table6_preflight_sha256": "b13d1cf83dce9681ed5c0ae6aa6b5744f4c73077ca376787cfbc4d8569dba12b"
+  },
+  "interpretation": "NOT_AN_EXPERIMENTAL_ZERO",
+  "manifest_id": "table7_physx_omni_local_n0_v1",
+  "method": "PhysX-Omni",
+  "paper_value_policy": "No paper claim is substituted for a local Table 7 measurement.",
+  "protocol_id": "nano3d_table7_production_readiness_v1",
+  "protocol_snapshot": "arti-skill/exp/runtime/table7_physx_omni/protocol_snapshot.json",
+  "protocol_snapshot_sha256": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+  "release_evidence": {
+    "metadata_inventory": {
+      "canonical_inventory_sha256": "3a26bbf92ab323e379a46379f8f2d229a124f23d93a945737054377d53ce4243",
+      "file_count": 18,
+      "files": [
+        {
+          "bytes": 4892,
+          "path": "api/github_commit_main.json",
+          "sha256": "5dd9d1e665e489762fd18307762238c46f87b4507fc7ebdb0493d22d036947f9"
+        },
+        {
+          "bytes": 5951,
+          "path": "api/github_repo.json",
+          "sha256": "a099b5cc160c597e85205319edb01cf8abdbfc83ac991532c4680fa9afb6d3d9"
+        },
+        {
+          "bytes": 133698,
+          "path": "api/github_tree.json",
+          "sha256": "fc27c063e2936855c8ac5c751fc496af06267d8a29dd9be8ef3b3324fd90ea94"
+        },
+        {
+          "bytes": 4327,
+          "path": "api/hf_model.json",
+          "sha256": "d20e8b3dc11951620795d7bcd2244cfe545d0f31174db8652ff1b5812b534d6d"
+        },
+        {
+          "bytes": 1674,
+          "path": "api/hf_physx_mobility.json",
+          "sha256": "1ba3b528d05d2c726af5e09182ef4ce877eb11435204d60588bea24d70bb6670"
+        },
+        {
+          "bytes": 279836,
+          "path": "api/hf_physxbench.json",
+          "sha256": "db45f73d7943fb96d4a668f53754c55da1b947d8e4f16b14b9f41348025e3ec3"
+        },
+        {
+          "bytes": 2226,
+          "path": "api/hf_physxverse.json",
+          "sha256": "74278d48bf92186f04e46bffc4fab418a3d23ab8e89fb4e28f2bbe280c0eca03"
+        },
+        {
+          "bytes": 6336,
+          "path": "api/hf_trellis_image_large.json",
+          "sha256": "20d1b487ab96d07da73413aa60cfaff5d258a2b21a86607f1f76866a9789345a"
+        },
+        {
+          "bytes": 366,
+          "path": "hf/model/README.md",
+          "sha256": "55634374b5929ebb021d0201566c1b12dd4f97a00f2f81f315515170669b354d"
+        },
+        {
+          "bytes": 1491,
+          "path": "hf/model/config.json",
+          "sha256": "abd637e5046b21e888d89c0664f293e3e823d101e0a0c972f9c8ac6ebf1a344d"
+        },
+        {
+          "bytes": 57619,
+          "path": "hf/model/model.safetensors.index.json",
+          "sha256": "3067e9b0f35596ff3426a0d0ec8c982a51fa1e110c4fc30dcf3be9ea37409df6"
+        },
+        {
+          "bytes": 1642,
+          "path": "hf/physx_mobility/README.md",
+          "sha256": "08fcbca508d84a8cf5bfca4435b0a3b8a5172978258f7504c8de3151dfad6ae9"
+        },
+        {
+          "bytes": 48,
+          "path": "hf/physxbench/README.md",
+          "sha256": "26b223cdb761085f467e5003f313cedbc015baf13705f3e683003292817c300c"
+        },
+        {
+          "bytes": 24814,
+          "path": "hf/physxbench/descript_inthewild.json",
+          "sha256": "bfc648e78e420198f7b20228d47d1a51fe9fd1127d3ab7f864e70293bce22a6b"
+        },
+        {
+          "bytes": 45116,
+          "path": "hf/physxbench/descript_mobility.json",
+          "sha256": "778152aadd67fd2c43bf1b6ffe38d222b140e33d2c35625720c4dc2c82230165"
+        },
+        {
+          "bytes": 43242,
+          "path": "hf/physxbench/descript_verse.json",
+          "sha256": "cd0dd90abc74cd62c9ebacded3d76e116df7d135c8584f6ce54e652e6e441226"
+        },
+        {
+          "bytes": 741,
+          "path": "hf/physxverse/README.md",
+          "sha256": "503e96335d2a6152cb4c16c690e13c1684acda1a7ad9ab5fd844de1c90b57d87"
+        },
+        {
+          "bytes": 63,
+          "path": "hf/physxverse/merge.sh",
+          "sha256": "67bc0b1149516b642b33707817d69032200aa21e10d039673363833dd59b71e9"
+        }
+      ],
+      "root": "arti-skill/.cache/table6_sources/physx_omni/metadata"
+    },
+    "model_inputs": {
+      "minimum_model_repository_bytes_not_downloaded": 19884911712,
+      "physx_omni_8b": {
+        "downloaded": false,
+        "parameters": 8292166656,
+        "weight_bytes": 16584414544,
+        "weight_shards": 4
+      },
+      "trellis_image_large": {
+        "downloaded": false,
+        "repository_bytes": 3300497168
+      }
+    },
+    "official_code": {
+      "archive_bytes": 31927065,
+      "archive_path": "arti-skill/.cache/table6_sources/physx_omni/source-46fa1cd0.tar.gz",
+      "archive_sha256": "10c8018475c640d169f5cfcd3d6c420336377b847a1d1407e4100d7fc01bf773",
+      "archive_sha256_expected": "10c8018475c640d169f5cfcd3d6c420336377b847a1d1407e4100d7fc01bf773",
+      "available": true,
+      "code_file_inventory": [
+        {
+          "bytes": 5718,
+          "path": "README.md",
+          "sha256": "c465680db43497aa085c0c9968d99b5e6a5a1759dc100728bd4ff8eb9a2eec11"
+        },
+        {
+          "bytes": 207,
+          "path": "download.py",
+          "sha256": "50f0610d4b93ba05f59a49c71f0c9566e0fd24a27ed53cf599e2f099d88440d6"
+        },
+        {
+          "bytes": 23126,
+          "path": "1vlm_demo.py",
+          "sha256": "4d201566aa8e97d5941b7a569918e60b2ebbdf98219b8f8f0dadd497d27cf307"
+        },
+        {
+          "bytes": 2508,
+          "path": "2infer_geo.py",
+          "sha256": "0988feaef1b2f0aec65a29ec0e4545985d8c118c0db495382cb8d6b87a137450"
+        },
+        {
+          "bytes": 3192,
+          "path": "decoder_each.py",
+          "sha256": "384b41e7f1ddcf169219ed86156e2fdd30e9c1d6c3c063f7f7650ae07aff691d"
+        },
+        {
+          "bytes": 61575,
+          "path": "3jsongen_update.py",
+          "sha256": "ad45f07276cb3ea5e2fe1c59ce71e33d8dd296981733c5b21429e4b5025e3946"
+        }
+      ],
+      "source_commit": "46fa1cd0b6883d4d14431d51c3326ef80a85ef64",
+      "source_tree": "68c9717f55c809998ecc5ded95d067af9351578d",
+      "table6_cpu_tiny_smoke_status": "PASSED",
+      "tiny_smoke_is_final_package_evidence": false,
+      "tiny_smoke_is_method_inference": false
+    },
+    "pinned_remote_revisions": {
+      "physx_bench": "6b4eb29a7016f9d18e784aa0f0faba978ff28bee",
+      "physx_mobility": "d0768ee9e1415f6be8db78d6389ba018b85134c0",
+      "physx_omni_model": "765cd275839f88333cb754f1c6c0b8d3887a3b2c",
+      "physxverse": "264d5864d0e6e3918b15cb52e195855801e8afea",
+      "trellis_image_large": "25e0d31ffbebe4b5a97464dd851910efc3002d96"
+    },
+    "production_outputs": {
+      "available": false,
+      "candidate_count": 0,
+      "candidates": [],
+      "common_table7_output_adapter_present": false,
+      "distinction": "Official source availability and a CPU benchmark-plumbing smoke do not constitute a method-generated final production package.",
+      "search_scope": "arti-skill/.cache/table6_sources/physx_omni/source/demo/** plus source/scene.xml"
+    }
+  },
+  "schema_version": "1.0.0",
+  "selection_policy": {
+    "available_assets": 0,
+    "geometry_evaluable_assets": 0,
+    "outcome_based_reselection": false,
+    "package_evaluable_assets": 0,
+    "reason": "No frozen request cohort was run because required model inputs and final-output adapter are absent.",
+    "requested_assets": 0
+  },
+  "status": "BLOCKED_MISSING_MODEL_OUTPUTS",
+  "table": "Table 7: Production Readiness"
+}

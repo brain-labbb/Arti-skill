@@ -1,0 +1,61 @@
+{
+  "benchmark_id": "table4_constraints_v2",
+  "category": "work_table",
+  "constraints": [
+    {
+      "aliases": [
+        "leg",
+        "table_leg",
+        "support_leg"
+      ],
+      "constraint_id": "T4C007-C01",
+      "measurement": {
+        "deduplication": "one final renderable node_or_visual counts once",
+        "matcher": "normalized token-boundary alias match",
+        "source": "final_artifact_only",
+        "units": "mesh-bearing named nodes_or_visuals",
+        "unmeasurable_policy": "not passed and excluded from conditional denominator"
+      },
+      "role": "leg",
+      "target": 4,
+      "type": "exact_count"
+    },
+    {
+      "aliases": [
+        "tabletop",
+        "table_top",
+        "top"
+      ],
+      "constraint_id": "T4C007-C02",
+      "measurement": {
+        "deduplication": "one final renderable node_or_visual counts once",
+        "matcher": "normalized token-boundary alias match",
+        "source": "final_artifact_only",
+        "units": "mesh-bearing named nodes_or_visuals",
+        "unmeasurable_policy": "not passed and excluded from conditional denominator"
+      },
+      "role": "tabletop",
+      "target": 1,
+      "type": "exact_count"
+    },
+    {
+      "absolute_tolerance_m": 0.005,
+      "constraint_id": "T4C007-C03",
+      "measure": "horizontal_max",
+      "measurement": {
+        "glb_urdf_units": "m",
+        "source": "final_artifact_world_aabb",
+        "step_units": "mm converted to m",
+        "z_up_required": true
+      },
+      "relative_tolerance": 0.1,
+      "target_m": 1.2,
+      "type": "numeric_dimension"
+    }
+  ],
+  "difficulty": "simple",
+  "input_modality": "text",
+  "prompt": "Create a rectangular work table. The final object must contain exactly 4 distinct leg part(s), exactly 1 distinct tabletop part(s). Its larger horizontal overall extent 1.20 m (1200 mm). Model every counted role as a separately named object, part, link, or visual. Keep the object upright on the ground plane, use Z as up, center it near the origin, and preserve real-world scale.",
+  "schema_version": 2,
+  "task_id": "T4C007"
+}

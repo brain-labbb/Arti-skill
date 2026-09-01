@@ -1,0 +1,210 @@
+{
+  "schema_version": "1.0.0",
+  "state": "PAPER_READY_REFERENCE_WITH_CLAIM_BOUNDARIES",
+  "method": "Artiverse",
+  "role": "real-data release/export reference; excluded from generated-method rankings",
+  "static_release_audit": {
+    "asset_denominator": 3544,
+    "category_count": 84,
+    "source_count": 10,
+    "counts": {
+      "annotation_records": 16471,
+      "semantic_joints": 16355,
+      "semantic_dofs": 16437,
+      "exported_movable_joint_elements": 16332
+    },
+    "coverage": {
+      "core_complete": {
+        "count": 3543,
+        "denominator": 3544,
+        "rate": 0.9997178329571106
+      },
+      "mapping_complete": {
+        "count": 3513,
+        "denominator": 3544,
+        "rate": 0.9912528216704289
+      },
+      "static_motion_eligible": {
+        "count": 3494,
+        "denominator": 3544,
+        "rate": 0.9858916478555305
+      },
+      "urdf_parseable": {
+        "count": 3543,
+        "denominator": 3544,
+        "rate": 0.9997178329571106
+      },
+      "urdf_tree_valid": {
+        "count": 3526,
+        "denominator": 3544,
+        "rate": 0.994920993227991
+      },
+      "collision_mesh_refs_resolved": {
+        "count": 3543,
+        "denominator": 3544,
+        "rate": 0.9997178329571106
+      },
+      "mass_furniture_heuristic_present": {
+        "count": 0,
+        "denominator": 3544,
+        "rate": 0.0
+      }
+    },
+    "metadata_validity_not_accuracy": {
+      "axis": {
+        "count": 16355,
+        "denominator": 16355,
+        "rate": 1.0
+      },
+      "origin": {
+        "count": 5827,
+        "denominator": 16355,
+        "rate": 0.3562824824212779
+      },
+      "range": {
+        "count": 16344,
+        "denominator": 16355,
+        "rate": 0.9993274228064812
+      }
+    }
+  },
+  "motion_proxy": {
+    "state": "COMPLETE",
+    "backend": "pybullet_discrete_proxy",
+    "cohort_design": "frozen outcome-blind category/source cohort; no failure replacement",
+    "intent_assets": 100,
+    "evaluable_assets": 99,
+    "pass_assets": 58,
+    "fail_assets": 41,
+    "not_evaluable_assets": 1,
+    "not_evaluable_reasons": {
+      "TIMEOUT": 1
+    },
+    "timeout_asset": "piano/3dfModel/aea7eb00-4ca4-4544-94a6-9bcf3f94e6ac",
+    "timeout_s_per_asset": 600.0,
+    "load_success": {
+      "count": 99,
+      "denominator": 100,
+      "rate": 0.99
+    },
+    "drive_success": {
+      "count": 99,
+      "denominator": 100,
+      "rate": 0.99
+    },
+    "asset_penetration_free_over_intent": {
+      "count": 58,
+      "denominator": 100,
+      "rate": 0.58
+    },
+    "asset_penetration_free_over_evaluable": {
+      "count": 58,
+      "denominator": 99,
+      "rate": 0.5858585858585859
+    },
+    "semantic_joint_single_sweep_pass": {
+      "count": 243,
+      "denominator": 598,
+      "rate": 0.40635451505016723
+    },
+    "frozen_intent_denominators": {
+      "annotation_records": 702,
+      "semantic_joints": 694,
+      "semantic_dofs": 699,
+      "exported_movable_joint_elements": 699
+    },
+    "evaluable_denominators": {
+      "semantic_joints": 598,
+      "semantic_dofs": 603
+    },
+    "query_audit": {
+      "evaluated_configuration_queries": 11724,
+      "single_coordinate_queries": 6633,
+      "multi_sobol_queries": 4992,
+      "nominal_midrange_queries": 99,
+      "penetration_states": 4979,
+      "within_tolerance_contact_only_states": 494,
+      "retained_contact_states": 5473,
+      "penetration_witness_assets": 41
+    },
+    "trajectory_protocol": {
+      "single_coordinate_states": 11,
+      "multi_joint_sobol_states": 64,
+      "sobol_scramble": false
+    },
+    "collision_predicate": {
+      "failure": "retained PyBullet contactDistance < -1e-6 m",
+      "penetration_tolerance_m": 0.000001,
+      "within_tolerance_policy": "diagnostic only; does not fail",
+      "pair_filter": "exclude same fixed cluster and semantic-pid parent-child adjacency after transparent composite-proxy collapse"
+    },
+    "metadata_diagnostics": {
+      "origin_warning_assets": 47,
+      "origin_warning_semantic_joints": 493,
+      "interpretation": "warning only because execution uses the frozen native URDF origin; not evidence of origin accuracy"
+    }
+  },
+  "strict_continuous_collision": {
+    "state": "NOT_EVALUATED",
+    "paper_cell": "N/E",
+    "reason": "No protocol-valid exact-FCL continuous N=100 execution was run; the discrete PyBullet proxy cannot fill this cell."
+  },
+  "semantic_accuracy": {
+    "joint_type_accuracy": "N/A_NO_INDEPENDENT_GOLD",
+    "joint_recall": "N/A_NO_INDEPENDENT_GOLD",
+    "parent_child_accuracy": "N/A_NO_INDEPENDENT_GOLD",
+    "axis_accuracy": "N/A_NO_INDEPENDENT_GOLD",
+    "origin_accuracy": "N/A_NO_INDEPENDENT_GOLD",
+    "limit_accuracy": "N/A_NO_INDEPENDENT_GOLD"
+  },
+  "paper_ready_cells": {
+    "release_core_complete": "3543/3544 (99.97%)",
+    "mapping_complete": "3513/3544 (99.13%)",
+    "motion_load_and_drive": "99/100 (99.0%); 1 N/E timeout",
+    "discrete_penetration_free_proxy": "58/100 intent (58.0%); 58/99 evaluable (58.59%); 41 FAIL, 1 N/E",
+    "semantic_joint_single_sweep_pass": "243/598 evaluable semantic joints (40.64%)",
+    "strict_continuous_collision_free": "N/E",
+    "semantic_accuracy_cells": "N/A (no independent gold)"
+  },
+  "provenance": {
+    "release_manifest_sha256": "8fa6468254a1f74c58f0c25699598bf88f622fabdaf74f0cd9268ee5663c5586",
+    "static_readiness_sha256": "388a81614d5815d45bb32da4b4daf48dce428dbccdf035653bd3bc4993f74206",
+    "static_summary_sha256": "d3edf33b8293826cd7b99cf7b5a9c553b7f92e0eed08383d6c3342c2d704c31c",
+    "static_asset_records_sha256": "c66535fedfc1f440235b15a9d9ce1f2b4e16a18bdc7aa964691b32eecee933fe",
+    "cohort_manifest_sha256": "fd91a2d701b260517c70496a49c81f02799d235e82e670592608178bc10c3dce",
+    "protocol_sha256": "663b4d62914372cc06a1d4f89519f35efd181e481388ea4716920af6fd96688d",
+    "amendment_sha256": "7283305aeca28af8ba8469ab8c7ab1419dd1bb0068714d12f850ae460ce8bc35",
+    "runner_sha256": "38be4cf7cd512aaeab76d940147021e255224b25ca7440a5b704ea4a545818db",
+    "motion_readiness_sha256": "057282b12258e4a67299d371793989d465d701d301133591ab4e22d19e67c59f",
+    "run_config_sha256": "b31c87c13641d1b52be5fe509583a577e9802b77c77cec1252d31c75a4388f7b",
+    "run_id": "fd91a2d701b2_38be4cf7cd51_b31c87c13641",
+    "motion_asset_records_sha256": "266afee5157c73b12799663aa6edc13e1b497216a12e5339d5f7fd5832027f36",
+    "motion_summary_sha256": "da2d98fb44aa082ba2d21fdaae3e83c2a58fab93d9f46d58e54b264c66ccb48b",
+    "motion_report_sha256": "be8318cf3aed2522479790595e8edbee26145c5c8c4abf047e9ca4716a0371f4"
+  },
+  "superseded_artifacts": [
+    {
+      "state": "SUPERSEDED_SCORER_BUG",
+      "summary_sha256": "61473fd59a05db0cb13066ecac1944940e2cec1c9323ae22f801901581caf748",
+      "reason": "Source-annotation origin metadata was incorrectly used as a fatal native-URDF execution gate."
+    },
+    {
+      "state": "SUPERSEDED_PROVENANCE_HARDENING",
+      "summary_sha256": "c1b1d3f8f0820827ed0876ce58d03db79742d18ac2b3796200672607d555ec0d",
+      "reason": "Pre-content-addressed diagnostic artifact; not publication-authorized."
+    },
+    {
+      "state": "INVALIDATED_DIAGNOSTIC_EXCLUDED",
+      "run_id": "7f6321ba472d_8acc11a9cb1b_c966b6340a5d",
+      "summary_sha256": "99e9a44c40aed1c58aad90429e15c9c3862839622f01f0d8cdd64b8f56d136f7",
+      "reported_outcome": "51 PASS / 49 FAIL / 0 N/E",
+      "reason": "Every retained contact manifold was treated as failure; seven FAIL assets had zero penetration."
+    },
+    {
+      "state": "ABORTED",
+      "run_id": "7f6321ba472d_1971a7a8cf7f",
+      "reason": "Incomplete provenance-hardening run; no publication result."
+    }
+  ],
+  "claim_boundary": "Artiverse is reported as a real-data release/export reference. The motion result is a frozen discrete penetration-free proxy, not a continuous collision certificate and not independent articulation-semantic ground truth."
+}

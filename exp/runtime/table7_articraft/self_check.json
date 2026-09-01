@@ -1,0 +1,271 @@
+{
+  "artifact_hash_scope": "all required outputs except self_check.json to avoid a circular hash",
+  "artifact_hashes": {
+    "asset_records.json": "5ac67edeb044810fa5b51a8d4c3f5acec933f7a844178803cc432070895181fb",
+    "manifest.json": "b027523e2955a07485185f627dcb56eb0e6d9ceb6c3cf7152940ceb7dd6e66c5",
+    "protocol_snapshot.json": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+    "report.md": "e1e4e042077e7ca4e6d598b6717f39b225f62dbdd4ab41299aebde089a6fc64c",
+    "summary.json": "8831cf55fbaeb5e508d97a30fa6bc71e1238441a95b7d7f93d7acfd240d37cf6"
+  },
+  "checks": [
+    {
+      "detail": 143,
+      "name": "manifest_identities_are_unique",
+      "state": "pass"
+    },
+    {
+      "detail": 143,
+      "name": "asset_record_identities_match_manifest_order",
+      "state": "pass"
+    },
+    {
+      "detail": {
+        "available_assets": 143,
+        "geometry_evaluable_assets": 99,
+        "package_evaluable_assets": 143,
+        "recovered_urdfs_promoted_to_strict_success": 0,
+        "requested_assets": 143,
+        "selection_rule": "all records in every ordered frozen task.records list; no outcome-based reselection",
+        "strict_compile_failure_recovered_urdf": 17,
+        "strict_compile_success": 126
+      },
+      "name": "requested_denominator_is_frozen",
+      "state": "pass"
+    },
+    {
+      "detail": {
+        "strict_compile_failure_recovered_urdf": 17,
+        "strict_compile_success": 126
+      },
+      "name": "strict_strata_are_126_plus_17",
+      "state": "pass"
+    },
+    {
+      "detail": 17,
+      "name": "recovered_urdfs_are_never_strict_success",
+      "state": "pass"
+    },
+    {
+      "detail": {
+        "denominator": 143,
+        "evaluable_denominator": 143,
+        "fail": 0,
+        "not_evaluable": 0,
+        "pass": 143,
+        "pass_rate": 1.0
+      },
+      "name": "portable_package_state_partition_conserves_requested_denominator",
+      "state": "pass"
+    },
+    {
+      "detail": {
+        "denominator": 143,
+        "evaluable_denominator": 0,
+        "fail": 0,
+        "not_evaluable": 143,
+        "pass": 0,
+        "pass_rate": null
+      },
+      "name": "deterministic_build_state_partition_conserves_requested_denominator",
+      "state": "pass"
+    },
+    {
+      "detail": {
+        "denominator": 143,
+        "evaluable_denominator": 0,
+        "fail": 0,
+        "not_evaluable": 143,
+        "pass": 0,
+        "pass_rate": null
+      },
+      "name": "semantic_complete_state_partition_conserves_requested_denominator",
+      "state": "pass"
+    },
+    {
+      "detail": {
+        "denominator": 143,
+        "evaluable_denominator": 143,
+        "fail": 0,
+        "gate_pass_counts": {
+          "all_visual_geometry_bearing_parts_named_nonplaceholder": {
+            "denominator": 143,
+            "numerator": 143,
+            "rate": 1.0
+          },
+          "one_rooted_connected_acyclic_hierarchy": {
+            "denominator": 143,
+            "numerator": 143,
+            "rate": 1.0
+          }
+        },
+        "not_evaluable": 0,
+        "pass": 143,
+        "pass_rate": 1.0
+      },
+      "name": "semantic_field_proxy_state_partition_conserves_requested_denominator",
+      "state": "pass"
+    },
+    {
+      "detail": {
+        "denominator": 143,
+        "evaluable_denominator": 143,
+        "fail": 18,
+        "gate_pass_counts": {
+          "explicit_finite_joint_origins": {
+            "denominator": 143,
+            "numerator": 125,
+            "rate": 0.8741258741258742
+          },
+          "movable_one_axis_joint_axes": {
+            "denominator": 143,
+            "numerator": 143,
+            "rate": 1.0
+          },
+          "parent_child_references": {
+            "denominator": 143,
+            "numerator": 143,
+            "rate": 1.0
+          },
+          "recognized_joint_types": {
+            "denominator": 143,
+            "numerator": 143,
+            "rate": 1.0
+          },
+          "revolute_prismatic_limits": {
+            "denominator": 143,
+            "numerator": 143,
+            "rate": 1.0
+          }
+        },
+        "not_evaluable": 0,
+        "pass": 125,
+        "pass_rate": 0.8741258741258742
+      },
+      "name": "kinematic_complete_state_partition_conserves_requested_denominator",
+      "state": "pass"
+    },
+    {
+      "detail": {
+        "denominator": 143,
+        "evaluable_denominator": 143,
+        "fail": 143,
+        "gate_pass_counts": {
+          "movable_joints_have_native_damping_and_friction": {
+            "denominator": 143,
+            "numerator": 2,
+            "rate": 0.013986013986013986
+          },
+          "native_contact_material_or_friction_metadata": {
+            "denominator": 143,
+            "numerator": 0,
+            "rate": 0.0
+          },
+          "physical_links_have_positive_definite_native_inertia": {
+            "denominator": 143,
+            "numerator": 58,
+            "rate": 0.40559440559440557
+          },
+          "physical_links_have_positive_native_mass": {
+            "denominator": 143,
+            "numerator": 58,
+            "rate": 0.40559440559440557
+          },
+          "visual_links_have_native_collision": {
+            "denominator": 143,
+            "numerator": 143,
+            "rate": 1.0
+          }
+        },
+        "not_evaluable": 0,
+        "pass": 0,
+        "pass_rate": 0.0
+      },
+      "name": "physical_complete_state_partition_conserves_requested_denominator",
+      "state": "pass"
+    },
+    {
+      "detail": {
+        "denominator": 143,
+        "numerator": 99,
+        "rate": 0.6923076923076923
+      },
+      "name": "geometry_denominators_are_explicit",
+      "state": "pass"
+    },
+    {
+      "detail": {
+        "denominator": 143,
+        "numerator": 143,
+        "rate": 1.0
+      },
+      "name": "all_frozen_source_hashes_match",
+      "state": "pass"
+    },
+    {
+      "detail": {
+        "denominator": 143,
+        "numerator": 143,
+        "rate": 1.0
+      },
+      "name": "all_table6_urdf_hashes_match",
+      "state": "pass"
+    },
+    {
+      "detail": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+      "name": "protocol_snapshot_hash_matches_frozen_source",
+      "state": "pass"
+    },
+    {
+      "detail": "nano3d_table7_production_readiness_v1",
+      "name": "protocol_id_matches_snapshot",
+      "state": "pass"
+    },
+    {
+      "detail": [
+        "exp/runtime/table7_articraft/protocol_snapshot.json",
+        "exp/runtime/table7_articraft/manifest.json",
+        "exp/runtime/table7_articraft/asset_records.json",
+        "exp/runtime/table7_articraft/summary.json",
+        "exp/runtime/table7_articraft/self_check.json",
+        "exp/runtime/table7_articraft/report.md"
+      ],
+      "name": "all_evidence_paths_are_inside_workspace",
+      "state": "pass"
+    },
+    {
+      "detail": [
+        "exp/runtime/table7_articraft/protocol_snapshot.json",
+        "exp/runtime/table7_articraft/manifest.json",
+        "exp/runtime/table7_articraft/asset_records.json",
+        "exp/runtime/table7_articraft/summary.json",
+        "exp/runtime/table7_articraft/self_check.json",
+        "exp/runtime/table7_articraft/report.md"
+      ],
+      "name": "all_non_circular_evidence_files_exist",
+      "state": "pass"
+    },
+    {
+      "detail": "exp/runtime/table7_articraft/.portable_scratch",
+      "name": "portable_scratch_is_empty",
+      "state": "pass"
+    }
+  ],
+  "input_hashes": {
+    "formal_source_manifest": "exp/runtime/t2_formal_v1/preparation/formal_source_manifest.json",
+    "formal_source_manifest_sha256": "9fea02e938f82d50579a05026fd2a631b9c0da5f473a21556c9996fb1056b1f4",
+    "table6_asset_records": "exp/runtime/table6_articraft_full/asset_records.json",
+    "table6_asset_records_sha256": "eb6945382565b137b96b08b15944c90363a1978cefa9d2f1e95178a5794f7474",
+    "table6_manifest": "exp/runtime/table6_articraft_full/manifest.json",
+    "table6_manifest_sha256": "ee38fd051c9371586352eeb5b192b6c1e5e6d3ad702a679057e2a23f2c593d88"
+  },
+  "required_outputs": [
+    "protocol_snapshot.json",
+    "manifest.json",
+    "asset_records.json",
+    "summary.json",
+    "self_check.json",
+    "report.md"
+  ],
+  "schema_version": "1.0.0",
+  "state": "pass"
+}

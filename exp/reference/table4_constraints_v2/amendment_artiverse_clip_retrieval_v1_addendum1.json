@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "addendum_id": "table4_constraints_v2_artiverse_clip_retrieval_v1_addendum1",
+  "frozen_utc": "2026-08-12T07:43:00Z",
+  "status": "pre_result_frozen",
+  "original_amendment": "exp/reference/table4_constraints_v2/amendment_artiverse_clip_retrieval_v1.json",
+  "original_amendment_sha256": "ded01ce6b663559ea64955d5a69100894d7baacc304579131692accb02042fce",
+  "reason": "Independent blind protocol audit required a fixed batch size, stronger hash closure, a render-only selection snapshot, runtime processor assertions, and two independent full embedding runs. This addendum preserves rather than overwrites the original pre-result amendment.",
+  "implementation": {
+    "snapshot_preflight_script": "exp/scripts/prepare_artiverse_clip_retrieval_snapshot.py",
+    "snapshot_preflight_script_sha256": "70931be6392f26e46226231e87b768bbf22e4125be3811074ca3287a918b98c4",
+    "selector": "exp/scripts/run_artiverse_clip_retrieval_selection.py",
+    "selector_sha256": "ea0ed3ab3185a5614eb988020cc64442ac7318ac98a82b9956887765106fcb2d",
+    "materializer": "exp/scripts/run_artiverse_clip_retrieval_materialize.py",
+    "materializer_sha256": "76e30b5ef3493625aede46bff71e8190b05c0ff8f1157ab93082f9f8901de3b8"
+  },
+  "snapshot_preflight": {
+    "source_release_gate": {
+      "model_roots": 3544,
+      "file_count": 531937,
+      "input_bytes": 86992752890,
+      "symlink_count": 0,
+      "archive_count": 2,
+      "archive_sha256_required": true,
+      "archive_byte_size_required": true
+    },
+    "snapshot_root": "exp/runtime/table4_constraints_v2/artiverse_clip_retrieval_v1_snapshot",
+    "root_entries_exactly": [
+      "candidate_inventory.jsonl",
+      "candidate_summary.json",
+      "model",
+      "prompts.jsonl",
+      "renders",
+      "snapshot.lock.json"
+    ],
+    "contents": "Only the exact frozen prompt manifest, identity-bearing candidate inventory, copied eligible 16-view renders addressed by identity SHA-256, copied pinned CLIP model files, summary, and lock.",
+    "model_directory_exact_file_count": 8,
+    "renders_directory_rule": "The directory-name set must exactly equal the identity SHA-256 set of all and only eligible candidates. Each directory must contain exactly 000.png through 015.png.",
+    "filesystem_policy": "All snapshot files are regular in-workspace copies with source and destination SHA-256 equality; files are chmod 0444 and directories 0555 before the staging directory is atomically renamed.",
+    "is_os_sandbox": false,
+    "isolation_claim": "Workspace-local read-only copies plus code-audited explicit inputs; not an OS sandbox."
+  },
+  "formal_selection": {
+    "candidate_scope": "All snapshot-eligible Artiverse assets; global retrieval without category filtering.",
+    "batch_assets": 8,
+    "views_per_asset": 16,
+    "physical_gpu": 0,
+    "cuda_device_order": "PCI_BUS_ID",
+    "cuda_visible_devices": "0",
+    "inference_dtype": "float32_without_amp",
+    "aggregation_and_similarity_dtype": "float64",
+    "full_embedding_runs": 2,
+    "fresh_model_instance_per_run": true,
+    "full_replay_requirement": "Both complete image embedding matrices, both complete prompt embedding matrices, all tokenization/index metadata, and both top-1 JSONL manifests must be byte-identical/equal. This is a full embedding replay, not only an ordering replay.",
+    "selection_tie_break": "Descending exact float64 dot-product score, then ascending identity SHA-256, then ascending identity path. No epsilon window.",
+    "repair_attempts": 0,
+    "rank_fallbacks": 0
+  },
+  "runtime_fail_closed": {
+    "python": "3.13.2",
+    "numpy": "2.4.4",
+    "torch": "2.6.0+cu124",
+    "transformers": "5.12.0",
+    "pillow": "12.3.0",
+    "processor_assertions": [
+      "resize shortest edge 224",
+      "center crop 224 by 224",
+      "bicubic resample enum 3",
+      "CLIP image mean and standard deviation",
+      "RGB conversion, resize, crop, and normalization enabled",
+      "tokenizer length 77 and right truncation/padding",
+      "CLIP BOS, EOS, and PAD token ids",
+      "projection dimension 512",
+      "vision image size 224 and patch size 32",
+      "text maximum positions 77"
+    ]
+  },
+  "independent_pre_result_audit_gate": {
+    "formal_output_preexists_with_exact_files": [
+      "protocol_audit_pre_result.json",
+      "report.md"
+    ],
+    "verdict": "PASS",
+    "protocol_ready": true,
+    "required_bindings": [
+      "original amendment SHA-256",
+      "this addendum SHA-256",
+      "snapshot preflight script SHA-256",
+      "selector SHA-256",
+      "materializer SHA-256",
+      "formal batch size 8",
+      "audit report SHA-256"
+    ],
+    "preservation": "The selector preserves both audit files. The final experiment report is result_report.md, so the pre-result report.md is never overwritten."
+  },
+  "materialization_closure": {
+    "requirements": [
+      "Recompute and verify every selection lock file hash.",
+      "Verify original amendment, addendum, snapshot builder, selector, and materializer bindings.",
+      "Verify the two archive records, full extracted-data counts, snapshot root closure, candidate/eligible/index counts, and exact prompt task set.",
+      "Verify both locked asset and prompt embedding matrices are exactly equal across the two runs, finite, unit normalized, and have frozen shapes.",
+      "Recompute every 18 by N float64 similarity score and deterministic global top-1 with the frozen tie break before opening geometry.",
+      "Only then open the unique selected segmented GLB; use unit scale 1.0, repair 0, and no rank fallback."
+    ],
+    "score_replays": "Run the frozen structured/count-proxy scorer twice and the frozen numeric scorer twice, requiring byte-identical outputs, then run the frozen integrity verifier.",
+    "report_semantics": "Artiverse prompt-only CLIP retrieval is a fixed-dataset reference/retrieval control, not same-prompt generation and not an Artiverse generative method. Numeric pass is the primary constraint metric; named-node exact-count is supplementary proxy only."
+  }
+}

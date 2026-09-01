@@ -1,0 +1,22 @@
+{
+  "protocol_id": "nano3d_table2_naming_semantic_blind_tiebreak_v1",
+  "frozen_at_utc": "2026-08-11T07:40:00Z",
+  "parent_rereview_protocol": {
+    "path": "exp/reference/table2_naming_semantic_adjudication_v1.json",
+    "sha256": "46f84e8f250311e12902bc2245b5e427e279692e099852a03c795bcd4fb0a7f8"
+  },
+  "trigger": "A metric-required field still has no exact two-of-three majority after the independent blind field-only re-review.",
+  "selection": "Select anonymous item IDs and unresolved field names without joining the method/source audit.",
+  "adjudicator": {
+    "count": 1,
+    "type": "a fresh isolated Codex judge session that did not participate in round one or re-review",
+    "method_identity_hidden": true,
+    "all_prior_votes_hidden": true,
+    "prior_consensus_hidden": true,
+    "inputs": "Same frozen gold, anonymous task, node name, highlighted preview, and within-asset anonymous node list.",
+    "output": "One final value only for each unresolved field plus a concise reason."
+  },
+  "replacement": "The blind adjudicator value resolves only the still-unresolved field. It cannot change any first-round or re-review consensus field.",
+  "failure_policy": "If the adjudicator leaves an invalid or missing value, the dependent metric remains null.",
+  "required_disclosure": "Report the adjudicated item and asset counts, fraction of the full task set, field names, adjudicator type, and the fact that it is a single blind tie-break rather than a fourth vote over every task."
+}

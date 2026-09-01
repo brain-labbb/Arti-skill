@@ -1,0 +1,129 @@
+{
+  "classification": "SMOKE",
+  "cohort": {
+    "j_eval": 5,
+    "n_eval": 3,
+    "ordered_ids_sha256": "118038a746cafb91251afde5eb4f1164915d141acb3b529ea721a9d376bde3fa",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_artiverse_table1_n800_20260814/frozen_manifest.json",
+    "source_manifest_sha256": "0e69335a3d1574a1e1510124ade6e743cfd66fe894c1da3816b072954c75aedb"
+  },
+  "completed_at_utc": "2026-08-19T15:27:57.518149Z",
+  "dataset": "Artiverse",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "55229742e10a304b8d4915c370005949fdeda95b64e139ccb90b0facf5243e8f",
+  "metrics": {
+    "collision_safe_dof_retention": {
+      "denominator": 3875,
+      "numerator": 4,
+      "percent": 0.1032
+    },
+    "dof_bins": {
+      "0": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      },
+      "1": {
+        "joints_intended": 2,
+        "joints_passed": 1,
+        "n_eval": 2,
+        "safe": 1,
+        "strict_pass": 2
+      },
+      "2--3": {
+        "joints_intended": 3,
+        "joints_passed": 3,
+        "n_eval": 1,
+        "safe": 3,
+        "strict_pass": 0
+      },
+      "4--7": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      },
+      ">=8": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      },
+      "unknown/unparseable": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      }
+    },
+    "executable_cf_dof_per_asset": {
+      "mean": 1.3333,
+      "median": 1.0,
+      "n_assets": 3,
+      "p90": 2.6,
+      "total_safe_dof": 4
+    },
+    "joint_level_full_range_cf": {
+      "denominator": 5,
+      "numerator": 4,
+      "percent": 80.0
+    },
+    "limit_reachability": {
+      "continuous_excluded": 0,
+      "denominator": 5,
+      "numerator": 4,
+      "percent": 80.0
+    },
+    "normalized_clearance_p5": {
+      "asset_coverage": {
+        "denominator": 3,
+        "numerator": 2,
+        "percent": 66.6667
+      },
+      "coverage_status": "PARTIAL",
+      "reason": "genesis_contact_penetration_has_no_signed_clearance_no_independent_exact_distance_backend_registered",
+      "state_coverage": {
+        "denominator": 105,
+        "numerator": 84,
+        "percent": 80.0
+      },
+      "status": "N/E"
+    },
+    "state_counts": {
+      "executed": 84,
+      "hash_cross_check": {
+        "mismatch": 0,
+        "no_reference": 0,
+        "verified": 84
+      },
+      "intended": 105
+    },
+    "status_counts": {
+      "completed": 2,
+      "error": 1,
+      "total": 3
+    }
+  },
+  "mode": "smoke",
+  "notes": [
+    "Joint-level Full-range CF reuses the exact frozen Table 4 single-joint sweep states (K=21, endpoints included, other joints q=0); per-state q-vector hashes are cross-checked against Table 4 state_records where available.",
+    "State collision oracle = Genesis contact-penetration backend (genesis_contact_penetration_v1), direct kinematic detection only, illegal iff eligible-pair penetration > 1e-6 m.",
+    "Headline pair policy = distinct source links excluding direct parent-child; no method-specific allowance.",
+    "Normalized Clearance P5 is N/E under this oracle (no signed clearance for separated pairs; no independent exact-distance backend registered).",
+    "Existing Strict Collision Pass values in DoF bins are historical Table 4 (PyBullet) results reported alongside, not re-executed."
+  ],
+  "protocol_id": "table4a_artiverse_table1cohort_n800_seed20260813_v1",
+  "run_directory": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4a_urdf_artiverse_smoke_n3_20260819T145245Z",
+  "started_at_utc": "2026-08-19T14:52:47.701198Z",
+  "status_counts": {
+    "completed": 2,
+    "error": 1,
+    "total": 3
+  },
+  "wall_seconds": 2109.769
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "contract_id": "articraft_editability_urdf_semantic_v2",
+  "algorithm_version": "urdf_semantic_v2",
+  "pass_conjunction": [
+    "compile",
+    "target_fulfilled",
+    "anchor_preserved",
+    "non_target_preserved",
+    "structural_locality",
+    "geometry_locality",
+    "scale_if_applicable"
+  ],
+  "source_predicates": "auxiliary_only_never_decide_pass",
+  "visual_signature": [
+    "primitive",
+    "primitive_parameters",
+    "mesh_content_sha256",
+    "material_name_color_texture",
+    "local_bounds",
+    "local_extents",
+    "local_origin_xyz_rpy"
+  ],
+  "joint_signature": [
+    "type",
+    "parent",
+    "child",
+    "axis",
+    "lower_limit",
+    "upper_limit"
+  ],
+  "joint_origin_policy": "excluded_only_to_allow_preregistered_target_interface_refits",
+  "semantic_rule_tables_sha256": "42ad5740063574c492f3fdc80d85324b67fdb66f1f2cdc7512d7c9d19e13f1e9",
+  "scale_gates": {
+    "S01": "basket_tub local height ratio >=1.25; major horizontal ratio in [0.90,1.00]; minor horizontal ratio <=0.85",
+    "S02": "bucket local height ratio >=1.25; max horizontal diameter ratio <=0.85; child height/max-diameter >=1.25",
+    "S03": "center_top local narrow ratio <=0.70; each leaf wood_panel local reach ratio >=1.08; leaf-ratio absolute difference <=0.02",
+    "S04": "chassis compiled Z ratio >=1.15; X and Y ratios each in [0.95,1.05]",
+    "S05": "lower_shell and lid_shell local Z ratios each >=1.50; each local X and Y ratio in [0.90,1.10]",
+    "S06": "target frontmost positive longitudinal coordinate ratio >=1.20; chassis_tray front-side local Z-extent ratio <=0.70"
+  },
+  "historical_gold_gate": "All 18 direct-child historical gold records compile and pass this identical contract before fresh execution."
+}

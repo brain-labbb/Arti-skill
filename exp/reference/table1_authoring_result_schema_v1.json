@@ -1,0 +1,776 @@
+{
+  "$id": "https://nano3d.local/schemas/table1_authoring_result_v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "One method/task/repeat result under the frozen Nano3D Table 1 common authoring protocol. Hidden specifications are represented only by hashes and evaluator outcomes.",
+  "properties": {
+    "attempts": {
+      "items": {
+        "$ref": "#/$defs/attempt"
+      },
+      "maxItems": 4,
+      "minItems": 1,
+      "type": "array"
+    },
+    "bindings": {
+      "$ref": "#/$defs/bindings"
+    },
+    "error": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/error"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "finished_at_utc": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "method_id": {
+      "enum": [
+        "pva",
+        "lam",
+        "articraft"
+      ]
+    },
+    "protocol_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "repeat_id": {
+      "enum": [
+        "r0",
+        "r1",
+        "r2"
+      ]
+    },
+    "run_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "table1_authoring_result_v1"
+    },
+    "started_at_utc": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "completed",
+        "failed",
+        "aborted"
+      ]
+    },
+    "summary": {
+      "$ref": "#/$defs/summary"
+    },
+    "task_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "protocol_id",
+    "bindings",
+    "run_id",
+    "method_id",
+    "task_id",
+    "repeat_id",
+    "status",
+    "started_at_utc",
+    "finished_at_utc",
+    "attempts",
+    "summary",
+    "error"
+  ],
+  "title": "Nano3D Table 1 common authoring result v1",
+  "type": "object",
+  "$defs": {
+    "attempt": {
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "attempt_index": {
+                "const": 0
+              }
+            },
+            "required": [
+              "attempt_index"
+            ]
+          },
+          "then": {
+            "properties": {
+              "attempt_kind": {
+                "const": "attempt_0"
+              },
+              "repair_feedback_sha256": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "attempt_index": {
+                "minimum": 1
+              }
+            },
+            "required": [
+              "attempt_index"
+            ]
+          },
+          "then": {
+            "properties": {
+              "attempt_kind": {
+                "const": "common_repair"
+              },
+              "repair_feedback_sha256": {
+                "$ref": "#/$defs/sha256"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {
+        "attempt_index": {
+          "maximum": 3,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "attempt_kind": {
+          "enum": [
+            "attempt_0",
+            "common_repair"
+          ]
+        },
+        "evaluation": {
+          "$ref": "#/$defs/evaluation"
+        },
+        "execution_completed_at_utc": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "execution_started_at_utc": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "failure_class": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "response_completed_at_utc": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "model_response_sha256": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/sha256"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "method_id": {
+          "enum": [
+            "pva",
+            "lam",
+            "articraft"
+          ]
+        },
+        "native_retry_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "native_retry_index": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "output": {
+          "$ref": "#/$defs/output"
+        },
+        "repair_feedback_sha256": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/sha256"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "repeat_id": {
+          "enum": [
+            "r0",
+            "r1",
+            "r2"
+          ]
+        },
+        "request_started_at_utc": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "telemetry": {
+          "$ref": "#/$defs/telemetry"
+        },
+        "task_id": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "attempt_index",
+        "attempt_kind",
+        "method_id",
+        "task_id",
+        "repeat_id",
+        "native_retry_count",
+        "native_retry_index",
+        "request_started_at_utc",
+        "response_completed_at_utc",
+        "execution_started_at_utc",
+        "execution_completed_at_utc",
+        "failure_class",
+        "model_response_sha256",
+        "repair_feedback_sha256",
+        "output",
+        "evaluation",
+        "telemetry"
+      ],
+      "type": "object"
+    },
+    "bindings": {
+      "additionalProperties": false,
+      "properties": {
+        "adapter_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "common_evaluator_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "hidden_specs_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "manifest_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "package_schema_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "protocol_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "result_schema_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "protocol_sha256",
+        "manifest_sha256",
+        "hidden_specs_sha256",
+        "package_schema_sha256",
+        "result_schema_sha256",
+        "common_evaluator_sha256",
+        "adapter_sha256"
+      ],
+      "type": "object"
+    },
+    "error": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "message": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ],
+      "type": "object"
+    },
+    "evaluation": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_saved": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "common_evaluator_report_path": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/relativePath"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "common_evaluator_report_sha256": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/sha256"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "common_qc_pass": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "executable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "input_bindings_pass": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "joint_spec_pass": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "state": {
+          "enum": [
+            "observed",
+            "not_reported",
+            "not_evaluable",
+            "not_applicable"
+          ]
+        },
+        "semantic_roles_pass": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "urdf_tree_pass": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "state",
+        "executable",
+        "artifact_saved",
+        "common_qc_pass",
+        "urdf_tree_pass",
+        "semantic_roles_pass",
+        "joint_spec_pass",
+        "input_bindings_pass",
+        "common_evaluator_report_path",
+        "common_evaluator_report_sha256",
+        "reason"
+      ],
+      "type": "object"
+    },
+    "output": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_path": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/relativePath"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artifact_sha256": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/sha256"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "template_path": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/relativePath"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "template_sha256": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/sha256"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "template_path",
+        "template_sha256",
+        "artifact_path",
+        "artifact_sha256"
+      ],
+      "type": "object"
+    },
+    "relativePath": {
+      "minLength": 1,
+      "not": {
+        "pattern": "^(?:/|[A-Za-z]:[\\\\/])"
+      },
+      "type": "string"
+    },
+    "sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "summary": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_saved": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "executable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "final_success": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "first_shot": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "repair_turns": {
+          "anyOf": [
+            {
+              "maximum": 3,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "state": {
+          "enum": [
+            "observed",
+            "not_reported",
+            "not_evaluable",
+            "not_applicable"
+          ]
+        }
+      },
+      "required": [
+        "state",
+        "executable",
+        "artifact_saved",
+        "first_shot",
+        "final_success",
+        "repair_turns",
+        "reason"
+      ],
+      "type": "object"
+    },
+    "telemetry": {
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "input_tokens": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "input_tokens"
+            ]
+          },
+          "then": {
+            "properties": {
+              "missing_reasons": {
+                "properties": {
+                  "input_tokens": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "missing_reasons": {
+                "properties": {
+                  "input_tokens": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "output_tokens": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "output_tokens"
+            ]
+          },
+          "then": {
+            "properties": {
+              "missing_reasons": {
+                "properties": {
+                  "output_tokens": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "missing_reasons": {
+                "properties": {
+                  "output_tokens": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "provider_request_id_hash": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "provider_request_id_hash"
+            ]
+          },
+          "then": {
+            "properties": {
+              "missing_reasons": {
+                "properties": {
+                  "provider_request_id_hash": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "missing_reasons": {
+                "properties": {
+                  "provider_request_id_hash": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "api_cost_usd": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "api_cost_usd"
+            ]
+          },
+          "then": {
+            "properties": {
+              "missing_reasons": {
+                "properties": {
+                  "api_cost_usd": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "missing_reasons": {
+                "properties": {
+                  "api_cost_usd": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "properties": {
+        "api_cost_usd": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "input_tokens": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "missing_reasons": {
+          "additionalProperties": false,
+          "properties": {
+            "api_cost_usd": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "input_tokens": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "output_tokens": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "provider_request_id_hash": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "input_tokens",
+            "output_tokens",
+            "provider_request_id_hash",
+            "api_cost_usd"
+          ],
+          "type": "object"
+        },
+        "output_tokens": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provider_request_id_hash": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/sha256"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "wall_time_seconds": {
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "wall_time_seconds",
+        "input_tokens",
+        "output_tokens",
+        "provider_request_id_hash",
+        "api_cost_usd",
+        "missing_reasons"
+      ],
+      "type": "object"
+    }
+  }
+}

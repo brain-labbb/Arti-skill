@@ -1,0 +1,47 @@
+{
+  "classification": "SMOKE",
+  "cohort": {
+    "n_eval": 3,
+    "ordered_ids_sha256": "b5c9262eca8e65ede90c597a16e4ed2b0d7348b4eeb326cd64a06cea518c4178",
+    "selection_policy": "all 2,655 frozen per-class N=5 Table 4 items in existing order; no resampling, replacement, or result filtering",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z/frozen_manifest.json",
+    "source_manifest_sha256": "c23d92a582ac7d8d122d6c34d17d2f057dd4a309aa696414b71387debce13f35"
+  },
+  "dataset": "Ours per-class N=5 (supplementary)",
+  "execution": {
+    "child_interpreter": "/mnt/zsn/miniconda3/envs/genesis-main/bin/python3.12",
+    "child_timeout_seconds": 900,
+    "denominator_policy": "all frozen assets including failures and unmeasured items",
+    "process_isolation": "one fresh interpreter process per asset",
+    "workers": 3
+  },
+  "frozen_at_utc": "2026-08-24T06:40:08.713017Z",
+  "geometry_parameters": {
+    "collision_load_time_backend": "trimesh.Trimesh(process=False).triangles_tree+rtree",
+    "collision_load_time_cache_mode": "same_asset_one_unmeasured_warmup_then_warm_cache",
+    "collision_load_time_repeats": "one unmeasured warmup + five measured repeats, geometry rebuilt per repeat",
+    "collision_load_time_threads": "native thread count pinned to 1 via threadpoolctl",
+    "d_visual_definition": "q0_loadable_visual_union_aabb_diagonal_v1",
+    "exact_surface_backend": "trimesh.proximity.ProximityQuery.on_surface + rtree (no Genesis SDF substitute)",
+    "samples_per_direction": 32768,
+    "weld_relative_tolerance": 1e-09
+  },
+  "geometry_protocol_id": "lam_supplementary_geometry_v1",
+  "mode": "smoke",
+  "protocol_document_sha256": "b05a4edbe61037f2dc4bc1bc1580e66f13f852fc24a3b979e130e8a7aa30ef00",
+  "protocol_id": "table4b-ours-pva-per-class-n5-max-joints-v1",
+  "runner_identity": {
+    "geometry_module": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_geometry.py",
+    "geometry_module_sha256": "65d2641619b0429a37eb3a578b97ab7c0d5f298d84464842d16afcf3a13bd1b9",
+    "runner_script": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4b_ours_pva_per_class_n5.py",
+    "runner_script_sha256": "a77f5aca19fb931a216d2b0dab226c47650d833df4dea2490e32f505c57eddbb"
+  },
+  "smoke_receipt": null,
+  "source_snapshots": {
+    "adapter.py": "a77f5aca19fb931a216d2b0dab226c47650d833df4dea2490e32f505c57eddbb",
+    "base_runner.py": "c854f852daba27e2956fada9c74186f41cadbe985ada2994739d43b02a4cd15e",
+    "cohort_manifest.json": "e78f4b767023f8a5c1517d96bfab35a39482d6eee28238820a9b91ac3ea8d293",
+    "geometry.py": "65d2641619b0429a37eb3a578b97ab7c0d5f298d84464842d16afcf3a13bd1b9",
+    "source_table4_manifest.json": "c23d92a582ac7d8d122d6c34d17d2f057dd4a309aa696414b71387debce13f35"
+  }
+}

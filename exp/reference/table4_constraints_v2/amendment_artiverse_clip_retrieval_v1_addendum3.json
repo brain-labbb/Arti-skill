@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "addendum_id": "table4_constraints_v2_artiverse_clip_retrieval_v1_addendum3",
+  "frozen_utc": "2026-08-12T07:04:37Z",
+  "frozen_utc_evidence": "Direct output of `date -u +%Y-%m-%dT%H:%M:%SZ` immediately before this append-only file was written.",
+  "status": "pre_result_frozen",
+  "original_amendment_sha256": "ded01ce6b663559ea64955d5a69100894d7baacc304579131692accb02042fce",
+  "previous_addendum": "exp/reference/table4_constraints_v2/amendment_artiverse_clip_retrieval_v1_addendum2.json",
+  "previous_addendum_sha256": "0e85e30b456b85ddd06df56099458e1fe4e65a2f0b6ef426bd9a60ca0717d76c",
+  "prior_chain": [
+    {
+      "path": "exp/reference/table4_constraints_v2/amendment_artiverse_clip_retrieval_v1.json",
+      "sha256": "ded01ce6b663559ea64955d5a69100894d7baacc304579131692accb02042fce"
+    },
+    {
+      "path": "exp/reference/table4_constraints_v2/amendment_artiverse_clip_retrieval_v1_addendum1.json",
+      "sha256": "0bcc779eabac90efbfa0f7df0926b650d349951081d531d561d3d807d184a46f"
+    },
+    {
+      "path": "exp/reference/table4_constraints_v2/amendment_artiverse_clip_retrieval_v1_addendum2.json",
+      "sha256": "0e85e30b456b85ddd06df56099458e1fe4e65a2f0b6ef426bd9a60ca0717d76c"
+    }
+  ],
+  "timestamp_correction": {
+    "finding": "Addendum 1 recorded frozen_utc 2026-08-12T07:43:00Z and Addendum 2 recorded frozen_utc 2026-08-12T08:03:00Z, both later than the independently observed host UTC at discovery.",
+    "interpretation": "Those two values were record-generation timestamp mistakes and are not truthful pre-result freeze times. They must not be used as evidence of when the protocol was frozen.",
+    "correction": "This Addendum 3 is the first effective time-provenance freeze in this chain. It preserves the prior files as immutable history and supersedes only their frozen_utc provenance claims.",
+    "scientific_rules_changed": false
+  },
+  "invalidated_attempt": {
+    "status": "protocol_invalid_future_timestamp",
+    "record": "exp/runtime/table4_constraints_v2/artiverse_clip_retrieval_v1_invalid_future_timestamp/attempt.json",
+    "record_sha256": "2b56df0eeed1660328a16efd8a189d9b6fbc9c87f61329eb4947b4ab8de2b444",
+    "builder_started": true,
+    "builder_stage_at_interrupt": "full_data_gate complete extracted-tree scan",
+    "builder_exit_code": 1,
+    "builder_exception": "KeyboardInterrupt",
+    "snapshot_absent_after_interrupt": true,
+    "snapshot_staging_absent_after_interrupt": true,
+    "selector_started": false,
+    "materializer_started": false,
+    "selection_rows": 0,
+    "scientific_results": 0,
+    "reuse_forbidden": true
+  },
+  "implementation": {
+    "snapshot_preflight_script": "exp/scripts/prepare_artiverse_clip_retrieval_snapshot.py",
+    "snapshot_preflight_script_sha256": "a5bd9d8e531389eda6aa2e58d9ee4b9fd1775678cdd96aba1e9b20a3732815e9",
+    "selector": "exp/scripts/run_artiverse_clip_retrieval_selection.py",
+    "selector_sha256": "5248cf927777e6bb6862713a5d7e854c9b4f193742963d870ccf384ab3448db5",
+    "materializer": "exp/scripts/run_artiverse_clip_retrieval_materialize.py",
+    "materializer_sha256": "2b2e8c3e53e81dadda6976e309c33a67c1396305d89ce082201384a401969c9e"
+  },
+  "formal_selection": {
+    "batch_assets": 8,
+    "full_embedding_runs": 2,
+    "fresh_model_instance_per_run": true,
+    "repair_attempts": 0,
+    "rank_fallbacks": 0,
+    "new_formal_cohort_required": true,
+    "repeat_all_source_gates_from_scratch": true
+  },
+  "inheritance": {
+    "effective_protocol": [
+      "amendment_artiverse_clip_retrieval_v1.json",
+      "amendment_artiverse_clip_retrieval_v1_addendum1.json",
+      "amendment_artiverse_clip_retrieval_v1_addendum2.json",
+      "amendment_artiverse_clip_retrieval_v1_addendum3.json"
+    ],
+    "unchanged": [
+      "all frozen prompts and candidate eligibility rules",
+      "render-only snapshot exact closure",
+      "CLIP model, revision, processor, aggregation, and global top-1 tie break",
+      "two independent full embedding runs",
+      "single-thread numerical environment",
+      "pre-result independent audit gate",
+      "materialization, repair-zero, no-rank-fallback, double-scoring, and interpretation rules"
+    ]
+  }
+}

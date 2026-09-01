@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "protocol_id": "nano3d_table5_naive_same_llm_source_edit_v1",
+  "baseline": "naive_same_llm",
+  "purpose": "One-shot source edit without Articraft system documentation, tools, compiler feedback, or automatic repair.",
+  "frozen_runtime": {
+    "provider": "dashscope",
+    "model_id": "qwen3.7-max-2026-05-20",
+    "thinking_level": "high",
+    "native_articraft_max_turns_reference": 30,
+    "max_turns": 1,
+    "provider_request_limit": 1,
+    "context_window_tokens": 1000000,
+    "max_output_tokens": 65536,
+    "output_safety_tokens": 1024,
+    "max_cost_usd": null,
+    "tools": [],
+    "automatic_retries": 0,
+    "compile_feedback": false,
+    "automatic_repair": false,
+    "source_truncation": false
+  },
+  "pricing_snapshot": {
+    "currency": "CNY",
+    "unit": "per_1m_tokens",
+    "uncached_input": 12.0,
+    "cached_input": 2.4,
+    "output": 36.0,
+    "retrieved_at": "2026-08-11",
+    "source_note": "Official qwen3.7-max pricing page; frozen by the experiment owner.",
+    "usd_conversion": null
+  },
+  "system_prompt": "You are a one-shot source-code editor. You receive an original object prompt, one edit instruction, and the complete parent model.py. Return exactly one complete replacement model.py inside a single fenced Python code block. Preserve all behavior not required by the edit. Do not return a patch, diff, excerpt, ellipsis, placeholder, explanation, or additional prose. Do not assume access to Articraft documentation, examples, tools, a compiler, runtime feedback, or a repair turn. Use only APIs and imports already demonstrated by the parent source.",
+  "user_message_sections": [
+    "original_object_prompt",
+    "edit_instruction",
+    "parent_model_sha256",
+    "parent_model_utf8_bytes",
+    "complete_parent_model_py"
+  ],
+  "output_contract": {
+    "format": "exactly_one_python_fence",
+    "complete_file_required": true,
+    "text_outside_fence_allowed": false,
+    "tool_calls_allowed": false,
+    "continuation_allowed": false,
+    "syntax_check_after_response": true,
+    "syntax_error_feedback_to_model": false,
+    "compile_after_response_in_this_runner": false
+  },
+  "long_source_policy": {
+    "include_parent_source_verbatim": true,
+    "summarization_allowed": false,
+    "chunking_allowed": false,
+    "truncation_allowed": false,
+    "preflight_gate": "The exact provider preview must contain the full rendered source and preserve max_tokens=65536. If the adapter reduces the output allowance because of context pressure, the task is BLOCKED_CONTEXT before any API call.",
+    "provider_truncation_policy": "A length/max_tokens finish, output at the frozen token cap, malformed single-fence response, or incomplete Python is recorded as OUTPUT_TRUNCATED_OR_INVALID. There is no continuation or repair request."
+  },
+  "manifest_contract": {
+    "required_task_count": 18,
+    "task_id_policy": "Exactly 18 unique, non-empty IDs supplied by the frozen manifest; no task semantics or old E001-E018 mapping is hard-coded in the runner.",
+    "edit_class_distribution": "Exactly three manifest-declared edit classes with six tasks per class.",
+    "required_task_fields": [
+      "task_id",
+      "parent_record_id",
+      "parent_model_path",
+      "parent_model_sha256",
+      "original_object_prompt",
+      "normalized_edit_instruction",
+      "edit_class",
+      "gold"
+    ],
+    "required_top_level_fields": [
+      "schema_version",
+      "protocol_id",
+      "prompt_contract_sha256",
+      "settings",
+      "pricing_snapshot",
+      "cohort_distribution",
+      "tasks"
+    ]
+  }
+}

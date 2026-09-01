@@ -1,0 +1,235 @@
+{
+  "classification": "NON_FORMAL_SMOKE",
+  "created_at": "2026-08-24T03:05:56Z",
+  "dataset": "PV-A-per-class-n5-max-joints",
+  "evaluation": {
+    "adapter_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table3_pva_manifest.py",
+    "adapter_sha256": "61046d41513ee385a8ff1b3cc08a41ee68e707ac9418b0250f38dfec5ad653af",
+    "config": {
+      "asset_timeout_seconds": 30.0,
+      "continuous_interval": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "continuous_non_degenerate_policy": "maximum_excursion_from_q0_over_frozen_interval",
+      "protocol_id": "urdf-sim-ready-table3-pva-per-class-n5-max-joints-v1",
+      "q0_policy": "zero_clipped_to_declared_interval",
+      "rotation_motion_threshold_rad": 1e-06,
+      "roundtrip_rotation_tolerance_rad": 1e-09,
+      "roundtrip_translation_tolerance_bbox_diagonal": 1e-09,
+      "samples_per_joint": 21,
+      "strict_asset_requires_at_least_one_declared_movable_joint": true,
+      "translation_motion_threshold_bbox_diagonal": 1e-06,
+      "unchanged_rotation_tolerance_rad": 1e-09,
+      "unchanged_translation_tolerance_bbox_diagonal": 1e-09,
+      "workers": 1
+    },
+    "config_sha256": "0d65859b27c48bc095917d88817bb924a88a075b8ff28c22671f9e126bbf29d1",
+    "core_evaluator_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table3_lam.py",
+    "core_evaluator_sha256": "0da075f077ce13c78bb6b4ee66b0abe77668ccf7bb3c105660b321e667fc2acf",
+    "environment": {
+      "numpy": "2.5.1",
+      "platform": "Linux-5.10.134-19.103.al8.x86_64-x86_64-with-glibc2.39",
+      "python": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+      "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+      "thread_environment": {
+        "MKL_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null
+      }
+    },
+    "environment_sha256": "f6fb6d6e26ba5105e40ffade559d47b5b990ef8cf14a6c4f5e7b7e43661fbf5e",
+    "protocol_path": "/mnt/zsn/lyb/arti-skill/exp/URDF-Sim-Ready-Automatic-Evaluation.md",
+    "protocol_sha256": "1df5a2e163fda131bc3f0c9addf67620385dc4478abf140974fdb4c7def4475a",
+    "shared_ours_runner_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table3_ours_500k.py",
+    "shared_ours_runner_sha256": "3f161d907eaf7c8311585fc01b7abd2f299756db294a19a8585e4cee3574c7c8"
+  },
+  "manifest_content_sha256": "ace5d043aa38e64437ed9415e3452f3840330e63a1f908c96995d49f4dbc64f4",
+  "records": [
+    {
+      "asset_id": "PV-A/Accessories_Cushion/seed_0021",
+      "asset_key": "PV-A/Accessories_Cushion/seed_0021",
+      "category": "Accessories_Cushion",
+      "dataset_id": "PV-A/Accessories_Cushion/seed_0021",
+      "declared_joint_count_hint": 1,
+      "package": "/mnt/zsn/lyb/arti-skill/exp/PV-A-per-class-n5/assets/Accessories_Cushion/seed_0021",
+      "package_binding": {
+        "content_manifest_sha256": "4a828326dcd516bd5a051205a3237a20ae16202688857673b6c88f755893528d",
+        "file_count": 9,
+        "files": [
+          {
+            "bytes": 118597,
+            "path": "appearance.json",
+            "sha256": "c65dc2140e1f9f23606e79fa065ab418e2ee3e15dd990b9801cc1145028e675b"
+          },
+          {
+            "bytes": 11861,
+            "path": "model.urdf",
+            "sha256": "df9d68cf7b73a72ad33a8b4999adbdd586dc2f0d0529644fa6ddc9d538b8d97a"
+          },
+          {
+            "bytes": 11295,
+            "path": "physics.json",
+            "sha256": "4de870ecc4caa181cf968039670ee4d6c1fef8ea53f5e01703bc7e91ef0cef98"
+          },
+          {
+            "bytes": 47295,
+            "path": "assets/meshes/compact_base.obj",
+            "sha256": "d2ccbb13eb8e3bd6ce4e5ec5f9cb5abe81dd44037275210f425b1a67755e8281"
+          },
+          {
+            "bytes": 23623,
+            "path": "assets/meshes/lid_black_edge.obj",
+            "sha256": "05f8f4b4f2b47ea114f63e9088ef36324bfa2506ec0a0b00d7f74e479da723df"
+          },
+          {
+            "bytes": 23596,
+            "path": "assets/meshes/lid_white_top.obj",
+            "sha256": "4b4b07669a059089b968b3f48a912259477fc98d63acc3ac301ee8ea9721ccb4"
+          },
+          {
+            "bytes": 27042,
+            "path": "assets/meshes/logo_ring_0.obj",
+            "sha256": "a9a27f9ec3c93e8c2d24d479ff03d925d94c5ee47a9a9a605a2dac66a53e3942"
+          },
+          {
+            "bytes": 27042,
+            "path": "assets/meshes/logo_ring_1.obj",
+            "sha256": "a9a27f9ec3c93e8c2d24d479ff03d925d94c5ee47a9a9a605a2dac66a53e3942"
+          },
+          {
+            "bytes": 38664,
+            "path": "assets/meshes/rim_gasket.obj",
+            "sha256": "755999a4ad8f4f9e1ad98dd8c13f2e5f916a2c2270b45173b93cd9a6e7d4e40e"
+          }
+        ],
+        "total_bytes": 329015
+      },
+      "package_content_manifest_sha256": "4a828326dcd516bd5a051205a3237a20ae16202688857673b6c88f755893528d",
+      "primary_urdf_relative_path": "model.urdf",
+      "raw_category": "Accessories_Cushion",
+      "seed_name": "seed_0021",
+      "selection_hash": "aac63ab064320f114a417c9134a820b1042a3a7390540ebcada9fc6d3c9a97be",
+      "selection_index": 0,
+      "selection_rank": 1,
+      "source_asset_id": "seed_0021",
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/PV-A-per-class-n5/assets/Accessories_Cushion/seed_0021/model.urdf",
+      "urdf_sha256": "df9d68cf7b73a72ad33a8b4999adbdd586dc2f0d0529644fa6ddc9d538b8d97a"
+    },
+    {
+      "asset_id": "PV-A/Accessories_Cushion/seed_0019",
+      "asset_key": "PV-A/Accessories_Cushion/seed_0019",
+      "category": "Accessories_Cushion",
+      "dataset_id": "PV-A/Accessories_Cushion/seed_0019",
+      "declared_joint_count_hint": 2,
+      "package": "/mnt/zsn/lyb/arti-skill/exp/PV-A-per-class-n5/assets/Accessories_Cushion/seed_0019",
+      "package_binding": {
+        "content_manifest_sha256": "dd077dd1827ca27bef4097668d4a9bedeb67f1cabcf589f62a667588e205b3ba",
+        "file_count": 12,
+        "files": [
+          {
+            "bytes": 197378,
+            "path": "appearance.json",
+            "sha256": "8f97ca522ddbb3c5f6f75ed98dbf11e4ec1d891ca3e8e55c226ecd8fa90859d3"
+          },
+          {
+            "bytes": 19469,
+            "path": "model.urdf",
+            "sha256": "86d7341a7f47ab03593ba5b3d817ebdbcef868f0beba59150e1da64035132062"
+          },
+          {
+            "bytes": 18541,
+            "path": "physics.json",
+            "sha256": "0a9d3539a6d7a09f2e8efc830bbe72d120885d73883c2dfd804a565082be10b6"
+          },
+          {
+            "bytes": 1731,
+            "path": "assets/meshes/base_rail_0.obj",
+            "sha256": "84aef45bc164969a44a5abdfcf87544d7036772f34fd2d9519787430617c6a21"
+          },
+          {
+            "bytes": 1731,
+            "path": "assets/meshes/base_rail_1.obj",
+            "sha256": "84aef45bc164969a44a5abdfcf87544d7036772f34fd2d9519787430617c6a21"
+          },
+          {
+            "bytes": 1732,
+            "path": "assets/meshes/lid_slider_0.obj",
+            "sha256": "4d8a220358ff440aa26587e09a8786cc781b9f4fa3507e837078ad2a0fc908dd"
+          },
+          {
+            "bytes": 1732,
+            "path": "assets/meshes/lid_slider_1.obj",
+            "sha256": "4d8a220358ff440aa26587e09a8786cc781b9f4fa3507e837078ad2a0fc908dd"
+          },
+          {
+            "bytes": 38664,
+            "path": "assets/meshes/rim_gasket.obj",
+            "sha256": "dbbf0ede0d22f8b0eb7b93475b99a9ee2dd209737aca3771af9d3c91c0dffaf5"
+          },
+          {
+            "bytes": 23591,
+            "path": "assets/meshes/slide_lid_edge.obj",
+            "sha256": "911a5d88a1f1f4c40c22ab7a865661ee4f9e79d1adafec32c9c359678d08124e"
+          },
+          {
+            "bytes": 23617,
+            "path": "assets/meshes/slide_lid_top.obj",
+            "sha256": "d86e56f66cabe66bc026668c7a56a9997a14a1133d837db9994536a0368cd1ca"
+          },
+          {
+            "bytes": 54459,
+            "path": "assets/meshes/translucent_bowl.obj",
+            "sha256": "327cb99d1613372d34cfb75601f77adad3f8dc57998df1a037d5e2ec8a6d8928"
+          },
+          {
+            "bytes": 187349,
+            "path": "assets/meshes/tray_disc.obj",
+            "sha256": "6b6a2cd891d6b7ad5606ca2b7eb091b3a692cffec857eb06959dece1477e9604"
+          }
+        ],
+        "total_bytes": 569994
+      },
+      "package_content_manifest_sha256": "dd077dd1827ca27bef4097668d4a9bedeb67f1cabcf589f62a667588e205b3ba",
+      "primary_urdf_relative_path": "model.urdf",
+      "raw_category": "Accessories_Cushion",
+      "seed_name": "seed_0019",
+      "selection_hash": "607572f1bb0200276af7d7fa149bbe0f42ae876bfac8476d7351e391eff86408",
+      "selection_index": 1,
+      "selection_rank": 2,
+      "source_asset_id": "seed_0019",
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/PV-A-per-class-n5/assets/Accessories_Cushion/seed_0019/model.urdf",
+      "urdf_sha256": "86d7341a7f47ab03593ba5b3d817ebdbcef868f0beba59150e1da64035132062"
+    }
+  ],
+  "schema_version": "urdf-table3-pva-manifest-v1",
+  "selection": {
+    "algorithm": "exact frozen PV-A cohort manifest asset order; optional smoke prefix only",
+    "cohort_type": "CATEGORY_STRATIFIED_N5_WITH_FENCE_FERRIS_MAX_JOINT_OVERRIDES",
+    "n_eval": 2,
+    "outcome_based_reselection": false,
+    "requested_limit": 2,
+    "selected_asset_ids_sha256": "1d0ee20479d855f0d15e1f5a2dac5a494b1945cf9daf9cb50b6b2c87e737c02b",
+    "selected_packages_sha256": "d8e6bfb0ebee2be99ed529e06c3b5c6105d78012dd9a6fda1828603204a751d4",
+    "selection_order_preserved": true,
+    "source_protocol": "exact-frozen-pva-per-class-n5-max-joints-manifest-order-v1"
+  },
+  "source": {
+    "cohort_asset_count": 2655,
+    "cohort_manifest_content_sha256": "eea55287dd70b710a7c03b11b16c6685208bbaa63cde925232293cb9012c8158",
+    "cohort_manifest_file_sha256": "e78f4b767023f8a5c1517d96bfab35a39482d6eee28238820a9b91ac3ea8d293",
+    "cohort_manifest_path": "/mnt/zsn/lyb/arti-skill/exp/PV-A-per-class-n5-max-joints/manifest.json",
+    "cohort_type": "CATEGORY_STRATIFIED_N5_WITH_FENCE_FERRIS_MAX_JOINT_OVERRIDES",
+    "dataset_root": "/mnt/zsn/lyb/arti-skill/exp/PV-A-per-class-n5/manifest.json",
+    "eval_category_count": 531,
+    "n_release": 302440,
+    "release_category_count": 531,
+    "table1_asset_records_sha256": null,
+    "table1_manifest_sha256": null,
+    "table1_receipt": "/mnt/zsn/lyb/arti-skill/exp/runtime/table1_pva_per_class_n5_max_joints",
+    "table2_asset_records_sha256": null,
+    "table2_manifest_content_sha256": null,
+    "table2_manifest_sha256": null,
+    "table2_receipt": "/mnt/zsn/lyb/arti-skill/exp/runtime/table2_pva_per_class_n5_max_joints"
+  }
+}

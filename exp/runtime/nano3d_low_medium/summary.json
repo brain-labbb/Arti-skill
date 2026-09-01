@@ -1,0 +1,82 @@
+{
+  "protocol": "nano3d_low_medium_v1",
+  "selected_asset_count": 33,
+  "low_pilot_summary": {
+    "source": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_asset_pilot",
+    "summary": {
+      "asset_count": 33,
+      "degenerate_faces_total": 51,
+      "difficulty_counts": {
+        "L1": 11,
+        "L2": 11,
+        "L3": 11
+      },
+      "joint_metadata_rate_mean": 1.0,
+      "joints_mean": 6.303030303030303,
+      "links_mean": 7.303030303030303,
+      "mesh_bytes_total": 37241568,
+      "mesh_readable_files": 387,
+      "mesh_watertight_rate": 0.37467700258397935,
+      "mesh_winding_consistent_rate": 0.979328165374677,
+      "movable_joints_mean": 5.636363636363637,
+      "open_edges_total": 290335,
+      "package_complete": 33,
+      "physics_records": 10,
+      "physics_validated": 1,
+      "preexisting_compile_success": 33,
+      "protocol": "nano3d_existing_export_pilot_v1",
+      "raw_name_coverage_mean": 1.0,
+      "reexec_artifact_saved": 33,
+      "reexec_success": 33,
+      "reexec_wall_time_s": 230.63913808763027,
+      "reexecution_performed": true,
+      "source_bytes_total": 22662,
+      "source_counts": {
+        "seed_exports": 23,
+        "seed_exports_physics_10": 10
+      },
+      "source_document": "/mnt/zsn/lyb/arti-skill/exp/Nano3dasset.md",
+      "source_loc_total": 825,
+      "static_valid_urdf": 33,
+      "urdf_bytes_total": 755811,
+      "valid_tree": 33
+    },
+    "static_records_available": 33
+  },
+  "cross_seed": {
+    "cohort_count": 33,
+    "multi_seed_cohort_count": 23,
+    "single_seed_cohort_count": 10,
+    "total_seed_records": 271,
+    "valid_urdf_rate_over_seed_records": 1.0,
+    "name_signature_mode_rate_mean_multi_seed": 0.32904589371980675,
+    "pairwise_name_jaccard_mean_multi_seed": 0.5552109632054197,
+    "link_count_mode_rate_mean_multi_seed": 0.5448671497584541,
+    "joint_count_mode_rate_mean_multi_seed": 0.5448671497584541,
+    "single_seed_note": "single-seed cohorts are not used to claim cross-seed consistency"
+  },
+  "articulation_smoke": {
+    "asset_count": 33,
+    "representation_smoke_pass": 33,
+    "rest_pose_parse_ready": 33,
+    "boundary_pose_parse_ready": 33,
+    "physics_engine_available": true,
+    "urdfpy_available": true,
+    "urdfpy_load_success": 33,
+    "pybullet_load_success": 33,
+    "rest_step_success": 33,
+    "boundary_state_count": 286,
+    "boundary_step_success": 286,
+    "physics_sweep": "rest_and_individual_boundary_smoke",
+    "collision_free_claim": "unsupported; contact points are diagnostic only"
+  },
+  "mesh_static": {
+    "asset_count": 33,
+    "mesh_readable_files": 387,
+    "watertight_files": 145,
+    "winding_consistent_files": 379,
+    "open_edges": 290335,
+    "degenerate_faces": 51,
+    "mesh_errors": 0
+  }
+}

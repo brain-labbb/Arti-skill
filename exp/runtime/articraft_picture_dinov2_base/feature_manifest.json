@@ -1,0 +1,23 @@
+{
+  "data_dir": "/mnt/zsn/lyb/arti-skill/articraft_data/picture",
+  "dtype": "float32",
+  "extraction": {
+    "amp": true,
+    "batch_size": 128,
+    "device": "cuda:0",
+    "encoder_label": "DINOv2",
+    "feature_dim": 768,
+    "feature_source": "cls_token",
+    "model_name_or_path": "/root/.cache/huggingface/hub/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+    "model_type": "dinov2",
+    "num_workers": 8,
+    "sample_count": 914
+  },
+  "feature_dim": 768,
+  "feature_file": "image_features.npy",
+  "model_fingerprint": "b2877ca885011fd477cee67c211442e8d06e564b97ed01b7d137d624246d09dd",
+  "model_name_or_path": "/root/.cache/huggingface/hub/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+  "sample_count": 914,
+  "sample_fingerprint": "6f55c612a08a584fa974897b58b3f9006b49bd3df0d14eebb02718c0b59cec50",
+  "schema_version": 1
+}

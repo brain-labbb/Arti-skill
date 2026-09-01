@@ -1,0 +1,86 @@
+{
+  "category_macro": {
+    "category_count": 3,
+    "joint_metric_category_count": 3,
+    "metrics": {
+      "joint_level_pass": {
+        "category_count": 3,
+        "rate": 1.0
+      },
+      "joint_sweep_success": {
+        "category_count": 3,
+        "rate": 1.0
+      },
+      "non_degenerate_motion": {
+        "category_count": 3,
+        "rate": 1.0
+      },
+      "strict_kinematic_pass": {
+        "category_count": 3,
+        "rate": 1.0
+      },
+      "subtree_consistency": {
+        "category_count": 3,
+        "rate": 1.0
+      },
+      "valid_range": {
+        "category_count": 3,
+        "rate": 1.0
+      }
+    },
+    "state": "evaluated"
+  },
+  "classification": "NON_FORMAL_SMOKE",
+  "completed_at": "2026-08-14T02:19:33Z",
+  "dataset": "LAM released outputs (Articulated-Object-Code)",
+  "j_eval": 7,
+  "manifest_content_sha256": "c00b237735aad4f7cc5cce8bedc49941c2c9321805ab174bd736d50bb861a565",
+  "metrics": {
+    "fk_roundtrip_error": {
+      "denominator": 7,
+      "max_normalized_translation": 0.0,
+      "max_rotation_rad": 0.0,
+      "measured_joint_count": 7,
+      "passed_threshold": 7,
+      "status": "COMPLETE"
+    },
+    "joint_level_pass": {
+      "denominator": 7,
+      "passed": 7,
+      "rate": 1.0
+    },
+    "joint_sweep_success": {
+      "denominator": 7,
+      "passed": 7,
+      "rate": 1.0
+    },
+    "non_degenerate_motion": {
+      "denominator": 7,
+      "passed": 7,
+      "rate": 1.0
+    },
+    "strict_kinematic_pass": {
+      "denominator": 3,
+      "passed": 3,
+      "rate": 1.0
+    },
+    "subtree_consistency": {
+      "denominator": 7,
+      "passed": 7,
+      "rate": 1.0
+    },
+    "valid_range": {
+      "denominator": 7,
+      "passed": 7,
+      "rate": 1.0
+    }
+  },
+  "n_eval": 3,
+  "parse_success": 3,
+  "schema_version": 1,
+  "status": "completed",
+  "status_counts": {
+    "completed": 3
+  },
+  "valid_tree": 3
+}

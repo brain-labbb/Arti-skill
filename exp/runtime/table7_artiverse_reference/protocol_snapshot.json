@@ -1,0 +1,108 @@
+{
+  "protocol_id": "nano3d_table7_production_readiness_v1",
+  "schema_version": "1.0.0",
+  "frozen_at_utc": "2026-08-11",
+  "scope": "representation-aware static audit of released or generated final assets",
+  "evidence_states": [
+    "pass",
+    "fail",
+    "not_evaluable"
+  ],
+  "cohort_policy": {
+    "selection": "freeze before Table 7 scoring and never filter on build or geometry outcome",
+    "required_denominators": [
+      "requested_assets",
+      "available_assets",
+      "geometry_evaluable_assets",
+      "package_evaluable_assets"
+    ],
+    "failed_or_missing_outputs": "retain in requested denominator and report separately; do not fabricate mesh scores",
+    "paper_only_values": "keep separate from locally measured values"
+  },
+  "geometry": {
+    "loader": "trimesh scene load with process=false; score every readable triangle geometry",
+    "watertight": "trimesh is_watertight for each readable geometry",
+    "manifold": "edge-manifold proxy: every undirected edge has at most two incident faces; vertex-manifold is not claimed",
+    "open_edges": "number of undirected edges with exactly one incident face",
+    "degenerate_faces": "face has a repeated vertex index or area <= 1e-12 in native squared units",
+    "self_intersection": "not_evaluable unless an exact triangle-triangle backend is recorded and adjacent faces are excluded",
+    "load_failure": "record error and exclude only from geometry-evaluable denominator; never count as a clean mesh",
+    "aggregation": [
+      "per-asset mean fraction across readable geometries",
+      "geometry-level numerator and denominator",
+      "per-asset mean error count",
+      "total error count"
+    ]
+  },
+  "size_bytes": {
+    "source": "method-attributable executable source bytes; shared factory source is reported separately from per-asset source",
+    "urdf": "serialized final URDF bytes",
+    "mesh": "all referenced or packaged mesh payload bytes, deduplicated by canonical path within each asset",
+    "aggregation": "total and arithmetic mean over the explicitly named denominator"
+  },
+  "portable_package": {
+    "procedure": "copy the complete asset package to a fresh temporary directory inside the authorized workspace, then parse the copied primary artifact and resolve every declared dependency",
+    "pass": [
+      "primary artifact parses after copy",
+      "all declared dependencies exist in the copied package",
+      "all dependency references are relative and remain inside the copied package",
+      "no required dependency resolves through an external symlink"
+    ],
+    "fail": "an available final package violates any pass condition",
+    "not_evaluable": "no final package was released or generated"
+  },
+  "deterministic_build": {
+    "pass": "two fresh builds from the same frozen source, configuration, environment and seed produce equal canonical manifests and content hashes",
+    "fail": "both builds complete but canonical manifests or content hashes differ",
+    "not_evaluable": "a second fresh build is not actually executed or the build inputs/environment are not frozen",
+    "prohibited_shortcut": "re-hashing one existing artifact is not a deterministic-build experiment"
+  },
+  "semantic_complete": {
+    "strict_result": "not_evaluable without an output-independent required-part and role specification",
+    "field_proxy": [
+      "all delivered mesh-bearing parts have non-empty non-placeholder names",
+      "the delivered hierarchy parses as one rooted connected acyclic structure",
+      "native semantic roles, when required by the method contract, are present"
+    ],
+    "reporting": "report the field proxy separately and never label it semantic correctness"
+  },
+  "kinematic_complete": {
+    "applicability": "native articulated package",
+    "pass": [
+      "all joint parent and child references resolve",
+      "all joint types are recognized",
+      "all movable one-axis joints declare a finite nonzero axis",
+      "revolute and prismatic joints declare finite ordered lower and upper limits",
+      "all joints declare a finite origin transform"
+    ],
+    "continuous_joint_rule": "axis and finite origin are required; position limits are not",
+    "not_evaluable": "the native representation does not expose joints or no final package exists"
+  },
+  "physical_complete": {
+    "applicability": "native simulation package",
+    "pass": [
+      "every visual-bearing physical link has native collision geometry",
+      "every physical link has positive finite mass",
+      "every physical link has finite positive-definite native inertia",
+      "every movable joint has native damping and friction values",
+      "native contact material or friction metadata is present"
+    ],
+    "runtime_defaults": "simulator-supplied mass, inertia, damping, friction or collision are failures, not native metadata",
+    "not_evaluable": "no native simulation package exists"
+  },
+  "required_outputs": [
+    "protocol_snapshot.json",
+    "manifest.json",
+    "asset_records.json",
+    "summary.json",
+    "self_check.json",
+    "report.md"
+  ],
+  "self_checks": [
+    "manifest identities are unique",
+    "requested denominator equals pass plus fail plus unavailable where applicable",
+    "all rates have explicit numerators and denominators",
+    "all referenced evidence files exist inside the authorized workspace",
+    "protocol and manifest SHA-256 values are recorded"
+  ]
+}

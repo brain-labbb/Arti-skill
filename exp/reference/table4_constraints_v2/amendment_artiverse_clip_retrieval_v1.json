@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "amendment_id": "table4_constraints_v2_artiverse_clip_retrieval_v1",
+  "frozen_utc": "2026-08-12T06:02:41Z",
+  "status": "pre_result_frozen",
+  "scope": {
+    "panel": "dataset_retrieval_reference_supplementary",
+    "method_id": "artiverse_clip_retrieval_v1",
+    "method_type": "prompt_only_retrieval_from_a_fixed_human_authored_dataset",
+    "same_prompt_generation_method": false,
+    "interpretation": "Artiverse is a fixed reference dataset. This arm measures whether prompt-only CLIP retrieval can find an existing reference asset satisfying the constraints; it is not Artiverse generation and must not be placed in the same-prompt generation ranking."
+  },
+  "benchmark": {
+    "prompt_manifest": "exp/reference/table4_constraints_v2/prompts.jsonl",
+    "prompt_manifest_sha256": "0b46c15c65c46550cc25654ccca10e4de87f1b97e6bde89796ea3cc9b439065e",
+    "protocol": "exp/reference/table4_constraints_v2/protocol.json",
+    "protocol_sha256": "6857194072ccb0ba3943d14a62f29c2364920ec01381a5475311535c1831031f",
+    "task_count": 18,
+    "prompt_field": "prompt",
+    "prompt_template": null,
+    "prompt_policy": "Use the exact complete English prompt string in each JSONL row. Do not rewrite, summarize, add category labels, or use spec files."
+  },
+  "dataset": {
+    "id": "3dlg-hcvc/artiverse",
+    "revision": "8c4b120418e7cbdf9ac4c9580c5dbfdbf128a248",
+    "release_state": "manual_gated_pre_release",
+    "local_manifest": "exp/artiverse/dataset_chunks/manifest.json",
+    "local_manifest_sha256": "8fa6468254a1f74c58f0c25699598bf88f622fabdaf74f0cd9268ee5663c5586",
+    "readme_sha256": "2033582ef71f0b12bb15ca2a61d56edcf07414db5e7c3fe5437f6132ec4fea73",
+    "expected_model_roots": 3544,
+    "expected_file_count": 531937,
+    "expected_input_bytes": 86992752890,
+    "archives": [
+      {
+        "name": "artiverse_data-00001-of-00002.tar.gz",
+        "bytes": 38163580631,
+        "sha256": "695d2d602faafab922ce66359ea104d81505f5b0fdee8f461d8905f0ccb4ef3b"
+      },
+      {
+        "name": "artiverse_data-00002-of-00002.tar.gz",
+        "bytes": 27170560473,
+        "sha256": "56dffa50f1c8c20d3b1eef626046805a6c7cd997141e8ab5fac9ebdae8ffab81"
+      }
+    ],
+    "full_data_gate": "All 3544 manifest-listed model roots must exist as regular in-workspace directories and the depth-three model-root set must equal the manifest set. Both archive byte sizes and SHA-256 values must match before formal selection. A partial extraction is not evaluable."
+  },
+  "candidate_eligibility": {
+    "allowed_selection_inputs": [
+      "manifest-listed identity path",
+      "identity SHA-256",
+      "imgs/000.png through imgs/015.png RGB pixels"
+    ],
+    "required_views": [
+      "000.png",
+      "001.png",
+      "002.png",
+      "003.png",
+      "004.png",
+      "005.png",
+      "006.png",
+      "007.png",
+      "008.png",
+      "009.png",
+      "010.png",
+      "011.png",
+      "012.png",
+      "013.png",
+      "014.png",
+      "015.png"
+    ],
+    "rule": "A candidate is eligible iff imgs is a regular directory containing exactly the 16 required regular non-symlink PNG files, no other PNG files, and every required image can be fully decoded by Pillow then converted to RGB. Eligibility never depends on category, GLB/URDF availability, geometry, dimensions, part names, articulations, metadata, or downstream scores.",
+    "ineligible_policy": "Exclude before embedding and report the fixed reason. Do not repair renders or replace them."
+  },
+  "retriever": {
+    "model_id": "openai/clip-vit-base-patch32",
+    "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "weights_file": "pytorch_model.bin",
+    "weights_sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+    "preprocessor_config_sha256": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd",
+    "implementation": "transformers.CLIPModel and transformers.CLIPProcessor",
+    "transformers_version": "5.12.0",
+    "torch_version": "2.6.0+cu124",
+    "formal_device": "physical CUDA GPU 0",
+    "inference_dtype": "float32_without_amp",
+    "preprocess": "Pinned CLIPProcessor: resize shortest edge to 224 with bicubic resampling, center crop 224x224, RGB conversion, CLIP mean [0.48145466,0.4578275,0.40821073], CLIP std [0.26862954,0.26130258,0.27577711].",
+    "text_tokenization": "Pinned CLIP tokenizer with padding=true, truncation=true, max_length=77; exact full prompt is supplied before deterministic tokenizer truncation.",
+    "view_aggregation": "Extract one 512-D float32 image feature per view. Convert to float64 and L2-normalize each view independently. Take the equal-weight arithmetic mean of the 16 normalized view features and L2-normalize that mean in float64.",
+    "text_feature": "Extract one 512-D float32 text feature per exact prompt, convert to float64, and L2-normalize in float64.",
+    "score": "Float64 dot product between the normalized prompt feature and normalized 16-view aggregate feature.",
+    "selection": "Global top-1 over every eligible asset; no category filter.",
+    "tie_break": "Sort by descending exact float64 score, then ascending SHA-256(identity path), then ascending identity path. No epsilon tie window.",
+    "determinism": "eval and inference_mode; random seeds 0; CUDA TF32 disabled; cuDNN benchmark disabled; deterministic algorithms enabled; no test-time augmentation."
+  },
+  "anti_leakage": {
+    "selection_must_not_read": [
+      "exp/reference/table4_constraints_v2/specs",
+      "any Table 4 scorer, evaluator, canonicalizer, or previous method output",
+      "segmented GLB or any other geometry",
+      "URDF, articulation JSON, material JSON, mass JSON, or part/node names",
+      "asset category as a feature or filter",
+      "dimensions, constraint measurements, or output scores"
+    ],
+    "phase_boundary": "Selection writes a SHA-256-locked 18-row selection manifest. Only after that lock exists may materialization open the selected segmented GLB files."
+  },
+  "materialization": {
+    "selected_source": "Within each locked selected root, require exactly one regular non-symlink file matching *.segmented.glb.",
+    "unit_scale_to_m": 1.0,
+    "canonicalizer": "exp/scripts/canonicalize_table4_artifact.py",
+    "repair_attempts": 0,
+    "failure_policy": "Any missing, ambiguous, unreadable, or non-canonicalizable selected GLB is a task failure. Never fall back to rank 2 or choose another asset. Never rescale to a target."
+  },
+  "reporting": {
+    "primary_for_this_supplement": [
+      "eligible asset coverage over 3544 roots",
+      "selected artifact coverage over 18 prompts",
+      "numeric constraint pass over 20 frozen numeric constraints"
+    ],
+    "supplementary_only": "The existing exact-count scorer is a name-matched renderable-node proxy and is not semantic exact-count ground truth for Artiverse GLB node names.",
+    "required_label": "Artiverse prompt-only CLIP retrieval (dataset reference; not generation)",
+    "not_allowed": "Do not merge this result into the same-prompt generation headline or describe selected assets as generated by Artiverse."
+  },
+  "category_identity_reference_supplement": {
+    "enabled": false,
+    "selection_rule_if_enabled": "Use only the frozen category mapping below, then select the ascending minimum SHA-256(identity path) within the mapped Artiverse category. No prompt embeddings, geometry, dimensions, part names, or score-dependent fallback.",
+    "task_to_artiverse_category": {
+      "T4C001": "bar_stool",
+      "T4C002": "chest_of_drawers",
+      "T4C003": "telescoping_ladder",
+      "T4C004": null,
+      "T4C005": null,
+      "T4C006": "swivel_chair",
+      "T4C007": null,
+      "T4C008": null,
+      "T4C009": null,
+      "T4C010": null,
+      "T4C011": null,
+      "T4C012": null,
+      "T4C013": null,
+      "T4C014": "tool_cabinet",
+      "T4C015": null,
+      "T4C016": null,
+      "T4C017": null,
+      "T4C018": null
+    }
+  }
+}

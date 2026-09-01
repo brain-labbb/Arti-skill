@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "protocol": "nova3d_paper_constraints_preflight_v1",
+  "paper": "Nova3D arXiv:2607.22738v1, Section 4.1 and Section 8, Tables 11-12",
+  "required_item_count": 18,
+  "required_constraint_count": 52,
+  "required_count_constraint_count": 32,
+  "required_numeric_constraint_count": 20,
+  "required_inputs": {
+    "prompt_manifest": "Original text/image-conditioned prompts; constraints must be prompt-stated.",
+    "frozen_specs": "One machine-checkable spec.yaml per constrained item, frozen before output scoring.",
+    "final_glbs": "Final exported GLB artifacts scored without trusting source self-reports.",
+    "measure_recipes": "Semantic scene-node anchors plus exact-count or geometry-dimension recipes, comparator and tolerance."
+  },
+  "scoring": {
+    "coverage": "measurable / all constraints",
+    "satisfaction": "passed / all constraints",
+    "conditional_accuracy": "passed / measurable constraints",
+    "count_pass": "passed exact-count constraints / all exact-count constraints"
+  },
+  "excluded_from_paper_table": [
+    "relational pass",
+    "interface pass",
+    "kinematic pass",
+    "compatibility pass",
+    "all-pass assets",
+    "invalid-combination rejection"
+  ],
+  "anti_leakage": [
+    "Do not infer targets or tolerances from generated URDF/GLB geometry.",
+    "Do not use template source constants as a substitute for prompt-stated benchmark constraints.",
+    "Do not score compile/QC, joint metadata or motion-QC as paper numeric/count constraints.",
+    "Do not compare a locally invented constraint set directly with the paper's 52-constraint set."
+  ]
+}

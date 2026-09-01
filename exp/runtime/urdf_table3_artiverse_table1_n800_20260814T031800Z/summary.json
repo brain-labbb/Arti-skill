@@ -1,0 +1,86 @@
+{
+  "category_macro": {
+    "category_count": 67,
+    "joint_metric_category_count": 67,
+    "metrics": {
+      "joint_level_pass": {
+        "category_count": 67,
+        "rate": 0.9565690935002484
+      },
+      "joint_sweep_success": {
+        "category_count": 67,
+        "rate": 0.9984665979222032
+      },
+      "non_degenerate_motion": {
+        "category_count": 67,
+        "rate": 0.9565690935002484
+      },
+      "strict_kinematic_pass": {
+        "category_count": 67,
+        "rate": 0.9108555194683378
+      },
+      "subtree_consistency": {
+        "category_count": 67,
+        "rate": 0.9984665979222032
+      },
+      "valid_range": {
+        "category_count": 67,
+        "rate": 1.0
+      }
+    },
+    "state": "evaluated"
+  },
+  "classification": "FORMAL",
+  "completed_at": "2026-08-14T03:20:24Z",
+  "dataset": "Artiverse",
+  "j_eval": 3875,
+  "manifest_content_sha256": "6cf365a1b51d87c3ca3bb5709e65e262e31a74aca6763b73dcd96b129b8d0f99",
+  "metrics": {
+    "fk_roundtrip_error": {
+      "denominator": 3875,
+      "max_normalized_translation": 0.0,
+      "max_rotation_rad": 0.0,
+      "measured_joint_count": 3854,
+      "passed_threshold": 3854,
+      "status": "PARTIAL"
+    },
+    "joint_level_pass": {
+      "denominator": 3875,
+      "passed": 3782,
+      "rate": 0.976
+    },
+    "joint_sweep_success": {
+      "denominator": 3875,
+      "passed": 3854,
+      "rate": 0.9945806451612903
+    },
+    "non_degenerate_motion": {
+      "denominator": 3875,
+      "passed": 3782,
+      "rate": 0.976
+    },
+    "strict_kinematic_pass": {
+      "denominator": 800,
+      "passed": 762,
+      "rate": 0.9525
+    },
+    "subtree_consistency": {
+      "denominator": 3875,
+      "passed": 3854,
+      "rate": 0.9945806451612903
+    },
+    "valid_range": {
+      "denominator": 3875,
+      "passed": 3875,
+      "rate": 1.0
+    }
+  },
+  "n_eval": 800,
+  "parse_success": 800,
+  "schema_version": 1,
+  "status": "completed",
+  "status_counts": {
+    "completed": 800
+  },
+  "valid_tree": 797
+}

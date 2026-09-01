@@ -1,0 +1,68 @@
+{
+  "datasets": [
+    {
+      "dataset_slug": "articraft_10k",
+      "dataset_name": "Articraft-10K",
+      "root": "/DATA/Articraft-10K",
+      "urdf_glob": "**/model.urdf",
+      "package_root_mode": "urdf_parent",
+      "asset_id_mode": "relative_parent"
+    },
+    {
+      "dataset_slug": "lam_released_outputs",
+      "dataset_name": "LAM released outputs",
+      "root": "/DATA/LAM/released_outputs",
+      "urdf_glob": "**/generated.urdf",
+      "package_root_mode": "urdf_parent",
+      "asset_id_mode": "relative_parent"
+    },
+    {
+      "dataset_slug": "artiverse",
+      "dataset_name": "Artiverse",
+      "root": "/DATA/Artiverse",
+      "urdf_glob": "**/urdf_w_collider/*.urdf",
+      "package_root_mode": "urdf_parent",
+      "asset_id_mode": "relative_urdf"
+    },
+    {
+      "dataset_slug": "partnet_mobility",
+      "dataset_name": "PartNet-Mobility",
+      "root": "/DATA/PartNet-Mobility/data/dataset",
+      "urdf_glob": "*/mobility.urdf",
+      "package_root_mode": "urdf_parent",
+      "asset_id_mode": "relative_parent"
+    },
+    {
+      "dataset_slug": "physx_mobility",
+      "dataset_name": "PhysX-Mobility",
+      "root": "/DATA/PhysX-Mobility",
+      "urdf_glob": "**/urdf/*.urdf",
+      "package_root_mode": "dataset_root",
+      "asset_id_mode": "relative_urdf"
+    },
+    {
+      "dataset_slug": "sketchmobility",
+      "dataset_name": "SketchMobility",
+      "root": "/DATA/SketchMobility/data",
+      "urdf_glob": "**/mobility.urdf",
+      "package_root_mode": "urdf_parent",
+      "asset_id_mode": "relative_parent"
+    },
+    {
+      "dataset_slug": "infinigen_sim",
+      "dataset_name": "Infinigen-Sim",
+      "root": "/DATA/Infinigen-Sim/urdf",
+      "urdf_glob": "**/*.urdf",
+      "package_root_mode": "urdf_parent",
+      "asset_id_mode": "relative_urdf"
+    },
+    {
+      "dataset_slug": "pva",
+      "dataset_name": "Ours (PV-A)",
+      "root": "/DATA/PV-A/extracted",
+      "urdf_glob": "**/model.physics.urdf",
+      "package_root_mode": "urdf_parent",
+      "asset_id_mode": "relative_parent"
+    }
+  ]
+}

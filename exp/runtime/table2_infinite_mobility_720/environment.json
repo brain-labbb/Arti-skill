@@ -1,0 +1,69 @@
+{
+  "dependencies": {
+    "Pillow": "12.2.0",
+    "lxml": "6.1.1",
+    "networkx": "3.6.1",
+    "numpy": "2.4.4",
+    "pycollada": "0.6",
+    "pygltflib": "1.16.5",
+    "scipy": "1.17.1",
+    "six": "1.17.0",
+    "trimesh": "4.12.2",
+    "urdfpy": "0.0.22"
+  },
+  "executable": "/mnt/zsn/lyb/arti-skill/arti-template/.venv/bin/python",
+  "gpu_required": false,
+  "openblas_threadpools_observed": [
+    {
+      "library": "libscipy_openblas64_-32a4b2a6.so",
+      "num_threads": 1,
+      "path": "/mnt/zsn/lyb/arti-skill/arti-template/.venv/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so",
+      "symbol": "scipy_openblas_get_num_threads64_"
+    },
+    {
+      "library": "libscipy_openblas-6cdc3b4a.so",
+      "num_threads": 1,
+      "path": "/mnt/zsn/lyb/arti-skill/arti-template/.venv/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+      "symbol": "scipy_openblas_get_num_threads"
+    }
+  ],
+  "platform": "Linux-5.10.134-19.103.al8.x86_64-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "python_implementation": "CPython",
+  "shared_core_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_table2_urdf_articraft.py",
+  "shared_core_sha256": "296f2af6fa73721a586a3e4b60459533b4656ed4068d06935828aab61c074d75",
+  "spawn_eagain_retry_policy": {
+    "all_other_spawn_step_failures": "fail-closed metric record",
+    "backoff_multiplier": 2.0,
+    "exhaustion": "raise nonzero with running checkpoint preserved for --resume",
+    "initial_backoff_seconds": 1.0,
+    "maximum_backoff_seconds": 30.0,
+    "popen_action": "retry the same spawn in place while preserving active children",
+    "retryable_errno": 11,
+    "retryable_exception": "BlockingIOError",
+    "scope": "subprocess.Popen only",
+    "total_backoff_wait_seconds": 1800.0
+  },
+  "standard_parser": {
+    "numpy_compatibility": {
+      "activation": "only when the standard parser is enabled and numpy.float is absent",
+      "aliases": {
+        "numpy.float": "builtins.float"
+      },
+      "parser_errors_suppressed": false,
+      "scope": "synchronized URDF.load call only; alias is removed immediately after parsing",
+      "site_packages_modified": false
+    },
+    "observed_version": "0.0.22",
+    "package": "urdfpy",
+    "required_version": "0.0.22"
+  },
+  "standard_parser_enabled": true,
+  "thread_environment_observed": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "worker_count": 8
+}

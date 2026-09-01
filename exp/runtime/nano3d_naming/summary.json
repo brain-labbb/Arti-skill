@@ -1,0 +1,373 @@
+{
+  "protocol": "nano3d_naming_paper_aligned_v2.2",
+  "asset_count_direct": 33,
+  "asset_count_source_semantic": 32,
+  "source_semantic_exclusions": [
+    "Stationary_Pencil_sharpener__seed_6"
+  ],
+  "independent_hidden_gold": false,
+  "three_judge_complete": false,
+  "link_count_total": 241,
+  "mesh_bearing_link_count_total": 239,
+  "parts_per_asset_mean": 7.242424242424242,
+  "parts_per_asset_95ci": [
+    5.666666666666667,
+    8.969696969696969
+  ],
+  "nameability_micro": 1.0,
+  "paper_aligned_richness_candidate_mean": 1.4817708333333333,
+  "paper_aligned_richness_candidate_micro": 1.563758389261745,
+  "paper_aligned_richness_candidate_95ci": [
+    1.2788690476190476,
+    1.7088690476190473
+  ],
+  "source_role_recall_macro": 0.99375,
+  "source_role_recall_micro": 0.9865771812080537,
+  "strong_match_count": 120,
+  "single_token_alias_count": 27,
+  "strong_match_sensitivity_macro": 0.8316964285714286,
+  "strong_match_sensitivity_micro": 0.8053691275167785,
+  "assignment_exact_tie_count": 0,
+  "assignment_low_margin_count": 2,
+  "source_role_recall_95ci": [
+    0.98125,
+    1.0
+  ],
+  "functional_core_coverage_macro": 0.9930555555555556,
+  "functional_core_coverage_micro": 0.9836065573770492,
+  "instance_discriminability": 0.95,
+  "instance_distinguishable_count": 38,
+  "instance_required_count": 40,
+  "instance_applicable_groups": 18,
+  "core_role_assigned_links": 147,
+  "extra_real_part_candidates": 86,
+  "semantic_precision": null,
+  "semantic_precision_status": "pending_three_independent_judges",
+  "semantic_judge_recall": null,
+  "semantic_judge_recall_status": "pending_three_independent_judges",
+  "over_segmentation_rate": null,
+  "over_segmentation_status": "unsupported_without_part_to_role_decomposition_gold",
+  "cross_seed": {
+    "multi_seed_cohort_count": 23,
+    "seed_records": 261,
+    "raw_pairwise_name_jaccard_mean": 0.5797241598480685,
+    "source_role_set_jaccard_mean": 0.9528673657828782,
+    "source_role_count_weighted_jaccard_mean": 0.9483082706766918,
+    "source_role_count_signature_mode_rate_mean": 0.8746376811594203,
+    "cohorts": [
+      {
+        "slug": "Astronomy_Antenna_dish",
+        "selected_asset_id": "Astronomy_Antenna_dish__seed_343",
+        "seed_count": 15,
+        "raw_pairwise_name_jaccard_mean": 1.0,
+        "source_role_set_jaccard_mean": 1.0,
+        "source_role_count_weighted_jaccard_mean": 1.0,
+        "source_role_count_signature_mode_rate": 1.0,
+        "source_role_count_signatures": {
+          "azimuth_turret:1|dish_assembly:1|mount_base:1": 15
+        }
+      },
+      {
+        "slug": "Door_Double_Door",
+        "selected_asset_id": "Door_Double_Door__seed_222",
+        "seed_count": 15,
+        "raw_pairwise_name_jaccard_mean": 0.8323809523809523,
+        "source_role_set_jaccard_mean": 1.0,
+        "source_role_count_weighted_jaccard_mean": 1.0,
+        "source_role_count_signature_mode_rate": 1.0,
+        "source_role_count_signatures": {
+          "door:2|frame:1": 15
+        }
+      },
+      {
+        "slug": "Electrical_Wiring_Wire_stripper",
+        "selected_asset_id": "Electrical_Wiring_Wire_stripper__seed_5943",
+        "seed_count": 15,
+        "raw_pairwise_name_jaccard_mean": 0.7428571428571429,
+        "source_role_set_jaccard_mean": 0.8412698412698413,
+        "source_role_count_weighted_jaccard_mean": 0.8412698412698413,
+        "source_role_count_signature_mode_rate": 0.6666666666666666,
+        "source_role_count_signatures": {
+          "fixed_arm:1|lock_latch:1|moving_arm:1": 10,
+          "fixed_arm:1|lock_latch:0|moving_arm:1": 5
+        }
+      },
+      {
+        "slug": "Industrial_Mine_cart",
+        "selected_asset_id": "Industrial_Mine_cart__seed_13",
+        "seed_count": 18,
+        "raw_pairwise_name_jaccard_mean": 0.8294817927170868,
+        "source_role_set_jaccard_mean": 0.9058823529411765,
+        "source_role_count_weighted_jaccard_mean": 0.9215686274509804,
+        "source_role_count_signature_mode_rate": 0.6666666666666666,
+        "source_role_count_signatures": {
+          "chassis:1|latch_hook:1|rail_track:1|tub:1|wheelset:2": 12,
+          "chassis:1|latch_hook:1|rail_track:0|tub:1|wheelset:2": 6
+        }
+      },
+      {
+        "slug": "pictureX_0611_C_shaped_sofa_side_table",
+        "selected_asset_id": "pictureX_0611_C_shaped_sofa_side_table__seed_0",
+        "seed_count": 10,
+        "raw_pairwise_name_jaccard_mean": 0.5292592592592593,
+        "source_role_set_jaccard_mean": 1.0,
+        "source_role_count_weighted_jaccard_mean": 1.0,
+        "source_role_count_signature_mode_rate": 1.0,
+        "source_role_count_signatures": {
+          "front_platform:1|side_table:1|sofa_frame:1": 10
+        }
+      },
+      {
+        "slug": "pictureX_0611_Dressing_table",
+        "selected_asset_id": "pictureX_0611_Dressing_table__seed_0",
+        "seed_count": 10,
+        "raw_pairwise_name_jaccard_mean": 0.3114945548278882,
+        "source_role_set_jaccard_mean": 1.0,
+        "source_role_count_weighted_jaccard_mean": 1.0,
+        "source_role_count_signature_mode_rate": 1.0,
+        "source_role_count_signatures": {
+          "drawer:1|mirror:1|vanity_body:1": 10
+        }
+      },
+      {
+        "slug": "pictureX_0611_Butter_maker",
+        "selected_asset_id": "pictureX_0611_Butter_maker__seed_0",
+        "seed_count": 10,
+        "raw_pairwise_name_jaccard_mean": 0.43039830539830537,
+        "source_role_set_jaccard_mean": 0.9288888888888889,
+        "source_role_count_weighted_jaccard_mean": 0.9288888888888889,
+        "source_role_count_signature_mode_rate": 0.8,
+        "source_role_count_signatures": {
+          "dasher_blade:1|dasher_shaft:1|drive_input:1|lid:1|vessel:1": 2,
+          "dasher_blade:1|dasher_shaft:1|drive_input:0|lid:1|vessel:1": 8
+        }
+      },
+      {
+        "slug": "pictureX_0611_Garden_pruner",
+        "selected_asset_id": "pictureX_0611_Garden_pruner__seed_0",
+        "seed_count": 10,
+        "raw_pairwise_name_jaccard_mean": 0.26504810004810003,
+        "source_role_set_jaccard_mean": 1.0,
+        "source_role_count_weighted_jaccard_mean": 1.0,
+        "source_role_count_signature_mode_rate": 1.0,
+        "source_role_count_signatures": {
+          "counter_half:1|cutting_half:1|locking_catch:1|pivot_frame:1|return_spring:1": 10
+        }
+      },
+      {
+        "slug": "pictureX_0611_Ice_crream_machine",
+        "selected_asset_id": "pictureX_0611_Ice_crream_machine__seed_0",
+        "seed_count": 10,
+        "raw_pairwise_name_jaccard_mean": 1.0,
+        "source_role_set_jaccard_mean": 1.0,
+        "source_role_count_weighted_jaccard_mean": 1.0,
+        "source_role_count_signature_mode_rate": 1.0,
+        "source_role_count_signatures": {
+          "access_lid:1|dasher:1|drive:1|drive_mount:1|vessel:1": 10
+        }
+      },
+      {
+        "slug": "pictureX_0611_juicer_press_with_handle",
+        "selected_asset_id": "pictureX_0611_juicer_press_with_handle__seed_0",
+        "seed_count": 10,
+        "raw_pairwise_name_jaccard_mean": 0.5645365745365746,
+        "source_role_set_jaccard_mean": 0.7720634920634921,
+        "source_role_count_weighted_jaccard_mean": 0.7720634920634921,
+        "source_role_count_signature_mode_rate": 0.4,
+        "source_role_count_signatures": {
+          "collector_cup:1|drive_link:1|press_frame:1|press_lever:1|press_ram:1|stand_or_clamp:1|strainer:1": 2,
+          "collector_cup:1|drive_link:0|press_frame:1|press_lever:0|press_ram:1|stand_or_clamp:0|strainer:1": 3,
+          "collector_cup:1|drive_link:1|press_frame:1|press_lever:1|press_ram:1|stand_or_clamp:0|strainer:1": 1,
+          "collector_cup:1|drive_link:0|press_frame:1|press_lever:0|press_ram:1|stand_or_clamp:1|strainer:1": 4
+        }
+      },
+      {
+        "slug": "pictureX_0611_bi_fold_closet_door_system",
+        "selected_asset_id": "pictureX_0611_bi_fold_closet_door_system__seed_0",
+        "seed_count": 10,
+        "raw_pairwise_name_jaccard_mean": 0.17878763212096546,
+        "source_role_set_jaccard_mean": 1.0,
+        "source_role_count_weighted_jaccard_mean": 0.8133333333333334,
+        "source_role_count_signature_mode_rate": 0.7,
+        "source_role_count_signatures": {
+          "handle_leaf:2|opening_frame:1|pivot_leaf:2": 7,
+          "handle_leaf:1|opening_frame:1|pivot_leaf:1": 3
+        }
+      },
+      {
+        "slug": "riot_shield",
+        "selected_asset_id": "riot_shield__seed_3141",
+        "seed_count": 10,
+        "raw_pairwise_name_jaccard_mean": 0.18559082892416226,
+        "source_role_set_jaccard_mean": 1.0,
+        "source_role_count_weighted_jaccard_mean": 1.0,
+        "source_role_count_signature_mode_rate": 1.0,
+        "source_role_count_signatures": {
+          "carry_handle:1|shield_panel:1|viewport_element:1": 10
+        }
+      },
+      {
+        "slug": "Astronomy_Space_shuttle",
+        "selected_asset_id": "Astronomy_Space_shuttle__seed_0",
+        "seed_count": 10,
+        "raw_pairwise_name_jaccard_mean": 0.805069005069005,
+        "source_role_set_jaccard_mean": 1.0,
+        "source_role_count_weighted_jaccard_mean": 1.0,
+        "source_role_count_signature_mode_rate": 1.0,
+        "source_role_count_signatures": {
+          "body_flap:1|elevon:2|fuselage:1|landing_gear:2|payload_bay_door:2|rudder_panel:2": 10
+        }
+      },
+      {
+        "slug": "Household_Laundry_Clothes_drying_rack_Laundry_drying_rack",
+        "selected_asset_id": "Household_Laundry_Clothes_drying_rack_Laundry_drying_rack__seed_1341",
+        "seed_count": 16,
+        "raw_pairwise_name_jaccard_mean": 0.17871501445604834,
+        "source_role_set_jaccard_mean": 1.0,
+        "source_role_count_weighted_jaccard_mean": 1.0,
+        "source_role_count_signature_mode_rate": 1.0,
+        "source_role_count_signatures": {
+          "drying_wing:1|hanger:1|leg_frame:2|spine:1": 16
+        }
+      },
+      {
+        "slug": "Vehicle_Sports_car",
+        "selected_asset_id": "Vehicle_Sports_car__seed_202",
+        "seed_count": 5,
+        "raw_pairwise_name_jaccard_mean": 0.8286868686868687,
+        "source_role_set_jaccard_mean": 1.0,
+        "source_role_count_weighted_jaccard_mean": 1.0,
+        "source_role_count_signature_mode_rate": 1.0,
+        "source_role_count_signatures": {
+          "body:1|door:2|steer_knuckle:0|steering_wheel:1|wheel:4": 5
+        }
+      },
+      {
+        "slug": "pictureX_0611_Industrial_rolling_work_table",
+        "selected_asset_id": "pictureX_0611_Industrial_rolling_work_table__seed_0",
+        "seed_count": 10,
+        "raw_pairwise_name_jaccard_mean": 0.8041731135126388,
+        "source_role_set_jaccard_mean": 1.0,
+        "source_role_count_weighted_jaccard_mean": 1.0,
+        "source_role_count_signature_mode_rate": 1.0,
+        "source_role_count_signatures": {
+          "caster:4|frame:1|storage_item:1|worktop:1": 10
+        }
+      },
+      {
+        "slug": "pictureX_0611_Hole_punch",
+        "selected_asset_id": "pictureX_0611_Hole_punch__seed_0",
+        "seed_count": 10,
+        "raw_pairwise_name_jaccard_mean": 0.47693104825457766,
+        "source_role_set_jaccard_mean": 1.0,
+        "source_role_count_weighted_jaccard_mean": 1.0,
+        "source_role_count_signature_mode_rate": 1.0,
+        "source_role_count_signatures": {
+          "actuator:1|base:1|chip_bed:1|frame:1|punch_carriage:1": 10
+        }
+      },
+      {
+        "slug": "pictureX_0611_drawing_compass_with_adjustable_legs",
+        "selected_asset_id": "pictureX_0611_drawing_compass_with_adjustable_legs__seed_0",
+        "seed_count": 12,
+        "raw_pairwise_name_jaccard_mean": 0.11113817975448992,
+        "source_role_set_jaccard_mean": 0.8939393939393939,
+        "source_role_count_weighted_jaccard_mean": 0.9116161616161617,
+        "source_role_count_signature_mode_rate": 0.5833333333333334,
+        "source_role_count_signatures": {
+          "adjuster:1|center_point:1|head:1|lead_end:1|leg:2": 5,
+          "adjuster:1|center_point:0|head:1|lead_end:1|leg:2": 7
+        }
+      },
+      {
+        "slug": "pictureX_0611_ergonomic_clamp_with_adjustable_components",
+        "selected_asset_id": "pictureX_0611_ergonomic_clamp_with_adjustable_components__seed_0",
+        "seed_count": 10,
+        "raw_pairwise_name_jaccard_mean": 0.49624579124579127,
+        "source_role_set_jaccard_mean": 1.0,
+        "source_role_count_weighted_jaccard_mean": 1.0,
+        "source_role_count_signature_mode_rate": 1.0,
+        "source_role_count_signatures": {
+          "carriage:1|clamp_frame:1|clamp_screw:1|clamp_shoe:1|work_tray:1": 10
+        }
+      },
+      {
+        "slug": "pictureX_0611_Hand_crank_clothes_wringer",
+        "selected_asset_id": "pictureX_0611_Hand_crank_clothes_wringer__seed_0",
+        "seed_count": 10,
+        "raw_pairwise_name_jaccard_mean": 0.6141210750034279,
+        "source_role_set_jaccard_mean": 1.0,
+        "source_role_count_weighted_jaccard_mean": 1.0,
+        "source_role_count_signature_mode_rate": 1.0,
+        "source_role_count_signatures": {
+          "crank_drive:1|frame:1|pressure_block:2|roller:2": 10
+        }
+      },
+      {
+        "slug": "pictureX_0611_ergonomic_clamp_with_adjustable",
+        "selected_asset_id": "pictureX_0611_ergonomic_clamp_with_adjustable__seed_0",
+        "seed_count": 10,
+        "raw_pairwise_name_jaccard_mean": 0.34950665061346176,
+        "source_role_set_jaccard_mean": 0.9492063492063492,
+        "source_role_count_weighted_jaccard_mean": 0.9492063492063492,
+        "source_role_count_signature_mode_rate": 0.8,
+        "source_role_count_signatures": {
+          "clamp_frame:1|clamp_jaw:1|clamp_screw:1|clamp_shoe:1|pad_gimbal:1|support_arm:1|support_wrist:1": 8,
+          "clamp_frame:1|clamp_jaw:1|clamp_screw:1|clamp_shoe:1|pad_gimbal:1|support_arm:0|support_wrist:1": 2
+        }
+      },
+      {
+        "slug": "Astronomy_Pressurised_module_door",
+        "selected_asset_id": "Astronomy_Pressurised_module_door__seed_1020",
+        "seed_count": 15,
+        "raw_pairwise_name_jaccard_mean": 0.7541125541125541,
+        "source_role_set_jaccard_mean": 0.9142857142857143,
+        "source_role_count_weighted_jaccard_mean": 0.9142857142857143,
+        "source_role_count_signature_mode_rate": 0.8,
+        "source_role_count_signatures": {
+          "airlock_shell:1|debris_cover:1|hatch_lid:1|lock_handwheel:1": 3,
+          "airlock_shell:1|debris_cover:0|hatch_lid:1|lock_handwheel:1": 12
+        }
+      },
+      {
+        "slug": "pictureX_0611_Folding_table5",
+        "selected_asset_id": "pictureX_0611_Folding_table5__seed_2",
+        "seed_count": 10,
+        "raw_pairwise_name_jaccard_mean": 0.17909059602334326,
+        "source_role_set_jaccard_mean": 0.8833333333333333,
+        "source_role_count_weighted_jaccard_mean": 0.8444444444444444,
+        "source_role_count_signature_mode_rate": 0.7,
+        "source_role_count_signatures": {
+          "caster:0|drop_leaf:2|leaf_support:1|table_frame:1": 7,
+          "caster:2|drop_leaf:2|leaf_support:1|table_frame:1": 3
+        }
+      }
+    ],
+    "single_seed_cohorts_excluded": 10,
+    "input_scope": "exp-local frozen URDF snapshots",
+    "raw_pairwise_name_jaccard_cohort_macro": 0.5420706539044627,
+    "raw_pairwise_name_jaccard_cohort_median": 0.5292592592592593,
+    "raw_pairwise_name_jaccard_cohort_macro_95ci": [
+      0.42799601295915607,
+      0.6549041538186359
+    ],
+    "source_role_set_jaccard_cohort_macro": 0.9603856246055734,
+    "source_role_set_jaccard_cohort_median": 1.0,
+    "source_role_set_jaccard_cohort_macro_95ci": [
+      0.9334972588508395,
+      0.9839889579020014
+    ],
+    "source_role_count_weighted_jaccard_cohort_macro": 0.9520294283721393,
+    "source_role_count_weighted_jaccard_cohort_median": 1.0,
+    "source_role_count_weighted_jaccard_cohort_macro_95ci": [
+      0.9212739036325992,
+      0.9789316927034319
+    ]
+  },
+  "limitations": [
+    "N=33 Parts/Named were independently recomputed from converted GLB mesh nodes; local visual-to-link merge policy may still differ from the paper's unreleased converter.",
+    "The frozen role references are copied authoring/spec evidence, not independent hidden annotations.",
+    "Paper-equivalent semantic precision and recall remain unavailable until three independent judge files are completed.",
+    "Cross-seed consistency and over-segmentation are local extensions, not metrics reported in the paper's Naming table."
+  ]
+}

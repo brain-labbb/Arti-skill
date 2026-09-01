@@ -1,0 +1,78 @@
+{
+  "category_macro": {
+    "reason": "no authoritative category labels",
+    "status": "N/E"
+  },
+  "category_results": {},
+  "claim_boundary": {
+    "continuous_collision_detection": "not_run",
+    "full_release_result": false,
+    "physical_dynamics_validity": "not_evaluated",
+    "semantic_joint_correctness": "not_evaluated",
+    "shared_category_balanced_result": false
+  },
+  "cohort": {
+    "category_count": 0,
+    "child_timeouts": 0,
+    "label": "Articraft-10K qualification N=1",
+    "load_success": 0,
+    "measurement_complete": 0,
+    "selected": 1
+  },
+  "metrics": {
+    "aor": {
+      "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+      "status": "N/E"
+    },
+    "collision_free_range": {
+      "denominator": 42,
+      "passed_states": 0,
+      "rate": 0.0
+    },
+    "collision_state_rate": {
+      "collision_states": 107,
+      "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+      "denominator": 107,
+      "executed_states": 0,
+      "observed_collision_rate_executed": null,
+      "observed_collision_states": 0,
+      "rate": 1.0,
+      "unexecuted_states": 107
+    },
+    "max_penetration": {
+      "denominator": 1,
+      "fully_measured_assets": 0,
+      "maximum_observed_normalized": null,
+      "normalization": "PyBullet q=0 collision-shape union AABB diagonal",
+      "observed_assets": 0,
+      "status": "PARTIAL"
+    },
+    "multi_joint_sobol_cf": {
+      "denominator": 1,
+      "passed": 0,
+      "rate": 0.0
+    },
+    "rest_all_pair_cf": {
+      "denominator": 1,
+      "passed": 0,
+      "rate": 0.0
+    },
+    "rest_non_adjacent_cf": {
+      "denominator": 1,
+      "passed": 0,
+      "rate": 0.0
+    },
+    "single_joint_sweep_cf": {
+      "denominator": 1,
+      "passed": 0,
+      "rate": 0.0
+    },
+    "strict_collision_pass": {
+      "denominator": 1,
+      "passed": 0,
+      "rate": 0.0
+    }
+  },
+  "protocol_id": "urdf_sim_ready_table4_articraft10k_qualification_v1",
+  "status": "COMPLETE_WITH_RETAINED_FAILURES"
+}

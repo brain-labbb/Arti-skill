@@ -1,0 +1,156 @@
+{
+  "artifact_manifest_content_sha256": "e69fdb90e5633c629478392af773c0fce7c316ffeb759062b73fd5cf9dd9da05",
+  "classification": "SMOKE",
+  "created_at_utc": "2026-08-24T11:18:50.867861Z",
+  "dataset": "Ours per-class N=5 (supplementary)",
+  "denominators": {
+    "j_eval": 131,
+    "n_eval": 18,
+    "range_evaluable_joints": 131,
+    "range_invalid_joints": 0,
+    "states_executed": 2751,
+    "states_fail_closed_without_replay": 0,
+    "states_genesis_replay_intended": 2751,
+    "states_intended": 2751
+  },
+  "excludes": {
+    "artifact_manifest.json": "self-referential manifest",
+    "child_jobs/": "non-public child launch scratch",
+    "children/": "non-public child result scratch; aggregate records are closed above",
+    "genesis-cache/": "non-public regenerable runtime cache"
+  },
+  "execution": {
+    "asset_timeout_seconds": 1800,
+    "workers": 1
+  },
+  "files": {
+    "asset_records.jsonl": {
+      "bytes": 1474638,
+      "sha256": "528a1b386eaf692570197b6c3f8075e3bd213fc7f0e6a17699ab07b3c4607d93"
+    },
+    "frozen_config.json": {
+      "bytes": 11828,
+      "sha256": "eb974095091b746f7e935d395bdd32b75c0d2a8a1cf09c8035f0de8480a7b64e"
+    },
+    "joint_records.jsonl": {
+      "bytes": 83181,
+      "sha256": "65d148e48c2a406365f5f516a1711ffc4fb540667544d7ae97d855d8d4a45d58"
+    },
+    "manifest.json": {
+      "bytes": 1453,
+      "sha256": "bd1e361c4b8d20f95432af4aac3f128f5f978ccaf8396b76cad5e807fb92e1f2"
+    },
+    "protocol_snapshot.md": {
+      "bytes": 276310,
+      "sha256": "b05a4edbe61037f2dc4bc1bc1580e66f13f852fc24a3b979e130e8a7aa30ef00"
+    },
+    "summary.json": {
+      "bytes": 5201,
+      "sha256": "da5b9135a9bc3886db746aff7251442931575f14c21d5a727e883f08f9da35b8"
+    },
+    "summary.md": {
+      "bytes": 1382,
+      "sha256": "2facf5a810570f3e74b87c7707f0a04bb430ef090a3a58066812006bc53969f8"
+    },
+    "timing.json": {
+      "bytes": 1091,
+      "sha256": "2016207e188b886c11d0a332342643a01cf25c66546bef5d1f798aed0a641a4c"
+    },
+    "verification.json": {
+      "bytes": 2185,
+      "sha256": "10bbdeba41d2db79f2806716cff617790326138127c64b067e2ff6b4b476e393"
+    }
+  },
+  "frozen_config_content_sha256": "a098156d503663fcb85b4dbf5cf24676ca1a8595d3408af71fe9ef0fa6649e9e",
+  "mode": "smoke",
+  "protocol_id": "table4a_ours_pva_per_class_n5_max_joints_v1",
+  "protocol_snapshot_sha256": "b05a4edbe61037f2dc4bc1bc1580e66f13f852fc24a3b979e130e8a7aa30ef00",
+  "schema_version": "table4a-ours-pva-per-class-n5-artifact-manifest/v1",
+  "source_table4": {
+    "artifact_manifest": {
+      "bytes": 2036,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z/artifact_manifest.json",
+      "sha256": "55c0f6f02367462eca88be7cc1989aac2afd96de7f5683ca10eaebe0a9df0234"
+    },
+    "asset_records": {
+      "bytes": 462784095,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z/asset_records.jsonl",
+      "sha256": "5b12532a35ace2a46286440ce24cfb6aed540e29248aa78170fcfbd2fcff0862"
+    },
+    "directory": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z",
+    "frozen_manifest": {
+      "bytes": 19166380,
+      "content_sha256": "b43bf43a5e89aaa5812c5a1979987c9881ee41644fa58f7eb0c34f8f3a51440f",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z/frozen_manifest.json",
+      "sha256": "c23d92a582ac7d8d122d6c34d17d2f057dd4a309aa696414b71387debce13f35"
+    },
+    "state_records": {
+      "bytes": 454277152,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z/state_records.jsonl",
+      "sha256": "30ee16550ec6abf35150f78a1c9da8b58ca2f368c0e2090f7000de30db3dea14"
+    }
+  },
+  "source_table4_content_sha256": "5f7e275f4b4dae0c68524d479662a6927a91361be4ba3cf31e218eb31624e742",
+  "static_inputs": {
+    "adapter_runner": {
+      "bytes": 113274,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4a_ours_pva_per_class_n5.py",
+      "sha256": "3264e2c5b34a6b1c3165807a816409c3dd4f309b07cd289f40adc78d301bdedc"
+    },
+    "canonical_cohort": {
+      "bytes": 9309553,
+      "content_sha256": "eea55287dd70b710a7c03b11b16c6685208bbaa63cde925232293cb9012c8158",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/PV-A-per-class-n5-max-joints/manifest.json",
+      "sha256": "e78f4b767023f8a5c1517d96bfab35a39482d6eee28238820a9b91ac3ea8d293"
+    },
+    "cpu_affinity_launcher": {
+      "bytes": 2179,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/exec_with_cpu_affinity.py",
+      "sha256": "5d8bdf549b4de7ae62f43ee62ab2b1d1bd6283b491a8b5de429220a5b36d4f52"
+    },
+    "genesis_runner": {
+      "bytes": 94534,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_lam_supplementary_v1.py",
+      "sha256": "c43f3047553e4fbc9dfeefcbb7308bc42df8c6f0aab24f2a85f412c5efe12df5"
+    },
+    "protocol_document": {
+      "bytes": 276310,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/URDF-Sim-Ready-Automatic-Evaluation.md",
+      "sha256": "b05a4edbe61037f2dc4bc1bc1580e66f13f852fc24a3b979e130e8a7aa30ef00"
+    },
+    "shared_table4a_runner": {
+      "bytes": 60483,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4a_articraft10k.py",
+      "sha256": "f42693496ed0cf8c2517e2543a1adbd7a2bd1465fdc9efbb7a26837523726f7a"
+    },
+    "static_atoms": {
+      "bytes": 51440,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_static.py",
+      "sha256": "4701415dad8a5c0a434c16887979bcb70c250ba0b25772014e8db73789098e5f"
+    },
+    "table2_cohort": {
+      "bytes": 9669631,
+      "content_sha256": "afff3beb6ba320ccb4855ecb380de47b6de7ca91fdc77f2ba071a53944e03c14",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table2_pva_per_class_n5_max_joints/manifest.json",
+      "sha256": "97b7df486b75f961978bc86eb7a2985cb8e40eba63336ed7531700a4ff234471"
+    },
+    "table3_manifest": {
+      "bytes": 9288263,
+      "content_sha256": "1a35ba1462777239bdaf83e998a056fb228f34e434a2c083fe1a4a32fc255903",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table3_pva_per_class_n5_max_joints_n2655_20260824T0310Z/manifest.json",
+      "sha256": "49a8baee13deabc748fca589c954cb771a119b4499486dee9866a2030f3d36de"
+    },
+    "table3_records": {
+      "bytes": 16407022,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table3_pva_per_class_n5_max_joints_n2655_20260824T0310Z/asset_records.jsonl",
+      "sha256": "1e573c5f097eef8c6a63b8de295502c17104320131110fafa432edf5edf78d86"
+    }
+  },
+  "static_inputs_content_sha256": "89f7eb67ebbc15b9e05a41d2965fc3d692095a18be5518119a79ac2c7473c8d2",
+  "wall_clock": {
+    "completed_at_utc": "2026-08-24T11:18:50.867861Z",
+    "measurement_endpoint": "after shared run_scope and before post-run receipt publication",
+    "started_at_utc": "2026-08-24T10:30:17.315037Z",
+    "wall_time_seconds": 2913.552835
+  }
+}

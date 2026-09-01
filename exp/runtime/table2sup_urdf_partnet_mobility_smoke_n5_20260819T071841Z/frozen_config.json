@@ -1,0 +1,133 @@
+{
+  "asset_resolution": {
+    "package_is_asset_directory": true,
+    "urdf_relative_path": "mobility.urdf"
+  },
+  "classification": "SMOKE",
+  "cohort": {
+    "dataset_root": "/mnt/zsn/lyb/arti-skill/exp/PartNet-Mobility/data/dataset",
+    "items": [
+      {
+        "category": "Lamp",
+        "dataset_id": "16832",
+        "expected_movable_joints": 2,
+        "expected_urdf_sha256": "4c6c3993cf3c1d9630317fecb2300da7b60c4724aa90f8fe172d57830b492cb6",
+        "frozen_joint_spec_count": 2,
+        "package": "/mnt/zsn/lyb/arti-skill/exp/PartNet-Mobility/data/dataset/16832",
+        "selection_index": 0,
+        "table3_declared_joint_count": 2
+      },
+      {
+        "category": "Switch",
+        "dataset_id": "100845",
+        "expected_movable_joints": 2,
+        "expected_urdf_sha256": "d68d8ecd597cd71417c6b7e255d9dea7b0eb280c6963fe7d4b50ba9fd1832ca4",
+        "frozen_joint_spec_count": 2,
+        "package": "/mnt/zsn/lyb/arti-skill/exp/PartNet-Mobility/data/dataset/100845",
+        "selection_index": 1,
+        "table3_declared_joint_count": 2
+      },
+      {
+        "category": "Switch",
+        "dataset_id": "100970",
+        "expected_movable_joints": 1,
+        "expected_urdf_sha256": "a2b809ac9ed85cbdc2430512d86e380e85146c742195651bb6435d45ce137d75",
+        "frozen_joint_spec_count": 1,
+        "package": "/mnt/zsn/lyb/arti-skill/exp/PartNet-Mobility/data/dataset/100970",
+        "selection_index": 2,
+        "table3_declared_joint_count": 1
+      },
+      {
+        "category": "TrashCan",
+        "dataset_id": "4108",
+        "expected_movable_joints": 1,
+        "expected_urdf_sha256": "5e675bd927ea28cb4f1b177a2e7f782843791ba7672a39a8358f01442383e62c",
+        "frozen_joint_spec_count": 1,
+        "package": "/mnt/zsn/lyb/arti-skill/exp/PartNet-Mobility/data/dataset/4108",
+        "selection_index": 3,
+        "table3_declared_joint_count": 1
+      },
+      {
+        "category": "CoffeeMachine",
+        "dataset_id": "103138",
+        "expected_movable_joints": 3,
+        "expected_urdf_sha256": "51f1240809c664abda524144eadb4f91b20765a15181e42b8c693be13b54ec39",
+        "frozen_joint_spec_count": 3,
+        "package": "/mnt/zsn/lyb/arti-skill/exp/PartNet-Mobility/data/dataset/103138",
+        "selection_index": 4,
+        "table3_declared_joint_count": 3
+      }
+    ],
+    "j_eval": 9,
+    "n_eval": 5,
+    "ordered_ids_sha256": "ef6cb964e50dc712280256c5b2f675cc2c957095c3553b21845d3562a5011883",
+    "selection_policy": "all items[].dataset_id from the Table 4 frozen manifest in existing order; no resampling, replacement or result-based filtering",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_partnet_mobility_n800_20260813/frozen_manifest.json",
+    "source_manifest_sha256": "2ff015ee6bb377ce693126b52dd632a7565a3eaa9f0007e26122a1bb4ab99900"
+  },
+  "dataset": "PartNet-Mobility",
+  "environment": {
+    "numpy_version": "2.5.1",
+    "platform": "Linux-5.10.134-19.103.al8.x86_64-x86_64-with-glibc2.39",
+    "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+    "python_version": "3.12.3",
+    "runner_script": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table2sup_partnet_mobility.py",
+    "runner_script_sha256": "7b96c7197fc09942f8911173ea1ebc4a8fd465c263c5b7989837b066b401532a",
+    "static_module": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_static.py",
+    "static_module_sha256": "1c2fdc2c3d9f8ebcb3ab6b0bf8144b307c86b4b44790cf3182c2395ab37267ff",
+    "trimesh_version": "5.0.0"
+  },
+  "execution": {
+    "asset_timeout_seconds": 120.0,
+    "child_process": {
+      "interpreter": "sys.executable fresh interpreter",
+      "job_protocol": "per-job JSON input and atomic per-job JSON result in output-owned directories",
+      "start_new_session": true,
+      "termination": "SIGTERM owned process group, grace 0.2 seconds, then SIGKILL",
+      "thread_environment": {
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      }
+    },
+    "denominator_policy": "all frozen selected assets and joints, including failures, timeouts and non-executed items",
+    "workers": 4
+  },
+  "frozen_at_utc": "2026-08-19T07:18:41.495101Z",
+  "metric_rules": {
+    "joint_dynamics_coverage": "\u540c\u65f6\u58f0\u660e\u6709\u9650\u3001\u975e\u8d1f damping \u4e0e friction \u7684 movable joints \u6570\u9664\u4ee5 J_eval\uff1b\u7f3a\u5931\u4efb\u4e00\u5b57\u6bb5\u8ba1\u4e3a\u672a\u8986\u76d6\u3002\u8be5\u9879\u53ea\u8861\u91cf\u5b57\u6bb5\u8986\u76d6\uff0c\u4e0d\u8bc1\u660e\u6570\u503c\u7ecf\u8fc7\u52a8\u529b\u5b66\u6821\u51c6\uff0c\u4e5f\u4e0d\u8fdb\u5165\u65e2\u6709 Strict URDF Pass\u3002",
+    "joint_limit_portability": "\u5173\u8282\u7ea7 passed / J_eval\u3002bounded revolute/prismatic joint \u5fc5\u987b\u5177\u6709\u6709\u9650\u7684 lower < upper\u3001\u6709\u9650\u4e14\u975e\u8d1f\u7684 effort \u548c\u6709\u9650\u4e14\u4e3a\u6b63\u7684 velocity\uff1bcontinuous joint \u4e0d\u8981\u6c42\u6709\u9650 lower/upper\uff0c\u4f46\u4ecd\u987b\u6ee1\u8db3\u51bb\u7ed3 adapter \u5171\u540c\u8981\u6c42\u7684 effort/velocity \u5b57\u6bb5\u3002\u5176\u4ed6 joint type \u6309\u67e5\u770b\u7ed3\u679c\u524d\u51bb\u7ed3\u7684 per-type mapping \u5904\u7406\uff1b\u7f3a\u5b57\u6bb5\u3001unsupported mapping \u548c\u672a\u6267\u884c\u9879\u5747\u4fdd\u7559\u4e3a\u5931\u8d25\u3002",
+    "placeholder_mass_incidence": "\u5728\u5177\u6709 complete inertial \u7684\u52a8\u6001 link \u4e2d\uff0cmass \u6216\u5b8c\u6574 inertial tuple \u547d\u4e2d\u9884\u6ce8\u518c exporter/simulator \u9ed8\u8ba4\u6a21\u677f\u7684 link \u6570\u9664\u4ee5 complete-inertial link \u6570\uff0c\u5e76\u540c\u65f6\u62a5\u544a complete-inertial links / dynamic links coverage\u3002\u9ed8\u8ba4\u6a21\u677f\u6216 sentinel \u53ea\u80fd\u6765\u81ea\u51bb\u7ed3\u5de5\u5177\u9ed8\u8ba4\u503c\u6216\u516c\u5f00\u6587\u6863\uff0c\u7981\u6b62\u67e5\u770b\u65b9\u6cd5\u7ed3\u679c\u540e\u6dfb\u52a0\uff1b\u5206\u6bcd\u4e3a\u96f6\u65f6\uff0c\u6b63\u5f0f\u8fd0\u884c\u540e\u8bb0\u4e3a N/E \u800c\u4e0d\u662f 0\u3002\u8be5\u9879\u662f\u8bca\u65ad flag\uff0c\u4e0d\u8bc1\u660e\u88ab\u6807\u8bb0\u8d28\u91cf\u4e00\u5b9a\u9519\u8bef\uff0c\u4e5f\u4e0d\u8fdb\u5165\u65e2\u6709 Strict URDF Pass\u3002",
+    "visual_bearing_collision_coverage": "\u4e3b\u503c\u4e3a\u8d44\u4ea7\u7ea7 passed / N_eval\uff1a\u8d44\u4ea7\u5fc5\u987b\u53ef\u89e3\u6790\u3001\u81f3\u5c11\u5305\u542b\u4e00\u4e2a\u5728 XML \u4e2d\u58f0\u660e <visual> geometry \u7684 visual-bearing link\uff0c\u4e14\u6bcf\u4e2a\u6b64\u7c7b link \u90fd\u81f3\u5c11\u5305\u542b\u4e00\u4e2a\u8d44\u6e90\u53ef\u89e3\u6790\u3001\u53ef\u52a0\u8f7d\u7684 collision geometry\uff1b\u89e3\u6790\u5931\u8d25\u3001visual/collision \u8d44\u6e90\u5931\u8d25\u6216\u96f6 visual-bearing link \u5747 fail closed\u3002\u53e6\u8865\u5145\u62a5\u544a covered visual-bearing links / L_visual_declared \u7684 link-micro \u503c\u53ca link extraction coverage\u3002\u8be5\u6307\u6807\u8865\u5145\u800c\u4e0d\u66ff\u6362\u65e2\u6709\u6309\u5168\u90e8\u58f0\u660e link \u8ba1\u7b97\u7684 Collision Coverage\u3002"
+  },
+  "mode": "smoke",
+  "operationalization": {
+    "dynamic_link_policy": "all_declared_links (frozen precedent)",
+    "dynamics_rule": "exactly one <dynamics> element with finite damping >= 0 and finite friction >= 0; missing element or either field counts as uncovered.",
+    "expected_movable_joints_source": "Per-asset expected denominator = Table 4 frozen manifest items[].movable_dof_count (identical to len(items[].joint_specs)); cross-checked at runtime against Table 3 asset_records declared_joint_count; mismatch fails the asset closed.",
+    "link_covered_rule": "A visual-bearing link is covered iff it declares at least one collision element whose single geometry child passes the frozen _collision_geometry_loadable checks (primitive validity or mesh resource resolution plus byte-level loadability).",
+    "link_extraction_coverage": "link_extraction_complete per asset requires all declared links to be named and uniquely named; asset_pass additionally requires it (frozen atom).",
+    "parse_gate": "XML well-formed parse plus root element named robot (frozen precedent: lam_supplementary_static.audit_lam_package). This is not the urdfpy standard-parser gate used by Table 2 Parse Rate.",
+    "placeholder_registry": "Empty registry frozen before any PartNet-Mobility result was inspected. Identical to the frozen LAM supplementary precedent (run_urdf_lam_supplementary_v1.py passes placeholder_registry=[]). No exporter/simulator default template is pre-registered for this comparison; the cell is therefore N/E with reason placeholder_registry_empty, reported together with complete-inertial / dynamic-link coverage.",
+    "portability_per_type_mapping": {
+      "continuous": "exactly one <limit> element required (cardinality), no finite lower/upper requirement; finite effort >= 0; finite velocity > 0",
+      "fixed": "excluded from J_eval",
+      "other": "unsupported_mapping fail (planar/floating/missing type retained as failures)",
+      "prismatic": "bounded: exactly one <limit> with finite lower < upper; finite effort >= 0; finite velocity > 0",
+      "revolute": "bounded: exactly one <limit> with finite lower < upper; finite effort >= 0; finite velocity > 0"
+    },
+    "urdf_identity_gate": "Per-asset mobility.urdf SHA-256 must equal the Table 4 frozen manifest items[].urdf_sha256; mismatch fails the asset closed.",
+    "visual_bearing_link_eligibility": "A link is visual-bearing iff it declares at least one <visual> element containing at least one <geometry> child (frozen atom: _visual_collision_atoms)."
+  },
+  "placeholder_registry": [],
+  "placeholder_registry_rationale": "Empty registry frozen before any PartNet-Mobility result was inspected. Identical to the frozen LAM supplementary precedent (run_urdf_lam_supplementary_v1.py passes placeholder_registry=[]). No exporter/simulator default template is pre-registered for this comparison; the cell is therefore N/E with reason placeholder_registry_empty, reported together with complete-inertial / dynamic-link coverage.",
+  "protocol_document": "/mnt/zsn/lyb/arti-skill/exp/URDF-Sim-Ready-Automatic-Evaluation.md",
+  "protocol_document_sha256": "dd7898b9be5150300828067b9b38f8cd051df3fdddf99a5d4ca26e7da73c2137",
+  "protocol_id": "table2_supplementary_partnet_mobility_table4cohort_n800_v1",
+  "table3_cross_check": {
+    "asset_records": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table3_partnet_mobility_table4_n800_20260814T070118Z/asset_records.jsonl",
+    "asset_records_sha256": "0c508c4cfe0774819857303561cfcfaccf1c84bd8705feb2ef870a1c92a99262",
+    "j_eval": 4078
+  }
+}

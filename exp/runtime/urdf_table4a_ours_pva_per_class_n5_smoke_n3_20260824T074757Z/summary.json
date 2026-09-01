@@ -1,0 +1,132 @@
+{
+  "classification": "SMOKE",
+  "cohort": {
+    "j_eval": 5,
+    "n_eval": 3,
+    "ordered_ids_sha256": "b5c9262eca8e65ede90c597a16e4ed2b0d7348b4eeb326cd64a06cea518c4178",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z/frozen_manifest.json",
+    "source_manifest_file_sha256": "c23d92a582ac7d8d122d6c34d17d2f057dd4a309aa696414b71387debce13f35"
+  },
+  "completed_at_utc": "2026-08-24T07:56:43.128287Z",
+  "dataset": "Ours per-class N=5 (supplementary)",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "79e3a5bad5a80f94a8a650e8b716ce2769ad75537c5bb95f30d3be33add93e68",
+  "metrics": {
+    "collision_safe_dof_retention": {
+      "denominator": 14968,
+      "numerator": 1,
+      "percent": 0.0067
+    },
+    "dof_bins": {
+      "0": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      },
+      "1": {
+        "joints_intended": 1,
+        "joints_passed": 1,
+        "n_eval": 1,
+        "safe": 1,
+        "strict_pass": 1
+      },
+      "2--3": {
+        "joints_intended": 4,
+        "joints_passed": 0,
+        "n_eval": 2,
+        "safe": 0,
+        "strict_pass": 0
+      },
+      "4--7": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      },
+      ">=8": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      },
+      "unknown/unparseable": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      }
+    },
+    "executable_cf_dof_per_asset": {
+      "mean": 0.3333,
+      "median": 0.0,
+      "n_assets": 3,
+      "p90": 0.8,
+      "total_safe_dof": 1
+    },
+    "joint_level_full_range_cf": {
+      "denominator": 5,
+      "numerator": 1,
+      "percent": 20.0
+    },
+    "limit_reachability": {
+      "continuous_excluded": 0,
+      "denominator": 5,
+      "numerator": 1,
+      "percent": 20.0
+    },
+    "normalized_clearance_p5": {
+      "asset_coverage": {
+        "denominator": 3,
+        "numerator": 3,
+        "percent": 100.0
+      },
+      "coverage_status": "COMPLETE",
+      "reason": "genesis_contact_penetration_has_no_signed_clearance_no_independent_exact_distance_backend_registered",
+      "state_coverage": {
+        "denominator": 105,
+        "numerator": 105,
+        "percent": 100.0
+      },
+      "status": "N/E"
+    },
+    "state_counts": {
+      "executed": 105,
+      "hash_cross_check": {
+        "mismatch": 0,
+        "no_reference": 0,
+        "verified": 105
+      },
+      "intended": 105
+    },
+    "status_counts": {
+      "completed": 3,
+      "error": 0,
+      "total": 3
+    }
+  },
+  "mode": "smoke",
+  "notes": [
+    "The intent denominator is 314,328 states (14,968 joints x K=21). Genesis replay is attempted only for the 313,803 states of 14,943 range-evaluable joints; the 525 states belonging to 25 zero-width joints are not submitted to Genesis and remain explicit fail-closed records.",
+    "For states that execute in Genesis, available frozen Table 4 q-vector hashes are cross-checked; missing references remain explicitly classified as no_reference and hash mismatches fail verification.",
+    "Every package file is bound by the canonical cohort manifest and rehashed before scheduling plus immediately before and after each Genesis child; drift invalidates publication.",
+    "State collision oracle = Genesis contact-penetration backend; penetration > 1e-6 m is illegal and all failures remain fail closed.",
+    "Headline pair policy excludes direct parent-child pairs and applies no method-specific allowance.",
+    "Normalized Clearance P5 is N/E because this oracle has no separated-pair signed clearance.",
+    "Existing Strict Collision Pass is read from the explicitly bound Table 4 receipt.",
+    "Resume is unsupported; an interrupted invocation is non-public and must restart in a new output directory. Existing output directories are rejected."
+  ],
+  "protocol_id": "table4a_ours_pva_per_class_n5_max_joints_v1",
+  "run_directory": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4a_ours_pva_per_class_n5_smoke_n3_20260824T074757Z",
+  "started_at_utc": "2026-08-24T07:49:35.756325Z",
+  "status_counts": {
+    "completed": 3,
+    "error": 0,
+    "total": 3
+  },
+  "wall_seconds": 427.347
+}

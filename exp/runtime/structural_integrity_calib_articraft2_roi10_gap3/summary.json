@@ -1,0 +1,73 @@
+{
+  "config": {
+    "gap_fraction": 0.03,
+    "geometry_role": "visual",
+    "penetration_depth_fraction": 0.0,
+    "pose_samples": 9,
+    "roi_fraction": 0.1,
+    "skip_penetration": true,
+    "support_threshold": 0.1,
+    "surface_samples": 256
+  },
+  "datasets": {
+    "articraft_10k": {
+      "asset_count": 2,
+      "complete_asset_count": 2,
+      "geometry_coverage": {
+        "complete_assets": 2,
+        "denominator": 2,
+        "percentage": 100.0
+      },
+      "joint_gap_p95_fraction": {
+        "asset_evaluable": 2,
+        "denominator": 2,
+        "unit": "% asset bbox diagonal",
+        "value": 5.517265216427941
+      },
+      "joint_self_collision_free": {
+        "denominator": 2,
+        "evaluable_assets": 0,
+        "evaluable_poses": 0,
+        "free_poses": 0,
+        "passed": 0,
+        "percentage": null
+      },
+      "joint_support_asset_macro": {
+        "denominator": 2,
+        "evaluable_assets": 2,
+        "mean_rate": 95.0
+      },
+      "joint_support_micro": {
+        "candidate": 11,
+        "percentage": 90.9090909090909,
+        "supported": 10
+      },
+      "pose_swept_valid": {
+        "denominator": 2,
+        "evaluable_assets": 0,
+        "passed": 0,
+        "percentage": null
+      },
+      "rooted_assets": {
+        "denominator": 2,
+        "passed": 1,
+        "percentage": 50.0
+      },
+      "settings": {
+        "gap_fraction": 0.03,
+        "geometry_role": "visual",
+        "penetration_depth_fraction": 0.0,
+        "pose_samples": 9,
+        "roi_fraction": 0.1,
+        "skip_penetration": true,
+        "support_threshold": 0.1,
+        "surface_samples": 256
+      }
+    }
+  },
+  "manifest_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_v2_core200_prepared_five_full_release_articraft10787_infinigen_paired_official_metrics_r2/manifest.json",
+  "manifest_sha256": "d25debf0cd4e1ef6be0e30906730c73455c5a7ab231cefbabd45e4226c3c3b3b",
+  "protocol_id": "structural-integrity-urdf-v1-pilot",
+  "schema_version": "structural_integrity_eval_v1",
+  "script_sha256": "ab3aa0e8a5262b47e9f3896219052d915e74656d34272d61514508a907b16f8d"
+}

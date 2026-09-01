@@ -1,0 +1,62 @@
+{
+  "config": {
+    "gap_fraction": 0.002,
+    "penetration_depth_fraction": 0.0,
+    "pose_samples": 9,
+    "roi_fraction": 0.02,
+    "skip_penetration": true,
+    "support_threshold": 0.1,
+    "surface_samples": 256
+  },
+  "datasets": {
+    "pva": {
+      "asset_count": 10,
+      "complete_asset_count": 10,
+      "geometry_coverage": {
+        "complete_assets": 10,
+        "denominator": 10,
+        "percentage": 100.0
+      },
+      "joint_gap_p95_fraction": {
+        "asset_evaluable": 9,
+        "denominator": 10,
+        "unit": "% asset bbox diagonal",
+        "value": 2.616250966529777
+      },
+      "joint_support_asset_macro": {
+        "denominator": 10,
+        "evaluable_assets": 10,
+        "mean_rate": 40.24786324786325
+      },
+      "joint_support_micro": {
+        "candidate": 59,
+        "percentage": 42.3728813559322,
+        "supported": 25
+      },
+      "pose_swept_valid": {
+        "denominator": 10,
+        "passed": 1,
+        "percentage": 10.0
+      },
+      "rooted_assets": {
+        "denominator": 10,
+        "passed": 1,
+        "percentage": 10.0
+      },
+      "settings": {
+        "gap_fraction": 0.002,
+        "penetration_depth_fraction": 0.0,
+        "pose_samples": 9,
+        "roi_fraction": 0.02,
+        "skip_penetration": true,
+        "support_threshold": 0.1,
+        "surface_samples": 256
+      }
+    }
+  },
+  "manifest_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_v2_core200_prepared_five_full_release_articraft10787_infinigen_paired_official_metrics_r2/manifest.json",
+  "manifest_sha256": "d25debf0cd4e1ef6be0e30906730c73455c5a7ab231cefbabd45e4226c3c3b3b",
+  "protocol_id": "structural-integrity-urdf-v1-pilot",
+  "schema_version": "structural_integrity_eval_v1",
+  "script_sha256": "2765d85eb20b38ad45594a89ab9f01d6395e4a8bd3a4b35ad481dc572f41ef11"
+}

@@ -1,0 +1,79 @@
+{
+  "config": {
+    "batch_size": 256,
+    "data_dir": "/mnt/zsn/lyb/arti-skill/exp/artiverse/data",
+    "device": "cuda:0",
+    "expected_views": 16,
+    "force_extract": false,
+    "model_name_or_path": "/root/.cache/huggingface/hub/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+    "num_workers": 16,
+    "output_dir": "/mnt/zsn/lyb/arti-skill/exp/runtime/artiverse_vit_tsne_dinov2_base",
+    "plot_dpi": 180,
+    "random_state": 42,
+    "requested_perplexity": 30.0,
+    "tsne_jobs": -1,
+    "tsne_max_iter": 1000,
+    "tsne_verbose": 1,
+    "use_amp": true
+  },
+  "dataset": {
+    "category_count": 84,
+    "image_count": 56704,
+    "model_count": 3544,
+    "source_count": 10,
+    "views_per_model": 16
+  },
+  "feature_cache_reused": true,
+  "feature_manifest": {
+    "data_dir": "/mnt/zsn/lyb/arti-skill/exp/artiverse/data",
+    "dtype": "float32",
+    "extraction": {
+      "amp": true,
+      "batch_size": 256,
+      "device": "cuda:0",
+      "feature_dim": 768,
+      "model_name_or_path": "/root/.cache/huggingface/hub/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+      "model_type": "dinov2",
+      "num_workers": 16,
+      "sample_count": 56704
+    },
+    "feature_dim": 768,
+    "feature_file": "image_features.npy",
+    "model_fingerprint": "b2877ca885011fd477cee67c211442e8d06e564b97ed01b7d137d624246d09dd",
+    "model_name_or_path": "/root/.cache/huggingface/hub/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+    "sample_count": 56704,
+    "sample_fingerprint": "2c0e44cd33ed28d1310359308a794c5666793447c11c840dc59e1ef373fe9bb0",
+    "schema_version": 1
+  },
+  "schema_version": 1,
+  "visualization": {
+    "artifacts": {
+      "image_coordinates": "image_tsne_coordinates.csv",
+      "image_plot_by_category": "image_tsne_by_category.png",
+      "image_plot_by_source": "image_tsne_by_source.png",
+      "model_coordinates": "model_tsne_coordinates.csv",
+      "model_features": "model_features.npy",
+      "model_plot_by_category": "model_tsne_by_category.png",
+      "model_plot_by_source": "model_tsne_by_source.png"
+    },
+    "category_count": 84,
+    "image_count": 56704,
+    "image_tsne": {
+      "max_iter": 1000,
+      "n_jobs": -1,
+      "pca_components": 50,
+      "perplexity": 30.0,
+      "random_state": 42
+    },
+    "model_count": 3544,
+    "model_tsne": {
+      "max_iter": 1000,
+      "n_jobs": -1,
+      "pca_components": 50,
+      "perplexity": 30.0,
+      "random_state": 42
+    },
+    "schema_version": 1,
+    "source_count": 10
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "J_eval": 1453516,
+  "N_eval": 302440,
+  "classification": "FORMAL_FULL_RELEASE_SPARSE_CORRECTION",
+  "correction_sources": {
+    "adapter": {
+      "bytes": 47204,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_pva_table4_mimic_aware_full_release.py",
+      "sha256": "31a56e43a469f662fb977ad31bb080891c35ec744934c55497675e035c5634d8"
+    },
+    "core": {
+      "bytes": 97039,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+      "sha256": "055cd259e2cf4d9d6aee725c713dff531fe7c37ed6c14cd8b39d3f2761a93a0d"
+    },
+    "correction_script": {
+      "bytes": 98548,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_pva_table4_v2_sparse_correction.py",
+      "sha256": "edc71dc0bc590d7317c8dd51e95a24273572d010c4c3a9e4832c3d3790eb15d5"
+    },
+    "runner": {
+      "bytes": 65542,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_table4_full_release.py",
+      "sha256": "fdd154236ecf2cb78d7e672b8105daf3f058cef204c96e2af9b1aa85f5388a2d"
+    }
+  },
+  "dataset": "Ours / PV-A",
+  "dataset_slug": "pva",
+  "effective_protocol_id": "urdf_sim_ready_table4_pva_full_release_v2_corrected_r1",
+  "execution": {
+    "default_workers": 32,
+    "fresh_interpreter_per_asset": true,
+    "parent_ordinals": true,
+    "resumable_batch_transactions": true,
+    "timeout_seconds": 600.0
+  },
+  "manifest_content_sha256": "d99ba064596229135f226955cd5dbdc7f6574ea9f96804493416d0cd51aed26e",
+  "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_v2_targeted_correction_20260828",
+  "overlay_policy": "selected_parent_ordinal_atomic_record_and_state_group_replacement_v1",
+  "package_root_binding": {
+    "binding_content_sha256": "134a19ae94a9b12348f699ac5decf9d598cd007fe21ed5deedba04ba4fa64a11",
+    "logical_root": "/mnt/zsn/data/particulate/datasets/PV-A/extracted",
+    "mapping_policy": "relative_prefix_substitution_v1",
+    "package_verification": "frozen_package_files_sha256_v1",
+    "physical_root": "/tmp/pva_table4_local_mirror_20260827/extracted",
+    "roster_manifest_content_sha256": "76a02c0ba1b76eeb5e4c21bb0266a7c3f83c41ab53c8eae5dc2711cf24a3121b",
+    "schema_version": "pva_package_root_override_v1"
+  },
+  "parent": {
+    "files": {
+      "artifact_manifest": {
+        "bytes": 1243,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_mimic_aware_full_release_20260827/artifact_manifest.json",
+        "sha256": "3eafa57778153f0ca641da4cb9a6e62b1c7c05b932c6750e6a0f18d12a5a92a1"
+      },
+      "manifest": {
+        "bytes": 3540,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_mimic_aware_full_release_20260827/manifest.json",
+        "sha256": "379af4afdac70c4a0e7dd1500a84914f0ac9f4e513f9d16ce5bf41f51c90d27f"
+      },
+      "receipt": {
+        "bytes": 3712,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_mimic_aware_full_release_20260827/full_release_receipt.json",
+        "sha256": "bedd501f101146bd766d0fdfdc7302a375c105bd61b8b2223f97307a383c483f"
+      },
+      "summary": {
+        "bytes": 2132,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_mimic_aware_full_release_20260827/summary.json",
+        "sha256": "cc1ed40222850645047b5ab6150abeeb933480e70b5497f347f1f6cc91f818e5"
+      }
+    },
+    "receipt_content_sha256": "dd3f11a4e492abd82aa3ca0bba51a035f31b84323c287aaf14ea625d5e217aba",
+    "result_database": {
+      "bytes": 4278513664,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_mimic_aware_full_release_20260827/results.sqlite3",
+      "sha256": "7e6ede5d1507a38c4da2c269b2b7dfe1f7c1b76957dbd90d23f7ca12d79cd8e8"
+    },
+    "root": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_mimic_aware_full_release_20260827"
+  },
+  "parent_source_snapshot": {
+    "adapter": {
+      "bytes": 46945,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_v2_targeted_correction_20260828/parent_source_snapshot/run_pva_table4_mimic_aware_full_release.py",
+      "sha256": "94a6460e0d34eda7ee87d2f73476f1b2edb2d711f8eb1bd6eb0ecc0dfad008f6"
+    },
+    "core": {
+      "bytes": 94277,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_v2_targeted_correction_20260828/parent_source_snapshot/run_urdf_table4_partnet_mobility.py",
+      "sha256": "e0ed9166d714bf6abf2ede9210110f9cff9bf764b66e1390dddec4f2f57ad9c6"
+    },
+    "runner": {
+      "bytes": 64415,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_v2_targeted_correction_20260828/parent_source_snapshot/run_table4_full_release.py",
+      "sha256": "9c0171fb26b375d21e720837408a028354004c680c480238c5a987e3a0630198"
+    }
+  },
+  "prepared_at_utc": "2026-08-28T06:38:45.956981Z",
+  "schema_version": "pva_table4_v2_sparse_correction_overlay_run_v1",
+  "selection": {
+    "audit": {
+      "bytes": 367401690,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_v2_targeted_correction_20260828/selection_audit.jsonl",
+      "sha256": "eea935d587e30c96ca4c41a4a69d1cf0f40e8757293aef1e9dce5a7bb4bb9242"
+    },
+    "cohort_totals": {
+      "fixed_root_joint_count": 1091,
+      "mimic_joint_count": 98540,
+      "new_independent_dof": 1353885,
+      "new_range_evaluable_independent_dof": 1353885,
+      "new_single_states_expected": 28431585,
+      "new_sobol_states_expected": 19356096,
+      "old_independent_dof": 1354976,
+      "old_range_evaluable_independent_dof": 1353885
+    },
+    "corrective_selected_asset_count": 847,
+    "database": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table4_v2_targeted_correction_20260828/overlay.sqlite3",
+    "expected_correction_assets": 847,
+    "high_capacity_runtime_attested": false,
+    "include_backend_capacity_errors": false,
+    "reason_counts": {
+      "expanded_rest_normalizer": 633,
+      "zero_width_fixed_root": 214
+    },
+    "recognized_reason_counts": {
+      "recognized_parent_backend_capacity_retained": 63
+    },
+    "recognized_unexecuted_state_counts": {
+      "recognized_parent_backend_capacity_retained": 6107
+    },
+    "scanned_asset_count": 302440,
+    "selected_asset_count": 847,
+    "selected_assets_sha256": "b68a46e2b2f17de743600de9d15a0a69022b8db2676f2da588fd708dc4e2764f",
+    "selection_audit_sha256": "eea935d587e30c96ca4c41a4a69d1cf0f40e8757293aef1e9dce5a7bb4bb9242",
+    "unselected_asset_count": 301593,
+    "unselected_parity_sha256": "9f719e04f1321dbb2bf929eba0fc271bc782aa9dafa418204c305cc6e6dd291c"
+  },
+  "source_roster": {
+    "database": {
+      "bytes": 11311423488,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table1234_full_release_20260826/evaluation/results.sqlite3",
+      "sha256": "85ade479b5babe8aacb1c9c19e70a2fa553c81617bb3c69b803d9e066e6f3781"
+    },
+    "manifest": {
+      "bytes": 271156,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table1234_full_release_20260826/roster/roster_manifest.json",
+      "sha256": "4c2e5e9dc5ca65f037a65a3048e740c55c5530f5bc86956b36f6d80ac22b4c1a"
+    },
+    "receipt": {
+      "bytes": 4437,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table1234_full_release_20260826/evaluation/full_release_receipt.json",
+      "sha256": "3972425d8b446b88cd728b32b3a23f95c731a4ff9e31757348e5d316f35403e5"
+    }
+  }
+}

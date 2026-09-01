@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "addendum_id": "table4_constraints_v2_physx_mobility_clip_retrieval_v1_addendum1",
+  "frozen_utc": "2026-08-13T07:37:09Z",
+  "status": "pre_result_frozen",
+  "base_amendment": {
+    "path": "exp/reference/table4_constraints_v2/amendment_physx_mobility_clip_retrieval_v1.json",
+    "sha256": "b92adc3504ef926554b5329c99bedcdbe0fe595aaf8938eb0ab226262ef3ae3f",
+    "policy": "This append-only addendum supersedes the old implementation, renderer, selector, canonicalization, and formal-path sections. Dataset identity, benchmark hashes, numeric N/A, count N/R, and fixed-dataset-not-generation boundaries remain in force."
+  },
+  "scope": {
+    "method_id": "physx_mobility_clip_retrieval_v1",
+    "method_type": "prompt_only_global_top1_retrieval_from_a_fixed_released_dataset",
+    "is_generation_method": false,
+    "paper_label": "PhysX-Mobility prompt-only CLIP retrieval (fixed-dataset reference; not generation)",
+    "primary_report": "eligible render coverage, selected artifact coverage, and retrieval reproducibility",
+    "headline_generation_ranking_eligible": false
+  },
+  "benchmark": {
+    "source_prompt_manifest": "exp/reference/table4_constraints_v2/prompts.jsonl",
+    "source_prompt_manifest_sha256": "0b46c15c65c46550cc25654ccca10e4de87f1b97e6bde89796ea3cc9b439065e",
+    "prompt_only_manifest": "exp/reference/table4_constraints_v2/prompt_only_table4_constraints_v2.jsonl",
+    "prompt_only_manifest_sha256": "d61accecdfc0f6fed6b9bf05339f79da12c89567e510d68f5df93fa88ac357d0",
+    "prompt_only_schema": [
+      "task_id",
+      "prompt"
+    ],
+    "protocol": "exp/reference/table4_constraints_v2/protocol.json",
+    "protocol_sha256": "6857194072ccb0ba3943d14a62f29c2364920ec01381a5475311535c1831031f",
+    "task_count": 18,
+    "selector_prompt_policy": "The pre-prompt launcher verifies the exact frozen source rows and projects exact strings/order to the locked prompt-only file. The selector reads only that two-field file and never reads the full benchmark rows, specs, protocol contents, amendment, audit, source metadata, or scorer."
+  },
+  "dataset_and_provenance": {
+    "dataset_id": "Caoza/PhysX-Mobility",
+    "revision": "d0768ee9e1415f6be8db78d6389ba018b85134c0",
+    "source_root": "/mnt/zsn/zsn_workspace/Ctrl-3D-trellis2-controlnet-dev/demo/physical_edit_demo/third_party/physx_mobility/extracted/PhysX_mobility",
+    "archive": "/mnt/zsn/zsn_workspace/Ctrl-3D-trellis2-controlnet-dev/demo/physical_edit_demo/third_party/physx_mobility/PhysX-Mobility.zip",
+    "archive_bytes": 937374668,
+    "archive_sha256": "88308cc2a4cc6177c59e32c2de51e881e6b961737295e5082d7ed01cca221908",
+    "local_huggingface_metadata": "/mnt/zsn/zsn_workspace/Ctrl-3D-trellis2-controlnet-dev/demo/physical_edit_demo/third_party/physx_mobility/.cache/huggingface/download/PhysX-Mobility.zip.metadata",
+    "local_huggingface_metadata_sha256": "2e9fe98c3a42737ba25d6791d39fc6aa7201cc595ea761b6023d99645479f439",
+    "provenance_evidence": "exp/baselines/physx_mobility/provenance_evidence.json",
+    "provenance_evidence_sha256": "4d43f29b1b086d969551fbcd6adbf68557bea4ee2ff8373d56ebafab57e06ecb",
+    "license": "CC-BY-NC-4.0 from the official Hugging Face dataset API",
+    "license_boundary": "The pinned local archive contains no license text. The dataset license is externally verified; the official code-repository license is separate.",
+    "expected_assets": 2024,
+    "native_object_render_coverage": "0/2024; JPG/PNG files in the release are textures, not precomputed object views"
+  },
+  "private_source_gate": {
+    "archive_extraction": "Reject absolute, parent, dot, non-normalized, duplicate-normalized, and symlink ZIP members. Require exact regular-file path-set equality and stream SHA-256 byte equality for every ZIP/extracted file.",
+    "identity_closure": {
+      "partseg_directories": 2024,
+      "finaljson_files": 2024,
+      "base_urdf_files": 2024
+    },
+    "zero_pose_invariant": {
+      "base_urdfs": 2024,
+      "mesh_bearing_links": 14096,
+      "visuals": 91855,
+      "all_visual_origins_identity": true,
+      "all_mesh_scales_one": true,
+      "all_mesh_bearing_link_world_transforms_identity_at_q0": true,
+      "maximum_transform_error": 0.0,
+      "consequence": "Direct raw-OBJ visual composition is geometry-equivalent to official q=0 URDF visual geometry for this pinned cohort."
+    },
+    "exact_private_closure": "Before and after source lock, require the exact top-level file/directory set. geometry_scenes must equal the render-plan set; geometry_blobs must equal the complete set referenced by all scenes; every item is regular non-symlink and every bound hash matches. The shared builder independently repeats this closure gate before rendering.",
+    "selector_forbidden_private_data": "source identities and paths, URDF/XML, finaljson contents, link/joint/visual names, category, dimensions, raw geometry, and source binding"
+  },
+  "camera_frame": {
+    "canonical_up": "+Z",
+    "source_to_canonical": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "official_evidence": {
+      "repository": "https://github.com/ziangcao0312/PhysX-Anything.git",
+      "commit": "e221826e6176d940905126d1894f9c1c933b70a8",
+      "path": "dataset/1voxel_mobility.py",
+      "sha256": "db24f80e230f8f2e3d2f53fd575b47fdfd180252d2cd80d3440bf56a51a6e7bc",
+      "rule": "R_x(+pi/2) is the official fixed preprocessing rotation."
+    },
+    "application": "camera_frame maps source coordinates to the shared canonical camera coordinates. The renderer maps canonical camera and light poses back by inverse(camera_frame); mesh vertices, visual transforms, and q=0 URDF transforms remain byte/numerically unchanged.",
+    "semantic_up_inference_from_category_or_prompt": false
+  },
+  "shared_renderer": {
+    "paired_arm": "PartNet-Mobility fixed-dataset retrieval reference",
+    "actual_shared_worker": "exp/scripts/render_partnet_mobility_table4_opaque.py",
+    "canonical_up": "+Z",
+    "views": 8,
+    "resolution": [
+      256,
+      256
+    ],
+    "azimuth_degrees": [
+      0,
+      45,
+      90,
+      135,
+      180,
+      225,
+      270,
+      315
+    ],
+    "elevation_degrees": 22.5,
+    "framing": "orthographic half-frame 1.15 times canonical AABB half-diagonal; camera radius 3.2, znear 0.01, and zfar 8.0 times the same half-diagonal",
+    "appearance": "white background; base RGBA (0.56,0.62,0.68,1); metallic 0; roughness 0.78; double-sided; smooth false; ambient RGB (0.42,0.42,0.42); one camera-aligned directional light intensity 2.6; RGB PNG compress level 9",
+    "nonblank_gate": "Each view must contain at least 32 pixels with any RGB channel below 250.",
+    "fresh_runs": 2,
+    "run_workers": {
+      "run1": 1,
+      "run2": 4
+    },
+    "replay": "All candidate inventory rows, every PNG byte/hash, and worker runtime fingerprint must be identical across both fresh full renders.",
+    "renderer_gpu": {
+      "EGL_DEVICE_ID": "1",
+      "nvidia_smi_name": "NVIDIA L20X",
+      "nvidia_smi_uuid": "GPU-7390aec1-d177-6672-4136-d998c85f489d",
+      "nvidia_smi_driver": "570.172.08",
+      "nvidia_smi_memory_mib": "143771",
+      "nvidia_smi_compute_capability": "8.9"
+    }
+  },
+  "shared_selection": {
+    "selection_contract": "exp/reference/table4_constraints_v2/selection_contract_physx_mobility_clip_retrieval_v1.json",
+    "selection_contract_sha256": "b75da98ae4352733ba96f137e060ce9ebfedfcf85c0d73f22560d4c29e8b1954",
+    "selector_visible_contract_is_nonsemantic": true,
+    "selector_visible_contract_forbidden_fields": [
+      "dataset or method name",
+      "source identity or path",
+      "license or provenance",
+      "category or difficulty",
+      "part names or dimensions",
+      "full benchmark rows, specs, scorer, or prior outputs"
+    ],
+    "model": "openai/clip-vit-base-patch32",
+    "model_revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "batch_assets": 8,
+    "aggregation": "float32 CLIP per-view features converted to float64; L2-normalize each of 8 views; arithmetic mean; L2-normalize; exact prompt feature converted and normalized in float64",
+    "selection": "global top-1 over all 2024 eligible opaque candidates; no category filter",
+    "tie_break": "descending exact float64 score, then ascending opaque candidate key",
+    "fresh_full_embedding_replays": 2,
+    "fresh_model_instance_per_replay": true,
+    "replay": "asset/text embeddings, token/index metadata, and 18-row selections must be byte-identical",
+    "repair_attempts": 0,
+    "rank_fallbacks": 0,
+    "atomic_publish": "Build the complete selection bundle in a same-filesystem staging directory located outside the formal root, write the selection lock last inside staging, then perform one directory rename to formal_root/selection_bundle."
+  },
+  "units_materialization_and_reporting": {
+    "metric_unit": "unestablished",
+    "dimension_axis_mapping": "unestablished",
+    "metric_conversion": false,
+    "canonicalizer_mode": "--nonmetric-dataset-units",
+    "canonicalizer_contract": "geometry scale 1.0 preserves raw released coordinates; artifact metric_eligible=false, numeric_constraint_status=N/A, coordinate_units=dataset_units_metric_binding_unestablished, and only dataset-unit bounds/extents fields are allowed; unit_scale_to_m and any *_m metric field are forbidden",
+    "hierarchy": "Copy the exact selected source URDF and complete partseg tree and preserve source mesh-bearing link/visual names in semantic nodes.",
+    "selected_failure_policy": "The locked rank-1 source is attempted once. Failure remains failure; no rank fallback and no repair.",
+    "numeric": {
+      "headline": "N/A",
+      "protocol_constraints": 20,
+      "evaluable_constraints": 0,
+      "not_applicable_constraints": 20,
+      "row_status": "N/A",
+      "row_passed": null,
+      "forbidden_summary": "0/20"
+    },
+    "count_proxy": "N/R",
+    "count_reason": "Source l_N link identifiers are structural and have no frozen mapping to Table 4 semantic roles.",
+    "atomic_publish": "Write the entire materialization bundle and lock in a same-filesystem staging directory outside the formal root, then perform one rename to formal_root/materialization_bundle."
+  },
+  "shared_pipeline": {
+    "contract_id": "5d51177a968bd478913c37eb3c524d48346ada9d5b810e268ac12bf26e29951d",
+    "expected_assets": 2024,
+    "private_source": "exp/runtime/table4_constraints_v2/physx_mobility_clip_retrieval_v1_private_source",
+    "render_build": "exp/runtime/table4_constraints_v2/physx_mobility_clip_retrieval_v1_render_build",
+    "opaque_snapshot": "exp/runtime/table4_constraints_v2/physx_mobility_clip_retrieval_v1_snapshot",
+    "formal_root": "exp/runtime/table4_constraints_v2/physx_mobility_clip_retrieval_v1",
+    "selection_bundle": "exp/runtime/table4_constraints_v2/physx_mobility_clip_retrieval_v1/selection_bundle",
+    "materialization_bundle": "exp/runtime/table4_constraints_v2/physx_mobility_clip_retrieval_v1/materialization_bundle",
+    "render_worker": "exp/scripts/render_partnet_mobility_table4_opaque.py",
+    "render_builder": "exp/scripts/build_partnet_mobility_table4_render_snapshot.py",
+    "snapshot_locker": "exp/scripts/lock_partnet_mobility_table4_render_snapshot.py",
+    "selection_launcher": "exp/scripts/launch_mobility_table4_clip_retrieval_selection.py",
+    "selector": "exp/scripts/run_partnet_mobility_clip_retrieval_selection.py",
+    "selection_contract": "exp/reference/table4_constraints_v2/selection_contract_physx_mobility_clip_retrieval_v1.json",
+    "selection_contract_sha256": "b75da98ae4352733ba96f137e060ce9ebfedfcf85c0d73f22560d4c29e8b1954",
+    "prompt_only_manifest": "exp/reference/table4_constraints_v2/prompt_only_table4_constraints_v2.jsonl",
+    "prompt_only_manifest_sha256": "d61accecdfc0f6fed6b9bf05339f79da12c89567e510d68f5df93fa88ac357d0",
+    "run_workers": {
+      "run1": 1,
+      "run2": 4
+    },
+    "implementation_files": {
+      "source_auditor_sha256": "exp/scripts/audit_physx_mobility_table4_source.py",
+      "render_worker_sha256": "exp/scripts/render_partnet_mobility_table4_opaque.py",
+      "render_builder_sha256": "exp/scripts/build_partnet_mobility_table4_render_snapshot.py",
+      "snapshot_locker_sha256": "exp/scripts/lock_partnet_mobility_table4_render_snapshot.py",
+      "selection_launcher_sha256": "exp/scripts/launch_mobility_table4_clip_retrieval_selection.py",
+      "selector_sha256": "exp/scripts/run_partnet_mobility_clip_retrieval_selection.py",
+      "materializer_sha256": "exp/scripts/run_physx_mobility_clip_retrieval_materialize.py",
+      "integrity_verifier_sha256": "exp/scripts/verify_physx_mobility_clip_retrieval_v1.py",
+      "canonicalizer_sha256": "exp/scripts/canonicalize_table4_artifact.py"
+    }
+  },
+  "implementation": {
+    "source_auditor_sha256": "7433c35fe80f44b27f135c78fd772b2126b1841ac1ad0dd6fffbcb1a99f44ec0",
+    "render_worker_sha256": "822371593173692c88b34679666d5ae366ad621145b68255c22e793cbc6e665b",
+    "render_builder_sha256": "96bd96cca075917373508aacb0021a708198e54f5041948dfa3e0ba90afea1d8",
+    "snapshot_locker_sha256": "937bf8a42f181c9c86c07096fd0779d65b0609294dc07d9ccefdac15fa6cf737",
+    "selection_launcher_sha256": "a9452b3dd6edfe604c9dc60f84f908358df759cafcc8ebc8506ded832c664f68",
+    "selector_sha256": "4cbfe8fd2b8c225ebdb0b72487af0912e20d76fd074a430d54de838be7426bd6",
+    "materializer_sha256": "51dc5bd702d3c335656c78c28ef119d5e8b6e302c82255be58450e154446c6f4",
+    "integrity_verifier_sha256": "77403a0d68b74174a7c936567a68ab6fff1ac665542d82e6dc94cac3a90b954c",
+    "canonicalizer_sha256": "b6d24db6e9828a700f74acfe18495b8e2be36509dd8a233b65d6a15c6677d8d1"
+  },
+  "pre_result_gate": {
+    "formal_outputs_before_independent_pass": 0,
+    "required_independent_verdict": "PASS",
+    "audit_must_bind": "this exact addendum SHA, report SHA, and all implementation SHA fields",
+    "formal_execution_before_pass": false
+  }
+}

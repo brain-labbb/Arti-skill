@@ -1,0 +1,39 @@
+{
+  "command": [
+    "exp/scripts/run_urdf_table4a_ours_pva_per_class_n5.py",
+    "--mode",
+    "smoke",
+    "--table4-dir",
+    "exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z",
+    "--n",
+    "13",
+    "--workers",
+    "2",
+    "--output-dir",
+    "exp/runtime/urdf_table4a_ours_pva_per_class_n5_early_affinity_workers2_smoke_n13_20260824T092510Z"
+  ],
+  "created_at_utc": "2026-08-24T09:40:48.240945Z",
+  "dataset": "Ours per-class N=5 (supplementary)",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "5097429eec75a3e4a71ddb1327b50549fc4bf782b3c14155bf4ae9f3730f02aa",
+  "manifest_self_sha256_at_write": "21cf7a747a7fe841a8064a7dcc903df4b249f1e1d79d80e8f5090f7bb0a81d78",
+  "mode": "smoke",
+  "outputs": {
+    "asset_records_sha256": "043a4c86cb276d024238943d8958ec28ff693212b17fa1560deb75110cf11078",
+    "joint_records_sha256": "5213ee76a64afa1e28d6078c8067547092d8f8beb5e553f9641408350da881ca",
+    "summary_md_sha256": "2620ae28ec166208ee51995dc6685ea86bca95043c3355ec9bd6068a1b7b7171",
+    "summary_sha256": "ec2ced85b1ad18ca04841e3e96c5fa6ccd3c5db18ea1088ff731b02d2f1429a5"
+  },
+  "protocol_id": "table4a_ours_pva_per_class_n5_max_joints_v1",
+  "record_count": 13,
+  "status_counts": {
+    "completed": 13,
+    "error": 0,
+    "total": 13
+  },
+  "verification": {
+    "all_pass": null,
+    "note": "smoke mode: formal verification skipped"
+  },
+  "wall_seconds": 859.992
+}

@@ -1,0 +1,119 @@
+{
+  "classification": "NON_FORMAL_SMOKE",
+  "created_at": "2026-08-14T03:17:14Z",
+  "dataset": "Artiverse",
+  "evaluation": {
+    "adapter_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table3_artiverse.py",
+    "adapter_sha256": "28c1365099fff94d1cf6ce2f8607f522a83d76d3c030e5ec1048c4389e653c36",
+    "config": {
+      "asset_timeout_seconds": 30.0,
+      "continuous_interval": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "continuous_non_degenerate_policy": "maximum_excursion_from_q0_over_frozen_interval",
+      "protocol_id": "urdf-sim-ready-table3-artiverse-table1-cohort-v1",
+      "q0_policy": "zero_clipped_to_declared_interval",
+      "rotation_motion_threshold_rad": 1e-06,
+      "roundtrip_rotation_tolerance_rad": 1e-09,
+      "roundtrip_translation_tolerance_bbox_diagonal": 1e-09,
+      "samples_per_joint": 21,
+      "strict_asset_requires_at_least_one_declared_movable_joint": true,
+      "translation_motion_threshold_bbox_diagonal": 1e-06,
+      "unchanged_rotation_tolerance_rad": 1e-09,
+      "unchanged_translation_tolerance_bbox_diagonal": 1e-09,
+      "workers": 2
+    },
+    "config_sha256": "0bafce26d4396b7947e6c4b68e3a00e5e6b8474185e7438d6861f962e64fd2ed",
+    "core_evaluator_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table3_lam.py",
+    "core_evaluator_sha256": "0da075f077ce13c78bb6b4ee66b0abe77668ccf7bb3c105660b321e667fc2acf",
+    "environment": {
+      "numpy": "2.5.1",
+      "platform": "Linux-5.10.134-19.103.al8.x86_64-x86_64-with-glibc2.39",
+      "python": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+      "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+      "thread_environment": {
+        "MKL_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null
+      }
+    },
+    "environment_sha256": "f6fb6d6e26ba5105e40ffade559d47b5b990ef8cf14a6c4f5e7b7e43661fbf5e",
+    "protocol_path": "/mnt/zsn/lyb/arti-skill/exp/URDF-Sim-Ready-Automatic-Evaluation.md",
+    "protocol_sha256": "be3813e1b40b4fb8e2ee5cf9bec89aa3b83d7dcca3050a0c6c3eeb3097c36ed1"
+  },
+  "manifest_content_sha256": "7a86cab7f5c2d61d2a3795ee33949b9fc6c78c46051f20608a0320a6655f9578",
+  "records": [
+    {
+      "asset_id": "data/nightstand/3dfModel/06d0beb2-9724-4e98-929d-80b23a31775a",
+      "asset_key": "data/nightstand/3dfModel/06d0beb2-9724-4e98-929d-80b23a31775a",
+      "category": "nightstand",
+      "chunk_archive": "artiverse_data-00002-of-00002.tar.gz",
+      "declared_joint_count_hint": 1,
+      "manifest_root": "data/nightstand/3dfModel/06d0beb2-9724-4e98-929d-80b23a31775a",
+      "model_id": "06d0beb2-9724-4e98-929d-80b23a31775a",
+      "package": "/mnt/zsn/lyb/arti-skill/exp/artiverse/data/nightstand/3dfModel/06d0beb2-9724-4e98-929d-80b23a31775a/urdf_w_collider",
+      "raw_category": "nightstand",
+      "selection_hash": "000745997d727e2ef0287dd32981c62134feb93f6edaad231630f2f08bf9ec51",
+      "selection_rank": 1,
+      "source": "3dfModel",
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/artiverse/data/nightstand/3dfModel/06d0beb2-9724-4e98-929d-80b23a31775a/urdf_w_collider/06d0beb2-9724-4e98-929d-80b23a31775a.urdf",
+      "urdf_sha256": "4b95f6f81294e32fd4966e86ce6f3c010cf98112e533121682524198145893e3"
+    },
+    {
+      "asset_id": "data/sideboard/3dw/f7b1fc02aa264d1534fe4d05f619492",
+      "asset_key": "data/sideboard/3dw/f7b1fc02aa264d1534fe4d05f619492",
+      "category": "sideboard",
+      "chunk_archive": "artiverse_data-00002-of-00002.tar.gz",
+      "declared_joint_count_hint": 3,
+      "manifest_root": "data/sideboard/3dw/f7b1fc02aa264d1534fe4d05f619492",
+      "model_id": "f7b1fc02aa264d1534fe4d05f619492",
+      "package": "/mnt/zsn/lyb/arti-skill/exp/artiverse/data/sideboard/3dw/f7b1fc02aa264d1534fe4d05f619492/urdf_w_collider",
+      "raw_category": "sideboard",
+      "selection_hash": "0025cd5932a51c86a41139476d1a5a4b1ed24069e4fc733f9b3fb825aa2551a9",
+      "selection_rank": 2,
+      "source": "3dw",
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/artiverse/data/sideboard/3dw/f7b1fc02aa264d1534fe4d05f619492/urdf_w_collider/f7b1fc02aa264d1534fe4d05f619492.urdf",
+      "urdf_sha256": "31259061edc30d0748eb20f5b9f8e5f55ddd8d45ef98dc010100355e975f7181"
+    },
+    {
+      "asset_id": "data/kitchen_pot/abo/B07BLB6644",
+      "asset_key": "data/kitchen_pot/abo/B07BLB6644",
+      "category": "kitchen_pot",
+      "chunk_archive": "artiverse_data-00001-of-00002.tar.gz",
+      "declared_joint_count_hint": 1,
+      "manifest_root": "data/kitchen_pot/abo/B07BLB6644",
+      "model_id": "B07BLB6644",
+      "package": "/mnt/zsn/lyb/arti-skill/exp/artiverse/data/kitchen_pot/abo/B07BLB6644/urdf_w_collider",
+      "raw_category": "kitchen_pot",
+      "selection_hash": "0039b2310f951c92dc66198db95c9d7e4b215c44c63a6445b07d867a36163e9a",
+      "selection_rank": 3,
+      "source": "abo",
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/artiverse/data/kitchen_pot/abo/B07BLB6644/urdf_w_collider/B07BLB6644.urdf",
+      "urdf_sha256": "dd69b15cb07c962cbc1cc2a3a8f18315e971ead873f2dfc20e9fb9f63a10469b"
+    }
+  ],
+  "schema_version": 1,
+  "selection": {
+    "algorithm": "exact existing Table 1 manifest .assets order; optional smoke prefix only",
+    "cohort_type": "GLOBAL_FIXED_SAMPLE_NOT_CATEGORY_BALANCED",
+    "n_eval": 3,
+    "outcome_based_reselection": false,
+    "requested_limit": 3,
+    "seed": 20260813,
+    "selected_asset_ids_sha256": "9b17b23ad7c6ed51d2b57a2f79632cbeec026aef5d8c85131ff6c65ae5224ef9",
+    "selection_order_preserved": true,
+    "source_protocol": "artiverse-table1-global-sample-v1"
+  },
+  "source": {
+    "cohort_asset_count": 800,
+    "cohort_manifest_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/.table1_artiverse.runs/run.24f04a43191845fc85c983de75666ec1/manifest.json",
+    "cohort_manifest_sha256": "f74575692b87605699c4f349186c4660d691c91bef39562bb976baf22ae72a8c",
+    "n_release": 3544,
+    "release_manifest_path": "/mnt/zsn/lyb/arti-skill/exp/artiverse/dataset_chunks/manifest.json",
+    "release_manifest_sha256": "8fa6468254a1f74c58f0c25699598bf88f622fabdaf74f0cd9268ee5663c5586",
+    "release_status": "PRE_RELEASE_SUBSET",
+    "release_universe_sha256": "cf7e16183fc5bf4a4c82ab41bec2fad553e400373434089c22bf54dff3ea51c5",
+    "source_root": "/mnt/zsn/lyb/arti-skill/exp/artiverse"
+  }
+}

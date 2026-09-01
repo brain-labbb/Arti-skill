@@ -1,0 +1,55 @@
+{
+  "classification": "FORMAL",
+  "cohort": {
+    "n_eval": 800,
+    "ordered_ids_sha256": "a88506e1da8e7e8b61a740965dea2faba4e9ab8280f47417e17550024b6dde17",
+    "selection_policy": "exact frozen SketchMobility Table 4 items in original order; no resampling, replacement, or result-based filtering",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_sketch_mobility_table1cohort_n800_20260821T090554Z/manifest.json",
+    "source_manifest_sha256": "71b895dea4c9ce220825928a89205a05cb7875e2bfce6372687a52eee596de17"
+  },
+  "dataset": "SketchMobility",
+  "execution": {
+    "child_interpreter": "/mnt/zsn/miniconda3/envs/genesis-main/bin/python3.12",
+    "child_timeout_seconds": 900,
+    "denominator_policy": "all frozen assets including failures and unmeasured items",
+    "process_isolation": "one fresh interpreter process per asset",
+    "workers": 16
+  },
+  "frozen_at_utc": "2026-08-21T17:32:24.444442Z",
+  "geometry_parameters": {
+    "collision_load_time_backend": "trimesh.Trimesh(process=False).triangles_tree+rtree",
+    "collision_load_time_cache_mode": "same_asset_one_unmeasured_warmup_then_warm_cache",
+    "collision_load_time_repeats": "one unmeasured warmup + five measured repeats, geometry rebuilt per repeat",
+    "collision_load_time_threads": "native thread count pinned to 1 via threadpoolctl",
+    "d_visual_definition": "q0_loadable_visual_union_aabb_diagonal_v1",
+    "exact_surface_backend": "trimesh.proximity.ProximityQuery.on_surface + rtree (no Genesis SDF substitute)",
+    "samples_per_direction": 32768,
+    "weld_relative_tolerance": 1e-09
+  },
+  "geometry_protocol_id": "lam_supplementary_geometry_v1",
+  "mode": "formal",
+  "protocol_document_sha256": "cc16f35a867dee6ba5fbc194de8088f75924b1dffef3cacdbcef9b298c138c5d",
+  "protocol_id": "table4b-sketchmobility-table1-cohort-n800-v1",
+  "runner_identity": {
+    "geometry_module": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_geometry.py",
+    "geometry_module_sha256": "65d2641619b0429a37eb3a578b97ab7c0d5f298d84464842d16afcf3a13bd1b9",
+    "runner_script": "/mnt/zsn/lyb/arti-skill/exp/runtime/.table4b_urdf_sketch_mobility_table1cohort_n800_20260821T163500Z.work/source_snapshots/exp/scripts/run_table4b_urdf_sketch_mobility.py",
+    "runner_script_sha256": "2ca198de85ef160dbdb0b44ef9001ea049223def57d2976785dfa4247221fb10"
+  },
+  "smoke_receipt": {
+    "asset_records_sha256": "43605e221c0a57951a3280b211969e2c5c427b0a4c71729e3795339bb4de5265",
+    "frozen_config_sha256": "95ce3216bb0c19c7cba080dfba1832da80ee5ae7d92c7256fda7aa2144586985",
+    "manifest_sha256": "5293554d0c2f1226b224a0c9600b7b971162ba76f7fe4b54e89d60e1e1c940f4",
+    "ordered_asset_ids_sha256": "d30c2c324fa081c6143ed78401c4902a3daaca4292fb070f70afa2b596821386",
+    "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4b_urdf_sketch_mobility_smoke_n5_20260821T160500Z",
+    "standalone_verification_sha256": "a36c8eaa0fdc9d7bffb03c10b9722aad91ad8c3fd738a17ad8e21e80ee3fbcd8",
+    "summary_sha256": "8347d91a376861e7120e7af6c728c379eb27373ae9fb09e0868e6b703fb2ef8c"
+  },
+  "source_snapshots": {
+    "exp/scripts/lam_supplementary_geometry.py": "65d2641619b0429a37eb3a578b97ab7c0d5f298d84464842d16afcf3a13bd1b9",
+    "exp/scripts/run_table4b_urdf_sketch_mobility.py": "2ca198de85ef160dbdb0b44ef9001ea049223def57d2976785dfa4247221fb10",
+    "exp/scripts/run_urdf_table4b_artiverse.py": "c854f852daba27e2956fada9c74186f41cadbe985ada2994739d43b02a4cd15e",
+    "exp/scripts/sketchmobility_supplementary_common.py": "910002be01ccbf0621d5c2f2f3a9b6f424e84e73ceb43c7cff7df63f057616de",
+    "exp/scripts/verify_table4b_urdf_sketch_mobility.py": "973d0f1046bad382b066e13127d03ebc73058b05908c305c5caa62515da4bdad"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "protocol_id": "nano3d_table5_pva_scorer_erratum_v2",
+  "base_mapping_sha256": "cccee25ea89ecd235e3d32364ec9987bf89d773b0fb3c670cc54959635db6dc7",
+  "source_manifest_sha256": "d8d6e47ab3ab4ca22dbccb90d29796d515c1e772093f1e5d099c62a74a66e94d",
+  "source_shared_scorer_sha256": "7ce66aa02aa33869949ac561b59d0f7ff8ef81b591cb4d3565756cb7e02aa877",
+  "scope": {
+    "task_id": "S05",
+    "coordinate_space": "visual_geometry_local",
+    "visuals": ["lower_shell", "lid_shell"],
+    "z_ratio_min": 1.50,
+    "x_ratio_range": [0.90, 1.10],
+    "y_ratio_range": [0.90, 1.10]
+  },
+  "unchanged_case_rule": "All non-S05 mappings and scores must remain bit-identical to the frozen as-run records.",
+  "artifact_policy": "Artifact-only rescore; no source generation or compilation is permitted."
+}

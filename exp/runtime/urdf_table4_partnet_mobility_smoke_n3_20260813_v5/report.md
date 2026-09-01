@@ -1,0 +1,21 @@
+# PartNet-Mobility qualification smoke N=3: URDF Sim-Ready Table 4
+
+Status: **COMPLETE**
+
+This is an outcome-independent frozen cohort diagnostic. It is not the 2,347-asset Full Release panel and not the six-method shared-category balanced panel.
+
+| Metric | Result |
+|---|---:|
+| Rest All-pair CF | 0/3 (0.000%) |
+| Rest Non-adjacent CF | 3/3 (100.000%) |
+| Single-joint Sweep CF | 3/3 (100.000%) |
+| Multi-joint Sobol CF | 3/3 (100.000%) |
+| Collision-state Rate | 0/300 (0.000%) |
+| AOR | N/E |
+| Max Penetration | 0.06962131956241266 (fully measured 3/3; observed 3/3; COMPLETE) |
+| Collision-free Range | 105/105 (100.000%) |
+| Strict Collision Pass | 3/3 (100.000%) |
+
+Collision-state Rate is fail-closed: unexecuted configurations caused by package, load, child, or timeout failures remain in the denominator and count as non-free. The report separately preserves observed collisions, executed states, and unexecuted states.
+
+AOR is N/E because no stable exact overlap-volume calculation was run; bounding-box overlap is not used as a substitute. All sweeps are discrete, with no CCD claim.

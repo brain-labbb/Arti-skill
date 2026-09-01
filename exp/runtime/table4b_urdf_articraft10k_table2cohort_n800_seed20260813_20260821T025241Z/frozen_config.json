@@ -1,0 +1,39 @@
+{
+  "classification": "FORMAL",
+  "cohort": {
+    "n_eval": 800,
+    "ordered_ids_sha256": "79c44441600077513d3cde1cda8fef38324e1a0ee660730b860d5313f0ae9784",
+    "selection_policy": "all .records[].package entries from the frozen Table 2 Articraft-10K manifest in existing order; no resampling, replacement, or result-based filtering",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table2_urdf_articraft10k_n800_seed20260813_20260813T145915Z/manifest.json",
+    "source_manifest_sha256": "13c47e2b2affadb951a01cab826bae139852fca5769e99ec081cc916ffa6373d"
+  },
+  "dataset": "Articraft-10K",
+  "execution": {
+    "child_interpreter": "/mnt/zsn/miniconda3/envs/genesis-main/bin/python3.12",
+    "child_timeout_seconds": 900,
+    "denominator_policy": "all frozen assets including failures and unmeasured items",
+    "process_isolation": "one fresh interpreter process per asset",
+    "workers": 16
+  },
+  "frozen_at_utc": "2026-08-21T02:52:47.659591Z",
+  "geometry_parameters": {
+    "collision_load_time_backend": "trimesh.Trimesh(process=False).triangles_tree+rtree",
+    "collision_load_time_cache_mode": "same_asset_one_unmeasured_warmup_then_warm_cache",
+    "collision_load_time_repeats": "one unmeasured warmup + five measured repeats, geometry rebuilt per repeat",
+    "collision_load_time_threads": "native thread count pinned to 1 via threadpoolctl",
+    "d_visual_definition": "q0_loadable_visual_union_aabb_diagonal_v1",
+    "exact_surface_backend": "trimesh.proximity.ProximityQuery.on_surface + rtree (no Genesis SDF substitute)",
+    "samples_per_direction": 32768,
+    "weld_relative_tolerance": 1e-09
+  },
+  "geometry_protocol_id": "lam_supplementary_geometry_v1",
+  "mode": "formal",
+  "protocol_document_sha256": "a30bfb5de0a4e64cc49530594e92110e8a0961926078c6535f1e5208a32f1aef",
+  "protocol_id": "table4b_articraft10k_table2cohort_n800_seed20260813_v1",
+  "runner_identity": {
+    "geometry_module": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_geometry.py",
+    "geometry_module_sha256": "65d2641619b0429a37eb3a578b97ab7c0d5f298d84464842d16afcf3a13bd1b9",
+    "runner_script": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4b_articraft10k.py",
+    "runner_script_sha256": "37fcb36bbbcb8f0ad181fdbce619b7e0debd349583cef9f140e9b648022ccb35"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "category_macro": {
+    "categories": {
+      "PartNeXt/Bottle": {
+        "assets": 2,
+        "dynamics_joint_rate": {
+          "denominator": 2,
+          "numerator": 0,
+          "percent": 0.0
+        },
+        "portability_joint_rate": {
+          "denominator": 2,
+          "numerator": 2,
+          "percent": 100.0
+        },
+        "visual_bearing_asset_rate": {
+          "denominator": 2,
+          "numerator": 0,
+          "percent": 0.0
+        }
+      },
+      "PartNeXt/Bucket": {
+        "assets": 1,
+        "dynamics_joint_rate": {
+          "denominator": 1,
+          "numerator": 0,
+          "percent": 0.0
+        },
+        "portability_joint_rate": {
+          "denominator": 1,
+          "numerator": 1,
+          "percent": 100.0
+        },
+        "visual_bearing_asset_rate": {
+          "denominator": 1,
+          "numerator": 0,
+          "percent": 0.0
+        }
+      },
+      "PartNeXt/Monitor": {
+        "assets": 1,
+        "dynamics_joint_rate": {
+          "denominator": 1,
+          "numerator": 0,
+          "percent": 0.0
+        },
+        "portability_joint_rate": {
+          "denominator": 1,
+          "numerator": 1,
+          "percent": 100.0
+        },
+        "visual_bearing_asset_rate": {
+          "denominator": 1,
+          "numerator": 0,
+          "percent": 0.0
+        }
+      },
+      "Shape2Motion/Kettle": {
+        "assets": 1,
+        "dynamics_joint_rate": {
+          "denominator": 1,
+          "numerator": 0,
+          "percent": 0.0
+        },
+        "portability_joint_rate": {
+          "denominator": 1,
+          "numerator": 1,
+          "percent": 100.0
+        },
+        "visual_bearing_asset_rate": {
+          "denominator": 1,
+          "numerator": 1,
+          "percent": 100.0
+        }
+      }
+    },
+    "category_count": 4,
+    "dynamics_joint_rate_mean_percent": 0.0,
+    "portability_joint_rate_mean_percent": 100.0,
+    "visual_bearing_asset_rate_mean_percent": 25.0
+  },
+  "classification": "SMOKE",
+  "dataset": "SketchMobility",
+  "j_eval": 5,
+  "manifest_content_sha256": "001e7cf894b20f409571b9a57e9f798470b470abd12ce25ae420f238b93d8a51",
+  "metrics": {
+    "joint_dynamics_coverage": {
+      "denominator": 5,
+      "joints_extracted": 5,
+      "numerator": 0,
+      "percent": 0.0
+    },
+    "joint_limit_portability": {
+      "denominator": 5,
+      "joints_extracted": 5,
+      "numerator": 5,
+      "percent": 100.0
+    },
+    "placeholder_mass_incidence": {
+      "complete_inertial_links": 8,
+      "coverage": {
+        "denominator": 10,
+        "numerator": 8,
+        "percent": 80.0
+      },
+      "dynamic_links_measured": 10,
+      "reason": "placeholder_registry_empty",
+      "registry_ids": [],
+      "status": "N/E"
+    },
+    "visual_bearing_collision_coverage": {
+      "denominator": 5,
+      "link_extraction_complete_assets": 5,
+      "link_micro": {
+        "denominator": 10,
+        "numerator": 2,
+        "percent": 20.0
+      },
+      "passed": 1,
+      "percent": 20.0,
+      "zero_visual_bearing_assets_completed": 0
+    }
+  },
+  "mode": "smoke",
+  "n_eval": 5,
+  "parse_passed_assets": 5,
+  "protocol_id": "table2-supplementary-sketchmobility-table1-cohort-n800-v1",
+  "run_directory": "/mnt/zsn/lyb/arti-skill/exp/runtime/table2sup_urdf_sketch_mobility_smoke_n5_20260821T150435Z",
+  "status_counts": {
+    "completed": 5,
+    "error": 0,
+    "total": 5
+  },
+  "wall_seconds": 4.765
+}

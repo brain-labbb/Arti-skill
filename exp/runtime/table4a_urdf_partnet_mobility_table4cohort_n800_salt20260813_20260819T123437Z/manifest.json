@@ -1,0 +1,83 @@
+{
+  "command": [
+    "scripts/run_urdf_table4a_partnet_mobility.py",
+    "--mode",
+    "formal"
+  ],
+  "created_at_utc": "2026-08-19T18:45:29.081550Z",
+  "dataset": "PartNet-Mobility",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "c7815f555f89590eed5fce3c431083fcab2e3408d73163178b324c6e38e050ee",
+  "manifest_self_sha256_at_write": "f1958ac31339e592cfa1db4401aaf4f11125a735abf0fd978dc252513c43c3bd",
+  "mode": "formal",
+  "outputs": {
+    "asset_records_sha256": "da4b6c16dbdd550ff1a427d1c7fa727f98f1fe42086757b6e174733c8bab24d0",
+    "joint_records_sha256": "1f5f7cc39fb5e16fb5db3cf36f488b5c3dac97beb45a2f70fdbf59830c47e12e",
+    "summary_md_sha256": "15cbb0d0180499bd2c77213f6b0f7de66a8d41ca3b77c4585de50db8d792cb07",
+    "summary_sha256": "40aa0fb1581a2a74c0900e020085cd4545a7ac93fd5c704fc288fec7959e689c"
+  },
+  "protocol_id": "table4a_partnet_mobility_table4cohort_n800_v1",
+  "record_count": 800,
+  "status_counts": {
+    "completed": 646,
+    "error": 154,
+    "total": 800
+  },
+  "verification": {
+    "all_pass": true,
+    "check_count": 10,
+    "checks": [
+      {
+        "check": "source_manifest_sha256",
+        "detail": "2ff015ee6bb377ce693126b52dd632a7565a3eaa9f0007e26122a1bb4ab99900",
+        "pass": true
+      },
+      {
+        "check": "ordered_ids_sha256",
+        "detail": "ef6cb964e50dc712280256c5b2f675cc2c957095c3553b21845d3562a5011883",
+        "pass": true
+      },
+      {
+        "check": "record_count",
+        "detail": "800",
+        "pass": true
+      },
+      {
+        "check": "frozen_order_preserved",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "j_eval_denominator",
+        "detail": "4078",
+        "pass": true
+      },
+      {
+        "check": "retention_denominator",
+        "detail": "4078",
+        "pass": true
+      },
+      {
+        "check": "urdf_identity_matches_frozen_manifest",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "state_hash_cross_check_no_mismatch",
+        "detail": "{'verified': 62958, 'mismatch': 0, 'no_reference': 0}",
+        "pass": true
+      },
+      {
+        "check": "state_intended_count",
+        "detail": "85638",
+        "pass": true
+      },
+      {
+        "check": "aggregate_recomputation_matches",
+        "detail": "",
+        "pass": true
+      }
+    ]
+  },
+  "wall_seconds": 22250.666
+}

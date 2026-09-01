@@ -1,0 +1,67 @@
+{
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 260811002,
+  "cohort_scope": "public-factory supplementary; not common-category matched",
+  "evaluated_pass_asset_count": 720,
+  "exact_raw_name_multiset_mode_rate_factory_macro": 0.5069444444444444,
+  "exact_raw_name_multiset_mode_rate_factory_macro_95ci": [
+    0.37083333333333335,
+    0.6472222222222223
+  ],
+  "exact_raw_name_multiset_mode_rate_factory_median": 0.4722222222222222,
+  "factory_count": 20,
+  "functional_core_coverage": null,
+  "instance_discriminability": null,
+  "invalid_or_unsupported_visual_geometry_total": 0,
+  "mesh_reference_total": 7421,
+  "mesh_visual_geometry_total": 7421,
+  "multi_visual_part_node_total": 0,
+  "nameability_micro": 1.0,
+  "named_urdf_part_node_total": 7421,
+  "naming_richness": null,
+  "omitted_nonpass_asset_count": 0,
+  "opaque_generated_index_name_rate_micro": 1.0,
+  "opaque_generated_index_name_total": 7421,
+  "over_segmentation_rate": null,
+  "parts_per_asset_asset_bootstrap_95ci": [
+    9.46107638888889,
+    11.205590277777778
+  ],
+  "parts_per_asset_factory_cluster_bootstrap_95ci": [
+    6.183298611111112,
+    15.175034722222223
+  ],
+  "parts_per_asset_mean": 10.306944444444444,
+  "placeholder_regex": "^(?:link|part|mesh|geometry|object)(?:[_-]?(?:\\d+|new|object))?$",
+  "primitive_visual_geometry_total": 0,
+  "protocol_id": "nano3d_infinite_mobility_naming_direct_v1.1",
+  "raw_name_multiset_weighted_jaccard_factory_macro": 0.8274547181221836,
+  "raw_name_multiset_weighted_jaccard_factory_macro_95ci": [
+    0.7595118192841314,
+    0.890823246603003
+  ],
+  "raw_name_multiset_weighted_jaccard_factory_median": 0.8484938441188441,
+  "raw_name_multiset_weighted_jaccard_pair_micro": 0.8274547181221836,
+  "raw_unique_name_set_jaccard_factory_macro": 0.8274547181221836,
+  "raw_unique_name_set_jaccard_factory_macro_95ci": [
+    0.7595161768858741,
+    0.8896725138444856
+  ],
+  "raw_unique_name_set_jaccard_factory_median": 0.8484938441188441,
+  "raw_unique_name_set_jaccard_pair_micro": 0.8274547181221836,
+  "recovery_overlay_asset_count": 7,
+  "renderable_visual_geometry_total": 7421,
+  "semantic_metrics_status": "N/A: no independent semantic gold or judges",
+  "semantic_precision": null,
+  "semantic_recall": null,
+  "source_300s_pass_asset_count": 713,
+  "source_protocol_id": "nano3d_infinite_mobility_seed_reliability_v1",
+  "source_status_counts": {
+    "PASS": 713,
+    "TIMEOUT": 7
+  },
+  "source_terminal_case_count": 720,
+  "urdf_part_node_policy": "one URDF link with >=1 valid renderable visual geometry; multiple visuals on one link merge to one node",
+  "urdf_part_node_total": 7421,
+  "within_factory_pair_count": 12600
+}

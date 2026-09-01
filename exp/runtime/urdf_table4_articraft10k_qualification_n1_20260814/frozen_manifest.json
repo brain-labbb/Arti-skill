@@ -1,0 +1,230 @@
+{
+  "audit_summary": {
+    "collision_coverage_complete": 0,
+    "movable_dof_count": 2,
+    "package_audit_success": 0,
+    "range_evaluable_dof_count": 2,
+    "rest_state_expected": 1,
+    "retained_package_failures": 1,
+    "single_state_expected": 42,
+    "sobol_state_expected": 64
+  },
+  "cohort_boundary": {
+    "authoritative_category_labels_available": false,
+    "is_full_release_cohort": false,
+    "is_shared_category_balanced_cohort": false,
+    "paper_table_role": "qualification only"
+  },
+  "cohort_label": "Articraft-10K qualification N=1",
+  "collision_policy": {
+    "aor": "N/E: no stable exact overlap-volume implementation",
+    "complete_collision_coverage_required": true,
+    "continuous_collision_detection": "not_run",
+    "object_scale": "PyBullet q=0 collision-shape union AABB diagonal",
+    "object_scale_protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+    "penetration_threshold_m": 1e-06,
+    "rest_panels": [
+      "all_pair",
+      "exclude_direct_parent_child"
+    ],
+    "surface_contact_allowed": true,
+    "sweep_sobol_strict_policy": "exclude_direct_parent_child",
+    "unexecuted_states_fail_closed": true,
+    "visual_geometry_fallback": false
+  },
+  "created_at_utc": "2026-08-14T02:25:53Z",
+  "dataset_root": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K",
+  "items": [
+    {
+      "asset_id": "rec_fidget_toy_d3e5dba051334aca88e7cba99ac794df",
+      "audit_issue": "ValueError: collision coverage incomplete: 0/3",
+      "category": null,
+      "collision_coverage_complete": false,
+      "collision_covered_link_count": 0,
+      "collision_element_count": 0,
+      "collision_mesh_files": [],
+      "collision_mesh_inventory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "dataset_id": "articraft10k_0000",
+      "input_identity_sha256": "da977c5e40b46c68c27514fb9b44c7b0dc8b2c00510ec7d12f729e4e2c38e266",
+      "joint_specs": [
+        {
+          "lower": null,
+          "name": "carrier_to_inner_ring",
+          "range_evaluable": true,
+          "type": "continuous",
+          "upper": null,
+          "xml_index": 0
+        },
+        {
+          "lower": null,
+          "name": "carrier_to_outer_ring",
+          "range_evaluable": true,
+          "type": "continuous",
+          "upper": null,
+          "xml_index": 1
+        }
+      ],
+      "joint_specs_sha256": "78ed0cf2e0f09e6a513a21522c622abd00f6f4a4b8f46ff488fa391aa9bb26b5",
+      "link_count": 3,
+      "missing_collision_mesh_reference_count": 0,
+      "model_urdf_sha256": "5c8edef469d3d86aee2f4fabb8ae12af4876d0323a1c6e931e8c50e62360a69a",
+      "movable_dof_count": 2,
+      "object_bbox_diagonal_m": null,
+      "order": 0,
+      "package_audit_success": false,
+      "package_binding": {
+        "content_manifest_sha256": "ff97f40ebf33fa0e5909e6cee935f55873cbb82da3c9bf474378d9e09fb4e0bd",
+        "file_count": 4,
+        "files": [
+          {
+            "bytes": 974,
+            "path": "compile_report.json",
+            "sha256": "d9465c1fe53a1210408ba3bf4ff5f9e8ceaf6e24a1584bc4f4e65767d21a12bf"
+          },
+          {
+            "bytes": 3429,
+            "path": "model.urdf",
+            "sha256": "5c8edef469d3d86aee2f4fabb8ae12af4876d0323a1c6e931e8c50e62360a69a"
+          },
+          {
+            "bytes": 41397,
+            "path": "assets/meshes/inner_ring_shell.obj",
+            "sha256": "faf96a5d94dd31a0aa926fc648aa800b8ba8fb23f83af01212b2fd95cd6886c0"
+          },
+          {
+            "bytes": 41397,
+            "path": "assets/meshes/outer_ring_shell.obj",
+            "sha256": "80be6a9277e06222c3a596b407e52b2480becc65810312fed9e57d06628fbe22"
+          }
+        ],
+        "total_bytes": 87197
+      },
+      "package_binding_sha256": "420e47c8fe0228423bc39d9b6425fa0555611970a8cdff82f52f6d10376d5e8f",
+      "package_content_manifest_sha256": "ff97f40ebf33fa0e5909e6cee935f55873cbb82da3c9bf474378d9e09fb4e0bd",
+      "package_relpath": "released_urdf/rec_fidget_toy_d3e5dba051334aca88e7cba99ac794df",
+      "primary_urdf_relpath": "released_urdf/rec_fidget_toy_d3e5dba051334aca88e7cba99ac794df/model.urdf",
+      "protocol_id": "urdf_sim_ready_table4_articraft10k_qualification_v1",
+      "range_evaluable_dof_count": 2,
+      "rest_state_expected": 1,
+      "runtime_identity": {
+        "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_articraft10k.py",
+        "adapter_runner_sha256": "90477d9b3859462155c46b0099488666ca7771520554e0a14805c52cde5b125c",
+        "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+        "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+        "numpy_version": "2.5.1",
+        "pybullet_api_version": 202010061,
+        "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+        "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+        "python_cache_tag": "cpython-312",
+        "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+        "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+        "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+        "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+        "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+        "scipy_version": "1.18.0"
+      },
+      "runtime_identity_sha256": "0f13fa6ae606b7a0185f7da74543ba61549fb34344b771eb1be1b0e328d78a96",
+      "scale_derivation": {
+        "protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+        "status": "N/E"
+      },
+      "scale_derivation_sha256": "d3ef8714b725ecd48e2d248bd7e7237a17d74d314a048388efff3e93c090266f",
+      "selection_index": 0,
+      "single_state_expected": 42,
+      "sobol_state_expected": 64,
+      "source_record_sha256": "6d23a55f4d45af39bdb46efbb87ced44aeb2d6a36444431be9b39944a89736c0",
+      "unsafe_collision_mesh_reference_count": 0,
+      "urdf_sha256": "5c8edef469d3d86aee2f4fabb8ae12af4876d0323a1c6e931e8c50e62360a69a",
+      "valid_tree": true
+    }
+  ],
+  "items_sha256": "f3e8d920c6491857811c504930cc46983644899655c2ead8fe5485fbe9276275",
+  "manifest_content_sha256": "5fb7c4d4676a13e04fadf19f7c3c03ccbabcab7a9381e4c12c404386aa6b3820",
+  "ordered_selected_asset_ids_sha256": "6f20ac095253cea86f6d3072eabf5ee24ec56a24a22a0bbc87c8ded3134c148e",
+  "protocol_id": "urdf_sim_ready_table4_articraft10k_qualification_v1",
+  "qualification_smoke": true,
+  "release_asset_count": 9996,
+  "runtime": {
+    "child": {
+      "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_articraft10k.py",
+      "adapter_runner_sha256": "90477d9b3859462155c46b0099488666ca7771520554e0a14805c52cde5b125c",
+      "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+      "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+      "numpy_version": "2.5.1",
+      "pybullet_api_version": 202010061,
+      "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+      "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+      "python_cache_tag": "cpython-312",
+      "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+      "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+      "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+      "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+      "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+      "scipy_version": "1.18.0"
+    },
+    "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+    "manifest_builder": {
+      "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_articraft10k.py",
+      "adapter_runner_sha256": "90477d9b3859462155c46b0099488666ca7771520554e0a14805c52cde5b125c",
+      "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+      "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+      "numpy_version": "2.5.1",
+      "pybullet_api_version": 202010061,
+      "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+      "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+      "python_cache_tag": "cpython-312",
+      "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+      "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+      "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+      "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+      "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+      "scipy_version": "1.18.0"
+    },
+    "runner_sha256": "90477d9b3859462155c46b0099488666ca7771520554e0a14805c52cde5b125c"
+  },
+  "sample_size": 1,
+  "sampling": {
+    "continuous_joint_interval": [
+      -3.141592653589793,
+      3.141592653589793
+    ],
+    "rest_state": "native URDF/PyBullet q=0",
+    "single_joint_other_joint_state": 0.0,
+    "single_joint_states_per_declared_nonfixed_joint": 21,
+    "sobol_scramble": true,
+    "sobol_seed": 20260813,
+    "sobol_states_per_asset_with_nonfixed_joint": 64
+  },
+  "selection_policy": {
+    "algorithm": "exact ordered prefix of the frozen Table 2 manifest",
+    "identity_fields_used": [
+      "asset_id",
+      "selection_index",
+      "package_relpath",
+      "model_urdf_sha256",
+      "package_content_manifest_sha256",
+      "source_record_sha256"
+    ],
+    "outcome_based_filtering": false,
+    "selected_failures_retained_without_replacement": true
+  },
+  "source": {
+    "archive_identity": {
+      "archive_count": 9996,
+      "archive_filename_list_sha256": "17086a45b271657ec4b875dc4f1d262d7f61381768f4556f0b21292f8a6bdc63",
+      "archive_id_list_sha256": "a52fab1cc35e9948ea75e5a7cb4e99408ae39a2e5d27eca3a479c24d5c9606ff",
+      "provenance": "sorted rec_*.tar.gz filenames in canonical Articraft-10K dataset root"
+    },
+    "inventory_sha256": "e281119f870bb6bae9599c3edc02de0a42a257e0d433335361d4a774592c1b5a",
+    "ordered_asset_identities_sha256": "e53f80e5eadfab6797d373fa27a666cebb4bf8778e6abd2690f1305c303202df",
+    "release_asset_ids_sha256": "a52fab1cc35e9948ea75e5a7cb4e99408ae39a2e5d27eca3a479c24d5c9606ff",
+    "repo_id": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "selected_asset_ids_sha256": "79c44441600077513d3cde1cda8fef38324e1a0ee660730b860d5313f0ae9784",
+    "selection_algorithm": "random.Random(seed).sample(sorted(unique_asset_ids), n)",
+    "table2_manifest_content_sha256": "576852cb6da00775e1c51360b82b4be40e0a614e4fb0cfb1bae066912eed56a3",
+    "table2_manifest_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table2_urdf_articraft10k_n800_seed20260813_20260813T145915Z/manifest.json",
+    "table2_manifest_sha256": "13c47e2b2affadb951a01cab826bae139852fca5769e99ec081cc916ffa6373d"
+  },
+  "status": "FROZEN"
+}

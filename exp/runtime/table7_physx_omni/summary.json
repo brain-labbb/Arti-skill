@@ -1,0 +1,139 @@
+{
+  "artifact_role": "HISTORICAL_AVAILABILITY_PREFLIGHT",
+  "superseded": true,
+  "superseded_by": "../table6_physx_omni_method_pilot/summary.json",
+  "superseded_scope": "Model, weight, adapter, and output availability only. The historical Table 7 metric denominator remains zero because the Table 7 protocol was not run on the seven later exploratory packages.",
+  "current_table7_state": "NOT_EVALUATED",
+  "historical_blockers_at_preflight": [
+    {
+      "evidence": "The pinned four-shard 8B checkpoint (16,584,414,544 bytes) is not downloaded.",
+      "id": "PHYSX_OMNI_8B_WEIGHTS_MISSING"
+    },
+    {
+      "evidence": "The pinned TRELLIS-image-large repository (3,300,497,168 bytes) is not downloaded.",
+      "id": "TRELLIS_DECODER_WEIGHTS_MISSING"
+    },
+    {
+      "evidence": "No GLB/OBJ/URDF/MJCF output exists in the official default output scope.",
+      "id": "METHOD_GENERATED_FINAL_OUTPUTS_MISSING"
+    },
+    {
+      "evidence": "No frozen adapter maps a PhysX-Omni run into a complete attributable Table 7 package and dependency manifest.",
+      "id": "TABLE7_OUTPUT_ADAPTER_MISSING"
+    }
+  ],
+  "available_exploratory_packages": 7,
+  "cohort_interpretation": "Table 7 evaluated cohort only; zero does not mean the current workspace lacks PhysX-Omni outputs.",
+  "cohort": {
+    "available_assets": 0,
+    "fail_assets": 0,
+    "geometry_evaluable_assets": 0,
+    "package_evaluable_assets": 0,
+    "pass_assets": 0,
+    "requested_assets": 0,
+    "unavailable_assets": 0
+  },
+  "generation_run_started": false,
+  "interpretation": "HISTORICAL_AVAILABILITY_PREFLIGHT_SUPERSEDED; TABLE7_NOT_EVALUATED",
+  "local_evaluated_asset_count": 0,
+  "manifest_sha256": "529d093d1bec4970e81d6a849c141633344540ddcf2eb4755a516ff58bf6a6e1",
+  "method": "PhysX-Omni",
+  "paper_numbers_used_as_local_results": false,
+  "performance_columns": {
+    "degenerate_faces": {
+      "denominator": 0,
+      "numerator": 0,
+      "reason": "Seven attributable exploratory packages exist, but the frozen Table 7 protocol was not run; Table 7 evaluated denominator is zero.",
+      "state": "not_evaluable",
+      "value": null
+    },
+    "deterministic_build": {
+      "denominator": 0,
+      "numerator": 0,
+      "reason": "Seven attributable exploratory packages exist, but the frozen Table 7 protocol was not run; Table 7 evaluated denominator is zero.",
+      "state": "not_evaluable",
+      "value": null
+    },
+    "kinematic_complete": {
+      "denominator": 0,
+      "numerator": 0,
+      "reason": "Seven attributable exploratory packages exist, but the frozen Table 7 protocol was not run; Table 7 evaluated denominator is zero.",
+      "state": "not_evaluable",
+      "value": null
+    },
+    "manifold": {
+      "denominator": 0,
+      "numerator": 0,
+      "reason": "Seven attributable exploratory packages exist, but the frozen Table 7 protocol was not run; Table 7 evaluated denominator is zero.",
+      "state": "not_evaluable",
+      "value": null
+    },
+    "mesh_kb": {
+      "denominator": 0,
+      "numerator": 0,
+      "reason": "Seven attributable exploratory packages exist, but the frozen Table 7 protocol was not run; Table 7 evaluated denominator is zero.",
+      "state": "not_evaluable",
+      "value": null
+    },
+    "open_edges": {
+      "denominator": 0,
+      "numerator": 0,
+      "reason": "Seven attributable exploratory packages exist, but the frozen Table 7 protocol was not run; Table 7 evaluated denominator is zero.",
+      "state": "not_evaluable",
+      "value": null
+    },
+    "physical_complete": {
+      "denominator": 0,
+      "numerator": 0,
+      "reason": "Seven attributable exploratory packages exist, but the frozen Table 7 protocol was not run; Table 7 evaluated denominator is zero.",
+      "state": "not_evaluable",
+      "value": null
+    },
+    "portable_package": {
+      "denominator": 0,
+      "numerator": 0,
+      "reason": "Seven attributable exploratory packages exist, but the frozen Table 7 protocol was not run; Table 7 evaluated denominator is zero.",
+      "state": "not_evaluable",
+      "value": null
+    },
+    "self_intersection": {
+      "denominator": 0,
+      "numerator": 0,
+      "reason": "Seven attributable exploratory packages exist, but the frozen Table 7 protocol was not run; Table 7 evaluated denominator is zero.",
+      "state": "not_evaluable",
+      "value": null
+    },
+    "semantic_complete": {
+      "denominator": 0,
+      "numerator": 0,
+      "reason": "Seven attributable exploratory packages exist, but the frozen Table 7 protocol was not run; Table 7 evaluated denominator is zero.",
+      "state": "not_evaluable",
+      "value": null
+    },
+    "source_kb": {
+      "denominator": 0,
+      "numerator": 0,
+      "reason": "Seven attributable exploratory packages exist, but the frozen Table 7 protocol was not run; Table 7 evaluated denominator is zero.",
+      "state": "not_evaluable",
+      "value": null
+    },
+    "urdf_kb": {
+      "denominator": 0,
+      "numerator": 0,
+      "reason": "Seven attributable exploratory packages exist, but the frozen Table 7 protocol was not run; Table 7 evaluated denominator is zero.",
+      "state": "not_evaluable",
+      "value": null
+    },
+    "watertight": {
+      "denominator": 0,
+      "numerator": 0,
+      "reason": "Seven attributable exploratory packages exist, but the frozen Table 7 protocol was not run; Table 7 evaluated denominator is zero.",
+      "state": "not_evaluable",
+      "value": null
+    }
+  },
+  "protocol_id": "nano3d_table7_production_readiness_v1",
+  "protocol_sha256": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+  "schema_version": "1.0.0",
+  "status": "SUPERSEDED_AVAILABILITY_PREFLIGHT_TABLE7_NOT_EVALUATED"
+}

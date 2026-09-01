@@ -1,0 +1,20 @@
+{
+  "api_called": false,
+  "blockers": [
+    "UPSTREAM_SHARED_MANIFEST_NOT_FINAL",
+    "PRE_FREEZE_SCORER_PLACEHOLDERS_PRESENT"
+  ],
+  "current_upstream_shared_manifest_sha256": "ea5b10334686cd9673d0f53655b6c70555d02016607fcd878a78d84c054ff1b0",
+  "expected_strict_subset_after_current_semantic_gate": [
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "M05",
+    "S04",
+    "S05"
+  ],
+  "note": "Existing N=8 runtime artifacts are reproducible evidence for an earlier provisional task snapshot and must not be used as the final Table 5 LAM cohort.",
+  "provisional_cohort_manifest_sha256": "185ef6e6dfbf29ce877bc02a8c327a2222070a5f68b93259cfdda7a4f0f1173a",
+  "status": "STALE_UPSTREAM_MANIFEST"
+}

@@ -1,0 +1,97 @@
+{
+  "artifacts": {
+    "class_color_index": "generator_class_color_index.csv",
+    "class_color_key": "generator_class_color_key.png",
+    "comparison_plot": "tsne_generator_class_comparison.png",
+    "encoder_plots": {
+      "clip": "clip/tsne_by_generator_class.png",
+      "dinov2": "dinov2/tsne_by_generator_class.png"
+    },
+    "plot_coordinates": {
+      "clip": "clip/tsne_generator_class_plot_coordinates.csv",
+      "dinov2": "dinov2/tsne_generator_class_plot_coordinates.csv"
+    }
+  },
+  "config": {
+    "expected_count": 531,
+    "input_dir": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva531_uniform_tsne",
+    "plot_dpi": 180
+  },
+  "dataset": {
+    "color_count": 531,
+    "encoder_count": 2,
+    "generator_count": 531,
+    "unique_color_count": 531
+  },
+  "display_adjustments": {
+    "clip": {
+      "maximum_normalized_displacement": 0.007000000000000018,
+      "mean_normalized_displacement": 0.00016478342749529177,
+      "minimum_separation_observed": 0.0070223569329810505,
+      "minimum_separation_requested": 0.007,
+      "moved_point_count": 25,
+      "unchanged_point_count": 506
+    },
+    "dinov2": {
+      "maximum_normalized_displacement": 0.007000000000000009,
+      "mean_normalized_displacement": 0.0001153483992467044,
+      "minimum_separation_observed": 0.007205048248103431,
+      "minimum_separation_requested": 0.007,
+      "moved_point_count": 18,
+      "unchanged_point_count": 513
+    }
+  },
+  "implementation": {
+    "script_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/plot_pva531_generator_colors.py",
+    "script_sha256": "2ef06897ebe9151f30ae2084ca03c2bff6298215c6d566259574833b2cebfb88",
+    "script_size_bytes": 30728
+  },
+  "input_receipt": {
+    "coordinates": {
+      "clip": {
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva531_uniform_tsne/clip/tsne_coordinates.csv",
+        "sha256": "ff4119c28a9c6350d535fcee69b9c812ae0442ce8c877b14d4294dfb20acf80f",
+        "shape": [
+          531,
+          2
+        ],
+        "size_bytes": 114408
+      },
+      "dinov2": {
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva531_uniform_tsne/dinov2/tsne_coordinates.csv",
+        "sha256": "d1aed83acd7e8458c7663496dd7fb96026a58f2efcb47a8d31b8abf07e909f97",
+        "shape": [
+          531,
+          2
+        ],
+        "size_bytes": 114397
+      }
+    },
+    "generator_roster": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva531_uniform_tsne/generator_roster_resolved.csv",
+      "row_count": 531,
+      "sha256": "8c9f2af9bcdf769b9109dc273f08942633d64b437fc5bbfca3813d9e09da0ec2",
+      "size_bytes": 102255
+    },
+    "run_manifest": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva531_uniform_tsne/run_manifest.json",
+      "sha256": "5895da02d1b6be3e81f322b99feb97e51e33281f66f967f205c8e81b6266c1bd",
+      "size_bytes": 4796
+    }
+  },
+  "interpretation_limits": [
+    "All RGB values are unique, but 531 colors are not all perceptually distinguishable.",
+    "Colors identify singleton generator classes and do not encode semantic groups.",
+    "DINOv2 and CLIP t-SNE coordinates were fitted independently.",
+    "A small display-only displacement separates near-coincident points."
+  ],
+  "protocol": {
+    "color_order": "ascending generator_index, shared across encoders",
+    "color_unit": "one exact RGB color per generator class",
+    "coordinate_policy": "reuse audited frozen t-SNE coordinates without refitting",
+    "display_collision_policy": "deterministic minimum separation in per-axis normalized coordinates; original coordinates are never overwritten",
+    "palette": "greedy farthest-point selection in OKLab from a bounded 8-bit sRGB grid",
+    "sample_unit": "one PV-A generator class per point"
+  },
+  "schema_version": 1
+}

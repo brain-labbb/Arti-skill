@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-13T10:06:15Z",
+  "canonical_root": "/mnt/zsn/lyb/arti-skill/exp",
+  "artiverse": {
+    "path": "/mnt/zsn/lyb/arti-skill/exp/artiverse",
+    "status": "SKIPPED_BY_REQUEST",
+    "modified_by_this_operation": false
+  },
+  "datasets": [
+    {
+      "name": "Articraft-10K",
+      "status": "VERIFIED_COMPLETE",
+      "canonical_path": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K",
+      "urdf_root": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K/released_urdf",
+      "source": {
+        "type": "huggingface_dataset",
+        "repo_id": "camvsl/Articraft-10K",
+        "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+        "license": "cc-by-4.0"
+      },
+      "verification": {
+        "release_archives_expected": 9996,
+        "release_archives_present": 9996,
+        "release_archive_bytes": 726461092,
+        "lfs_sha256_failures": 0,
+        "extracted_object_directories": 9996,
+        "model_urdf_files": 9996,
+        "urdf_xml_parse_failures": 0,
+        "missing_relative_mesh_references": 0,
+        "unsafe_archive_members": 0
+      }
+    },
+    {
+      "name": "LAM released outputs",
+      "status": "VERIFIED_RELEASE_COMPLETE",
+      "canonical_path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code",
+      "released_outputs_root": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/released_outputs",
+      "manifest": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/manifest.csv",
+      "source": {
+        "type": "huggingface_dataset",
+        "repo_id": "YipengGao/Articulated-Object-Code",
+        "revision": "28cec4f5be7e34fd4d586879ecfcb67f7c5e4cc0",
+        "license": "mit"
+      },
+      "archives": [
+        {
+          "name": "viable.tar.gz",
+          "bytes": 1185271461,
+          "sha256": "a582ef0aa0f3073749adcc73d289a12200e500c1a5762a4ee1530eefc2c4920d"
+        },
+        {
+          "name": "loads_only.tar.gz",
+          "bytes": 194746559,
+          "sha256": "e616dc455450ca0f8ea1c76955929f340b75b9fa51b974327e160890620f9a9e"
+        },
+        {
+          "name": "broken.tar.gz",
+          "bytes": 199627935,
+          "sha256": "ef0f6e8506e0432febd5ccc4159c6cbf66a9c5cdadd3bdbcd521478e4c0fda3a"
+        }
+      ],
+      "verification": {
+        "manifest_objects": 3217,
+        "tier_counts": {
+          "viable": 2533,
+          "loads_only": 299,
+          "broken": 385
+        },
+        "manifest_urdf_files_present": 3217,
+        "manifest_urdf_xml_parse_failures": 0,
+        "recursive_generated_urdf_files_including_pipeline_copies": 4294,
+        "missing_relative_mesh_references": {
+          "viable": 0,
+          "loads_only": 0,
+          "broken": 354,
+          "broken_objects_affected": 81
+        },
+        "archive_sha256_failures": 0,
+        "cross_archive_path_collisions": 0
+      },
+      "code_checkout": {
+        "path": "/mnt/zsn/lyb/arti-skill/exp/baselines/LAM-official",
+        "remote": "https://github.com/gaoypeng/LAM.git",
+        "commit": "0b3a87beb8c35273a5acf8681221791aff746d8e"
+      }
+    },
+    {
+      "name": "PartNet-Mobility",
+      "status": "LOCAL_COMPLETE_PROVENANCE_LIMITED",
+      "canonical_path": "/mnt/zsn/lyb/arti-skill/exp/PartNet-Mobility",
+      "urdf_root": "/mnt/zsn/lyb/arti-skill/exp/PartNet-Mobility/data/dataset",
+      "archive": {
+        "path": "/mnt/zsn/lyb/arti-skill/exp/PartNet-Mobility/partnet-mobility-v0.zip",
+        "bytes": 3268124298,
+        "sha256": "b47247a44246111e8d09f2c0e64b4012ae35e0dcf4bb55f68a05b604455119ff",
+        "zip_integrity": "PASS"
+      },
+      "source": {
+        "type": "huggingface_dataset_gated_manual_approval",
+        "repo_id": "sapien-sim/PartNetMobility",
+        "revision": "ee0aa3ef1df16181d76d83f7415aa8c94ed1da8f",
+        "current_account_access": "DENIED_PENDING_APPROVAL"
+      },
+      "verification": {
+        "object_directories": 2347,
+        "mobility_urdf_files": 2347,
+        "meta_json_files": 2347,
+        "semantics_txt_files": 2347,
+        "local_ids_listed_by_fixed_hf_revision": 2347,
+        "local_bytes_authenticated_against_hf_revision": false
+      },
+      "provenance_limit": "The fixed Hugging Face revision is gated, so local object bytes could not be compared directly with that snapshot."
+    },
+    {
+      "name": "PhysX-Mobility",
+      "status": "VERIFIED_OFFICIAL_ARCHIVE",
+      "canonical_path": "/mnt/zsn/lyb/arti-skill/exp/PhysX-Mobility",
+      "urdf_root": "/mnt/zsn/lyb/arti-skill/exp/PhysX-Mobility/extracted/PhysX_mobility/urdf",
+      "finaljson_root": "/mnt/zsn/lyb/arti-skill/exp/PhysX-Mobility/extracted/PhysX_mobility/finaljson",
+      "partseg_root": "/mnt/zsn/lyb/arti-skill/exp/PhysX-Mobility/extracted/PhysX_mobility/partseg",
+      "source": {
+        "type": "huggingface_dataset",
+        "repo_id": "Caoza/PhysX-Mobility",
+        "revision": "d0768ee9e1415f6be8db78d6389ba018b85134c0"
+      },
+      "archive": {
+        "path": "/mnt/zsn/lyb/arti-skill/exp/PhysX-Mobility/PhysX-Mobility.zip",
+        "bytes": 937374668,
+        "sha256": "88308cc2a4cc6177c59e32c2de51e881e6b961737295e5082d7ed01cca221908",
+        "matches_hf_lfs_sha256": true,
+        "zip_integrity": "PASS"
+      },
+      "verification": {
+        "final_urdf_files": 2024,
+        "finaljson_files": 2024,
+        "partseg_object_directories": 2024,
+        "partseg_files": 291305,
+        "physx_ids_absent_from_partnet": 0,
+        "partnet_ids_absent_from_physx": 323,
+        "extraction_matches_archive_subtree_counts": true
+      },
+      "code_checkout": {
+        "path": "/mnt/zsn/lyb/arti-skill/exp/baselines/physx_mobility/official_repo",
+        "remote": "https://github.com/ziangcao0312/PhysX-Anything.git",
+        "commit": "e221826e6176d940905126d1894f9c1c933b70a8",
+        "worktree_status": "TRACKED_FILES_MISSING_NOT_RUNNABLE"
+      }
+    }
+  ],
+  "compatibility_symlinks": [
+    {
+      "path": "/mnt/zsn/lyb/PartNet_Mobility",
+      "target": "/mnt/zsn/lyb/arti-skill/exp/PartNet-Mobility"
+    },
+    {
+      "path": "/mnt/zsn/lyb/PhysX-Mobility-official",
+      "target": "/mnt/zsn/lyb/arti-skill/exp/PhysX-Mobility"
+    },
+    {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/baselines/LAM-official-dataset",
+      "target": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code"
+    },
+    {
+      "path": "/mnt/zsn/lyb/arti-skill/.cache/table6_sources/lam/dataset",
+      "target": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code"
+    }
+  ],
+  "noncanonical_related_paths": [
+    {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/baselines/Articraft-10K-official",
+      "reason": "Distinct GitHub source-record checkout; no URDF payload and not identity-equivalent to the pinned camvsl Hugging Face release."
+    },
+    {
+      "path": "/mnt/zsn/zsn_workspace/Ctrl-3D-trellis2-controlnet-dev/demo/physical_edit_demo/third_party/physx_mobility",
+      "reason": "Contains 28 additional generated collision/simulation URDF files and is not an exact extraction closure of the official raw archive."
+    }
+  ]
+}

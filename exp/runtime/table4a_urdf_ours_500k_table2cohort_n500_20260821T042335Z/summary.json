@@ -1,0 +1,129 @@
+{
+  "classification": "FORMAL",
+  "cohort": {
+    "j_eval": 2467,
+    "n_eval": 500,
+    "ordered_ids_sha256": "dcd19530ff3a3546fa149db58f331a042d5c3326f1b4fa1e5580914952e79289",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_500k_table2_n500_20260819T104011Z/frozen_manifest.json",
+    "source_manifest_file_sha256": "1b29d868112dcda326a08f8e3439d6b96c65833b99cc33af3bfcdb58fb4c2e24"
+  },
+  "completed_at_utc": "2026-08-21T08:49:32.799605Z",
+  "dataset": "Ours-500K",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "182a19188a16f066eda802660fdc2bc8b06bb79316e9e6d738e23d5f36272093",
+  "metrics": {
+    "collision_safe_dof_retention": {
+      "denominator": 2467,
+      "numerator": 2187,
+      "percent": 88.6502
+    },
+    "dof_bins": {
+      "0": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      },
+      "1": {
+        "joints_intended": 39,
+        "joints_passed": 39,
+        "n_eval": 39,
+        "safe": 39,
+        "strict_pass": 39
+      },
+      "2--3": {
+        "joints_intended": 440,
+        "joints_passed": 440,
+        "n_eval": 173,
+        "safe": 440,
+        "strict_pass": 169
+      },
+      "4--7": {
+        "joints_intended": 1107,
+        "joints_passed": 1107,
+        "n_eval": 220,
+        "safe": 1107,
+        "strict_pass": 215
+      },
+      ">=8": {
+        "joints_intended": 881,
+        "joints_passed": 601,
+        "n_eval": 68,
+        "safe": 601,
+        "strict_pass": 62
+      },
+      "unknown/unparseable": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      }
+    },
+    "executable_cf_dof_per_asset": {
+      "mean": 4.374,
+      "median": 4.0,
+      "n_assets": 500,
+      "p90": 7.0,
+      "total_safe_dof": 2187
+    },
+    "joint_level_full_range_cf": {
+      "denominator": 2467,
+      "numerator": 2187,
+      "percent": 88.6502
+    },
+    "limit_reachability": {
+      "continuous_excluded": 320,
+      "denominator": 2147,
+      "numerator": 2003,
+      "percent": 93.293
+    },
+    "normalized_clearance_p5": {
+      "asset_coverage": {
+        "denominator": 500,
+        "numerator": 480,
+        "percent": 96.0
+      },
+      "coverage_status": "PARTIAL",
+      "reason": "genesis_contact_penetration_has_no_signed_clearance_no_independent_exact_distance_backend_registered",
+      "state_coverage": {
+        "denominator": 51807,
+        "numerator": 46326,
+        "percent": 89.4203
+      },
+      "status": "N/E"
+    },
+    "state_counts": {
+      "executed": 46326,
+      "hash_cross_check": {
+        "mismatch": 0,
+        "no_reference": 0,
+        "verified": 46326
+      },
+      "intended": 51807
+    },
+    "status_counts": {
+      "completed": 480,
+      "error": 20,
+      "total": 500
+    }
+  },
+  "mode": "formal",
+  "notes": [
+    "Joint-level Full-range CF reuses all 51,807 frozen Ours Table 4 single-joint sweep states (K=21, endpoints included, other joints q=0); every q-vector hash is cross-checked.",
+    "State collision oracle = Genesis contact-penetration backend (genesis_contact_penetration_v1), direct kinematic detection only, illegal iff eligible-pair penetration > 1e-6 m.",
+    "Headline pair policy = distinct source links excluding direct parent-child; no method-specific allowance and no visual fallback.",
+    "Normalized Clearance P5 is N/E under this oracle because separated-pair signed clearance is unavailable and no independent exact-distance backend is registered.",
+    "Existing Strict Collision Pass values in DoF bins are historical Ours Table 4 PyBullet results reported alongside, not re-executed."
+  ],
+  "protocol_id": "table4a_ours_500k_table2cohort_n500_v1",
+  "run_directory": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4a_urdf_ours_500k_table2cohort_n500_20260821T042335Z",
+  "started_at_utc": "2026-08-21T04:23:38.924460Z",
+  "status_counts": {
+    "completed": 480,
+    "error": 20,
+    "total": 500
+  },
+  "wall_seconds": 15953.666
+}

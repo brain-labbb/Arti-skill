@@ -1,0 +1,237 @@
+{
+  "cohort": {
+    "available_assets": 3543,
+    "geometry_requested_assets": 100,
+    "package_evaluable_assets": 3544,
+    "requested_assets": 3544,
+    "selection": "all 3,544 frozen manifest identities; no outcome filtering",
+    "unavailable_assets": 1
+  },
+  "fail_closed": {
+    "deterministic_build": "not_evaluable; no two fresh builds",
+    "runtime_physics_defaults_count_as_native": false,
+    "self_intersection": "not_evaluable; no exact backend",
+    "semantic_complete": "not_evaluable; no independent required-part/role gold"
+  },
+  "hashes": {
+    "chunk_manifest_sha256": "8fa6468254a1f74c58f0c25699598bf88f622fabdaf74f0cd9268ee5663c5586",
+    "manifest_sha256": "bc2ef262bc6e3fb3170cdb4b73375610a7eb6d3e9a1d179a2119c2a380f4eab0",
+    "protocol_sha256": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+    "runner_sha256": "b19244d10c706d21066afb5f707decca1bf2d96779d9c9dbf0ab2d881f5b3305"
+  },
+  "interpretation": "ARTIVERSE_REAL_DATA_REFERENCE_STATIC_AUDIT",
+  "protocol_id": "nano3d_table7_production_readiness_v1",
+  "provenance": {
+    "archives_recomputed_and_matched": true,
+    "chunk_manifest": {
+      "declared_file_count": 531937,
+      "declared_input_bytes": 86992752890,
+      "declared_model_count": 3544,
+      "format": "artiverse-data-tar-gz-chunks-v1",
+      "path": "exp/artiverse/dataset_chunks/manifest.json",
+      "sha256": "8fa6468254a1f74c58f0c25699598bf88f622fabdaf74f0cd9268ee5663c5586"
+    },
+    "complete_extraction": true,
+    "tree_inventory_after": {
+      "file_count": 531937,
+      "path_size_manifest_sha256": "9630474612a3e0bb05c8b375bca3e183a906b17d9b565d4d3f6ecf2cb5d0f99c",
+      "special_count": 0,
+      "symlink_count": 0,
+      "total_bytes": 86992752890
+    },
+    "tree_inventory_before": {
+      "file_count": 531937,
+      "path_size_manifest_sha256": "9630474612a3e0bb05c8b375bca3e183a906b17d9b565d4d3f6ecf2cb5d0f99c",
+      "special_count": 0,
+      "symlink_count": 0,
+      "total_bytes": 86992752890
+    }
+  },
+  "results": {
+    "deterministic_build": {
+      "denominator": 3544,
+      "evaluable_denominator": 0,
+      "fail": 0,
+      "not_evaluable": 3544,
+      "pass": 0,
+      "pass_rate": null
+    },
+    "geometry": {
+      "degenerate_faces": {
+        "per_asset_mean": 120.51,
+        "total": 12051
+      },
+      "geometry_evaluable_assets": 100,
+      "geometry_not_evaluable_assets": 0,
+      "manifold": {
+        "definition": "edge-manifold proxy; vertex-manifold is not claimed",
+        "geometry_level": {
+          "denominator": 17804,
+          "numerator": 17795,
+          "rate": 0.999494495618962
+        },
+        "per_asset_mean_fraction": 0.9965666340827631
+      },
+      "mesh_load_error_assets": 0,
+      "mesh_load_error_count": 0,
+      "mesh_scope": "all packaged mesh payloads under urdf_w_collider for frozen N=100",
+      "no_mesh_payload_assets": 0,
+      "open_edges": {
+        "per_asset_mean": 61310.16,
+        "total": 6131016
+      },
+      "readable_geometries": 17804,
+      "readable_mesh_payloads": 13932,
+      "selection": {
+        "content_blind": true,
+        "full_asset_cohort": 3544,
+        "requested_assets": 100,
+        "rule": "ascending SHA256(manifest root UTF-8), then manifest root; take first 100"
+      },
+      "self_intersection": {
+        "denominator": 100,
+        "reason": "no exact adjacent-face-excluding triangle-intersection backend was run",
+        "state": "not_evaluable"
+      },
+      "watertight": {
+        "geometry_level": {
+          "denominator": 17804,
+          "numerator": 11233,
+          "rate": 0.630925634688834
+        },
+        "per_asset_mean_fraction": 0.07698844000735176
+      }
+    },
+    "kinematic_complete": {
+      "denominator": 3544,
+      "evaluable_denominator": 3543,
+      "fail": 2,
+      "gate_pass_counts": {
+        "explicit_finite_joint_origins": {
+          "denominator": 3543,
+          "numerator": 3543,
+          "rate": 1.0
+        },
+        "movable_one_axis_joint_axes": {
+          "denominator": 3543,
+          "numerator": 3543,
+          "rate": 1.0
+        },
+        "parent_child_references": {
+          "denominator": 3543,
+          "numerator": 3541,
+          "rate": 0.999435506632797
+        },
+        "recognized_joint_types": {
+          "denominator": 3543,
+          "numerator": 3543,
+          "rate": 1.0
+        },
+        "revolute_prismatic_limits": {
+          "denominator": 3543,
+          "numerator": 3543,
+          "rate": 1.0
+        }
+      },
+      "not_evaluable": 1,
+      "pass": 3541,
+      "pass_rate": 0.999435506632797
+    },
+    "physical_complete": {
+      "denominator": 3544,
+      "evaluable_denominator": 3543,
+      "fail": 3543,
+      "gate_pass_counts": {
+        "movable_joints_have_native_damping_and_friction": {
+          "denominator": 3543,
+          "numerator": 2,
+          "rate": 0.0005644933672029354
+        },
+        "native_contact_material_or_friction_metadata": {
+          "denominator": 3543,
+          "numerator": 0,
+          "rate": 0.0
+        },
+        "physical_links_have_positive_definite_native_inertia": {
+          "denominator": 3543,
+          "numerator": 3543,
+          "rate": 1.0
+        },
+        "physical_links_have_positive_native_mass": {
+          "denominator": 3543,
+          "numerator": 3543,
+          "rate": 1.0
+        },
+        "visual_links_have_native_collision": {
+          "denominator": 3543,
+          "numerator": 3543,
+          "rate": 1.0
+        }
+      },
+      "not_evaluable": 1,
+      "pass": 0,
+      "pass_rate": 0.0
+    },
+    "portable_package": {
+      "denominator": 3544,
+      "evaluable_denominator": 3544,
+      "fail": 1,
+      "gate_pass_counts": {},
+      "not_evaluable": 0,
+      "pass": 3543,
+      "pass_rate": 0.9997178329571106
+    },
+    "semantic_complete": {
+      "denominator": 3544,
+      "evaluable_denominator": 0,
+      "fail": 0,
+      "not_evaluable": 3544,
+      "pass": 0,
+      "pass_rate": null
+    },
+    "semantic_field_proxy": {
+      "denominator": 3544,
+      "evaluable_denominator": 3543,
+      "fail": 17,
+      "gate_pass_counts": {
+        "all_visual_geometry_bearing_parts_named_nonplaceholder": {
+          "denominator": 3543,
+          "numerator": 3543,
+          "rate": 1.0
+        },
+        "one_rooted_connected_acyclic_hierarchy": {
+          "denominator": 3543,
+          "numerator": 3526,
+          "rate": 0.9952018063787751
+        }
+      },
+      "not_evaluable": 1,
+      "pass": 3526,
+      "pass_rate": 0.9952018063787751
+    },
+    "size_bytes": {
+      "mesh": {
+        "denominator": 3544,
+        "mean_bytes": 13834988.18989842,
+        "total_bytes": 49031198145
+      },
+      "primary_package": {
+        "denominator": 3544,
+        "mean_bytes": 19450892.662810385,
+        "total_bytes": 68933963597
+      },
+      "source": {
+        "denominator": 0,
+        "reason": "released data reference has no attributable generator source package",
+        "state": "not_evaluable"
+      },
+      "urdf": {
+        "denominator": 3544,
+        "mean_bytes": 20815.299379232507,
+        "total_bytes": 73769421
+      }
+    }
+  },
+  "schema_version": "1.0.0",
+  "status": "COMPLETE"
+}

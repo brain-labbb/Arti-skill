@@ -1,0 +1,60 @@
+{
+  "artifact_sha256": {
+    "asset_records.jsonl": "d6e33f0ba17f774e193a311b393f66105a6bd326ba076bc9f707a6a8e9a70557",
+    "frozen_manifest.json": "b8132a43a6b718ecc2b95d1dab83ca3c96666a850a6c0393b9d04ae827289a58",
+    "joint_records.jsonl": "cc0a65ce19ea6f720ab511befd5d1a0bda09200bdda64bdcb8a78d329a071d85",
+    "protocol_snapshot.md": "2384bb26729ff07521b2e71774a574af07a6854c364b3bfa51bf3c03b55e450a",
+    "report.md": "b0933c36278b2feeea05f9368498b2cdb90059155fd52187bfb3d1e0e0a3ec45",
+    "state_records[0]": "9267a751e0c1ce53f4b0ea41d155d2dae092f7098289e999b26f0383666fe2b5",
+    "strict_state_records.jsonl": "e89826cba0694865e42ef452b84f62819c83a1e2c1b886c77f6b0b0c4a7518d3",
+    "summary.json": "a62bb85b5b14b3cfff298156e9c150bb889c6fd191cd48dbbffc3378baf4e30b"
+  },
+  "checked_at_utc": "2026-08-19T10:06:13Z",
+  "checks": {
+    "asset_records_jsonl_readable": true,
+    "asset_records_terminal_and_unique": false,
+    "atomic_records_reaggregate_fail_closed": false,
+    "authoritative_table3_cohort_pinned": true,
+    "frozen_manifest_identity_closes": false,
+    "frozen_manifest_readable": true,
+    "joint_records_jsonl_readable": true,
+    "joint_records_terminal_and_unique": false,
+    "report_has_no_tbd": true,
+    "report_is_final_and_bound": false,
+    "required_artifacts_present": true,
+    "state_records_discoverable": true,
+    "state_records_jsonl_readable": true,
+    "state_records_terminal_unique_and_fail_closed": false,
+    "strict_state_records_close_rest_sobol_and_single_states": false,
+    "strict_state_records_jsonl_readable": true,
+    "summary_matches_independent_reaggregation": false,
+    "summary_readable": true
+  },
+  "computed_verification_aggregates_sha256": null,
+  "errors": {
+    "asset_records_terminal_and_unique": "prerequisite failed",
+    "atomic_records_reaggregate_fail_closed": "prerequisite failed",
+    "frozen_manifest_identity_closes": "VerificationError: frozen code_identity.static SHA256 mismatch: expected 'ac77a014a513cd7d0fa675e7aa46dcaf14433dbb7f01a47895c0010ea1bc3a73', observed '1c2fdc2c3d9f8ebcb3ab6b0bf8144b307c86b4b44790cf3182c2395ab37267ff'",
+    "joint_records_terminal_and_unique": "prerequisite failed",
+    "report_is_final_and_bound": "recomputed aggregate prerequisite failed",
+    "state_records_terminal_unique_and_fail_closed": "prerequisite failed or state_record_policy missing",
+    "strict_state_records_close_rest_sobol_and_single_states": "prerequisite failed",
+    "summary_matches_independent_reaggregation": "prerequisite failed"
+  },
+  "formal_evaluation": false,
+  "joint_count": 2395,
+  "output_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_lam_supplementary_n800_20260817_v2",
+  "sample_size": 800,
+  "source": {
+    "ordered_selected_asset_keys_sha256": "643aa5b76ac61f57dd943bee26444a3525c01201a8dff3443763a7fd8d8267d3",
+    "table3_asset_records_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table3_lam_n800_seed20260813_20260814T022400Z_v3/asset_records.jsonl",
+    "table3_asset_records_sha256": "7ef1c38d61bc780e41f62c7dd359e66f0bfeabe655c7453c93e2ea9830122d94",
+    "table3_manifest_content_sha256": "f8f7fe4da5634d4f806e793c0da919689eab25be1ce0bbed7e2232f3453d15c2",
+    "table3_manifest_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table3_lam_n800_seed20260813_20260814T022400Z_v3/manifest.json",
+    "table3_manifest_sha256": "7e16683bfe4e4f37d7972082d8512713c1d8d1ae4ce142b75bf7dfb0509b9951"
+  },
+  "status": "FAIL",
+  "strict_state_record_count": 50336,
+  "verifier_protocol_id": "urdf_lam_supplementary_verify_v1",
+  "verifier_sha256": "834f9c92bfc17ce899bd3a36391ed94109763ade0d1ddb734ae2a972a620b830"
+}

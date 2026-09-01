@@ -1,0 +1,145 @@
+{
+  "all_state_executed": 4063,
+  "all_state_expected": 4667,
+  "ccd": false,
+  "child_expectation_mismatch_count": 0,
+  "child_timeout_seconds": 900,
+  "cohort_asset_count": 45,
+  "cohort_sha256": "63dba2b27c2e370b4808029968b5c5a61a934a38a0597d5278643a6affaf0908",
+  "collision_metric_status": "N/A: official archive URDFs have zero collision elements",
+  "contact_counts_collected": false,
+  "declared_movable_joints": 273,
+  "failure_policy": "selected failures retained; no replacement",
+  "functional_motion_joints": 273,
+  "input_hash_mismatch_count": 0,
+  "intent_to_run_asset_count": 45,
+  "joint_mapping_complete_assets": 39,
+  "max_reset_readback_error": 0.0,
+  "merge_fixed_links_policy": "uniform for all selected assets; accepted only when Bullet/XML movable name/order/type/axis/limit checks all pass",
+  "motor_policy": "VELOCITY_CONTROL targetVelocity=0 force=0",
+  "motors_disabled": 253,
+  "movable_axis_exact_assets": 41,
+  "movable_limit_exact_assets": 43,
+  "movable_name_order_exact_assets": 39,
+  "movable_type_exact_assets": 45,
+  "native_abort_count": 0,
+  "penetration_counts_collected": false,
+  "pose_evaluation": "resetJointState -> performCollisionDetection -> getJointState readback; no stepSimulation",
+  "protocol_id": "nano3d_table6_physx_mobility_reset_readback_v3",
+  "pybullet_load_flags": "URDF_USE_INERTIA_FROM_FILE | URDF_USE_SELF_COLLISION | URDF_USE_SELF_COLLISION_EXCLUDE_PARENT | URDF_IGNORE_VISUAL_SHAPES | URDF_MERGE_FIXED_LINKS",
+  "pybullet_load_success_assets": 45,
+  "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+  "records_sha256": "0f2aebff7751d40b73aaf686a2ca17b40250b28211111936bd7b653284e43ea7",
+  "reset_readback_complete_assets": 39,
+  "reset_tolerance": 1e-09,
+  "retained_failure_count": 6,
+  "retained_failures": [
+    {
+      "dataset_id": "100194",
+      "failure_class": "EVALUATOR_JOINT_MAPPING_FAILURE",
+      "issues": [
+        "RuntimeError: URDF_MERGE_FIXED_LINKS changed XML/Bullet movable joint semantics: {'name_order': False, 'type': True, 'axis': False, 'limit': False}; xml_names=['joint_revolute_l_6_abstract_6_0', 'joint_revolute_l_6_abstract_6_2', 'joint_revolute_l_6_abstract_6_4', 'joint_revolute_l_6_abstract_6_5', 'joint_revolute_l_0_abstract_0_1', 'joint_revolute_l_4_abstract_4_3']; bullet_names=['joint_revolute_l_6_abstract_6_0', 'joint_revolute_l_0_abstract_0_1', 'joint_revolute_l_6_abstract_6_2', 'joint_revolute_l_6_abstract_6_4', 'joint_revolute_l_4_abstract_4_3', 'joint_revolute_l_6_abstract_6_5']"
+      ],
+      "partnet_category": "Box",
+      "state_executed": 0,
+      "state_expected": 130,
+      "status": "FAIL"
+    },
+    {
+      "dataset_id": "6797",
+      "failure_class": "EVALUATOR_JOINT_MAPPING_FAILURE",
+      "issues": [
+        "RuntimeError: URDF_MERGE_FIXED_LINKS changed XML/Bullet movable joint semantics: {'name_order': False, 'type': True, 'axis': True, 'limit': True}; xml_names=['joint_revolute_l_2_abstract_2_0', 'joint_revolute_l_2_abstract_2_1', 'joint_revolute_l_2_abstract_2_4']; bullet_names=['joint_revolute_l_2_abstract_2_4', 'joint_revolute_l_2_abstract_2_0', 'joint_revolute_l_2_abstract_2_1']"
+      ],
+      "partnet_category": "Clock",
+      "state_executed": 0,
+      "state_expected": 97,
+      "status": "FAIL"
+    },
+    {
+      "dataset_id": "152",
+      "failure_class": "EVALUATOR_JOINT_MAPPING_FAILURE",
+      "issues": [
+        "RuntimeError: URDF_MERGE_FIXED_LINKS changed XML/Bullet movable joint semantics: {'name_order': False, 'type': True, 'axis': False, 'limit': True}; xml_names=['joint_revolute_l_2_abstract_2_0', 'joint_revolute_l_2_abstract_2_1']; bullet_names=['joint_revolute_l_2_abstract_2_1', 'joint_revolute_l_2_abstract_2_0']"
+      ],
+      "partnet_category": "Faucet",
+      "state_executed": 0,
+      "state_expected": 86,
+      "status": "FAIL"
+    },
+    {
+      "dataset_id": "7128",
+      "failure_class": "EVALUATOR_JOINT_MAPPING_FAILURE",
+      "issues": [
+        "RuntimeError: URDF_MERGE_FIXED_LINKS changed XML/Bullet movable joint semantics: {'name_order': False, 'type': True, 'axis': False, 'limit': False}; xml_names=['joint_revolute_l_0_abstract_0_1', 'joint_revolute_l_0_abstract_0_3']; bullet_names=['joint_revolute_l_0_abstract_0_3', 'joint_revolute_l_0_abstract_0_1']"
+      ],
+      "partnet_category": "Microwave",
+      "state_executed": 0,
+      "state_expected": 86,
+      "status": "FAIL"
+    },
+    {
+      "dataset_id": "101579",
+      "failure_class": "EVALUATOR_JOINT_MAPPING_FAILURE",
+      "issues": [
+        "RuntimeError: URDF_MERGE_FIXED_LINKS changed XML/Bullet movable joint semantics: {'name_order': False, 'type': True, 'axis': True, 'limit': True}; xml_names=['joint_revolute_l_4_abstract_4_0', 'joint_revolute_l_0_abstract_0_1', 'joint_revolute_l_0_abstract_0_2']; bullet_names=['joint_revolute_l_4_abstract_4_0', 'joint_revolute_l_0_abstract_0_2', 'joint_revolute_l_0_abstract_0_1']"
+      ],
+      "partnet_category": "Safe",
+      "state_executed": 0,
+      "state_expected": 97,
+      "status": "FAIL"
+    },
+    {
+      "dataset_id": "47701",
+      "failure_class": "EVALUATOR_JOINT_MAPPING_FAILURE",
+      "issues": [
+        "RuntimeError: URDF_MERGE_FIXED_LINKS changed XML/Bullet movable joint semantics: {'name_order': False, 'type': True, 'axis': False, 'limit': True}; xml_names=['joint_revolute_l_5_abstract_5_0', 'joint_revolute_l_5_abstract_5_1', 'joint_revolute_l_5_abstract_5_2', 'joint_revolute_l_5_abstract_5_3']; bullet_names=['joint_revolute_l_5_abstract_5_3', 'joint_revolute_l_5_abstract_5_0', 'joint_revolute_l_5_abstract_5_1', 'joint_revolute_l_5_abstract_5_2']"
+      ],
+      "partnet_category": "StorageFurniture",
+      "state_executed": 0,
+      "state_expected": 108,
+      "status": "FAIL"
+    }
+  ],
+  "selected_urdf_hashes_sha256": "360f5b41183863f07f055a6d133be5a5d3b7a84667f2fb9bcaa6fb838eadba90",
+  "selection_is_outcome_independent": true,
+  "self_collision_flag_smoke": {
+    "checks": {
+      "exclude_parent_only_has_zero_contacts": true,
+      "none_has_zero_contacts": true,
+      "self_collision_detects_siblings": true,
+      "self_collision_exclude_parent_detects_siblings": true
+    },
+    "contacts": {
+      "exclude_parent_only": 0,
+      "none": 0,
+      "self_collision": 4,
+      "self_collision_exclude_parent": 4
+    },
+    "fixture": "self_collision_flag_smoke.urdf",
+    "fixture_sha256": "466ddf29378fea13716907a794ced7007adb3bafdde188ab959f680148a9ca76",
+    "interpretation": "protocol flag smoke only; excluded from official dataset metrics",
+    "passed": true,
+    "pybullet_api_version": 202010061
+  },
+  "single_state_executed": 2783,
+  "single_state_expected": 3003,
+  "single_states_per_functional_joint": 11,
+  "sobol_state_executed": 1280,
+  "sobol_state_expected": 1664,
+  "sobol_states_per_asset_with_gt_1_functional_joint": 64,
+  "status_counts": {
+    "FAIL": 6,
+    "PASS": 39
+  },
+  "thread_caps": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "timeout_count": 0,
+  "unsupported_motion_joints_excluded": 0,
+  "zero_width_joints_excluded": 0
+}

@@ -1,0 +1,646 @@
+{
+  "caveats": [
+    "Self-intersection is not evaluable because no exact adjacent-face-excluding backend was run.",
+    "Deterministic build is not evaluable because this audit did not execute two fresh builds.",
+    "Semantic completeness is not evaluable without output-independent required-part and role gold; the named-tree field proxy is separate.",
+    "Physical completeness requires native metadata; prior simulator runtime defaults do not satisfy any gate.",
+    "The 17 recovered URDFs remain strict compile failures in every result and denominator.",
+    "Geometry scores cover packaged triangle meshes only; primitive-only URDF assets are not triangulated."
+  ],
+  "cohort": {
+    "available_assets": 143,
+    "geometry_evaluable_assets": 99,
+    "package_evaluable_assets": 143,
+    "recovered_urdfs_promoted_to_strict_success": 0,
+    "requested_assets": 143,
+    "selection_rule": "all records in every ordered frozen task.records list; no outcome-based reselection",
+    "strict_compile_failure_recovered_urdf": 17,
+    "strict_compile_success": 126
+  },
+  "evidence_files": {
+    "asset_records": "exp/runtime/table7_articraft/asset_records.json",
+    "manifest": "exp/runtime/table7_articraft/manifest.json",
+    "protocol_snapshot": "exp/runtime/table7_articraft/protocol_snapshot.json",
+    "report": "exp/runtime/table7_articraft/report.md",
+    "self_check": "exp/runtime/table7_articraft/self_check.json",
+    "summary": "exp/runtime/table7_articraft/summary.json"
+  },
+  "integrity": {
+    "source_hash_matches": {
+      "denominator": 143,
+      "numerator": 143,
+      "rate": 1.0
+    },
+    "urdf_hash_matches_table6": {
+      "denominator": 143,
+      "numerator": 143,
+      "rate": 1.0
+    }
+  },
+  "method": "Original Articraft",
+  "protocol": {
+    "protocol_id": "nano3d_table7_production_readiness_v1",
+    "protocol_snapshot": "exp/runtime/table7_articraft/protocol_snapshot.json",
+    "protocol_snapshot_sha256": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c"
+  },
+  "results": {
+    "deterministic_build": {
+      "denominator": 143,
+      "evaluable_denominator": 0,
+      "fail": 0,
+      "not_evaluable": 143,
+      "pass": 0,
+      "pass_rate": null
+    },
+    "geometry": {
+      "degenerate_faces": {
+        "per_asset_mean": 50.90909090909091,
+        "total": 5040,
+        "zero_error_assets": {
+          "denominator": 99,
+          "numerator": 92,
+          "rate": 0.9292929292929293
+        }
+      },
+      "geometry_evaluable_asset_rate": {
+        "denominator": 143,
+        "numerator": 99,
+        "rate": 0.6923076923076923
+      },
+      "geometry_evaluable_assets": 99,
+      "geometry_not_evaluable_assets": 44,
+      "geometry_scope": "packaged or URDF-referenced readable triangle mesh payloads only; primitive-only URDF geometry is not triangulated",
+      "manifold": {
+        "all_geometries_pass_assets": {
+          "denominator": 99,
+          "numerator": 98,
+          "rate": 0.98989898989899
+        },
+        "definition": "edge-manifold proxy; vertex-manifold is not claimed",
+        "geometry_level": {
+          "denominator": 515,
+          "numerator": 514,
+          "rate": 0.9980582524271845
+        },
+        "per_asset_mean_fraction": 0.9966329966329966
+      },
+      "mesh_load_error_assets": 0,
+      "no_mesh_payload_assets": 44,
+      "open_edges": {
+        "per_asset_mean": 2103.5252525252527,
+        "total": 208249,
+        "zero_error_assets": {
+          "denominator": 99,
+          "numerator": 59,
+          "rate": 0.5959595959595959
+        }
+      },
+      "readable_geometries": 515,
+      "requested_assets": 143,
+      "self_intersection": {
+        "denominator": 143,
+        "reason": "no exact adjacent-face-excluding triangle intersection backend was run",
+        "state": "not_evaluable"
+      },
+      "watertight": {
+        "all_geometries_pass_assets": {
+          "denominator": 99,
+          "numerator": 59,
+          "rate": 0.5959595959595959
+        },
+        "geometry_level": {
+          "denominator": 515,
+          "numerator": 298,
+          "rate": 0.5786407766990291
+        },
+        "per_asset_mean_fraction": 0.6833451060723789
+      }
+    },
+    "kinematic_complete": {
+      "denominator": 143,
+      "evaluable_denominator": 143,
+      "fail": 18,
+      "gate_pass_counts": {
+        "explicit_finite_joint_origins": {
+          "denominator": 143,
+          "numerator": 125,
+          "rate": 0.8741258741258742
+        },
+        "movable_one_axis_joint_axes": {
+          "denominator": 143,
+          "numerator": 143,
+          "rate": 1.0
+        },
+        "parent_child_references": {
+          "denominator": 143,
+          "numerator": 143,
+          "rate": 1.0
+        },
+        "recognized_joint_types": {
+          "denominator": 143,
+          "numerator": 143,
+          "rate": 1.0
+        },
+        "revolute_prismatic_limits": {
+          "denominator": 143,
+          "numerator": 143,
+          "rate": 1.0
+        }
+      },
+      "not_evaluable": 0,
+      "pass": 125,
+      "pass_rate": 0.8741258741258742
+    },
+    "physical_complete": {
+      "denominator": 143,
+      "evaluable_denominator": 143,
+      "fail": 143,
+      "gate_pass_counts": {
+        "movable_joints_have_native_damping_and_friction": {
+          "denominator": 143,
+          "numerator": 2,
+          "rate": 0.013986013986013986
+        },
+        "native_contact_material_or_friction_metadata": {
+          "denominator": 143,
+          "numerator": 0,
+          "rate": 0.0
+        },
+        "physical_links_have_positive_definite_native_inertia": {
+          "denominator": 143,
+          "numerator": 58,
+          "rate": 0.40559440559440557
+        },
+        "physical_links_have_positive_native_mass": {
+          "denominator": 143,
+          "numerator": 58,
+          "rate": 0.40559440559440557
+        },
+        "visual_links_have_native_collision": {
+          "denominator": 143,
+          "numerator": 143,
+          "rate": 1.0
+        }
+      },
+      "not_evaluable": 0,
+      "pass": 0,
+      "pass_rate": 0.0
+    },
+    "portable_package": {
+      "denominator": 143,
+      "evaluable_denominator": 143,
+      "fail": 0,
+      "not_evaluable": 0,
+      "pass": 143,
+      "pass_rate": 1.0
+    },
+    "semantic_complete": {
+      "denominator": 143,
+      "evaluable_denominator": 0,
+      "fail": 0,
+      "not_evaluable": 143,
+      "pass": 0,
+      "pass_rate": null
+    },
+    "semantic_field_proxy": {
+      "denominator": 143,
+      "evaluable_denominator": 143,
+      "fail": 0,
+      "gate_pass_counts": {
+        "all_visual_geometry_bearing_parts_named_nonplaceholder": {
+          "denominator": 143,
+          "numerator": 143,
+          "rate": 1.0
+        },
+        "one_rooted_connected_acyclic_hierarchy": {
+          "denominator": 143,
+          "numerator": 143,
+          "rate": 1.0
+        }
+      },
+      "not_evaluable": 0,
+      "pass": 143,
+      "pass_rate": 1.0
+    },
+    "size_bytes": {
+      "mesh": {
+        "denominator": 99,
+        "mean_bytes": 636381.5151515151,
+        "total_bytes": 63001770
+      },
+      "source": {
+        "denominator": 143,
+        "mean_bytes": 13398.412587412588,
+        "total_bytes": 1915973
+      },
+      "urdf": {
+        "denominator": 143,
+        "mean_bytes": 19152.34965034965,
+        "total_bytes": 2738786
+      }
+    }
+  },
+  "schema_version": "1.0.0",
+  "scope": "frozen 12-category, 143-record rating>=4 Original Articraft cohort inherited from Table 6; no outcome-based reselection",
+  "status": "COMPLETED_STATIC_AUDIT",
+  "strata": {
+    "strict_compile_failure_recovered_urdf": {
+      "available_assets": 17,
+      "deterministic_build": {
+        "denominator": 17,
+        "evaluable_denominator": 0,
+        "fail": 0,
+        "not_evaluable": 17,
+        "pass": 0,
+        "pass_rate": null
+      },
+      "geometry": {
+        "degenerate_faces": {
+          "per_asset_mean": 388.3636363636364,
+          "total": 4272,
+          "zero_error_assets": {
+            "denominator": 11,
+            "numerator": 10,
+            "rate": 0.9090909090909091
+          }
+        },
+        "geometry_evaluable_asset_rate": {
+          "denominator": 17,
+          "numerator": 11,
+          "rate": 0.6470588235294118
+        },
+        "geometry_evaluable_assets": 11,
+        "geometry_not_evaluable_assets": 6,
+        "geometry_scope": "packaged or URDF-referenced readable triangle mesh payloads only; primitive-only URDF geometry is not triangulated",
+        "manifold": {
+          "all_geometries_pass_assets": {
+            "denominator": 11,
+            "numerator": 11,
+            "rate": 1.0
+          },
+          "definition": "edge-manifold proxy; vertex-manifold is not claimed",
+          "geometry_level": {
+            "denominator": 49,
+            "numerator": 49,
+            "rate": 1.0
+          },
+          "per_asset_mean_fraction": 1.0
+        },
+        "mesh_load_error_assets": 0,
+        "no_mesh_payload_assets": 6,
+        "open_edges": {
+          "per_asset_mean": 41.09090909090909,
+          "total": 452,
+          "zero_error_assets": {
+            "denominator": 11,
+            "numerator": 9,
+            "rate": 0.8181818181818182
+          }
+        },
+        "readable_geometries": 49,
+        "requested_assets": 17,
+        "self_intersection": {
+          "denominator": 17,
+          "reason": "no exact adjacent-face-excluding triangle intersection backend was run",
+          "state": "not_evaluable"
+        },
+        "watertight": {
+          "all_geometries_pass_assets": {
+            "denominator": 11,
+            "numerator": 9,
+            "rate": 0.8181818181818182
+          },
+          "geometry_level": {
+            "denominator": 49,
+            "numerator": 44,
+            "rate": 0.8979591836734694
+          },
+          "per_asset_mean_fraction": 0.8484848484848485
+        }
+      },
+      "kinematic_complete": {
+        "denominator": 17,
+        "evaluable_denominator": 17,
+        "fail": 5,
+        "gate_pass_counts": {
+          "explicit_finite_joint_origins": {
+            "denominator": 17,
+            "numerator": 12,
+            "rate": 0.7058823529411765
+          },
+          "movable_one_axis_joint_axes": {
+            "denominator": 17,
+            "numerator": 17,
+            "rate": 1.0
+          },
+          "parent_child_references": {
+            "denominator": 17,
+            "numerator": 17,
+            "rate": 1.0
+          },
+          "recognized_joint_types": {
+            "denominator": 17,
+            "numerator": 17,
+            "rate": 1.0
+          },
+          "revolute_prismatic_limits": {
+            "denominator": 17,
+            "numerator": 17,
+            "rate": 1.0
+          }
+        },
+        "not_evaluable": 0,
+        "pass": 12,
+        "pass_rate": 0.7058823529411765
+      },
+      "physical_complete": {
+        "denominator": 17,
+        "evaluable_denominator": 17,
+        "fail": 17,
+        "gate_pass_counts": {
+          "movable_joints_have_native_damping_and_friction": {
+            "denominator": 17,
+            "numerator": 0,
+            "rate": 0.0
+          },
+          "native_contact_material_or_friction_metadata": {
+            "denominator": 17,
+            "numerator": 0,
+            "rate": 0.0
+          },
+          "physical_links_have_positive_definite_native_inertia": {
+            "denominator": 17,
+            "numerator": 15,
+            "rate": 0.8823529411764706
+          },
+          "physical_links_have_positive_native_mass": {
+            "denominator": 17,
+            "numerator": 15,
+            "rate": 0.8823529411764706
+          },
+          "visual_links_have_native_collision": {
+            "denominator": 17,
+            "numerator": 17,
+            "rate": 1.0
+          }
+        },
+        "not_evaluable": 0,
+        "pass": 0,
+        "pass_rate": 0.0
+      },
+      "portable_package": {
+        "denominator": 17,
+        "evaluable_denominator": 17,
+        "fail": 0,
+        "not_evaluable": 0,
+        "pass": 17,
+        "pass_rate": 1.0
+      },
+      "requested_assets": 17,
+      "semantic_complete": {
+        "denominator": 17,
+        "evaluable_denominator": 0,
+        "fail": 0,
+        "not_evaluable": 17,
+        "pass": 0,
+        "pass_rate": null
+      },
+      "semantic_field_proxy": {
+        "denominator": 17,
+        "evaluable_denominator": 17,
+        "fail": 0,
+        "gate_pass_counts": {
+          "all_visual_geometry_bearing_parts_named_nonplaceholder": {
+            "denominator": 17,
+            "numerator": 17,
+            "rate": 1.0
+          },
+          "one_rooted_connected_acyclic_hierarchy": {
+            "denominator": 17,
+            "numerator": 17,
+            "rate": 1.0
+          }
+        },
+        "not_evaluable": 0,
+        "pass": 17,
+        "pass_rate": 1.0
+      },
+      "size_bytes": {
+        "mesh": {
+          "denominator": 11,
+          "mean_bytes": 591598.6363636364,
+          "total_bytes": 6507585
+        },
+        "source": {
+          "denominator": 17,
+          "mean_bytes": 13529.764705882353,
+          "total_bytes": 230006
+        },
+        "urdf": {
+          "denominator": 17,
+          "mean_bytes": 20000.58823529412,
+          "total_bytes": 340010
+        }
+      }
+    },
+    "strict_compile_success": {
+      "available_assets": 126,
+      "deterministic_build": {
+        "denominator": 126,
+        "evaluable_denominator": 0,
+        "fail": 0,
+        "not_evaluable": 126,
+        "pass": 0,
+        "pass_rate": null
+      },
+      "geometry": {
+        "degenerate_faces": {
+          "per_asset_mean": 8.727272727272727,
+          "total": 768,
+          "zero_error_assets": {
+            "denominator": 88,
+            "numerator": 82,
+            "rate": 0.9318181818181818
+          }
+        },
+        "geometry_evaluable_asset_rate": {
+          "denominator": 126,
+          "numerator": 88,
+          "rate": 0.6984126984126984
+        },
+        "geometry_evaluable_assets": 88,
+        "geometry_not_evaluable_assets": 38,
+        "geometry_scope": "packaged or URDF-referenced readable triangle mesh payloads only; primitive-only URDF geometry is not triangulated",
+        "manifold": {
+          "all_geometries_pass_assets": {
+            "denominator": 88,
+            "numerator": 87,
+            "rate": 0.9886363636363636
+          },
+          "definition": "edge-manifold proxy; vertex-manifold is not claimed",
+          "geometry_level": {
+            "denominator": 466,
+            "numerator": 465,
+            "rate": 0.9978540772532188
+          },
+          "per_asset_mean_fraction": 0.9962121212121212
+        },
+        "mesh_load_error_assets": 0,
+        "no_mesh_payload_assets": 38,
+        "open_edges": {
+          "per_asset_mean": 2361.3295454545455,
+          "total": 207797,
+          "zero_error_assets": {
+            "denominator": 88,
+            "numerator": 50,
+            "rate": 0.5681818181818182
+          }
+        },
+        "readable_geometries": 466,
+        "requested_assets": 126,
+        "self_intersection": {
+          "denominator": 126,
+          "reason": "no exact adjacent-face-excluding triangle intersection backend was run",
+          "state": "not_evaluable"
+        },
+        "watertight": {
+          "all_geometries_pass_assets": {
+            "denominator": 88,
+            "numerator": 50,
+            "rate": 0.5681818181818182
+          },
+          "geometry_level": {
+            "denominator": 466,
+            "numerator": 254,
+            "rate": 0.5450643776824035
+          },
+          "per_asset_mean_fraction": 0.6627026382708201
+        }
+      },
+      "kinematic_complete": {
+        "denominator": 126,
+        "evaluable_denominator": 126,
+        "fail": 13,
+        "gate_pass_counts": {
+          "explicit_finite_joint_origins": {
+            "denominator": 126,
+            "numerator": 113,
+            "rate": 0.8968253968253969
+          },
+          "movable_one_axis_joint_axes": {
+            "denominator": 126,
+            "numerator": 126,
+            "rate": 1.0
+          },
+          "parent_child_references": {
+            "denominator": 126,
+            "numerator": 126,
+            "rate": 1.0
+          },
+          "recognized_joint_types": {
+            "denominator": 126,
+            "numerator": 126,
+            "rate": 1.0
+          },
+          "revolute_prismatic_limits": {
+            "denominator": 126,
+            "numerator": 126,
+            "rate": 1.0
+          }
+        },
+        "not_evaluable": 0,
+        "pass": 113,
+        "pass_rate": 0.8968253968253969
+      },
+      "physical_complete": {
+        "denominator": 126,
+        "evaluable_denominator": 126,
+        "fail": 126,
+        "gate_pass_counts": {
+          "movable_joints_have_native_damping_and_friction": {
+            "denominator": 126,
+            "numerator": 2,
+            "rate": 0.015873015873015872
+          },
+          "native_contact_material_or_friction_metadata": {
+            "denominator": 126,
+            "numerator": 0,
+            "rate": 0.0
+          },
+          "physical_links_have_positive_definite_native_inertia": {
+            "denominator": 126,
+            "numerator": 43,
+            "rate": 0.3412698412698413
+          },
+          "physical_links_have_positive_native_mass": {
+            "denominator": 126,
+            "numerator": 43,
+            "rate": 0.3412698412698413
+          },
+          "visual_links_have_native_collision": {
+            "denominator": 126,
+            "numerator": 126,
+            "rate": 1.0
+          }
+        },
+        "not_evaluable": 0,
+        "pass": 0,
+        "pass_rate": 0.0
+      },
+      "portable_package": {
+        "denominator": 126,
+        "evaluable_denominator": 126,
+        "fail": 0,
+        "not_evaluable": 0,
+        "pass": 126,
+        "pass_rate": 1.0
+      },
+      "requested_assets": 126,
+      "semantic_complete": {
+        "denominator": 126,
+        "evaluable_denominator": 0,
+        "fail": 0,
+        "not_evaluable": 126,
+        "pass": 0,
+        "pass_rate": null
+      },
+      "semantic_field_proxy": {
+        "denominator": 126,
+        "evaluable_denominator": 126,
+        "fail": 0,
+        "gate_pass_counts": {
+          "all_visual_geometry_bearing_parts_named_nonplaceholder": {
+            "denominator": 126,
+            "numerator": 126,
+            "rate": 1.0
+          },
+          "one_rooted_connected_acyclic_hierarchy": {
+            "denominator": 126,
+            "numerator": 126,
+            "rate": 1.0
+          }
+        },
+        "not_evaluable": 0,
+        "pass": 126,
+        "pass_rate": 1.0
+      },
+      "size_bytes": {
+        "mesh": {
+          "denominator": 88,
+          "mean_bytes": 641979.375,
+          "total_bytes": 56494185
+        },
+        "source": {
+          "denominator": 126,
+          "mean_bytes": 13380.690476190477,
+          "total_bytes": 1685967
+        },
+        "urdf": {
+          "denominator": 126,
+          "mean_bytes": 19037.904761904763,
+          "total_bytes": 2398776
+        }
+      }
+    }
+  }
+}

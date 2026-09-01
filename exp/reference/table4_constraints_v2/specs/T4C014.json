@@ -1,0 +1,60 @@
+{
+  "benchmark_id": "table4_constraints_v2",
+  "category": "rolling_toolbox",
+  "constraints": [
+    {
+      "aliases": [
+        "drawer",
+        "drawer_front"
+      ],
+      "constraint_id": "T4C014-C01",
+      "measurement": {
+        "deduplication": "one final renderable node_or_visual counts once",
+        "matcher": "normalized token-boundary alias match",
+        "source": "final_artifact_only",
+        "units": "mesh-bearing named nodes_or_visuals",
+        "unmeasurable_policy": "not passed and excluded from conditional denominator"
+      },
+      "role": "drawer",
+      "target": 3,
+      "type": "exact_count"
+    },
+    {
+      "aliases": [
+        "caster_wheel",
+        "caster",
+        "wheel"
+      ],
+      "constraint_id": "T4C014-C02",
+      "measurement": {
+        "deduplication": "one final renderable node_or_visual counts once",
+        "matcher": "normalized token-boundary alias match",
+        "source": "final_artifact_only",
+        "units": "mesh-bearing named nodes_or_visuals",
+        "unmeasurable_policy": "not passed and excluded from conditional denominator"
+      },
+      "role": "caster_wheel",
+      "target": 4,
+      "type": "exact_count"
+    },
+    {
+      "absolute_tolerance_m": 0.005,
+      "constraint_id": "T4C014-C03",
+      "measure": "horizontal_max",
+      "measurement": {
+        "glb_urdf_units": "m",
+        "source": "final_artifact_world_aabb",
+        "step_units": "mm converted to m",
+        "z_up_required": true
+      },
+      "relative_tolerance": 0.1,
+      "target_m": 0.7,
+      "type": "numeric_dimension"
+    }
+  ],
+  "difficulty": "complex",
+  "input_modality": "text",
+  "prompt": "Create an upright rolling mechanic's toolbox. The final object must contain exactly 3 distinct drawer part(s), exactly 4 distinct caster wheel part(s). Its larger horizontal overall extent 0.70 m (700 mm). Model every counted role as a separately named object, part, link, or visual. Keep the object upright on the ground plane, use Z as up, center it near the origin, and preserve real-world scale.",
+  "schema_version": 2,
+  "task_id": "T4C014"
+}

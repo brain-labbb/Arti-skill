@@ -1,0 +1,308 @@
+{
+  "articraft": {
+    "config": {
+      "path": "/mnt/zsn/data/particulate/datasets/Articraft-10K/renders/uniform244_one_per_category_studio_256_v1/render_config.json",
+      "sha256": "1bcec0dc177c29c38ed5103f53421c0adcc4bd18f312ce1f58e4721e16de562d",
+      "size_bytes": 3065
+    },
+    "manifest": {
+      "path": "/mnt/zsn/data/particulate/datasets/Articraft-10K/renders/uniform244_one_per_category_studio_256_v1/render_manifest.csv",
+      "sha256": "37e5a625db057cd8de7e29ba2263c602ea6b701188d88e6091dd00ab97eac6c0",
+      "size_bytes": 426008
+    },
+    "official_roster": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/articraft_github_merged_10787_20260829/rosters/merged/full_release_manifest.json",
+      "sha256": "b63540abc7b43a2fd0bbfe653a5db797cc2f241663aa06fb54874cb60c4d3f6d",
+      "size_bytes": 31965134
+    },
+    "roster": {
+      "path": "/mnt/zsn/data/particulate/datasets/Articraft-10K/renders/uniform244_one_per_category_studio_256_v1/category_one_shot_roster.csv",
+      "sha256": "c3b136f30acb59967558912ed6933434a1011e11f16133905fd0b45d975cf1b9",
+      "size_bytes": 186095
+    }
+  },
+  "audit": {
+    "artifacts": {
+      "articraft_index.csv": {
+        "row_count": 244,
+        "sha256": "0992ac63fa4386a2f0af04c27b433638dbd72504f87a57d20368ef47c5cf8152",
+        "size_bytes": 124854
+      },
+      "articraft_selection_summary.json": {
+        "sha256": "f10bf5512ad4759fd2508d623fae2dd2169fe275c814e9eac3808b380daa3278",
+        "size_bytes": 7963
+      },
+      "clip/articraft_feature_manifest.json": {
+        "sha256": "079c14b63b8d33d1420373d9adf03375bac619eebcdf4839af64c79133c56e45",
+        "size_bytes": 1459
+      },
+      "clip/articraft_one_shot_features.npy": {
+        "dtype": "float32",
+        "sha256": "73a263cbdce37c8b48e757514d629c2cb5906f3e5498b8c52f18119bec8deb0c",
+        "shape": [
+          244,
+          512
+        ],
+        "size_bytes": 499840
+      },
+      "clip/articraft_one_shot_tsne.png": {
+        "grayscale_std": 19.12818576617515,
+        "height": 2160,
+        "sha256": "fc16d4429ad0863982bb73f561196976440a70180463d949c1ba25f738b4b13e",
+        "size_bytes": 312159,
+        "width": 2880
+      },
+      "clip/articraft_one_shot_tsne_coordinates.csv": {
+        "row_count": 244,
+        "sha256": "3b169268d6d299274c0da21020e7f972eb65dcd3762131c986930af29ac358a0",
+        "size_bytes": 81103
+      },
+      "clip/joint_three_source_tsne_coordinates.csv": {
+        "row_count": 859,
+        "sha256": "b641dc7f483700fe0d8a4eea384a3cdaea1cf666ad764e54fa20dc8ab8e95fda",
+        "size_bytes": 69479
+      },
+      "clip/joint_tsne_manifest.json": {
+        "sha256": "8e20dc3ed6af7434dad998e32daf87f1c09ff6980591b8031903cba40073623f",
+        "size_bytes": 149
+      },
+      "clip/tsne_manifest.json": {
+        "sha256": "2ad8b1d0fbf9f58f290aed83e310a4941b843ca20576f7393e255271e2ddb3d1",
+        "size_bytes": 373
+      },
+      "dinov2/articraft_feature_manifest.json": {
+        "sha256": "7c249bd72f2e2e64d8f128445b1b5da3487073a70805f10bbd7166eb0b836009",
+        "size_bytes": 1447
+      },
+      "dinov2/articraft_one_shot_features.npy": {
+        "dtype": "float32",
+        "sha256": "697b977bf9c2612a011f9fe7dde784673296eeb414eeafff3e8e146cb85f7e57",
+        "shape": [
+          244,
+          768
+        ],
+        "size_bytes": 749696
+      },
+      "dinov2/articraft_one_shot_tsne.png": {
+        "grayscale_std": 19.339924221788774,
+        "height": 2160,
+        "sha256": "8bd900e0e0a82be17768435770ff7b1619e4822310628446ef916464bc75760a",
+        "size_bytes": 312732,
+        "width": 2880
+      },
+      "dinov2/articraft_one_shot_tsne_coordinates.csv": {
+        "row_count": 244,
+        "sha256": "fe8bb079248e7544d70890fc607235483f3ecf7e785591be45acdf1b43957933",
+        "size_bytes": 81084
+      },
+      "dinov2/joint_three_source_tsne_coordinates.csv": {
+        "row_count": 859,
+        "sha256": "6dcb75690cbfa378bbfb9db732d52ab0dd07010565cd4dff1b146e3991b80a5c",
+        "size_bytes": 69425
+      },
+      "dinov2/joint_tsne_manifest.json": {
+        "sha256": "2b0d849cecb1b3bf5e19a9b96ee4e081845c170f19aa1023b159d4debe71e39d",
+        "size_bytes": 149
+      },
+      "dinov2/tsne_manifest.json": {
+        "sha256": "4449cca4fad8435fecade71d0f5f412fdb42aa52819a9b1209dfb18c318d2e60",
+        "size_bytes": 373
+      },
+      "high_dimensional_metrics.json": {
+        "sha256": "028fb776314fde00d1ad2dce9560a8a77d71bc277a808d41268de81134d94a49",
+        "size_bytes": 23902
+      },
+      "joint_three_source_comparison.png": {
+        "grayscale_std": 29.25059908904497,
+        "height": 1620,
+        "sha256": "1f8f015353f748b36204f7a30ee8a78f3d732b0922aa4346b9fb4621b8854991",
+        "size_bytes": 420229,
+        "width": 3240
+      },
+      "run_contract.json": {
+        "sha256": "58a2268b458d063e66b4aa76e91425e32be7f40f9100f059a62142b65307b158",
+        "size_bytes": 3643
+      }
+    },
+    "checks": {
+      "dimensions:clip/articraft_one_shot_tsne.png": true,
+      "dimensions:dinov2/articraft_one_shot_tsne.png": true,
+      "dimensions:joint_three_source_comparison.png": true,
+      "exists:articraft_index.csv": true,
+      "exists:articraft_selection_summary.json": true,
+      "exists:clip/articraft_feature_manifest.json": true,
+      "exists:clip/articraft_one_shot_features.npy": true,
+      "exists:clip/articraft_one_shot_tsne.png": true,
+      "exists:clip/articraft_one_shot_tsne_coordinates.csv": true,
+      "exists:clip/joint_three_source_tsne_coordinates.csv": true,
+      "exists:clip/joint_tsne_manifest.json": true,
+      "exists:clip/tsne_manifest.json": true,
+      "exists:dinov2/articraft_feature_manifest.json": true,
+      "exists:dinov2/articraft_one_shot_features.npy": true,
+      "exists:dinov2/articraft_one_shot_tsne.png": true,
+      "exists:dinov2/articraft_one_shot_tsne_coordinates.csv": true,
+      "exists:dinov2/joint_three_source_tsne_coordinates.csv": true,
+      "exists:dinov2/joint_tsne_manifest.json": true,
+      "exists:dinov2/tsne_manifest.json": true,
+      "exists:high_dimensional_metrics.json": true,
+      "exists:joint_three_source_comparison.png": true,
+      "exists:run_contract.json": true,
+      "finite:clip/articraft_one_shot_features.npy": true,
+      "finite:dinov2/articraft_one_shot_features.npy": true,
+      "finite:high_dimensional_metrics.json": true,
+      "nonblank:clip/articraft_one_shot_tsne.png": true,
+      "nonblank:dinov2/articraft_one_shot_tsne.png": true,
+      "nonblank:joint_three_source_comparison.png": true,
+      "normalized:clip/articraft_one_shot_features.npy": true,
+      "normalized:dinov2/articraft_one_shot_features.npy": true,
+      "rows:articraft_index.csv": true,
+      "rows:clip/articraft_one_shot_tsne_coordinates.csv": true,
+      "rows:clip/joint_three_source_tsne_coordinates.csv": true,
+      "rows:dinov2/articraft_one_shot_tsne_coordinates.csv": true,
+      "rows:dinov2/joint_three_source_tsne_coordinates.csv": true,
+      "shape:clip/articraft_one_shot_features.npy": true,
+      "shape:dinov2/articraft_one_shot_features.npy": true,
+      "unique_categories:articraft_index.csv": true,
+      "unique_colors:articraft_index.csv": true
+    },
+    "pass": true,
+    "schema_version": 1
+  },
+  "encoders": {
+    "clip": {
+      "articraft_feature": {
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_artiverse_articraft_uniform_comparison/clip/articraft_one_shot_features.npy",
+        "sha256": "73a263cbdce37c8b48e757514d629c2cb5906f3e5498b8c52f18119bec8deb0c",
+        "size_bytes": 499840
+      },
+      "articraft_feature_manifest": {
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_artiverse_articraft_uniform_comparison/clip/articraft_feature_manifest.json",
+        "sha256": "079c14b63b8d33d1420373d9adf03375bac619eebcdf4839af64c79133c56e45",
+        "size_bytes": 1459
+      },
+      "feature_dim": 512,
+      "tsne": {
+        "independent_articraft": {
+          "input_dim": 512,
+          "max_iter": 1000,
+          "n_jobs": 8,
+          "pca_components": 50,
+          "perplexity": 30.0,
+          "random_state": 42,
+          "sample_count": 244
+        },
+        "joint": {
+          "input_dim": 512,
+          "max_iter": 1000,
+          "n_jobs": 8,
+          "pca_components": 50,
+          "perplexity": 30.0,
+          "random_state": 42,
+          "sample_count": 859
+        }
+      }
+    },
+    "dinov2": {
+      "articraft_feature": {
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_artiverse_articraft_uniform_comparison/dinov2/articraft_one_shot_features.npy",
+        "sha256": "697b977bf9c2612a011f9fe7dde784673296eeb414eeafff3e8e146cb85f7e57",
+        "size_bytes": 749696
+      },
+      "articraft_feature_manifest": {
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_artiverse_articraft_uniform_comparison/dinov2/articraft_feature_manifest.json",
+        "sha256": "7c249bd72f2e2e64d8f128445b1b5da3487073a70805f10bbd7166eb0b836009",
+        "size_bytes": 1447
+      },
+      "feature_dim": 768,
+      "tsne": {
+        "independent_articraft": {
+          "input_dim": 768,
+          "max_iter": 1000,
+          "n_jobs": 8,
+          "pca_components": 50,
+          "perplexity": 30.0,
+          "random_state": 42,
+          "sample_count": 244
+        },
+        "joint": {
+          "input_dim": 768,
+          "max_iter": 1000,
+          "n_jobs": 8,
+          "pca_components": 50,
+          "perplexity": 30.0,
+          "random_state": 42,
+          "sample_count": 859
+        }
+      }
+    }
+  },
+  "interpretation_limits": [
+    "Articraft-10K has 244 categories while PV-A has 531 generator classes and Artiverse has 84 categories; point counts are not semantic-equivalent.",
+    "One representative per category has selection variance.",
+    "t-SNE is visualization only; use high-dimensional cosine metrics for source-gap claims.",
+    "The 244-category Articraft universe includes the 791-row GitHub supplement; cohort origin is recorded per selected row."
+  ],
+  "schema_version": 1,
+  "stable_run_contract": {
+    "artifact_contract": "pva_artiverse_articraft_uniform_comparison_v1",
+    "counts": {
+      "Articraft-10K": 244,
+      "Articraft-10K_official_categories": 244,
+      "Articraft-10K_official_models": 10787,
+      "Artiverse": 84,
+      "PV-A": 531
+    },
+    "feature_extraction_request": {
+      "batch_size": 64,
+      "device": "auto",
+      "num_workers": 8,
+      "use_amp": true
+    },
+    "implementation": {
+      "base_compare_script_sha256": "07970f003086c1dd487a39352bb5c0b36b0684a9567212ed74c45a0ed9e1f2cd",
+      "feature_tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0",
+      "script_sha256": "1d1878a1fe94dcc9328310bc7ce4b8cdf6c1f90d86885df40b12954484c6f34f"
+    },
+    "inputs": {
+      "articraft_official_roster_sha256": "b63540abc7b43a2fd0bbfe653a5db797cc2f241663aa06fb54874cb60c4d3f6d",
+      "articraft_ordered_image_receipt_sha256": "ebbeb4bed0ecc284afeac340c4e1bfda81f348f68a49e1db6767bef9401e37ff",
+      "articraft_render_config_sha256": "1bcec0dc177c29c38ed5103f53421c0adcc4bd18f312ce1f58e4721e16de562d",
+      "articraft_render_manifest_sha256": "37e5a625db057cd8de7e29ba2263c602ea6b701188d88e6091dd00ab97eac6c0",
+      "articraft_root": "/mnt/zsn/data/particulate/datasets/Articraft-10K/renders/uniform244_one_per_category_studio_256_v1",
+      "articraft_roster_sha256": "c3b136f30acb59967558912ed6933434a1011e11f16133905fd0b45d975cf1b9",
+      "artiverse_comparison_audit_sha256": "6da0eab763fbfd34459b7509bdc7643a9bdaf35c041cf6f2436257ffcd24e865",
+      "artiverse_comparison_dir": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_artiverse_uniform_one_shot_comparison",
+      "artiverse_ordered_image_receipt_sha256": "b45da9271249d81bd30d747900b48707f70c23976b4f4fdfa595113b81496e78",
+      "artiverse_render_manifest_sha256": "b95c21bca1c93e06eeb0b1e5414474f9bf2898a5e2bda0c98ae599d6ad1fadee",
+      "artiverse_root": "/mnt/zsn/data/particulate/datasets/Artiverse/renders/uniform84_one_per_category_studio_256_v1",
+      "pva_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva531_uniform_tsne",
+      "pva_roster_sha256": "8c9f2af9bcdf769b9109dc273f08942633d64b437fc5bbfca3813d9e09da0ec2",
+      "pva_run_manifest_sha256": "5895da02d1b6be3e81f322b99feb97e51e33281f66f967f205c8e81b6266c1bd",
+      "source_features": {
+        "clip": {
+          "articraft_feature_manifest_sha256": "079c14b63b8d33d1420373d9adf03375bac619eebcdf4839af64c79133c56e45",
+          "artiverse_feature_manifest_sha256": "720949113a4d043654eae321586b7bc3f1a057785d2721a73d4a9dbb049ad115",
+          "artiverse_feature_sha256": "e6525d684ca1652ef257e111e93adaf329a34cab266272b0006ce7919d1e57de",
+          "model_fingerprint": "86f46fca5a8237efe2cf121efe7beb117fd924e6ed088f150c114349f08ff344",
+          "pva_feature_sha256": "9a25469c5c1b8fa6ee1a8820a20666da669b4b68aeb1c29c0d52ea7dd1501d92"
+        },
+        "dinov2": {
+          "articraft_feature_manifest_sha256": "7c249bd72f2e2e64d8f128445b1b5da3487073a70805f10bbd7166eb0b836009",
+          "artiverse_feature_manifest_sha256": "8ec1618ab10ddbde5620803bef37cc1a24a04aa38474f4bf14067943c07223fd",
+          "artiverse_feature_sha256": "11736a415465a2c034207b9151d77ba7744348e7fd9d0ce0c11ef37681514869",
+          "model_fingerprint": "4206b0d68ec780ee11d4ae6020f36adb8df3609741ccee888dbce04507e63587",
+          "pva_feature_sha256": "57bae754b3558b14d9a1fe3aa4a40d2fa84bbe418b2a91512718a3093c9c317e"
+        }
+      }
+    },
+    "projection": {
+      "neighbor_fraction": 0.06,
+      "perplexity": 30.0,
+      "seed": 42,
+      "tsne_jobs": 8,
+      "tsne_max_iter": 1000
+    },
+    "protocol": "one identity-hash-selected representative per Articraft category; identical PV-A studio values; same frozen DINOv2 and CLIP snapshots",
+    "schema_version": 1
+  }
+}

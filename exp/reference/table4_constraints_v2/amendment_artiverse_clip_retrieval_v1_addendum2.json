@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "addendum_id": "table4_constraints_v2_artiverse_clip_retrieval_v1_addendum2",
+  "frozen_utc": "2026-08-12T08:03:00Z",
+  "status": "pre_result_frozen",
+  "original_amendment_sha256": "ded01ce6b663559ea64955d5a69100894d7baacc304579131692accb02042fce",
+  "previous_addendum": "exp/reference/table4_constraints_v2/amendment_artiverse_clip_retrieval_v1_addendum1.json",
+  "previous_addendum_sha256": "0bcc779eabac90efbfa0f7df0926b650d349951081d531d561d3d807d184a46f",
+  "reason": "An independent pre-result environment smoke found that the host OpenBLAS default attempted 64 worker threads and could fail under concurrent load. This addendum freezes single-thread numerical-library execution before NumPy, Torch, or Transformers import. All scientific selection and scoring definitions from the original amendment and first addendum are unchanged.",
+  "implementation": {
+    "snapshot_preflight_script": "exp/scripts/prepare_artiverse_clip_retrieval_snapshot.py",
+    "snapshot_preflight_script_sha256": "739954560107bbf77dbdfc9ba878cd4e9c96b7c0337da60ecedadd60c17ee718",
+    "selector": "exp/scripts/run_artiverse_clip_retrieval_selection.py",
+    "selector_sha256": "5248cf927777e6bb6862713a5d7e854c9b4f193742963d870ccf384ab3448db5",
+    "materializer": "exp/scripts/run_artiverse_clip_retrieval_materialize.py",
+    "materializer_sha256": "7ebb34660996ada235b116553b7880a1602fa20c26aa9f6582ef607773f90460"
+  },
+  "formal_selection": {
+    "batch_assets": 8,
+    "full_embedding_runs": 2,
+    "fresh_model_instance_per_run": true,
+    "repair_attempts": 0,
+    "rank_fallbacks": 0
+  },
+  "numerical_thread_environment": {
+    "application_time": "Direct os.environ assignment in selector module before importing NumPy, Torch, Transformers, or Pillow.",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "runtime_gate": "The formal selector reads all four environment variables and fails unless the observed mapping exactly equals this mapping.",
+    "provenance": "The exact observed mapping is recorded in selection_preflight.json and transitively locked by selection.lock.json. The launcher also supplies the same four variables explicitly."
+  },
+  "inheritance": {
+    "effective_protocol": [
+      "amendment_artiverse_clip_retrieval_v1.json",
+      "amendment_artiverse_clip_retrieval_v1_addendum1.json",
+      "amendment_artiverse_clip_retrieval_v1_addendum2.json"
+    ],
+    "unchanged": [
+      "all frozen prompts and candidate eligibility rules",
+      "render-only snapshot exact closure",
+      "CLIP model, revision, processor, aggregation, and global top-1 tie break",
+      "two independent full embedding runs",
+      "pre-result independent audit gate",
+      "materialization, repair-zero, no-rank-fallback, double-scoring, and interpretation rules"
+    ]
+  }
+}

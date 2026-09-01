@@ -1,0 +1,137 @@
+# Local environments and secrets
+/.conda-envs/
+**/.venv/
+**/.venv_*/
+**/.venv-*/
+**/venv/
+**/.env
+!**/.env.example
+!**/*.env.example
+embodied_gen_hinge_physics/embodied_gen/part_physics/vlm.env
+embodied_gen_hinge_physics/vlm.env
+
+# Python, test, and editor caches
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.ruff_cache/
+**/.mypy_cache/
+**/*.egg-info/
+/.cache/
+/.claude/
+/.articraft/
+/.cleanup_archive/
+/.worktrees/
+
+# Build and dependency output
+**/build/
+**/dist/
+**/node_modules/
+**/.artifacts/
+**/.articraft_runs/
+
+# Generated exports and downloaded third-party assets
+/seed_exports/
+/seed_exports_physics_10/
+/blenderkit_metal_materials/
+/metrics_test/
+/material_db/cache/
+
+# Blender gallery artifacts
+/blender_gallery/*/
+/blender_gallery/*.blend
+/blender_gallery/*.gif
+/blender_gallery/*.mp4
+/blender_gallery/*.png
+/blender_gallery/*.zip
+
+# Out of scope for the GitHub pipeline backup
+/blender_gallery/
+/configs/
+/data_check/
+/embodied_gen_hinge_physics/
+/embodied_gen_part_physics/
+
+# Local experiment and validation runs
+/data_check/genesis_*/
+/data_check/reports*/
+/data_check/runtime_check_sample/
+/exp/runtime/
+/exp/helicopter_gif/
+/physics_caption/*
+!/physics_caption/README.md
+/eval_pilot/artifacts/
+/eval_pilot/artifacts_expanded/
+
+# Top-level runtime scratch space
+/logs/
+/tmp/
+/*.log
+
+# Additional local backup/runtime payloads
+/.modelscope-upload.*/
+/.staging/
+/.superpowers/
+/.tmp/
+/.cleanup/
+/test_apply_patch_tmp.txt
+/0071_stage3_100k_qwen2_v1_shell_*/
+/ArtiStructCollisionEval_*.zip
+/MUJOCO_LOG.TXT
+/geometry_exports_random*/
+/pva_best_view_bundle/
+/pva_best_view_bundle.*
+/runtime/
+/session/
+/render-output/
+/failure_case_renders/
+/blender_gallery/*/
+/blender_gallery/*.blend
+/blender_gallery/*.gif
+/blender_gallery/*.mp4
+/blender_gallery/*.png
+/blender_gallery/*.zip
+
+# Local experiment payloads and generated paper bundles
+/exp/.paper_ready_bundle.*/
+/exp/.partnet_n5_smoke/
+/exp/.pytest_tmp/
+/exp/.pytest_cache/
+/exp/.ruff_cache/
+/exp/.venv*/
+/exp/logs/
+/exp/runtime/
+/exp/backups/*
+!/exp/backups/*.sha256
+!/exp/backups/*.handoff.md
+!/exp/backups/*.manifest.json
+!/exp/backups/*.archive_receipt.json
+/exp/remote-audit/
+/exp/Articraft-10K/
+/exp/Articraft-10K-github/
+/exp/Articulated-Object-Code/
+/exp/PartNet-Mobility/
+/exp/PhysX-Mobility/
+/exp/SketchMobility/
+/exp/Infinigen-Sim/
+/exp/Brain/
+/exp/artiverse*/
+/exp/articraft10k_*/
+/exp/lam_*/
+/exp/partnet_*/
+/exp/pva*_*/
+/exp/uniform*_*/
+/exp/parts.zip
+/exp/*.zip
+/exp/*.pdf
+
+# Generated mesh caches and archives
+/exp/scripts/assets/
+*.tar
+*.tar.gz
+*.tar.zst
+*.log
+
+# OS/editor noise
+**/.DS_Store
+**/.idea/

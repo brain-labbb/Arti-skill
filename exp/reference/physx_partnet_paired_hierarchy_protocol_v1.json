@@ -1,0 +1,59 @@
+{
+  "protocol_id": "physx_partnet_paired_hierarchy_protocol_v1",
+  "protocol_version": 1,
+  "source": {
+    "dataset": "PhysX-Mobility",
+    "huggingface_repo": "Caoza/PhysX-Mobility",
+    "huggingface_revision": "d0768ee9e1415f6be8db78d6389ba018b85134c0",
+    "archive_sha256": "88308cc2a4cc6177c59e32c2de51e881e6b961737295e5082d7ed01cca221908",
+    "license": "cc-by-nc-4.0",
+    "upstream_terms": "PhysX-Mobility is derived from PartNet-Mobility; its release license does not supersede applicable PartNet-Mobility and ShapeNet terms. The paired asset use is non-commercial research evaluation.",
+    "declared_relationship": "PhysX-Mobility is based on PartNet-Mobility",
+    "independent_real_data_source": false
+  },
+  "selection": {
+    "requested_per_category": 6,
+    "rank_hash": "SHA256",
+    "rank_payload_encoding": "UTF-8",
+    "rank_payload_salt": "nano3d-table3-physx-partnet-paired-v1",
+    "rank_payload_format": "nano3d-table3-physx-partnet-paired-v1\n<category>\n<dataset_id>",
+    "ranking_rule": "within each exact PartNet-Mobility category in the PhysX/PartNet common-ID pool, ascending rank hash then numeric dataset_id; take six",
+    "selection_inputs": [
+      "category",
+      "dataset_id"
+    ],
+    "content_blind": true,
+    "failure_policy": "retain every frozen ID in the requested denominator; never replace unavailable, parse-failed, invalid, or unscorable assets"
+  },
+  "categories": {
+    "storage_furniture": "StorageFurniture",
+    "table": "Table",
+    "refrigerator": "Refrigerator",
+    "dishwasher": "Dishwasher",
+    "microwave": "Microwave"
+  },
+  "category_identity": {
+    "authority": "corresponding PartNet-Mobility <dataset_id>/meta.json model_cat",
+    "matching": "exact string equality",
+    "physx_finaljson_category_used": false,
+    "physx_finaljson_object_name_used": false
+  },
+  "evaluation": {
+    "structure_evaluator": "hierarchy_extended_metrics.py",
+    "ontology_alignment_evaluator": "partnet_hierarchy_correctness.py",
+    "ontology_alignment_views": {
+      "primary_raw_name_view": "raw PhysX-Mobility URDF link names only",
+      "metadata_assisted_sensitivity": "prediction-side finaljson part names recovered through exact visual-mesh basename identity; package annotations are not reference hierarchy gold"
+    },
+    "physx_package_annotations_used_as_partnet_gold": false,
+    "movable_joint_definition": "all non-fixed URDF joints",
+    "unsupported_joint_policy": "report every joint type outside fixed/revolute/continuous/prismatic/planar/floating separately; never silently reclassify it"
+  },
+  "claim_boundary": {
+    "dataset_role": "paired derivative curated released-dataset reference, not a generated-method baseline and not an independent corroborating dataset",
+    "structure": "package-level URDF structural validity and representation diagnostics",
+    "ontology": "raw-name semantic recoverability and induced PartNet-ontology alignment proxy, not instance-level kinematic correctness",
+    "paired_interpretation": "same-ID PhysX-Mobility versus PartNet-Mobility representation-change audit",
+    "paper_ready": "supplementary_reference_only"
+  }
+}

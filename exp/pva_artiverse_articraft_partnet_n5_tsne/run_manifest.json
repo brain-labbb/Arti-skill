@@ -1,0 +1,1026 @@
+{
+  "analysis_contract": "four_dataset_uniform_render_max5_and_strict_n5_v1",
+  "artifacts": {
+    "all_class_tsne": "tsne_independent_all_classes.png",
+    "audit": "audit.json",
+    "class_color_index": "class_color_index.csv",
+    "dataset_summary": "dataset_summary.csv",
+    "joint_tsne": "tsne_joint_strict_n5_by_dataset.png",
+    "metrics_csv": "strict_n5_feature_metrics.csv",
+    "metrics_plot": "feature_space_metrics_strict_n5.png",
+    "sample_index": "render_sample_index.csv",
+    "strict_n5_tsne": "tsne_independent_strict_n5.png"
+  },
+  "datasets": [
+    {
+      "class_count": 531,
+      "dataset": "PV-A",
+      "per_class_count_values": "5",
+      "render_count": 2655,
+      "render_root": "/mnt/zsn/lyb/arti-skill/exp/uniform531_n5_studio_256_v1",
+      "short_class_count": 0,
+      "strict_n5_class_count": 531,
+      "strict_n5_render_count": 2655
+    },
+    {
+      "class_count": 84,
+      "dataset": "Artiverse",
+      "per_class_count_values": "1,2,3,4,5",
+      "render_count": 368,
+      "render_root": "/mnt/zsn/lyb/arti-skill/exp/artiverse_n5_uniform_studio_256_v1",
+      "short_class_count": 19,
+      "strict_n5_class_count": 65,
+      "strict_n5_render_count": 325
+    },
+    {
+      "class_count": 244,
+      "dataset": "Articraft-10K",
+      "per_class_count_values": "1,3,4,5",
+      "render_count": 1193,
+      "render_root": "/mnt/zsn/lyb/arti-skill/exp/articraft10k_uniform_n5_studio_256_v1",
+      "short_class_count": 8,
+      "strict_n5_class_count": 236,
+      "strict_n5_render_count": 1180
+    },
+    {
+      "class_count": 46,
+      "dataset": "PartNet-Mobility",
+      "per_class_count_values": "5",
+      "render_count": 230,
+      "render_root": "/mnt/zsn/lyb/arti-skill/exp/partnet_mobility_uniform_n5_studio_256_v1",
+      "short_class_count": 0,
+      "strict_n5_class_count": 46,
+      "strict_n5_render_count": 230
+    }
+  ],
+  "encoders": {
+    "clip": {
+      "datasets": {
+        "articraft10k": {
+          "all_tsne": {
+            "coordinate_receipt": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/clip/articraft10k_all.npy",
+              "sha256": "6ca8d215516d26ceb126bb8f1535e9e24b4b02328477f1fd4e931a82d8c492d9",
+              "size_bytes": 9672
+            },
+            "effective": {
+              "input_dim": 512,
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "pca_components": 50,
+              "perplexity": 30.0,
+              "random_state": 42,
+              "sample_count": 1193
+            },
+            "encoder": "clip",
+            "feature_dim": 512,
+            "parameters": {
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "perplexity": 30.0,
+              "seed": 42
+            },
+            "runtime_versions": {
+              "numpy": "2.2.6",
+              "scikit_learn": "1.7.2"
+            },
+            "sample_count": 1193,
+            "schema_version": 1,
+            "source_feature_sha256": "160b5b59732bfefa69e7a08ab72f877fb864fc63bd7197a7cad406fe4cf5fb23",
+            "source_indices_sha256": "8ae0eb47c222f5c96a5c5fb2ce5ac1fe83734f7ff5e3e1fa8521e20570b2ecd8",
+            "tag": "articraft10k_all",
+            "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+          },
+          "all_tsne_cache_reused": false,
+          "strict_n5_metrics": {
+            "class_count": 236,
+            "cosine_silhouette": -0.041448697447776794,
+            "mean_nearest_negative_cosine_similarity": 0.9435428977012634,
+            "mean_nearest_positive_cosine_similarity": 0.9362752437591553,
+            "mean_nearest_positive_minus_negative_margin": -0.007267636712640524,
+            "mean_within_class_cosine_distance": 0.09216389805078506,
+            "sample_count": 1180,
+            "top1_same_class_rate": 0.4067796610169492,
+            "top4_same_class_fraction": 0.2684322033898305
+          },
+          "strict_n5_tsne": {
+            "coordinate_receipt": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/clip/articraft10k_strict_n5.npy",
+              "sha256": "e2ac1d117b799f9865be5f17c8b0f30dded66390352d2067b5c577d2c615a4d4",
+              "size_bytes": 9568
+            },
+            "effective": {
+              "input_dim": 512,
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "pca_components": 50,
+              "perplexity": 30.0,
+              "random_state": 42,
+              "sample_count": 1180
+            },
+            "encoder": "clip",
+            "feature_dim": 512,
+            "parameters": {
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "perplexity": 30.0,
+              "seed": 42
+            },
+            "runtime_versions": {
+              "numpy": "2.2.6",
+              "scikit_learn": "1.7.2"
+            },
+            "sample_count": 1180,
+            "schema_version": 1,
+            "source_feature_sha256": "160b5b59732bfefa69e7a08ab72f877fb864fc63bd7197a7cad406fe4cf5fb23",
+            "source_indices_sha256": "e0e8e5f32db04151da0c1bbb4ff2816158a4e5d1e43df4e601d3eca489587cc2",
+            "tag": "articraft10k_strict_n5",
+            "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+          },
+          "strict_n5_tsne_cache_reused": false
+        },
+        "artiverse": {
+          "all_tsne": {
+            "coordinate_receipt": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/clip/artiverse_all.npy",
+              "sha256": "d1b79f77908d9d0e4cc740e0215a6533567f0cce6bea862e35477c43c5905946",
+              "size_bytes": 3072
+            },
+            "effective": {
+              "input_dim": 512,
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "pca_components": 50,
+              "perplexity": 30.0,
+              "random_state": 42,
+              "sample_count": 368
+            },
+            "encoder": "clip",
+            "feature_dim": 512,
+            "parameters": {
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "perplexity": 30.0,
+              "seed": 42
+            },
+            "runtime_versions": {
+              "numpy": "2.2.6",
+              "scikit_learn": "1.7.2"
+            },
+            "sample_count": 368,
+            "schema_version": 1,
+            "source_feature_sha256": "160b5b59732bfefa69e7a08ab72f877fb864fc63bd7197a7cad406fe4cf5fb23",
+            "source_indices_sha256": "f8e4b5aa81a84a76d207c6936e25d3a40173e40430a5ed831ffe24c351c3fb27",
+            "tag": "artiverse_all",
+            "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+          },
+          "all_tsne_cache_reused": false,
+          "strict_n5_metrics": {
+            "class_count": 65,
+            "cosine_silhouette": 0.09207014739513397,
+            "mean_nearest_negative_cosine_similarity": 0.9114409685134888,
+            "mean_nearest_positive_cosine_similarity": 0.9222410321235657,
+            "mean_nearest_positive_minus_negative_margin": 0.01080003660172224,
+            "mean_within_class_cosine_distance": 0.11168274283409119,
+            "sample_count": 325,
+            "top1_same_class_rate": 0.5692307692307692,
+            "top4_same_class_fraction": 0.41307692307692306
+          },
+          "strict_n5_tsne": {
+            "coordinate_receipt": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/clip/artiverse_strict_n5.npy",
+              "sha256": "112236317a1c097e02583169b55744d08d8d199c06f2895749ad9d7ed432e261",
+              "size_bytes": 2728
+            },
+            "effective": {
+              "input_dim": 512,
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "pca_components": 50,
+              "perplexity": 30.0,
+              "random_state": 42,
+              "sample_count": 325
+            },
+            "encoder": "clip",
+            "feature_dim": 512,
+            "parameters": {
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "perplexity": 30.0,
+              "seed": 42
+            },
+            "runtime_versions": {
+              "numpy": "2.2.6",
+              "scikit_learn": "1.7.2"
+            },
+            "sample_count": 325,
+            "schema_version": 1,
+            "source_feature_sha256": "160b5b59732bfefa69e7a08ab72f877fb864fc63bd7197a7cad406fe4cf5fb23",
+            "source_indices_sha256": "b13bd2ab0453cbf5d9b0c369b4bb61eef1a23a5a8817e1ff7efc28e502fec1e9",
+            "tag": "artiverse_strict_n5",
+            "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+          },
+          "strict_n5_tsne_cache_reused": false
+        },
+        "partnet_mobility": {
+          "all_tsne": {
+            "coordinate_receipt": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/clip/partnet_mobility_all.npy",
+              "sha256": "142d025968d6348fa72b7678a89db7e95d8f18dc43bcb30207cdc71b13505cc0",
+              "size_bytes": 1968
+            },
+            "effective": {
+              "input_dim": 512,
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "pca_components": 50,
+              "perplexity": 30.0,
+              "random_state": 42,
+              "sample_count": 230
+            },
+            "encoder": "clip",
+            "feature_dim": 512,
+            "parameters": {
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "perplexity": 30.0,
+              "seed": 42
+            },
+            "runtime_versions": {
+              "numpy": "2.2.6",
+              "scikit_learn": "1.7.2"
+            },
+            "sample_count": 230,
+            "schema_version": 1,
+            "source_feature_sha256": "160b5b59732bfefa69e7a08ab72f877fb864fc63bd7197a7cad406fe4cf5fb23",
+            "source_indices_sha256": "36aed4e3f678ccdc615d9c629d9ffea855f3a3f11762f0dafd7d893281c4da35",
+            "tag": "partnet_mobility_all",
+            "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+          },
+          "all_tsne_cache_reused": false,
+          "strict_n5_metrics": {
+            "class_count": 46,
+            "cosine_silhouette": 0.05643744766712189,
+            "mean_nearest_negative_cosine_similarity": 0.9128120541572571,
+            "mean_nearest_positive_cosine_similarity": 0.9194460511207581,
+            "mean_nearest_positive_minus_negative_margin": 0.006634002085775137,
+            "mean_within_class_cosine_distance": 0.11766036599874496,
+            "sample_count": 230,
+            "top1_same_class_rate": 0.5521739130434783,
+            "top4_same_class_fraction": 0.3652173913043478
+          },
+          "strict_n5_tsne": {
+            "aliased_to_all_cohort": true,
+            "coordinate_receipt": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/clip/partnet_mobility_all.npy",
+              "sha256": "142d025968d6348fa72b7678a89db7e95d8f18dc43bcb30207cdc71b13505cc0",
+              "size_bytes": 1968
+            },
+            "effective": {
+              "input_dim": 512,
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "pca_components": 50,
+              "perplexity": 30.0,
+              "random_state": 42,
+              "sample_count": 230
+            },
+            "encoder": "clip",
+            "feature_dim": 512,
+            "parameters": {
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "perplexity": 30.0,
+              "seed": 42
+            },
+            "runtime_versions": {
+              "numpy": "2.2.6",
+              "scikit_learn": "1.7.2"
+            },
+            "sample_count": 230,
+            "schema_version": 1,
+            "source_feature_sha256": "160b5b59732bfefa69e7a08ab72f877fb864fc63bd7197a7cad406fe4cf5fb23",
+            "source_indices_sha256": "36aed4e3f678ccdc615d9c629d9ffea855f3a3f11762f0dafd7d893281c4da35",
+            "tag": "partnet_mobility_all",
+            "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+          },
+          "strict_n5_tsne_cache_reused": false
+        },
+        "pva": {
+          "all_tsne": {
+            "coordinate_receipt": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/clip/pva_all.npy",
+              "sha256": "ff30fb3a4dfe7bf96d848388a6800b8867efefe848f9e89b020e13ac7ee4517d",
+              "size_bytes": 21368
+            },
+            "effective": {
+              "input_dim": 512,
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "pca_components": 50,
+              "perplexity": 30.0,
+              "random_state": 42,
+              "sample_count": 2655
+            },
+            "encoder": "clip",
+            "feature_dim": 512,
+            "parameters": {
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "perplexity": 30.0,
+              "seed": 42
+            },
+            "runtime_versions": {
+              "numpy": "2.2.6",
+              "scikit_learn": "1.7.2"
+            },
+            "sample_count": 2655,
+            "schema_version": 1,
+            "source_feature_sha256": "160b5b59732bfefa69e7a08ab72f877fb864fc63bd7197a7cad406fe4cf5fb23",
+            "source_indices_sha256": "9c3ec2d6117aa6fc814a9af3cf2ae805fa83692c1448f2f56c9ee466785c2e3e",
+            "tag": "pva_all",
+            "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+          },
+          "all_tsne_cache_reused": false,
+          "strict_n5_metrics": {
+            "class_count": 531,
+            "cosine_silhouette": 0.06371261924505234,
+            "mean_nearest_negative_cosine_similarity": 0.9210196137428284,
+            "mean_nearest_positive_cosine_similarity": 0.9262957572937012,
+            "mean_nearest_positive_minus_negative_margin": 0.005276119336485863,
+            "mean_within_class_cosine_distance": 0.1016523614525795,
+            "sample_count": 2655,
+            "top1_same_class_rate": 0.592090395480226,
+            "top4_same_class_fraction": 0.3729755178907721
+          },
+          "strict_n5_tsne": {
+            "aliased_to_all_cohort": true,
+            "coordinate_receipt": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/clip/pva_all.npy",
+              "sha256": "ff30fb3a4dfe7bf96d848388a6800b8867efefe848f9e89b020e13ac7ee4517d",
+              "size_bytes": 21368
+            },
+            "effective": {
+              "input_dim": 512,
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "pca_components": 50,
+              "perplexity": 30.0,
+              "random_state": 42,
+              "sample_count": 2655
+            },
+            "encoder": "clip",
+            "feature_dim": 512,
+            "parameters": {
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "perplexity": 30.0,
+              "seed": 42
+            },
+            "runtime_versions": {
+              "numpy": "2.2.6",
+              "scikit_learn": "1.7.2"
+            },
+            "sample_count": 2655,
+            "schema_version": 1,
+            "source_feature_sha256": "160b5b59732bfefa69e7a08ab72f877fb864fc63bd7197a7cad406fe4cf5fb23",
+            "source_indices_sha256": "9c3ec2d6117aa6fc814a9af3cf2ae805fa83692c1448f2f56c9ee466785c2e3e",
+            "tag": "pva_all",
+            "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+          },
+          "strict_n5_tsne_cache_reused": false
+        }
+      },
+      "feature_cache_reused": false,
+      "feature_manifest": {
+        "dtype": "float32",
+        "encoder": "clip",
+        "feature_dim": 512,
+        "feature_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0",
+        "model_fingerprint": "86f46fca5a8237efe2cf121efe7beb117fd924e6ed088f150c114349f08ff344",
+        "model_path": "/root/.cache/huggingface/hub/models--openai--clip-vit-base-patch32/snapshots/3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+        "ordered_sample_fingerprint": "d5d9a20a9d4c4db4d27e42c784c0a2b97aa475591746b31b118660cee28194c7",
+        "preprocessing": {
+          "alpha_composite_background_rgb": [
+            255,
+            255,
+            255
+          ],
+          "image_processor_use_fast": false
+        },
+        "raw_feature_receipt": {
+          "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/features/clip/raw_image_features.npy",
+          "sha256": "160b5b59732bfefa69e7a08ab72f877fb864fc63bd7197a7cad406fe4cf5fb23",
+          "size_bytes": 9105536
+        },
+        "runtime_versions": {
+          "numpy": "2.2.6",
+          "pillow": "9.5.0.post2",
+          "torch": "2.6.0+cu124",
+          "transformers": "5.9.0"
+        },
+        "sample_count": 4446,
+        "schema_version": 1,
+        "sources": [
+          {
+            "mode": "verified_pva_cache",
+            "source": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva531_n5_tsne/clip/raw_image_features.npy",
+              "sha256": "1cf7a0fff1e70a9f9ba8724f89e6d401ba66cb06b191dd55d6dd9bf64c43f29d",
+              "size_bytes": 5437568
+            }
+          },
+          {
+            "extraction": {
+              "alpha_composite_background_rgb": [
+                255,
+                255,
+                255
+              ],
+              "amp": true,
+              "batch_size": 128,
+              "device": "cuda:0",
+              "encoder_label": "CLIP ViT-B/32",
+              "feature_dim": 512,
+              "feature_source": "vision_model.visual_projection",
+              "image_count": 1791,
+              "image_processor_use_fast": false,
+              "model_type": "clip",
+              "num_workers": 8
+            },
+            "mode": "extracted_external"
+          }
+        ]
+      },
+      "joint_strict_n5_tsne": {
+        "coordinate_receipt": {
+          "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/clip/joint_strict_n5.npy",
+          "sha256": "ba4fc4dd41e31ecc66219f9882b1269739b2fb113fb3df4acc004e4ae872ae86",
+          "size_bytes": 35248
+        },
+        "effective": {
+          "input_dim": 512,
+          "max_iter": 1000,
+          "n_jobs": 16,
+          "pca_components": 50,
+          "perplexity": 30.0,
+          "random_state": 42,
+          "sample_count": 4390
+        },
+        "encoder": "clip",
+        "feature_dim": 512,
+        "parameters": {
+          "max_iter": 1000,
+          "n_jobs": 16,
+          "perplexity": 30.0,
+          "seed": 42
+        },
+        "runtime_versions": {
+          "numpy": "2.2.6",
+          "scikit_learn": "1.7.2"
+        },
+        "sample_count": 4390,
+        "schema_version": 1,
+        "source_feature_sha256": "160b5b59732bfefa69e7a08ab72f877fb864fc63bd7197a7cad406fe4cf5fb23",
+        "source_indices_sha256": "1a296b92729dc9eadc53f5f1cb4fc8666f846d4deca8b82c8c4460a0388ffd90",
+        "tag": "joint_strict_n5",
+        "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+      },
+      "joint_strict_n5_tsne_cache_reused": false
+    },
+    "dinov2": {
+      "datasets": {
+        "articraft10k": {
+          "all_tsne": {
+            "coordinate_receipt": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/dinov2/articraft10k_all.npy",
+              "sha256": "f49eff58891918874c25d1f2fa4562211be5096793fe52de0263e4c1f769a4a1",
+              "size_bytes": 9672
+            },
+            "effective": {
+              "input_dim": 768,
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "pca_components": 50,
+              "perplexity": 30.0,
+              "random_state": 42,
+              "sample_count": 1193
+            },
+            "encoder": "dinov2",
+            "feature_dim": 768,
+            "parameters": {
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "perplexity": 30.0,
+              "seed": 42
+            },
+            "runtime_versions": {
+              "numpy": "2.2.6",
+              "scikit_learn": "1.7.2"
+            },
+            "sample_count": 1193,
+            "schema_version": 1,
+            "source_feature_sha256": "cc996c984ee182f6e334af3449384c2b9fac5866050192bc7f5ef36c2c27d28e",
+            "source_indices_sha256": "8ae0eb47c222f5c96a5c5fb2ce5ac1fe83734f7ff5e3e1fa8521e20570b2ecd8",
+            "tag": "articraft10k_all",
+            "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+          },
+          "all_tsne_cache_reused": false,
+          "strict_n5_metrics": {
+            "class_count": 236,
+            "cosine_silhouette": 0.07501250505447388,
+            "mean_nearest_negative_cosine_similarity": 0.7078720927238464,
+            "mean_nearest_positive_cosine_similarity": 0.7233867049217224,
+            "mean_nearest_positive_minus_negative_margin": 0.015514622442424297,
+            "mean_within_class_cosine_distance": 0.3834904432296753,
+            "sample_count": 1180,
+            "top1_same_class_rate": 0.5271186440677966,
+            "top4_same_class_fraction": 0.41122881355932206
+          },
+          "strict_n5_tsne": {
+            "coordinate_receipt": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/dinov2/articraft10k_strict_n5.npy",
+              "sha256": "c82d4bf53886f9e3f5f5cf3ff877739138a166ec6ee5985ab1d0dd4e94b2edab",
+              "size_bytes": 9568
+            },
+            "effective": {
+              "input_dim": 768,
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "pca_components": 50,
+              "perplexity": 30.0,
+              "random_state": 42,
+              "sample_count": 1180
+            },
+            "encoder": "dinov2",
+            "feature_dim": 768,
+            "parameters": {
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "perplexity": 30.0,
+              "seed": 42
+            },
+            "runtime_versions": {
+              "numpy": "2.2.6",
+              "scikit_learn": "1.7.2"
+            },
+            "sample_count": 1180,
+            "schema_version": 1,
+            "source_feature_sha256": "cc996c984ee182f6e334af3449384c2b9fac5866050192bc7f5ef36c2c27d28e",
+            "source_indices_sha256": "e0e8e5f32db04151da0c1bbb4ff2816158a4e5d1e43df4e601d3eca489587cc2",
+            "tag": "articraft10k_strict_n5",
+            "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+          },
+          "strict_n5_tsne_cache_reused": false
+        },
+        "artiverse": {
+          "all_tsne": {
+            "coordinate_receipt": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/dinov2/artiverse_all.npy",
+              "sha256": "18a7a6d3c29a02885a89a3b29d4c28b6b8cc7e34a67185f821f1e4ef3706cb73",
+              "size_bytes": 3072
+            },
+            "effective": {
+              "input_dim": 768,
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "pca_components": 50,
+              "perplexity": 30.0,
+              "random_state": 42,
+              "sample_count": 368
+            },
+            "encoder": "dinov2",
+            "feature_dim": 768,
+            "parameters": {
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "perplexity": 30.0,
+              "seed": 42
+            },
+            "runtime_versions": {
+              "numpy": "2.2.6",
+              "scikit_learn": "1.7.2"
+            },
+            "sample_count": 368,
+            "schema_version": 1,
+            "source_feature_sha256": "cc996c984ee182f6e334af3449384c2b9fac5866050192bc7f5ef36c2c27d28e",
+            "source_indices_sha256": "f8e4b5aa81a84a76d207c6936e25d3a40173e40430a5ed831ffe24c351c3fb27",
+            "tag": "artiverse_all",
+            "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+          },
+          "all_tsne_cache_reused": false,
+          "strict_n5_metrics": {
+            "class_count": 65,
+            "cosine_silhouette": 0.25851500034332275,
+            "mean_nearest_negative_cosine_similarity": 0.5544589757919312,
+            "mean_nearest_positive_cosine_similarity": 0.7066653370857239,
+            "mean_nearest_positive_minus_negative_margin": 0.15220634639263153,
+            "mean_within_class_cosine_distance": 0.411488801240921,
+            "sample_count": 325,
+            "top1_same_class_rate": 0.7353846153846154,
+            "top4_same_class_fraction": 0.6215384615384615
+          },
+          "strict_n5_tsne": {
+            "coordinate_receipt": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/dinov2/artiverse_strict_n5.npy",
+              "sha256": "79eae6f1512aac5836e130b55750a591f619c1231b4587b17e0d33f727a8cfe7",
+              "size_bytes": 2728
+            },
+            "effective": {
+              "input_dim": 768,
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "pca_components": 50,
+              "perplexity": 30.0,
+              "random_state": 42,
+              "sample_count": 325
+            },
+            "encoder": "dinov2",
+            "feature_dim": 768,
+            "parameters": {
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "perplexity": 30.0,
+              "seed": 42
+            },
+            "runtime_versions": {
+              "numpy": "2.2.6",
+              "scikit_learn": "1.7.2"
+            },
+            "sample_count": 325,
+            "schema_version": 1,
+            "source_feature_sha256": "cc996c984ee182f6e334af3449384c2b9fac5866050192bc7f5ef36c2c27d28e",
+            "source_indices_sha256": "b13bd2ab0453cbf5d9b0c369b4bb61eef1a23a5a8817e1ff7efc28e502fec1e9",
+            "tag": "artiverse_strict_n5",
+            "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+          },
+          "strict_n5_tsne_cache_reused": false
+        },
+        "partnet_mobility": {
+          "all_tsne": {
+            "coordinate_receipt": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/dinov2/partnet_mobility_all.npy",
+              "sha256": "3286ff91b1899309fc059eaffc933941310353e58cd364ef9dd471700732b234",
+              "size_bytes": 1968
+            },
+            "effective": {
+              "input_dim": 768,
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "pca_components": 50,
+              "perplexity": 30.0,
+              "random_state": 42,
+              "sample_count": 230
+            },
+            "encoder": "dinov2",
+            "feature_dim": 768,
+            "parameters": {
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "perplexity": 30.0,
+              "seed": 42
+            },
+            "runtime_versions": {
+              "numpy": "2.2.6",
+              "scikit_learn": "1.7.2"
+            },
+            "sample_count": 230,
+            "schema_version": 1,
+            "source_feature_sha256": "cc996c984ee182f6e334af3449384c2b9fac5866050192bc7f5ef36c2c27d28e",
+            "source_indices_sha256": "36aed4e3f678ccdc615d9c629d9ffea855f3a3f11762f0dafd7d893281c4da35",
+            "tag": "partnet_mobility_all",
+            "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+          },
+          "all_tsne_cache_reused": false,
+          "strict_n5_metrics": {
+            "class_count": 46,
+            "cosine_silhouette": 0.19590383768081665,
+            "mean_nearest_negative_cosine_similarity": 0.5507301092147827,
+            "mean_nearest_positive_cosine_similarity": 0.6809651255607605,
+            "mean_nearest_positive_minus_negative_margin": 0.1302350014448166,
+            "mean_within_class_cosine_distance": 0.442130982875824,
+            "sample_count": 230,
+            "top1_same_class_rate": 0.6956521739130435,
+            "top4_same_class_fraction": 0.5673913043478261
+          },
+          "strict_n5_tsne": {
+            "aliased_to_all_cohort": true,
+            "coordinate_receipt": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/dinov2/partnet_mobility_all.npy",
+              "sha256": "3286ff91b1899309fc059eaffc933941310353e58cd364ef9dd471700732b234",
+              "size_bytes": 1968
+            },
+            "effective": {
+              "input_dim": 768,
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "pca_components": 50,
+              "perplexity": 30.0,
+              "random_state": 42,
+              "sample_count": 230
+            },
+            "encoder": "dinov2",
+            "feature_dim": 768,
+            "parameters": {
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "perplexity": 30.0,
+              "seed": 42
+            },
+            "runtime_versions": {
+              "numpy": "2.2.6",
+              "scikit_learn": "1.7.2"
+            },
+            "sample_count": 230,
+            "schema_version": 1,
+            "source_feature_sha256": "cc996c984ee182f6e334af3449384c2b9fac5866050192bc7f5ef36c2c27d28e",
+            "source_indices_sha256": "36aed4e3f678ccdc615d9c629d9ffea855f3a3f11762f0dafd7d893281c4da35",
+            "tag": "partnet_mobility_all",
+            "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+          },
+          "strict_n5_tsne_cache_reused": false
+        },
+        "pva": {
+          "all_tsne": {
+            "coordinate_receipt": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/dinov2/pva_all.npy",
+              "sha256": "31c8866007ce44341c555eb4577438d80b2da0e9fb9c8ecc440199574d179f30",
+              "size_bytes": 21368
+            },
+            "effective": {
+              "input_dim": 768,
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "pca_components": 50,
+              "perplexity": 30.0,
+              "random_state": 42,
+              "sample_count": 2655
+            },
+            "encoder": "dinov2",
+            "feature_dim": 768,
+            "parameters": {
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "perplexity": 30.0,
+              "seed": 42
+            },
+            "runtime_versions": {
+              "numpy": "2.2.6",
+              "scikit_learn": "1.7.2"
+            },
+            "sample_count": 2655,
+            "schema_version": 1,
+            "source_feature_sha256": "cc996c984ee182f6e334af3449384c2b9fac5866050192bc7f5ef36c2c27d28e",
+            "source_indices_sha256": "9c3ec2d6117aa6fc814a9af3cf2ae805fa83692c1448f2f56c9ee466785c2e3e",
+            "tag": "pva_all",
+            "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+          },
+          "all_tsne_cache_reused": false,
+          "strict_n5_metrics": {
+            "class_count": 531,
+            "cosine_silhouette": 0.2890436351299286,
+            "mean_nearest_negative_cosine_similarity": 0.6281986832618713,
+            "mean_nearest_positive_cosine_similarity": 0.7788116931915283,
+            "mean_nearest_positive_minus_negative_margin": 0.15061306953430176,
+            "mean_within_class_cosine_distance": 0.3219957649707794,
+            "sample_count": 2655,
+            "top1_same_class_rate": 0.8806026365348399,
+            "top4_same_class_fraction": 0.7038606403013182
+          },
+          "strict_n5_tsne": {
+            "aliased_to_all_cohort": true,
+            "coordinate_receipt": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/dinov2/pva_all.npy",
+              "sha256": "31c8866007ce44341c555eb4577438d80b2da0e9fb9c8ecc440199574d179f30",
+              "size_bytes": 21368
+            },
+            "effective": {
+              "input_dim": 768,
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "pca_components": 50,
+              "perplexity": 30.0,
+              "random_state": 42,
+              "sample_count": 2655
+            },
+            "encoder": "dinov2",
+            "feature_dim": 768,
+            "parameters": {
+              "max_iter": 1000,
+              "n_jobs": 16,
+              "perplexity": 30.0,
+              "seed": 42
+            },
+            "runtime_versions": {
+              "numpy": "2.2.6",
+              "scikit_learn": "1.7.2"
+            },
+            "sample_count": 2655,
+            "schema_version": 1,
+            "source_feature_sha256": "cc996c984ee182f6e334af3449384c2b9fac5866050192bc7f5ef36c2c27d28e",
+            "source_indices_sha256": "9c3ec2d6117aa6fc814a9af3cf2ae805fa83692c1448f2f56c9ee466785c2e3e",
+            "tag": "pva_all",
+            "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+          },
+          "strict_n5_tsne_cache_reused": false
+        }
+      },
+      "feature_cache_reused": false,
+      "feature_manifest": {
+        "dtype": "float32",
+        "encoder": "dinov2",
+        "feature_dim": 768,
+        "feature_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0",
+        "model_fingerprint": "4206b0d68ec780ee11d4ae6020f36adb8df3609741ccee888dbce04507e63587",
+        "model_path": "/root/.cache/huggingface/hub/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+        "ordered_sample_fingerprint": "d5d9a20a9d4c4db4d27e42c784c0a2b97aa475591746b31b118660cee28194c7",
+        "preprocessing": {
+          "alpha_composite_background_rgb": [
+            255,
+            255,
+            255
+          ],
+          "image_processor_use_fast": false
+        },
+        "raw_feature_receipt": {
+          "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/features/dinov2/raw_image_features.npy",
+          "sha256": "cc996c984ee182f6e334af3449384c2b9fac5866050192bc7f5ef36c2c27d28e",
+          "size_bytes": 13658240
+        },
+        "runtime_versions": {
+          "numpy": "2.2.6",
+          "pillow": "9.5.0.post2",
+          "torch": "2.6.0+cu124",
+          "transformers": "5.9.0"
+        },
+        "sample_count": 4446,
+        "schema_version": 1,
+        "sources": [
+          {
+            "mode": "verified_pva_cache",
+            "source": {
+              "path": "/mnt/zsn/lyb/arti-skill/exp/pva531_n5_tsne/dinov2/raw_image_features.npy",
+              "sha256": "4bffbe891f378697b45e723ca2e96e19c5fe1447f55cc13d322b887c93703c73",
+              "size_bytes": 8156288
+            }
+          },
+          {
+            "extraction": {
+              "alpha_composite_background_rgb": [
+                255,
+                255,
+                255
+              ],
+              "amp": true,
+              "batch_size": 128,
+              "device": "cuda:0",
+              "encoder_label": "DINOv2",
+              "feature_dim": 768,
+              "feature_source": "last_hidden_state.cls_token",
+              "image_count": 1791,
+              "image_processor_use_fast": false,
+              "model_type": "dinov2",
+              "num_workers": 8
+            },
+            "mode": "extracted_external"
+          }
+        ]
+      },
+      "joint_strict_n5_tsne": {
+        "coordinate_receipt": {
+          "path": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne/coordinates/dinov2/joint_strict_n5.npy",
+          "sha256": "f0f313264945ba1141bb47f7915ecd8fd6327afd07abcdf98c69a1b396832763",
+          "size_bytes": 35248
+        },
+        "effective": {
+          "input_dim": 768,
+          "max_iter": 1000,
+          "n_jobs": 16,
+          "pca_components": 50,
+          "perplexity": 30.0,
+          "random_state": 42,
+          "sample_count": 4390
+        },
+        "encoder": "dinov2",
+        "feature_dim": 768,
+        "parameters": {
+          "max_iter": 1000,
+          "n_jobs": 16,
+          "perplexity": 30.0,
+          "seed": 42
+        },
+        "runtime_versions": {
+          "numpy": "2.2.6",
+          "scikit_learn": "1.7.2"
+        },
+        "sample_count": 4390,
+        "schema_version": 1,
+        "source_feature_sha256": "cc996c984ee182f6e334af3449384c2b9fac5866050192bc7f5ef36c2c27d28e",
+        "source_indices_sha256": "1a296b92729dc9eadc53f5f1cb4fc8666f846d4deca8b82c8c4460a0388ffd90",
+        "tag": "joint_strict_n5",
+        "tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0"
+      },
+      "joint_strict_n5_tsne_cache_reused": false
+    }
+  },
+  "interpretation_limits": [
+    "t-SNE is a qualitative local-neighborhood visualization, not a dataset-quality score.",
+    "Independent t-SNE panels have unrelated coordinate systems.",
+    "The four datasets use different taxonomies, class granularity, and class counts.",
+    "Strict n=5 metrics exclude 19 short Artiverse classes and 8 short Articraft-10K classes.",
+    "High class separability can reflect rendering consistency or taxonomy granularity, not asset quality alone."
+  ],
+  "output_dir": "/mnt/zsn/lyb/arti-skill/exp/pva_artiverse_articraft_partnet_n5_tsne",
+  "parameters": {
+    "batch_size": 128,
+    "device": "cuda:0",
+    "num_workers": 8,
+    "perplexity": 30.0,
+    "plot_dpi": 180,
+    "seed": 42,
+    "skip_png_hash_audit": false,
+    "tsne_jobs": 16,
+    "tsne_max_iter": 1000,
+    "use_amp": true
+  },
+  "render_studio_contract": {
+    "blender_version": "Blender 4.2.19 LTS",
+    "cycles_samples": 4,
+    "effective_shared_renderer_sha256": "f418515a9817218b08d577d95983ec934c34ddf19f17bb89c73bf52aa60bb3a7",
+    "resolution": 256,
+    "studio": {
+      "camera_direction": [
+        1.25,
+        -1.35,
+        0.85
+      ],
+      "camera_distance_policy": "bounding_sphere_auto_frame_1.18",
+      "camera_vertical_fov_degrees": 42.0,
+      "cycles_denoising": true,
+      "ground_rgba": [
+        0.32,
+        0.35,
+        0.4,
+        1.0
+      ],
+      "ground_roughness": 0.82,
+      "lights": [
+        {
+          "direction": [
+            0.4,
+            -0.8,
+            1.5
+          ],
+          "gain": 42.0,
+          "size_ratio": 1.5
+        },
+        {
+          "direction": [
+            -1.2,
+            -0.3,
+            0.6
+          ],
+          "gain": 15.0,
+          "size_ratio": 1.8
+        },
+        {
+          "direction": [
+            0.2,
+            1.0,
+            1.2
+          ],
+          "gain": 24.0,
+          "size_ratio": 1.2
+        }
+      ],
+      "look": "AgX - Medium High Contrast",
+      "mode": "opaque_studio",
+      "view_transform": "AgX",
+      "world_rgba": [
+        0.8,
+        0.84,
+        0.9,
+        1.0
+      ],
+      "world_strength": 0.55
+    }
+  },
+  "schema_version": 1,
+  "scripts": {
+    "driver": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/visualize_four_datasets_n5_tsne.py",
+      "sha256": "9717c6a6360b31df0f3a94e1151892ee2c755f8647c1feba8c115514573f9bfe",
+      "size_bytes": 57238
+    },
+    "feature_helper": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/visualize_pva531_picture_tsne.py",
+      "sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0",
+      "size_bytes": 48267
+    },
+    "palette_helper": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/plot_pva531_generator_colors.py",
+      "sha256": "2ef06897ebe9151f30ae2084ca03c2bff6298215c6d566259574833b2cebfb88",
+      "size_bytes": 30728
+    }
+  }
+}

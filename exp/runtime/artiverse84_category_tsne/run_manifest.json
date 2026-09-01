@@ -1,0 +1,144 @@
+{
+  "artifacts": {
+    "category_index": "category_index.csv",
+    "comparison_plot": "tsne_category_comparison.png"
+  },
+  "config": {
+    "clip_dir": "/mnt/zsn/lyb/arti-skill/exp/runtime/artiverse_vit_tsne_clip_vit_b32",
+    "dinov2_dir": "/mnt/zsn/lyb/arti-skill/exp/runtime/artiverse_vit_tsne_dinov2_base",
+    "max_iter": 1000,
+    "n_jobs": 64,
+    "output_dir": "/mnt/zsn/lyb/arti-skill/exp/runtime/artiverse84_category_tsne",
+    "plot_dpi": 180,
+    "random_state": 42,
+    "requested_perplexity": 30.0
+  },
+  "dataset": {
+    "category_count": 84,
+    "model_count": 3544,
+    "models_per_category_max": 490,
+    "models_per_category_min": 1,
+    "source_count": 10,
+    "views_per_model": 16
+  },
+  "encoders": [
+    {
+      "artifacts": {
+        "category_features": "dinov2/category_features.npy",
+        "coordinates": "dinov2/tsne_coordinates.csv",
+        "plot": "dinov2/tsne_by_category.png"
+      },
+      "category_feature_shape": [
+        84,
+        768
+      ],
+      "key": "dinov2",
+      "label": "DINOv2",
+      "source_receipt": {
+        "model_features": {
+          "dtype": "float32",
+          "finite": true,
+          "norm_max": 1.0000001192092896,
+          "norm_min": 0.9999998807907104,
+          "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/artiverse_vit_tsne_dinov2_base/model_features.npy",
+          "sha256": "99eb019f8ae02d598dd5291354a11395a6cfb5b9b160591bfa8b57f2e69f2116",
+          "shape": [
+            3544,
+            768
+          ],
+          "size_bytes": 10887296
+        },
+        "model_metadata": {
+          "category_count": 84,
+          "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/artiverse_vit_tsne_dinov2_base/model_tsne_coordinates.csv",
+          "row_count": 3544,
+          "sha256": "e129bca0586d4f1096c5ef9ca9e31907e2077ad1c0833be57badebf171399fef",
+          "size_bytes": 293289
+        },
+        "run_dir": "/mnt/zsn/lyb/arti-skill/exp/runtime/artiverse_vit_tsne_dinov2_base",
+        "run_manifest": {
+          "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/artiverse_vit_tsne_dinov2_base/run_manifest.json",
+          "sha256": "b60bf524bbfa8c3da88ed538cbdd2022038b65699ed618a917cc11585e86598d",
+          "size_bytes": 2588
+        }
+      },
+      "tsne": {
+        "input_sample_count": 84,
+        "max_iter": 1000,
+        "n_jobs": 64,
+        "pca_components": 50,
+        "perplexity": 30.0,
+        "random_state": 42,
+        "requested_perplexity": 30.0
+      }
+    },
+    {
+      "artifacts": {
+        "category_features": "clip/category_features.npy",
+        "coordinates": "clip/tsne_coordinates.csv",
+        "plot": "clip/tsne_by_category.png"
+      },
+      "category_feature_shape": [
+        84,
+        512
+      ],
+      "key": "clip",
+      "label": "CLIP ViT-B/32",
+      "source_receipt": {
+        "model_features": {
+          "dtype": "float32",
+          "finite": true,
+          "norm_max": 1.0000001192092896,
+          "norm_min": 0.9999998211860657,
+          "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/artiverse_vit_tsne_clip_vit_b32/model_features.npy",
+          "sha256": "be7b7745eff1edd426b805096f9be2d00c00ee36279ad560495f3cf991a3e220",
+          "shape": [
+            3544,
+            512
+          ],
+          "size_bytes": 7258240
+        },
+        "model_metadata": {
+          "category_count": 84,
+          "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/artiverse_vit_tsne_clip_vit_b32/model_tsne_coordinates.csv",
+          "row_count": 3544,
+          "sha256": "fff43e7f59994fe64660728a7967ff1a95770042b5fe393c1491415f4239a08c",
+          "size_bytes": 293313
+        },
+        "run_dir": "/mnt/zsn/lyb/arti-skill/exp/runtime/artiverse_vit_tsne_clip_vit_b32",
+        "run_manifest": {
+          "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/artiverse_vit_tsne_clip_vit_b32/run_manifest.json",
+          "sha256": "dc8a79a23129bf9a6259fdc6d3f5ecde2860f2ac39eca25db82c906660776bc4",
+          "size_bytes": 2734
+        }
+      },
+      "tsne": {
+        "input_sample_count": 84,
+        "max_iter": 1000,
+        "n_jobs": 64,
+        "pca_components": 50,
+        "perplexity": 30.0,
+        "random_state": 42,
+        "requested_perplexity": 30.0
+      }
+    }
+  ],
+  "implementation": {
+    "script_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/visualize_artiverse_category_tsne.py",
+    "script_sha256": "31a6f27e30dc377b196fd476550700db7f4ba44b886b3c693719a3785823300e",
+    "script_size_bytes": 32929
+  },
+  "interpretation_limits": [
+    "Category centroids suppress within-category variation.",
+    "Categories have unequal support and remain equally weighted in t-SNE.",
+    "This category-centroid plot is not directly comparable to a one-view-per-class plot."
+  ],
+  "protocol": {
+    "category_aggregation": "equal-weight mean of normalized model embeddings, then L2 normalization",
+    "coordinate_policy": "PCA50 followed by an independently fitted t-SNE for each encoder",
+    "model_feature_input": "normalized mean of 16 normalized view embeddings",
+    "sample_unit": "one Artiverse category centroid",
+    "source_2d_coordinates_used_for_aggregation": false
+  },
+  "schema_version": 1
+}

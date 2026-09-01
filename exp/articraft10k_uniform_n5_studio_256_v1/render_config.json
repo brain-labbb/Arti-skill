@@ -1,0 +1,161 @@
+{
+  "balanced_n5_eligible": 236,
+  "base_driver": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_articraft10k_uniform.py",
+  "base_driver_sha256": "ee30151d3cc52def7b8d6a90e8b9f8b97d44d97c637603e6a182a80b8c79e989",
+  "blender": "/mnt/zsn/zsn_workspace/VoxHammer/third_party/blender-4.2.19-linux-x64/blender",
+  "blender_version": "Blender 4.2.19 LTS",
+  "class_count": 244,
+  "dataset": "Articraft-10K",
+  "dataset_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/articraft_github_merged_10787_20260829/rosters/merged/full_release_manifest.json",
+  "dataset_manifest_sha256": "b63540abc7b43a2fd0bbfe653a5db797cc2f241663aa06fb54874cb60c4d3f6d",
+  "driver": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_articraft10k_n5_uniform.py",
+  "driver_sha256": "cc56591be7797579558263644fc5f52cfa3193cce1504a6d507c689431f81fc4",
+  "full_model_count": 10787,
+  "gpu_visibility": [
+    "6",
+    "7"
+  ],
+  "material_policy": "URDF visual rgba; fixed neutral fallback for missing colors",
+  "output_root": "/mnt/zsn/lyb/arti-skill/exp/articraft10k_uniform_n5_studio_256_v1",
+  "per_class_count_values": [
+    1,
+    3,
+    4,
+    5
+  ],
+  "pose_policy": "URDF rest pose; all movable joint coordinates are zero",
+  "render_contract": "articraft10k_n5_uniform_studio_v1",
+  "render_manifest": "/mnt/zsn/lyb/arti-skill/exp/articraft10k_uniform_n5_studio_256_v1/render_manifest.csv",
+  "render_manifest_rows": 1193,
+  "render_manifest_sha256": "5d2ef03989a43714e1ce00a518a794d43669a071f9a9c6151bea35fc35880d98",
+  "render_roster": "/mnt/zsn/lyb/arti-skill/exp/articraft10k_uniform_n5_studio_256_v1/render_roster.csv",
+  "render_roster_rows": 1193,
+  "render_roster_sha256": "962e9da82892aa3e075edde671c5a845e9b065a20f287a8d6da99d42a54558f2",
+  "renderer": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_articraft10k_asset_blender.py",
+  "renderer_sha256": "24669921702ddf11c9668e16692f3a4cb7e5b40e040e215a878b92cdd294fe22",
+  "resolution": 256,
+  "reuse": {
+    "render_config": "/mnt/zsn/data/particulate/datasets/Articraft-10K/renders/uniform244_one_per_category_studio_256_v1/render_config.json",
+    "render_config_sha256": "1bcec0dc177c29c38ed5103f53421c0adcc4bd18f312ce1f58e4721e16de562d",
+    "render_manifest": "/mnt/zsn/data/particulate/datasets/Articraft-10K/renders/uniform244_one_per_category_studio_256_v1/render_manifest.csv",
+    "render_manifest_sha256": "37e5a625db057cd8de7e29ba2263c602ea6b701188d88e6091dd00ab97eac6c0",
+    "root": "/mnt/zsn/data/particulate/datasets/Articraft-10K/renders/uniform244_one_per_category_studio_256_v1"
+  },
+  "samples": 4,
+  "samples_per_category_target": 5,
+  "sampling_contract": "articraft10k_category_min5_identity_hash_v1",
+  "schema_version": 1,
+  "selected_category_count": 244,
+  "selected_count": 1193,
+  "selection_rule": "first min(5, support) by (SHA256(asset_id UTF-8), asset_id) within category",
+  "shared_renderer": "/mnt/zsn/lyb/arti-skill/arti-template/scripts/render_exported_asset_blender.py",
+  "shared_renderer_sha256": "f418515a9817218b08d577d95983ec934c34ddf19f17bb89c73bf52aa60bb3a7",
+  "short_categories": [
+    {
+      "category": "atv_quad_bike",
+      "class_id": "A0010",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "flip_top_bottle",
+      "class_id": "A0075",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "folding_chair",
+      "class_id": "A0079",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "iv_drip_stand",
+      "class_id": "A0097",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "midi_keyboard_controller_with_pitch_wheel_and_sliders",
+      "class_id": "A0114",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "satellite_with_articulated_solar_panels",
+      "class_id": "A0172",
+      "selected": 1,
+      "support": 1
+    },
+    {
+      "category": "seesaw_teeter_totter",
+      "class_id": "A0176",
+      "selected": 4,
+      "support": 4
+    },
+    {
+      "category": "trigger_spray_bottle",
+      "class_id": "A0218",
+      "selected": 3,
+      "support": 3
+    }
+  ],
+  "short_category_count": 8,
+  "studio": {
+    "camera_direction": [
+      1.25,
+      -1.35,
+      0.85
+    ],
+    "camera_distance_policy": "bounding_sphere_auto_frame_1.18",
+    "camera_vertical_fov_degrees": 42.0,
+    "cycles_denoising": true,
+    "ground_rgba": [
+      0.32,
+      0.35,
+      0.4,
+      1.0
+    ],
+    "ground_roughness": 0.82,
+    "lights": [
+      {
+        "direction": [
+          0.4,
+          -0.8,
+          1.5
+        ],
+        "gain": 42.0,
+        "size_ratio": 1.5
+      },
+      {
+        "direction": [
+          -1.2,
+          -0.3,
+          0.6
+        ],
+        "gain": 15.0,
+        "size_ratio": 1.8
+      },
+      {
+        "direction": [
+          0.2,
+          1.0,
+          1.2
+        ],
+        "gain": 24.0,
+        "size_ratio": 1.2
+      }
+    ],
+    "look": "AgX - Medium High Contrast",
+    "mode": "opaque_studio",
+    "view_transform": "AgX",
+    "world_rgba": [
+      0.8,
+      0.84,
+      0.9,
+      1.0
+    ],
+    "world_strength": 0.55
+  },
+  "workers_per_gpu": 2
+}

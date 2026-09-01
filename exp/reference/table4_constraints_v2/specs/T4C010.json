@@ -1,0 +1,60 @@
+{
+  "benchmark_id": "table4_constraints_v2",
+  "category": "wall_hook_rack",
+  "constraints": [
+    {
+      "aliases": [
+        "hook",
+        "coat_hook"
+      ],
+      "constraint_id": "T4C010-C01",
+      "measurement": {
+        "deduplication": "one final renderable node_or_visual counts once",
+        "matcher": "normalized token-boundary alias match",
+        "source": "final_artifact_only",
+        "units": "mesh-bearing named nodes_or_visuals",
+        "unmeasurable_policy": "not passed and excluded from conditional denominator"
+      },
+      "role": "hook",
+      "target": 8,
+      "type": "exact_count"
+    },
+    {
+      "aliases": [
+        "mounting_rail",
+        "back_rail",
+        "rail"
+      ],
+      "constraint_id": "T4C010-C02",
+      "measurement": {
+        "deduplication": "one final renderable node_or_visual counts once",
+        "matcher": "normalized token-boundary alias match",
+        "source": "final_artifact_only",
+        "units": "mesh-bearing named nodes_or_visuals",
+        "unmeasurable_policy": "not passed and excluded from conditional denominator"
+      },
+      "role": "mounting_rail",
+      "target": 2,
+      "type": "exact_count"
+    },
+    {
+      "absolute_tolerance_m": 0.005,
+      "constraint_id": "T4C010-C03",
+      "measure": "horizontal_max",
+      "measurement": {
+        "glb_urdf_units": "m",
+        "source": "final_artifact_world_aabb",
+        "step_units": "mm converted to m",
+        "z_up_required": true
+      },
+      "relative_tolerance": 0.1,
+      "target_m": 0.8,
+      "type": "numeric_dimension"
+    }
+  ],
+  "difficulty": "medium",
+  "input_modality": "text",
+  "prompt": "Create a horizontal wall-mounted hook rack. The final object must contain exactly 8 distinct hook part(s), exactly 2 distinct mounting rail part(s). Its larger horizontal overall extent 0.80 m (800 mm). Model every counted role as a separately named object, part, link, or visual. Keep the object upright on the ground plane, use Z as up, center it near the origin, and preserve real-world scale.",
+  "schema_version": 2,
+  "task_id": "T4C010"
+}

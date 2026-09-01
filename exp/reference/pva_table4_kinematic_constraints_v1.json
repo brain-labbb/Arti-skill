@@ -1,0 +1,60 @@
+{
+  "schema_version": "pva_table4_kinematic_constraint_registry_v1",
+  "entries": [
+    {
+      "constraint_id": "pva-rack-and-pinion-slider-template-303bd0-v1",
+      "dataset": "PV-A",
+      "category": "rack_and_pinion_slider",
+      "template_sha256": "303bd0b9e915322eb50ccb6c02554ea4025be929412d87c9d98e48c1928de28e",
+      "driver_joint": {
+        "name": "rack_slide",
+        "type": "prismatic",
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      "follower_joint_sets_by_drive_skeleton": {
+        "moving_rack_straddle": [
+          "pinion_spin"
+        ],
+        "moving_rack_cantilever": [
+          "pinion_spin"
+        ],
+        "traveling_pinion": [
+          "pinion_spin"
+        ],
+        "moving_rack_dual": [
+          "pinion_spin_0",
+          "pinion_spin_1"
+        ]
+      },
+      "follower_joint_type": "revolute",
+      "follower_joint_axis": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "axis_abs_tolerance": 1e-12,
+      "relation": "follower_rad = driver_m / pitch_radius_m",
+      "pitch_radius": {
+        "tooth_pitch_m": 0.019,
+        "pinion_teeth_roster_field": "pinion_teeth",
+        "formula": "tooth_pitch_m * pinion_teeth / (2*pi)"
+      },
+      "phase_offset_rad": 0.0,
+      "follower_limit": {
+        "minimum_abs_rad": 0.4,
+        "maximum_abs_rad": 1.6,
+        "formula": "max(minimum_abs_rad, min(driver_abs_m / pitch_radius_m, maximum_abs_rad))"
+      },
+      "limit_relation_abs_tolerance": 2e-06,
+      "evidence": {
+        "template_source": "arti-template/agent/templates/rack_and_pinion_slider.py",
+        "rest_phase": "rack teeth use a half-pitch placement and pinion teeth start at pi, leaving the intended valley at q=0",
+        "positive_motion": "template QC pairs rack_slide=+travel with pinion_spin=+pinion_travel_rad"
+      }
+    }
+  ]
+}

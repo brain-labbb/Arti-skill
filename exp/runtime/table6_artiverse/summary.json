@@ -1,0 +1,106 @@
+{
+  "limitations": [
+    "Artiverse is a human-verified pre-release dataset reference, not a generated prediction method.",
+    "Annotation-to-URDF agreement is export fidelity, not independent semantic accuracy.",
+    "Complex joints can be split or downgraded in standard URDF; logical annotation joints and simulator DoFs are reported separately.",
+    "The release card has license=other and requires acceptance of upstream-source licenses."
+  ],
+  "method": "Artiverse",
+  "paper_values_reused": false,
+  "protocol_id": "nano3d_table6_artiverse_release_v1",
+  "release": {
+    "access": "manual gated; locally materialized by authorized user",
+    "dataset_card_license": "other",
+    "dataset_revision": "8c4b120418e7cbdf9ac4c9580c5dbfdbf128a248",
+    "manifest_archive_bytes": 65334141104,
+    "manifest_category_count": 84,
+    "manifest_model_count": 3544,
+    "manifest_path": "arti-skill/exp/artiverse/dataset_chunks/manifest.json",
+    "manifest_sha256": "8fa6468254a1f74c58f0c25699598bf88f622fabdaf74f0cd9268ee5663c5586",
+    "snapshot_state": "pre-release subset; README says cleanup is ongoing"
+  },
+  "role": "human-verified pre-release real-data reference",
+  "scope": {
+    "chunk_index": "all",
+    "chunk_indices": [
+      1,
+      2
+    ],
+    "functional_selection": "one asset per category by argmin SHA256(salt|asset_id), frozen from the complete manifest before and without filtering on static validity or PyBullet outcomes",
+    "manifest_defined_roots": 3544,
+    "salt": "nano3d-table6-artiverse-v1",
+    "selection": "all roots listed in the selected manifest chunk; no outcome filtering"
+  },
+  "semantic_metric_boundary": {
+    "axis_valid": "N/A semantic; annotation and URDF metadata coverage are reported separately",
+    "joint_recall": "N/A for Artiverse itself: annotation and URDF share a release pipeline",
+    "joint_type_accuracy": "N/A for Artiverse itself: dataset reference, not a prediction",
+    "limit_valid": "N/A semantic; annotation and URDF metadata coverage are reported separately",
+    "origin_valid": "N/A semantic; annotation and URDF metadata coverage are reported separately",
+    "parent_child_accuracy": "N/A for Artiverse itself: structural validity is reported separately"
+  },
+  "static": {
+    "annotation_articulable_asset_count": 3542,
+    "annotation_axis_present_count": 16429,
+    "annotation_axis_valid_count": 16429,
+    "annotation_connectivity_asset_count": 3544,
+    "annotation_graph_parent_asset_count": 3543,
+    "annotation_joint_count": 16471,
+    "annotation_joints_per_asset_mean": 4.647573363431151,
+    "annotation_origin_present_count": 5885,
+    "annotation_origin_valid_count": 5885,
+    "annotation_parse_success_count": 3544,
+    "annotation_range_present_count": 15714,
+    "annotation_range_valid_count": 15714,
+    "annotation_type_counts": {
+      "continuous": 737,
+      "cylindrical": 26,
+      "free": 54,
+      "prismatic": 11135,
+      "revolute": 4422,
+      "screw": 97
+    },
+    "asset_count": 3544,
+    "category_count": 84,
+    "complete_core_package_count": 3544,
+    "mass_furniture_heuristic_asset_count": 0,
+    "material_asset_count": 3544,
+    "source_count": 10,
+    "urdf_articulable_asset_count": 3541,
+    "urdf_axis_metadata_valid_count": 16332,
+    "urdf_bounded_joint_count": 15571,
+    "urdf_collision_available_asset_count": 3543,
+    "urdf_collision_element_count": 298583,
+    "urdf_cycle_asset_count": 17,
+    "urdf_dofs_per_asset_mean": 4.608352144469526,
+    "urdf_generic_revolute_count": 283,
+    "urdf_inertial_count": 29186,
+    "urdf_limit_metadata_valid_count": 15571,
+    "urdf_lossy_complex_dof_count": 270,
+    "urdf_missing_mesh_reference_count": 0,
+    "urdf_motion_sweepable_dof_count": 16308,
+    "urdf_movable_dof_count": 16332,
+    "urdf_multi_parent_asset_count": 0,
+    "urdf_native_simple_dof_count": 16062,
+    "urdf_origin_metadata_valid_count": 16332,
+    "urdf_original_type_counts": {
+      "continuous": 734,
+      "cylindrical": 52,
+      "multi_dof": 16,
+      "prismatic": 11020,
+      "revolute": 4308,
+      "screw": 96,
+      "universal": 106
+    },
+    "urdf_parent_child_structurally_valid_count": 16332,
+    "urdf_parse_success_count": 3543,
+    "urdf_type_counts": {
+      "continuous": 761,
+      "prismatic": 11053,
+      "revolute": 4518
+    },
+    "urdf_valid_tree_asset_count": 3526,
+    "urdf_zero_range_dof_count": 24
+  },
+  "status": "COMPLETE"
+}

@@ -1,0 +1,97 @@
+{
+  "artifacts": {
+    "dataset_manifest": "dataset_manifest.json",
+    "generator_roster": "generator_roster_resolved.csv",
+    "raw_image_index": "raw_image_index.csv",
+    "source_comparison": "tsne_source_comparison.png"
+  },
+  "config": {
+    "batch_size": 32,
+    "device": "cuda:0",
+    "force_extract": false,
+    "num_workers": 4,
+    "perplexity": 30.0,
+    "plot_dpi": 180,
+    "seed": 42,
+    "tsne_jobs": 8,
+    "tsne_max_iter": 1000,
+    "tsne_verbose": 0,
+    "use_amp": true
+  },
+  "dataset": {
+    "builtin_no_picture_count": 99,
+    "builtin_root": "/mnt/zsn/data/particulate/datasets/PV-A/renders/builtin99_representatives",
+    "generator_count": 531,
+    "index_csv": "/mnt/zsn/lyb/arti-skill/template_maps/generator_picture_index.csv",
+    "picture_backed_count": 432,
+    "picture_backed_raw_image_count": 886,
+    "picture_image_policy": "all_png_l2_normalized_mean",
+    "picture_root": "/mnt/zsn/lyb/arti-skill/articraft_data/picture",
+    "raw_unique_image_count": 984,
+    "sample_unit": "generator_class",
+    "shared_picture_directory_alias_count": 1,
+    "shared_picture_directory_aliases": [
+      {
+        "alias_of_generator_index": "G0499",
+        "generator_index": "G0500",
+        "generator_name": "Urban_Environment_Public_toilet1",
+        "picture_dir": "/mnt/zsn/lyb/arti-skill/articraft_data/picture/Urban Environment/Public toilet"
+      }
+    ],
+    "unique_picture_directory_count": 431,
+    "unique_picture_image_count": 885
+  },
+  "models": {
+    "clip": {
+      "artifacts": {
+        "class_features": "class_features.npy",
+        "raw_image_features": "raw_image_features.npy",
+        "tsne_builtin_labels": "tsne_builtin_labels.png",
+        "tsne_by_picture_category": "tsne_by_picture_category.png",
+        "tsne_by_source": "tsne_by_source.png",
+        "tsne_coordinates": "tsne_coordinates.npy",
+        "tsne_coordinates_csv": "tsne_coordinates.csv"
+      },
+      "class_count": 531,
+      "encoder_label": "CLIP ViT-B/32",
+      "feature_cache_reused": true,
+      "feature_dim": 512,
+      "model_path": "/root/.cache/huggingface/hub/models--openai--clip-vit-base-patch32/snapshots/3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+      "tsne": {
+        "input_dim": 512,
+        "max_iter": 1000,
+        "n_jobs": 8,
+        "pca_components": 50,
+        "perplexity": 30.0,
+        "random_state": 42,
+        "sample_count": 531
+      }
+    },
+    "dinov2": {
+      "artifacts": {
+        "class_features": "class_features.npy",
+        "raw_image_features": "raw_image_features.npy",
+        "tsne_builtin_labels": "tsne_builtin_labels.png",
+        "tsne_by_picture_category": "tsne_by_picture_category.png",
+        "tsne_by_source": "tsne_by_source.png",
+        "tsne_coordinates": "tsne_coordinates.npy",
+        "tsne_coordinates_csv": "tsne_coordinates.csv"
+      },
+      "class_count": 531,
+      "encoder_label": "DINOv2",
+      "feature_cache_reused": true,
+      "feature_dim": 768,
+      "model_path": "/root/.cache/huggingface/hub/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+      "tsne": {
+        "input_dim": 768,
+        "max_iter": 1000,
+        "n_jobs": 8,
+        "pca_components": 50,
+        "perplexity": 30.0,
+        "random_state": 42,
+        "sample_count": 531
+      }
+    }
+  },
+  "schema_version": 1
+}

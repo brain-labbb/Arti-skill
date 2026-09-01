@@ -1,0 +1,4156 @@
+{
+  "categories": {
+    "dishwasher": {
+      "official_category": "Dishwasher",
+      "ontology": {
+        "ancestor_relations": [
+          {
+            "ancestor": "base",
+            "descendant": "foot",
+            "distance": 2
+          },
+          {
+            "ancestor": "base",
+            "descendant": "foot_base",
+            "distance": 1
+          },
+          {
+            "ancestor": "base",
+            "descendant": "surface",
+            "distance": 2
+          },
+          {
+            "ancestor": "base",
+            "descendant": "surface_base",
+            "distance": 1
+          },
+          {
+            "ancestor": "body",
+            "descendant": "door",
+            "distance": 1
+          },
+          {
+            "ancestor": "body",
+            "descendant": "door_frame",
+            "distance": 2
+          },
+          {
+            "ancestor": "body",
+            "descendant": "frame",
+            "distance": 1
+          },
+          {
+            "ancestor": "body",
+            "descendant": "handle",
+            "distance": 2
+          },
+          {
+            "ancestor": "dishwasher",
+            "descendant": "base",
+            "distance": 1
+          },
+          {
+            "ancestor": "dishwasher",
+            "descendant": "body",
+            "distance": 1
+          },
+          {
+            "ancestor": "dishwasher",
+            "descendant": "door",
+            "distance": 2
+          },
+          {
+            "ancestor": "dishwasher",
+            "descendant": "door_frame",
+            "distance": 3
+          },
+          {
+            "ancestor": "dishwasher",
+            "descendant": "foot",
+            "distance": 3
+          },
+          {
+            "ancestor": "dishwasher",
+            "descendant": "foot_base",
+            "distance": 2
+          },
+          {
+            "ancestor": "dishwasher",
+            "descendant": "frame",
+            "distance": 2
+          },
+          {
+            "ancestor": "dishwasher",
+            "descendant": "handle",
+            "distance": 3
+          },
+          {
+            "ancestor": "dishwasher",
+            "descendant": "surface",
+            "distance": 3
+          },
+          {
+            "ancestor": "dishwasher",
+            "descendant": "surface_base",
+            "distance": 2
+          },
+          {
+            "ancestor": "door",
+            "descendant": "door_frame",
+            "distance": 1
+          },
+          {
+            "ancestor": "door",
+            "descendant": "handle",
+            "distance": 1
+          },
+          {
+            "ancestor": "foot_base",
+            "descendant": "foot",
+            "distance": 1
+          },
+          {
+            "ancestor": "foot_base",
+            "descendant": "surface",
+            "distance": 1
+          },
+          {
+            "ancestor": "surface_base",
+            "descendant": "surface",
+            "distance": 1
+          }
+        ],
+        "entries": [
+          {
+            "label_id": 1,
+            "node_kind": "subcomponents",
+            "path": "dishwasher",
+            "roles": [
+              "dishwasher"
+            ]
+          },
+          {
+            "label_id": 2,
+            "node_kind": "subcomponents",
+            "path": "dishwasher/body",
+            "roles": [
+              "dishwasher",
+              "body"
+            ]
+          },
+          {
+            "label_id": 3,
+            "node_kind": "leaf",
+            "path": "dishwasher/body/frame",
+            "roles": [
+              "dishwasher",
+              "body",
+              "frame"
+            ]
+          },
+          {
+            "label_id": 4,
+            "node_kind": "subcomponents",
+            "path": "dishwasher/body/door",
+            "roles": [
+              "dishwasher",
+              "body",
+              "door"
+            ]
+          },
+          {
+            "label_id": 5,
+            "node_kind": "leaf",
+            "path": "dishwasher/body/door/door_frame",
+            "roles": [
+              "dishwasher",
+              "body",
+              "door",
+              "door_frame"
+            ]
+          },
+          {
+            "label_id": 6,
+            "node_kind": "leaf",
+            "path": "dishwasher/body/door/handle",
+            "roles": [
+              "dishwasher",
+              "body",
+              "door",
+              "handle"
+            ]
+          },
+          {
+            "label_id": 7,
+            "node_kind": "subtypes",
+            "path": "dishwasher/base",
+            "roles": [
+              "dishwasher",
+              "base"
+            ]
+          },
+          {
+            "label_id": 8,
+            "node_kind": "subcomponents",
+            "path": "dishwasher/base/foot_base",
+            "roles": [
+              "dishwasher",
+              "base",
+              "foot_base"
+            ]
+          },
+          {
+            "label_id": 9,
+            "node_kind": "leaf",
+            "path": "dishwasher/base/foot_base/foot",
+            "roles": [
+              "dishwasher",
+              "base",
+              "foot_base",
+              "foot"
+            ]
+          },
+          {
+            "label_id": 10,
+            "node_kind": "leaf",
+            "path": "dishwasher/base/foot_base/surface",
+            "roles": [
+              "dishwasher",
+              "base",
+              "foot_base",
+              "surface"
+            ]
+          },
+          {
+            "label_id": 11,
+            "node_kind": "subcomponents",
+            "path": "dishwasher/base/surface_base",
+            "roles": [
+              "dishwasher",
+              "base",
+              "surface_base"
+            ]
+          },
+          {
+            "label_id": 12,
+            "node_kind": "leaf",
+            "path": "dishwasher/base/surface_base/surface",
+            "roles": [
+              "dishwasher",
+              "base",
+              "surface_base",
+              "surface"
+            ]
+          }
+        ],
+        "roles": [
+          "base",
+          "body",
+          "dishwasher",
+          "door",
+          "door_frame",
+          "foot",
+          "foot_base",
+          "frame",
+          "handle",
+          "surface",
+          "surface_base"
+        ]
+      },
+      "ordered_role_rules": [
+        {
+          "pattern": "door[_ ]?frame",
+          "role": "door_frame"
+        },
+        {
+          "pattern": "handle|pull",
+          "role": "handle"
+        },
+        {
+          "pattern": "door",
+          "role": "door"
+        },
+        {
+          "pattern": "foot",
+          "role": "foot"
+        },
+        {
+          "pattern": "surface",
+          "role": "surface"
+        },
+        {
+          "pattern": "base",
+          "role": "base"
+        },
+        {
+          "pattern": "frame",
+          "role": "frame"
+        },
+        {
+          "pattern": "body|shell|housing|cabinet|chassis",
+          "role": "body"
+        },
+        {
+          "pattern": "dishwasher",
+          "role": "dishwasher"
+        }
+      ],
+      "source_file": "stats/after_merging_label_ids/Dishwasher-hier.txt",
+      "source_sha256": "5d915c7a8aa9e9897be1c66edc95b332688fda49fae93fe71215711d7f1d3176"
+    },
+    "microwave": {
+      "official_category": "Microwave",
+      "ontology": {
+        "ancestor_relations": [
+          {
+            "ancestor": "base",
+            "descendant": "foot",
+            "distance": 2
+          },
+          {
+            "ancestor": "base",
+            "descendant": "foot_base",
+            "distance": 1
+          },
+          {
+            "ancestor": "body",
+            "descendant": "body_interior",
+            "distance": 1
+          },
+          {
+            "ancestor": "body",
+            "descendant": "door",
+            "distance": 1
+          },
+          {
+            "ancestor": "body",
+            "descendant": "door_frame",
+            "distance": 2
+          },
+          {
+            "ancestor": "body",
+            "descendant": "frame",
+            "distance": 1
+          },
+          {
+            "ancestor": "body",
+            "descendant": "handle",
+            "distance": 2
+          },
+          {
+            "ancestor": "body",
+            "descendant": "tray",
+            "distance": 2
+          },
+          {
+            "ancestor": "body_interior",
+            "descendant": "tray",
+            "distance": 1
+          },
+          {
+            "ancestor": "door",
+            "descendant": "door_frame",
+            "distance": 1
+          },
+          {
+            "ancestor": "door",
+            "descendant": "handle",
+            "distance": 1
+          },
+          {
+            "ancestor": "foot_base",
+            "descendant": "foot",
+            "distance": 1
+          },
+          {
+            "ancestor": "microwave",
+            "descendant": "base",
+            "distance": 1
+          },
+          {
+            "ancestor": "microwave",
+            "descendant": "body",
+            "distance": 1
+          },
+          {
+            "ancestor": "microwave",
+            "descendant": "body_interior",
+            "distance": 2
+          },
+          {
+            "ancestor": "microwave",
+            "descendant": "door",
+            "distance": 2
+          },
+          {
+            "ancestor": "microwave",
+            "descendant": "door_frame",
+            "distance": 3
+          },
+          {
+            "ancestor": "microwave",
+            "descendant": "foot",
+            "distance": 3
+          },
+          {
+            "ancestor": "microwave",
+            "descendant": "foot_base",
+            "distance": 2
+          },
+          {
+            "ancestor": "microwave",
+            "descendant": "frame",
+            "distance": 2
+          },
+          {
+            "ancestor": "microwave",
+            "descendant": "handle",
+            "distance": 3
+          },
+          {
+            "ancestor": "microwave",
+            "descendant": "tray",
+            "distance": 3
+          }
+        ],
+        "entries": [
+          {
+            "label_id": 1,
+            "node_kind": "subcomponents",
+            "path": "microwave",
+            "roles": [
+              "microwave"
+            ]
+          },
+          {
+            "label_id": 2,
+            "node_kind": "subcomponents",
+            "path": "microwave/body",
+            "roles": [
+              "microwave",
+              "body"
+            ]
+          },
+          {
+            "label_id": 3,
+            "node_kind": "leaf",
+            "path": "microwave/body/frame",
+            "roles": [
+              "microwave",
+              "body",
+              "frame"
+            ]
+          },
+          {
+            "label_id": 4,
+            "node_kind": "subcomponents",
+            "path": "microwave/body/door",
+            "roles": [
+              "microwave",
+              "body",
+              "door"
+            ]
+          },
+          {
+            "label_id": 5,
+            "node_kind": "leaf",
+            "path": "microwave/body/door/door_frame",
+            "roles": [
+              "microwave",
+              "body",
+              "door",
+              "door_frame"
+            ]
+          },
+          {
+            "label_id": 7,
+            "node_kind": "leaf",
+            "path": "microwave/body/door/handle",
+            "roles": [
+              "microwave",
+              "body",
+              "door",
+              "handle"
+            ]
+          },
+          {
+            "label_id": 8,
+            "node_kind": "subcomponents",
+            "path": "microwave/body/body_interior",
+            "roles": [
+              "microwave",
+              "body",
+              "body_interior"
+            ]
+          },
+          {
+            "label_id": 9,
+            "node_kind": "leaf",
+            "path": "microwave/body/body_interior/tray",
+            "roles": [
+              "microwave",
+              "body",
+              "body_interior",
+              "tray"
+            ]
+          },
+          {
+            "label_id": 10,
+            "node_kind": "subtypes",
+            "path": "microwave/base",
+            "roles": [
+              "microwave",
+              "base"
+            ]
+          },
+          {
+            "label_id": 11,
+            "node_kind": "subcomponents",
+            "path": "microwave/base/foot_base",
+            "roles": [
+              "microwave",
+              "base",
+              "foot_base"
+            ]
+          },
+          {
+            "label_id": 12,
+            "node_kind": "leaf",
+            "path": "microwave/base/foot_base/foot",
+            "roles": [
+              "microwave",
+              "base",
+              "foot_base",
+              "foot"
+            ]
+          }
+        ],
+        "roles": [
+          "base",
+          "body",
+          "body_interior",
+          "door",
+          "door_frame",
+          "foot",
+          "foot_base",
+          "frame",
+          "handle",
+          "microwave",
+          "tray"
+        ]
+      },
+      "ordered_role_rules": [
+        {
+          "pattern": "turntable|glass[_ ]?plate|rotating[_ ]?plate|tray",
+          "role": "tray"
+        },
+        {
+          "pattern": "door[_ ]?frame",
+          "role": "door_frame"
+        },
+        {
+          "pattern": "handle|pull",
+          "role": "handle"
+        },
+        {
+          "pattern": "door",
+          "role": "door"
+        },
+        {
+          "pattern": "interior|cavity",
+          "role": "body_interior"
+        },
+        {
+          "pattern": "foot",
+          "role": "foot"
+        },
+        {
+          "pattern": "base",
+          "role": "base"
+        },
+        {
+          "pattern": "frame",
+          "role": "frame"
+        },
+        {
+          "pattern": "body|shell|housing|cabinet|chassis",
+          "role": "body"
+        },
+        {
+          "pattern": "microwave",
+          "role": "microwave"
+        }
+      ],
+      "source_file": "stats/after_merging_label_ids/Microwave-hier.txt",
+      "source_sha256": "fc1b3ce5688b7df25620295663a5f2ae9177759976a54834589ce31598afef4c"
+    },
+    "refrigerator": {
+      "official_category": "Refrigerator",
+      "ontology": {
+        "ancestor_relations": [
+          {
+            "ancestor": "base",
+            "descendant": "foot",
+            "distance": 2
+          },
+          {
+            "ancestor": "base",
+            "descendant": "foot_base",
+            "distance": 1
+          },
+          {
+            "ancestor": "base",
+            "descendant": "surface",
+            "distance": 2
+          },
+          {
+            "ancestor": "base",
+            "descendant": "surface_base",
+            "distance": 1
+          },
+          {
+            "ancestor": "body",
+            "descendant": "body_interior",
+            "distance": 1
+          },
+          {
+            "ancestor": "body",
+            "descendant": "door",
+            "distance": 1
+          },
+          {
+            "ancestor": "body",
+            "descendant": "door_frame",
+            "distance": 2
+          },
+          {
+            "ancestor": "body",
+            "descendant": "frame",
+            "distance": 1
+          },
+          {
+            "ancestor": "body",
+            "descendant": "handle",
+            "distance": 2
+          },
+          {
+            "ancestor": "body",
+            "descendant": "shelf",
+            "distance": 2
+          },
+          {
+            "ancestor": "body_interior",
+            "descendant": "shelf",
+            "distance": 1
+          },
+          {
+            "ancestor": "door",
+            "descendant": "door_frame",
+            "distance": 1
+          },
+          {
+            "ancestor": "door",
+            "descendant": "handle",
+            "distance": 1
+          },
+          {
+            "ancestor": "foot_base",
+            "descendant": "foot",
+            "distance": 1
+          },
+          {
+            "ancestor": "refrigerator",
+            "descendant": "base",
+            "distance": 1
+          },
+          {
+            "ancestor": "refrigerator",
+            "descendant": "body",
+            "distance": 1
+          },
+          {
+            "ancestor": "refrigerator",
+            "descendant": "body_interior",
+            "distance": 2
+          },
+          {
+            "ancestor": "refrigerator",
+            "descendant": "door",
+            "distance": 2
+          },
+          {
+            "ancestor": "refrigerator",
+            "descendant": "door_frame",
+            "distance": 3
+          },
+          {
+            "ancestor": "refrigerator",
+            "descendant": "foot",
+            "distance": 3
+          },
+          {
+            "ancestor": "refrigerator",
+            "descendant": "foot_base",
+            "distance": 2
+          },
+          {
+            "ancestor": "refrigerator",
+            "descendant": "frame",
+            "distance": 2
+          },
+          {
+            "ancestor": "refrigerator",
+            "descendant": "handle",
+            "distance": 3
+          },
+          {
+            "ancestor": "refrigerator",
+            "descendant": "shelf",
+            "distance": 3
+          },
+          {
+            "ancestor": "refrigerator",
+            "descendant": "surface",
+            "distance": 3
+          },
+          {
+            "ancestor": "refrigerator",
+            "descendant": "surface_base",
+            "distance": 2
+          },
+          {
+            "ancestor": "surface_base",
+            "descendant": "surface",
+            "distance": 1
+          }
+        ],
+        "entries": [
+          {
+            "label_id": 1,
+            "node_kind": "subcomponents",
+            "path": "refrigerator",
+            "roles": [
+              "refrigerator"
+            ]
+          },
+          {
+            "label_id": 2,
+            "node_kind": "subcomponents",
+            "path": "refrigerator/body",
+            "roles": [
+              "refrigerator",
+              "body"
+            ]
+          },
+          {
+            "label_id": 3,
+            "node_kind": "leaf",
+            "path": "refrigerator/body/frame",
+            "roles": [
+              "refrigerator",
+              "body",
+              "frame"
+            ]
+          },
+          {
+            "label_id": 4,
+            "node_kind": "subcomponents",
+            "path": "refrigerator/body/door",
+            "roles": [
+              "refrigerator",
+              "body",
+              "door"
+            ]
+          },
+          {
+            "label_id": 5,
+            "node_kind": "leaf",
+            "path": "refrigerator/body/door/door_frame",
+            "roles": [
+              "refrigerator",
+              "body",
+              "door",
+              "door_frame"
+            ]
+          },
+          {
+            "label_id": 6,
+            "node_kind": "leaf",
+            "path": "refrigerator/body/door/handle",
+            "roles": [
+              "refrigerator",
+              "body",
+              "door",
+              "handle"
+            ]
+          },
+          {
+            "label_id": 7,
+            "node_kind": "subcomponents",
+            "path": "refrigerator/body/body_interior",
+            "roles": [
+              "refrigerator",
+              "body",
+              "body_interior"
+            ]
+          },
+          {
+            "label_id": 8,
+            "node_kind": "leaf",
+            "path": "refrigerator/body/body_interior/shelf",
+            "roles": [
+              "refrigerator",
+              "body",
+              "body_interior",
+              "shelf"
+            ]
+          },
+          {
+            "label_id": 9,
+            "node_kind": "subtypes",
+            "path": "refrigerator/base",
+            "roles": [
+              "refrigerator",
+              "base"
+            ]
+          },
+          {
+            "label_id": 10,
+            "node_kind": "subcomponents",
+            "path": "refrigerator/base/foot_base",
+            "roles": [
+              "refrigerator",
+              "base",
+              "foot_base"
+            ]
+          },
+          {
+            "label_id": 11,
+            "node_kind": "leaf",
+            "path": "refrigerator/base/foot_base/foot",
+            "roles": [
+              "refrigerator",
+              "base",
+              "foot_base",
+              "foot"
+            ]
+          },
+          {
+            "label_id": 12,
+            "node_kind": "subcomponents",
+            "path": "refrigerator/base/surface_base",
+            "roles": [
+              "refrigerator",
+              "base",
+              "surface_base"
+            ]
+          },
+          {
+            "label_id": 13,
+            "node_kind": "leaf",
+            "path": "refrigerator/base/surface_base/surface",
+            "roles": [
+              "refrigerator",
+              "base",
+              "surface_base",
+              "surface"
+            ]
+          }
+        ],
+        "roles": [
+          "base",
+          "body",
+          "body_interior",
+          "door",
+          "door_frame",
+          "foot",
+          "foot_base",
+          "frame",
+          "handle",
+          "refrigerator",
+          "shelf",
+          "surface",
+          "surface_base"
+        ]
+      },
+      "ordered_role_rules": [
+        {
+          "pattern": "door[_ ]?frame",
+          "role": "door_frame"
+        },
+        {
+          "pattern": "handle|pull",
+          "role": "handle"
+        },
+        {
+          "pattern": "door",
+          "role": "door"
+        },
+        {
+          "pattern": "interior|cavity",
+          "role": "body_interior"
+        },
+        {
+          "pattern": "shelf",
+          "role": "shelf"
+        },
+        {
+          "pattern": "foot",
+          "role": "foot"
+        },
+        {
+          "pattern": "surface",
+          "role": "surface"
+        },
+        {
+          "pattern": "base",
+          "role": "base"
+        },
+        {
+          "pattern": "frame",
+          "role": "frame"
+        },
+        {
+          "pattern": "body|shell|housing|cabinet|chassis|fridge",
+          "role": "body"
+        },
+        {
+          "pattern": "refrigerator",
+          "role": "refrigerator"
+        }
+      ],
+      "source_file": "stats/after_merging_label_ids/Refrigerator-hier.txt",
+      "source_sha256": "e2d2ac95fddaf107eeb388e1bc79b4d5dd8d6ec317c03d5308edb9a7f93ea648"
+    },
+    "storage_furniture": {
+      "official_category": "StorageFurniture",
+      "ontology": {
+        "ancestor_relations": [
+          {
+            "ancestor": "cabinet",
+            "descendant": "back_panel",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "base_side_panel",
+            "distance": 3
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "bottom_panel",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "cabinet_base",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "cabinet_door",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "cabinet_door_surface",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "cabinet_frame",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "caster",
+            "distance": 3
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "caster_stem",
+            "distance": 4
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "countertop",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "drawer",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "drawer_back",
+            "distance": 3
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "drawer_bottom",
+            "distance": 3
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "drawer_box",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "drawer_front",
+            "distance": 3
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "drawer_side",
+            "distance": 3
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "foot",
+            "distance": 3
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "foot_base",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "frame_horizontal_bar",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "frame_vertical_bar",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "handle",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "hinge",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "panel_base",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "shelf",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "top_panel",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "vertical_divider_panel",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "vertical_front_panel",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "vertical_side_panel",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet",
+            "descendant": "wheel",
+            "distance": 4
+          },
+          {
+            "ancestor": "cabinet_base",
+            "descendant": "base_side_panel",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet_base",
+            "descendant": "bottom_panel",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet_base",
+            "descendant": "caster",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet_base",
+            "descendant": "caster_stem",
+            "distance": 3
+          },
+          {
+            "ancestor": "cabinet_base",
+            "descendant": "foot",
+            "distance": 2
+          },
+          {
+            "ancestor": "cabinet_base",
+            "descendant": "foot_base",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet_base",
+            "descendant": "panel_base",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet_base",
+            "descendant": "wheel",
+            "distance": 3
+          },
+          {
+            "ancestor": "cabinet_door",
+            "descendant": "cabinet_door_surface",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet_door",
+            "descendant": "handle",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet_door",
+            "descendant": "hinge",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet_frame",
+            "descendant": "back_panel",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet_frame",
+            "descendant": "bottom_panel",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet_frame",
+            "descendant": "frame_horizontal_bar",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet_frame",
+            "descendant": "frame_vertical_bar",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet_frame",
+            "descendant": "top_panel",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet_frame",
+            "descendant": "vertical_divider_panel",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet_frame",
+            "descendant": "vertical_front_panel",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet_frame",
+            "descendant": "vertical_side_panel",
+            "distance": 1
+          },
+          {
+            "ancestor": "caster",
+            "descendant": "caster_stem",
+            "distance": 1
+          },
+          {
+            "ancestor": "caster",
+            "descendant": "wheel",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer",
+            "descendant": "drawer_back",
+            "distance": 2
+          },
+          {
+            "ancestor": "drawer",
+            "descendant": "drawer_bottom",
+            "distance": 2
+          },
+          {
+            "ancestor": "drawer",
+            "descendant": "drawer_box",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer",
+            "descendant": "drawer_front",
+            "distance": 2
+          },
+          {
+            "ancestor": "drawer",
+            "descendant": "drawer_side",
+            "distance": 2
+          },
+          {
+            "ancestor": "drawer",
+            "descendant": "handle",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_box",
+            "descendant": "drawer_back",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_box",
+            "descendant": "drawer_bottom",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_box",
+            "descendant": "drawer_front",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_box",
+            "descendant": "drawer_side",
+            "distance": 1
+          },
+          {
+            "ancestor": "foot_base",
+            "descendant": "caster",
+            "distance": 1
+          },
+          {
+            "ancestor": "foot_base",
+            "descendant": "caster_stem",
+            "distance": 2
+          },
+          {
+            "ancestor": "foot_base",
+            "descendant": "foot",
+            "distance": 1
+          },
+          {
+            "ancestor": "foot_base",
+            "descendant": "wheel",
+            "distance": 2
+          },
+          {
+            "ancestor": "panel_base",
+            "descendant": "base_side_panel",
+            "distance": 1
+          },
+          {
+            "ancestor": "panel_base",
+            "descendant": "bottom_panel",
+            "distance": 1
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "back_panel",
+            "distance": 3
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "base_side_panel",
+            "distance": 4
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "bottom_panel",
+            "distance": 3
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "cabinet",
+            "distance": 1
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "cabinet_base",
+            "distance": 2
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "cabinet_door",
+            "distance": 2
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "cabinet_door_surface",
+            "distance": 3
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "cabinet_frame",
+            "distance": 2
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "caster",
+            "distance": 4
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "caster_stem",
+            "distance": 5
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "countertop",
+            "distance": 2
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "drawer",
+            "distance": 2
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "drawer_back",
+            "distance": 4
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "drawer_bottom",
+            "distance": 4
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "drawer_box",
+            "distance": 3
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "drawer_front",
+            "distance": 4
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "drawer_side",
+            "distance": 4
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "foot",
+            "distance": 4
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "foot_base",
+            "distance": 3
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "frame_horizontal_bar",
+            "distance": 3
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "frame_vertical_bar",
+            "distance": 3
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "handle",
+            "distance": 3
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "hinge",
+            "distance": 3
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "panel_base",
+            "distance": 3
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "shelf",
+            "distance": 2
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "top_panel",
+            "distance": 3
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "vertical_divider_panel",
+            "distance": 3
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "vertical_front_panel",
+            "distance": 3
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "vertical_side_panel",
+            "distance": 3
+          },
+          {
+            "ancestor": "storage_furniture",
+            "descendant": "wheel",
+            "distance": 5
+          }
+        ],
+        "entries": [
+          {
+            "label_id": 1,
+            "node_kind": "subtypes",
+            "path": "storage_furniture",
+            "roles": [
+              "storage_furniture"
+            ]
+          },
+          {
+            "label_id": 2,
+            "node_kind": "subcomponents",
+            "path": "storage_furniture/cabinet",
+            "roles": [
+              "storage_furniture",
+              "cabinet"
+            ]
+          },
+          {
+            "label_id": 3,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/countertop",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "countertop"
+            ]
+          },
+          {
+            "label_id": 4,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/shelf",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "shelf"
+            ]
+          },
+          {
+            "label_id": 5,
+            "node_kind": "subcomponents",
+            "path": "storage_furniture/cabinet/cabinet_frame",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_frame"
+            ]
+          },
+          {
+            "label_id": 6,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/cabinet_frame/frame_vertical_bar",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_frame",
+              "frame_vertical_bar"
+            ]
+          },
+          {
+            "label_id": 7,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/cabinet_frame/back_panel",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_frame",
+              "back_panel"
+            ]
+          },
+          {
+            "label_id": 8,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/cabinet_frame/top_panel",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_frame",
+              "top_panel"
+            ]
+          },
+          {
+            "label_id": 9,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/cabinet_frame/vertical_side_panel",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_frame",
+              "vertical_side_panel"
+            ]
+          },
+          {
+            "label_id": 10,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/cabinet_frame/frame_horizontal_bar",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_frame",
+              "frame_horizontal_bar"
+            ]
+          },
+          {
+            "label_id": 11,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/cabinet_frame/vertical_front_panel",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_frame",
+              "vertical_front_panel"
+            ]
+          },
+          {
+            "label_id": 12,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/cabinet_frame/bottom_panel",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_frame",
+              "bottom_panel"
+            ]
+          },
+          {
+            "label_id": 13,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/cabinet_frame/vertical_divider_panel",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_frame",
+              "vertical_divider_panel"
+            ]
+          },
+          {
+            "label_id": 14,
+            "node_kind": "subcomponents",
+            "path": "storage_furniture/cabinet/drawer",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "drawer"
+            ]
+          },
+          {
+            "label_id": 15,
+            "node_kind": "subcomponents",
+            "path": "storage_furniture/cabinet/drawer/drawer_box",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "drawer",
+              "drawer_box"
+            ]
+          },
+          {
+            "label_id": 16,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/drawer/drawer_box/drawer_back",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "drawer",
+              "drawer_box",
+              "drawer_back"
+            ]
+          },
+          {
+            "label_id": 17,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/drawer/drawer_box/drawer_bottom",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "drawer",
+              "drawer_box",
+              "drawer_bottom"
+            ]
+          },
+          {
+            "label_id": 18,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/drawer/drawer_box/drawer_side",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "drawer",
+              "drawer_box",
+              "drawer_side"
+            ]
+          },
+          {
+            "label_id": 19,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/drawer/drawer_box/drawer_front",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "drawer",
+              "drawer_box",
+              "drawer_front"
+            ]
+          },
+          {
+            "label_id": 20,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/drawer/handle",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "drawer",
+              "handle"
+            ]
+          },
+          {
+            "label_id": 21,
+            "node_kind": "subtypes",
+            "path": "storage_furniture/cabinet/cabinet_base",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_base"
+            ]
+          },
+          {
+            "label_id": 22,
+            "node_kind": "subcomponents",
+            "path": "storage_furniture/cabinet/cabinet_base/panel_base",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_base",
+              "panel_base"
+            ]
+          },
+          {
+            "label_id": 23,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/cabinet_base/panel_base/bottom_panel",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_base",
+              "panel_base",
+              "bottom_panel"
+            ]
+          },
+          {
+            "label_id": 24,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/cabinet_base/panel_base/base_side_panel",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_base",
+              "panel_base",
+              "base_side_panel"
+            ]
+          },
+          {
+            "label_id": 25,
+            "node_kind": "subcomponents",
+            "path": "storage_furniture/cabinet/cabinet_base/foot_base",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_base",
+              "foot_base"
+            ]
+          },
+          {
+            "label_id": 26,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/cabinet_base/foot_base/foot",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_base",
+              "foot_base",
+              "foot"
+            ]
+          },
+          {
+            "label_id": 27,
+            "node_kind": "subcomponents",
+            "path": "storage_furniture/cabinet/cabinet_base/foot_base/caster",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_base",
+              "foot_base",
+              "caster"
+            ]
+          },
+          {
+            "label_id": 28,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/cabinet_base/foot_base/caster/wheel",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_base",
+              "foot_base",
+              "caster",
+              "wheel"
+            ]
+          },
+          {
+            "label_id": 29,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/cabinet_base/foot_base/caster/caster_stem",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_base",
+              "foot_base",
+              "caster",
+              "caster_stem"
+            ]
+          },
+          {
+            "label_id": 33,
+            "node_kind": "subcomponents",
+            "path": "storage_furniture/cabinet/cabinet_door",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_door"
+            ]
+          },
+          {
+            "label_id": 34,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/cabinet_door/hinge",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_door",
+              "hinge"
+            ]
+          },
+          {
+            "label_id": 35,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/cabinet_door/handle",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_door",
+              "handle"
+            ]
+          },
+          {
+            "label_id": 36,
+            "node_kind": "leaf",
+            "path": "storage_furniture/cabinet/cabinet_door/cabinet_door_surface",
+            "roles": [
+              "storage_furniture",
+              "cabinet",
+              "cabinet_door",
+              "cabinet_door_surface"
+            ]
+          }
+        ],
+        "roles": [
+          "back_panel",
+          "base_side_panel",
+          "bottom_panel",
+          "cabinet",
+          "cabinet_base",
+          "cabinet_door",
+          "cabinet_door_surface",
+          "cabinet_frame",
+          "caster",
+          "caster_stem",
+          "countertop",
+          "drawer",
+          "drawer_back",
+          "drawer_bottom",
+          "drawer_box",
+          "drawer_front",
+          "drawer_side",
+          "foot",
+          "foot_base",
+          "frame_horizontal_bar",
+          "frame_vertical_bar",
+          "handle",
+          "hinge",
+          "panel_base",
+          "shelf",
+          "storage_furniture",
+          "top_panel",
+          "vertical_divider_panel",
+          "vertical_front_panel",
+          "vertical_side_panel",
+          "wheel"
+        ]
+      },
+      "ordered_role_rules": [
+        {
+          "pattern": "drawer[_ ]?back",
+          "role": "drawer_back"
+        },
+        {
+          "pattern": "drawer[_ ]?bottom|drawer[_ ]?floor",
+          "role": "drawer_bottom"
+        },
+        {
+          "pattern": "drawer[_ ]?side",
+          "role": "drawer_side"
+        },
+        {
+          "pattern": "drawer[_ ]?front",
+          "role": "drawer_front"
+        },
+        {
+          "pattern": "drawer[_ ]?box",
+          "role": "drawer_box"
+        },
+        {
+          "pattern": "door[_ ]?surface",
+          "role": "cabinet_door_surface"
+        },
+        {
+          "pattern": "drawer.*handle|drawer.*pull",
+          "role": "handle"
+        },
+        {
+          "pattern": "door.*handle|door.*pull",
+          "role": "handle"
+        },
+        {
+          "pattern": "handle|pull",
+          "role": "handle"
+        },
+        {
+          "pattern": "cabinet[_ ]?door|door",
+          "role": "cabinet_door"
+        },
+        {
+          "pattern": "drawer",
+          "role": "drawer"
+        },
+        {
+          "pattern": "counter[_ ]?top|countertop",
+          "role": "countertop"
+        },
+        {
+          "pattern": "shelf",
+          "role": "shelf"
+        },
+        {
+          "pattern": "cabinet[_ ]?frame|frame",
+          "role": "cabinet_frame"
+        },
+        {
+          "pattern": "caster[_ ]?stem",
+          "role": "caster_stem"
+        },
+        {
+          "pattern": "caster",
+          "role": "caster"
+        },
+        {
+          "pattern": "wheel",
+          "role": "wheel"
+        },
+        {
+          "pattern": "hinge",
+          "role": "hinge"
+        },
+        {
+          "pattern": "foot",
+          "role": "foot"
+        },
+        {
+          "pattern": "cabinet[_ ]?base|base",
+          "role": "cabinet_base"
+        },
+        {
+          "pattern": "body|shell|housing|cabinet|chassis",
+          "role": "cabinet"
+        },
+        {
+          "pattern": "storage[_ ]?furniture",
+          "role": "storage_furniture"
+        }
+      ],
+      "source_file": "stats/after_merging_label_ids/StorageFurniture-hier.txt",
+      "source_sha256": "0c4de933b297eb1ef92a4502a6059ced3742e2b4695a60f5ebd00033a26c6fac"
+    },
+    "table": {
+      "official_category": "Table",
+      "ontology": {
+        "ancestor_relations": [
+          {
+            "ancestor": "cabinet_door",
+            "descendant": "cabinet_door_surface",
+            "distance": 1
+          },
+          {
+            "ancestor": "cabinet_door",
+            "descendant": "handle",
+            "distance": 1
+          },
+          {
+            "ancestor": "caster",
+            "descendant": "caster_stem",
+            "distance": 1
+          },
+          {
+            "ancestor": "caster",
+            "descendant": "wheel",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer",
+            "descendant": "drawer_back",
+            "distance": 2
+          },
+          {
+            "ancestor": "drawer",
+            "descendant": "drawer_bottom",
+            "distance": 2
+          },
+          {
+            "ancestor": "drawer",
+            "descendant": "drawer_box",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer",
+            "descendant": "drawer_front",
+            "distance": 2
+          },
+          {
+            "ancestor": "drawer",
+            "descendant": "drawer_side",
+            "distance": 2
+          },
+          {
+            "ancestor": "drawer",
+            "descendant": "handle",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "back_panel",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "bar_stretcher",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "bottom_panel",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "cabinet_door",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "cabinet_door_surface",
+            "distance": 2
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "caster",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "caster_stem",
+            "distance": 2
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "drawer",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "drawer_back",
+            "distance": 3
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "drawer_bottom",
+            "distance": 3
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "drawer_box",
+            "distance": 2
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "drawer_front",
+            "distance": 3
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "drawer_side",
+            "distance": 3
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "foot",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "handle",
+            "distance": 2
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "keyboard_tray",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "keyboard_tray_surface",
+            "distance": 2
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "leg",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "shelf",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "tabletop_connector",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "vertical_divider_panel",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "vertical_front_panel",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "vertical_side_panel",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_base",
+            "descendant": "wheel",
+            "distance": 2
+          },
+          {
+            "ancestor": "drawer_box",
+            "descendant": "drawer_back",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_box",
+            "descendant": "drawer_bottom",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_box",
+            "descendant": "drawer_front",
+            "distance": 1
+          },
+          {
+            "ancestor": "drawer_box",
+            "descendant": "drawer_side",
+            "distance": 1
+          },
+          {
+            "ancestor": "game_table",
+            "descendant": "bar",
+            "distance": 4
+          },
+          {
+            "ancestor": "game_table",
+            "descendant": "bar_stretcher",
+            "distance": 4
+          },
+          {
+            "ancestor": "game_table",
+            "descendant": "leg",
+            "distance": 4
+          },
+          {
+            "ancestor": "game_table",
+            "descendant": "ping_pong_net",
+            "distance": 2
+          },
+          {
+            "ancestor": "game_table",
+            "descendant": "ping_pong_table",
+            "distance": 1
+          },
+          {
+            "ancestor": "game_table",
+            "descendant": "pool_ball",
+            "distance": 2
+          },
+          {
+            "ancestor": "game_table",
+            "descendant": "pool_table",
+            "distance": 1
+          },
+          {
+            "ancestor": "game_table",
+            "descendant": "regular_leg_base",
+            "distance": 3
+          },
+          {
+            "ancestor": "game_table",
+            "descendant": "table_base",
+            "distance": 2
+          },
+          {
+            "ancestor": "game_table",
+            "descendant": "tabletop",
+            "distance": 2
+          },
+          {
+            "ancestor": "game_table",
+            "descendant": "tabletop_frame",
+            "distance": 3
+          },
+          {
+            "ancestor": "game_table",
+            "descendant": "tabletop_surface",
+            "distance": 3
+          },
+          {
+            "ancestor": "keyboard_tray",
+            "descendant": "keyboard_tray_surface",
+            "distance": 1
+          },
+          {
+            "ancestor": "pedestal_base",
+            "descendant": "central_support",
+            "distance": 1
+          },
+          {
+            "ancestor": "pedestal_base",
+            "descendant": "pedestal",
+            "distance": 1
+          },
+          {
+            "ancestor": "pedestal_base",
+            "descendant": "tabletop_connector",
+            "distance": 1
+          },
+          {
+            "ancestor": "picnic_table",
+            "descendant": "bench",
+            "distance": 1
+          },
+          {
+            "ancestor": "picnic_table",
+            "descendant": "bench_connector",
+            "distance": 1
+          },
+          {
+            "ancestor": "picnic_table",
+            "descendant": "leg",
+            "distance": 4
+          },
+          {
+            "ancestor": "picnic_table",
+            "descendant": "regular_leg_base",
+            "distance": 3
+          },
+          {
+            "ancestor": "picnic_table",
+            "descendant": "regular_table",
+            "distance": 1
+          },
+          {
+            "ancestor": "picnic_table",
+            "descendant": "table_base",
+            "distance": 2
+          },
+          {
+            "ancestor": "picnic_table",
+            "descendant": "tabletop",
+            "distance": 2
+          },
+          {
+            "ancestor": "picnic_table",
+            "descendant": "tabletop_surface",
+            "distance": 3
+          },
+          {
+            "ancestor": "ping_pong_table",
+            "descendant": "bar_stretcher",
+            "distance": 3
+          },
+          {
+            "ancestor": "ping_pong_table",
+            "descendant": "leg",
+            "distance": 3
+          },
+          {
+            "ancestor": "ping_pong_table",
+            "descendant": "ping_pong_net",
+            "distance": 1
+          },
+          {
+            "ancestor": "ping_pong_table",
+            "descendant": "regular_leg_base",
+            "distance": 2
+          },
+          {
+            "ancestor": "ping_pong_table",
+            "descendant": "table_base",
+            "distance": 1
+          },
+          {
+            "ancestor": "ping_pong_table",
+            "descendant": "tabletop",
+            "distance": 1
+          },
+          {
+            "ancestor": "ping_pong_table",
+            "descendant": "tabletop_surface",
+            "distance": 2
+          },
+          {
+            "ancestor": "pool_table",
+            "descendant": "bar",
+            "distance": 3
+          },
+          {
+            "ancestor": "pool_table",
+            "descendant": "leg",
+            "distance": 3
+          },
+          {
+            "ancestor": "pool_table",
+            "descendant": "pool_ball",
+            "distance": 1
+          },
+          {
+            "ancestor": "pool_table",
+            "descendant": "regular_leg_base",
+            "distance": 2
+          },
+          {
+            "ancestor": "pool_table",
+            "descendant": "table_base",
+            "distance": 1
+          },
+          {
+            "ancestor": "pool_table",
+            "descendant": "tabletop",
+            "distance": 1
+          },
+          {
+            "ancestor": "pool_table",
+            "descendant": "tabletop_frame",
+            "distance": 2
+          },
+          {
+            "ancestor": "pool_table",
+            "descendant": "tabletop_surface",
+            "distance": 2
+          },
+          {
+            "ancestor": "regular_leg_base",
+            "descendant": "bar_stretcher",
+            "distance": 1
+          },
+          {
+            "ancestor": "regular_leg_base",
+            "descendant": "caster",
+            "distance": 1
+          },
+          {
+            "ancestor": "regular_leg_base",
+            "descendant": "caster_stem",
+            "distance": 2
+          },
+          {
+            "ancestor": "regular_leg_base",
+            "descendant": "circular_stretcher",
+            "distance": 1
+          },
+          {
+            "ancestor": "regular_leg_base",
+            "descendant": "foot",
+            "distance": 1
+          },
+          {
+            "ancestor": "regular_leg_base",
+            "descendant": "leg",
+            "distance": 1
+          },
+          {
+            "ancestor": "regular_leg_base",
+            "descendant": "runner",
+            "distance": 1
+          },
+          {
+            "ancestor": "regular_leg_base",
+            "descendant": "tabletop_connector",
+            "distance": 1
+          },
+          {
+            "ancestor": "regular_leg_base",
+            "descendant": "wheel",
+            "distance": 2
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "back_panel",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "bar",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "bar_stretcher",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "board",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "bottom_panel",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "cabinet_door",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "cabinet_door_surface",
+            "distance": 4
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "caster",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "caster_stem",
+            "distance": 4
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "central_support",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "circular_stretcher",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "drawer",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "drawer_back",
+            "distance": 5
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "drawer_base",
+            "distance": 2
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "drawer_bottom",
+            "distance": 5
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "drawer_box",
+            "distance": 4
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "drawer_front",
+            "distance": 5
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "drawer_side",
+            "distance": 5
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "foot",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "handle",
+            "distance": 4
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "keyboard_tray",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "keyboard_tray_surface",
+            "distance": 4
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "leg",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "pedestal",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "pedestal_base",
+            "distance": 2
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "regular_leg_base",
+            "distance": 2
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "runner",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "shelf",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "star_leg_base",
+            "distance": 2
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "star_leg_set",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "table_base",
+            "distance": 1
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "tabletop",
+            "distance": 1
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "tabletop_connector",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "tabletop_dropleaf",
+            "distance": 2
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "tabletop_frame",
+            "distance": 2
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "tabletop_surface",
+            "distance": 2
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "vertical_divider_panel",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "vertical_front_panel",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "vertical_side_panel",
+            "distance": 3
+          },
+          {
+            "ancestor": "regular_table",
+            "descendant": "wheel",
+            "distance": 4
+          },
+          {
+            "ancestor": "star_leg_base",
+            "descendant": "central_support",
+            "distance": 1
+          },
+          {
+            "ancestor": "star_leg_base",
+            "descendant": "leg",
+            "distance": 2
+          },
+          {
+            "ancestor": "star_leg_base",
+            "descendant": "star_leg_set",
+            "distance": 1
+          },
+          {
+            "ancestor": "star_leg_set",
+            "descendant": "leg",
+            "distance": 1
+          },
+          {
+            "ancestor": "table",
+            "descendant": "back_panel",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "bar",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "bar_stretcher",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "bench",
+            "distance": 2
+          },
+          {
+            "ancestor": "table",
+            "descendant": "bench_connector",
+            "distance": 2
+          },
+          {
+            "ancestor": "table",
+            "descendant": "board",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "bottom_panel",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "cabinet_door",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "cabinet_door_surface",
+            "distance": 5
+          },
+          {
+            "ancestor": "table",
+            "descendant": "caster",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "caster_stem",
+            "distance": 5
+          },
+          {
+            "ancestor": "table",
+            "descendant": "central_support",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "circular_stretcher",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "drawer",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "drawer_back",
+            "distance": 6
+          },
+          {
+            "ancestor": "table",
+            "descendant": "drawer_base",
+            "distance": 3
+          },
+          {
+            "ancestor": "table",
+            "descendant": "drawer_bottom",
+            "distance": 6
+          },
+          {
+            "ancestor": "table",
+            "descendant": "drawer_box",
+            "distance": 5
+          },
+          {
+            "ancestor": "table",
+            "descendant": "drawer_front",
+            "distance": 6
+          },
+          {
+            "ancestor": "table",
+            "descendant": "drawer_side",
+            "distance": 6
+          },
+          {
+            "ancestor": "table",
+            "descendant": "foot",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "game_table",
+            "distance": 1
+          },
+          {
+            "ancestor": "table",
+            "descendant": "handle",
+            "distance": 5
+          },
+          {
+            "ancestor": "table",
+            "descendant": "keyboard_tray",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "keyboard_tray_surface",
+            "distance": 5
+          },
+          {
+            "ancestor": "table",
+            "descendant": "leg",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "pedestal",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "pedestal_base",
+            "distance": 3
+          },
+          {
+            "ancestor": "table",
+            "descendant": "picnic_table",
+            "distance": 1
+          },
+          {
+            "ancestor": "table",
+            "descendant": "ping_pong_net",
+            "distance": 3
+          },
+          {
+            "ancestor": "table",
+            "descendant": "ping_pong_table",
+            "distance": 2
+          },
+          {
+            "ancestor": "table",
+            "descendant": "pool_ball",
+            "distance": 3
+          },
+          {
+            "ancestor": "table",
+            "descendant": "pool_table",
+            "distance": 2
+          },
+          {
+            "ancestor": "table",
+            "descendant": "regular_leg_base",
+            "distance": 3
+          },
+          {
+            "ancestor": "table",
+            "descendant": "regular_table",
+            "distance": 1
+          },
+          {
+            "ancestor": "table",
+            "descendant": "runner",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "shelf",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "star_leg_base",
+            "distance": 3
+          },
+          {
+            "ancestor": "table",
+            "descendant": "star_leg_set",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "table_base",
+            "distance": 2
+          },
+          {
+            "ancestor": "table",
+            "descendant": "tabletop",
+            "distance": 2
+          },
+          {
+            "ancestor": "table",
+            "descendant": "tabletop_connector",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "tabletop_dropleaf",
+            "distance": 3
+          },
+          {
+            "ancestor": "table",
+            "descendant": "tabletop_frame",
+            "distance": 3
+          },
+          {
+            "ancestor": "table",
+            "descendant": "tabletop_surface",
+            "distance": 3
+          },
+          {
+            "ancestor": "table",
+            "descendant": "vertical_divider_panel",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "vertical_front_panel",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "vertical_side_panel",
+            "distance": 4
+          },
+          {
+            "ancestor": "table",
+            "descendant": "wheel",
+            "distance": 5
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "back_panel",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "bar_stretcher",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "bottom_panel",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "cabinet_door",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "cabinet_door_surface",
+            "distance": 3
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "caster",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "caster_stem",
+            "distance": 3
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "central_support",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "circular_stretcher",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "drawer",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "drawer_back",
+            "distance": 4
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "drawer_base",
+            "distance": 1
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "drawer_bottom",
+            "distance": 4
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "drawer_box",
+            "distance": 3
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "drawer_front",
+            "distance": 4
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "drawer_side",
+            "distance": 4
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "foot",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "handle",
+            "distance": 3
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "keyboard_tray",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "keyboard_tray_surface",
+            "distance": 3
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "leg",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "pedestal",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "pedestal_base",
+            "distance": 1
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "regular_leg_base",
+            "distance": 1
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "runner",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "shelf",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "star_leg_base",
+            "distance": 1
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "star_leg_set",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "tabletop_connector",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "vertical_divider_panel",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "vertical_front_panel",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "vertical_side_panel",
+            "distance": 2
+          },
+          {
+            "ancestor": "table_base",
+            "descendant": "wheel",
+            "distance": 3
+          },
+          {
+            "ancestor": "tabletop",
+            "descendant": "bar",
+            "distance": 2
+          },
+          {
+            "ancestor": "tabletop",
+            "descendant": "board",
+            "distance": 2
+          },
+          {
+            "ancestor": "tabletop",
+            "descendant": "tabletop_dropleaf",
+            "distance": 1
+          },
+          {
+            "ancestor": "tabletop",
+            "descendant": "tabletop_frame",
+            "distance": 1
+          },
+          {
+            "ancestor": "tabletop",
+            "descendant": "tabletop_surface",
+            "distance": 1
+          },
+          {
+            "ancestor": "tabletop_frame",
+            "descendant": "bar",
+            "distance": 1
+          },
+          {
+            "ancestor": "tabletop_surface",
+            "descendant": "bar",
+            "distance": 1
+          },
+          {
+            "ancestor": "tabletop_surface",
+            "descendant": "board",
+            "distance": 1
+          }
+        ],
+        "entries": [
+          {
+            "label_id": 1,
+            "node_kind": "subtypes",
+            "path": "table",
+            "roles": [
+              "table"
+            ]
+          },
+          {
+            "label_id": 2,
+            "node_kind": "subtypes",
+            "path": "table/game_table",
+            "roles": [
+              "table",
+              "game_table"
+            ]
+          },
+          {
+            "label_id": 3,
+            "node_kind": "subcomponents",
+            "path": "table/game_table/ping_pong_table",
+            "roles": [
+              "table",
+              "game_table",
+              "ping_pong_table"
+            ]
+          },
+          {
+            "label_id": 4,
+            "node_kind": "leaf",
+            "path": "table/game_table/ping_pong_table/ping_pong_net",
+            "roles": [
+              "table",
+              "game_table",
+              "ping_pong_table",
+              "ping_pong_net"
+            ]
+          },
+          {
+            "label_id": 5,
+            "node_kind": "subcomponents",
+            "path": "table/game_table/ping_pong_table/tabletop",
+            "roles": [
+              "table",
+              "game_table",
+              "ping_pong_table",
+              "tabletop"
+            ]
+          },
+          {
+            "label_id": 6,
+            "node_kind": "leaf",
+            "path": "table/game_table/ping_pong_table/tabletop/tabletop_surface",
+            "roles": [
+              "table",
+              "game_table",
+              "ping_pong_table",
+              "tabletop",
+              "tabletop_surface"
+            ]
+          },
+          {
+            "label_id": 7,
+            "node_kind": "subtypes",
+            "path": "table/game_table/ping_pong_table/table_base",
+            "roles": [
+              "table",
+              "game_table",
+              "ping_pong_table",
+              "table_base"
+            ]
+          },
+          {
+            "label_id": 8,
+            "node_kind": "subcomponents",
+            "path": "table/game_table/ping_pong_table/table_base/regular_leg_base",
+            "roles": [
+              "table",
+              "game_table",
+              "ping_pong_table",
+              "table_base",
+              "regular_leg_base"
+            ]
+          },
+          {
+            "label_id": 9,
+            "node_kind": "leaf",
+            "path": "table/game_table/ping_pong_table/table_base/regular_leg_base/bar_stretcher",
+            "roles": [
+              "table",
+              "game_table",
+              "ping_pong_table",
+              "table_base",
+              "regular_leg_base",
+              "bar_stretcher"
+            ]
+          },
+          {
+            "label_id": 10,
+            "node_kind": "leaf",
+            "path": "table/game_table/ping_pong_table/table_base/regular_leg_base/leg",
+            "roles": [
+              "table",
+              "game_table",
+              "ping_pong_table",
+              "table_base",
+              "regular_leg_base",
+              "leg"
+            ]
+          },
+          {
+            "label_id": 11,
+            "node_kind": "subcomponents",
+            "path": "table/game_table/pool_table",
+            "roles": [
+              "table",
+              "game_table",
+              "pool_table"
+            ]
+          },
+          {
+            "label_id": 12,
+            "node_kind": "leaf",
+            "path": "table/game_table/pool_table/pool_ball",
+            "roles": [
+              "table",
+              "game_table",
+              "pool_table",
+              "pool_ball"
+            ]
+          },
+          {
+            "label_id": 13,
+            "node_kind": "subcomponents",
+            "path": "table/game_table/pool_table/tabletop",
+            "roles": [
+              "table",
+              "game_table",
+              "pool_table",
+              "tabletop"
+            ]
+          },
+          {
+            "label_id": 14,
+            "node_kind": "leaf",
+            "path": "table/game_table/pool_table/tabletop/tabletop_surface",
+            "roles": [
+              "table",
+              "game_table",
+              "pool_table",
+              "tabletop",
+              "tabletop_surface"
+            ]
+          },
+          {
+            "label_id": 15,
+            "node_kind": "subcomponents",
+            "path": "table/game_table/pool_table/tabletop/tabletop_frame",
+            "roles": [
+              "table",
+              "game_table",
+              "pool_table",
+              "tabletop",
+              "tabletop_frame"
+            ]
+          },
+          {
+            "label_id": 16,
+            "node_kind": "leaf",
+            "path": "table/game_table/pool_table/tabletop/tabletop_frame/bar",
+            "roles": [
+              "table",
+              "game_table",
+              "pool_table",
+              "tabletop",
+              "tabletop_frame",
+              "bar"
+            ]
+          },
+          {
+            "label_id": 17,
+            "node_kind": "subtypes",
+            "path": "table/game_table/pool_table/table_base",
+            "roles": [
+              "table",
+              "game_table",
+              "pool_table",
+              "table_base"
+            ]
+          },
+          {
+            "label_id": 18,
+            "node_kind": "subcomponents",
+            "path": "table/game_table/pool_table/table_base/regular_leg_base",
+            "roles": [
+              "table",
+              "game_table",
+              "pool_table",
+              "table_base",
+              "regular_leg_base"
+            ]
+          },
+          {
+            "label_id": 19,
+            "node_kind": "leaf",
+            "path": "table/game_table/pool_table/table_base/regular_leg_base/leg",
+            "roles": [
+              "table",
+              "game_table",
+              "pool_table",
+              "table_base",
+              "regular_leg_base",
+              "leg"
+            ]
+          },
+          {
+            "label_id": 20,
+            "node_kind": "subcomponents",
+            "path": "table/picnic_table",
+            "roles": [
+              "table",
+              "picnic_table"
+            ]
+          },
+          {
+            "label_id": 21,
+            "node_kind": "subcomponents",
+            "path": "table/picnic_table/regular_table",
+            "roles": [
+              "table",
+              "picnic_table",
+              "regular_table"
+            ]
+          },
+          {
+            "label_id": 22,
+            "node_kind": "subcomponents",
+            "path": "table/picnic_table/regular_table/tabletop",
+            "roles": [
+              "table",
+              "picnic_table",
+              "regular_table",
+              "tabletop"
+            ]
+          },
+          {
+            "label_id": 23,
+            "node_kind": "leaf",
+            "path": "table/picnic_table/regular_table/tabletop/tabletop_surface",
+            "roles": [
+              "table",
+              "picnic_table",
+              "regular_table",
+              "tabletop",
+              "tabletop_surface"
+            ]
+          },
+          {
+            "label_id": 24,
+            "node_kind": "subtypes",
+            "path": "table/picnic_table/regular_table/table_base",
+            "roles": [
+              "table",
+              "picnic_table",
+              "regular_table",
+              "table_base"
+            ]
+          },
+          {
+            "label_id": 25,
+            "node_kind": "subcomponents",
+            "path": "table/picnic_table/regular_table/table_base/regular_leg_base",
+            "roles": [
+              "table",
+              "picnic_table",
+              "regular_table",
+              "table_base",
+              "regular_leg_base"
+            ]
+          },
+          {
+            "label_id": 26,
+            "node_kind": "leaf",
+            "path": "table/picnic_table/regular_table/table_base/regular_leg_base/leg",
+            "roles": [
+              "table",
+              "picnic_table",
+              "regular_table",
+              "table_base",
+              "regular_leg_base",
+              "leg"
+            ]
+          },
+          {
+            "label_id": 27,
+            "node_kind": "leaf",
+            "path": "table/picnic_table/bench_connector",
+            "roles": [
+              "table",
+              "picnic_table",
+              "bench_connector"
+            ]
+          },
+          {
+            "label_id": 28,
+            "node_kind": "leaf",
+            "path": "table/picnic_table/bench",
+            "roles": [
+              "table",
+              "picnic_table",
+              "bench"
+            ]
+          },
+          {
+            "label_id": 29,
+            "node_kind": "subcomponents",
+            "path": "table/regular_table",
+            "roles": [
+              "table",
+              "regular_table"
+            ]
+          },
+          {
+            "label_id": 30,
+            "node_kind": "subcomponents",
+            "path": "table/regular_table/tabletop",
+            "roles": [
+              "table",
+              "regular_table",
+              "tabletop"
+            ]
+          },
+          {
+            "label_id": 31,
+            "node_kind": "subcomponents",
+            "path": "table/regular_table/tabletop/tabletop_surface",
+            "roles": [
+              "table",
+              "regular_table",
+              "tabletop",
+              "tabletop_surface"
+            ]
+          },
+          {
+            "label_id": 33,
+            "node_kind": "leaf",
+            "path": "table/regular_table/tabletop/tabletop_surface/bar",
+            "roles": [
+              "table",
+              "regular_table",
+              "tabletop",
+              "tabletop_surface",
+              "bar"
+            ]
+          },
+          {
+            "label_id": 34,
+            "node_kind": "leaf",
+            "path": "table/regular_table/tabletop/tabletop_surface/board",
+            "roles": [
+              "table",
+              "regular_table",
+              "tabletop",
+              "tabletop_surface",
+              "board"
+            ]
+          },
+          {
+            "label_id": 35,
+            "node_kind": "leaf",
+            "path": "table/regular_table/tabletop/tabletop_dropleaf",
+            "roles": [
+              "table",
+              "regular_table",
+              "tabletop",
+              "tabletop_dropleaf"
+            ]
+          },
+          {
+            "label_id": 36,
+            "node_kind": "subcomponents",
+            "path": "table/regular_table/tabletop/tabletop_frame",
+            "roles": [
+              "table",
+              "regular_table",
+              "tabletop",
+              "tabletop_frame"
+            ]
+          },
+          {
+            "label_id": 37,
+            "node_kind": "leaf",
+            "path": "table/regular_table/tabletop/tabletop_frame/bar",
+            "roles": [
+              "table",
+              "regular_table",
+              "tabletop",
+              "tabletop_frame",
+              "bar"
+            ]
+          },
+          {
+            "label_id": 38,
+            "node_kind": "subtypes",
+            "path": "table/regular_table/table_base",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base"
+            ]
+          },
+          {
+            "label_id": 39,
+            "node_kind": "subcomponents",
+            "path": "table/regular_table/table_base/star_leg_base",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "star_leg_base"
+            ]
+          },
+          {
+            "label_id": 40,
+            "node_kind": "subcomponents",
+            "path": "table/regular_table/table_base/star_leg_base/star_leg_set",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "star_leg_base",
+              "star_leg_set"
+            ]
+          },
+          {
+            "label_id": 41,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/star_leg_base/star_leg_set/leg",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "star_leg_base",
+              "star_leg_set",
+              "leg"
+            ]
+          },
+          {
+            "label_id": 42,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/star_leg_base/central_support",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "star_leg_base",
+              "central_support"
+            ]
+          },
+          {
+            "label_id": 43,
+            "node_kind": "subcomponents",
+            "path": "table/regular_table/table_base/regular_leg_base",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "regular_leg_base"
+            ]
+          },
+          {
+            "label_id": 44,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/regular_leg_base/tabletop_connector",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "regular_leg_base",
+              "tabletop_connector"
+            ]
+          },
+          {
+            "label_id": 45,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/regular_leg_base/bar_stretcher",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "regular_leg_base",
+              "bar_stretcher"
+            ]
+          },
+          {
+            "label_id": 46,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/regular_leg_base/leg",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "regular_leg_base",
+              "leg"
+            ]
+          },
+          {
+            "label_id": 47,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/regular_leg_base/runner",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "regular_leg_base",
+              "runner"
+            ]
+          },
+          {
+            "label_id": 48,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/regular_leg_base/circular_stretcher",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "regular_leg_base",
+              "circular_stretcher"
+            ]
+          },
+          {
+            "label_id": 49,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/regular_leg_base/foot",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "regular_leg_base",
+              "foot"
+            ]
+          },
+          {
+            "label_id": 50,
+            "node_kind": "subcomponents",
+            "path": "table/regular_table/table_base/regular_leg_base/caster",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "regular_leg_base",
+              "caster"
+            ]
+          },
+          {
+            "label_id": 51,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/regular_leg_base/caster/wheel",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "regular_leg_base",
+              "caster",
+              "wheel"
+            ]
+          },
+          {
+            "label_id": 52,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/regular_leg_base/caster/caster_stem",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "regular_leg_base",
+              "caster",
+              "caster_stem"
+            ]
+          },
+          {
+            "label_id": 53,
+            "node_kind": "subcomponents",
+            "path": "table/regular_table/table_base/drawer_base",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base"
+            ]
+          },
+          {
+            "label_id": 54,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/tabletop_connector",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "tabletop_connector"
+            ]
+          },
+          {
+            "label_id": 55,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/back_panel",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "back_panel"
+            ]
+          },
+          {
+            "label_id": 56,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/bar_stretcher",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "bar_stretcher"
+            ]
+          },
+          {
+            "label_id": 57,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/leg",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "leg"
+            ]
+          },
+          {
+            "label_id": 58,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/vertical_side_panel",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "vertical_side_panel"
+            ]
+          },
+          {
+            "label_id": 59,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/shelf",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "shelf"
+            ]
+          },
+          {
+            "label_id": 60,
+            "node_kind": "subcomponents",
+            "path": "table/regular_table/table_base/drawer_base/cabinet_door",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "cabinet_door"
+            ]
+          },
+          {
+            "label_id": 61,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/cabinet_door/handle",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "cabinet_door",
+              "handle"
+            ]
+          },
+          {
+            "label_id": 62,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/cabinet_door/cabinet_door_surface",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "cabinet_door",
+              "cabinet_door_surface"
+            ]
+          },
+          {
+            "label_id": 63,
+            "node_kind": "subcomponents",
+            "path": "table/regular_table/table_base/drawer_base/drawer",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "drawer"
+            ]
+          },
+          {
+            "label_id": 64,
+            "node_kind": "subcomponents",
+            "path": "table/regular_table/table_base/drawer_base/drawer/drawer_box",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "drawer",
+              "drawer_box"
+            ]
+          },
+          {
+            "label_id": 65,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/drawer/drawer_box/drawer_back",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "drawer",
+              "drawer_box",
+              "drawer_back"
+            ]
+          },
+          {
+            "label_id": 66,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/drawer/drawer_box/drawer_bottom",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "drawer",
+              "drawer_box",
+              "drawer_bottom"
+            ]
+          },
+          {
+            "label_id": 67,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/drawer/drawer_box/drawer_side",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "drawer",
+              "drawer_box",
+              "drawer_side"
+            ]
+          },
+          {
+            "label_id": 68,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/drawer/drawer_box/drawer_front",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "drawer",
+              "drawer_box",
+              "drawer_front"
+            ]
+          },
+          {
+            "label_id": 69,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/drawer/handle",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "drawer",
+              "handle"
+            ]
+          },
+          {
+            "label_id": 70,
+            "node_kind": "subcomponents",
+            "path": "table/regular_table/table_base/drawer_base/keyboard_tray",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "keyboard_tray"
+            ]
+          },
+          {
+            "label_id": 71,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/keyboard_tray/keyboard_tray_surface",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "keyboard_tray",
+              "keyboard_tray_surface"
+            ]
+          },
+          {
+            "label_id": 72,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/vertical_front_panel",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "vertical_front_panel"
+            ]
+          },
+          {
+            "label_id": 73,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/foot",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "foot"
+            ]
+          },
+          {
+            "label_id": 74,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/bottom_panel",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "bottom_panel"
+            ]
+          },
+          {
+            "label_id": 75,
+            "node_kind": "subcomponents",
+            "path": "table/regular_table/table_base/drawer_base/caster",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "caster"
+            ]
+          },
+          {
+            "label_id": 76,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/caster/wheel",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "caster",
+              "wheel"
+            ]
+          },
+          {
+            "label_id": 77,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/caster/caster_stem",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "caster",
+              "caster_stem"
+            ]
+          },
+          {
+            "label_id": 78,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/drawer_base/vertical_divider_panel",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "drawer_base",
+              "vertical_divider_panel"
+            ]
+          },
+          {
+            "label_id": 79,
+            "node_kind": "subcomponents",
+            "path": "table/regular_table/table_base/pedestal_base",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "pedestal_base"
+            ]
+          },
+          {
+            "label_id": 80,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/pedestal_base/pedestal",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "pedestal_base",
+              "pedestal"
+            ]
+          },
+          {
+            "label_id": 81,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/pedestal_base/tabletop_connector",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "pedestal_base",
+              "tabletop_connector"
+            ]
+          },
+          {
+            "label_id": 82,
+            "node_kind": "leaf",
+            "path": "table/regular_table/table_base/pedestal_base/central_support",
+            "roles": [
+              "table",
+              "regular_table",
+              "table_base",
+              "pedestal_base",
+              "central_support"
+            ]
+          }
+        ],
+        "roles": [
+          "back_panel",
+          "bar",
+          "bar_stretcher",
+          "bench",
+          "bench_connector",
+          "board",
+          "bottom_panel",
+          "cabinet_door",
+          "cabinet_door_surface",
+          "caster",
+          "caster_stem",
+          "central_support",
+          "circular_stretcher",
+          "drawer",
+          "drawer_back",
+          "drawer_base",
+          "drawer_bottom",
+          "drawer_box",
+          "drawer_front",
+          "drawer_side",
+          "foot",
+          "game_table",
+          "handle",
+          "keyboard_tray",
+          "keyboard_tray_surface",
+          "leg",
+          "pedestal",
+          "pedestal_base",
+          "picnic_table",
+          "ping_pong_net",
+          "ping_pong_table",
+          "pool_ball",
+          "pool_table",
+          "regular_leg_base",
+          "regular_table",
+          "runner",
+          "shelf",
+          "star_leg_base",
+          "star_leg_set",
+          "table",
+          "table_base",
+          "tabletop",
+          "tabletop_connector",
+          "tabletop_dropleaf",
+          "tabletop_frame",
+          "tabletop_surface",
+          "vertical_divider_panel",
+          "vertical_front_panel",
+          "vertical_side_panel",
+          "wheel"
+        ]
+      },
+      "ordered_role_rules": [
+        {
+          "pattern": "drawer[_ ]?back",
+          "role": "drawer_back"
+        },
+        {
+          "pattern": "drawer[_ ]?bottom|drawer[_ ]?floor",
+          "role": "drawer_bottom"
+        },
+        {
+          "pattern": "drawer[_ ]?side",
+          "role": "drawer_side"
+        },
+        {
+          "pattern": "drawer[_ ]?front",
+          "role": "drawer_front"
+        },
+        {
+          "pattern": "drawer[_ ]?box",
+          "role": "drawer_box"
+        },
+        {
+          "pattern": "drawer.*handle|drawer.*pull",
+          "role": "handle"
+        },
+        {
+          "pattern": "handle|pull",
+          "role": "handle"
+        },
+        {
+          "pattern": "table[_ ]?top.*drop|drop[_ ]?leaf",
+          "role": "tabletop_dropleaf"
+        },
+        {
+          "pattern": "table[_ ]?top[_ ]?surface",
+          "role": "tabletop_surface"
+        },
+        {
+          "pattern": "table[_ ]?top[_ ]?frame",
+          "role": "tabletop_frame"
+        },
+        {
+          "pattern": "table[_ ]?top|tabletop",
+          "role": "tabletop"
+        },
+        {
+          "pattern": "table[_ ]?base|base",
+          "role": "table_base"
+        },
+        {
+          "pattern": "cabinet[_ ]?door|door",
+          "role": "cabinet_door"
+        },
+        {
+          "pattern": "drawer",
+          "role": "drawer"
+        },
+        {
+          "pattern": "keyboard[_ ]?tray",
+          "role": "keyboard_tray"
+        },
+        {
+          "pattern": "shelf",
+          "role": "shelf"
+        },
+        {
+          "pattern": "caster[_ ]?stem",
+          "role": "caster_stem"
+        },
+        {
+          "pattern": "caster",
+          "role": "caster"
+        },
+        {
+          "pattern": "wheel",
+          "role": "wheel"
+        },
+        {
+          "pattern": "central[_ ]?support",
+          "role": "central_support"
+        },
+        {
+          "pattern": "pedestal",
+          "role": "pedestal"
+        },
+        {
+          "pattern": "bar[_ ]?stretcher|stretcher",
+          "role": "bar_stretcher"
+        },
+        {
+          "pattern": "runner",
+          "role": "runner"
+        },
+        {
+          "pattern": "foot",
+          "role": "foot"
+        },
+        {
+          "pattern": "leg",
+          "role": "leg"
+        },
+        {
+          "pattern": "bench",
+          "role": "bench"
+        },
+        {
+          "pattern": "body|shell|housing|chassis|table",
+          "role": "table"
+        }
+      ],
+      "source_file": "stats/after_merging_label_ids/Table-hier.txt",
+      "source_sha256": "643fa858c07f85b8bdc3b4e2c01a5e9312ba0cb356fbc31effa316c271fa67ab"
+    }
+  },
+  "claim_boundary": "Prediction-side lexical role recovery plus category-level PartNet semantic ontology alignment. PartNet is not URDF kinematic-tree ground truth, and this protocol is not instance-matched PartNet geometry or human hierarchy annotation.",
+  "mapping": {
+    "ambiguous_policy": "do not infer geometry or use tested source hierarchy; only an explicit ordered rule may assign a role",
+    "normalization": "lowercase; non-alphanumeric runs become underscore; numeric suffixes retained but do not affect regex token matches",
+    "selection": "first matching ordered category rule; one role maximum per URDF link",
+    "unmapped_policy": "retain as unmapped and include in semantic role coverage denominator"
+  },
+  "protocol_id": "partnet_hierarchy_correctness_v1",
+  "scoring": {
+    "coverage_weighted_induced_edge_f1": "per-asset induced Edge F1 multiplied by mapped predicted links divided by all final URDF links; unavailable or unscorable requested assets contribute zero",
+    "induced_edge_f1": "node-instance edge TP/FP/FN after collapsing unmapped URDF wrappers; repeated role instances remain separate child-link records",
+    "induced_hierarchy_exact_match": "all ontology-induced expected edges recovered with no extra mapped-role edges; unscorable assets fail requested-denominator exact match",
+    "induced_reference_parent": "nearest PartNet ancestor role present in the same predicted asset",
+    "required_companion_metrics": [
+      "semantic_role_coverage",
+      "scorable_asset_coverage",
+      "conditional_and_requested_denominators"
+    ],
+    "semantic_parent_alignment": "mapped child instances whose nearest mapped predicted parent is a nearest present PartNet ancestor"
+  },
+  "source": {
+    "commit": "f321bc9d1533945ad4b22c5c1e7b27a7cccb4edb",
+    "license": "MIT",
+    "license_sha256": "f5fd8184e546e00fc8f1903d94baf62d38384412091f5b69cc4502cb06dba285",
+    "repository": "https://github.com/daerduoCarey/partnet_dataset"
+  }
+}

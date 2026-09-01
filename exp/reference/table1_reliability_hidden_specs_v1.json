@@ -1,0 +1,6062 @@
+{
+  "schema_version": 1,
+  "hidden_specs_id": "table1_reliability_hidden_specs_v1",
+  "frozen": true,
+  "frozen_at_utc": "2026-08-12T00:00:00Z",
+  "task_count": 54,
+  "coordinate_convention": {
+    "up_axis": "+Z",
+    "front_axis": "+Y",
+    "right_axis": "+X",
+    "axis_frame": "parent_link",
+    "units": {
+      "length": "m",
+      "angle": "rad"
+    }
+  },
+  "canonical_hash_rule": "For each spec, remove hidden_spec_sha256 and SHA-256 the UTF-8 canonical JSON with sort_keys=true, separators=(',', ':'), ensure_ascii=false.",
+  "specs": [
+    {
+      "task_id": "FUR-L1-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "One independently moving revolute panel.",
+      "required_parts": [
+        {
+          "role_id": "body",
+          "aliases": [
+            "body",
+            "cabinet",
+            "case"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "door",
+          "aliases": [
+            "door",
+            "door_leaf",
+            "panel"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "body_to_door",
+          "parent_role": "body",
+          "child_role": "door",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 1.92
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Hinge origin is within 0.05 asset diagonals of a vertical door edge.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Closed door projection covers at least 75 percent of the front opening.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "1862d9a6b8db35c7e497ded57d56d162de92701e3e8a8f570df3f5b480e00344"
+    },
+    {
+      "task_id": "FUR-L1-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "One independently moving prismatic component.",
+      "required_parts": [
+        {
+          "role_id": "body",
+          "aliases": [
+            "body",
+            "cabinet",
+            "case"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "drawer",
+          "aliases": [
+            "drawer",
+            "drawer_box",
+            "tray"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "body_to_drawer",
+          "parent_role": "body",
+          "child_role": "drawer",
+          "type": "prismatic",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.3
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Closed drawer is at least 95 percent laterally contained by the body.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Drawer travel is at least 45 percent of drawer depth.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "2a93649f161afecc0f1198246cedd7e8e896a8648cf493e371b13e984e3f5777"
+    },
+    {
+      "task_id": "FUR-L1-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "One independently moving lid.",
+      "required_parts": [
+        {
+          "role_id": "box",
+          "aliases": [
+            "box",
+            "body",
+            "base"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "lid",
+          "aliases": [
+            "lid",
+            "top",
+            "cover"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "box_to_lid",
+          "parent_role": "box",
+          "child_role": "lid",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.75
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Hinge origin is within 0.05 asset diagonals of the lid rear edge.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Lid-to-box XY footprint area ratio is between 0.85 and 1.10.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "c1faf39eeeb9e2398cd30003e915b598f938eecb3e3ae80ede356179ce48f6c1"
+    },
+    {
+      "task_id": "FUR-L2-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "A symmetric pair of independently moving panels.",
+      "required_parts": [
+        {
+          "role_id": "body",
+          "aliases": [
+            "body",
+            "wardrobe",
+            "cabinet"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_door",
+          "aliases": [
+            "left_door",
+            "door_left",
+            "left_leaf"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_door",
+          "aliases": [
+            "right_door",
+            "door_right",
+            "right_leaf"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "body_to_left_door",
+          "parent_role": "body",
+          "child_role": "left_door",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 1.75
+        },
+        {
+          "joint_id": "body_to_right_door",
+          "parent_role": "body",
+          "child_role": "right_door",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "lower": 0.0,
+          "upper": 1.75
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Left-right door mesh-area relative difference is at most 15 percent.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Closed doors jointly cover at least 85 percent of the front opening.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "209be1882b76a7f0b1135d121f2af25d53c6fae13b78f3a347a1a8e31113408f"
+    },
+    {
+      "task_id": "FUR-L2-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Two opposed folding panels must align in the deployed state.",
+      "required_parts": [
+        {
+          "role_id": "frame",
+          "aliases": [
+            "frame",
+            "base",
+            "table_frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "center_top",
+          "aliases": [
+            "center_top",
+            "tabletop",
+            "center_tabletop"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_leaf",
+          "aliases": [
+            "left_leaf",
+            "leaf_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_leaf",
+          "aliases": [
+            "right_leaf",
+            "leaf_right"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "center_to_left_leaf",
+          "parent_role": "center_top",
+          "child_role": "left_leaf",
+          "type": "revolute",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.57
+        },
+        {
+          "joint_id": "center_to_right_leaf",
+          "parent_role": "center_top",
+          "child_role": "right_leaf",
+          "type": "revolute",
+          "axis": [
+            0,
+            -1,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.57
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Left-right leaf bounding-box dimension difference is at most 10 percent.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Deployed top-surface height span is at most 0.02 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "dca38f15e7c7caaef03075dbe8331b504a6701ee2bb0c74bbc549ffcf9663d42"
+    },
+    {
+      "task_id": "FUR-L2-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Three repeated prismatic components require semantic and geometric consistency.",
+      "required_parts": [
+        {
+          "role_id": "body",
+          "aliases": [
+            "body",
+            "cabinet",
+            "case"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "drawer_0",
+          "aliases": [
+            "drawer_0",
+            "drawer0",
+            "top_drawer"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "drawer_1",
+          "aliases": [
+            "drawer_1",
+            "drawer1",
+            "middle_drawer"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "drawer_2",
+          "aliases": [
+            "drawer_2",
+            "drawer2",
+            "bottom_drawer"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "body_to_drawer_0",
+          "parent_role": "body",
+          "child_role": "drawer_0",
+          "type": "prismatic",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.35
+        },
+        {
+          "joint_id": "body_to_drawer_1",
+          "parent_role": "body",
+          "child_role": "drawer_1",
+          "type": "prismatic",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.35
+        },
+        {
+          "joint_id": "body_to_drawer_2",
+          "parent_role": "body",
+          "child_role": "drawer_2",
+          "type": "prismatic",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.35
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Drawer-front height coefficient of variation is at most 0.15.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Closed drawer pairwise intersection volume is at most 0.001 of asset volume.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "a1ea64224818c8eb184cc85d82e9376bb244e996a2f01ee654c3f23ddbbe4839"
+    },
+    {
+      "task_id": "FUR-L3-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Mixed revolute and prismatic branches must form a usable deployed surface.",
+      "required_parts": [
+        {
+          "role_id": "body",
+          "aliases": [
+            "body",
+            "desk",
+            "cabinet"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "writing_panel",
+          "aliases": [
+            "writing_panel",
+            "desk_panel",
+            "fold_down_panel"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_support",
+          "aliases": [
+            "left_support",
+            "support_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_support",
+          "aliases": [
+            "right_support",
+            "support_right"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "drawer",
+          "aliases": [
+            "drawer",
+            "desk_drawer"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "body_to_writing_panel",
+          "parent_role": "body",
+          "child_role": "writing_panel",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.57
+        },
+        {
+          "joint_id": "panel_to_left_support",
+          "parent_role": "writing_panel",
+          "child_role": "left_support",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 1.4
+        },
+        {
+          "joint_id": "panel_to_right_support",
+          "parent_role": "writing_panel",
+          "child_role": "right_support",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "lower": 0.0,
+          "upper": 1.4
+        },
+        {
+          "joint_id": "body_to_drawer",
+          "parent_role": "body",
+          "child_role": "drawer",
+          "type": "prismatic",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.25
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Deployed writing-panel normal is within 10 degrees of +Z.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Deployed support endpoints lie below opposite outer thirds of the panel.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "1e6e7da3087d80c79138cc022cfd42e8b2b2b5669e062c59b6b88465e314c54e"
+    },
+    {
+      "task_id": "FUR-L3-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "A large primary panel and two secondary supports require coordinated deployment.",
+      "required_parts": [
+        {
+          "role_id": "cabinet",
+          "aliases": [
+            "cabinet",
+            "body",
+            "wall_cabinet"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "bed_frame",
+          "aliases": [
+            "bed_frame",
+            "bed",
+            "platform"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_leg",
+          "aliases": [
+            "left_leg",
+            "leg_left",
+            "support_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_leg",
+          "aliases": [
+            "right_leg",
+            "leg_right",
+            "support_right"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "cabinet_to_bed_frame",
+          "parent_role": "cabinet",
+          "child_role": "bed_frame",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.57
+        },
+        {
+          "joint_id": "bed_to_left_leg",
+          "parent_role": "bed_frame",
+          "child_role": "left_leg",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.57
+        },
+        {
+          "joint_id": "bed_to_right_leg",
+          "parent_role": "bed_frame",
+          "child_role": "right_leg",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.57
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Deployed bed-plane normal is within 10 degrees of +Z.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Deployed leg endpoint heights differ by at most 0.02 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "085565e9db683f76e2189a8471be0407ff69c73bae07c269a54b1075a0e21ea0"
+    },
+    {
+      "task_id": "FUR-L3-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Seven moving components form multiple independent branches.",
+      "required_parts": [
+        {
+          "role_id": "body",
+          "aliases": [
+            "body",
+            "chest",
+            "cabinet"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "lid",
+          "aliases": [
+            "lid",
+            "top_lid",
+            "cover"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "drawer_0",
+          "aliases": [
+            "drawer_0",
+            "drawer0"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "drawer_1",
+          "aliases": [
+            "drawer_1",
+            "drawer1"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "drawer_2",
+          "aliases": [
+            "drawer_2",
+            "drawer2"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "drawer_3",
+          "aliases": [
+            "drawer_3",
+            "drawer3"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_tray",
+          "aliases": [
+            "left_tray",
+            "tray_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_tray",
+          "aliases": [
+            "right_tray",
+            "tray_right"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "body_to_lid",
+          "parent_role": "body",
+          "child_role": "lid",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.75
+        },
+        {
+          "joint_id": "body_to_drawer_0",
+          "parent_role": "body",
+          "child_role": "drawer_0",
+          "type": "prismatic",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.3
+        },
+        {
+          "joint_id": "body_to_drawer_1",
+          "parent_role": "body",
+          "child_role": "drawer_1",
+          "type": "prismatic",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.3
+        },
+        {
+          "joint_id": "body_to_drawer_2",
+          "parent_role": "body",
+          "child_role": "drawer_2",
+          "type": "prismatic",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.3
+        },
+        {
+          "joint_id": "body_to_drawer_3",
+          "parent_role": "body",
+          "child_role": "drawer_3",
+          "type": "prismatic",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.3
+        },
+        {
+          "joint_id": "body_to_left_tray",
+          "parent_role": "body",
+          "child_role": "left_tray",
+          "type": "revolute",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.57
+        },
+        {
+          "joint_id": "body_to_right_tray",
+          "parent_role": "body",
+          "child_role": "right_tray",
+          "type": "revolute",
+          "axis": [
+            0,
+            -1,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.57
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Closed drawer pairwise intersection volume is at most 0.001 of asset volume.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Deployed tray top heights differ by at most 0.03 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "241bca3ddee64c9c7b43e36598939c8d85b418d6fbe1c42ddc5cd3921059f11d"
+    },
+    {
+      "task_id": "BLD-L1-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "One large revolute leaf with an unambiguous vertical hinge.",
+      "required_parts": [
+        {
+          "role_id": "frame",
+          "aliases": [
+            "frame",
+            "door_frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "door",
+          "aliases": [
+            "door",
+            "door_leaf",
+            "panel"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "frame_to_door",
+          "parent_role": "frame",
+          "child_role": "door",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 1.75
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Hinge origin is within 0.04 asset diagonals of a vertical door edge.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Door height-to-width ratio is at least 1.60.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "f1554c905d96bf2bac44aee3e0641eca47351a0fd4be9b143ccaae054436b428"
+    },
+    {
+      "task_id": "BLD-L1-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "One constrained vertical prismatic motion.",
+      "required_parts": [
+        {
+          "role_id": "frame",
+          "aliases": [
+            "frame",
+            "window_frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "movable_sash",
+          "aliases": [
+            "movable_sash",
+            "sash",
+            "sliding_sash"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "frame_to_sash",
+          "parent_role": "frame",
+          "child_role": "movable_sash",
+          "type": "prismatic",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 0.45
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Sash XY containment in the frame is at least 90 percent throughout travel.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Sash travel is between 35 and 80 percent of sash height.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "8dd99e1f51205dd4e1d72d36930787a388c5ec57d7eeb6e2f93fef5920ea97ef"
+    },
+    {
+      "task_id": "BLD-L1-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "One upward-opening panel.",
+      "required_parts": [
+        {
+          "role_id": "curb",
+          "aliases": [
+            "curb",
+            "frame",
+            "base"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "lid",
+          "aliases": [
+            "lid",
+            "hatch_lid",
+            "cover"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "curb_to_lid",
+          "parent_role": "curb",
+          "child_role": "lid",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.4
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Hinge origin is within 0.05 asset diagonals of the lid rear edge.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Closed lid projection covers at least 90 percent of the curb opening.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "51fa911fc7e5290ed7db91d6d164b025564ba658386cf9f474542dcc15b98821"
+    },
+    {
+      "task_id": "BLD-L2-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Two opposed large leaves must close symmetrically.",
+      "required_parts": [
+        {
+          "role_id": "frame",
+          "aliases": [
+            "frame",
+            "posts",
+            "gate_frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_leaf",
+          "aliases": [
+            "left_leaf",
+            "leaf_left",
+            "left_gate"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_leaf",
+          "aliases": [
+            "right_leaf",
+            "leaf_right",
+            "right_gate"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "frame_to_left_leaf",
+          "parent_role": "frame",
+          "child_role": "left_leaf",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 1.57
+        },
+        {
+          "joint_id": "frame_to_right_leaf",
+          "parent_role": "frame",
+          "child_role": "right_leaf",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "lower": 0.0,
+          "upper": 1.57
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Left-right gate-leaf area relative difference is at most 10 percent.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Closed center gap is at most 5 percent of total gate width.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "72be0191dd71eadf3e26646d2911e5cb89ae3033db678ed69cfa1d56d2f2c4ab"
+    },
+    {
+      "task_id": "BLD-L2-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Two opposed framed panes require correct containment.",
+      "required_parts": [
+        {
+          "role_id": "frame",
+          "aliases": [
+            "frame",
+            "window_frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_sash",
+          "aliases": [
+            "left_sash",
+            "sash_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_sash",
+          "aliases": [
+            "right_sash",
+            "sash_right"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "frame_to_left_sash",
+          "parent_role": "frame",
+          "child_role": "left_sash",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 1.4
+        },
+        {
+          "joint_id": "frame_to_right_sash",
+          "parent_role": "frame",
+          "child_role": "right_sash",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "lower": 0.0,
+          "upper": 1.4
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Each pane projection is at least 95 percent contained by its sash.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Left-right sash dimension difference is at most 10 percent.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "d46460ab382a4e52a725d488f871f078c10609ff8e4d765a5f82537d65751a9f"
+    },
+    {
+      "task_id": "BLD-L2-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Mixed extension and folding branches must remain symmetric.",
+      "required_parts": [
+        {
+          "role_id": "wall_bracket",
+          "aliases": [
+            "wall_bracket",
+            "bracket",
+            "base"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "front_bar",
+          "aliases": [
+            "front_bar",
+            "front_rail"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_arm",
+          "aliases": [
+            "left_arm",
+            "arm_left",
+            "support_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_arm",
+          "aliases": [
+            "right_arm",
+            "arm_right",
+            "support_right"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "valance",
+          "aliases": [
+            "valance",
+            "front_valance"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "bracket_to_front_bar",
+          "parent_role": "wall_bracket",
+          "child_role": "front_bar",
+          "type": "prismatic",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.5
+        },
+        {
+          "joint_id": "bracket_to_left_arm",
+          "parent_role": "wall_bracket",
+          "child_role": "left_arm",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.2
+        },
+        {
+          "joint_id": "bracket_to_right_arm",
+          "parent_role": "wall_bracket",
+          "child_role": "right_arm",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.2
+        },
+        {
+          "joint_id": "front_bar_to_valance",
+          "parent_role": "front_bar",
+          "child_role": "valance",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.7
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Front-bar long axis is within 5 degrees of horizontal.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Left-right support-arm length difference is at most 10 percent.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "4d1debbee3319f2337d0fd35010bd059b7b9faf8d9e945816f99d3e6050a0ea2"
+    },
+    {
+      "task_id": "BLD-L3-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "A coupled serial panel chain must close a large opening.",
+      "required_parts": [
+        {
+          "role_id": "frame",
+          "aliases": [
+            "frame",
+            "garage_frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "upper_panel",
+          "aliases": [
+            "upper_panel",
+            "panel_upper"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "lower_panel",
+          "aliases": [
+            "lower_panel",
+            "panel_lower"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "frame_to_upper_panel",
+          "parent_role": "frame",
+          "child_role": "upper_panel",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.57
+        },
+        {
+          "joint_id": "upper_to_lower_panel",
+          "parent_role": "upper_panel",
+          "child_role": "lower_panel",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -1.57,
+          "upper": 0.0,
+          "mimic": {
+            "joint": "frame_to_upper_panel",
+            "multiplier": -1.0,
+            "offset": 0.0
+          },
+          "mimic_required": true
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Upper-lower panel width difference is at most 5 percent.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Closed panels jointly cover at least 90 percent of the frame opening.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "4d967551fe7b55c107c456ef29773eaa6a5eebac2e711a4d29510f1eec12307c"
+    },
+    {
+      "task_id": "BLD-L3-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Four serial panels use alternating hinge directions.",
+      "required_parts": [
+        {
+          "role_id": "frame",
+          "aliases": [
+            "frame",
+            "partition_frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "panel_1",
+          "aliases": [
+            "panel_1",
+            "panel1"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "panel_2",
+          "aliases": [
+            "panel_2",
+            "panel2"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "panel_3",
+          "aliases": [
+            "panel_3",
+            "panel3"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "panel_4",
+          "aliases": [
+            "panel_4",
+            "panel4"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "frame_to_panel_1",
+          "parent_role": "frame",
+          "child_role": "panel_1",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 1.57
+        },
+        {
+          "joint_id": "panel_1_to_panel_2",
+          "parent_role": "panel_1",
+          "child_role": "panel_2",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": -1.57,
+          "upper": 0.0
+        },
+        {
+          "joint_id": "panel_2_to_panel_3",
+          "parent_role": "panel_2",
+          "child_role": "panel_3",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 1.57
+        },
+        {
+          "joint_id": "panel_3_to_panel_4",
+          "parent_role": "panel_3",
+          "child_role": "panel_4",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": -1.57,
+          "upper": 0.0
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Panel-height coefficient of variation is at most 0.05.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Maximum closed adjacent-panel edge gap is at most 0.03 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "d235d7e97d43722876893561aeec0a13689da8a297b8d9ba57d8ca2bc2aec70d"
+    },
+    {
+      "task_id": "BLD-L3-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "A central continuous rotor and two independent emergency branches coexist.",
+      "required_parts": [
+        {
+          "role_id": "frame",
+          "aliases": [
+            "frame",
+            "entry_frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "rotor",
+          "aliases": [
+            "rotor",
+            "center_rotor"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_side_door",
+          "aliases": [
+            "left_side_door",
+            "side_door_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_side_door",
+          "aliases": [
+            "right_side_door",
+            "side_door_right"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "frame_to_rotor",
+          "parent_role": "frame",
+          "child_role": "rotor",
+          "type": "continuous",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "frame_to_left_side_door",
+          "parent_role": "frame",
+          "child_role": "left_side_door",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 1.57
+        },
+        {
+          "joint_id": "frame_to_right_side_door",
+          "parent_role": "frame",
+          "child_role": "right_side_door",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "lower": 0.0,
+          "upper": 1.57
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Four rotor wings are spaced at 90 degrees plus or minus 8 degrees.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Rotor axis is within 0.03 asset diagonals of the frame-opening center.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "3d7781abe2f21ef15326add15133eae9c9f58a455116a1439eb72307e17024c1"
+    },
+    {
+      "task_id": "TOO-L1-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "One pivot relates two clearly defined rigid halves.",
+      "required_parts": [
+        {
+          "role_id": "half_a",
+          "aliases": [
+            "half_a",
+            "left_half",
+            "plier_half_a"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "half_b",
+          "aliases": [
+            "half_b",
+            "right_half",
+            "plier_half_b"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "half_a_to_half_b",
+          "parent_role": "half_a",
+          "child_role": "half_b",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": -0.45,
+          "upper": 0.45
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Pivot lies inside the overlap region of the two half meshes.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Opening the joint increases jaw-tip separation by at least 0.02 m.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "27ff073852e5ab95365488228d336ca2bf8f9d5c437a4d783639caca49bbf34f"
+    },
+    {
+      "task_id": "TOO-L1-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "One prismatic jaw and one coaxial screw.",
+      "required_parts": [
+        {
+          "role_id": "base_fixed_jaw",
+          "aliases": [
+            "base_fixed_jaw",
+            "base",
+            "fixed_jaw"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "moving_jaw",
+          "aliases": [
+            "moving_jaw",
+            "sliding_jaw"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "screw",
+          "aliases": [
+            "screw",
+            "lead_screw"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "base_to_moving_jaw",
+          "parent_role": "base_fixed_jaw",
+          "child_role": "moving_jaw",
+          "type": "prismatic",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.18
+        },
+        {
+          "joint_id": "moving_jaw_to_screw",
+          "parent_role": "moving_jaw",
+          "child_role": "screw",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Opposing jaw faces are parallel within 5 degrees.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Jaw travel is normal to the jaw faces within 10 degrees.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "900754814714dd38aa2f501fe9c391988055e5185813222ce1ac3a579a9b4517"
+    },
+    {
+      "task_id": "TOO-L1-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "One precision linear degree of freedom plus a local wheel.",
+      "required_parts": [
+        {
+          "role_id": "beam_fixed_jaw",
+          "aliases": [
+            "beam_fixed_jaw",
+            "beam",
+            "fixed_jaw"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "slider_moving_jaw",
+          "aliases": [
+            "slider_moving_jaw",
+            "slider",
+            "moving_jaw"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "thumbwheel",
+          "aliases": [
+            "thumbwheel",
+            "thumb_wheel"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "beam_to_slider",
+          "parent_role": "beam_fixed_jaw",
+          "child_role": "slider_moving_jaw",
+          "type": "prismatic",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.15
+        },
+        {
+          "joint_id": "slider_to_thumbwheel",
+          "parent_role": "slider_moving_jaw",
+          "child_role": "thumbwheel",
+          "type": "continuous",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Opposing measurement faces are parallel within 3 degrees.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Slider axis aligns with the beam long axis within 5 degrees.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "84a1f5b332c8fbf83959448c7d72e16a27052f9d0176fc5106b6293ac64f47b0"
+    },
+    {
+      "task_id": "TOO-L2-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Independent rotary input and vertical output require functional alignment.",
+      "required_parts": [
+        {
+          "role_id": "frame",
+          "aliases": [
+            "frame",
+            "press_frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "lever",
+          "aliases": [
+            "lever",
+            "hand_lever"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "ram",
+          "aliases": [
+            "ram",
+            "press_ram"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "press_table",
+          "aliases": [
+            "press_table",
+            "table",
+            "anvil"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "frame_to_lever",
+          "parent_role": "frame",
+          "child_role": "lever",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -0.8,
+          "upper": 0.8
+        },
+        {
+          "joint_id": "frame_to_ram",
+          "parent_role": "frame",
+          "child_role": "ram",
+          "type": "prismatic",
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "lower": 0.0,
+          "upper": 0.16
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Ram centerline projects within 0.05 asset diagonals of the table center.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Ram travel is normal to the table within 5 degrees.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "b4b44e6a9a2ae6c0d8fb4bd6a3413c40b70ddc36ef4901846dc3686df4b31aa7"
+    },
+    {
+      "task_id": "TOO-L2-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Three rotary components use different axes.",
+      "required_parts": [
+        {
+          "role_id": "body",
+          "aliases": [
+            "body",
+            "drill_body",
+            "frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "crank",
+          "aliases": [
+            "crank",
+            "hand_crank"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "grip",
+          "aliases": [
+            "grip",
+            "crank_grip"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "spindle",
+          "aliases": [
+            "spindle",
+            "drill_spindle"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "body_to_crank",
+          "parent_role": "body",
+          "child_role": "crank",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "crank_to_grip",
+          "parent_role": "crank",
+          "child_role": "grip",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "body_to_spindle",
+          "parent_role": "body",
+          "child_role": "spindle",
+          "type": "continuous",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Crank and spindle axes are perpendicular within 10 degrees.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Chuck and spindle axes are within 0.02 asset diagonals of coaxial.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "e42d45a0e02c03c7ac484febf41cbec9916825fcd8851e5b1808fd1c1a408993"
+    },
+    {
+      "task_id": "TOO-L2-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Three nested axes implement indexing, plunge, and cutting.",
+      "required_parts": [
+        {
+          "role_id": "base",
+          "aliases": [
+            "base",
+            "saw_base"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "turntable",
+          "aliases": [
+            "turntable",
+            "rotating_table"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "saw_arm",
+          "aliases": [
+            "saw_arm",
+            "arm"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "blade",
+          "aliases": [
+            "blade",
+            "saw_blade"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "base_to_turntable",
+          "parent_role": "base",
+          "child_role": "turntable",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": -0.78,
+          "upper": 0.78
+        },
+        {
+          "joint_id": "turntable_to_arm",
+          "parent_role": "turntable",
+          "child_role": "saw_arm",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.0
+        },
+        {
+          "joint_id": "arm_to_blade",
+          "parent_role": "saw_arm",
+          "child_role": "blade",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Blade center is above the turntable in the neutral pose.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Blade-center distance from arm pivot is between 0.15 and 0.55 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "525d1751e8d5542378aeec15f8ae3f8348c92403f4078a70e765e44fdeb5a59c"
+    },
+    {
+      "task_id": "TOO-L3-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "A tree representation must approximate a symmetric closed-loop mechanism.",
+      "required_parts": [
+        {
+          "role_id": "base",
+          "aliases": [
+            "base",
+            "jack_base"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "lower_arm_a",
+          "aliases": [
+            "lower_arm_a",
+            "lower_left_arm"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "lower_arm_b",
+          "aliases": [
+            "lower_arm_b",
+            "lower_right_arm"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "upper_arm_a",
+          "aliases": [
+            "upper_arm_a",
+            "upper_left_arm"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "upper_arm_b",
+          "aliases": [
+            "upper_arm_b",
+            "upper_right_arm"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "saddle",
+          "aliases": [
+            "saddle",
+            "saddle_head"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "screw",
+          "aliases": [
+            "screw",
+            "lead_screw"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "base_to_lower_arm_a",
+          "parent_role": "base",
+          "child_role": "lower_arm_a",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.25,
+          "upper": 1.15
+        },
+        {
+          "joint_id": "base_to_lower_arm_b",
+          "parent_role": "base",
+          "child_role": "lower_arm_b",
+          "type": "revolute",
+          "axis": [
+            -1,
+            0,
+            0
+          ],
+          "lower": 0.25,
+          "upper": 1.15,
+          "mimic": {
+            "joint": "base_to_lower_arm_a",
+            "multiplier": 1.0,
+            "offset": 0.0
+          },
+          "mimic_required": true
+        },
+        {
+          "joint_id": "lower_a_to_upper_a",
+          "parent_role": "lower_arm_a",
+          "child_role": "upper_arm_a",
+          "type": "revolute",
+          "axis": [
+            -1,
+            0,
+            0
+          ],
+          "lower": -1.15,
+          "upper": -0.25,
+          "mimic": {
+            "joint": "base_to_lower_arm_a",
+            "multiplier": -1.0,
+            "offset": 0.0
+          },
+          "mimic_required": true
+        },
+        {
+          "joint_id": "lower_b_to_upper_b",
+          "parent_role": "lower_arm_b",
+          "child_role": "upper_arm_b",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -1.15,
+          "upper": -0.25,
+          "mimic": {
+            "joint": "base_to_lower_arm_a",
+            "multiplier": -1.0,
+            "offset": 0.0
+          },
+          "mimic_required": true
+        },
+        {
+          "joint_id": "upper_a_to_saddle",
+          "parent_role": "upper_arm_a",
+          "child_role": "saddle",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -1.15,
+          "upper": 1.15
+        },
+        {
+          "joint_id": "base_to_screw",
+          "parent_role": "base",
+          "child_role": "screw",
+          "type": "continuous",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Free upper-arm endpoint remains within 0.04 asset diagonals of its saddle pin.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Saddle center lateral drift is at most 0.05 asset diagonals over travel.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "23e6682a351c374f7e4d462218e4d3fd183d6659f3248f13b7e0c32c37269f38"
+    },
+    {
+      "task_id": "TOO-L3-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "A near-closed linkage and adjustable end effector require consistent geometry.",
+      "required_parts": [
+        {
+          "role_id": "base",
+          "aliases": [
+            "base",
+            "clamp_base"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "handle",
+          "aliases": [
+            "handle",
+            "toggle_handle"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "coupler",
+          "aliases": [
+            "coupler",
+            "linkage"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "clamp_arm",
+          "aliases": [
+            "clamp_arm",
+            "arm"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "pressure_pad",
+          "aliases": [
+            "pressure_pad",
+            "pad"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "base_to_handle",
+          "parent_role": "base",
+          "child_role": "handle",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.4
+        },
+        {
+          "joint_id": "handle_to_coupler",
+          "parent_role": "handle",
+          "child_role": "coupler",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -1.4,
+          "upper": 0.0
+        },
+        {
+          "joint_id": "base_to_clamp_arm",
+          "parent_role": "base",
+          "child_role": "clamp_arm",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.1
+        },
+        {
+          "joint_id": "arm_to_pressure_pad",
+          "parent_role": "clamp_arm",
+          "child_role": "pressure_pad",
+          "type": "prismatic",
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "lower": 0.0,
+          "upper": 0.03
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Closed coupler endpoint is within 0.04 asset diagonals of the arm linkage pin.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Pressure-pad projection lies inside the base work region.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "cd1824eb44d046ca64c35d99c1867b79bf7af3c5404149f20c256a5b4349f11a"
+    },
+    {
+      "task_id": "TOO-L3-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Four nested degrees of freedom require coaxiality and workspace alignment.",
+      "required_parts": [
+        {
+          "role_id": "base_column",
+          "aliases": [
+            "base_column",
+            "column",
+            "frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "table_carriage",
+          "aliases": [
+            "table_carriage",
+            "carriage"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "table",
+          "aliases": [
+            "table",
+            "press_table"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "head",
+          "aliases": [
+            "head",
+            "drill_head"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "quill",
+          "aliases": [
+            "quill",
+            "sliding_quill"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "spindle",
+          "aliases": [
+            "spindle",
+            "drill_spindle"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "column_to_carriage",
+          "parent_role": "base_column",
+          "child_role": "table_carriage",
+          "type": "prismatic",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 0.6
+        },
+        {
+          "joint_id": "carriage_to_table",
+          "parent_role": "table_carriage",
+          "child_role": "table",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": -1.57,
+          "upper": 1.57
+        },
+        {
+          "joint_id": "head_to_quill",
+          "parent_role": "head",
+          "child_role": "quill",
+          "type": "prismatic",
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "lower": 0.0,
+          "upper": 0.16
+        },
+        {
+          "joint_id": "quill_to_spindle",
+          "parent_role": "quill",
+          "child_role": "spindle",
+          "type": "continuous",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": null,
+          "upper": null
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Spindle-axis offset from the column is between 0.15 and 0.45 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Spindle axis projects inside the table footprint in the neutral pose.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "d3dc8dfe0cda5bb2f938a903e0922e283ad35943a29dbadc12261e2f8e5a9dff"
+    },
+    {
+      "task_id": "MOB-L1-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "One extension and a symmetric wheel pair.",
+      "required_parts": [
+        {
+          "role_id": "body",
+          "aliases": [
+            "body",
+            "suitcase",
+            "case"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "handle",
+          "aliases": [
+            "handle",
+            "telescoping_handle"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_wheel",
+          "aliases": [
+            "left_wheel",
+            "wheel_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_wheel",
+          "aliases": [
+            "right_wheel",
+            "wheel_right"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "body_to_handle",
+          "parent_role": "body",
+          "child_role": "handle",
+          "type": "prismatic",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 0.45
+        },
+        {
+          "joint_id": "body_to_left_wheel",
+          "parent_role": "body",
+          "child_role": "left_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "body_to_right_wheel",
+          "parent_role": "body",
+          "child_role": "right_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Left-right wheel radius difference is at most 5 percent.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Extended handle rises at least 0.15 asset diagonals above the body.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "4891b9de8662e856fb237c9f0d0cd1bf954c98dc076cc905557d2ba8e6f899f9"
+    },
+    {
+      "task_id": "MOB-L1-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Four repeated continuous joints share a common rolling axis.",
+      "required_parts": [
+        {
+          "role_id": "deck",
+          "aliases": [
+            "deck",
+            "board"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "front_left_wheel",
+          "aliases": [
+            "front_left_wheel",
+            "wheel_fl"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "front_right_wheel",
+          "aliases": [
+            "front_right_wheel",
+            "wheel_fr"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "rear_left_wheel",
+          "aliases": [
+            "rear_left_wheel",
+            "wheel_rl"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "rear_right_wheel",
+          "aliases": [
+            "rear_right_wheel",
+            "wheel_rr"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "deck_to_front_left_wheel",
+          "parent_role": "deck",
+          "child_role": "front_left_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "deck_to_front_right_wheel",
+          "parent_role": "deck",
+          "child_role": "front_right_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "deck_to_rear_left_wheel",
+          "parent_role": "deck",
+          "child_role": "rear_left_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "deck_to_rear_right_wheel",
+          "parent_role": "deck",
+          "child_role": "rear_right_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Wheel-radius coefficient of variation is at most 0.05.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Wheel lowest-point height span is at most 0.02 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "097b94c5d8c3616e5e3c63913ad773e1d05aa577aaffcfc1a73c21a86f091388"
+    },
+    {
+      "task_id": "MOB-L1-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "One mirrored rolling pair attached to a simple frame.",
+      "required_parts": [
+        {
+          "role_id": "frame",
+          "aliases": [
+            "frame",
+            "truck_frame",
+            "body"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_wheel",
+          "aliases": [
+            "left_wheel",
+            "wheel_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_wheel",
+          "aliases": [
+            "right_wheel",
+            "wheel_right"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "frame_to_left_wheel",
+          "parent_role": "frame",
+          "child_role": "left_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "frame_to_right_wheel",
+          "parent_role": "frame",
+          "child_role": "right_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Wheel-center mirror error is at most 0.03 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Toe-plate bottom is within 0.03 asset diagonals of wheel-bottom height.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "56a479aac7afa7dda3a0ace9e8aff1e71e0799fa3e689cd82bc67e8ad9cf515c"
+    },
+    {
+      "task_id": "MOB-L2-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Steering, folding, and wheel axes interact.",
+      "required_parts": [
+        {
+          "role_id": "deck",
+          "aliases": [
+            "deck",
+            "scooter_deck",
+            "frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "stem",
+          "aliases": [
+            "stem",
+            "steering_stem"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "fork",
+          "aliases": [
+            "fork",
+            "front_fork"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "front_wheel",
+          "aliases": [
+            "front_wheel",
+            "wheel_front"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "rear_wheel",
+          "aliases": [
+            "rear_wheel",
+            "wheel_rear"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "deck_to_stem",
+          "parent_role": "deck",
+          "child_role": "stem",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.4
+        },
+        {
+          "joint_id": "stem_to_fork",
+          "parent_role": "stem",
+          "child_role": "fork",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": -0.7,
+          "upper": 0.7
+        },
+        {
+          "joint_id": "fork_to_front_wheel",
+          "parent_role": "fork",
+          "child_role": "front_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "deck_to_rear_wheel",
+          "parent_role": "deck",
+          "child_role": "rear_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Front and rear rolling axes are parallel within 5 degrees.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Deployed handlebar rises at least 0.35 asset diagonals above the deck.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "db98109e2ddb1b48645d046cffe7a6d59158b74ac8c4ae0262bf086567191350"
+    },
+    {
+      "task_id": "MOB-L2-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Steering and multiple drive-related rotary axes coexist.",
+      "required_parts": [
+        {
+          "role_id": "frame",
+          "aliases": [
+            "frame",
+            "tricycle_frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "fork",
+          "aliases": [
+            "fork",
+            "front_fork"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "front_wheel",
+          "aliases": [
+            "front_wheel",
+            "wheel_front"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_rear_wheel",
+          "aliases": [
+            "left_rear_wheel",
+            "rear_wheel_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_rear_wheel",
+          "aliases": [
+            "right_rear_wheel",
+            "rear_wheel_right"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "crank",
+          "aliases": [
+            "crank",
+            "pedal_crank"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "frame_to_fork",
+          "parent_role": "frame",
+          "child_role": "fork",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": -0.65,
+          "upper": 0.65
+        },
+        {
+          "joint_id": "fork_to_front_wheel",
+          "parent_role": "fork",
+          "child_role": "front_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "frame_to_left_rear_wheel",
+          "parent_role": "frame",
+          "child_role": "left_rear_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "frame_to_right_rear_wheel",
+          "parent_role": "frame",
+          "child_role": "right_rear_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "frame_to_crank",
+          "parent_role": "frame",
+          "child_role": "crank",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Rear wheel-center mirror error is at most 0.03 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Front-wheel radius is at least the mean rear-wheel radius.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "f0cbc06cb2c564b9e8fdb04137deecc12f6acfb6a00eb0dcaac0ea04c489b643"
+    },
+    {
+      "task_id": "MOB-L2-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Nested caster joints and symmetric folding branches increase topology.",
+      "required_parts": [
+        {
+          "role_id": "frame",
+          "aliases": [
+            "frame",
+            "chair_frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_drive_wheel",
+          "aliases": [
+            "left_drive_wheel",
+            "drive_wheel_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_drive_wheel",
+          "aliases": [
+            "right_drive_wheel",
+            "drive_wheel_right"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_caster_fork",
+          "aliases": [
+            "left_caster_fork",
+            "caster_fork_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_caster_fork",
+          "aliases": [
+            "right_caster_fork",
+            "caster_fork_right"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_caster_wheel",
+          "aliases": [
+            "left_caster_wheel",
+            "caster_wheel_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_caster_wheel",
+          "aliases": [
+            "right_caster_wheel",
+            "caster_wheel_right"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_footrest",
+          "aliases": [
+            "left_footrest",
+            "footrest_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_footrest",
+          "aliases": [
+            "right_footrest",
+            "footrest_right"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "frame_to_left_drive_wheel",
+          "parent_role": "frame",
+          "child_role": "left_drive_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "frame_to_right_drive_wheel",
+          "parent_role": "frame",
+          "child_role": "right_drive_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "frame_to_left_caster_fork",
+          "parent_role": "frame",
+          "child_role": "left_caster_fork",
+          "type": "continuous",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "frame_to_right_caster_fork",
+          "parent_role": "frame",
+          "child_role": "right_caster_fork",
+          "type": "continuous",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "left_fork_to_wheel",
+          "parent_role": "left_caster_fork",
+          "child_role": "left_caster_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "right_fork_to_wheel",
+          "parent_role": "right_caster_fork",
+          "child_role": "right_caster_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "frame_to_left_footrest",
+          "parent_role": "frame",
+          "child_role": "left_footrest",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 1.4
+        },
+        {
+          "joint_id": "frame_to_right_footrest",
+          "parent_role": "frame",
+          "child_role": "right_footrest",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "lower": 0.0,
+          "upper": 1.4
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Drive-wheel radius difference is at most 5 percent.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "All wheel lowest-point heights span at most 0.04 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "15fedb85fea676c40376f60c7744de2e2eb2fea28601dd074b50cf657663d805"
+    },
+    {
+      "task_id": "MOB-L3-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Multiple folding branches and nested caster axes must remain symmetric.",
+      "required_parts": [
+        {
+          "role_id": "chassis",
+          "aliases": [
+            "chassis",
+            "frame",
+            "stroller_frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_side_frame",
+          "aliases": [
+            "left_side_frame",
+            "side_frame_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_side_frame",
+          "aliases": [
+            "right_side_frame",
+            "side_frame_right"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "handle",
+          "aliases": [
+            "handle",
+            "push_handle"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_front_fork",
+          "aliases": [
+            "left_front_fork",
+            "front_fork_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_front_fork",
+          "aliases": [
+            "right_front_fork",
+            "front_fork_right"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_front_wheel",
+          "aliases": [
+            "left_front_wheel",
+            "front_wheel_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_front_wheel",
+          "aliases": [
+            "right_front_wheel",
+            "front_wheel_right"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_rear_wheel",
+          "aliases": [
+            "left_rear_wheel",
+            "rear_wheel_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_rear_wheel",
+          "aliases": [
+            "right_rear_wheel",
+            "rear_wheel_right"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "chassis_to_left_side",
+          "parent_role": "chassis",
+          "child_role": "left_side_frame",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.3
+        },
+        {
+          "joint_id": "chassis_to_right_side",
+          "parent_role": "chassis",
+          "child_role": "right_side_frame",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.3
+        },
+        {
+          "joint_id": "chassis_to_handle",
+          "parent_role": "chassis",
+          "child_role": "handle",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -0.5,
+          "upper": 1.2
+        },
+        {
+          "joint_id": "chassis_to_left_front_fork",
+          "parent_role": "chassis",
+          "child_role": "left_front_fork",
+          "type": "continuous",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "chassis_to_right_front_fork",
+          "parent_role": "chassis",
+          "child_role": "right_front_fork",
+          "type": "continuous",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "left_fork_to_wheel",
+          "parent_role": "left_front_fork",
+          "child_role": "left_front_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "right_fork_to_wheel",
+          "parent_role": "right_front_fork",
+          "child_role": "right_front_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "chassis_to_left_rear_wheel",
+          "parent_role": "chassis",
+          "child_role": "left_rear_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "chassis_to_right_rear_wheel",
+          "parent_role": "chassis",
+          "child_role": "right_rear_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Deployed wheel lowest-point heights span at most 0.04 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Left-right side-frame dimension difference is at most 10 percent.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "269c9cfc57fdff165f4d4b4555c45c057f484ebf89fe492ef6842b7496643f4e"
+    },
+    {
+      "task_id": "MOB-L3-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Vehicle articulation and an independent cargo branch share one structure.",
+      "required_parts": [
+        {
+          "role_id": "frame",
+          "aliases": [
+            "frame",
+            "bicycle_frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "fork",
+          "aliases": [
+            "fork",
+            "front_fork"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "front_wheel",
+          "aliases": [
+            "front_wheel",
+            "wheel_front"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "rear_wheel",
+          "aliases": [
+            "rear_wheel",
+            "wheel_rear"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "crank",
+          "aliases": [
+            "crank",
+            "pedal_crank"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "cargo_box",
+          "aliases": [
+            "cargo_box",
+            "box"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "cargo_lid",
+          "aliases": [
+            "cargo_lid",
+            "box_lid",
+            "lid"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "frame_to_fork",
+          "parent_role": "frame",
+          "child_role": "fork",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": -0.65,
+          "upper": 0.65
+        },
+        {
+          "joint_id": "fork_to_front_wheel",
+          "parent_role": "fork",
+          "child_role": "front_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "frame_to_rear_wheel",
+          "parent_role": "frame",
+          "child_role": "rear_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "frame_to_crank",
+          "parent_role": "frame",
+          "child_role": "crank",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "cargo_box_to_lid",
+          "parent_role": "cargo_box",
+          "child_role": "cargo_lid",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.5
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Front-rear wheel-radius difference is at most 15 percent.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Cargo-box center lies longitudinally between the two wheel axes.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "4fcea847920caea1c231dbfd485a216a763110f703f1469680bd1d858b69b567"
+    },
+    {
+      "task_id": "MOB-L3-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Steering, handle pitch, rolling, and lifting create nested mixed joints.",
+      "required_parts": [
+        {
+          "role_id": "chassis",
+          "aliases": [
+            "chassis",
+            "frame",
+            "base"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "yoke",
+          "aliases": [
+            "yoke",
+            "steering_yoke"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "handle",
+          "aliases": [
+            "handle",
+            "pump_handle"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "drive_wheel",
+          "aliases": [
+            "drive_wheel",
+            "steer_wheel"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "fork_carriage",
+          "aliases": [
+            "fork_carriage",
+            "carriage"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_load_roller",
+          "aliases": [
+            "left_load_roller",
+            "load_roller_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_load_roller",
+          "aliases": [
+            "right_load_roller",
+            "load_roller_right"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "chassis_to_yoke",
+          "parent_role": "chassis",
+          "child_role": "yoke",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": -1.3,
+          "upper": 1.3
+        },
+        {
+          "joint_id": "yoke_to_handle",
+          "parent_role": "yoke",
+          "child_role": "handle",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -0.8,
+          "upper": 0.8
+        },
+        {
+          "joint_id": "yoke_to_drive_wheel",
+          "parent_role": "yoke",
+          "child_role": "drive_wheel",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "chassis_to_fork_carriage",
+          "parent_role": "chassis",
+          "child_role": "fork_carriage",
+          "type": "prismatic",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 0.12
+        },
+        {
+          "joint_id": "carriage_to_left_roller",
+          "parent_role": "fork_carriage",
+          "child_role": "left_load_roller",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "carriage_to_right_roller",
+          "parent_role": "fork_carriage",
+          "child_role": "right_load_roller",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "The two forks are parallel within 3 degrees.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Fork-carriage travel is vertical within 3 degrees.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "1e1bc7c429d7b9749cd04aa2247fc8bcc26c1a120926b113a5db7cf50c33bc73"
+    },
+    {
+      "task_id": "IND-L1-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "One bounded rotary control about the valve stem.",
+      "required_parts": [
+        {
+          "role_id": "body",
+          "aliases": [
+            "body",
+            "valve_body",
+            "housing"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "rotor",
+          "aliases": [
+            "rotor",
+            "valve_rotor",
+            "ball"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "body_to_rotor",
+          "parent_role": "body",
+          "child_role": "rotor",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 1.57
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Rotor axis is within 0.03 asset diagonals of the valve body centerline.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Lever long axis is perpendicular to the rotor axis within 10 degrees.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "565d5f5614b17560a3ae2aa06f82e088cab2cfda77d53e7184b5b568a2817be2"
+    },
+    {
+      "task_id": "IND-L1-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "One internal quarter-turn disc requires clear coaxial placement.",
+      "required_parts": [
+        {
+          "role_id": "housing",
+          "aliases": [
+            "housing",
+            "duct",
+            "body"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "disc",
+          "aliases": [
+            "disc",
+            "damper_disc",
+            "blade"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "housing_to_disc",
+          "parent_role": "housing",
+          "child_role": "disc",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 1.57
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Disc center is within 0.03 asset diagonals of the duct center.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Disc diameter is between 85 and 99 percent of duct inner diameter.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "58e65de74cefe7e6688d17840f99736a187c7e0b95c6ff0a224b9544ca5d5cb6"
+    },
+    {
+      "task_id": "IND-L1-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "A primary lid and local latch form a short serial chain.",
+      "required_parts": [
+        {
+          "role_id": "frame",
+          "aliases": [
+            "frame",
+            "hatch_frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "cover",
+          "aliases": [
+            "cover",
+            "hatch_cover",
+            "lid"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "latch",
+          "aliases": [
+            "latch",
+            "latch_handle"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "frame_to_cover",
+          "parent_role": "frame",
+          "child_role": "cover",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.75
+        },
+        {
+          "joint_id": "cover_to_latch",
+          "parent_role": "cover",
+          "child_role": "latch",
+          "type": "revolute",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": -1.57,
+          "upper": 1.57
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Closed cover projection covers at least 90 percent of the opening.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Latch lies in the half of the cover opposite the hinge.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "e281a68ba3cb82183d76242c24c105aca7e218a920cbea5213de1af75677d8ab"
+    },
+    {
+      "task_id": "IND-L2-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Rotary input and linear output require plausible alignment.",
+      "required_parts": [
+        {
+          "role_id": "base",
+          "aliases": [
+            "base",
+            "pump_base",
+            "body"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "handle",
+          "aliases": [
+            "handle",
+            "pump_handle",
+            "lever"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "plunger",
+          "aliases": [
+            "plunger",
+            "piston",
+            "ram"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "base_to_handle",
+          "parent_role": "base",
+          "child_role": "handle",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -0.6,
+          "upper": 0.8
+        },
+        {
+          "joint_id": "base_to_plunger",
+          "parent_role": "base",
+          "child_role": "plunger",
+          "type": "prismatic",
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "lower": 0.0,
+          "upper": 0.14
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Plunger is coaxial with the cylinder within 0.02 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Handle pivot is within 0.15 asset diagonals of the cylinder top.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "373d9ee671ec4c4cb18700c03cf8e55172e545b814980dd567ba8294a47c5d7a"
+    },
+    {
+      "task_id": "IND-L2-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "A revolute arm carries a continuous pulley joint.",
+      "required_parts": [
+        {
+          "role_id": "base",
+          "aliases": [
+            "base",
+            "mount",
+            "bracket"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "tension_arm",
+          "aliases": [
+            "tension_arm",
+            "arm"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "pulley",
+          "aliases": [
+            "pulley",
+            "idler_pulley"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "base_to_tension_arm",
+          "parent_role": "base",
+          "child_role": "tension_arm",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": -0.45,
+          "upper": 0.45
+        },
+        {
+          "joint_id": "arm_to_pulley",
+          "parent_role": "tension_arm",
+          "child_role": "pulley",
+          "type": "continuous",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Pulley-center distance from arm pivot is between 0.15 and 0.55 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Pulley axis is normal to the arm sweep plane within 10 degrees.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "5736516e6c56eb64c0080b478ce86a4fc6771808f8584037190221248c5b265b"
+    },
+    {
+      "task_id": "IND-L2-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Continuous rotation, a locking translation, and a lever coexist.",
+      "required_parts": [
+        {
+          "role_id": "base",
+          "aliases": [
+            "base",
+            "table_base"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "platen",
+          "aliases": [
+            "platen",
+            "rotary_table",
+            "top"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "index_pin",
+          "aliases": [
+            "index_pin",
+            "locking_pin"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "clamp_lever",
+          "aliases": [
+            "clamp_lever",
+            "lever"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "base_to_platen",
+          "parent_role": "base",
+          "child_role": "platen",
+          "type": "continuous",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "base_to_index_pin",
+          "parent_role": "base",
+          "child_role": "index_pin",
+          "type": "prismatic",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 0.025
+        },
+        {
+          "joint_id": "base_to_clamp_lever",
+          "parent_role": "base",
+          "child_role": "clamp_lever",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.0
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Platen and base axes are within 0.02 asset diagonals of coaxial.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Index-pin radius is between 35 and 90 percent of platen radius.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "9ed1b0dd2bcf90eec6b74a817168232a47aef1062e2941a25b3faa4fac8afc45"
+    },
+    {
+      "task_id": "IND-L3-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Four nested mixed joints form a long serial work chain.",
+      "required_parts": [
+        {
+          "role_id": "pedestal",
+          "aliases": [
+            "pedestal",
+            "base"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "turret",
+          "aliases": [
+            "turret",
+            "rotating_turret"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "boom",
+          "aliases": [
+            "boom",
+            "main_boom"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "extension",
+          "aliases": [
+            "extension",
+            "telescopic_extension"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "hook_block",
+          "aliases": [
+            "hook_block",
+            "block"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "hook",
+          "aliases": [
+            "hook",
+            "crane_hook"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "pedestal_to_turret",
+          "parent_role": "pedestal",
+          "child_role": "turret",
+          "type": "continuous",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": null,
+          "upper": null
+        },
+        {
+          "joint_id": "turret_to_boom",
+          "parent_role": "turret",
+          "child_role": "boom",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -0.15,
+          "upper": 1.25
+        },
+        {
+          "joint_id": "boom_to_extension",
+          "parent_role": "boom",
+          "child_role": "extension",
+          "type": "prismatic",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.2
+        },
+        {
+          "joint_id": "extension_to_hook_block",
+          "parent_role": "extension",
+          "child_role": "hook_block",
+          "type": "prismatic",
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "lower": 0.0,
+          "upper": 1.5
+        },
+        {
+          "joint_id": "hook_block_to_hook",
+          "parent_role": "hook_block",
+          "child_role": "hook",
+          "type": "continuous",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": null,
+          "upper": null
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Zero-extension cross-section is at least 90 percent contained by the boom.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Hook block remains below the boom tip throughout hoist travel.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "ae70f94117213a837a891cf1f13bc48b3112dc319fb3667ab6edd7844c007ef0"
+    },
+    {
+      "task_id": "IND-L3-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "A wrist axis and symmetric mimic jaws require coupling and precision.",
+      "required_parts": [
+        {
+          "role_id": "base",
+          "aliases": [
+            "base",
+            "mount"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "wrist",
+          "aliases": [
+            "wrist",
+            "rotating_wrist"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "palm",
+          "aliases": [
+            "palm",
+            "gripper_palm"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_jaw",
+          "aliases": [
+            "left_jaw",
+            "jaw_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_jaw",
+          "aliases": [
+            "right_jaw",
+            "jaw_right"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "base_to_wrist",
+          "parent_role": "base",
+          "child_role": "wrist",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": -3.14,
+          "upper": 3.14
+        },
+        {
+          "joint_id": "palm_to_left_jaw",
+          "parent_role": "palm",
+          "child_role": "left_jaw",
+          "type": "prismatic",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.06
+        },
+        {
+          "joint_id": "palm_to_right_jaw",
+          "parent_role": "palm",
+          "child_role": "right_jaw",
+          "type": "prismatic",
+          "axis": [
+            -1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.06,
+          "mimic": {
+            "joint": "palm_to_left_jaw",
+            "multiplier": 1.0,
+            "offset": 0.0
+          },
+          "mimic_required": true
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Jaw-center mirror error is at most 0.02 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Opposing finger contact faces are parallel within 3 degrees.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "daf22181cb6a04040de40814d0d7bd685879cdbe8ffa8988d570808158325714"
+    },
+    {
+      "task_id": "IND-L3-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Independent vertical axes and a rotary control must share one work center.",
+      "required_parts": [
+        {
+          "role_id": "frame",
+          "aliases": [
+            "frame",
+            "press_frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "ram",
+          "aliases": [
+            "ram",
+            "press_ram"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "bed",
+          "aliases": [
+            "bed",
+            "press_bed",
+            "table"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "pump_lever",
+          "aliases": [
+            "pump_lever",
+            "lever"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "frame_to_ram",
+          "parent_role": "frame",
+          "child_role": "ram",
+          "type": "prismatic",
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "lower": 0.0,
+          "upper": 0.3
+        },
+        {
+          "joint_id": "frame_to_bed",
+          "parent_role": "frame",
+          "child_role": "bed",
+          "type": "prismatic",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 0.55
+        },
+        {
+          "joint_id": "frame_to_pump_lever",
+          "parent_role": "frame",
+          "child_role": "pump_lever",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -0.7,
+          "upper": 0.9
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Ram axis projects within 0.05 asset diagonals of the bed center.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Bed remains between the two frame columns throughout travel.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "00a5db5d030738381944b7810db4c2c64a5b2e7bfe62bcc92e7ec1072953f20c"
+    },
+    {
+      "task_id": "DOM-L1-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "A short three-joint serial chain has clear endpoint semantics.",
+      "required_parts": [
+        {
+          "role_id": "base",
+          "aliases": [
+            "base",
+            "lamp_base"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "lower_arm",
+          "aliases": [
+            "lower_arm",
+            "arm_lower"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "upper_arm",
+          "aliases": [
+            "upper_arm",
+            "arm_upper"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "lamp_head",
+          "aliases": [
+            "lamp_head",
+            "head",
+            "shade"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "base_to_lower_arm",
+          "parent_role": "base",
+          "child_role": "lower_arm",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -0.6,
+          "upper": 1.2
+        },
+        {
+          "joint_id": "lower_to_upper_arm",
+          "parent_role": "lower_arm",
+          "child_role": "upper_arm",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -1.4,
+          "upper": 1.4
+        },
+        {
+          "joint_id": "upper_arm_to_head",
+          "parent_role": "upper_arm",
+          "child_role": "lamp_head",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -1.2,
+          "upper": 1.2
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Every arm hinge lies within 0.08 asset diagonals of incident-link endpoints.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Lamp head is a terminal link of the articulated chain.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "8897fb051645a5f0b90919323c8fdb1fa964e1e7d69d9b066535168a96e40128"
+    },
+    {
+      "task_id": "DOM-L1-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Three orthogonal rotary functions form a compact chain.",
+      "required_parts": [
+        {
+          "role_id": "column",
+          "aliases": [
+            "column",
+            "stand",
+            "pedestal"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "head_yaw",
+          "aliases": [
+            "head_yaw",
+            "yaw_mount"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "head",
+          "aliases": [
+            "head",
+            "fan_head",
+            "housing"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "blade_assembly",
+          "aliases": [
+            "blade_assembly",
+            "blades",
+            "fan_blades"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "column_to_head_yaw",
+          "parent_role": "column",
+          "child_role": "head_yaw",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": -1.2,
+          "upper": 1.2
+        },
+        {
+          "joint_id": "head_yaw_to_head",
+          "parent_role": "head_yaw",
+          "child_role": "head",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -0.5,
+          "upper": 0.5
+        },
+        {
+          "joint_id": "head_to_blades",
+          "parent_role": "head",
+          "child_role": "blade_assembly",
+          "type": "continuous",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": null,
+          "upper": null
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Blade axis aligns with the fan-head forward normal within 5 degrees.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Blade center is within 0.03 asset diagonals of the head center.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "19bc0711c9311763a929a36dd12979301eb7becb90112eba67cff6e76c927444"
+    },
+    {
+      "task_id": "DOM-L1-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Two nested panels share a rear hinge region.",
+      "required_parts": [
+        {
+          "role_id": "bowl",
+          "aliases": [
+            "bowl",
+            "toilet_bowl",
+            "base"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "seat",
+          "aliases": [
+            "seat",
+            "toilet_seat"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "lid",
+          "aliases": [
+            "lid",
+            "toilet_lid",
+            "cover"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "bowl_to_seat",
+          "parent_role": "bowl",
+          "child_role": "seat",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.75
+        },
+        {
+          "joint_id": "bowl_to_lid",
+          "parent_role": "bowl",
+          "child_role": "lid",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.92
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Seat and lid hinge axes are within 0.02 asset diagonals of collinear.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Seat-to-lid XY footprint area ratio is between 0.60 and 1.05.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "708de2b6dd64b925ece62061bb3745ae6890cd9dc60c09aecf4829a508e9c9d3"
+    },
+    {
+      "task_id": "DOM-L2-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Crossed supports create a near-closed folding arrangement.",
+      "required_parts": [
+        {
+          "role_id": "board",
+          "aliases": [
+            "board",
+            "ironing_board",
+            "top"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "leg_frame_a",
+          "aliases": [
+            "leg_frame_a",
+            "leg_a",
+            "left_leg_frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "leg_frame_b",
+          "aliases": [
+            "leg_frame_b",
+            "leg_b",
+            "right_leg_frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "brace",
+          "aliases": [
+            "brace",
+            "support_brace"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "board_to_leg_a",
+          "parent_role": "board",
+          "child_role": "leg_frame_a",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.3
+        },
+        {
+          "joint_id": "board_to_leg_b",
+          "parent_role": "board",
+          "child_role": "leg_frame_b",
+          "type": "revolute",
+          "axis": [
+            -1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.3
+        },
+        {
+          "joint_id": "leg_a_to_brace",
+          "parent_role": "leg_frame_a",
+          "child_role": "brace",
+          "type": "prismatic",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.25
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Four deployed foot heights span at most 0.04 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Deployed board normal is within 8 degrees of +Z.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "05475799c9526445171347974e171152c28d948629f5b5e734400065bae60cb5"
+    },
+    {
+      "task_id": "DOM-L2-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Two human-interface panels move around distinct pivots.",
+      "required_parts": [
+        {
+          "role_id": "base_seat",
+          "aliases": [
+            "base_seat",
+            "seat",
+            "chair_base"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "backrest",
+          "aliases": [
+            "backrest",
+            "chair_back",
+            "back"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "footrest",
+          "aliases": [
+            "footrest",
+            "leg_rest"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "seat_to_backrest",
+          "parent_role": "base_seat",
+          "child_role": "backrest",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -0.65,
+          "upper": 0.15
+        },
+        {
+          "joint_id": "seat_to_footrest",
+          "parent_role": "base_seat",
+          "child_role": "footrest",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.2
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Backrest pivot is within 0.08 asset diagonals of the seat rear edge.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Deployed footrest center lies in front of the seat center.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "73e0ca90a07005ecb6bc8df0b52181bbdc571bad91ce3c823e1dabba2caf1e0d"
+    },
+    {
+      "task_id": "DOM-L2-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "A telescoping column carries a tilting surface with symmetric local joints.",
+      "required_parts": [
+        {
+          "role_id": "base",
+          "aliases": [
+            "base",
+            "stand_base"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "column",
+          "aliases": [
+            "column",
+            "telescoping_column"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "desk",
+          "aliases": [
+            "desk",
+            "music_desk",
+            "plate"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_clip",
+          "aliases": [
+            "left_clip",
+            "clip_left",
+            "left_retainer"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_clip",
+          "aliases": [
+            "right_clip",
+            "clip_right",
+            "right_retainer"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "base_to_column",
+          "parent_role": "base",
+          "child_role": "column",
+          "type": "prismatic",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 0.6
+        },
+        {
+          "joint_id": "column_to_desk",
+          "parent_role": "column",
+          "child_role": "desk",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -0.4,
+          "upper": 1.0
+        },
+        {
+          "joint_id": "desk_to_left_clip",
+          "parent_role": "desk",
+          "child_role": "left_clip",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.8
+        },
+        {
+          "joint_id": "desk_to_right_clip",
+          "parent_role": "desk",
+          "child_role": "right_clip",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.8
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Desk center remains within 0.12 asset diagonals of the column axis.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Page-retainer mirror error is at most 0.03 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "3e7caaa6f70b88efa61c4395212cbfeeb48d85aeffe20012732857261a8664cc"
+    },
+    {
+      "task_id": "DOM-L3-01",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Four degrees of freedom form a continuous load-bearing surface.",
+      "required_parts": [
+        {
+          "role_id": "base",
+          "aliases": [
+            "base",
+            "bed_base",
+            "frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "platform",
+          "aliases": [
+            "platform",
+            "bed_platform"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "back_section",
+          "aliases": [
+            "back_section",
+            "backrest_section"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "thigh_section",
+          "aliases": [
+            "thigh_section",
+            "leg_upper_section"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "calf_section",
+          "aliases": [
+            "calf_section",
+            "leg_lower_section"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "base_to_platform",
+          "parent_role": "base",
+          "child_role": "platform",
+          "type": "prismatic",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 0.35
+        },
+        {
+          "joint_id": "platform_to_back",
+          "parent_role": "platform",
+          "child_role": "back_section",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 1.2
+        },
+        {
+          "joint_id": "platform_to_thigh",
+          "parent_role": "platform",
+          "child_role": "thigh_section",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.7
+        },
+        {
+          "joint_id": "thigh_to_calf",
+          "parent_role": "thigh_section",
+          "child_role": "calf_section",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -0.7,
+          "upper": 0.2
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Neutral support-surface heights span at most 0.02 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Section hinges lie within 0.04 asset diagonals of corresponding mesh seams.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "0dd976abb1724777b79f9fa3a4777fa2604ce51ea8462ff36a16a8b26b22d938"
+    },
+    {
+      "task_id": "DOM-L3-02",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "One long translation and three human-interface rotations share a narrow frame.",
+      "required_parts": [
+        {
+          "role_id": "frame_rail",
+          "aliases": [
+            "frame_rail",
+            "rail",
+            "frame"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "seat",
+          "aliases": [
+            "seat",
+            "sliding_seat"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "handle_arm",
+          "aliases": [
+            "handle_arm",
+            "handle",
+            "rowing_handle"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "left_footplate",
+          "aliases": [
+            "left_footplate",
+            "footplate_left"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "right_footplate",
+          "aliases": [
+            "right_footplate",
+            "footplate_right"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "frame_to_seat",
+          "parent_role": "frame_rail",
+          "child_role": "seat",
+          "type": "prismatic",
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.9
+        },
+        {
+          "joint_id": "frame_to_handle",
+          "parent_role": "frame_rail",
+          "child_role": "handle_arm",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -0.4,
+          "upper": 1.0
+        },
+        {
+          "joint_id": "frame_to_left_footplate",
+          "parent_role": "frame_rail",
+          "child_role": "left_footplate",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -0.3,
+          "upper": 0.3
+        },
+        {
+          "joint_id": "frame_to_right_footplate",
+          "parent_role": "frame_rail",
+          "child_role": "right_footplate",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -0.3,
+          "upper": 0.3
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Seat-travel axis aligns with the rail long axis within 5 degrees.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Footplate-center mirror error is at most 0.03 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "f524da40fc698dbcba62a1d8dce502915faa5afbaa756694af088ba54b32e66e"
+    },
+    {
+      "task_id": "DOM-L3-03",
+      "coordinate_convention": {
+        "up_axis": "+Z",
+        "front_axis": "+Y",
+        "right_axis": "+X",
+        "axis_frame": "parent_link",
+        "units": {
+          "length": "m",
+          "angle": "rad"
+        }
+      },
+      "difficulty_rationale": "Three non-collinear support joints combine with height, pan, and tilt.",
+      "required_parts": [
+        {
+          "role_id": "hub",
+          "aliases": [
+            "hub",
+            "tripod_hub",
+            "base"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "leg_0",
+          "aliases": [
+            "leg_0",
+            "leg0",
+            "front_leg"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "leg_1",
+          "aliases": [
+            "leg_1",
+            "leg1",
+            "rear_left_leg"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "leg_2",
+          "aliases": [
+            "leg_2",
+            "leg2",
+            "rear_right_leg"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "center_column",
+          "aliases": [
+            "center_column",
+            "column"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "pan_head",
+          "aliases": [
+            "pan_head",
+            "head"
+          ],
+          "min_count": 1
+        },
+        {
+          "role_id": "camera_plate",
+          "aliases": [
+            "camera_plate",
+            "tilt_plate",
+            "plate"
+          ],
+          "min_count": 1
+        }
+      ],
+      "required_joints": [
+        {
+          "joint_id": "hub_to_leg_0",
+          "parent_role": "hub",
+          "child_role": "leg_0",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.65
+        },
+        {
+          "joint_id": "hub_to_leg_1",
+          "parent_role": "hub",
+          "child_role": "leg_1",
+          "type": "revolute",
+          "axis": [
+            -0.5,
+            0.866025,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.65
+        },
+        {
+          "joint_id": "hub_to_leg_2",
+          "parent_role": "hub",
+          "child_role": "leg_2",
+          "type": "revolute",
+          "axis": [
+            -0.5,
+            -0.866025,
+            0
+          ],
+          "lower": 0.0,
+          "upper": 0.65
+        },
+        {
+          "joint_id": "hub_to_column",
+          "parent_role": "hub",
+          "child_role": "center_column",
+          "type": "prismatic",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": 0.0,
+          "upper": 0.5
+        },
+        {
+          "joint_id": "column_to_pan_head",
+          "parent_role": "center_column",
+          "child_role": "pan_head",
+          "type": "revolute",
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "lower": -3.14,
+          "upper": 3.14
+        },
+        {
+          "joint_id": "pan_to_camera_plate",
+          "parent_role": "pan_head",
+          "child_role": "camera_plate",
+          "type": "revolute",
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "lower": -0.75,
+          "upper": 0.75
+        }
+      ],
+      "axis_tolerance_degrees": 12.0,
+      "limit_tolerance": 0.05,
+      "measurable_constraints": [
+        {
+          "constraint_id": "H1",
+          "description": "Deployed foot azimuth spacing is 120 degrees plus or minus 15 degrees.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        },
+        {
+          "constraint_id": "H2",
+          "description": "Deployed foot heights span at most 0.03 asset diagonals.",
+          "table1_gate": false,
+          "reserved_axis": "constraints_or_articulation"
+        }
+      ],
+      "hidden_spec_sha256": "8429f94e3abc421fc449ea876db2bb068a286980be4e63026bf2b6f4bd99eafd"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "category_macro": {
+    "categories": {
+      "adjustable_wrench": {
+        "denominator": 1,
+        "metrics": {
+          "collision_coverage": {
+            "denominator": 1,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "finite_fields": {
+            "denominator": 1,
+            "passed": 1,
+            "rate": 1.0
+          },
+          "inertia_validity": {
+            "denominator": 1,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "inertial_coverage": {
+            "denominator": 1,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "parse_rate": {
+            "denominator": 1,
+            "passed": 1,
+            "rate": 1.0
+          },
+          "resource_resolution": {
+            "denominator": 1,
+            "passed": 1,
+            "rate": 1.0
+          },
+          "strict_urdf_pass": {
+            "denominator": 1,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "valid_joint_spec": {
+            "denominator": 1,
+            "passed": 1,
+            "rate": 1.0
+          },
+          "valid_tree": {
+            "denominator": 1,
+            "passed": 1,
+            "rate": 1.0
+          }
+        }
+      },
+      "cabinet_with_two_drawers": {
+        "denominator": 1,
+        "metrics": {
+          "collision_coverage": {
+            "denominator": 1,
+            "passed": 1,
+            "rate": 1.0
+          },
+          "finite_fields": {
+            "denominator": 1,
+            "passed": 1,
+            "rate": 1.0
+          },
+          "inertia_validity": {
+            "denominator": 1,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "inertial_coverage": {
+            "denominator": 1,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "parse_rate": {
+            "denominator": 1,
+            "passed": 1,
+            "rate": 1.0
+          },
+          "resource_resolution": {
+            "denominator": 1,
+            "passed": 1,
+            "rate": 1.0
+          },
+          "strict_urdf_pass": {
+            "denominator": 1,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "valid_joint_spec": {
+            "denominator": 1,
+            "passed": 1,
+            "rate": 1.0
+          },
+          "valid_tree": {
+            "denominator": 1,
+            "passed": 1,
+            "rate": 1.0
+          }
+        }
+      }
+    },
+    "category_count": 2,
+    "category_field": "category",
+    "denominator_policy": "unweighted mean of per-category asset rates; all frozen assets and failures retained",
+    "metrics": {
+      "collision_coverage": {
+        "category_denominator": 2,
+        "rate": 0.5
+      },
+      "finite_fields": {
+        "category_denominator": 2,
+        "rate": 1.0
+      },
+      "inertia_validity": {
+        "category_denominator": 2,
+        "rate": 0.0
+      },
+      "inertial_coverage": {
+        "category_denominator": 2,
+        "rate": 0.0
+      },
+      "parse_rate": {
+        "category_denominator": 2,
+        "rate": 1.0
+      },
+      "resource_resolution": {
+        "category_denominator": 2,
+        "rate": 1.0
+      },
+      "strict_urdf_pass": {
+        "category_denominator": 2,
+        "rate": 0.0
+      },
+      "valid_joint_spec": {
+        "category_denominator": 2,
+        "rate": 1.0
+      },
+      "valid_tree": {
+        "category_denominator": 2,
+        "rate": 1.0
+      }
+    },
+    "state": "evaluated"
+  },
+  "classification": "NON_FORMAL_SMOKE",
+  "completed_at": "2026-08-14T07:47:01.550515Z",
+  "dataset": "LAM released outputs",
+  "error_count": 0,
+  "manifest_content_sha256": "3fdb0e8775f5452e1bf94c90af6635ddecc1edc71edd2e65087c3f53ba9ef469",
+  "metrics": {
+    "collision_coverage": {
+      "denominator": 2,
+      "passed": 1,
+      "rate": 0.5
+    },
+    "finite_fields": {
+      "denominator": 2,
+      "passed": 2,
+      "rate": 1.0
+    },
+    "inertia_validity": {
+      "denominator": 2,
+      "passed": 0,
+      "rate": 0.0
+    },
+    "inertial_coverage": {
+      "denominator": 2,
+      "passed": 0,
+      "rate": 0.0
+    },
+    "parse_rate": {
+      "denominator": 2,
+      "passed": 2,
+      "rate": 1.0
+    },
+    "resource_resolution": {
+      "denominator": 2,
+      "passed": 2,
+      "rate": 1.0
+    },
+    "strict_urdf_pass": {
+      "denominator": 2,
+      "passed": 0,
+      "rate": 0.0
+    },
+    "valid_joint_spec": {
+      "denominator": 2,
+      "passed": 2,
+      "rate": 1.0
+    },
+    "valid_tree": {
+      "denominator": 2,
+      "passed": 2,
+      "rate": 1.0
+    }
+  },
+  "mode": "smoke",
+  "n_eval": 2,
+  "records_missing_counted_as_failures": 0,
+  "records_present": 2,
+  "schema_version": "1.1.0",
+  "status": "completed",
+  "status_counts": {
+    "completed": 2
+  },
+  "strict_urdf_pass": {
+    "denominator": 2,
+    "passed": 0,
+    "rate": 0.0
+  }
+}

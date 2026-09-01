@@ -1,0 +1,216 @@
+{
+  "protocol_id": "nano3d_table2_naming_matched_v1",
+  "purpose": "Frozen equal-category, equal-N comparison for Table 2 Naming direct metrics",
+  "comparison_label": "category-matched deterministic cohort",
+  "prohibited_label": "same-prompt or same-seed comparison",
+  "base_naming_protocol": {
+    "path": "exp/reference/baseline_naming_protocol_v1.json",
+    "protocol_id": "nano3d_table2_baseline_naming_v1.1",
+    "sha256": "4e9d90300018ea47dd0473fc09cb866656b42cdc749377e5a46fb0a9c699cb1e"
+  },
+  "design": {
+    "canonical_categories": [
+      "microwave",
+      "dishwasher",
+      "oven",
+      "faucet",
+      "refrigerator"
+    ],
+    "assets_per_category_per_method": 7,
+    "assets_per_method": 35,
+    "method_count": 4,
+    "methods": [
+      "Ours",
+      "Infinite Mobility",
+      "LAM",
+      "Articraft"
+    ],
+    "interpretation": "All methods contribute exactly seven assets in each of five noun-level categories. This controls category mixture and sample count, but does not control prompt wording, generator family, or release provenance.",
+    "old_nano3d_33_asset_pilot": "not used to define Ours category capability; the five frozen reusable templates below are the capability evidence"
+  },
+  "selection": {
+    "ours": {
+      "policy": "generate one asset for each integer seed 0 through 6 for every frozen template",
+      "seeds": [0, 1, 2, 3, 4, 5, 6]
+    },
+    "infinite_mobility": {
+      "policy": "select the existing successful factory outputs at integer seeds 0 through 6",
+      "seeds": [0, 1, 2, 3, 4, 5, 6]
+    },
+    "lam": {
+      "policy": "from viable official-release records in the category whitelist, rank records independently within each canonical category by ascending SHA256 of the UTF-8 string below and select the first seven",
+      "rank_string": "nano3d-table2-naming-matched-v1|LAM|<canonical_category>|<object_release_id>|<urdf_sha256>",
+      "tie_breakers": [
+        "object_release_id ascending",
+        "urdf_sha256 ascending"
+      ],
+      "outcome_independent": true
+    },
+    "articraft": {
+      "policy": "from eligible retained official-checkout records in the exact category, rank records independently within each canonical category by ascending SHA256 of the UTF-8 string below and select the first seven",
+      "rank_string": "nano3d-table2-naming-matched-v1|Articraft|<canonical_category>|<record_id>|<source_sha256.model_py>",
+      "tie_breakers": [
+        "record_id ascending",
+        "source_sha256.model_py ascending"
+      ],
+      "outcome_independent": true
+    }
+  },
+  "taxonomy": {
+    "microwave": {
+      "definition": "microwave cooking appliance; microwave oven is an accepted lexical synonym",
+      "ours": {
+        "template": "arti-template/agent/templates/Kitchen_Microwave.py",
+        "sha256": "020f661750038dcd7ea9f9041262a802e9246df23726c5b4dffb61a689079446"
+      },
+      "infinite_mobility": "MicrowaveFactory",
+      "lam_whitelist": [
+        "advanced_microwave_oven_with_inverter",
+        "commercial_microwave_featuring_programmable_cooking",
+        "countertop_microwave_with_turntable",
+        "functional_microwave_featuring_articulated",
+        "meticulously_crafted_microwave_incorporating",
+        "microwave",
+        "over_range_microwave_with_exhaust_fan",
+        "over_range_microwave_with_exhaust_fan_and_interior",
+        "professional_grade_microwave_engineered_with",
+        "sensor_controlled_microwave_with_automatic",
+        "versatile_microwave_with_hinged",
+        "well_designed_microwave_with_moving"
+      ],
+      "articraft": "microwave_oven"
+    },
+    "dishwasher": {
+      "definition": "dishwashing appliance",
+      "ours": {
+        "template": "arti-template/agent/templates/dishwasher_with_dropdown_door_and_sliding_racks.py",
+        "sha256": "607b1e45bc8c17d16db0d9526e8104e944bf2e09600dbb05c21a74ac53cde4b3"
+      },
+      "infinite_mobility": "DishwasherFactory",
+      "lam_whitelist": [
+        "dishwasher",
+        "energy_efficient_dishwasher_featuring_adjustable_upper",
+        "premium_dishwasher_with_third_level_rack",
+        "premium_dishwasher_with_third_level_rack_system_a"
+      ],
+      "articraft": "dishwasher_with_dropdown_door_and_sliding_racks"
+    },
+    "oven": {
+      "definition": "standalone or built-in oven, excluding toaster ovens and microwave ovens",
+      "ours": {
+        "template": "arti-template/agent/templates/Other_Built_in_oven.py",
+        "sha256": "6752353a26e49ec3e96044f93f2b8fca25556fe1f54a9982c517320682039cba"
+      },
+      "infinite_mobility": "OvenFactory",
+      "lam_whitelist": [
+        "gas_oven_with_broiler",
+        "oven",
+        "professional_oven_with_steam"
+      ],
+      "articraft": "conventional_oven_with_dropdown_door"
+    },
+    "faucet": {
+      "definition": "water-control faucet; tap is an accepted lexical synonym",
+      "ours": {
+        "template": "arti-template/agent/templates/Other_single_hole_basin_faucet.py",
+        "sha256": "15e8adc7c30714026d08098ca492f1e3ce5ae988529ff3b66a9a076babb48c7f"
+      },
+      "infinite_mobility": "TapFactory",
+      "lam_whitelist": [
+        "bathroom_faucet_with_single_handle",
+        "bathroom_faucet_with_single_handle_lever_operati",
+        "commercial_faucet_featuring_articulated_spout",
+        "commercial_grade_faucet_with_brass_construction",
+        "faucet",
+        "kitchen_faucet_with_pull_out_spray",
+        "touchless_faucet_with_sensor_activation",
+        "touchless_faucet_with_sensor_activation_and_temper"
+      ],
+      "articraft": "faucet_with_side_handle"
+    },
+    "refrigerator": {
+      "definition": "refrigerator appliance; fridge and the release typo refrigerater are accepted lexical variants",
+      "ours": {
+        "template": "arti-template/agent/templates/refrigerator_with_hinged_doors.py",
+        "sha256": "5e6618c9ad99c11326a2263d7b4ef4890e99becd6f9decedb8500c106d7a042e"
+      },
+      "infinite_mobility": "BeverageFridgeFactory",
+      "lam_whitelist": [
+        "energy_efficient_refrigerator_with_adjustable_shel",
+        "energy_efficient_refrigerator_with_adjustable_shelving",
+        "refrigerater",
+        "stainless_steel_refrigerator_with"
+      ],
+      "articraft": "refrigerator_with_hinged_doors"
+    }
+  },
+  "source_evidence": {
+    "lam_manifest_csv": {
+      "path": ".cache/table6_sources/lam/dataset/manifest.csv",
+      "sha256": "70216593ec02b71d596e456498ff9863ad0f8e519d5d27d2cf4f58792d412412"
+    },
+    "lam_full_naming_records": {
+      "path": "exp/runtime/lam_naming_v1/records.jsonl",
+      "sha256": "0ec93a27881e4941ed2792277f7e762c1aeee1f6d13ee2b7a1afc11c4e22251c"
+    },
+    "infinite_mobility_protocol": {
+      "path": "exp/reference/infinite_mobility_protocol_v1.json",
+      "sha256": "12d5e00765c05864967f7725a520207d01d1fa0b85edfc807f9973b590279607"
+    },
+    "infinite_mobility_naming_records": {
+      "path": "exp/runtime/infinite_mobility_naming_v1/asset_records.jsonl",
+      "sha256": "bc9856ae48e3fa264bf408c2d620d5d7aaf193c68c54df88d8cc12810e0159d9"
+    },
+    "articraft_cohort_audit": {
+      "path": "exp/runtime/articraft_naming_v1/cohort_manifest.json",
+      "sha256": "7a49511679075c4f440b5cf35a7addac245c2a0ffdaca48a4a9618bb7c491fb4"
+    }
+  },
+  "metric_policy": {
+    "direct_metrics": [
+      "renderable URDF links per asset",
+      "named renderable URDF links / all renderable URDF links",
+      "placeholder count"
+    ],
+    "semantic_metrics": "fail closed to null unless independent frozen gold and three blind judges exist",
+    "cross_seed": "report only for reusable generators; LAM and Articraft release resampling is not cross-seed evidence",
+    "representation": "URDF-link metrics only; do not merge with GLB-node metrics"
+  },
+  "bootstrap": {
+    "unit": "canonical category cluster",
+    "procedure": "sample five canonical categories with replacement; include all seven selected assets from every sampled category; compute each statistic on the resulting 35 asset slots",
+    "resamples": 10000,
+    "confidence": 0.95,
+    "seed": 260811002,
+    "interval": "percentile, endpoints at 0.025 and 0.975 using linear interpolation"
+  },
+  "rejected_mappings": [
+    {
+      "candidate": "LAM convection_toaster_oven*",
+      "reason": "toaster oven is a distinct appliance subtype and is excluded from canonical oven"
+    },
+    {
+      "candidate": "LAM *microwave_oven* as canonical oven",
+      "reason": "assigned only to microwave; cannot also enter oven"
+    },
+    {
+      "candidate": "generic door, cabinet, table, chair, lamp, bottle, window, toilet, television, pot, pan, vase",
+      "reason": "not a noun-level synonym of any frozen canonical category"
+    },
+    {
+      "candidate": "LAM stainless_steel_refrigerator_with_water_dispense_000",
+      "reason": "loads_only rather than viable and absent from the frozen viable release cohort"
+    },
+    {
+      "candidate": "old Nano3D 33-asset Naming pilot category coverage",
+      "reason": "pilot selection is not evidence that reusable templates outside the pilot are unavailable"
+    }
+  ],
+  "completeness_gates": [
+    "all source and template hashes match",
+    "each method has exactly seven eligible selected assets in every canonical category",
+    "selection does not depend on measured part count or nameability",
+    "all evaluated artifacts satisfy baseline_naming_protocol_v1.1 renderable-geometry rules",
+    "the comparison is labeled category-matched and never same-prompt"
+  ]
+}

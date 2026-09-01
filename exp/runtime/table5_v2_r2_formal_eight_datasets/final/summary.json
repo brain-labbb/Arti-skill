@@ -1,0 +1,1915 @@
+{
+  "classification": "INCOMPLETE",
+  "dataset_order": [
+    "articraft_10k",
+    "lam_released_outputs",
+    "artiverse",
+    "partnet_mobility",
+    "physx_mobility",
+    "sketchmobility",
+    "infinigen_sim",
+    "pva"
+  ],
+  "datasets": [
+    {
+      "classification": "COMPLETE",
+      "dataset_name": "Articraft-10K",
+      "dataset_slug": "articraft_10k",
+      "declared_scalar_dof_count": 648,
+      "declared_trajectory_joint_count": 463,
+      "failure_reason_counts": {
+        "genesis": {
+          "PASS": 200
+        },
+        "mujoco": {
+          "PASS": 200
+        },
+        "pybullet": {
+          "PASS": 200
+        }
+      },
+      "n": 200,
+      "table5a": {
+        "dof_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 648,
+          "passed": 648,
+          "percentage": 100.0
+        },
+        "import_success": {
+          "bootstrap_95_ci_percentage": [
+            100.0,
+            100.0
+          ],
+          "denominator": 200,
+          "passed": 200,
+          "percentage": 100.0
+        },
+        "limit_violation_p95": {
+          "candidate_units": 463,
+          "coverage_percentage": 100.0,
+          "evaluated_units": 463,
+          "median": 0.7754857170170751,
+          "p95": 39.261257431159414,
+          "p95_asset_cluster_bootstrap_95_ci": [
+            13.14139421186632,
+            39.26126131167014
+          ],
+          "sample_count": 463,
+          "unit": "percent_joint_range"
+        },
+        "stable_rollout": {
+          "bootstrap_95_ci_percentage": [
+            100.0,
+            100.0
+          ],
+          "denominator": 200,
+          "passed": 200,
+          "percentage": 100.0
+        },
+        "tracking_nrmse_p95": {
+          "candidate_units": 463,
+          "coverage_percentage": 100.0,
+          "evaluated_units": 463,
+          "median": 13.88663326151686,
+          "p95": 76.91270214707156,
+          "p95_asset_cluster_bootstrap_95_ci": [
+            75.86750105806185,
+            92.6799351284129
+          ],
+          "sample_count": 463,
+          "unit": "percent_joint_range"
+        },
+        "trajectory_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 463,
+          "passed": 463,
+          "percentage": 100.0
+        }
+      },
+      "table5b": {
+        "genesis": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 648,
+            "passed": 648,
+            "percentage": 100.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 3595,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 3595,
+            "median": 1.1914208849068306e-06,
+            "p95": 1.9002250745958927e-05,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              1.9513132198762334e-05,
+              3.082370187889122e-05
+            ],
+            "sample_count": 3595,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 3595,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 3595,
+            "median": 4.829673078902933e-06,
+            "p95": 3.125324700419494e-05,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              3.2039614790121504e-05,
+              4.710478969721382e-05
+            ],
+            "sample_count": 3595,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          }
+        },
+        "mujoco": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 648,
+            "passed": 648,
+            "percentage": 100.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 3595,
+            "coverage_percentage": 96.38386648122392,
+            "evaluated_units": 3465,
+            "median": 0.0,
+            "p95": 9.081804253825833e-15,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              9.828006233241876e-15,
+              1.6325942990008688e-14
+            ],
+            "sample_count": 3465,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 3595,
+            "coverage_percentage": 96.38386648122392,
+            "evaluated_units": 3465,
+            "median": 0.0,
+            "p95": 0.0,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              0.0,
+              0.0
+            ],
+            "sample_count": 3465,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          }
+        },
+        "pybullet": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 648,
+            "passed": 648,
+            "percentage": 100.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 3595,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 3595,
+            "median": 8.973926403825404e-07,
+            "p95": 2.847981283250744e-06,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              3.6010671311960746e-06,
+              4.537887816943717e-06
+            ],
+            "sample_count": 3595,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 3595,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 3595,
+            "median": 0.0,
+            "p95": 8.53773646251594e-06,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              1.1499631047352041e-05,
+              1.5816675358185597e-05
+            ],
+            "sample_count": 3595,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          }
+        }
+      },
+      "trusted_terminal_records": {
+        "genesis": 200,
+        "mujoco": 200,
+        "pybullet": 200
+      }
+    },
+    {
+      "classification": "INCOMPLETE",
+      "dataset_name": "LAM released outputs",
+      "dataset_slug": "lam_released_outputs",
+      "declared_scalar_dof_count": 467,
+      "declared_trajectory_joint_count": 379,
+      "failure_reason_counts": {
+        "genesis": {
+          "DIAGNOSTIC_FAILURE": 26,
+          "PASS": 174
+        },
+        "mujoco": {
+          "DIAGNOSTIC_FAILURE": 116,
+          "PASS": 84
+        },
+        "pybullet": {
+          "DIAGNOSTIC_FAILURE": 14,
+          "MISSING_OR_UNTRUSTED_RECORD": 10,
+          "PASS": 175,
+          "WORKER_ERROR": 1
+        }
+      },
+      "n": 200,
+      "table5a": {
+        "dof_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 467,
+          "passed": 462,
+          "percentage": 98.92933618843684
+        },
+        "import_success": {
+          "bootstrap_95_ci_percentage": [
+            83.0,
+            92.00000000000001
+          ],
+          "denominator": 200,
+          "passed": 175,
+          "percentage": 87.5
+        },
+        "limit_violation_p95": {
+          "candidate_units": 379,
+          "coverage_percentage": 95.77836411609499,
+          "evaluated_units": 363,
+          "median": 0.2570936533932885,
+          "p95": 17.093370940275225,
+          "p95_asset_cluster_bootstrap_95_ci": [
+            10.039704810458108,
+            81.12127999605812
+          ],
+          "sample_count": 363,
+          "unit": "percent_joint_range"
+        },
+        "stable_rollout": {
+          "bootstrap_95_ci_percentage": [
+            82.0,
+            91.5
+          ],
+          "denominator": 200,
+          "passed": 174,
+          "percentage": 87.0
+        },
+        "tracking_nrmse_p95": {
+          "candidate_units": 379,
+          "coverage_percentage": 95.77836411609499,
+          "evaluated_units": 363,
+          "median": 33.76447045876144,
+          "p95": 83.77393219842506,
+          "p95_asset_cluster_bootstrap_95_ci": [
+            77.85817479276658,
+            159.7944177168034
+          ],
+          "sample_count": 363,
+          "unit": "percent_joint_range"
+        },
+        "trajectory_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 379,
+          "passed": 363,
+          "percentage": 95.77836411609499
+        }
+      },
+      "table5b": {
+        "genesis": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 467,
+            "passed": 462,
+            "percentage": 98.92933618843684
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 3065,
+            "coverage_percentage": 99.51060358890702,
+            "evaluated_units": 3050,
+            "median": 2.562556331259014e-07,
+            "p95": 1.1112590671252796e-05,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              6.400559115193637e-06,
+              1.542027882169373e-05
+            ],
+            "sample_count": 3050,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 3065,
+            "coverage_percentage": 99.51060358890702,
+            "evaluated_units": 3050,
+            "median": 6.389056940260397e-06,
+            "p95": 2.836790617393633e-05,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              2.7911844290225214e-05,
+              2.9800640420390322e-05
+            ],
+            "sample_count": 3050,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              83.0,
+              92.00000000000001
+            ],
+            "denominator": 200,
+            "passed": 175,
+            "percentage": 87.5
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              82.0,
+              91.5
+            ],
+            "denominator": 200,
+            "passed": 174,
+            "percentage": 87.0
+          }
+        },
+        "mujoco": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 467,
+            "passed": 255,
+            "percentage": 54.603854389721626
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 3065,
+            "coverage_percentage": 45.51386623164763,
+            "evaluated_units": 1395,
+            "median": 0.0,
+            "p95": 5.912445989160158e-15,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              4.5178490828874005e-15,
+              1.7695420313353702e-14
+            ],
+            "sample_count": 1395,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 3065,
+            "coverage_percentage": 45.51386623164763,
+            "evaluated_units": 1395,
+            "median": 0.0,
+            "p95": 0.0,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              0.0,
+              0.0
+            ],
+            "sample_count": 1395,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              37.0,
+              51.0
+            ],
+            "denominator": 200,
+            "passed": 88,
+            "percentage": 44.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              35.4875,
+              49.0
+            ],
+            "denominator": 200,
+            "passed": 84,
+            "percentage": 42.0
+          }
+        },
+        "pybullet": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 467,
+            "passed": 464,
+            "percentage": 99.3576017130621
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 3065,
+            "coverage_percentage": 99.51060358890702,
+            "evaluated_units": 3050,
+            "median": 2.0925752014916982e-07,
+            "p95": 2.156570884970822e-06,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              1.5471378959445166e-06,
+              2.537689129613927e-06
+            ],
+            "sample_count": 3050,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 3065,
+            "coverage_percentage": 99.51060358890702,
+            "evaluated_units": 3050,
+            "median": 0.0,
+            "p95": 8.87267600082659e-06,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              1.2654428243626347e-05,
+              1.7745352001653195e-05
+            ],
+            "sample_count": 3050,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              83.5,
+              92.00000000000001
+            ],
+            "denominator": 200,
+            "passed": 176,
+            "percentage": 88.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              83.0,
+              92.00000000000001
+            ],
+            "denominator": 200,
+            "passed": 176,
+            "percentage": 88.0
+          }
+        }
+      },
+      "trusted_terminal_records": {
+        "genesis": 200,
+        "mujoco": 200,
+        "pybullet": 190
+      }
+    },
+    {
+      "classification": "COMPLETE",
+      "dataset_name": "Artiverse",
+      "dataset_slug": "artiverse",
+      "declared_scalar_dof_count": 635,
+      "declared_trajectory_joint_count": 600,
+      "failure_reason_counts": {
+        "genesis": {
+          "DIAGNOSTIC_FAILURE": 6,
+          "NATIVE_CRASH": 2,
+          "PASS": 192
+        },
+        "mujoco": {
+          "DIAGNOSTIC_FAILURE": 32,
+          "PASS": 168
+        },
+        "pybullet": {
+          "PASS": 200
+        }
+      },
+      "n": 200,
+      "table5a": {
+        "dof_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 635,
+          "passed": 630,
+          "percentage": 99.21259842519684
+        },
+        "import_success": {
+          "bootstrap_95_ci_percentage": [
+            98.5,
+            100.0
+          ],
+          "denominator": 200,
+          "passed": 199,
+          "percentage": 99.5
+        },
+        "limit_violation_p95": {
+          "candidate_units": 600,
+          "coverage_percentage": 95.5,
+          "evaluated_units": 573,
+          "median": 2.2964447786392,
+          "p95": 28.731508701646426,
+          "p95_asset_cluster_bootstrap_95_ci": [
+            12.892286547049583,
+            63.79794061127447
+          ],
+          "sample_count": 573,
+          "unit": "percent_joint_range"
+        },
+        "stable_rollout": {
+          "bootstrap_95_ci_percentage": [
+            93.0,
+            98.5
+          ],
+          "denominator": 200,
+          "passed": 192,
+          "percentage": 96.0
+        },
+        "tracking_nrmse_p95": {
+          "candidate_units": 600,
+          "coverage_percentage": 95.5,
+          "evaluated_units": 573,
+          "median": 1.898194219323886,
+          "p95": 70.81010989362905,
+          "p95_asset_cluster_bootstrap_95_ci": [
+            69.3151454293133,
+            76.90570720120522
+          ],
+          "sample_count": 573,
+          "unit": "percent_joint_range"
+        },
+        "trajectory_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 600,
+          "passed": 573,
+          "percentage": 95.5
+        }
+      },
+      "table5b": {
+        "genesis": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 635,
+            "passed": 630,
+            "percentage": 99.21259842519684
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5300,
+            "coverage_percentage": 98.39622641509433,
+            "evaluated_units": 5215,
+            "median": 8.045468275392686e-23,
+            "p95": 6.0999357397729785e-06,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              3.0570177739979777e-06,
+              8.772005966240434e-06
+            ],
+            "sample_count": 5215,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5300,
+            "coverage_percentage": 98.39622641509433,
+            "evaluated_units": 5215,
+            "median": 0.0,
+            "p95": 1.3692270754888889e-05,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              2.0999271922126492e-05,
+              2.871005166602697e-05
+            ],
+            "sample_count": 5215,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              98.5,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              93.0,
+              98.5
+            ],
+            "denominator": 200,
+            "passed": 192,
+            "percentage": 96.0
+          }
+        },
+        "mujoco": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 635,
+            "passed": 543,
+            "percentage": 85.51181102362204
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5300,
+            "coverage_percentage": 54.58490566037736,
+            "evaluated_units": 2893,
+            "median": 0.0,
+            "p95": 4.615868368997456e-15,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              1.778939755085572e-15,
+              7.241117250752457e-15
+            ],
+            "sample_count": 2893,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5300,
+            "coverage_percentage": 54.58490566037736,
+            "evaluated_units": 2893,
+            "median": 0.0,
+            "p95": 0.0,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              0.0,
+              0.0
+            ],
+            "sample_count": 2893,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              80.0,
+              89.51250000000005
+            ],
+            "denominator": 200,
+            "passed": 170,
+            "percentage": 85.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              79.5,
+              89.5
+            ],
+            "denominator": 200,
+            "passed": 169,
+            "percentage": 84.5
+          }
+        },
+        "pybullet": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 635,
+            "passed": 635,
+            "percentage": 100.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5300,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 5300,
+            "median": 2.6126132199954766e-07,
+            "p95": 1.2748519895926887e-06,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              1.5164497706461569e-06,
+              1.8179793591078078e-06
+            ],
+            "sample_count": 5300,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5300,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 5300,
+            "median": 0.0,
+            "p95": 4.182619578303746e-06,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              4.539671755733863e-06,
+              7.277081316815589e-06
+            ],
+            "sample_count": 5300,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          }
+        }
+      },
+      "trusted_terminal_records": {
+        "genesis": 200,
+        "mujoco": 200,
+        "pybullet": 200
+      }
+    },
+    {
+      "classification": "COMPLETE",
+      "dataset_name": "PartNet-Mobility",
+      "dataset_slug": "partnet_mobility",
+      "declared_scalar_dof_count": 639,
+      "declared_trajectory_joint_count": 396,
+      "failure_reason_counts": {
+        "genesis": {
+          "DIAGNOSTIC_FAILURE": 10,
+          "PASS": 189,
+          "PASSIVE_STABILITY_FAILED": 1
+        },
+        "mujoco": {
+          "DIAGNOSTIC_FAILURE": 116,
+          "PASS": 84
+        },
+        "pybullet": {
+          "DIAGNOSTIC_FAILURE": 3,
+          "PASS": 197
+        }
+      },
+      "n": 200,
+      "table5a": {
+        "dof_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 639,
+          "passed": 588,
+          "percentage": 92.01877934272301
+        },
+        "import_success": {
+          "bootstrap_95_ci_percentage": [
+            91.5,
+            97.5
+          ],
+          "denominator": 200,
+          "passed": 190,
+          "percentage": 95.0
+        },
+        "limit_violation_p95": {
+          "candidate_units": 396,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "stable_rollout": {
+          "bootstrap_95_ci_percentage": [
+            91.0,
+            97.5
+          ],
+          "denominator": 200,
+          "passed": 189,
+          "percentage": 94.5
+        },
+        "tracking_nrmse_p95": {
+          "candidate_units": 396,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "trajectory_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 396,
+          "passed": 0,
+          "percentage": 0.0
+        }
+      },
+      "table5b": {
+        "genesis": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 639,
+            "passed": 588,
+            "percentage": 92.01877934272301
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              92.0,
+              98.0
+            ],
+            "denominator": 200,
+            "passed": 190,
+            "percentage": 95.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              91.0,
+              97.5
+            ],
+            "denominator": 200,
+            "passed": 189,
+            "percentage": 94.5
+          }
+        },
+        "mujoco": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 639,
+            "passed": 165,
+            "percentage": 25.821596244131456
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              35.0,
+              49.0
+            ],
+            "denominator": 200,
+            "passed": 84,
+            "percentage": 42.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              35.0,
+              49.0
+            ],
+            "denominator": 200,
+            "passed": 84,
+            "percentage": 42.0
+          }
+        },
+        "pybullet": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 639,
+            "passed": 635,
+            "percentage": 99.37402190923318
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              96.5,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 197,
+            "percentage": 98.5
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              96.5,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 197,
+            "percentage": 98.5
+          }
+        }
+      },
+      "trusted_terminal_records": {
+        "genesis": 200,
+        "mujoco": 200,
+        "pybullet": 200
+      }
+    },
+    {
+      "classification": "COMPLETE",
+      "dataset_name": "PhysX-Mobility",
+      "dataset_slug": "physx_mobility",
+      "declared_scalar_dof_count": 479,
+      "declared_trajectory_joint_count": 479,
+      "failure_reason_counts": {
+        "genesis": {
+          "DIAGNOSTIC_FAILURE": 1,
+          "PASS": 199
+        },
+        "mujoco": {
+          "DIAGNOSTIC_FAILURE": 1,
+          "PASS": 199
+        },
+        "pybullet": {
+          "DIAGNOSTIC_FAILURE": 1,
+          "PASS": 199
+        }
+      },
+      "n": 200,
+      "table5a": {
+        "dof_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 479,
+          "passed": 479,
+          "percentage": 100.0
+        },
+        "import_success": {
+          "bootstrap_95_ci_percentage": [
+            100.0,
+            100.0
+          ],
+          "denominator": 200,
+          "passed": 200,
+          "percentage": 100.0
+        },
+        "limit_violation_p95": {
+          "candidate_units": 479,
+          "coverage_percentage": 100.0,
+          "evaluated_units": 479,
+          "median": 0.9414297069994689,
+          "p95": 779.3136756867171,
+          "p95_asset_cluster_bootstrap_95_ci": [
+            115.55838556593339,
+            552.9019755516197
+          ],
+          "sample_count": 479,
+          "unit": "percent_joint_range"
+        },
+        "stable_rollout": {
+          "bootstrap_95_ci_percentage": [
+            98.5,
+            100.0
+          ],
+          "denominator": 200,
+          "passed": 199,
+          "percentage": 99.5
+        },
+        "tracking_nrmse_p95": {
+          "candidate_units": 479,
+          "coverage_percentage": 100.0,
+          "evaluated_units": 479,
+          "median": 7.025377886820064,
+          "p95": 618.2454497236732,
+          "p95_asset_cluster_bootstrap_95_ci": [
+            34.66893117705362,
+            372.7546680701668
+          ],
+          "sample_count": 479,
+          "unit": "percent_joint_range"
+        },
+        "trajectory_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 479,
+          "passed": 479,
+          "percentage": 100.0
+        }
+      },
+      "table5b": {
+        "genesis": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 479,
+            "passed": 479,
+            "percentage": 100.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5405,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 5405,
+            "median": 7.796472933913894e-08,
+            "p95": 9.592847908741909e-06,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              1.1065444781455924e-05,
+              1.4386608844625462e-05
+            ],
+            "sample_count": 5405,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5405,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 5405,
+            "median": 0.0,
+            "p95": 1.9090959104164244e-05,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              2.4193805712249072e-05,
+              2.996733336300671e-05
+            ],
+            "sample_count": 5405,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              98.5,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          }
+        },
+        "mujoco": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 479,
+            "passed": 479,
+            "percentage": 100.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5405,
+            "coverage_percentage": 49.12118408880666,
+            "evaluated_units": 2655,
+            "median": 0.0,
+            "p95": 5.4917813546535725e-15,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              0.0,
+              7.005156267187781e-15
+            ],
+            "sample_count": 2655,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5405,
+            "coverage_percentage": 49.12118408880666,
+            "evaluated_units": 2655,
+            "median": 0.0,
+            "p95": 0.0,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              0.0,
+              0.0
+            ],
+            "sample_count": 2655,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              98.5,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          }
+        },
+        "pybullet": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 479,
+            "passed": 479,
+            "percentage": 100.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5405,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 5405,
+            "median": 1.421697388430532e-07,
+            "p95": 1.2324849062854253e-06,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              1.5987856304855384e-06,
+              2.069665969836109e-06
+            ],
+            "sample_count": 5405,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5405,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 5405,
+            "median": 0.0,
+            "p95": 5.399738656763831e-06,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              6.116943822220326e-06,
+              9.852729529841774e-06
+            ],
+            "sample_count": 5405,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              98.5,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          }
+        }
+      },
+      "trusted_terminal_records": {
+        "genesis": 200,
+        "mujoco": 200,
+        "pybullet": 200
+      }
+    },
+    {
+      "classification": "COMPLETE",
+      "dataset_name": "SketchMobility",
+      "dataset_slug": "sketchmobility",
+      "declared_scalar_dof_count": 410,
+      "declared_trajectory_joint_count": 292,
+      "failure_reason_counts": {
+        "genesis": {
+          "DIAGNOSTIC_FAILURE": 1,
+          "PASS": 199
+        },
+        "mujoco": {
+          "DIAGNOSTIC_FAILURE": 29,
+          "PASS": 171
+        },
+        "pybullet": {
+          "DIAGNOSTIC_FAILURE": 90,
+          "PASS": 110
+        }
+      },
+      "n": 200,
+      "table5a": {
+        "dof_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 410,
+          "passed": 406,
+          "percentage": 99.02439024390245
+        },
+        "import_success": {
+          "bootstrap_95_ci_percentage": [
+            98.5,
+            100.0
+          ],
+          "denominator": 200,
+          "passed": 199,
+          "percentage": 99.5
+        },
+        "limit_violation_p95": {
+          "candidate_units": 292,
+          "coverage_percentage": 80.13698630136986,
+          "evaluated_units": 234,
+          "median": 1.7418811224530262,
+          "p95": 336.7445639025707,
+          "p95_asset_cluster_bootstrap_95_ci": [
+            269.3722817780556,
+            1469.3232870517434
+          ],
+          "sample_count": 234,
+          "unit": "percent_joint_range"
+        },
+        "stable_rollout": {
+          "bootstrap_95_ci_percentage": [
+            98.5,
+            100.0
+          ],
+          "denominator": 200,
+          "passed": 199,
+          "percentage": 99.5
+        },
+        "tracking_nrmse_p95": {
+          "candidate_units": 292,
+          "coverage_percentage": 80.13698630136986,
+          "evaluated_units": 234,
+          "median": 37.912684790229754,
+          "p95": 1737.8529480300103,
+          "p95_asset_cluster_bootstrap_95_ci": [
+            1447.0122339684515,
+            6376.106420677419
+          ],
+          "sample_count": 234,
+          "unit": "percent_joint_range"
+        },
+        "trajectory_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 292,
+          "passed": 234,
+          "percentage": 80.13698630136986
+        }
+      },
+      "table5b": {
+        "genesis": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 410,
+            "passed": 406,
+            "percentage": 99.02439024390245
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 1415,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 1415,
+            "median": 1.1774290830265885e-06,
+            "p95": 2.1797517313753512e-05,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              5.880997084323164e-06,
+              3.544164624427547e-05
+            ],
+            "sample_count": 1415,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 1415,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 1415,
+            "median": 3.818191820832845e-06,
+            "p95": 3.599240273550176e-05,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              2.9197228886919433e-05,
+              4.273217655471085e-05
+            ],
+            "sample_count": 1415,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              98.5,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              98.5,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          }
+        },
+        "mujoco": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 410,
+            "passed": 307,
+            "percentage": 74.8780487804878
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 1415,
+            "coverage_percentage": 86.57243816254417,
+            "evaluated_units": 1225,
+            "median": 0.0,
+            "p95": 1.138612446977412e-14,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              5.637377719853061e-15,
+              1.750392609992409e-14
+            ],
+            "sample_count": 1225,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 1415,
+            "coverage_percentage": 86.57243816254417,
+            "evaluated_units": 1225,
+            "median": 0.0,
+            "p95": 0.0,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              0.0,
+              0.0
+            ],
+            "sample_count": 1225,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              81.0,
+              90.0
+            ],
+            "denominator": 200,
+            "passed": 171,
+            "percentage": 85.5
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              80.5,
+              90.5
+            ],
+            "denominator": 200,
+            "passed": 171,
+            "percentage": 85.5
+          }
+        },
+        "pybullet": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 410,
+            "passed": 279,
+            "percentage": 68.04878048780488
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 1415,
+            "coverage_percentage": 58.303886925795055,
+            "evaluated_units": 825,
+            "median": 8.985328882671087e-07,
+            "p95": 2.964320693343648e-06,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              2.59015003121981e-06,
+              3.990925066637196e-06
+            ],
+            "sample_count": 825,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 1415,
+            "coverage_percentage": 58.303886925795055,
+            "evaluated_units": 825,
+            "median": 0.0,
+            "p95": 7.597712131200121e-06,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              9.505169828499467e-06,
+              1.2236013405972837e-05
+            ],
+            "sample_count": 825,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              48.0,
+              62.0
+            ],
+            "denominator": 200,
+            "passed": 110,
+            "percentage": 55.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              48.0,
+              62.0
+            ],
+            "denominator": 200,
+            "passed": 110,
+            "percentage": 55.0
+          }
+        }
+      },
+      "trusted_terminal_records": {
+        "genesis": 200,
+        "mujoco": 200,
+        "pybullet": 200
+      }
+    },
+    {
+      "classification": "COMPLETE",
+      "dataset_name": "Infinigen-Sim",
+      "dataset_slug": "infinigen_sim",
+      "declared_scalar_dof_count": 813,
+      "declared_trajectory_joint_count": 813,
+      "failure_reason_counts": {
+        "genesis": {
+          "DIAGNOSTIC_FAILURE": 14,
+          "PASS": 186
+        },
+        "mujoco": {
+          "DIAGNOSTIC_FAILURE": 1,
+          "PASS": 199
+        },
+        "pybullet": {
+          "PASS": 200
+        }
+      },
+      "n": 200,
+      "table5a": {
+        "dof_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 813,
+          "passed": 734,
+          "percentage": 90.28290282902829
+        },
+        "import_success": {
+          "bootstrap_95_ci_percentage": [
+            89.5,
+            96.0
+          ],
+          "denominator": 200,
+          "passed": 186,
+          "percentage": 93.0
+        },
+        "limit_violation_p95": {
+          "candidate_units": 813,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "stable_rollout": {
+          "bootstrap_95_ci_percentage": [
+            89.5,
+            96.5
+          ],
+          "denominator": 200,
+          "passed": 186,
+          "percentage": 93.0
+        },
+        "tracking_nrmse_p95": {
+          "candidate_units": 813,
+          "coverage_percentage": 0.0,
+          "evaluated_units": 0,
+          "median": null,
+          "p95": null,
+          "p95_asset_cluster_bootstrap_95_ci": null,
+          "sample_count": 0,
+          "unit": "percent_joint_range"
+        },
+        "trajectory_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 813,
+          "passed": 0,
+          "percentage": 0.0
+        }
+      },
+      "table5b": {
+        "genesis": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 813,
+            "passed": 734,
+            "percentage": 90.28290282902829
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              89.5,
+              96.5
+            ],
+            "denominator": 200,
+            "passed": 186,
+            "percentage": 93.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              89.5,
+              96.0
+            ],
+            "denominator": 200,
+            "passed": 186,
+            "percentage": 93.0
+          }
+        },
+        "mujoco": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 813,
+            "passed": 809,
+            "percentage": 99.5079950799508
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              98.5,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              98.5,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          }
+        },
+        "pybullet": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 813,
+            "passed": 813,
+            "percentage": 100.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 0,
+            "coverage_percentage": 0.0,
+            "evaluated_units": 0,
+            "median": null,
+            "p95": null,
+            "p95_asset_cluster_bootstrap_95_ci": null,
+            "sample_count": 0,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          }
+        }
+      },
+      "trusted_terminal_records": {
+        "genesis": 200,
+        "mujoco": 200,
+        "pybullet": 200
+      }
+    },
+    {
+      "classification": "COMPLETE",
+      "dataset_name": "Ours (PV-A)",
+      "dataset_slug": "pva",
+      "declared_scalar_dof_count": 827,
+      "declared_trajectory_joint_count": 628,
+      "failure_reason_counts": {
+        "genesis": {
+          "DIAGNOSTIC_FAILURE": 1,
+          "PASS": 199
+        },
+        "mujoco": {
+          "NATIVE_CRASH": 1,
+          "PASS": 199
+        },
+        "pybullet": {
+          "PASS": 200
+        }
+      },
+      "n": 200,
+      "table5a": {
+        "dof_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 827,
+          "passed": 827,
+          "percentage": 100.0
+        },
+        "import_success": {
+          "bootstrap_95_ci_percentage": [
+            100.0,
+            100.0
+          ],
+          "denominator": 200,
+          "passed": 200,
+          "percentage": 100.0
+        },
+        "limit_violation_p95": {
+          "candidate_units": 628,
+          "coverage_percentage": 99.36305732484077,
+          "evaluated_units": 624,
+          "median": 1.245047204729385,
+          "p95": 32.3547673621023,
+          "p95_asset_cluster_bootstrap_95_ci": [
+            37.82857801204602,
+            97.01006335764875
+          ],
+          "sample_count": 624,
+          "unit": "percent_joint_range"
+        },
+        "stable_rollout": {
+          "bootstrap_95_ci_percentage": [
+            100.0,
+            100.0
+          ],
+          "denominator": 200,
+          "passed": 200,
+          "percentage": 100.0
+        },
+        "tracking_nrmse_p95": {
+          "candidate_units": 628,
+          "coverage_percentage": 99.36305732484077,
+          "evaluated_units": 624,
+          "median": 26.998775262335734,
+          "p95": 76.93780150760044,
+          "p95_asset_cluster_bootstrap_95_ci": [
+            76.95645352586364,
+            155.21498608009833
+          ],
+          "sample_count": 624,
+          "unit": "percent_joint_range"
+        },
+        "trajectory_coverage": {
+          "bootstrap_95_ci_percentage": null,
+          "denominator": 628,
+          "passed": 624,
+          "percentage": 99.36305732484077
+        }
+      },
+      "table5b": {
+        "genesis": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 827,
+            "passed": 827,
+            "percentage": 100.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5115,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 5115,
+            "median": 1.2678149451228169e-06,
+            "p95": 1.5927366786594165e-05,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              1.2991349129858876e-05,
+              3.3341026389192865e-05
+            ],
+            "sample_count": 5115,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5115,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 5115,
+            "median": 7.2445096183544e-06,
+            "p95": 3.0161298710667534e-05,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              3.281273977361254e-05,
+              4.446733321732874e-05
+            ],
+            "sample_count": 5115,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          }
+        },
+        "mujoco": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 827,
+            "passed": 825,
+            "percentage": 99.75816203143894
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5115,
+            "coverage_percentage": 94.6236559139785,
+            "evaluated_units": 4840,
+            "median": 0.0,
+            "p95": 6.508260159140649e-15,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              7.31978856125533e-15,
+              1.4187866024278983e-14
+            ],
+            "sample_count": 4840,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5115,
+            "coverage_percentage": 94.6236559139785,
+            "evaluated_units": 4840,
+            "median": 0.0,
+            "p95": 0.0,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              0.0,
+              0.0
+            ],
+            "sample_count": 4840,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              98.5,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 199,
+            "percentage": 99.5
+          }
+        },
+        "pybullet": {
+          "dof_coverage": {
+            "bootstrap_95_ci_percentage": null,
+            "denominator": 827,
+            "passed": 827,
+            "percentage": 100.0
+          },
+          "fk_position_error_p95": {
+            "candidate_units": 5115,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 5115,
+            "median": 1.1582766880357964e-06,
+            "p95": 3.879630905638064e-06,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              4.813109339016154e-06,
+              6.062226982145239e-06
+            ],
+            "sample_count": 5115,
+            "unit": "percent_object_diagonal"
+          },
+          "fk_rotation_error_p95": {
+            "candidate_units": 5115,
+            "coverage_percentage": 100.0,
+            "evaluated_units": 5115,
+            "median": 0.0,
+            "p95": 8.87267600082659e-06,
+            "p95_asset_cluster_bootstrap_95_ci": [
+              1.2313298636799906e-05,
+              1.5149869317034755e-05
+            ],
+            "sample_count": 5115,
+            "unit": "degree"
+          },
+          "import_success": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          },
+          "stable_rollout": {
+            "bootstrap_95_ci_percentage": [
+              100.0,
+              100.0
+            ],
+            "denominator": 200,
+            "passed": 200,
+            "percentage": 100.0
+          }
+        }
+      },
+      "trusted_terminal_records": {
+        "genesis": 200,
+        "mujoco": 200,
+        "pybullet": 200
+      }
+    }
+  ],
+  "prepared_cohort_sha256": "bdd3bb53d729e6f759145a8e9a7f8c293e91d9cedb23a4e8bf5f06b6f155352c",
+  "prepared_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_v2_core200_prepared_five_full_release_articraft10787_infinigen_paired_official_metrics_r2/manifest.json",
+  "prepared_manifest_sha256": "5f481188a39bfa77bf7c140c5bce21eb3db6b8fcbddc2965ae75bebed83ce146",
+  "protocol_sha256": "5abe4976f3bd9554365699366bebbe2eba76d52c00da8dd6ca6c88e6f8041e84",
+  "schema_version": "table5_v2_aggregate_v3",
+  "summary_sha256": "e17acf4bef332ebe38586ab40c2bf7b6425e3cc07614d5f877307b487812ed2d"
+}

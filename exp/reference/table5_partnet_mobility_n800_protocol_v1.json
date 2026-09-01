@@ -1,0 +1,418 @@
+{
+  "adapters": {
+    "genesis": {
+      "backend": "cuda",
+      "collision": true,
+      "contacts": "enabled",
+      "control": "direct_DOF_force",
+      "enable_neutral_collision": true,
+      "fixed": true,
+      "fixed_link_merge": false,
+      "gpu_binding": {
+        "cuda_visible_devices": "3",
+        "gpu_uuid": "GPU-ebc0d328-a3fa-7e89-2733-cadb001661f7",
+        "physical_device_index": 3,
+        "visible_device_index": 0
+      },
+      "logging": "retain_source_mesh_and_inertia_warnings",
+      "precision": "float32",
+      "recompute_inertia": false,
+      "requires_jac_and_IK": false,
+      "self_collision": true,
+      "substeps": 1,
+      "version": "1.3.1",
+      "visualization": false
+    },
+    "mujoco": {
+      "contacts": "enabled",
+      "control": "direct_qfrc",
+      "fixed_structure": "folding_recorded_as_strict_load_failure_mapped_movable_diagnostics_continue",
+      "importer": "native_URDF",
+      "self_collision": true,
+      "version": "3.10.0"
+    },
+    "pybullet": {
+      "connection": "DIRECT",
+      "contacts": "enabled",
+      "control": "torque",
+      "default_motors": "disabled",
+      "fixed_link_merge": false,
+      "ignore_collision": false,
+      "inertials": "source_URDF",
+      "maintain_link_order": false,
+      "self_collision": true,
+      "version": "3.2.7",
+      "visual_shapes": "ignored_after_manifest_resource_validation"
+    }
+  },
+  "artifacts": {
+    "preflight_failure_retention": "terminal_failure_without_simulator_launch",
+    "publication": {
+      "marker_binds": [
+        "protocol.json_sha256",
+        "manifest.json_sha256"
+      ],
+      "marker_written_last": true,
+      "receipt_set_marker": "receipt_set.json"
+    },
+    "resume_binding": [
+      "schema_version",
+      "run_phase",
+      "simulator",
+      "adapter_name",
+      "adapter_version",
+      "adapter_config_sha256",
+      "effective_workers",
+      "dataset_id",
+      "package_relative_path",
+      "manifest_row_sha256",
+      "urdf_sha256",
+      "package_content_manifest_sha256",
+      "protocol_sha256",
+      "cohort_sha256"
+    ],
+    "retry": "none",
+    "terminal_records": "atomic_per_asset",
+    "timeout_retention": "terminal_failure"
+  },
+  "claim_boundary": {
+    "not_evidence_of": [
+      "semantic_joint_correctness",
+      "calibrated_real_world_dynamics",
+      "continuous_collision_freedom",
+      "real_world_fidelity"
+    ],
+    "release_level_contact_runtime_diagnostic": true,
+    "source_release_status": "LOCAL_COMPLETE_PROVENANCE_LIMITED",
+    "strict_collision": "reuse frozen Table 4 strict_collision_pass without reinterpretation",
+    "strict_sim_ready": "logical conjunction of frozen Table 2/3/4 strict gates, all-three runtime pass, and frozen cross-simulator thresholds"
+  },
+  "cross_simulator": {
+    "all_three_denominator": 800,
+    "failure_treatment": "preflight_missing_mapping_unsupported_timeout_or_failed_simulator_remain_explicit_and_cannot_improve_strict_rate",
+    "joint_rmse": {
+      "position": "normalized_joint_position",
+      "sample_steps": [
+        0,
+        12,
+        24,
+        36,
+        48,
+        60,
+        72,
+        84,
+        96,
+        108,
+        120,
+        132,
+        144,
+        156,
+        168,
+        180,
+        192,
+        204,
+        216,
+        228,
+        240,
+        252,
+        264,
+        276,
+        288,
+        300,
+        312,
+        324,
+        336,
+        348,
+        360
+      ],
+      "separate_denominators": [
+        "revolute",
+        "prismatic"
+      ]
+    },
+    "pairing": {
+      "asset_key": "manifest.dataset_id",
+      "joint_key": "urdf_joint_name"
+    },
+    "pose_comparison": {
+      "aggregate": "maximum_across_available_simulator_pairs",
+      "frame_alignment": "shared_named_root",
+      "link_scope": "reachable_descendant_urdf_child_links",
+      "rotation_error": "quaternion_angular_error_rad",
+      "translation_error": "norm(delta_translation) / object_bounding_box_diagonal"
+    },
+    "sample_cadence_steps": 12,
+    "strict_runtime_relationship": "missing_or_failed_pairs_cannot_improve_strict_rates",
+    "thresholds": {
+      "normalized_joint_rmse": 0.1,
+      "rotation_rad": 0.1,
+      "translation_over_bbox_diagonal": 0.02
+    },
+    "trajectory_samples": 31,
+    "type_denominators": [
+      "revolute",
+      "prismatic",
+      "link"
+    ]
+  },
+  "metrics": {
+    "actuation": {
+      "min_declared_range_fraction": 0.9,
+      "no_supported_or_any_unsupported_movable": "fail_closed"
+    },
+    "constraint_drift": {
+      "reference": "URDF_FK_at_measured_joint_states",
+      "rotation_rad_max": 0.01,
+      "translation_over_bbox_diagonal_max": 0.001
+    },
+    "limit_enforcement": {
+      "all_supported_bounded_joints": true
+    },
+    "load": {
+      "fixed_structure_folding": "strict_fail",
+      "require_exact_link_joint_counts_and_names": true
+    },
+    "reset": {
+      "all_repetitions": true,
+      "require_finite_scalar_state": true
+    },
+    "settling": {
+      "max_normalized_displacement": 0.05,
+      "max_normalized_speed_per_s": 10.0,
+      "require_finite_states": true
+    },
+    "simulator_pass": {
+      "logical_and": [
+        "load",
+        "reset",
+        "settling",
+        "actuation",
+        "limit_enforcement",
+        "constraint_drift"
+      ]
+    },
+    "strict_collision": {
+      "denominator": 800,
+      "fail_closed": true,
+      "source": "manifest.strict_gates.table4.strict_collision_pass"
+    },
+    "strict_sim_ready": {
+      "denominator": 800,
+      "fail_closed": true,
+      "logical_and": [
+        "manifest.strict_gates.table2.strict_urdf_pass",
+        "manifest.strict_gates.table3.strict_kinematic_pass",
+        "manifest.strict_gates.table4.strict_collision_pass",
+        "all_three_runtime_pass",
+        "cross_simulator_thresholds"
+      ]
+    }
+  },
+  "runtime": {
+    "actuation": {
+      "effort_controller": {
+        "clip": [
+          -1.0,
+          1.0
+        ],
+        "formula": "tau = effort * clip(kp * normalized_position_error - kd * normalized_speed, -1, 1)",
+        "kd": 0.2,
+        "kp": 2.0
+      },
+      "eligibility": {
+        "bounded": true,
+        "require_finite_lower_upper": true,
+        "require_lower_less_than_upper": true,
+        "require_positive_finite_effort_velocity": true,
+        "types": [
+          "revolute",
+          "prismatic"
+        ]
+      },
+      "normalization": {
+        "position": "(q - lower) / (upper - lower)",
+        "position_error": "target_normalized - measured_normalized_position",
+        "speed": "qdot / declared_velocity"
+      },
+      "one_joint_at_a_time": true,
+      "other_scalar_joints": "midpoint",
+      "trajectory": {
+        "hold_steps": 120,
+        "initial_normalized": 0.0,
+        "ramp_steps": 240,
+        "shape": "minimum_jerk",
+        "target_normalized": 1.0
+      },
+      "unsupported_asset_result": "fail_closed"
+    },
+    "base": "fixed",
+    "child_timeout_s": 300,
+    "contacts": "enabled",
+    "gravity_m_per_s2": [
+      0,
+      0,
+      -9.81
+    ],
+    "initial_scalar_joint_state": "declared_midpoint",
+    "limit_enforcement": {
+      "reset": "midpoint",
+      "steps_each": 120,
+      "targets_normalized": [
+        -0.1,
+        1.1
+      ],
+      "tolerance": {
+        "absolute_si": 1e-06,
+        "relative_declared_range": 0.001
+      }
+    },
+    "passive_settling": {
+      "seconds": 1.0,
+      "steps": 240
+    },
+    "random_seed": 20260813,
+    "reset_repetitions": 3,
+    "solver_iterations": 50,
+    "thread_caps": {
+      "mkl": 1,
+      "numexpr": 1,
+      "omp": 1,
+      "openblas": 1,
+      "taichi": 1,
+      "veclib": 1
+    },
+    "timestep_s": {
+      "denominator": 240,
+      "numerator": 1
+    }
+  },
+  "schema_version": "table5_partnet_mobility_protocol_v1",
+  "selection": {
+    "access_order": "reuse Table 4 membership and order before simulator access; no resampling or outcome filtering",
+    "identity_authority": "dataset_id",
+    "replacement": "never",
+    "retained_preflight_failures": 13,
+    "selected_count": 800,
+    "selection_salt": "urdf-sim-ready-table4-partnet-mobility-n800-v1:20260813",
+    "source": "Table 4 frozen manifest items exact stored order"
+  },
+  "source": {
+    "archive_sha256": "b47247a44246111e8d09f2c0e64b4012ae35e0dcf4bb55f68a05b604455119ff",
+    "dataset": "PartNet-Mobility",
+    "ordered_ids_sha256": "ef6cb964e50dc712280256c5b2f675cc2c957095c3553b21845d3562a5011883",
+    "ordered_package_binding_sha256": "efdcac92772cb87631c343e92d2c2505e8fae4640e4ee9e6abbe20f28e0f4dcd",
+    "ordered_urdf_binding_sha256": "19b56d468ed92c3902ef0ae35b60275a89d7f7947b844b95b2dc98ac82324c8f",
+    "release_status": "LOCAL_COMPLETE_PROVENANCE_LIMITED",
+    "required_category_count": 46,
+    "required_release_count": 2347,
+    "required_selected_count": 800,
+    "source_release": "sapien-sim/PartNetMobility@ee0aa3ef1df16181d76d83f7415aa8c94ed1da8f",
+    "table4_frozen_manifest_sha256": "2ff015ee6bb377ce693126b52dd632a7565a3eaa9f0007e26122a1bb4ab99900"
+  },
+  "upstream_strict_gates": {
+    "table2": {
+      "artifact_set": {
+        "artifact_set_sha256": "cb4f8dce333b6dba2914c7d66e68c13abfdc5343bfde81f73c3dae201d06b90f",
+        "file_count": 8,
+        "total_bytes": 64907756
+      },
+      "denominator": 800,
+      "field": "strict_urdf_pass",
+      "record_key": "dataset_id",
+      "required_files": [
+        "asset_records.jsonl",
+        "checkpoint.json",
+        "environment.json",
+        "manifest.json",
+        "protocol_snapshot.md",
+        "summary.json",
+        "summary.md"
+      ],
+      "summary_expectations": {
+        "dataset": "PartNet-Mobility",
+        "error_count": 0,
+        "metric_pass_counts": {
+          "collision_coverage": 0,
+          "finite_fields": 800,
+          "inertia_validity": 0,
+          "inertial_coverage": 0,
+          "parse_rate": 95,
+          "resource_resolution": 787,
+          "strict_urdf_pass": 0,
+          "valid_joint_spec": 800,
+          "valid_tree": 800
+        },
+        "mode": "formal",
+        "n_eval": 800,
+        "records_present": 800,
+        "schema_version": "1.1.0",
+        "status": "completed",
+        "status_counts": {
+          "completed": 800
+        },
+        "strict_passed": 0
+      }
+    },
+    "table3": {
+      "artifact_set": {
+        "artifact_set_sha256": "30770a27722b79163255a16dc042828d76710b6493b697453e8b44bc0d6d40d8",
+        "file_count": 1605,
+        "total_bytes": 56147515
+      },
+      "denominator": 800,
+      "field": "strict_kinematic_pass",
+      "record_key": "dataset_id",
+      "required_files": [
+        "asset_records.jsonl",
+        "checkpoint.json",
+        "manifest.json",
+        "summary.json",
+        "summary.md"
+      ],
+      "summary_expectations": {
+        "dataset": "PartNet-Mobility",
+        "j_eval": 4078,
+        "n_eval": 800,
+        "parse_success": 800,
+        "schema_version": 1,
+        "status": "completed",
+        "status_counts": {
+          "completed": 800
+        },
+        "strict_passed": 793,
+        "valid_tree": 800
+      }
+    },
+    "table4": {
+      "artifact_set": {
+        "artifact_set_sha256": "c25e6eedd950e2234c43d8de6d8ce2f62e519c502953ff2961339de431ff859b",
+        "file_count": 2411,
+        "total_bytes": 182718906
+      },
+      "denominator": 800,
+      "field": "strict_collision_pass",
+      "record_key": "dataset_id",
+      "required_files": [
+        "asset_records.json",
+        "child_runtime_probe.json",
+        "frozen_manifest.json",
+        "pair_policy_smoke.json",
+        "pair_policy_smoke.urdf",
+        "state_records.jsonl",
+        "summary.json",
+        "verification.json"
+      ],
+      "summary_expectations": {
+        "category_count": 46,
+        "load_success": 787,
+        "measurement_complete": 787,
+        "protocol_id": "urdf_sim_ready_table4_partnet_mobility_n800_v1",
+        "selected": 800,
+        "status": "COMPLETE_WITH_RETAINED_FAILURES",
+        "strict_passed": 567,
+        "verification_protocol_id": "urdf_sim_ready_table4_partnet_mobility_verify_v1",
+        "verification_status": "PASS"
+      }
+    }
+  }
+}

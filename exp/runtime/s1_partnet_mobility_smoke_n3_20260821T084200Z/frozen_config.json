@@ -1,0 +1,44 @@
+{
+  "classification": "SMOKE",
+  "code_identity": {
+    "runner_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_s1_partnet_mobility.py",
+    "runner_sha256": "9ad254ca67c8f84f017feb2d49d9954e47d07a0684294057e07fbadf8793df52",
+    "static_atoms_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_static.py",
+    "static_atoms_sha256": "4701415dad8a5c0a434c16887979bcb70c250ba0b25772014e8db73789098e5f",
+    "verifier_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/verify_s1_partnet_mobility.py",
+    "verifier_sha256": "bc48fceb4357de1c5c5ae5e6bce53a5cfe432684bee762060a6ab8b24ca263aa"
+  },
+  "dataset": "PartNet-Mobility",
+  "intended_n_eval": 800,
+  "limit": 3,
+  "n_eval": 3,
+  "pair_policy": {
+    "eligible_pairs": "distinct source-URDF links with collision geometry",
+    "method_specific_allowance": "none in headline",
+    "penetration_threshold_m": 1e-06,
+    "shared_topology_exclusion": "exclude_direct_parent_child",
+    "surface_contact_allowed": true
+  },
+  "protocol_id": "s1_partnet_mobility_table4cohort_n800_salt20260813_v1",
+  "runtime": {
+    "platform": "Linux-5.10.134-19.103.al8.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:38:16) [GCC 14.3.0]",
+    "python_executable": "/mnt/zsn/miniconda3/envs/genesis-main/bin/python"
+  },
+  "schema_version": "supplementary-s1-partnet-mobility/v1",
+  "source": {
+    "cohort_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_partnet_mobility_n800_20260813/frozen_manifest.json",
+    "cohort_manifest_sha256": "2ff015ee6bb377ce693126b52dd632a7565a3eaa9f0007e26122a1bb4ab99900",
+    "dataset_root": "/mnt/zsn/lyb/arti-skill/exp/PartNet-Mobility/data/dataset",
+    "ordered_dataset_ids_sha256": "627806816300ef649c76a39180e5c5b21be41c52d3f7a22e6aa074b4cc87e7a6",
+    "protocol_document": "/mnt/zsn/lyb/arti-skill/exp/URDF-Sim-Ready-Automatic-Evaluation.md",
+    "protocol_snapshot_sha256": "30fc140d2ba5fbb964e4d330e0b9ca427bfc199df2290579d9380f8497b84389",
+    "table4_asset_records": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_partnet_mobility_n800_20260813/asset_records.json",
+    "table4_asset_records_sha256": "bdbfa385a74e44bd7662cba8f2c15ffbe3d664dfc0953722b8b37c44400430dc",
+    "table4_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_partnet_mobility_n800_20260813/frozen_manifest.json",
+    "table4_manifest_sha256": "2ff015ee6bb377ce693126b52dd632a7565a3eaa9f0007e26122a1bb4ab99900",
+    "table4_state_records": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_partnet_mobility_n800_20260813/state_records.jsonl",
+    "table4_state_records_sha256": "c72728ecfde2b0b6248da7048936b5bf52cb4f4cef0ae7438cf960e27895618c"
+  },
+  "workers": 3
+}

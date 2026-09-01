@@ -1,0 +1,60 @@
+{
+  "amendment_id": "table4_constraints_v2_ours_full_docs_v1",
+  "created_at_utc": "2026-08-11T10:00:00Z",
+  "purpose": "Freeze the matched-LLM full-public-documentation Ours arm before generation.",
+  "relationship_to_protocol": "Post-audit method-definition amendment; common prompts, task specs, scorer, canonicalizer, and repair budget remain unchanged.",
+  "common_prompt_sha256": "0b46c15c65c46550cc25654ccca10e4de87f1b97e6bde89796ea3cc9b439065e",
+  "base_protocol_sha256": "6857194072ccb0ba3943d14a62f29c2364920ec01381a5475311535c1831031f",
+  "method": {
+    "id": "ours_full_docs",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "high",
+    "runner": "exp/scripts/run_table4_llm_arm.py",
+    "runner_sha256": "6ef658beff699b296473a487849a0b425648fc1a7e3e4ca956ef8992731f5bb5",
+    "workers": 2,
+    "attempts_per_task": 1,
+    "repair_budget": 0,
+    "formal_seed": 0,
+    "output": "One template.py per task, evaluated through the frozen full-QC and canonicalization path."
+  },
+  "allowed_documentation": [
+    {
+      "path": ".agents/skills/build-template/SKILL.md",
+      "sha256": "b2c9f5db87b17079640670ffa8fa559791d66ddb4051169df0f3610d757067a0"
+    },
+    {
+      "path": "arti-template/articraft_template_authoring/README.md",
+      "sha256": "ed66ab8e1c6b6d0a7b1ac7d2cba466d1ded97f904cd786ba46dbbe908780d72c"
+    },
+    {
+      "path": "arti-template/articraft_template_authoring/AUTHORING.md",
+      "sha256": "4b4a8a4c6a4ce867ea881d3c260651b5b8251c677891b2b3d48bfad228873324"
+    },
+    {
+      "path": "arti-template/articraft_template_authoring/MECHANICAL_PRIORS.md",
+      "sha256": "43e4d2bda318a4fb2267fff933faaca79f6b9655033a5e4b8fb6721c379274e4"
+    },
+    {
+      "path": "arti-template/articraft_template_authoring/VISUAL_DIVERSITY_MODEL.md",
+      "sha256": "093071a75eb6a15cdcea99ae9fb9073a8932d5d1e5e71c39503279b6d341d898"
+    },
+    {
+      "path": "arti-template/agent/prompts/sections/sdk_base.md",
+      "sha256": "36cb3d28dfc0af3d79c817d9289d62df4f8f3ab85b8c7e6a679b313f18d0acee"
+    },
+    {
+      "path_prefix": "arti-template/articraft_template",
+      "scope": "Public SDK source and importable API only"
+    }
+  ],
+  "prohibited_inputs": [
+    "exp/reference/table4_constraints_v2/specs",
+    "exp/scripts/score_table4_constraints_v2.py",
+    "exp/scripts/canonicalize_table4_artifact.py",
+    "evaluators and grader implementation",
+    "existing generated templates",
+    "other Table 4 method outputs"
+  ],
+  "success_rule": "A task succeeds when worker verdict is pass, a non-empty valid URDF exists, and canonicalization succeeds. A primitive-only URDF is not failed solely because external asset count is zero.",
+  "reporting_role": "Matched-LLM ablation; not pooled unconditionally with native baseline prompts."
+}

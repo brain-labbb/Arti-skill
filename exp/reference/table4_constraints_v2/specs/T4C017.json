@@ -1,0 +1,57 @@
+{
+  "benchmark_id": "table4_constraints_v2",
+  "category": "platform_trolley",
+  "constraints": [
+    {
+      "aliases": [
+        "wheel",
+        "caster",
+        "caster_wheel"
+      ],
+      "constraint_id": "T4C017-C01",
+      "measurement": {
+        "deduplication": "one final renderable node_or_visual counts once",
+        "matcher": "normalized token-boundary alias match",
+        "source": "final_artifact_only",
+        "units": "mesh-bearing named nodes_or_visuals",
+        "unmeasurable_policy": "not passed and excluded from conditional denominator"
+      },
+      "role": "wheel",
+      "target": 4,
+      "type": "exact_count"
+    },
+    {
+      "absolute_tolerance_m": 0.005,
+      "constraint_id": "T4C017-C02",
+      "measure": "horizontal_max",
+      "measurement": {
+        "glb_urdf_units": "m",
+        "source": "final_artifact_world_aabb",
+        "step_units": "mm converted to m",
+        "z_up_required": true
+      },
+      "relative_tolerance": 0.1,
+      "target_m": 0.8,
+      "type": "numeric_dimension"
+    },
+    {
+      "absolute_tolerance_m": 0.005,
+      "constraint_id": "T4C017-C03",
+      "measure": "horizontal_min",
+      "measurement": {
+        "glb_urdf_units": "m",
+        "source": "final_artifact_world_aabb",
+        "step_units": "mm converted to m",
+        "z_up_required": true
+      },
+      "relative_tolerance": 0.1,
+      "target_m": 0.5,
+      "type": "numeric_dimension"
+    }
+  ],
+  "difficulty": "simple",
+  "input_modality": "text",
+  "prompt": "Create a low platform trolley. The final object must contain exactly 4 distinct wheel part(s). Its larger horizontal overall extent 0.80 m (800 mm), smaller horizontal overall extent 0.50 m (500 mm). Model every counted role as a separately named object, part, link, or visual. Keep the object upright on the ground plane, use Z as up, center it near the origin, and preserve real-world scale.",
+  "schema_version": 2,
+  "task_id": "T4C017"
+}

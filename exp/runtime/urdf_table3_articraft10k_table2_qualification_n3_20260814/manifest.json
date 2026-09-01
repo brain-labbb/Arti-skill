@@ -1,0 +1,239 @@
+{
+  "classification": "NON_FORMAL_SMOKE",
+  "created_at": "2026-08-14T04:02:35Z",
+  "dataset": "Articraft-10K",
+  "evaluation": {
+    "adapter_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table3_articraft10k.py",
+    "adapter_sha256": "535c8a48a4fdf76f4f8760c9188892b2386c15856d242ddd1c99c653ad5fa560",
+    "config": {
+      "asset_timeout_seconds": 120.0,
+      "continuous_interval": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "continuous_non_degenerate_policy": "maximum_excursion_from_q0_over_frozen_interval",
+      "protocol_id": "urdf-sim-ready-table3-articraft10k-table2-cohort-v1",
+      "q0_policy": "zero_clipped_to_declared_interval",
+      "rotation_motion_threshold_rad": 1e-06,
+      "roundtrip_rotation_tolerance_rad": 1e-09,
+      "roundtrip_translation_tolerance_bbox_diagonal": 1e-09,
+      "samples_per_joint": 21,
+      "strict_asset_requires_at_least_one_declared_movable_joint": true,
+      "translation_motion_threshold_bbox_diagonal": 1e-06,
+      "unchanged_rotation_tolerance_rad": 1e-09,
+      "unchanged_translation_tolerance_bbox_diagonal": 1e-09,
+      "workers": 1
+    },
+    "config_sha256": "507a4987bdcb1adc24797e195a1a1f6a960bdcae8537be8653847e867f06a756",
+    "core_evaluator_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table3_lam.py",
+    "core_evaluator_sha256": "0da075f077ce13c78bb6b4ee66b0abe77668ccf7bb3c105660b321e667fc2acf",
+    "environment": {
+      "numpy": "2.5.1",
+      "platform": "Linux-5.10.134-19.103.al8.x86_64-x86_64-with-glibc2.39",
+      "python": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+      "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+      "thread_environment": {
+        "MKL_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      }
+    },
+    "environment_sha256": "914c7aa17ed24651138bba071192053035ac689d549217e301f39e0a1d6f8a87",
+    "protocol_path": "/mnt/zsn/lyb/arti-skill/exp/URDF-Sim-Ready-Automatic-Evaluation.md",
+    "protocol_sha256": "b6cee5d4c818d462cfea47c6413b84856e676e3d4b227628dd749b9c8c8ce78c"
+  },
+  "manifest_content_sha256": "a5f7cd8e4bcb711a0896cb731a0324134747fe526032cde109aec1405ef70f9f",
+  "records": [
+    {
+      "asset_id": "rec_fidget_toy_d3e5dba051334aca88e7cba99ac794df",
+      "asset_key": "rec_fidget_toy_d3e5dba051334aca88e7cba99ac794df",
+      "category": "fidget_toy",
+      "declared_joint_count_hint": 2,
+      "package": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K/released_urdf/rec_fidget_toy_d3e5dba051334aca88e7cba99ac794df",
+      "package_binding": {
+        "content_manifest_sha256": "ff97f40ebf33fa0e5909e6cee935f55873cbb82da3c9bf474378d9e09fb4e0bd",
+        "file_count": 4,
+        "files": [
+          {
+            "bytes": 974,
+            "path": "compile_report.json",
+            "sha256": "d9465c1fe53a1210408ba3bf4ff5f9e8ceaf6e24a1584bc4f4e65767d21a12bf"
+          },
+          {
+            "bytes": 3429,
+            "path": "model.urdf",
+            "sha256": "5c8edef469d3d86aee2f4fabb8ae12af4876d0323a1c6e931e8c50e62360a69a"
+          },
+          {
+            "bytes": 41397,
+            "path": "assets/meshes/inner_ring_shell.obj",
+            "sha256": "faf96a5d94dd31a0aa926fc648aa800b8ba8fb23f83af01212b2fd95cd6886c0"
+          },
+          {
+            "bytes": 41397,
+            "path": "assets/meshes/outer_ring_shell.obj",
+            "sha256": "80be6a9277e06222c3a596b407e52b2480becc65810312fed9e57d06628fbe22"
+          }
+        ],
+        "total_bytes": 87197
+      },
+      "package_content_manifest_sha256": "ff97f40ebf33fa0e5909e6cee935f55873cbb82da3c9bf474378d9e09fb4e0bd",
+      "raw_category": "fidget_toy",
+      "selection_hash": "5555fc850e1550b91cfdd8447743e8069bac1ca1ad7dcc461b92b1e433a0940e",
+      "selection_index": 0,
+      "selection_rank": 1,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K/released_urdf/rec_fidget_toy_d3e5dba051334aca88e7cba99ac794df/model.urdf",
+      "urdf_sha256": "5c8edef469d3d86aee2f4fabb8ae12af4876d0323a1c6e931e8c50e62360a69a"
+    },
+    {
+      "asset_id": "rec_mastmounted_fork_carriage_0003",
+      "asset_key": "rec_mastmounted_fork_carriage_0003",
+      "category": "mastmounted_fork_carriage",
+      "declared_joint_count_hint": 1,
+      "package": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K/released_urdf/rec_mastmounted_fork_carriage_0003",
+      "package_binding": {
+        "content_manifest_sha256": "a106291a711231961c55aa705591f93b1816ed04b19602bb8d7c6f625fb78f4a",
+        "file_count": 6,
+        "files": [
+          {
+            "bytes": 960,
+            "path": "compile_report.json",
+            "sha256": "2f940a00dcfd0afee7e7947b85c4336eb7927200cd6ba9a942cace5886538934"
+          },
+          {
+            "bytes": 3364,
+            "path": "model.urdf",
+            "sha256": "958c2c9c27d055f55b941614f1725c202671638ae316c943a221422d43c9e252"
+          },
+          {
+            "bytes": 11059,
+            "path": "assets/meshes/fork_carriage.obj",
+            "sha256": "51853ed586fae62847f4b0b95c5321e8c5426fa24fb7a5f7df098f7794064ad7"
+          },
+          {
+            "bytes": 156,
+            "path": "assets/meshes/fork_carriage.obj.cadquery.json",
+            "sha256": "a429659ced237288db2f840984a63409741ddae3326b39612b3342ef9e66d3aa"
+          },
+          {
+            "bytes": 2022,
+            "path": "assets/meshes/fork_tine.obj",
+            "sha256": "0a5e3a27deb4dc7a4af9368710784bc996e660bc6e70c5a285679fa75afe9971"
+          },
+          {
+            "bytes": 174,
+            "path": "assets/meshes/fork_tine.obj.cadquery.json",
+            "sha256": "bd383330a794563b85f2d5f20ca63b8d0e411a2509e9117897af4dd7aba79f11"
+          }
+        ],
+        "total_bytes": 17735
+      },
+      "package_content_manifest_sha256": "a106291a711231961c55aa705591f93b1816ed04b19602bb8d7c6f625fb78f4a",
+      "raw_category": "mastmounted_fork_carriage",
+      "selection_hash": "1ff0b5f3f2ff4b753957bff18867763674a385efeecfa2f3aeb50e9c3482ead8",
+      "selection_index": 1,
+      "selection_rank": 2,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K/released_urdf/rec_mastmounted_fork_carriage_0003/model.urdf",
+      "urdf_sha256": "958c2c9c27d055f55b941614f1725c202671638ae316c943a221422d43c9e252"
+    },
+    {
+      "asset_id": "rec_top_load_washing_machine_with_hinged_lid_d1f25e3f1beb4684935f20e2fe18f3cc",
+      "asset_key": "rec_top_load_washing_machine_with_hinged_lid_d1f25e3f1beb4684935f20e2fe18f3cc",
+      "category": "top_load_washing_machine_with_hinged_lid",
+      "declared_joint_count_hint": 9,
+      "package": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K/released_urdf/rec_top_load_washing_machine_with_hinged_lid_d1f25e3f1beb4684935f20e2fe18f3cc",
+      "package_binding": {
+        "content_manifest_sha256": "37076ce05af7bf11c9706f9fcc05aa0233b1ffa5d34de1f357929df325fdd764",
+        "file_count": 9,
+        "files": [
+          {
+            "bytes": 1005,
+            "path": "compile_report.json",
+            "sha256": "f19fe08dbb4f95d6b60c27571dc5d5c40d1f5916d1ad0b176a10451d6d0e26ca"
+          },
+          {
+            "bytes": 17107,
+            "path": "model.urdf",
+            "sha256": "695d1963f4ba96f3c7bc7ea8bf4ee8d4a947fb3c273444017c88a3e9ea0d99ae"
+          },
+          {
+            "bytes": 326764,
+            "path": "assets/meshes/cabinet_shell.obj",
+            "sha256": "0698050ae8d32c68bc1cba049e81994894cc0c0084e2313f0330c96add0e2642"
+          },
+          {
+            "bytes": 170,
+            "path": "assets/meshes/cabinet_shell.obj.cadquery.json",
+            "sha256": "c98080bcf5fd2ca573bf3ceea79cf2c6923adbd3cd67ec02baaa983fd621cf53"
+          },
+          {
+            "bytes": 617602,
+            "path": "assets/meshes/lid_frame.obj",
+            "sha256": "0a3ef0d5a192fcdcd0bb1633f67f46df7c4edb8e4636a8076f5e10d5fd13e45d"
+          },
+          {
+            "bytes": 173,
+            "path": "assets/meshes/lid_frame.obj.cadquery.json",
+            "sha256": "f3e252d183e9d5238160a683e420ede7d6793dca16bb260237eb0477dd296112"
+          },
+          {
+            "bytes": 1080375,
+            "path": "assets/meshes/timer_dial_knob.obj",
+            "sha256": "4005917e70a5ad3ccc910246608cb78561278b80e67a5000405a101d498461a6"
+          },
+          {
+            "bytes": 617102,
+            "path": "assets/meshes/wash_tub.obj",
+            "sha256": "fe517b57b535a3d98c032214b08a2b1a8e7a0260707069dfc7f395d2ceb122b8"
+          },
+          {
+            "bytes": 187,
+            "path": "assets/meshes/wash_tub.obj.cadquery.json",
+            "sha256": "b3df631012f1d95f52d53e4d2e76fffc91edab5fa12b8bb7e3f93d15fd4b3598"
+          }
+        ],
+        "total_bytes": 2660485
+      },
+      "package_content_manifest_sha256": "37076ce05af7bf11c9706f9fcc05aa0233b1ffa5d34de1f357929df325fdd764",
+      "raw_category": "top_load_washing_machine_with_hinged_lid",
+      "selection_hash": "148ea7d7c890eb85b3350e669f21e2231eb6fcb061a1214b399697af071cb36f",
+      "selection_index": 2,
+      "selection_rank": 3,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K/released_urdf/rec_top_load_washing_machine_with_hinged_lid_d1f25e3f1beb4684935f20e2fe18f3cc/model.urdf",
+      "urdf_sha256": "695d1963f4ba96f3c7bc7ea8bf4ee8d4a947fb3c273444017c88a3e9ea0d99ae"
+    }
+  ],
+  "schema_version": 1,
+  "selection": {
+    "algorithm": "exact existing Table 2 manifest .records[].package order; optional smoke prefix only",
+    "cohort_type": "FROZEN_RANDOM_SAMPLE_NOT_CATEGORY_BALANCED",
+    "n_eval": 3,
+    "outcome_based_reselection": false,
+    "requested_limit": 3,
+    "seed": 20260813,
+    "selected_asset_ids_sha256": "97c25d8866f0c4a5bfd18e2197ca120ae2cbc21160c67be6979f11e0b30e0abd",
+    "selected_packages_sha256": "2aa5465d97af427d6a95ba70851a3ac2eb789ef827b415a26a550c7a57c9523f",
+    "selection_order_preserved": true,
+    "source_algorithm": "random.Random(seed).sample(sorted(unique_asset_ids), n)",
+    "source_protocol": "exact-table2-record-package-order-v1",
+    "source_selected_asset_ids_sha256": "79c44441600077513d3cde1cda8fef38324e1a0ee660730b860d5313f0ae9784"
+  },
+  "source": {
+    "category_mapping_policy": "exact asset_id join to official record.json category_slug",
+    "category_mapping_sha256": "0305569f49d2aa1acb72fbb7bc8dcaf68ca3dd4a5bd7eba140b5bac4c8c0f449",
+    "category_records_revision": "677ca9722427dce500873730255874c8c3f07eb2",
+    "category_records_root": "/mnt/zsn/lyb/arti-skill/exp/baselines/Articraft-10K-official/records",
+    "cohort_asset_count": 800,
+    "cohort_manifest_content_sha256": "576852cb6da00775e1c51360b82b4be40e0a614e4fb0cfb1bae066912eed56a3",
+    "cohort_manifest_file_sha256": "13c47e2b2affadb951a01cab826bae139852fca5769e99ec081cc916ffa6373d",
+    "cohort_manifest_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table2_urdf_articraft10k_n800_seed20260813_20260813T145915Z/manifest.json",
+    "dataset_root": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K",
+    "eval_category_count": 222,
+    "n_release": 9996,
+    "release_asset_ids_sha256": "a52fab1cc35e9948ea75e5a7cb4e99408ae39a2e5d27eca3a479c24d5c9606ff",
+    "release_category_count": null,
+    "release_root": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K/released_urdf",
+    "source_repo_id": "camvsl/Articraft-10K",
+    "source_revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65"
+  }
+}

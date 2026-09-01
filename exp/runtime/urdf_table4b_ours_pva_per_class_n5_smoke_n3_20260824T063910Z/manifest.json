@@ -1,0 +1,38 @@
+{
+  "command": [
+    "exp/scripts/run_urdf_table4b_ours_pva_per_class_n5.py",
+    "--table4-dir",
+    "exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z",
+    "--mode",
+    "smoke",
+    "--n",
+    "3",
+    "--workers",
+    "3",
+    "--output-dir",
+    "exp/runtime/urdf_table4b_ours_pva_per_class_n5_smoke_n3_20260824T063910Z"
+  ],
+  "created_at_utc": "2026-08-24T06:40:13.927433Z",
+  "dataset": "Ours per-class N=5 (supplementary)",
+  "frozen_config_sha256": "a16fdb7efdbc6701abb0a2a833a9099246849f9ceba974101c13ba479b27a1d1",
+  "geometry_protocol_id": "lam_supplementary_geometry_v1",
+  "manifest_self_sha256_at_write": "7275f6de307209e18b562aca33384841b2b2d76f89bc8b2b7d42b8a5b3d5b182",
+  "mode": "smoke",
+  "outputs": {
+    "asset_records_sha256": "15860e05e893561452770a902389a0acb19ea9a1935f722bfe8a808da1c5dfd1",
+    "summary_md_sha256": "07ebb39438250e8092c63e13ec61a0b03f684f3b532f521f2fad398075a8c897",
+    "summary_sha256": "ba04959f653b8c595c0c0672095606c10879e0a96261d1988add68bc31f6de9e"
+  },
+  "protocol_id": "table4b-ours-pva-per-class-n5-max-joints-v1",
+  "record_count": 3,
+  "status_counts": {
+    "completed": 3,
+    "error": 0,
+    "total": 3
+  },
+  "verification": {
+    "all_pass": null,
+    "note": "smoke mode: formal verification skipped"
+  },
+  "wall_seconds": 5.175
+}

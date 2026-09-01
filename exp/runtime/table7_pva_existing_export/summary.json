@@ -1,0 +1,53 @@
+{
+  "audit_id": "pva_existing_export_table7_manifold_backfill_v1",
+  "cohort": {
+    "available_assets": 33,
+    "geometry_evaluable_assets": 33,
+    "requested_assets": 33,
+    "selection": "original frozen Nano3D existing-export pilot manifest; no outcome filtering"
+  },
+  "geometry": {
+    "edge_manifold_proxy": {
+      "all_geometries_pass_assets": {
+        "denominator": 33,
+        "numerator": 31
+      },
+      "definition": "every undirected edge has at most two incident faces; vertex-manifold is not claimed",
+      "geometry_level": {
+        "denominator": 387,
+        "numerator": 382,
+        "rate": 0.9870801033591732
+      },
+      "per_asset_mean_fraction": 0.9932946486137975
+    },
+    "load_error_count": 0,
+    "nonmanifold_edges_total": 261,
+    "readable_geometries": 387
+  },
+  "hashes": {
+    "manifest_sha256": "b7c530383dbb235912d0791ce0a12b2c2a7c09dcce4554b9d62744afdc116083",
+    "protocol_sha256": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+    "runner_sha256": "61adf7602df280dbc8b590242408e2e0e116a92f00d314a060aeae3ec849cf44"
+  },
+  "legacy_reproduction": {
+    "expected": {
+      "asset_count": 33,
+      "degenerate_faces": 51,
+      "open_edges": 290335,
+      "readable_geometries": 387,
+      "watertight_geometries": 145,
+      "winding_consistent_geometries": 379
+    },
+    "observed": {
+      "asset_count": 33,
+      "degenerate_faces": 51,
+      "open_edges": 290335,
+      "readable_geometries": 387,
+      "watertight_geometries": 145,
+      "winding_consistent_geometries": 379
+    },
+    "pass": true
+  },
+  "protocol_id": "nano3d_table7_production_readiness_v1",
+  "status": "COMPLETE"
+}

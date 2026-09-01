@@ -1,0 +1,78 @@
+{
+  "command": [
+    "exp/scripts/run_urdf_table4b_ours_pva_per_class_n5.py",
+    "--table4-dir",
+    "exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z",
+    "--mode",
+    "formal",
+    "--workers",
+    "16",
+    "--output-dir",
+    "exp/runtime/table4b_urdf_ours_pva_per_class_n5_max_joints_n2655_20260824T064233Z"
+  ],
+  "created_at_utc": "2026-08-24T07:22:08.957374Z",
+  "dataset": "Ours per-class N=5 (supplementary)",
+  "frozen_config_sha256": "65b67be45b18925430511eef061a369925304a2ab32fd3709ca16a10d41ec1ec",
+  "geometry_protocol_id": "lam_supplementary_geometry_v1",
+  "manifest_self_sha256_at_write": "901d667af2777afbfb64dd48693455d82e248f7e37838fa56f7f0cab7949a3da",
+  "mode": "formal",
+  "outputs": {
+    "asset_records_sha256": "fa4a8ea192d2d461b0445d8cd26e4a78d10023bf03dc1af81a9c2c215ae1d972",
+    "summary_md_sha256": "5244c92a73eca18d525eb9b1915fd59190c7afc04e0c8c59570e75c26a4a8bd3",
+    "summary_sha256": "82e55668aa4efaf48ffa70f68bf345139c1dc394637b4d6a233f533ebe7835e0"
+  },
+  "protocol_id": "table4b-ours-pva-per-class-n5-max-joints-v1",
+  "record_count": 2655,
+  "status_counts": {
+    "completed": 2653,
+    "error": 2,
+    "total": 2655
+  },
+  "verification": {
+    "all_pass": true,
+    "check_count": 8,
+    "checks": [
+      {
+        "check": "source_manifest_sha256",
+        "detail": "c23d92a582ac7d8d122d6c34d17d2f057dd4a309aa696414b71387debce13f35",
+        "pass": true
+      },
+      {
+        "check": "source_manifest_self_hash",
+        "detail": "b43bf43a5e89aaa5812c5a1979987c9881ee41644fa58f7eb0c34f8f3a51440f",
+        "pass": true
+      },
+      {
+        "check": "record_count",
+        "detail": "2655",
+        "pass": true
+      },
+      {
+        "check": "frozen_order_preserved",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "urdf_identity_matches_frozen_manifest",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "package_identity_matches_frozen_manifest",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "completed_relevant_input_binding_matches_expected",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "aggregate_recomputation_matches",
+        "detail": "",
+        "pass": true
+      }
+    ]
+  },
+  "wall_seconds": 2320.279
+}

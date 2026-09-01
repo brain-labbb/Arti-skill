@@ -1,0 +1,64 @@
+{
+  "command": [
+    "exp/scripts/run_urdf_table4b_artiverse.py",
+    "--mode",
+    "formal",
+    "--workers",
+    "16"
+  ],
+  "created_at_utc": "2026-08-20T04:38:47.151224Z",
+  "dataset": "Artiverse",
+  "frozen_config_sha256": "8913d2ab8f2992ff44accb003635bd973783928a36b795521ef564e05ff741df",
+  "geometry_protocol_id": "lam_supplementary_geometry_v1",
+  "manifest_self_sha256_at_write": "abad3cb7c63330f9ed8f126d684f19a3d0f011e8b10ab6af1e7c42dceafd2a1e",
+  "mode": "formal",
+  "outputs": {
+    "asset_records_sha256": "b0891efd8857d1b8290d110218cd8bca6444fb98067bdcf16e0320258850e8eb",
+    "summary_md_sha256": "867aa41a9e108c7f3e00e1c8fda71009e8752866473d3a1bd3c0c8a54b1952fc",
+    "summary_sha256": "7864c8d401ea3267938af703cde55dd86b35416926b18cb99a153b50c25198fe"
+  },
+  "protocol_id": "table4b_artiverse_table1cohort_n800_seed20260813_v1",
+  "record_count": 800,
+  "status_counts": {
+    "completed": 799,
+    "error": 1,
+    "total": 800
+  },
+  "verification": {
+    "all_pass": true,
+    "check_count": 6,
+    "checks": [
+      {
+        "check": "source_manifest_sha256",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "ordered_ids_sha256",
+        "detail": "118038a746cafb91251afde5eb4f1164915d141acb3b529ea721a9d376bde3fa",
+        "pass": true
+      },
+      {
+        "check": "record_count",
+        "detail": "800",
+        "pass": true
+      },
+      {
+        "check": "frozen_order_preserved",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "urdf_identity_matches_frozen_manifest",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "aggregate_recomputation_matches",
+        "detail": "",
+        "pass": true
+      }
+    ]
+  },
+  "wall_seconds": 1760.404
+}

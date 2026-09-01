@@ -1,0 +1,86 @@
+{
+  "category_macro": {
+    "category_count": 3,
+    "joint_metric_category_count": 3,
+    "metrics": {
+      "joint_level_pass": {
+        "category_count": 3,
+        "rate": 1.0
+      },
+      "joint_sweep_success": {
+        "category_count": 3,
+        "rate": 1.0
+      },
+      "non_degenerate_motion": {
+        "category_count": 3,
+        "rate": 1.0
+      },
+      "strict_kinematic_pass": {
+        "category_count": 3,
+        "rate": 1.0
+      },
+      "subtree_consistency": {
+        "category_count": 3,
+        "rate": 1.0
+      },
+      "valid_range": {
+        "category_count": 3,
+        "rate": 1.0
+      }
+    },
+    "state": "evaluated"
+  },
+  "classification": "NON_FORMAL_SMOKE",
+  "completed_at": "2026-08-14T03:17:15Z",
+  "dataset": "Artiverse",
+  "j_eval": 5,
+  "manifest_content_sha256": "7a86cab7f5c2d61d2a3795ee33949b9fc6c78c46051f20608a0320a6655f9578",
+  "metrics": {
+    "fk_roundtrip_error": {
+      "denominator": 5,
+      "max_normalized_translation": 0.0,
+      "max_rotation_rad": 0.0,
+      "measured_joint_count": 5,
+      "passed_threshold": 5,
+      "status": "COMPLETE"
+    },
+    "joint_level_pass": {
+      "denominator": 5,
+      "passed": 5,
+      "rate": 1.0
+    },
+    "joint_sweep_success": {
+      "denominator": 5,
+      "passed": 5,
+      "rate": 1.0
+    },
+    "non_degenerate_motion": {
+      "denominator": 5,
+      "passed": 5,
+      "rate": 1.0
+    },
+    "strict_kinematic_pass": {
+      "denominator": 3,
+      "passed": 3,
+      "rate": 1.0
+    },
+    "subtree_consistency": {
+      "denominator": 5,
+      "passed": 5,
+      "rate": 1.0
+    },
+    "valid_range": {
+      "denominator": 5,
+      "passed": 5,
+      "rate": 1.0
+    }
+  },
+  "n_eval": 3,
+  "parse_success": 3,
+  "schema_version": 1,
+  "status": "completed",
+  "status_counts": {
+    "completed": 3
+  },
+  "valid_tree": 3
+}

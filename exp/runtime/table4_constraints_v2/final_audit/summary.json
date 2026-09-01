@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "table4_constraints_v2",
+  "audit_status": "COMPLETE",
+  "audited_at_utc": "2026-08-12T08:10:57Z",
+  "frozen_inputs": {
+    "task_count": 18,
+    "constraint_count": 52,
+    "numeric_constraint_count": 20,
+    "count_constraint_count": 32,
+    "prompt_manifest_sha256": "0b46c15c65c46550cc25654ccca10e4de87f1b97e6bde89796ea3cc9b439065e",
+    "protocol_sha256": "6857194072ccb0ba3943d14a62f29c2364920ec01381a5475311535c1831031f",
+    "scorer_sha256": "d2983e299bb5467e5f5e937731c43b975b5725db953292edff7fd73b517b85d5",
+    "canonicalizer_sha256": "e46308fe8f3b653967ede6d4a75c881c012f55732542806fea2dde5003281b31",
+    "integrity_verifier_sha256": "517aea9575bb8c8fa5a193dfe94ee9d927a9c50495c514cb488031620831c73f"
+  },
+  "metric_definitions": {
+    "numeric_primary": "passed numeric constraints / 20",
+    "measurable_constraint_coverage": "measurable numeric constraints / 20",
+    "artifact_coverage": "successful final artifacts / 18 tasks",
+    "count_proxy": "passed exact-count constraints / 32 using name-matched renderable nodes; supplementary only"
+  },
+  "numeric_primary": [
+    {
+      "method": "blenderllm",
+      "display_name": "BlenderLLM",
+      "comparison_panel": "native_structured_generation",
+      "numeric_passed": 4,
+      "numeric_denominator": 20,
+      "numeric_rate": 0.2,
+      "numeric_measurable": 20,
+      "measurable_constraint_coverage": 1.0,
+      "artifact_success": 18,
+      "artifact_denominator": 18,
+      "artifact_coverage": 1.0,
+      "paper_backend_exact": true,
+      "source_summary": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/numeric_primary/blenderllm/run1/summary.json",
+      "source_summary_sha256": "6ff9ee75c7bc4076becce93ffc91b7c36f395ab0753c4493c8048fc4bd968009"
+    },
+    {
+      "method": "articraft_clean_v2",
+      "display_name": "Articraft (clean v2)",
+      "comparison_panel": "native_structured_generation",
+      "numeric_passed": 14,
+      "numeric_denominator": 20,
+      "numeric_rate": 0.7,
+      "numeric_measurable": 15,
+      "measurable_constraint_coverage": 0.75,
+      "artifact_success": 13,
+      "artifact_denominator": 18,
+      "artifact_coverage": 0.7222222222222222,
+      "paper_backend_exact": null,
+      "backend_note": "official Articraft code with DashScope qwen3.6-plus",
+      "source_summary": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/articraft_clean_v2/scorer_numeric_run1/summary.json",
+      "source_summary_sha256": "f0fe6308e4723fb88e3210d2c86d5eb88b0f8ad0337174047766106860cb811c"
+    },
+    {
+      "method": "lam",
+      "display_name": "LAM (adapted backend)",
+      "comparison_panel": "native_structured_generation",
+      "numeric_passed": 10,
+      "numeric_denominator": 20,
+      "numeric_rate": 0.5,
+      "numeric_measurable": 10,
+      "measurable_constraint_coverage": 0.5,
+      "artifact_success": 8,
+      "artifact_denominator": 18,
+      "artifact_coverage": 0.4444444444444444,
+      "paper_backend_exact": false,
+      "backend_note": "official LAM pipeline with DashScope OpenAI-compatible qwen3.8-max; timeout checkpoints excluded",
+      "source_summary": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2_lam_real/scorer_numeric_run1/summary.json",
+      "source_summary_sha256": "4fa61c1107bac2a1fdb1795e630a99b0aa802dbbb6ac90d998e605e5ffaa893c"
+    },
+    {
+      "method": "text_to_cadquery",
+      "display_name": "Text-to-CadQuery",
+      "comparison_panel": "native_cad_generation",
+      "numeric_passed": 0,
+      "numeric_denominator": 20,
+      "numeric_rate": 0.0,
+      "numeric_measurable": 13,
+      "measurable_constraint_coverage": 0.65,
+      "artifact_success": 11,
+      "artifact_denominator": 18,
+      "artifact_coverage": 0.6111111111111112,
+      "paper_backend_exact": true,
+      "source_summary": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_baselines/text_to_cadquery/benchmark_v2/score/summary.json",
+      "source_summary_sha256": "a8be265410c491740510429d30d82712ce6ed378a7a8206685d99cfc6469b5a8"
+    },
+    {
+      "method": "naive_same_llm",
+      "display_name": "Naive same-LLM",
+      "comparison_panel": "matched_llm_ablation",
+      "numeric_passed": 20,
+      "numeric_denominator": 20,
+      "numeric_rate": 1.0,
+      "numeric_measurable": 20,
+      "measurable_constraint_coverage": 1.0,
+      "artifact_success": 18,
+      "artifact_denominator": 18,
+      "artifact_coverage": 1.0,
+      "paper_backend_exact": null,
+      "source_summary": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/numeric_primary/naive_same_llm/run1/summary.json",
+      "source_summary_sha256": "92b98e59a7ed4baad42506b05aea877e10ffa6a93e06c9752d59b72b617f3375"
+    },
+    {
+      "method": "ours_full_docs",
+      "display_name": "Ours full public docs",
+      "comparison_panel": "matched_llm_ablation",
+      "numeric_passed": 11,
+      "numeric_denominator": 20,
+      "numeric_rate": 0.55,
+      "numeric_measurable": 11,
+      "measurable_constraint_coverage": 0.55,
+      "artifact_success": 10,
+      "artifact_denominator": 18,
+      "artifact_coverage": 0.5555555555555556,
+      "paper_backend_exact": null,
+      "source_summary": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/ours_full_docs_v1/score_numeric_run1/summary.json",
+      "source_summary_sha256": "94057a6d0a8434b7735ec1499c23e107f05f26f84c093ca8d3c59f708eb38d92",
+      "audit_side_workspace_incidents": 2,
+      "formal_task_effect": "none"
+    },
+    {
+      "method": "ours",
+      "display_name": "Ours narrow-doc diagnostic",
+      "comparison_panel": "diagnostic_only",
+      "numeric_passed": 1,
+      "numeric_denominator": 20,
+      "numeric_rate": 0.05,
+      "numeric_measurable": 1,
+      "measurable_constraint_coverage": 0.05,
+      "artifact_success": 1,
+      "artifact_denominator": 18,
+      "artifact_coverage": 0.05555555555555555,
+      "paper_backend_exact": null,
+      "source_summary": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/ours_valid_v2/score_numeric_run1/summary.json",
+      "source_summary_sha256": "0d1ee2eab4f83e4a4707168ccde8cb3ca8d3871f6ff66261eeb83a2aeacb62b3",
+      "diagnostic_reason": "11/18 tasks were fail-closed for documentation-scope violations"
+    }
+  ],
+  "native_generation_panel": [
+    {
+      "method": "blenderllm",
+      "modality": "structured",
+      "numeric_pass": "4/20",
+      "numeric_measurable": "20/20",
+      "artifact_coverage": "18/18",
+      "count_proxy": "23/32",
+      "status": "COMPLETE"
+    },
+    {
+      "method": "articraft_clean_v2",
+      "modality": "structured",
+      "numeric_pass": "14/20",
+      "numeric_measurable": "15/20",
+      "artifact_coverage": "13/18",
+      "count_proxy": "18/32",
+      "status": "COMPLETE_DASHSCOPE_BACKEND"
+    },
+    {
+      "method": "lam",
+      "modality": "structured",
+      "numeric_pass": "10/20",
+      "numeric_measurable": "10/20",
+      "artifact_coverage": "8/18",
+      "count_proxy": "11/32",
+      "status": "COMPLETE_ADAPTED_BACKEND",
+      "paper_backend_exact": false
+    },
+    {
+      "method": "text_to_cadquery",
+      "modality": "cad",
+      "numeric_pass": "0/20",
+      "numeric_measurable": "13/20",
+      "artifact_coverage": "11/18",
+      "count_proxy": "N/A",
+      "status": "COMPLETE"
+    },
+    {
+      "method": "cad_coder",
+      "modality": "image_to_cad_supplementary",
+      "numeric_pass": "N/A",
+      "numeric_measurable": "N/A",
+      "artifact_coverage": "15/18",
+      "count_proxy": "N/R",
+      "status": "EXECUTION_COMPLETE_SCORE_NOT_REPORTABLE"
+    }
+  ],
+  "matched_llm_ablation_panel": [
+    {
+      "method": "naive_same_llm",
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "high",
+      "repair_budget": 0,
+      "numeric_pass": "20/20",
+      "numeric_measurable": "20/20",
+      "artifact_coverage": "18/18",
+      "count_proxy": "29/32"
+    },
+    {
+      "method": "ours_full_docs",
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "high",
+      "repair_budget": 0,
+      "numeric_pass": "11/20",
+      "numeric_measurable": "11/20",
+      "artifact_coverage": "10/18",
+      "count_proxy": "14/32",
+      "protocol_role": "post-audit matched-LLM full-public-documentation ablation",
+      "audit_side_workspace_incidents": 2,
+      "formal_task_effect": "none"
+    }
+  ],
+  "diagnostic_panel": [
+    {
+      "method": "ours",
+      "display_name": "Ours narrow-doc diagnostic",
+      "numeric_pass": "1/20",
+      "artifact_coverage": "1/18",
+      "count_proxy": "2/32",
+      "fail_closed_tasks": 11,
+      "paper_use": "diagnostic only"
+    }
+  ],
+  "dataset_retrieval_reference_supplementary": [
+    {
+      "method": "artiverse_clip_retrieval_v1",
+      "display_name": "Artiverse prompt-only CLIP retrieval (dataset reference; not generation)",
+      "method_type": "fixed_dataset_prompt_only_retrieval_reference_control",
+      "same_prompt_generation_method": false,
+      "candidate_assets": 3544,
+      "eligible_assets": 3544,
+      "artifact_success": 18,
+      "artifact_denominator": 18,
+      "artifact_coverage": 1.0,
+      "numeric_passed": 1,
+      "numeric_denominator": 20,
+      "numeric_rate": 0.05,
+      "numeric_measurable": 20,
+      "measurable_constraint_coverage": 1.0,
+      "count_proxy_passed": 1,
+      "count_proxy_denominator": 32,
+      "count_proxy_rate": 0.03125,
+      "rank_fallbacks": 0,
+      "repair_attempts": 0,
+      "selection_replay_byte_identical": true,
+      "embedding_replay_byte_identical": true,
+      "invalid_future_timestamp_attempt_excluded": true,
+      "source_numeric_summary": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/artiverse_clip_retrieval_v1/score_numeric_run1/summary.json",
+      "source_numeric_summary_sha256": "3094a8623044e572cb9f59f21ed7f162bf3bc25ae8f64608e33f04c971b73aea",
+      "source_structured_summary": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/artiverse_clip_retrieval_v1/score_structured_run1/summary.json",
+      "source_structured_summary_sha256": "cf4ceb5ff7bf6dd8a406113cd4479d68a5a2ba5339391600fdf70d2b8e8d98bf"
+    }
+  ],
+  "named_node_count_proxy_supplementary": {
+    "warning": "This is a deterministic name-matched renderable-node proxy, not semantic object count. Subpart granularity and substring aliases can over-count, including drawer body/front/pull, wheel/caster stem/mount/hub/tire, door handles, and shelf supports. Do not use as the headline metric.",
+    "rows": [
+      {"method": "blenderllm", "passed": 23, "denominator": 32, "rate": 0.71875},
+      {"method": "articraft_clean_v2", "passed": 18, "denominator": 32, "rate": 0.5625},
+      {"method": "lam", "passed": 11, "denominator": 32, "rate": 0.34375},
+      {"method": "naive_same_llm", "passed": 29, "denominator": 32, "rate": 0.90625},
+      {"method": "ours_full_docs", "passed": 14, "denominator": 32, "rate": 0.4375},
+      {"method": "ours", "passed": 2, "denominator": 32, "rate": 0.0625},
+      {"method": "artiverse_clip_retrieval_v1", "passed": 1, "denominator": 32, "rate": 0.03125, "comparison_panel": "dataset_retrieval_reference_supplementary"}
+    ]
+  },
+  "not_reportable_and_gated": [
+    {
+      "method": "text2cad",
+      "status": "N/R",
+      "execution_status": "NOT_RUN_GATED_MODEL",
+      "attempted_tasks": 0,
+      "reason": "official checkpoint gated; anonymous fixed-revision request returned HTTP 401",
+      "numeric": "N/R",
+      "count": "N/R"
+    },
+    {
+      "method": "nurbgen",
+      "status": "N/R",
+      "execution_status": "NOT_RUN_GATED_MODEL",
+      "attempted_tasks": 0,
+      "reason": "official LoRA gated; anonymous fixed-revision request returned HTTP 401",
+      "numeric": "N/R",
+      "count": "N/R"
+    },
+    {
+      "method": "cad_coder",
+      "status": "PARTIALLY_REPORTABLE",
+      "execution_status": "18 attempted; 15 executable STEP+GLB artifacts",
+      "attempted_tasks": 18,
+      "reason": "no pre-output count judge was frozen and generation agent viewed four formal render packets",
+      "numeric": "N/A",
+      "count": "N/R",
+      "artifact_coverage": "15/18"
+    }
+  ],
+  "excluded_cohorts": [
+    {
+      "method": "articraft",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/articraft",
+      "reason": "legacy cohort had an out-of-workspace symlink boundary incident; diagnostic only and excluded from every aggregate row"
+    }
+  ],
+  "integrity_rebuild": {
+    "manifest_count": 8,
+    "manifest_rows": 144,
+    "successful_artifacts": 97,
+    "errors": 0,
+    "passed": true,
+    "run1": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/final_audit/integrity_rebuild_run1.json",
+    "run2": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2/final_audit/integrity_rebuild_run2.json",
+    "sha256_pair": [
+      "69b3e94412d7ab7423f90600839c9bb3dc2998b51d7073ad635b6639c1a89876",
+      "69b3e94412d7ab7423f90600839c9bb3dc2998b51d7073ad635b6639c1a89876"
+    ],
+    "byte_identical": true,
+    "method_label_note": "The narrow diagnostic manifest uses its frozen underlying method id 'ours'; the display label is not written into the source manifest."
+  },
+  "paper_readiness": {
+    "numeric_primary": "READY_WITH_PANEL_AND_BACKEND_DISCLOSURES",
+    "artifact_coverage": "READY",
+    "count_proxy": "SUPPLEMENTARY_ONLY",
+    "cad_coder_count": "N/R",
+    "old_articraft": "EXCLUDED",
+    "artiverse": "READY_AS_DATASET_RETRIEVAL_REFERENCE_SUPPLEMENTARY_ONLY"
+  }
+}

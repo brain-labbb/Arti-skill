@@ -1,0 +1,469 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "details": {
+        "input_count": 34
+      },
+      "id": "all_required_inputs_exist",
+      "pass": true
+    },
+    {
+      "details": {
+        "protocol_sha256": "3f2726647ebc79a177262aaad39d3c863c8791150400b1e479229603862f6d79"
+      },
+      "id": "frozen_protocol_shape_and_denominator",
+      "pass": true
+    },
+    {
+      "details": {
+        "bindings": {
+          "common_evaluator_sha256": "92eea2fa83d23794d3c9c31018e869dea32d1457f0d48b6a149ee22827240d7e",
+          "hidden_specs_sha256": "46d8e9fcbb33ae5f1bc2a9cb2edd1983d39b719a98b69bed9b0b689f408b7d14",
+          "manifest_sha256": "29334b672d7f192245773e6dc90877ecba090f352eaf04875aba6e594d56173a",
+          "package_schema_sha256": "1af0cf91204ecd5785599cb28febed9043c45bc28dfc76ac5f320d00e90d9460",
+          "protocol_sha256": "3f2726647ebc79a177262aaad39d3c863c8791150400b1e479229603862f6d79",
+          "result_schema_sha256": "676588fafdf30b8f98969593fccf399a92a67bc7b5e9d433542631c20af60754"
+        }
+      },
+      "id": "frozen_protocol_file_bindings_match_current_bytes",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "frozen_public_manifest_is_54_by_3",
+      "pass": true
+    },
+    {
+      "details": {
+        "implementations": {
+          "articraft": {
+            "adapter_entrypoint": "exp/scripts/run_table1_articraft_authoring.py",
+            "adapter_sha256": "722450013f5be593e3bdb6da2b8b40230d1719b954443c22734588f11a77d9b8",
+            "checkout_path": "articraft_data",
+            "checks": {
+              "adapter_path_exact": true,
+              "adapter_regular": true,
+              "adapter_sha256_matches": true,
+              "checkout_is_git_root": true,
+              "checkout_unique_path_present": true,
+              "commit_matches": true,
+              "entrypoint_matches_head": true,
+              "entrypoint_regular": true,
+              "entrypoint_tracked": true,
+              "git_tree_matches": true,
+              "provenance_nonempty": true,
+              "tracked_clean_matches": true
+            },
+            "commit": "06cd75fbc9e90fae33f127b494d13c35090356be",
+            "entrypoint": "articraft_data/agent/runner_cli.py",
+            "entrypoint_sha256": "86920541a5e268042f6efe281a59b86f63164be00ddcc0db5f01ce53904159a4",
+            "git_tree": "e9cfec5562e4a518bf8f57ee091c7255249431ea",
+            "provenance": "Local pipeline mirror of the mattzh72/articraft codebase; not the supported successor checkout",
+            "tracked_clean": true
+          },
+          "lam": {
+            "adapter_entrypoint": "exp/scripts/run_table1_lam_authoring.py",
+            "adapter_sha256": "188bd002bd255bb4102bde5ce13faac545b89e49140694eeb2c5818bb606e1eb",
+            "checkout_path": "exp/baselines/LAM-official",
+            "checks": {
+              "adapter_path_exact": true,
+              "adapter_regular": true,
+              "adapter_sha256_matches": true,
+              "checkout_is_git_root": true,
+              "checkout_unique_path_present": true,
+              "commit_matches": true,
+              "entrypoint_matches_head": true,
+              "entrypoint_regular": true,
+              "entrypoint_tracked": true,
+              "git_tree_matches": true,
+              "provenance_nonempty": true,
+              "tracked_clean_matches": true
+            },
+            "commit": "0b3a87beb8c35273a5acf8681221791aff746d8e",
+            "entrypoint": "exp/baselines/LAM-official/run_pipeline.py",
+            "entrypoint_sha256": "07955dbe251f78e0e4f3dcbf44b7a2fde63de7de087dc9a9700e8ebb0cc9fff6",
+            "git_tree": "684d2b8162d6ecbf85cd9924967314c0ee4ec609",
+            "provenance": "Official gaoypeng/LAM checkout",
+            "tracked_clean": true
+          },
+          "pva": {
+            "adapter_entrypoint": "exp/scripts/run_table1_pva_authoring.py",
+            "adapter_sha256": "51be559deb00d3d4ad139f6cd9de2362574d190ba0fbc6ab01678aeec1316d58",
+            "checkout_path": "arti-template",
+            "checks": {
+              "adapter_path_exact": true,
+              "adapter_regular": true,
+              "adapter_sha256_matches": true,
+              "checkout_is_git_root": true,
+              "checkout_unique_path_present": true,
+              "commit_matches": true,
+              "entrypoint_matches_head": true,
+              "entrypoint_regular": true,
+              "entrypoint_tracked": true,
+              "git_tree_matches": true,
+              "provenance_nonempty": true,
+              "tracked_clean_matches": true
+            },
+            "commit": "01816391974d8e1fcf843ed05c7bf1be61621f65",
+            "entrypoint": "arti-template/agent/compiler.py",
+            "entrypoint_sha256": "4a5152be0c9e7f715fac23674e94e3eafefc9c5f7153fc8ec6c7ded60d841795",
+            "git_tree": "be4f35dd90e0f6755b3f48dd188ffa662a047785",
+            "provenance": "Nano3D project nested arti-template repository",
+            "tracked_clean": true
+          }
+        }
+      },
+      "id": "method_checkout_and_adapter_bindings_are_unique_and_current",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "common_preflight_bound_to_final_inputs",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "common_preflight_script_hash_current",
+      "pass": true
+    },
+    {
+      "details": {
+        "frozen_consistency": {
+          "blockers": [],
+          "failed_checks": 0,
+          "passed_checks": 112,
+          "ready": true,
+          "status": "READY",
+          "total_checks": 112
+        }
+      },
+      "id": "common_frozen_consistency_112_of_112_ready",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "common_preflight_implementation_records_match_current",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "common_adapter_readiness_is_separate_and_false",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "common_preflight_made_zero_calls_and_attempts",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "common_evaluator_self_test_6_of_6_passes",
+      "pass": true
+    },
+    {
+      "details": {
+        "protocol_sha256": "3f2726647ebc79a177262aaad39d3c863c8791150400b1e479229603862f6d79"
+      },
+      "id": "common_evaluator_reports_bind_final_protocol",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "common_evaluator_positive_and_negative_semantics",
+      "pass": true
+    },
+    {
+      "details": {
+        "blocker_count": 1
+      },
+      "id": "pva_authoring_prepare_is_162_zero_call_blocked",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "pva_authoring_hidden_read_isolation_blocks_execution",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "lam_authoring_self_check_17_of_17_current",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "lam_authoring_prepare_is_162_zero_attempt_zero_call",
+      "pass": true
+    },
+    {
+      "details": {
+        "blocker_count": 8
+      },
+      "id": "lam_authoring_has_exactly_8_blockers_and_nr_metrics",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "articraft_authoring_prepare_is_162_zero_attempt_zero_call",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "articraft_authoring_self_check_and_preflight_pass",
+      "pass": true
+    },
+    {
+      "details": {
+        "blocker_codes": [
+          "NATIVE_RUN_STORAGE_ISOLATION_UNWIRED",
+          "COMMON_EVALUATOR_ADAPTER_NOT_IMPLEMENTED",
+          "COMMON_REPAIR_ADAPTER_NOT_IMPLEMENTED",
+          "COMMON_RESULT_WRITER_NOT_IMPLEMENTED"
+        ]
+      },
+      "id": "articraft_authoring_has_exactly_4_blockers_and_nr_metrics",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "method_prepare_snapshot_timestamps_are_internally_consistent",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "three_method_authoring_output_roots_absent",
+      "pass": true
+    },
+    {
+      "details": {
+        "cells": 24,
+        "methods": 3
+      },
+      "id": "all_table1a_metrics_are_nr",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "pva_frozen_protocol_pair",
+      "pass": true
+    },
+    {
+      "details": {
+        "seeds": 36,
+        "templates": 33
+      },
+      "id": "pva_frozen_manifest_is_33_by_36",
+      "pass": true
+    },
+    {
+      "details": {
+        "seed_count": 1188
+      },
+      "id": "pva_frozen_seed_denominator_is_1188",
+      "pass": true
+    },
+    {
+      "details": {
+        "artifact_saved": 1188,
+        "compile_pass": 1188,
+        "qc_pass": 1188
+      },
+      "id": "pva_frozen_seed_counts_conserved",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "pva_frozen_all_templates_are_36_of_36",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "pva_corner_cohort_matches_frozen_seed_cohort",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "pva_corner_counts_conserved",
+      "pass": true
+    },
+    {
+      "details": {
+        "intended_cases": 1188
+      },
+      "id": "pva_current_manifest_is_33_by_36",
+      "pass": true
+    },
+    {
+      "details": {
+        "intended_cases": 1188,
+        "observed_cases": 36
+      },
+      "id": "pva_current_rerun_is_partial_and_not_promoted",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "pva_current_partial_counts_conserved",
+      "pass": true
+    },
+    {
+      "details": {
+        "checked": 33
+      },
+      "id": "pva_all_frozen_source_hashes_checked",
+      "pass": true
+    },
+    {
+      "details": {
+        "drifted": 33,
+        "matches_frozen": 0
+      },
+      "id": "pva_all_frozen_sources_drifted_from_current_head",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "pva_current_manifest_hashes_match_current_files",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "lam_release_upstream_self_check_passes",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "lam_release_audit_authoring_claim_not_promoted",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "articraft_release_upstream_self_check_passes",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "articraft_release_audit_authoring_claim_not_promoted",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "release_telemetry_not_mapped_to_authoring_metrics",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "infinite_upstream_self_check_passes",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "infinite_public_180s_denominators_exact",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "infinite_matched_180s_denominators_exact",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "infinite_full_qc_and_corner_fail_closed",
+      "pass": true
+    },
+    {
+      "details": {},
+      "id": "missing_state_vocabulary_preserved",
+      "pass": true
+    },
+    {
+      "details": {
+        "implementation_files": 6,
+        "path_files": 34,
+        "template_files": 33
+      },
+      "id": "all_inputs_stable_during_aggregation",
+      "pass": true
+    }
+  ],
+  "generated_at_utc": "2026-08-12T08:34:36.521297+00:00",
+  "input_sha256": {
+    "articraft_adapter_entrypoint": "722450013f5be593e3bdb6da2b8b40230d1719b954443c22734588f11a77d9b8",
+    "articraft_authoring_manifest": "ecb4e08b4d5402f7d8e52a1f164eecead2bae0a34d8db44a1c6e2372a71d5be0",
+    "articraft_authoring_preflight": "0358890b56e20b6246c09c8b4ba6c4b48837c65f86a4ead81c6bc71ffd4cd493",
+    "articraft_authoring_self_check": "422c86a6b24688e83d143b29a83f01ffa6ae443dd84cb06e7d999f459368b3d6",
+    "articraft_authoring_summary": "f97d69b3b0d143788292b53626c55fa99da9e88003f3082e235aeea130f53484",
+    "articraft_implementation_entrypoint": "86920541a5e268042f6efe281a59b86f63164be00ddcc0db5f01ce53904159a4",
+    "articraft_release_self_check": "91a59420474f2cbfe315cf8a5c3ac715d81e45062631f536315f245b28af17fe",
+    "articraft_release_summary": "e116765a4e49f1ee05e31997f90dfac2b3cbe70d8288dcf712f934bb0244023d",
+    "common_evaluator": "92eea2fa83d23794d3c9c31018e869dea32d1457f0d48b6a149ee22827240d7e",
+    "common_manifest": "5ae3dc34639399eb6dddad08a2cb125bc483bb69807a4cdb4560b8454eb735e9",
+    "common_preflight_script": "679af949d24f7823acdf2f0ef4f3acfdc7faa6fff45dc56812591101b318a1a5",
+    "common_self_check": "da42a51af0f44eaa44016ec72332d8ef4ceed8f26e5ddd333e00cafddeddf288",
+    "common_summary": "04ad9d3fc90d5040b8d2bfcdf545dea6ecbb4f07f81088436255ce321b2f5a0e",
+    "evaluator_negative_report": "f694414a53730a14a540a484fa9e044294093032267c155a82d002884298576d",
+    "evaluator_positive_report": "a3ce2bee682ab7ef76d66b58295fb82f1c83c084a3320d63fe5391ebe940cd5d",
+    "evaluator_self_check": "ecbab6b12e598ae7061da62f351385840f0c304452d69ea85207b56e1a820062",
+    "frozen_manifest": "29334b672d7f192245773e6dc90877ecba090f352eaf04875aba6e594d56173a",
+    "frozen_protocol": "3f2726647ebc79a177262aaad39d3c863c8791150400b1e479229603862f6d79",
+    "hidden_specs": "46d8e9fcbb33ae5f1bc2a9cb2edd1983d39b719a98b69bed9b0b689f408b7d14",
+    "infinite_self_check": "911f3d9e518b60e2eb489b23fa777b316614b78eccd50f780a9ff4b4ef1061b5",
+    "infinite_summary": "8a3fea96a7c90535e0e0d59a73255c286d86ebfafebc7c2acb315e382c365ae9",
+    "lam_adapter_entrypoint": "188bd002bd255bb4102bde5ce13faac545b89e49140694eeb2c5818bb606e1eb",
+    "lam_authoring_manifest": "8982885a32f3fa6556d5e702274a22cbfe15bd4c83e64e42319af4c5796dfe81",
+    "lam_authoring_report": "5e86215bdd0fdf6def3c6c03cabd5b1ee10c5c8217eb5786030b4c468630cd7a",
+    "lam_authoring_self_check": "8d01064723d3071a8b5a4ca7d118badf9e69a431bfc4eb581605c2c8181c996e",
+    "lam_authoring_summary": "5ab71ff6692fbbee54e1f18a72428e863fb5755e6df94adf963b752651d290c2",
+    "lam_implementation_entrypoint": "07955dbe251f78e0e4f3dcbf44b7a2fde63de7de087dc9a9700e8ebb0cc9fff6",
+    "lam_release_self_check": "270dd54ceaf18ae5c7be0e165c57cf43ed68a6ad4aa9ecce673a4d7bf9a75a2e",
+    "lam_release_summary": "e086730ce3341370d835415dec5ec151c6a3fa2547133cc67580f16cd8e69606",
+    "package_schema": "1af0cf91204ecd5785599cb28febed9043c45bc28dfc76ac5f320d00e90d9460",
+    "pva_adapter_entrypoint": "51be559deb00d3d4ad139f6cd9de2362574d190ba0fbc6ab01678aeec1316d58",
+    "pva_authoring_manifest": "6dca76f95268659f6df3eea661d573b2f305d20180c2307d6f6f9ca1aac972ee",
+    "pva_current_manifest": "4a0d720a8418a03c2c27f63171b95d00197108c0be06d1bb7c0d24956b621567",
+    "pva_current_summary": "a662999dd109f95fabfb3c0abc75af81c661ab829e93d374b4f10bf15023952c",
+    "pva_current_template_Astronomy_Antenna_dish": "7fb3d8f04d413473409583d7fd0cb5cda8f486c8e608a3535dec43253ef8ba28",
+    "pva_current_template_Astronomy_Pressurised_module_door": "0559a429b90a41fbf08ccc814966a0fa592e551700b4a447ea450f9062d60f6f",
+    "pva_current_template_Astronomy_Space_shuttle": "3514d58d74ac408329ab358b44627f78445db5f031959553acc8cdbb5b97e741",
+    "pva_current_template_Bag_Suitcase_Shopping_bucket": "7899b79828f7464319062efe5543cd8466d8e2adfe05baf96d4edd9bd09259ff",
+    "pva_current_template_Door_Double_Door": "418ed1e9b78565175ecc2e8db28472778dfb8eb4bc7e75080833ee64b5b81a64",
+    "pva_current_template_Door_Other": "5ac26c45087edf12860b8d1c6590ef66c6b9730f41899eedaf7a0e45bd8baea4",
+    "pva_current_template_Door_Trap_door": "a5dd2c29e5947e47e55a09f728f7f3d225d7d938574237fe485091f9b1126f90",
+    "pva_current_template_Electrical_Wiring_Wire_stripper": "499120b788a12aac6ff31e2d2a88013aaf493984d98cfec124158dc46699a600",
+    "pva_current_template_Handtools_clothes_peg": "758dea6e05577db21578c506b9a804127cd553b7d6b8327c40777adf59f1d1e3",
+    "pva_current_template_Household_Laundry_Clothes_drying_rack_Laundry_drying_rack": "9cd47cceadd1d913438d88782172082717c338e31e3a49c9713fc5e5847000aa",
+    "pva_current_template_Industrial_Mine_cart": "aa096f7e09c8a00f7d2ef7a28001df1a609059eb3887a2bed0e44c6d3eb64de9",
+    "pva_current_template_Stationary_Pencil_sharpener": "1b5861cae0e1e82df02cb85cb27dc39302e251534f628466f9aeca0b0c8455ba",
+    "pva_current_template_Urban_Environment_bucket1": "3b15f87fd3be77e8d18fb7243ea2e4e1e473a25c06c0a5c802b3e71506743d89",
+    "pva_current_template_Urban_Environment_bucket2": "eedcec8b549b3016b69c6c5ef6aabe12af67f60db63ff50333c5cd97de6c59d7",
+    "pva_current_template_Vehicle_Sports_car": "10960693ef751a8dcf6b1c5cb6f0f30c04f87ab380d65699cf0e21a6d2f9b6ae",
+    "pva_current_template_pictureX_0611_Butter_maker": "aed5dcba3f8e2c85df5a131ddf8ec4b172d2e777083eeeeb06291d6be7c38464",
+    "pva_current_template_pictureX_0611_C_shaped_sofa_side_table": "1ffcca836484677956b7bebe52a039667fa63723b10e71adb61ff4b7f016c462",
+    "pva_current_template_pictureX_0611_Dressing_table": "4058b35c4140e60dec6b1689638a5d974fdc0af2816f3e56c66941f2bfd38854",
+    "pva_current_template_pictureX_0611_Folding_table5": "7a2ca35ec52a181faa1fc25657c64ec93bb8da562ae7b56fd6c0025c70c4a5b4",
+    "pva_current_template_pictureX_0611_Garden_pruner": "f7812b15bb37480c4d8772c7bb039d69ca00d8bd802ad75d4374743b75228cb4",
+    "pva_current_template_pictureX_0611_Hand_crank_clothes_wringer": "aef8bc96bc1fd649726e806bdee1ea69111b81002e4ea0d5fc37a677b0103986",
+    "pva_current_template_pictureX_0611_Hole_punch": "d4fab224e4217b59afdf62896afa52525be21e2b669f536ab48c76cbaecbab92",
+    "pva_current_template_pictureX_0611_Ice_crream_machine": "aeb7e7de80a20598438dca61b42ff9bf184660b3a78f2838ea81a54182ed7568",
+    "pva_current_template_pictureX_0611_Industrial_rolling_work_table": "653513b63eb1b44009e8878894012c4e9a13bf0b69e9a68ba28a68def34c4e39",
+    "pva_current_template_pictureX_0611_bi_fold_closet_door_system": "f2f1d420fe8064ed8b9ea6c7224b69dbd03df5059a7490def21c7c11823073ad",
+    "pva_current_template_pictureX_0611_drawing_compass_with_adjustable_legs": "b7e0c94cdcee2dc58ea56f3a33cf4029349bb4d99023cf269c42a6a536de86f1",
+    "pva_current_template_pictureX_0611_ergonomic_clamp_with_adjustable": "6f0064f49ec6366c64083c05b6f5197bba762e07499af7fc726c9b08d4b8d9c5",
+    "pva_current_template_pictureX_0611_ergonomic_clamp_with_adjustable_components": "4211c3c7f2f3393fd193d05311f729880daef02ce9dbf67af34e1b86d2b46c45",
+    "pva_current_template_pictureX_0611_garlic_press": "f83c009d2f73f5956cda19229520a6470d5744cb667a2b756b0d981167c70e9f",
+    "pva_current_template_pictureX_0611_guitar_tuning_peg_mechanism": "166df9aa1c3ebb0bf0668ab879cce3cc92eaa7e07e449932e95d57af865e66da",
+    "pva_current_template_pictureX_0611_juicer_press_with_handle": "7e4335eb905a15998442d52ff3a4865287d7a0a4822d5b6205cbc02e15d709b6",
+    "pva_current_template_riot_shield": "067f9347ead3f707c1a258f781e22be9d81cb83c00b687b1de1049a651462a5f",
+    "pva_current_template_sailboat_winch_with_pawl_and_handle": "593d468483ec696178ae0e32ca7507e01eb71af41bb170f56bbb73a44f55b4da",
+    "pva_frozen_corner_manifest": "980e6fc8d566125b449ca77a9d00b632ab02f7676cf1d337582f4f72cecf4fef",
+    "pva_frozen_corner_summary": "4498d64111db469ac3299402eba4e41e40631ae7934409d8d791641d05f8cc00",
+    "pva_frozen_seed_manifest": "ff38a2cb775356cf0f642817cf7d5e51f486c86e30b2242c35535cb4e288ebe5",
+    "pva_frozen_seed_summary": "d309ea3b213802de41f1caf417e55bee65fc29b03469f5378745ac0764bb13b9",
+    "pva_implementation_entrypoint": "4a5152be0c9e7f715fac23674e94e3eafefc9c5f7153fc8ec6c7ded60d841795",
+    "result_schema": "676588fafdf30b8f98969593fccf399a92a67bc7b5e9d433542631c20af60754"
+  },
+  "passed": 49,
+  "protocol_id": "nano3d_table1_reliability_combined_v1_self_check",
+  "schema_version": 1,
+  "total": 49
+}

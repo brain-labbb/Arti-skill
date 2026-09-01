@@ -1,0 +1,1252 @@
+{
+  "created_at": "2026-08-26T06:12:38.937287Z",
+  "datasets": [
+    {
+      "J_eval": 37144,
+      "N_eval": 9996,
+      "dataset": "Articraft-10K",
+      "display": "Articraft-10K",
+      "evidence": {
+        "summary": "articraft/summary.json"
+      },
+      "metrics": {
+        "aor": {
+          "reason": "exact_overlap_volume_backend_not_registered",
+          "status": "N/E"
+        },
+        "collision_free_range": {
+          "denominator": 780024,
+          "passed_states": 204039,
+          "rate": 0.261580412910372
+        },
+        "collision_state_rate": {
+          "collision_states": 1065315,
+          "denominator": 1429700,
+          "executed_states": 467255,
+          "rate": 0.7451318458417849,
+          "unexecuted_states": 962445
+        },
+        "max_penetration": {
+          "denominator": 9996,
+          "maximum_observed_normalized": 0.6676320054484359,
+          "measured_assets": 3058,
+          "observed_assets": 3059,
+          "status": "PARTIAL"
+        },
+        "multi_joint_sobol_cf": {
+          "denominator": 9996,
+          "passed": 2018,
+          "rate": 0.20188075230092037
+        },
+        "rest_all_pair_cf": {
+          "denominator": 9996,
+          "passed": 169,
+          "rate": 0.016906762705082033
+        },
+        "rest_non_adjacent_cf": {
+          "denominator": 9996,
+          "passed": 2532,
+          "rate": 0.2533013205282113
+        },
+        "single_joint_sweep_cf": {
+          "denominator": 9996,
+          "passed": 2065,
+          "rate": 0.20658263305322128
+        },
+        "strict_collision_pass": {
+          "denominator": 9996,
+          "passed": 1988,
+          "rate": 0.19887955182072828
+        }
+      },
+      "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_full_release_20260826/articraft",
+      "slug": "articraft",
+      "source_bindings": [
+        {
+          "name": "Articraft-10K",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K/released_urdf"
+        }
+      ],
+      "status": "COMPLETE_WITH_RETAINED_FAILURES"
+    },
+    {
+      "J_eval": 10381,
+      "N_eval": 3217,
+      "dataset": "LAM released outputs",
+      "display": "LAM released outputs",
+      "evidence": {
+        "summary": "lam/summary.json"
+      },
+      "metrics": {
+        "aor": {
+          "reason": "exact_overlap_volume_backend_not_registered",
+          "status": "N/E"
+        },
+        "collision_free_range": {
+          "denominator": 218001,
+          "passed_states": 23640,
+          "rate": 0.10843986954188284
+        },
+        "collision_state_rate": {
+          "collision_states": 365147,
+          "denominator": 421026,
+          "executed_states": 182205,
+          "rate": 0.86727898039551,
+          "unexecuted_states": 238821
+        },
+        "max_penetration": {
+          "denominator": 3217,
+          "maximum_observed_normalized": 0.8967119230721343,
+          "measured_assets": 1320,
+          "observed_assets": 1330,
+          "status": "PARTIAL"
+        },
+        "multi_joint_sobol_cf": {
+          "denominator": 3217,
+          "passed": 384,
+          "rate": 0.11936586882188374
+        },
+        "rest_all_pair_cf": {
+          "denominator": 3217,
+          "passed": 9,
+          "rate": 0.0027976375505129004
+        },
+        "rest_non_adjacent_cf": {
+          "denominator": 3217,
+          "passed": 477,
+          "rate": 0.1482747901771837
+        },
+        "single_joint_sweep_cf": {
+          "denominator": 3217,
+          "passed": 404,
+          "rate": 0.12558284115635684
+        },
+        "strict_collision_pass": {
+          "denominator": 3217,
+          "passed": 378,
+          "rate": 0.1175007771215418
+        }
+      },
+      "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_full_release_20260826/lam",
+      "slug": "lam",
+      "source_bindings": [
+        {
+          "name": "LAM",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code"
+        }
+      ],
+      "status": "COMPLETE_WITH_RETAINED_FAILURES"
+    },
+    {
+      "J_eval": 16332,
+      "N_eval": 3544,
+      "dataset": "Artiverse",
+      "display": "Artiverse",
+      "evidence": {
+        "summary": "artiverse/summary.json"
+      },
+      "metrics": {
+        "aor": {
+          "reason": "exact_overlap_volume_backend_not_registered",
+          "status": "N/E"
+        },
+        "collision_free_range": {
+          "denominator": 342972,
+          "passed_states": 96580,
+          "rate": 0.28159733156059386
+        },
+        "collision_state_rate": {
+          "collision_states": 326510,
+          "denominator": 573140,
+          "executed_states": 559732,
+          "rate": 0.5696862895627596,
+          "unexecuted_states": 13408
+        },
+        "max_penetration": {
+          "denominator": 3544,
+          "maximum_observed_normalized": 0.6897763299637089,
+          "measured_assets": 3515,
+          "observed_assets": 3520,
+          "status": "PARTIAL"
+        },
+        "multi_joint_sobol_cf": {
+          "denominator": 3544,
+          "passed": 1223,
+          "rate": 0.3450902934537246
+        },
+        "rest_all_pair_cf": {
+          "denominator": 3544,
+          "passed": 48,
+          "rate": 0.013544018058690745
+        },
+        "rest_non_adjacent_cf": {
+          "denominator": 3544,
+          "passed": 1444,
+          "rate": 0.4074492099322799
+        },
+        "single_joint_sweep_cf": {
+          "denominator": 3544,
+          "passed": 1251,
+          "rate": 0.35299097065462753
+        },
+        "strict_collision_pass": {
+          "denominator": 3544,
+          "passed": 1118,
+          "rate": 0.3154627539503386
+        }
+      },
+      "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_full_release_20260826/artiverse",
+      "slug": "artiverse",
+      "source_bindings": [
+        {
+          "name": "Artiverse",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/artiverse"
+        }
+      ],
+      "status": "COMPLETE_WITH_RETAINED_FAILURES"
+    },
+    {
+      "J_eval": 11971,
+      "N_eval": 2347,
+      "dataset": "PartNet-Mobility",
+      "display": "PartNet-Mobility",
+      "evidence": {
+        "summary": "partnet/summary.json"
+      },
+      "metrics": {
+        "aor": {
+          "reason": "exact_overlap_volume_backend_not_registered",
+          "status": "N/E"
+        },
+        "collision_free_range": {
+          "denominator": 251391,
+          "passed_states": 141022,
+          "rate": 0.5609667808314538
+        },
+        "collision_state_rate": {
+          "collision_states": 140930,
+          "denominator": 403946,
+          "executed_states": 399658,
+          "rate": 0.34888326657523533,
+          "unexecuted_states": 4288
+        },
+        "max_penetration": {
+          "denominator": 2347,
+          "maximum_observed_normalized": 0.6469602597341845,
+          "measured_assets": 2313,
+          "observed_assets": 2314,
+          "status": "PARTIAL"
+        },
+        "multi_joint_sobol_cf": {
+          "denominator": 2347,
+          "passed": 1705,
+          "rate": 0.7264593097571368
+        },
+        "rest_all_pair_cf": {
+          "denominator": 2347,
+          "passed": 70,
+          "rate": 0.02982530890498509
+        },
+        "rest_non_adjacent_cf": {
+          "denominator": 2347,
+          "passed": 1819,
+          "rate": 0.7750319556881125
+        },
+        "single_joint_sweep_cf": {
+          "denominator": 2347,
+          "passed": 1727,
+          "rate": 0.735832978270132
+        },
+        "strict_collision_pass": {
+          "denominator": 2347,
+          "passed": 1665,
+          "rate": 0.7094162760971453
+        }
+      },
+      "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_full_release_20260826/partnet",
+      "slug": "partnet",
+      "source_bindings": [
+        {
+          "name": "PartNet-Mobility",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/PartNet-Mobility/data/dataset"
+        }
+      ],
+      "status": "COMPLETE_WITH_RETAINED_FAILURES"
+    },
+    {
+      "J_eval": 9883,
+      "N_eval": 2024,
+      "dataset": "PhysX-Mobility",
+      "display": "PhysX-Mobility",
+      "evidence": {
+        "summary": "physx/summary.json"
+      },
+      "metrics": {
+        "aor": {
+          "reason": "exact_overlap_volume_backend_not_registered",
+          "status": "N/E"
+        },
+        "collision_free_range": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "collision_state_rate": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "max_penetration": {
+          "denominator": 2024,
+          "maximum_observed_normalized": null,
+          "measured_assets": 0,
+          "observed_assets": 0,
+          "reason": "empty_collision_shape_union",
+          "status": "N/E"
+        },
+        "multi_joint_sobol_cf": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "rest_all_pair_cf": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "rest_non_adjacent_cf": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "single_joint_sweep_cf": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "strict_collision_pass": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        }
+      },
+      "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_full_release_20260826/physx",
+      "slug": "physx",
+      "source_bindings": [
+        {
+          "name": "PhysX-Mobility",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/PhysX-Mobility/extracted/PhysX_mobility"
+        }
+      ],
+      "status": "BLOCKED"
+    },
+    {
+      "J_eval": 11009,
+      "N_eval": 4956,
+      "dataset": "SketchMobility",
+      "display": "SketchMobility",
+      "evidence": {
+        "summary": "sketch/summary.json"
+      },
+      "metrics": {
+        "aor": {
+          "reason": "exact_overlap_volume_backend_not_registered",
+          "status": "N/E"
+        },
+        "collision_free_range": {
+          "denominator": 231189,
+          "passed_states": 113684,
+          "rate": 0.491736198521556
+        },
+        "collision_state_rate": {
+          "collision_states": 292617,
+          "denominator": 553329,
+          "executed_states": 341283,
+          "rate": 0.5288300450545697,
+          "unexecuted_states": 212046
+        },
+        "max_penetration": {
+          "denominator": 4956,
+          "maximum_observed_normalized": 0.5390616288108241,
+          "measured_assets": 2777,
+          "observed_assets": 2779,
+          "status": "PARTIAL"
+        },
+        "multi_joint_sobol_cf": {
+          "denominator": 4956,
+          "passed": 2001,
+          "rate": 0.40375302663438256
+        },
+        "rest_all_pair_cf": {
+          "denominator": 4956,
+          "passed": 33,
+          "rate": 0.006658595641646489
+        },
+        "rest_non_adjacent_cf": {
+          "denominator": 4956,
+          "passed": 2184,
+          "rate": 0.4406779661016949
+        },
+        "single_joint_sweep_cf": {
+          "denominator": 4956,
+          "passed": 1978,
+          "rate": 0.39911218724778047
+        },
+        "strict_collision_pass": {
+          "denominator": 4956,
+          "passed": 1882,
+          "rate": 0.37974172719935434
+        }
+      },
+      "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_full_release_20260826/sketch",
+      "slug": "sketch",
+      "source_bindings": [
+        {
+          "name": "SketchMobility",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/SketchMobility/data"
+        }
+      ],
+      "status": "COMPLETE_WITH_RETAINED_FAILURES"
+    },
+    {
+      "J_eval": 4723,
+      "N_eval": 720,
+      "dataset": "Infinite Mobility",
+      "display": "Infinite Mobility",
+      "evidence": {
+        "summary": "infinite/summary.json"
+      },
+      "metrics": {
+        "aor": {
+          "reason": "exact_overlap_volume_backend_not_registered",
+          "status": "N/E"
+        },
+        "collision_free_range": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "collision_state_rate": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "max_penetration": {
+          "denominator": 720,
+          "maximum_observed_normalized": null,
+          "measured_assets": 0,
+          "observed_assets": 0,
+          "reason": "empty_collision_shape_union",
+          "status": "N/E"
+        },
+        "multi_joint_sobol_cf": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "rest_all_pair_cf": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "rest_non_adjacent_cf": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "single_joint_sweep_cf": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "strict_collision_pass": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        }
+      },
+      "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_full_release_20260826/infinite",
+      "slug": "infinite",
+      "source_bindings": [
+        {
+          "name": "Infinite Mobility",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/infinite_mobility_urdf_table123_cohort/manifest.json"
+        },
+        {
+          "bytes": 79724887,
+          "name": "parts_zip",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/parts.zip",
+          "sha256": "9d501098ca5516fdb347c95e1c18170900563cd133e489bc7f0020515e643e16"
+        },
+        {
+          "bytes": 7497979,
+          "name": "infinite_cohort_manifest",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/infinite_mobility_urdf_table123_cohort/manifest.json",
+          "sha256": "cfd9c06ea35dcec57c53d44dbf52903ecba6f33321075495c97c58fe30d23c08"
+        }
+      ],
+      "status": "BLOCKED"
+    },
+    {
+      "J_eval": 31975,
+      "N_eval": 8226,
+      "dataset": "Infinigen-Sim",
+      "display": "Infinigen-Sim",
+      "evidence": {
+        "summary": "infinigen/summary.json"
+      },
+      "metrics": {
+        "aor": {
+          "reason": "exact_overlap_volume_backend_not_registered",
+          "status": "N/E"
+        },
+        "collision_free_range": {
+          "denominator": 671475,
+          "passed_states": 476993,
+          "rate": 0.7103659853308016
+        },
+        "collision_state_rate": {
+          "collision_states": 298941,
+          "denominator": 1200149,
+          "executed_states": 1200149,
+          "rate": 0.24908657175067428,
+          "unexecuted_states": 0
+        },
+        "max_penetration": {
+          "denominator": 8226,
+          "maximum_observed_normalized": 0.8095876338602532,
+          "measured_assets": 8226,
+          "observed_assets": 8226,
+          "status": "COMPLETE"
+        },
+        "multi_joint_sobol_cf": {
+          "denominator": 8226,
+          "passed": 5100,
+          "rate": 0.6199854121079504
+        },
+        "rest_all_pair_cf": {
+          "denominator": 8226,
+          "passed": 94,
+          "rate": 0.011427182105519086
+        },
+        "rest_non_adjacent_cf": {
+          "denominator": 8226,
+          "passed": 6836,
+          "rate": 0.8310235837588135
+        },
+        "single_joint_sweep_cf": {
+          "denominator": 8226,
+          "passed": 5045,
+          "rate": 0.613299294918551
+        },
+        "strict_collision_pass": {
+          "denominator": 8226,
+          "passed": 4746,
+          "rate": 0.5769511305616338
+        }
+      },
+      "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_full_release_20260826/infinigen",
+      "slug": "infinigen",
+      "source_bindings": [
+        {
+          "name": "source_root",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/Infinigen-Sim"
+        },
+        {
+          "extracted_urdf_count": 8226,
+          "materialization": "validated_archive_extraction",
+          "name": "extracted_root",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/inputs/infinigen_sim_fast2"
+        },
+        {
+          "archive_root": "/mnt/zsn/lyb/arti-skill/exp/Infinigen-Sim/urdf",
+          "bytes": 8765,
+          "extracted_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/inputs/infinigen_sim_fast2",
+          "extracted_urdf_count": 8226,
+          "name": "infinigen_archive_validation_receipt",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/infinigen_archive_validation_receipt.json",
+          "receipt_content_sha256": "4f2429799527074d41bd68a8dd811b1bdb08973ba4083990536534cddb255597",
+          "sha256": "f6b61ed564b63d4efa32f7fd151013d68d5947fc7d2a528f04c16299bc0585a6",
+          "validation_mode": "read_only_member_and_sha256"
+        }
+      ],
+      "status": "COMPLETE"
+    }
+  ],
+  "methods": [
+    {
+      "J_eval": 37144,
+      "N_eval": 9996,
+      "dataset": "Articraft-10K",
+      "display": "Articraft-10K",
+      "evidence": {
+        "summary": "articraft/summary.json"
+      },
+      "metrics": {
+        "aor": {
+          "reason": "exact_overlap_volume_backend_not_registered",
+          "status": "N/E"
+        },
+        "collision_free_range": {
+          "denominator": 780024,
+          "passed_states": 204039,
+          "rate": 0.261580412910372
+        },
+        "collision_state_rate": {
+          "collision_states": 1065315,
+          "denominator": 1429700,
+          "executed_states": 467255,
+          "rate": 0.7451318458417849,
+          "unexecuted_states": 962445
+        },
+        "max_penetration": {
+          "denominator": 9996,
+          "maximum_observed_normalized": 0.6676320054484359,
+          "measured_assets": 3058,
+          "observed_assets": 3059,
+          "status": "PARTIAL"
+        },
+        "multi_joint_sobol_cf": {
+          "denominator": 9996,
+          "passed": 2018,
+          "rate": 0.20188075230092037
+        },
+        "rest_all_pair_cf": {
+          "denominator": 9996,
+          "passed": 169,
+          "rate": 0.016906762705082033
+        },
+        "rest_non_adjacent_cf": {
+          "denominator": 9996,
+          "passed": 2532,
+          "rate": 0.2533013205282113
+        },
+        "single_joint_sweep_cf": {
+          "denominator": 9996,
+          "passed": 2065,
+          "rate": 0.20658263305322128
+        },
+        "strict_collision_pass": {
+          "denominator": 9996,
+          "passed": 1988,
+          "rate": 0.19887955182072828
+        }
+      },
+      "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_full_release_20260826/articraft",
+      "slug": "articraft",
+      "source_bindings": [
+        {
+          "name": "Articraft-10K",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K/released_urdf"
+        }
+      ],
+      "status": "COMPLETE_WITH_RETAINED_FAILURES"
+    },
+    {
+      "J_eval": 10381,
+      "N_eval": 3217,
+      "dataset": "LAM released outputs",
+      "display": "LAM released outputs",
+      "evidence": {
+        "summary": "lam/summary.json"
+      },
+      "metrics": {
+        "aor": {
+          "reason": "exact_overlap_volume_backend_not_registered",
+          "status": "N/E"
+        },
+        "collision_free_range": {
+          "denominator": 218001,
+          "passed_states": 23640,
+          "rate": 0.10843986954188284
+        },
+        "collision_state_rate": {
+          "collision_states": 365147,
+          "denominator": 421026,
+          "executed_states": 182205,
+          "rate": 0.86727898039551,
+          "unexecuted_states": 238821
+        },
+        "max_penetration": {
+          "denominator": 3217,
+          "maximum_observed_normalized": 0.8967119230721343,
+          "measured_assets": 1320,
+          "observed_assets": 1330,
+          "status": "PARTIAL"
+        },
+        "multi_joint_sobol_cf": {
+          "denominator": 3217,
+          "passed": 384,
+          "rate": 0.11936586882188374
+        },
+        "rest_all_pair_cf": {
+          "denominator": 3217,
+          "passed": 9,
+          "rate": 0.0027976375505129004
+        },
+        "rest_non_adjacent_cf": {
+          "denominator": 3217,
+          "passed": 477,
+          "rate": 0.1482747901771837
+        },
+        "single_joint_sweep_cf": {
+          "denominator": 3217,
+          "passed": 404,
+          "rate": 0.12558284115635684
+        },
+        "strict_collision_pass": {
+          "denominator": 3217,
+          "passed": 378,
+          "rate": 0.1175007771215418
+        }
+      },
+      "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_full_release_20260826/lam",
+      "slug": "lam",
+      "source_bindings": [
+        {
+          "name": "LAM",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code"
+        }
+      ],
+      "status": "COMPLETE_WITH_RETAINED_FAILURES"
+    },
+    {
+      "J_eval": 16332,
+      "N_eval": 3544,
+      "dataset": "Artiverse",
+      "display": "Artiverse",
+      "evidence": {
+        "summary": "artiverse/summary.json"
+      },
+      "metrics": {
+        "aor": {
+          "reason": "exact_overlap_volume_backend_not_registered",
+          "status": "N/E"
+        },
+        "collision_free_range": {
+          "denominator": 342972,
+          "passed_states": 96580,
+          "rate": 0.28159733156059386
+        },
+        "collision_state_rate": {
+          "collision_states": 326510,
+          "denominator": 573140,
+          "executed_states": 559732,
+          "rate": 0.5696862895627596,
+          "unexecuted_states": 13408
+        },
+        "max_penetration": {
+          "denominator": 3544,
+          "maximum_observed_normalized": 0.6897763299637089,
+          "measured_assets": 3515,
+          "observed_assets": 3520,
+          "status": "PARTIAL"
+        },
+        "multi_joint_sobol_cf": {
+          "denominator": 3544,
+          "passed": 1223,
+          "rate": 0.3450902934537246
+        },
+        "rest_all_pair_cf": {
+          "denominator": 3544,
+          "passed": 48,
+          "rate": 0.013544018058690745
+        },
+        "rest_non_adjacent_cf": {
+          "denominator": 3544,
+          "passed": 1444,
+          "rate": 0.4074492099322799
+        },
+        "single_joint_sweep_cf": {
+          "denominator": 3544,
+          "passed": 1251,
+          "rate": 0.35299097065462753
+        },
+        "strict_collision_pass": {
+          "denominator": 3544,
+          "passed": 1118,
+          "rate": 0.3154627539503386
+        }
+      },
+      "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_full_release_20260826/artiverse",
+      "slug": "artiverse",
+      "source_bindings": [
+        {
+          "name": "Artiverse",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/artiverse"
+        }
+      ],
+      "status": "COMPLETE_WITH_RETAINED_FAILURES"
+    },
+    {
+      "J_eval": 11971,
+      "N_eval": 2347,
+      "dataset": "PartNet-Mobility",
+      "display": "PartNet-Mobility",
+      "evidence": {
+        "summary": "partnet/summary.json"
+      },
+      "metrics": {
+        "aor": {
+          "reason": "exact_overlap_volume_backend_not_registered",
+          "status": "N/E"
+        },
+        "collision_free_range": {
+          "denominator": 251391,
+          "passed_states": 141022,
+          "rate": 0.5609667808314538
+        },
+        "collision_state_rate": {
+          "collision_states": 140930,
+          "denominator": 403946,
+          "executed_states": 399658,
+          "rate": 0.34888326657523533,
+          "unexecuted_states": 4288
+        },
+        "max_penetration": {
+          "denominator": 2347,
+          "maximum_observed_normalized": 0.6469602597341845,
+          "measured_assets": 2313,
+          "observed_assets": 2314,
+          "status": "PARTIAL"
+        },
+        "multi_joint_sobol_cf": {
+          "denominator": 2347,
+          "passed": 1705,
+          "rate": 0.7264593097571368
+        },
+        "rest_all_pair_cf": {
+          "denominator": 2347,
+          "passed": 70,
+          "rate": 0.02982530890498509
+        },
+        "rest_non_adjacent_cf": {
+          "denominator": 2347,
+          "passed": 1819,
+          "rate": 0.7750319556881125
+        },
+        "single_joint_sweep_cf": {
+          "denominator": 2347,
+          "passed": 1727,
+          "rate": 0.735832978270132
+        },
+        "strict_collision_pass": {
+          "denominator": 2347,
+          "passed": 1665,
+          "rate": 0.7094162760971453
+        }
+      },
+      "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_full_release_20260826/partnet",
+      "slug": "partnet",
+      "source_bindings": [
+        {
+          "name": "PartNet-Mobility",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/PartNet-Mobility/data/dataset"
+        }
+      ],
+      "status": "COMPLETE_WITH_RETAINED_FAILURES"
+    },
+    {
+      "J_eval": 9883,
+      "N_eval": 2024,
+      "dataset": "PhysX-Mobility",
+      "display": "PhysX-Mobility",
+      "evidence": {
+        "summary": "physx/summary.json"
+      },
+      "metrics": {
+        "aor": {
+          "reason": "exact_overlap_volume_backend_not_registered",
+          "status": "N/E"
+        },
+        "collision_free_range": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "collision_state_rate": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "max_penetration": {
+          "denominator": 2024,
+          "maximum_observed_normalized": null,
+          "measured_assets": 0,
+          "observed_assets": 0,
+          "reason": "empty_collision_shape_union",
+          "status": "N/E"
+        },
+        "multi_joint_sobol_cf": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "rest_all_pair_cf": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "rest_non_adjacent_cf": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "single_joint_sweep_cf": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "strict_collision_pass": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        }
+      },
+      "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_full_release_20260826/physx",
+      "slug": "physx",
+      "source_bindings": [
+        {
+          "name": "PhysX-Mobility",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/PhysX-Mobility/extracted/PhysX_mobility"
+        }
+      ],
+      "status": "BLOCKED"
+    },
+    {
+      "J_eval": 11009,
+      "N_eval": 4956,
+      "dataset": "SketchMobility",
+      "display": "SketchMobility",
+      "evidence": {
+        "summary": "sketch/summary.json"
+      },
+      "metrics": {
+        "aor": {
+          "reason": "exact_overlap_volume_backend_not_registered",
+          "status": "N/E"
+        },
+        "collision_free_range": {
+          "denominator": 231189,
+          "passed_states": 113684,
+          "rate": 0.491736198521556
+        },
+        "collision_state_rate": {
+          "collision_states": 292617,
+          "denominator": 553329,
+          "executed_states": 341283,
+          "rate": 0.5288300450545697,
+          "unexecuted_states": 212046
+        },
+        "max_penetration": {
+          "denominator": 4956,
+          "maximum_observed_normalized": 0.5390616288108241,
+          "measured_assets": 2777,
+          "observed_assets": 2779,
+          "status": "PARTIAL"
+        },
+        "multi_joint_sobol_cf": {
+          "denominator": 4956,
+          "passed": 2001,
+          "rate": 0.40375302663438256
+        },
+        "rest_all_pair_cf": {
+          "denominator": 4956,
+          "passed": 33,
+          "rate": 0.006658595641646489
+        },
+        "rest_non_adjacent_cf": {
+          "denominator": 4956,
+          "passed": 2184,
+          "rate": 0.4406779661016949
+        },
+        "single_joint_sweep_cf": {
+          "denominator": 4956,
+          "passed": 1978,
+          "rate": 0.39911218724778047
+        },
+        "strict_collision_pass": {
+          "denominator": 4956,
+          "passed": 1882,
+          "rate": 0.37974172719935434
+        }
+      },
+      "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_full_release_20260826/sketch",
+      "slug": "sketch",
+      "source_bindings": [
+        {
+          "name": "SketchMobility",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/SketchMobility/data"
+        }
+      ],
+      "status": "COMPLETE_WITH_RETAINED_FAILURES"
+    },
+    {
+      "J_eval": 4723,
+      "N_eval": 720,
+      "dataset": "Infinite Mobility",
+      "display": "Infinite Mobility",
+      "evidence": {
+        "summary": "infinite/summary.json"
+      },
+      "metrics": {
+        "aor": {
+          "reason": "exact_overlap_volume_backend_not_registered",
+          "status": "N/E"
+        },
+        "collision_free_range": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "collision_state_rate": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "max_penetration": {
+          "denominator": 720,
+          "maximum_observed_normalized": null,
+          "measured_assets": 0,
+          "observed_assets": 0,
+          "reason": "empty_collision_shape_union",
+          "status": "N/E"
+        },
+        "multi_joint_sobol_cf": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "rest_all_pair_cf": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "rest_non_adjacent_cf": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "single_joint_sweep_cf": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        },
+        "strict_collision_pass": {
+          "denominator": null,
+          "numerator": null,
+          "reason": "no_native_collision_geometry",
+          "status": "N/E"
+        }
+      },
+      "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_full_release_20260826/infinite",
+      "slug": "infinite",
+      "source_bindings": [
+        {
+          "name": "Infinite Mobility",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/infinite_mobility_urdf_table123_cohort/manifest.json"
+        },
+        {
+          "bytes": 79724887,
+          "name": "parts_zip",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/parts.zip",
+          "sha256": "9d501098ca5516fdb347c95e1c18170900563cd133e489bc7f0020515e643e16"
+        },
+        {
+          "bytes": 7497979,
+          "name": "infinite_cohort_manifest",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/infinite_mobility_urdf_table123_cohort/manifest.json",
+          "sha256": "cfd9c06ea35dcec57c53d44dbf52903ecba6f33321075495c97c58fe30d23c08"
+        }
+      ],
+      "status": "BLOCKED"
+    },
+    {
+      "J_eval": 31975,
+      "N_eval": 8226,
+      "dataset": "Infinigen-Sim",
+      "display": "Infinigen-Sim",
+      "evidence": {
+        "summary": "infinigen/summary.json"
+      },
+      "metrics": {
+        "aor": {
+          "reason": "exact_overlap_volume_backend_not_registered",
+          "status": "N/E"
+        },
+        "collision_free_range": {
+          "denominator": 671475,
+          "passed_states": 476993,
+          "rate": 0.7103659853308016
+        },
+        "collision_state_rate": {
+          "collision_states": 298941,
+          "denominator": 1200149,
+          "executed_states": 1200149,
+          "rate": 0.24908657175067428,
+          "unexecuted_states": 0
+        },
+        "max_penetration": {
+          "denominator": 8226,
+          "maximum_observed_normalized": 0.8095876338602532,
+          "measured_assets": 8226,
+          "observed_assets": 8226,
+          "status": "COMPLETE"
+        },
+        "multi_joint_sobol_cf": {
+          "denominator": 8226,
+          "passed": 5100,
+          "rate": 0.6199854121079504
+        },
+        "rest_all_pair_cf": {
+          "denominator": 8226,
+          "passed": 94,
+          "rate": 0.011427182105519086
+        },
+        "rest_non_adjacent_cf": {
+          "denominator": 8226,
+          "passed": 6836,
+          "rate": 0.8310235837588135
+        },
+        "single_joint_sweep_cf": {
+          "denominator": 8226,
+          "passed": 5045,
+          "rate": 0.613299294918551
+        },
+        "strict_collision_pass": {
+          "denominator": 8226,
+          "passed": 4746,
+          "rate": 0.5769511305616338
+        }
+      },
+      "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_full_release_20260826/infinigen",
+      "slug": "infinigen",
+      "source_bindings": [
+        {
+          "name": "source_root",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/Infinigen-Sim"
+        },
+        {
+          "extracted_urdf_count": 8226,
+          "materialization": "validated_archive_extraction",
+          "name": "extracted_root",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/inputs/infinigen_sim_fast2"
+        },
+        {
+          "archive_root": "/mnt/zsn/lyb/arti-skill/exp/Infinigen-Sim/urdf",
+          "bytes": 8765,
+          "extracted_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/inputs/infinigen_sim_fast2",
+          "extracted_urdf_count": 8226,
+          "name": "infinigen_archive_validation_receipt",
+          "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/infinigen_archive_validation_receipt.json",
+          "receipt_content_sha256": "4f2429799527074d41bd68a8dd811b1bdb08973ba4083990536534cddb255597",
+          "sha256": "f6b61ed564b63d4efa32f7fd151013d68d5947fc7d2a528f04c16299bc0585a6",
+          "validation_mode": "read_only_member_and_sha256"
+        }
+      ],
+      "status": "COMPLETE"
+    }
+  ],
+  "protocol": {
+    "empty_contact_query_is_not_a_pass": true,
+    "id": "urdf_sim_ready_table4_full_release_v1",
+    "pair_policy": "all-pair plus non-adjacent (direct parent-child excluded)",
+    "penetration_threshold_m": 1e-06,
+    "single_joint_samples": 21,
+    "sobol_samples": 64,
+    "sobol_seed": 20260813
+  },
+  "receipt_content_sha256": "3a70b18240501633e45f73a5facaa1fda84f0fe3a2fcf0b7329d100ce44d63a0",
+  "root": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_full_release_20260826",
+  "schema_version": "table4_full_release_receipt_v1",
+  "source_bindings": [
+    {
+      "name": "Articraft-10K",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K/released_urdf"
+    },
+    {
+      "name": "LAM",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code"
+    },
+    {
+      "name": "Artiverse",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/artiverse"
+    },
+    {
+      "name": "PartNet-Mobility",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/PartNet-Mobility/data/dataset"
+    },
+    {
+      "name": "PhysX-Mobility",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/PhysX-Mobility/extracted/PhysX_mobility"
+    },
+    {
+      "name": "SketchMobility",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/SketchMobility/data"
+    },
+    {
+      "name": "Infinite Mobility",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/infinite_mobility_urdf_table123_cohort/manifest.json"
+    },
+    {
+      "bytes": 79724887,
+      "name": "parts_zip",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/parts.zip",
+      "sha256": "9d501098ca5516fdb347c95e1c18170900563cd133e489bc7f0020515e643e16"
+    },
+    {
+      "bytes": 7497979,
+      "name": "infinite_cohort_manifest",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/infinite_mobility_urdf_table123_cohort/manifest.json",
+      "sha256": "cfd9c06ea35dcec57c53d44dbf52903ecba6f33321075495c97c58fe30d23c08"
+    },
+    {
+      "name": "source_root",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/Infinigen-Sim"
+    },
+    {
+      "extracted_urdf_count": 8226,
+      "materialization": "validated_archive_extraction",
+      "name": "extracted_root",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/inputs/infinigen_sim_fast2"
+    },
+    {
+      "archive_root": "/mnt/zsn/lyb/arti-skill/exp/Infinigen-Sim/urdf",
+      "bytes": 8765,
+      "extracted_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/inputs/infinigen_sim_fast2",
+      "extracted_urdf_count": 8226,
+      "name": "infinigen_archive_validation_receipt",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/infinigen_archive_validation_receipt.json",
+      "receipt_content_sha256": "4f2429799527074d41bd68a8dd811b1bdb08973ba4083990536534cddb255597",
+      "sha256": "f6b61ed564b63d4efa32f7fd151013d68d5947fc7d2a528f04c16299bc0585a6",
+      "validation_mode": "read_only_member_and_sha256"
+    }
+  ]
+}

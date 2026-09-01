@@ -1,0 +1,2363 @@
+[
+  {
+    "asset_id": "Astronomy_Antenna_dish__seed_343",
+    "slug": "Astronomy_Antenna_dish",
+    "seed": 343,
+    "source": "seed_exports",
+    "difficulty": "L1",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/Astronomy_Antenna_dish/seed_343/model.urdf",
+    "model_urdf_sha256": "c962b31e95589a1ef934a9f10f73a792496ed042363ec813c9263f4487691da9",
+    "valid_tree": true,
+    "root_names": [
+      "mount_base"
+    ],
+    "link_count": 3,
+    "joint_count": 2,
+    "edge_count": 2,
+    "has_tree": true,
+    "semantic_depth": 3,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 2,
+    "pivot_names": [
+      "azimuth_drive",
+      "elevation_drive"
+    ],
+    "visual_link_count": 3,
+    "collision_link_count": 3,
+    "edge_signature": [
+      [
+        "azimuth_turret",
+        "elevation_drive",
+        "prismatic",
+        "dish_assembly"
+      ],
+      [
+        "mount_base",
+        "azimuth_drive",
+        "revolute",
+        "azimuth_turret"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "Door_Double_Door__seed_222",
+    "slug": "Door_Double_Door",
+    "seed": 222,
+    "source": "seed_exports",
+    "difficulty": "L1",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/Door_Double_Door/seed_222/model.urdf",
+    "model_urdf_sha256": "4f1dd6ba2d7af9c7d53f510e3d427ef9d793fdeb9c3d152d785d184931dd4b57",
+    "valid_tree": true,
+    "root_names": [
+      "frame"
+    ],
+    "link_count": 3,
+    "joint_count": 2,
+    "edge_count": 2,
+    "has_tree": true,
+    "semantic_depth": 2,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 2,
+    "pivot_names": [
+      "frame_to_door_0",
+      "frame_to_door_1"
+    ],
+    "visual_link_count": 3,
+    "collision_link_count": 3,
+    "edge_signature": [
+      [
+        "frame",
+        "frame_to_door_0",
+        "revolute",
+        "door_0"
+      ],
+      [
+        "frame",
+        "frame_to_door_1",
+        "revolute",
+        "door_1"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "Electrical_Wiring_Wire_stripper__seed_5943",
+    "slug": "Electrical_Wiring_Wire_stripper",
+    "seed": 5943,
+    "source": "seed_exports",
+    "difficulty": "L1",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/Electrical_Wiring_Wire_stripper/seed_5943/model.urdf",
+    "model_urdf_sha256": "2704690014689e580f18cea4f0dfbbc23393f142b75d8b68d558bc3c83921fc3",
+    "valid_tree": true,
+    "root_names": [
+      "fixed_arm"
+    ],
+    "link_count": 3,
+    "joint_count": 2,
+    "edge_count": 2,
+    "has_tree": true,
+    "semantic_depth": 3,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 2,
+    "pivot_names": [
+      "latch_pivot",
+      "pivot_squeeze"
+    ],
+    "visual_link_count": 3,
+    "collision_link_count": 3,
+    "edge_signature": [
+      [
+        "fixed_arm",
+        "pivot_squeeze",
+        "revolute",
+        "moving_arm"
+      ],
+      [
+        "moving_arm",
+        "latch_pivot",
+        "revolute",
+        "lock_latch"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "Bag_Suitcase_Shopping_bucket__seed_148",
+    "slug": "Bag_Suitcase_Shopping_bucket",
+    "seed": 148,
+    "source": "seed_exports_physics_10",
+    "difficulty": "L1",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/Bag_Suitcase_Shopping_bucket/seed_148/model.urdf",
+    "model_urdf_sha256": "9858b1893c948e2af377cc8cea5f35f3a9506e9288f22cfbc724b8efee6031b6",
+    "valid_tree": true,
+    "root_names": [
+      "basket_tub"
+    ],
+    "link_count": 2,
+    "joint_count": 1,
+    "edge_count": 1,
+    "has_tree": true,
+    "semantic_depth": 2,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 1,
+    "pivot_names": [
+      "tub_to_lid"
+    ],
+    "visual_link_count": 2,
+    "collision_link_count": 2,
+    "edge_signature": [
+      [
+        "basket_tub",
+        "tub_to_lid",
+        "revolute",
+        "top_lid"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "Door_Other__seed_431",
+    "slug": "Door_Other",
+    "seed": 431,
+    "source": "seed_exports_physics_10",
+    "difficulty": "L1",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/Door_Other/seed_431/model.urdf",
+    "model_urdf_sha256": "e4d03545e4dd3413376ec5a143c548414754ad344d63fd1110e1756b8aa5c044",
+    "valid_tree": true,
+    "root_names": [
+      "stone_frame"
+    ],
+    "link_count": 3,
+    "joint_count": 2,
+    "edge_count": 2,
+    "has_tree": true,
+    "semantic_depth": 3,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 2,
+    "pivot_names": [
+      "door_to_ring_pull",
+      "frame_to_door"
+    ],
+    "visual_link_count": 3,
+    "collision_link_count": 3,
+    "edge_signature": [
+      [
+        "door",
+        "door_to_ring_pull",
+        "revolute",
+        "ring_pull"
+      ],
+      [
+        "stone_frame",
+        "frame_to_door",
+        "revolute",
+        "door"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "Door_Trap_door__seed_1495",
+    "slug": "Door_Trap_door",
+    "seed": 1495,
+    "source": "seed_exports_physics_10",
+    "difficulty": "L1",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/Door_Trap_door/seed_1495/model.urdf",
+    "model_urdf_sha256": "8c62fc47406f711dcc6c06df3fb5f60018f8e0a9210bf4c090497a1ed83d7186",
+    "valid_tree": true,
+    "root_names": [
+      "well_shaft"
+    ],
+    "link_count": 3,
+    "joint_count": 2,
+    "edge_count": 2,
+    "has_tree": true,
+    "semantic_depth": 3,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 1,
+    "pivot_names": [
+      "coaming_to_leaf"
+    ],
+    "visual_link_count": 3,
+    "collision_link_count": 3,
+    "edge_signature": [
+      [
+        "curb_frame",
+        "coaming_to_leaf",
+        "revolute",
+        "leaf"
+      ],
+      [
+        "well_shaft",
+        "shaft_to_coaming",
+        "fixed",
+        "curb_frame"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "Handtools_clothes_peg__seed_453",
+    "slug": "Handtools_clothes_peg",
+    "seed": 453,
+    "source": "seed_exports_physics_10",
+    "difficulty": "L1",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/Handtools_clothes_peg/seed_453/model.urdf",
+    "model_urdf_sha256": "5ef4dc8ef0fc38129deddd2635e5b69af5690d3d6e512a9c61223924ec866f61",
+    "valid_tree": true,
+    "root_names": [
+      "lower_half"
+    ],
+    "link_count": 3,
+    "joint_count": 2,
+    "edge_count": 2,
+    "has_tree": true,
+    "semantic_depth": 2,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 1,
+    "pivot_names": [
+      "pivot"
+    ],
+    "visual_link_count": 3,
+    "collision_link_count": 3,
+    "edge_signature": [
+      [
+        "lower_half",
+        "lower_to_spring",
+        "fixed",
+        "spring"
+      ],
+      [
+        "lower_half",
+        "pivot",
+        "revolute",
+        "upper_half"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "Urban_Environment_bucket1__seed_1009",
+    "slug": "Urban_Environment_bucket1",
+    "seed": 1009,
+    "source": "seed_exports_physics_10",
+    "difficulty": "L1",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/Urban_Environment_bucket1/seed_1009/model.urdf",
+    "model_urdf_sha256": "75e0e76f9757373b9cc1f0bafb37f75346979c45698ee1968fb7fbee016f411a",
+    "valid_tree": true,
+    "root_names": [
+      "bucket_body"
+    ],
+    "link_count": 2,
+    "joint_count": 1,
+    "edge_count": 1,
+    "has_tree": true,
+    "semantic_depth": 2,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 1,
+    "pivot_names": [
+      "bucket_to_swing_bail"
+    ],
+    "visual_link_count": 2,
+    "collision_link_count": 2,
+    "edge_signature": [
+      [
+        "bucket_body",
+        "bucket_to_swing_bail",
+        "revolute",
+        "swing_bail"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "Urban_Environment_bucket2__seed_6101",
+    "slug": "Urban_Environment_bucket2",
+    "seed": 6101,
+    "source": "seed_exports_physics_10",
+    "difficulty": "L1",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/Urban_Environment_bucket2/seed_6101/model.urdf",
+    "model_urdf_sha256": "8465ea2066cd565c9edc0b72a62970891411867f1b79739be3701ca8a1729db3",
+    "valid_tree": true,
+    "root_names": [
+      "keg_body"
+    ],
+    "link_count": 3,
+    "joint_count": 2,
+    "edge_count": 2,
+    "has_tree": true,
+    "semantic_depth": 3,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 1,
+    "pivot_names": [
+      "closure__slide_off_lid__lift"
+    ],
+    "visual_link_count": 3,
+    "collision_link_count": 3,
+    "edge_signature": [
+      [
+        "closure__slide_off_lid__lid",
+        "handle__arched_grip__mount",
+        "fixed",
+        "handle__arched_grip__grip"
+      ],
+      [
+        "keg_body",
+        "closure__slide_off_lid__lift",
+        "prismatic",
+        "closure__slide_off_lid__lid"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "pictureX_0611_garlic_press__seed_2",
+    "slug": "pictureX_0611_garlic_press",
+    "seed": 2,
+    "source": "seed_exports_physics_10",
+    "difficulty": "L1",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/pictureX_0611_garlic_press/seed_2/model.urdf",
+    "model_urdf_sha256": "0a3b49c5dba0782689d0fc5535659a36c1d1e39c21484d6ed7284e83b16310bb",
+    "valid_tree": true,
+    "root_names": [
+      "press_frame"
+    ],
+    "link_count": 3,
+    "joint_count": 2,
+    "edge_count": 2,
+    "has_tree": true,
+    "semantic_depth": 2,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 1,
+    "pivot_names": [
+      "frame_to_lever"
+    ],
+    "visual_link_count": 3,
+    "collision_link_count": 3,
+    "edge_signature": [
+      [
+        "press_frame",
+        "frame_to_lever",
+        "revolute",
+        "lever_arm"
+      ],
+      [
+        "press_frame",
+        "frame_to_pin",
+        "fixed",
+        "pivot_pin"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "pictureX_0611_guitar_tuning_peg_mechanism__seed_202",
+    "slug": "pictureX_0611_guitar_tuning_peg_mechanism",
+    "seed": 202,
+    "source": "seed_exports_physics_10",
+    "difficulty": "L1",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/pictureX_0611_guitar_tuning_peg_mechanism/seed_202/model.urdf",
+    "model_urdf_sha256": "0cfd1afdb616466f0b8dba062f7332a975d36e392da61070aeb08f8d022905dc",
+    "valid_tree": true,
+    "root_names": [
+      "mount"
+    ],
+    "link_count": 3,
+    "joint_count": 2,
+    "edge_count": 2,
+    "has_tree": true,
+    "semantic_depth": 2,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 2,
+    "pivot_names": [
+      "mount_to_post_0",
+      "mount_to_worm_0"
+    ],
+    "visual_link_count": 3,
+    "collision_link_count": 3,
+    "edge_signature": [
+      [
+        "mount",
+        "mount_to_post_0",
+        "continuous",
+        "string_post_0"
+      ],
+      [
+        "mount",
+        "mount_to_worm_0",
+        "continuous",
+        "worm_rotor_0"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "Industrial_Mine_cart__seed_13",
+    "slug": "Industrial_Mine_cart",
+    "seed": 13,
+    "source": "seed_exports",
+    "difficulty": "L2",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/Industrial_Mine_cart/seed_13/model.urdf",
+    "model_urdf_sha256": "881719cb293b59096321d880d0d393a0391e4dc8dfaaf3d7ab5c903f8b1c9ade",
+    "valid_tree": true,
+    "root_names": [
+      "rail_track"
+    ],
+    "link_count": 7,
+    "joint_count": 6,
+    "edge_count": 6,
+    "has_tree": true,
+    "semantic_depth": 3,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 6,
+    "pivot_names": [
+      "cart_travel",
+      "latch_pivot",
+      "tub_tip",
+      "wheelset_0_roll",
+      "wheelset_1_roll",
+      "wheelset_2_roll"
+    ],
+    "visual_link_count": 7,
+    "collision_link_count": 7,
+    "edge_signature": [
+      [
+        "chassis",
+        "latch_pivot",
+        "revolute",
+        "latch_hook"
+      ],
+      [
+        "chassis",
+        "tub_tip",
+        "revolute",
+        "tub"
+      ],
+      [
+        "chassis",
+        "wheelset_0_roll",
+        "continuous",
+        "wheelset_0"
+      ],
+      [
+        "chassis",
+        "wheelset_1_roll",
+        "continuous",
+        "wheelset_1"
+      ],
+      [
+        "chassis",
+        "wheelset_2_roll",
+        "continuous",
+        "wheelset_2"
+      ],
+      [
+        "rail_track",
+        "cart_travel",
+        "prismatic",
+        "chassis"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "pictureX_0611_C_shaped_sofa_side_table__seed_0",
+    "slug": "pictureX_0611_C_shaped_sofa_side_table",
+    "seed": 0,
+    "source": "seed_exports",
+    "difficulty": "L2",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_C_shaped_sofa_side_table/seed_0/model.urdf",
+    "model_urdf_sha256": "be6eaa93b552d557eb333b3f4a5e1ee5de8f26089be4c85677f8c6a1e7bc72d3",
+    "valid_tree": true,
+    "root_names": [
+      "sofa__frame"
+    ],
+    "link_count": 4,
+    "joint_count": 3,
+    "edge_count": 3,
+    "has_tree": true,
+    "semantic_depth": 2,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 3,
+    "pivot_names": [
+      "platform__front_slide",
+      "table_frame__u_straddle__table_0__slide",
+      "table_frame__u_straddle__table_1__slide"
+    ],
+    "visual_link_count": 4,
+    "collision_link_count": 4,
+    "edge_signature": [
+      [
+        "sofa__frame",
+        "platform__front_slide",
+        "prismatic",
+        "platform__front"
+      ],
+      [
+        "sofa__frame",
+        "table_frame__u_straddle__table_0__slide",
+        "prismatic",
+        "table_frame__u_straddle__table_0"
+      ],
+      [
+        "sofa__frame",
+        "table_frame__u_straddle__table_1__slide",
+        "prismatic",
+        "table_frame__u_straddle__table_1"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "pictureX_0611_Dressing_table__seed_0",
+    "slug": "pictureX_0611_Dressing_table",
+    "seed": 0,
+    "source": "seed_exports",
+    "difficulty": "L2",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_Dressing_table/seed_0/model.urdf",
+    "model_urdf_sha256": "d3a7491d7537ba68a08e7edafc2a6377c97c5c72ca913108b796a66f0f88164d",
+    "valid_tree": true,
+    "root_names": [
+      "vanity__body"
+    ],
+    "link_count": 6,
+    "joint_count": 5,
+    "edge_count": 5,
+    "has_tree": true,
+    "semantic_depth": 2,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 5,
+    "pivot_names": [
+      "drawer_front__bar_handle_front__drawer_0__slide",
+      "drawer_front__bar_handle_front__drawer_1__slide",
+      "drawer_front__bar_handle_front__drawer_2__slide",
+      "drawer_front__bar_handle_front__drawer_3__slide",
+      "mirror_form__swing_ring_mirror__mirror_tilt"
+    ],
+    "visual_link_count": 6,
+    "collision_link_count": 6,
+    "edge_signature": [
+      [
+        "vanity__body",
+        "drawer_front__bar_handle_front__drawer_0__slide",
+        "prismatic",
+        "drawer_front__bar_handle_front__drawer_0"
+      ],
+      [
+        "vanity__body",
+        "drawer_front__bar_handle_front__drawer_1__slide",
+        "prismatic",
+        "drawer_front__bar_handle_front__drawer_1"
+      ],
+      [
+        "vanity__body",
+        "drawer_front__bar_handle_front__drawer_2__slide",
+        "prismatic",
+        "drawer_front__bar_handle_front__drawer_2"
+      ],
+      [
+        "vanity__body",
+        "drawer_front__bar_handle_front__drawer_3__slide",
+        "prismatic",
+        "drawer_front__bar_handle_front__drawer_3"
+      ],
+      [
+        "vanity__body",
+        "mirror_form__swing_ring_mirror__mirror_tilt",
+        "revolute",
+        "mirror_form__swing_ring_mirror__mirror"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "pictureX_0611_Butter_maker__seed_0",
+    "slug": "pictureX_0611_Butter_maker",
+    "seed": 0,
+    "source": "seed_exports",
+    "difficulty": "L2",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_Butter_maker/seed_0/model.urdf",
+    "model_urdf_sha256": "d0177cd8cf4c325f8d18d122a882270759ca1604788cf91d95058a2a2980d588",
+    "valid_tree": true,
+    "root_names": [
+      "churn__vessel"
+    ],
+    "link_count": 8,
+    "joint_count": 7,
+    "edge_count": 7,
+    "has_tree": true,
+    "semantic_depth": 4,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 1,
+    "pivot_names": [
+      "churn__dasher_drive"
+    ],
+    "visual_link_count": 8,
+    "collision_link_count": 8,
+    "edge_signature": [
+      [
+        "churn__lid",
+        "churn__dasher_drive",
+        "continuous",
+        "churn__shaft"
+      ],
+      [
+        "churn__lid",
+        "churn__motor_mount",
+        "fixed",
+        "churn__motor"
+      ],
+      [
+        "churn__shaft",
+        "dasher_form__perforated_blade__blade_0__mount",
+        "fixed",
+        "dasher_form__perforated_blade__blade_0"
+      ],
+      [
+        "churn__shaft",
+        "dasher_form__perforated_blade__blade_1__mount",
+        "fixed",
+        "dasher_form__perforated_blade__blade_1"
+      ],
+      [
+        "churn__shaft",
+        "dasher_form__perforated_blade__blade_2__mount",
+        "fixed",
+        "dasher_form__perforated_blade__blade_2"
+      ],
+      [
+        "churn__shaft",
+        "dasher_form__perforated_blade__blade_3__mount",
+        "fixed",
+        "dasher_form__perforated_blade__blade_3"
+      ],
+      [
+        "churn__vessel",
+        "churn__vessel_to_lid",
+        "fixed",
+        "churn__lid"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "pictureX_0611_Garden_pruner__seed_0",
+    "slug": "pictureX_0611_Garden_pruner",
+    "seed": 0,
+    "source": "seed_exports",
+    "difficulty": "L2",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_Garden_pruner/seed_0/model.urdf",
+    "model_urdf_sha256": "eb450dbdfcbda4ee5424fc2eea6259bcaaa0bf91f501bf831f845353c625a472",
+    "valid_tree": true,
+    "root_names": [
+      "pivot_frame"
+    ],
+    "link_count": 6,
+    "joint_count": 5,
+    "edge_count": 5,
+    "has_tree": true,
+    "semantic_depth": 3,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 5,
+    "pivot_names": [
+      "counter_to_locking_catch",
+      "counter_to_return_spring_0",
+      "counter_to_return_spring_1",
+      "frame_to_counter_half",
+      "frame_to_cutting_half"
+    ],
+    "visual_link_count": 6,
+    "collision_link_count": 6,
+    "edge_signature": [
+      [
+        "head_build__long_bypass__counter_half",
+        "counter_to_locking_catch",
+        "revolute",
+        "catch_build__rotating_sleeve__locking_catch"
+      ],
+      [
+        "head_build__long_bypass__counter_half",
+        "counter_to_return_spring_0",
+        "revolute",
+        "return_build__leaf_spring__return_spring_0"
+      ],
+      [
+        "head_build__long_bypass__counter_half",
+        "counter_to_return_spring_1",
+        "revolute",
+        "return_build__leaf_spring__return_spring_1"
+      ],
+      [
+        "pivot_frame",
+        "frame_to_counter_half",
+        "revolute",
+        "head_build__long_bypass__counter_half"
+      ],
+      [
+        "pivot_frame",
+        "frame_to_cutting_half",
+        "revolute",
+        "head_build__long_bypass__cutting_half"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "pictureX_0611_Ice_crream_machine__seed_0",
+    "slug": "pictureX_0611_Ice_crream_machine",
+    "seed": 0,
+    "source": "seed_exports",
+    "difficulty": "L2",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_Ice_crream_machine/seed_0/model.urdf",
+    "model_urdf_sha256": "ba4cb29466c12f0d28d3b96e3d0a35bc3168b10207d45812ffe2eb7f936c76ba",
+    "valid_tree": true,
+    "root_names": [
+      "vessel"
+    ],
+    "link_count": 5,
+    "joint_count": 4,
+    "edge_count": 4,
+    "has_tree": true,
+    "semantic_depth": 3,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 3,
+    "pivot_names": [
+      "drive_mount_to_dasher",
+      "drive_mount_to_drive",
+      "vessel_to_access_lid"
+    ],
+    "visual_link_count": 5,
+    "collision_link_count": 5,
+    "edge_signature": [
+      [
+        "drive_mount",
+        "drive_mount_to_dasher",
+        "continuous",
+        "dasher"
+      ],
+      [
+        "drive_mount",
+        "drive_mount_to_drive",
+        "continuous",
+        "drive"
+      ],
+      [
+        "vessel",
+        "vessel_to_access_lid",
+        "prismatic",
+        "access_lid"
+      ],
+      [
+        "vessel",
+        "vessel_to_drive_mount",
+        "fixed",
+        "drive_mount"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "pictureX_0611_juicer_press_with_handle__seed_0",
+    "slug": "pictureX_0611_juicer_press_with_handle",
+    "seed": 0,
+    "source": "seed_exports",
+    "difficulty": "L2",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_juicer_press_with_handle/seed_0/model.urdf",
+    "model_urdf_sha256": "5e0d8ed9c1183aa66a82ec576cb70b5c388d017b300b1f85826e931be467ab10",
+    "valid_tree": true,
+    "root_names": [
+      "frame"
+    ],
+    "link_count": 7,
+    "joint_count": 6,
+    "edge_count": 6,
+    "has_tree": true,
+    "semantic_depth": 3,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 6,
+    "pivot_names": [
+      "actuator_style__lever_linkage__frame_to_lever",
+      "actuator_style__lever_linkage__lever_to_linkage",
+      "cup_to_strainer",
+      "frame_to_cup",
+      "frame_to_ram",
+      "mount_style__bench_clamp_bracket__frame_to_clamp_screw"
+    ],
+    "visual_link_count": 7,
+    "collision_link_count": 7,
+    "edge_signature": [
+      [
+        "actuator_style__lever_linkage__lever",
+        "actuator_style__lever_linkage__lever_to_linkage",
+        "revolute",
+        "actuator_style__lever_linkage__linkage"
+      ],
+      [
+        "cup",
+        "cup_to_strainer",
+        "prismatic",
+        "strainer"
+      ],
+      [
+        "frame",
+        "actuator_style__lever_linkage__frame_to_lever",
+        "revolute",
+        "actuator_style__lever_linkage__lever"
+      ],
+      [
+        "frame",
+        "frame_to_cup",
+        "prismatic",
+        "cup"
+      ],
+      [
+        "frame",
+        "frame_to_ram",
+        "prismatic",
+        "ram"
+      ],
+      [
+        "frame",
+        "mount_style__bench_clamp_bracket__frame_to_clamp_screw",
+        "continuous",
+        "mount_style__bench_clamp_bracket__clamp_screw"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "pictureX_0611_bi_fold_closet_door_system__seed_0",
+    "slug": "pictureX_0611_bi_fold_closet_door_system",
+    "seed": 0,
+    "source": "seed_exports",
+    "difficulty": "L2",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_bi_fold_closet_door_system/seed_0/model.urdf",
+    "model_urdf_sha256": "4b7109881c1cdad85132a457d766205c852dfe6814994c6acda5ebfea2176e2c",
+    "valid_tree": true,
+    "root_names": [
+      "opening_frame"
+    ],
+    "link_count": 7,
+    "joint_count": 6,
+    "edge_count": 6,
+    "has_tree": true,
+    "semantic_depth": 4,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 6,
+    "pivot_names": [
+      "frame_to_pivot_leaf_0",
+      "frame_to_pivot_leaf_1",
+      "mid_leaf_to_handle_leaf_0",
+      "mid_leaf_to_handle_leaf_1",
+      "pivot_leaf_to_mid_leaf_0",
+      "pivot_leaf_to_mid_leaf_1"
+    ],
+    "visual_link_count": 7,
+    "collision_link_count": 7,
+    "edge_signature": [
+      [
+        "leaf_face__raised_panel__mid_leaf_0",
+        "mid_leaf_to_handle_leaf_0",
+        "revolute",
+        "leaf_face__raised_panel__handle_leaf_0"
+      ],
+      [
+        "leaf_face__raised_panel__mid_leaf_1",
+        "mid_leaf_to_handle_leaf_1",
+        "revolute",
+        "leaf_face__raised_panel__handle_leaf_1"
+      ],
+      [
+        "leaf_face__raised_panel__pivot_leaf_0",
+        "pivot_leaf_to_mid_leaf_0",
+        "revolute",
+        "leaf_face__raised_panel__mid_leaf_0"
+      ],
+      [
+        "leaf_face__raised_panel__pivot_leaf_1",
+        "pivot_leaf_to_mid_leaf_1",
+        "revolute",
+        "leaf_face__raised_panel__mid_leaf_1"
+      ],
+      [
+        "opening_frame",
+        "frame_to_pivot_leaf_0",
+        "revolute",
+        "leaf_face__raised_panel__pivot_leaf_0"
+      ],
+      [
+        "opening_frame",
+        "frame_to_pivot_leaf_1",
+        "revolute",
+        "leaf_face__raised_panel__pivot_leaf_1"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "riot_shield__seed_3141",
+    "slug": "riot_shield",
+    "seed": 3141,
+    "source": "seed_exports",
+    "difficulty": "L2",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/riot_shield/seed_3141/model.urdf",
+    "model_urdf_sha256": "3b86604b1bbe726fd7fbb9c29a13fc44b424d816a3f11688d7aea3e5fb0b0f52",
+    "valid_tree": true,
+    "root_names": [
+      "shield_system__curved_handheld__panel"
+    ],
+    "link_count": 4,
+    "joint_count": 3,
+    "edge_count": 3,
+    "has_tree": true,
+    "semantic_depth": 2,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 1,
+    "pivot_names": [
+      "grip_mount__rotating_boss__handle_rotation"
+    ],
+    "visual_link_count": 4,
+    "collision_link_count": 4,
+    "edge_signature": [
+      [
+        "shield_system__curved_handheld__panel",
+        "grip_mount__rotating_boss__handle_rotation",
+        "revolute",
+        "grip__open_loop__handle"
+      ],
+      [
+        "shield_system__curved_handheld__panel",
+        "grip_mount__rotating_boss__hardware_joint",
+        "fixed",
+        "grip_mount__rotating_boss__hardware"
+      ],
+      [
+        "shield_system__curved_handheld__panel",
+        "viewport__perforated_screen__fixed_mount",
+        "fixed",
+        "viewport__perforated_screen__element"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "Stationary_Pencil_sharpener__seed_6",
+    "slug": "Stationary_Pencil_sharpener",
+    "seed": 6,
+    "source": "seed_exports_physics_10",
+    "difficulty": "L2",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/Stationary_Pencil_sharpener/seed_6/model.urdf",
+    "model_urdf_sha256": "7f4c9e239f2eab7b5f1cec04d027ae9714eea53b2a139c89577e8896830e0652",
+    "valid_tree": true,
+    "root_names": [
+      "housing"
+    ],
+    "link_count": 6,
+    "joint_count": 5,
+    "edge_count": 5,
+    "has_tree": true,
+    "semantic_depth": 3,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 1,
+    "pivot_names": [
+      "bin_to_lid"
+    ],
+    "visual_link_count": 6,
+    "collision_link_count": 6,
+    "edge_signature": [
+      [
+        "bin_shell",
+        "bin_to_lid",
+        "revolute",
+        "bin_lid"
+      ],
+      [
+        "housing",
+        "housing_to_bin_shell",
+        "fixed",
+        "bin_shell"
+      ],
+      [
+        "housing",
+        "housing_to_clamp_post_1",
+        "fixed",
+        "clamp_post_1"
+      ],
+      [
+        "housing",
+        "housing_to_clamp_post_2",
+        "fixed",
+        "clamp_post_2"
+      ],
+      [
+        "housing",
+        "housing_to_wedge_blade_0",
+        "fixed",
+        "wedge_blade_0"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "sailboat_winch_with_pawl_and_handle__seed_11",
+    "slug": "sailboat_winch_with_pawl_and_handle",
+    "seed": 11,
+    "source": "seed_exports_physics_10",
+    "difficulty": "L2",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/sailboat_winch_with_pawl_and_handle/seed_11/model.urdf",
+    "model_urdf_sha256": "549536c418f2c14c2b5ea5c905a9f2bd8294443d6e13f4285d406beadf165c14",
+    "valid_tree": true,
+    "root_names": [
+      "frame"
+    ],
+    "link_count": 5,
+    "joint_count": 4,
+    "edge_count": 4,
+    "has_tree": true,
+    "semantic_depth": 4,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 4,
+    "pivot_names": [
+      "crank_to_grip",
+      "drum_to_crank",
+      "frame_to_drum",
+      "frame_to_pawl_0"
+    ],
+    "visual_link_count": 5,
+    "collision_link_count": 5,
+    "edge_signature": [
+      [
+        "crank",
+        "crank_to_grip",
+        "revolute",
+        "grip"
+      ],
+      [
+        "drum",
+        "drum_to_crank",
+        "prismatic",
+        "crank"
+      ],
+      [
+        "frame",
+        "frame_to_drum",
+        "continuous",
+        "drum"
+      ],
+      [
+        "frame",
+        "frame_to_pawl_0",
+        "revolute",
+        "pawl_0"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "Astronomy_Space_shuttle__seed_0",
+    "slug": "Astronomy_Space_shuttle",
+    "seed": 0,
+    "source": "seed_exports",
+    "difficulty": "L3",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/Astronomy_Space_shuttle/seed_0/model.urdf",
+    "model_urdf_sha256": "2ce4ff36a6a8043fa9515f0d5cb442bb7dbf07b2ee666fdbea2cd02f6fabb81a",
+    "valid_tree": true,
+    "root_names": [
+      "fuselage"
+    ],
+    "link_count": 20,
+    "joint_count": 19,
+    "edge_count": 19,
+    "has_tree": true,
+    "semantic_depth": 4,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 19,
+    "pivot_names": [
+      "fin_to_left_rudder_panel",
+      "fin_to_right_rudder_panel",
+      "fuselage_to_body_flap",
+      "fuselage_to_left_main_gear_strut",
+      "fuselage_to_left_nose_gear_door",
+      "fuselage_to_left_payload_bay_door",
+      "fuselage_to_nose_gear_strut",
+      "fuselage_to_right_main_gear_strut",
+      "fuselage_to_right_nose_gear_door",
+      "fuselage_to_right_payload_bay_door",
+      "left_main_axle_to_inboard_wheel",
+      "left_main_axle_to_outboard_wheel",
+      "nose_axle_to_left_wheel",
+      "nose_axle_to_right_wheel",
+      "nose_gear_strut_to_fork",
+      "right_main_axle_to_inboard_wheel",
+      "right_main_axle_to_outboard_wheel",
+      "wing_to_left_elevon",
+      "wing_to_right_elevon"
+    ],
+    "visual_link_count": 20,
+    "collision_link_count": 20,
+    "edge_signature": [
+      [
+        "fuselage",
+        "fin_to_left_rudder_panel",
+        "revolute",
+        "left_rudder_panel"
+      ],
+      [
+        "fuselage",
+        "fin_to_right_rudder_panel",
+        "revolute",
+        "right_rudder_panel"
+      ],
+      [
+        "fuselage",
+        "fuselage_to_body_flap",
+        "revolute",
+        "body_flap"
+      ],
+      [
+        "fuselage",
+        "fuselage_to_left_main_gear_strut",
+        "revolute",
+        "left_main_gear_strut"
+      ],
+      [
+        "fuselage",
+        "fuselage_to_left_nose_gear_door",
+        "revolute",
+        "left_nose_gear_door"
+      ],
+      [
+        "fuselage",
+        "fuselage_to_left_payload_bay_door",
+        "revolute",
+        "left_payload_bay_door"
+      ],
+      [
+        "fuselage",
+        "fuselage_to_nose_gear_strut",
+        "revolute",
+        "nose_gear_strut"
+      ],
+      [
+        "fuselage",
+        "fuselage_to_right_main_gear_strut",
+        "revolute",
+        "right_main_gear_strut"
+      ],
+      [
+        "fuselage",
+        "fuselage_to_right_nose_gear_door",
+        "revolute",
+        "right_nose_gear_door"
+      ],
+      [
+        "fuselage",
+        "fuselage_to_right_payload_bay_door",
+        "revolute",
+        "right_payload_bay_door"
+      ],
+      [
+        "fuselage",
+        "wing_to_left_elevon",
+        "revolute",
+        "left_elevon"
+      ],
+      [
+        "fuselage",
+        "wing_to_right_elevon",
+        "revolute",
+        "right_elevon"
+      ],
+      [
+        "left_main_gear_strut",
+        "left_main_axle_to_inboard_wheel",
+        "continuous",
+        "left_inboard_main_wheel"
+      ],
+      [
+        "left_main_gear_strut",
+        "left_main_axle_to_outboard_wheel",
+        "continuous",
+        "left_outboard_main_wheel"
+      ],
+      [
+        "nose_gear_fork",
+        "nose_axle_to_left_wheel",
+        "continuous",
+        "left_nose_wheel"
+      ],
+      [
+        "nose_gear_fork",
+        "nose_axle_to_right_wheel",
+        "continuous",
+        "right_nose_wheel"
+      ],
+      [
+        "nose_gear_strut",
+        "nose_gear_strut_to_fork",
+        "revolute",
+        "nose_gear_fork"
+      ],
+      [
+        "right_main_gear_strut",
+        "right_main_axle_to_inboard_wheel",
+        "continuous",
+        "right_inboard_main_wheel"
+      ],
+      [
+        "right_main_gear_strut",
+        "right_main_axle_to_outboard_wheel",
+        "continuous",
+        "right_outboard_main_wheel"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "Household_Laundry_Clothes_drying_rack_Laundry_drying_rack__seed_1341",
+    "slug": "Household_Laundry_Clothes_drying_rack_Laundry_drying_rack",
+    "seed": 1341,
+    "source": "seed_exports",
+    "difficulty": "L3",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/Household_Laundry_Clothes_drying_rack_Laundry_drying_rack/seed_1341/model.urdf",
+    "model_urdf_sha256": "478fcaaa02863c639242cd19aa1522aa878a79d6b7dcebed1da2f68534ed6312",
+    "valid_tree": true,
+    "root_names": [
+      "main_frame"
+    ],
+    "link_count": 14,
+    "joint_count": 13,
+    "edge_count": 13,
+    "has_tree": true,
+    "semantic_depth": 3,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 13,
+    "pivot_names": [
+      "leg_family__a_frame_legs__frame_0__to_caster_wheel_0",
+      "leg_family__a_frame_legs__frame_0__to_caster_wheel_1",
+      "leg_family__a_frame_legs__frame_1__to_caster_wheel_0",
+      "leg_family__a_frame_legs__frame_1__to_caster_wheel_1",
+      "rail_to_hanger_0",
+      "rail_to_hanger_1",
+      "rail_to_hanger_2",
+      "rail_to_hanger_3",
+      "rail_to_hanger_4",
+      "spine_to_leg_0",
+      "spine_to_leg_1",
+      "spine_to_wing_t0_front",
+      "spine_to_wing_t0_rear"
+    ],
+    "visual_link_count": 14,
+    "collision_link_count": 14,
+    "edge_signature": [
+      [
+        "leg_family__a_frame_legs__frame_0",
+        "leg_family__a_frame_legs__frame_0__to_caster_wheel_0",
+        "continuous",
+        "leg_family__a_frame_legs__frame_0__caster_wheel_0"
+      ],
+      [
+        "leg_family__a_frame_legs__frame_0",
+        "leg_family__a_frame_legs__frame_0__to_caster_wheel_1",
+        "continuous",
+        "leg_family__a_frame_legs__frame_0__caster_wheel_1"
+      ],
+      [
+        "leg_family__a_frame_legs__frame_1",
+        "leg_family__a_frame_legs__frame_1__to_caster_wheel_0",
+        "continuous",
+        "leg_family__a_frame_legs__frame_1__caster_wheel_0"
+      ],
+      [
+        "leg_family__a_frame_legs__frame_1",
+        "leg_family__a_frame_legs__frame_1__to_caster_wheel_1",
+        "continuous",
+        "leg_family__a_frame_legs__frame_1__caster_wheel_1"
+      ],
+      [
+        "main_frame",
+        "rail_to_hanger_0",
+        "revolute",
+        "hanger_type__wire_triangle__hanger_0"
+      ],
+      [
+        "main_frame",
+        "rail_to_hanger_1",
+        "revolute",
+        "hanger_type__wire_triangle__hanger_1"
+      ],
+      [
+        "main_frame",
+        "rail_to_hanger_2",
+        "revolute",
+        "hanger_type__wire_triangle__hanger_2"
+      ],
+      [
+        "main_frame",
+        "rail_to_hanger_3",
+        "revolute",
+        "hanger_type__wire_triangle__hanger_3"
+      ],
+      [
+        "main_frame",
+        "rail_to_hanger_4",
+        "revolute",
+        "hanger_type__wire_triangle__hanger_4"
+      ],
+      [
+        "main_frame",
+        "spine_to_leg_0",
+        "revolute",
+        "leg_family__a_frame_legs__frame_0"
+      ],
+      [
+        "main_frame",
+        "spine_to_leg_1",
+        "revolute",
+        "leg_family__a_frame_legs__frame_1"
+      ],
+      [
+        "main_frame",
+        "spine_to_wing_t0_front",
+        "prismatic",
+        "wing_form__comb_clip_wing__tier0_front"
+      ],
+      [
+        "main_frame",
+        "spine_to_wing_t0_rear",
+        "prismatic",
+        "wing_form__comb_clip_wing__tier0_rear"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "Vehicle_Sports_car__seed_202",
+    "slug": "Vehicle_Sports_car",
+    "seed": 202,
+    "source": "seed_exports",
+    "difficulty": "L3",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/Vehicle_Sports_car/seed_202/model.urdf",
+    "model_urdf_sha256": "d2460aa86fccc79fd320dbf13114560fb88668544c11af7e3a3798ab8bf970cb",
+    "valid_tree": true,
+    "root_names": [
+      "body"
+    ],
+    "link_count": 10,
+    "joint_count": 9,
+    "edge_count": 9,
+    "has_tree": true,
+    "semantic_depth": 3,
+    "named_group_count": 2,
+    "named_group_names": [
+      "steer_knuckle_front_left",
+      "steer_knuckle_front_right"
+    ],
+    "pivot_count": 9,
+    "pivot_names": [
+      "door_left_hinge",
+      "door_right_hinge",
+      "steer_knuckle_front_left_steer",
+      "steer_knuckle_front_right_steer",
+      "steering_wheel_turn",
+      "wheel_front_left_spin",
+      "wheel_front_right_spin",
+      "wheel_rear_left_spin",
+      "wheel_rear_right_spin"
+    ],
+    "visual_link_count": 8,
+    "collision_link_count": 8,
+    "edge_signature": [
+      [
+        "body",
+        "door_left_hinge",
+        "revolute",
+        "door_left"
+      ],
+      [
+        "body",
+        "door_right_hinge",
+        "revolute",
+        "door_right"
+      ],
+      [
+        "body",
+        "steer_knuckle_front_left_steer",
+        "revolute",
+        "steer_knuckle_front_left"
+      ],
+      [
+        "body",
+        "steer_knuckle_front_right_steer",
+        "revolute",
+        "steer_knuckle_front_right"
+      ],
+      [
+        "body",
+        "steering_wheel_turn",
+        "revolute",
+        "steering_wheel"
+      ],
+      [
+        "body",
+        "wheel_rear_left_spin",
+        "continuous",
+        "wheel_rear_left"
+      ],
+      [
+        "body",
+        "wheel_rear_right_spin",
+        "continuous",
+        "wheel_rear_right"
+      ],
+      [
+        "steer_knuckle_front_left",
+        "wheel_front_left_spin",
+        "continuous",
+        "wheel_front_left"
+      ],
+      [
+        "steer_knuckle_front_right",
+        "wheel_front_right_spin",
+        "continuous",
+        "wheel_front_right"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "pictureX_0611_Industrial_rolling_work_table__seed_0",
+    "slug": "pictureX_0611_Industrial_rolling_work_table",
+    "seed": 0,
+    "source": "seed_exports",
+    "difficulty": "L3",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_Industrial_rolling_work_table/seed_0/model.urdf",
+    "model_urdf_sha256": "b15fd40060a3fc2957ec89761c40a3c60d1acaa1a470ade2e0da7120aed69da4",
+    "valid_tree": true,
+    "root_names": [
+      "frame"
+    ],
+    "link_count": 17,
+    "joint_count": 16,
+    "edge_count": 16,
+    "has_tree": true,
+    "semantic_depth": 3,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 14,
+    "pivot_names": [
+      "caster_swivel_to_brake_0",
+      "caster_swivel_to_brake_1",
+      "caster_swivel_to_brake_2",
+      "caster_swivel_to_brake_3",
+      "caster_swivel_to_wheel_0",
+      "caster_swivel_to_wheel_1",
+      "caster_swivel_to_wheel_2",
+      "caster_swivel_to_wheel_3",
+      "frame_to_caster_swivel_0",
+      "frame_to_caster_swivel_1",
+      "frame_to_caster_swivel_2",
+      "frame_to_caster_swivel_3",
+      "frame_to_storage_item_0",
+      "frame_to_storage_item_1"
+    ],
+    "visual_link_count": 17,
+    "collision_link_count": 17,
+    "edge_signature": [
+      [
+        "caster_swivel_0",
+        "caster_swivel_to_brake_0",
+        "revolute",
+        "caster_brake_0"
+      ],
+      [
+        "caster_swivel_0",
+        "caster_swivel_to_wheel_0",
+        "continuous",
+        "caster_wheel_0"
+      ],
+      [
+        "caster_swivel_1",
+        "caster_swivel_to_brake_1",
+        "revolute",
+        "caster_brake_1"
+      ],
+      [
+        "caster_swivel_1",
+        "caster_swivel_to_wheel_1",
+        "continuous",
+        "caster_wheel_1"
+      ],
+      [
+        "caster_swivel_2",
+        "caster_swivel_to_brake_2",
+        "revolute",
+        "caster_brake_2"
+      ],
+      [
+        "caster_swivel_2",
+        "caster_swivel_to_wheel_2",
+        "continuous",
+        "caster_wheel_2"
+      ],
+      [
+        "caster_swivel_3",
+        "caster_swivel_to_brake_3",
+        "revolute",
+        "caster_brake_3"
+      ],
+      [
+        "caster_swivel_3",
+        "caster_swivel_to_wheel_3",
+        "continuous",
+        "caster_wheel_3"
+      ],
+      [
+        "frame",
+        "frame_to_bench_accessory",
+        "fixed",
+        "bench_accessory__equipment_shelf__module"
+      ],
+      [
+        "frame",
+        "frame_to_caster_swivel_0",
+        "continuous",
+        "caster_swivel_0"
+      ],
+      [
+        "frame",
+        "frame_to_caster_swivel_1",
+        "continuous",
+        "caster_swivel_1"
+      ],
+      [
+        "frame",
+        "frame_to_caster_swivel_2",
+        "continuous",
+        "caster_swivel_2"
+      ],
+      [
+        "frame",
+        "frame_to_caster_swivel_3",
+        "continuous",
+        "caster_swivel_3"
+      ],
+      [
+        "frame",
+        "frame_to_storage_item_0",
+        "prismatic",
+        "storage_module__pegboard_rack__item_0"
+      ],
+      [
+        "frame",
+        "frame_to_storage_item_1",
+        "prismatic",
+        "storage_module__pegboard_rack__item_1"
+      ],
+      [
+        "frame",
+        "frame_to_worktop",
+        "fixed",
+        "worktop"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "pictureX_0611_Hole_punch__seed_0",
+    "slug": "pictureX_0611_Hole_punch",
+    "seed": 0,
+    "source": "seed_exports",
+    "difficulty": "L3",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_Hole_punch/seed_0/model.urdf",
+    "model_urdf_sha256": "562fda3751e22d4e59eae2cb68cd1374898ab6351dd279174304922cee6c3529",
+    "valid_tree": true,
+    "root_names": [
+      "base"
+    ],
+    "link_count": 12,
+    "joint_count": 11,
+    "edge_count": 11,
+    "has_tree": true,
+    "semantic_depth": 4,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 8,
+    "pivot_names": [
+      "frame_to_handle",
+      "frame_to_punch_carriage_0",
+      "frame_to_punch_carriage_1",
+      "frame_to_punch_carriage_2",
+      "frame_to_punch_carriage_3",
+      "guide_rail_to_paper_stop_0",
+      "guide_rail_to_paper_stop_1",
+      "handle_to_drag_link"
+    ],
+    "visual_link_count": 12,
+    "collision_link_count": 12,
+    "edge_signature": [
+      [
+        "actuation__lever_linkage__handle",
+        "handle_to_drag_link",
+        "revolute",
+        "actuation__lever_linkage__drag_link"
+      ],
+      [
+        "base",
+        "base_to_chip_tray",
+        "fixed",
+        "chip_tray"
+      ],
+      [
+        "base",
+        "base_to_frame",
+        "fixed",
+        "frame"
+      ],
+      [
+        "base",
+        "base_to_guide_rail",
+        "fixed",
+        "guide_rail"
+      ],
+      [
+        "frame",
+        "frame_to_handle",
+        "revolute",
+        "actuation__lever_linkage__handle"
+      ],
+      [
+        "frame",
+        "frame_to_punch_carriage_0",
+        "prismatic",
+        "punch_station__collared_pin__carriage_0"
+      ],
+      [
+        "frame",
+        "frame_to_punch_carriage_1",
+        "prismatic",
+        "punch_station__collared_pin__carriage_1"
+      ],
+      [
+        "frame",
+        "frame_to_punch_carriage_2",
+        "prismatic",
+        "punch_station__collared_pin__carriage_2"
+      ],
+      [
+        "frame",
+        "frame_to_punch_carriage_3",
+        "prismatic",
+        "punch_station__collared_pin__carriage_3"
+      ],
+      [
+        "guide_rail",
+        "guide_rail_to_paper_stop_0",
+        "prismatic",
+        "paper_guide__rail_guides__paper_stop_0"
+      ],
+      [
+        "guide_rail",
+        "guide_rail_to_paper_stop_1",
+        "prismatic",
+        "paper_guide__rail_guides__paper_stop_1"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "pictureX_0611_drawing_compass_with_adjustable_legs__seed_0",
+    "slug": "pictureX_0611_drawing_compass_with_adjustable_legs",
+    "seed": 0,
+    "source": "seed_exports",
+    "difficulty": "L3",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_drawing_compass_with_adjustable_legs/seed_0/model.urdf",
+    "model_urdf_sha256": "af4afd4d88f7000f1f6b42795659a7ae8a29aa719f57f6eab47c6eda4dc8435c",
+    "valid_tree": true,
+    "root_names": [
+      "head_style__spring_bow__head"
+    ],
+    "link_count": 11,
+    "joint_count": 10,
+    "edge_count": 10,
+    "has_tree": true,
+    "semantic_depth": 5,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 10,
+    "pivot_names": [
+      "adjuster_style__cross_screw__spin",
+      "handle_style__knurled_handle__turn",
+      "lead_end_style__extension_rail__extend",
+      "lead_end_style__extension_rail__hinge",
+      "leg_style__folding_knee__lead_hinge",
+      "leg_style__folding_knee__lead_knee",
+      "leg_style__folding_knee__needle_hinge",
+      "leg_style__folding_knee__needle_knee",
+      "needle_end_style__collet_cartridge__insert",
+      "needle_end_style__collet_cartridge__sleeve_spin"
+    ],
+    "visual_link_count": 11,
+    "collision_link_count": 11,
+    "edge_signature": [
+      [
+        "head_style__spring_bow__head",
+        "handle_style__knurled_handle__turn",
+        "revolute",
+        "handle_style__knurled_handle__handle"
+      ],
+      [
+        "head_style__spring_bow__head",
+        "leg_style__folding_knee__lead_hinge",
+        "revolute",
+        "leg_style__folding_knee__lead_upper_leg"
+      ],
+      [
+        "head_style__spring_bow__head",
+        "leg_style__folding_knee__needle_hinge",
+        "revolute",
+        "leg_style__folding_knee__needle_upper_leg"
+      ],
+      [
+        "lead_end_style__extension_rail__rail",
+        "lead_end_style__extension_rail__hinge",
+        "revolute",
+        "lead_end_style__extension_rail__holder"
+      ],
+      [
+        "leg_style__folding_knee__lead_lower_leg",
+        "lead_end_style__extension_rail__extend",
+        "prismatic",
+        "lead_end_style__extension_rail__rail"
+      ],
+      [
+        "leg_style__folding_knee__lead_upper_leg",
+        "leg_style__folding_knee__lead_knee",
+        "revolute",
+        "leg_style__folding_knee__lead_lower_leg"
+      ],
+      [
+        "leg_style__folding_knee__needle_lower_leg",
+        "needle_end_style__collet_cartridge__insert",
+        "prismatic",
+        "needle_end_style__collet_cartridge__cartridge"
+      ],
+      [
+        "leg_style__folding_knee__needle_lower_leg",
+        "needle_end_style__collet_cartridge__sleeve_spin",
+        "continuous",
+        "needle_end_style__collet_cartridge__release_sleeve"
+      ],
+      [
+        "leg_style__folding_knee__needle_upper_leg",
+        "adjuster_style__cross_screw__spin",
+        "continuous",
+        "adjuster_style__cross_screw__screw"
+      ],
+      [
+        "leg_style__folding_knee__needle_upper_leg",
+        "leg_style__folding_knee__needle_knee",
+        "revolute",
+        "leg_style__folding_knee__needle_lower_leg"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "pictureX_0611_ergonomic_clamp_with_adjustable_components__seed_0",
+    "slug": "pictureX_0611_ergonomic_clamp_with_adjustable_components",
+    "seed": 0,
+    "source": "seed_exports",
+    "difficulty": "L3",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_ergonomic_clamp_with_adjustable_components/seed_0/model.urdf",
+    "model_urdf_sha256": "4944f101832787f422af1a4f13e7bc79b6ef5820a5f65a005a3460c0ee931df5",
+    "valid_tree": true,
+    "root_names": [
+      "clamp__frame"
+    ],
+    "link_count": 14,
+    "joint_count": 13,
+    "edge_count": 13,
+    "has_tree": true,
+    "semantic_depth": 6,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 13,
+    "pivot_names": [
+      "arm_form__gas_spring_parallelogram__gas_spring_base",
+      "arm_form__gas_spring_parallelogram__gas_spring_extend",
+      "arm_form__gas_spring_parallelogram__shoulder_lift",
+      "arm_form__gas_spring_parallelogram__upper_link_hinge",
+      "clamp__carriage_height",
+      "clamp__carriage_lock_turn",
+      "clamp__pad_swivel_0",
+      "clamp__pad_swivel_1",
+      "clamp__post_lock_turn",
+      "clamp__spindle_adjust_0",
+      "clamp__spindle_adjust_1",
+      "tray_head__fixed_tilt_tray__head_yaw",
+      "tray_head__fixed_tilt_tray__tray_tilt"
+    ],
+    "visual_link_count": 14,
+    "collision_link_count": 14,
+    "edge_signature": [
+      [
+        "arm_form__gas_spring_parallelogram__gas_cylinder",
+        "arm_form__gas_spring_parallelogram__gas_spring_extend",
+        "prismatic",
+        "arm_form__gas_spring_parallelogram__gas_piston"
+      ],
+      [
+        "arm_form__gas_spring_parallelogram__lower_link",
+        "arm_form__gas_spring_parallelogram__upper_link_hinge",
+        "revolute",
+        "arm_form__gas_spring_parallelogram__upper_link"
+      ],
+      [
+        "arm_form__gas_spring_parallelogram__upper_link",
+        "tray_head__fixed_tilt_tray__head_yaw",
+        "revolute",
+        "tray_head__fixed_tilt_tray__yoke"
+      ],
+      [
+        "clamp__carriage",
+        "arm_form__gas_spring_parallelogram__gas_spring_base",
+        "revolute",
+        "arm_form__gas_spring_parallelogram__gas_cylinder"
+      ],
+      [
+        "clamp__carriage",
+        "arm_form__gas_spring_parallelogram__shoulder_lift",
+        "revolute",
+        "arm_form__gas_spring_parallelogram__lower_link"
+      ],
+      [
+        "clamp__carriage",
+        "clamp__carriage_lock_turn",
+        "continuous",
+        "clamp__carriage_lock"
+      ],
+      [
+        "clamp__frame",
+        "clamp__carriage_height",
+        "prismatic",
+        "clamp__carriage"
+      ],
+      [
+        "clamp__frame",
+        "clamp__post_lock_turn",
+        "continuous",
+        "clamp__post_lock"
+      ],
+      [
+        "clamp__frame",
+        "clamp__spindle_adjust_0",
+        "prismatic",
+        "clamp__spindle_0"
+      ],
+      [
+        "clamp__frame",
+        "clamp__spindle_adjust_1",
+        "prismatic",
+        "clamp__spindle_1"
+      ],
+      [
+        "clamp__spindle_0",
+        "clamp__pad_swivel_0",
+        "continuous",
+        "clamp__pressure_pad_0"
+      ],
+      [
+        "clamp__spindle_1",
+        "clamp__pad_swivel_1",
+        "continuous",
+        "clamp__pressure_pad_1"
+      ],
+      [
+        "tray_head__fixed_tilt_tray__yoke",
+        "tray_head__fixed_tilt_tray__tray_tilt",
+        "revolute",
+        "tray_head__fixed_tilt_tray__tray"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "pictureX_0611_Hand_crank_clothes_wringer__seed_0",
+    "slug": "pictureX_0611_Hand_crank_clothes_wringer",
+    "seed": 0,
+    "source": "seed_exports",
+    "difficulty": "L3",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_Hand_crank_clothes_wringer/seed_0/model.urdf",
+    "model_urdf_sha256": "9cd1096d2e5bd93bf674045f16177b4be152c04fb3445d522587c6ba3cafb2ec",
+    "valid_tree": true,
+    "root_names": [
+      "frame"
+    ],
+    "link_count": 10,
+    "joint_count": 9,
+    "edge_count": 9,
+    "has_tree": true,
+    "semantic_depth": 3,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 9,
+    "pivot_names": [
+      "bridge_screw_turn",
+      "clamp_adjust_0",
+      "clamp_adjust_1",
+      "crank_rotation",
+      "feed_shelf_fold",
+      "pressure_slide_0",
+      "pressure_slide_1",
+      "roller_spin_0",
+      "roller_spin_1"
+    ],
+    "visual_link_count": 10,
+    "collision_link_count": 10,
+    "edge_signature": [
+      [
+        "frame",
+        "bridge_screw_turn",
+        "continuous",
+        "pressure_mechanism__overhead_screw_bridge__screw"
+      ],
+      [
+        "frame",
+        "clamp_adjust_0",
+        "prismatic",
+        "support_mount__classic_boss_clamps__clamp_0"
+      ],
+      [
+        "frame",
+        "clamp_adjust_1",
+        "prismatic",
+        "support_mount__classic_boss_clamps__clamp_1"
+      ],
+      [
+        "frame",
+        "feed_shelf_fold",
+        "revolute",
+        "feed_module__fold_down_shelf__shelf"
+      ],
+      [
+        "frame",
+        "pressure_slide_0",
+        "prismatic",
+        "pressure_block_0"
+      ],
+      [
+        "frame",
+        "pressure_slide_1",
+        "prismatic",
+        "pressure_block_1"
+      ],
+      [
+        "frame",
+        "roller_spin_0",
+        "continuous",
+        "roller_bank__indexed_parallel_roller_bank__roller_0"
+      ],
+      [
+        "pressure_block_0",
+        "roller_spin_1",
+        "continuous",
+        "roller_bank__indexed_parallel_roller_bank__roller_1"
+      ],
+      [
+        "pressure_block_1",
+        "crank_rotation",
+        "continuous",
+        "crank_drive"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "pictureX_0611_ergonomic_clamp_with_adjustable__seed_0",
+    "slug": "pictureX_0611_ergonomic_clamp_with_adjustable",
+    "seed": 0,
+    "source": "seed_exports",
+    "difficulty": "L3",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_ergonomic_clamp_with_adjustable/seed_0/model.urdf",
+    "model_urdf_sha256": "a3079ce771d40b0bbbdb31cee1cea6da9d189c06e2aecd22d0a80e0f3ba10b7d",
+    "valid_tree": true,
+    "root_names": [
+      "clamp__frame"
+    ],
+    "link_count": 11,
+    "joint_count": 10,
+    "edge_count": 10,
+    "has_tree": true,
+    "semantic_depth": 6,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 10,
+    "pivot_names": [
+      "clamp__jaw_slide",
+      "clamp__pressure_pad_pivot",
+      "clamp__spindle_turn",
+      "pad_head__ball_socket__pad_ball_pitch",
+      "pad_head__ball_socket__pad_ball_roll",
+      "pad_head__ball_socket__wrist_swivel",
+      "support_linkage__linear_rail__arm_pitch",
+      "support_linkage__linear_rail__carriage_slide",
+      "support_linkage__linear_rail__release_flick",
+      "support_linkage__linear_rail__trigger_squeeze"
+    ],
+    "visual_link_count": 11,
+    "collision_link_count": 11,
+    "edge_signature": [
+      [
+        "clamp__frame",
+        "clamp__jaw_slide",
+        "prismatic",
+        "clamp__movable_jaw"
+      ],
+      [
+        "clamp__frame",
+        "support_linkage__linear_rail__arm_pitch",
+        "revolute",
+        "support_linkage__linear_rail__arm"
+      ],
+      [
+        "clamp__movable_jaw",
+        "clamp__spindle_turn",
+        "continuous",
+        "clamp__spindle"
+      ],
+      [
+        "clamp__spindle",
+        "clamp__pressure_pad_pivot",
+        "revolute",
+        "clamp__pressure_pad"
+      ],
+      [
+        "pad_head__ball_socket__gimbal",
+        "pad_head__ball_socket__pad_ball_roll",
+        "revolute",
+        "pad_head__ball_socket__pad"
+      ],
+      [
+        "pad_head__ball_socket__wrist",
+        "pad_head__ball_socket__pad_ball_pitch",
+        "revolute",
+        "pad_head__ball_socket__gimbal"
+      ],
+      [
+        "support_linkage__linear_rail__arm",
+        "support_linkage__linear_rail__carriage_slide",
+        "prismatic",
+        "support_linkage__linear_rail__carriage"
+      ],
+      [
+        "support_linkage__linear_rail__arm",
+        "support_linkage__linear_rail__release_flick",
+        "revolute",
+        "support_linkage__linear_rail__release_lever"
+      ],
+      [
+        "support_linkage__linear_rail__arm",
+        "support_linkage__linear_rail__trigger_squeeze",
+        "revolute",
+        "support_linkage__linear_rail__trigger"
+      ],
+      [
+        "support_linkage__linear_rail__carriage",
+        "pad_head__ball_socket__wrist_swivel",
+        "revolute",
+        "pad_head__ball_socket__wrist"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "Astronomy_Pressurised_module_door__seed_1020",
+    "slug": "Astronomy_Pressurised_module_door",
+    "seed": 1020,
+    "source": "seed_exports",
+    "difficulty": "L3",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/Astronomy_Pressurised_module_door/seed_1020/model.urdf",
+    "model_urdf_sha256": "4437f275dc435a8296f8163a8fe9e344cd0c6abd28837c167b598b3b4372de7a",
+    "valid_tree": true,
+    "root_names": [
+      "airlock_shell"
+    ],
+    "link_count": 9,
+    "joint_count": 8,
+    "edge_count": 8,
+    "has_tree": true,
+    "semantic_depth": 3,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 8,
+    "pivot_names": [
+      "cover_hinge_0",
+      "cover_hinge_1",
+      "cover_hinge_2",
+      "cover_hinge_3",
+      "cover_hinge_4",
+      "cover_hinge_5",
+      "handwheel_spin",
+      "hatch_hinge"
+    ],
+    "visual_link_count": 9,
+    "collision_link_count": 9,
+    "edge_signature": [
+      [
+        "airlock_shell",
+        "cover_hinge_0",
+        "revolute",
+        "debris_cover_0"
+      ],
+      [
+        "airlock_shell",
+        "cover_hinge_1",
+        "revolute",
+        "debris_cover_1"
+      ],
+      [
+        "airlock_shell",
+        "cover_hinge_2",
+        "revolute",
+        "debris_cover_2"
+      ],
+      [
+        "airlock_shell",
+        "cover_hinge_3",
+        "revolute",
+        "debris_cover_3"
+      ],
+      [
+        "airlock_shell",
+        "cover_hinge_4",
+        "revolute",
+        "debris_cover_4"
+      ],
+      [
+        "airlock_shell",
+        "cover_hinge_5",
+        "revolute",
+        "debris_cover_5"
+      ],
+      [
+        "airlock_shell",
+        "hatch_hinge",
+        "revolute",
+        "hatch_lid"
+      ],
+      [
+        "hatch_lid",
+        "handwheel_spin",
+        "revolute",
+        "lock_handwheel"
+      ]
+    ],
+    "malformed_edges": []
+  },
+  {
+    "asset_id": "pictureX_0611_Folding_table5__seed_2",
+    "slug": "pictureX_0611_Folding_table5",
+    "seed": 2,
+    "source": "seed_exports",
+    "difficulty": "L3",
+    "model_urdf": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_Folding_table5/seed_2/model.urdf",
+    "model_urdf_sha256": "c8aad21353907e015528ebd198a6826baaccb650fa6fbb39a485d846316d9b1e",
+    "valid_tree": true,
+    "root_names": [
+      "table_frame"
+    ],
+    "link_count": 17,
+    "joint_count": 16,
+    "edge_count": 16,
+    "has_tree": true,
+    "semantic_depth": 3,
+    "named_group_count": 0,
+    "named_group_names": [],
+    "pivot_count": 16,
+    "pivot_names": [
+      "caster_0_brake",
+      "caster_0_roll",
+      "caster_1_brake",
+      "caster_1_roll",
+      "caster_2_brake",
+      "caster_2_roll",
+      "caster_3_brake",
+      "caster_3_roll",
+      "frame_to_caster_swivel_0",
+      "frame_to_caster_swivel_1",
+      "frame_to_caster_swivel_2",
+      "frame_to_caster_swivel_3",
+      "frame_to_leaf_0",
+      "frame_to_leaf_1",
+      "frame_to_leaf_support_0_0",
+      "frame_to_leaf_support_1_0"
+    ],
+    "visual_link_count": 17,
+    "collision_link_count": 17,
+    "edge_signature": [
+      [
+        "foot_build__braked_caster__caster_fork_0",
+        "caster_0_brake",
+        "revolute",
+        "foot_build__braked_caster__brake_pedal_0"
+      ],
+      [
+        "foot_build__braked_caster__caster_fork_0",
+        "caster_0_roll",
+        "revolute",
+        "foot_build__braked_caster__caster_wheel_0"
+      ],
+      [
+        "foot_build__braked_caster__caster_fork_1",
+        "caster_1_brake",
+        "revolute",
+        "foot_build__braked_caster__brake_pedal_1"
+      ],
+      [
+        "foot_build__braked_caster__caster_fork_1",
+        "caster_1_roll",
+        "revolute",
+        "foot_build__braked_caster__caster_wheel_1"
+      ],
+      [
+        "foot_build__braked_caster__caster_fork_2",
+        "caster_2_brake",
+        "revolute",
+        "foot_build__braked_caster__brake_pedal_2"
+      ],
+      [
+        "foot_build__braked_caster__caster_fork_2",
+        "caster_2_roll",
+        "revolute",
+        "foot_build__braked_caster__caster_wheel_2"
+      ],
+      [
+        "foot_build__braked_caster__caster_fork_3",
+        "caster_3_brake",
+        "revolute",
+        "foot_build__braked_caster__brake_pedal_3"
+      ],
+      [
+        "foot_build__braked_caster__caster_fork_3",
+        "caster_3_roll",
+        "revolute",
+        "foot_build__braked_caster__caster_wheel_3"
+      ],
+      [
+        "table_frame",
+        "frame_to_caster_swivel_0",
+        "revolute",
+        "foot_build__braked_caster__caster_fork_0"
+      ],
+      [
+        "table_frame",
+        "frame_to_caster_swivel_1",
+        "revolute",
+        "foot_build__braked_caster__caster_fork_1"
+      ],
+      [
+        "table_frame",
+        "frame_to_caster_swivel_2",
+        "revolute",
+        "foot_build__braked_caster__caster_fork_2"
+      ],
+      [
+        "table_frame",
+        "frame_to_caster_swivel_3",
+        "revolute",
+        "foot_build__braked_caster__caster_fork_3"
+      ],
+      [
+        "table_frame",
+        "frame_to_leaf_0",
+        "revolute",
+        "frame_build__open_spine__drop_leaf_0"
+      ],
+      [
+        "table_frame",
+        "frame_to_leaf_1",
+        "revolute",
+        "frame_build__open_spine__drop_leaf_1"
+      ],
+      [
+        "table_frame",
+        "frame_to_leaf_support_0_0",
+        "revolute",
+        "support_build__cross_trestle__unit_0_0"
+      ],
+      [
+        "table_frame",
+        "frame_to_leaf_support_1_0",
+        "revolute",
+        "support_build__cross_trestle__unit_1_0"
+      ]
+    ],
+    "malformed_edges": []
+  }
+]

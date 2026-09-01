@@ -1,0 +1,1790 @@
+{
+  "schema_version": 1,
+  "protocol_id": "nano3d_table5_editability_shared_v2",
+  "cohort": "curated_challenge_set",
+  "selection_frozen_before_new_runs": true,
+  "frozen_at_utc": "2026-08-11T06:55:01.251845+00:00",
+  "scorer_contract_path": "arti-skill/exp/reference/editability_v2/articraft_scorer_contract_v2.json",
+  "scorer_sha256": "7ce66aa02aa33869949ac561b59d0f7ff8ef81b591cb4d3565756cb7e02aa877",
+  "budget_guard_path": "arti-skill/exp/scripts/articraft_budget_sitecustomize.py",
+  "budget_guard_sha256": "d76d833031b05ccfbeb11d674746134d32681ddff590093246caa036ed5de368",
+  "execution_runner_sha256": "7b030beac35338975b587e8c06af466ee4ce3c739d2286241de3d26c1593f5e4",
+  "selection_rule": "Curate 18 distinct root parents from the complete checked-in source-map set before any new run, balancing six additive, six modified, and six scale edits. Require an executable parent precondition and deterministic target scorer. Historical children establish feasibility and naming only; their scores are not selection inputs.",
+  "sampling_claim": "This is a curated challenge set, not a random or unbiased sample. Success rate is conditional on this fixed challenge set and must not be generalized as an unbiased population estimate.",
+  "historical_child_role": "gold_evidence_only_not_evaluation_output",
+  "runtime": {
+    "provider": "dashscope",
+    "model": "qwen3.7-max-2026-05-20",
+    "thinking_level": "high",
+    "max_turns": 30,
+    "max_cost_usd": null,
+    "context_tokens": 1000000,
+    "max_output_tokens": 65536,
+    "pricing_cny_per_million_tokens": {
+      "uncached_input": 12.0,
+      "cached_input": 2.4,
+      "output": 36.0
+    },
+    "pricing_note": "Freeze actual token accounting and estimated CNY. USD is unavailable and no exchange rate is inferred."
+  },
+  "execution_gate": {
+    "requires_exact_manifest_sha256": true,
+    "requires_exact_model_snapshot": true,
+    "default_mode": "preflight_only_no_api",
+    "record_timeout_seconds": 1800
+  },
+  "budget_guard": {
+    "currency": "CNY",
+    "per_record_hard_cap": 20.0,
+    "cohort_hard_cap": 360.0,
+    "pre_request_fail_closed": true,
+    "input_token_upper_bound": "utf8_payload_bytes_plus_4096_special_token_reserve",
+    "max_output_tokens_per_request": 65536,
+    "context_window_tokens": 1000000,
+    "output_safety_tokens": 1024,
+    "provider_max_attempts": 1,
+    "record_level_retries": 0,
+    "usage_log": "cny_budget/usage.jsonl",
+    "total_state": "cny_budget/total.json"
+  },
+  "balance": {
+    "additive": 6,
+    "modified": 6,
+    "scale": 6,
+    "task_count": 18,
+    "minimum_category_subcategory_pairs": 6
+  },
+  "common_pv_a_mapping": {
+    "target_fulfilled": "task.scorer.target",
+    "anchor_preserved": "task.scorer.anchor",
+    "non_target_preserved": "task.scorer.non_target",
+    "scale": "task.scorer.scale for scale edits; N/A otherwise",
+    "geometry_locality": "changed semantic geometry names are restricted to target/dependent-consumer patterns",
+    "structural_locality": "joint/link graph delta is restricted to task.scorer.allowed_structural_delta",
+    "hierarchy": "compile --target full --validate plus deterministic joint-parent/name checks",
+    "qc": "parent and fresh child compile --target full --validate; no manual blind-review value is imputed",
+    "cost": "actual uncached/cached input and output tokens plus frozen CNY estimate",
+    "manual_blind_review": "N/A until separately performed"
+  },
+  "scorer_contract": {
+    "version": "urdf_semantic_v2",
+    "pass_conjunction": "compile && target_fulfilled && anchor_preserved && non_target_preserved && structural_locality && geometry_locality && scale_if_applicable",
+    "source_predicates": "auxiliary_only_never_decide_pass",
+    "visual_signature": "primitive parameters, mesh content SHA-256, material/color/texture, local bounds/extents, and local origin",
+    "joint_signature": "type, parent, child, axis, lower limit, and upper limit; origin is excluded to allow preregistered interface refits",
+    "historical_gold_gate": "All 18 historical direct-child gold records must compile and pass this identical scorer before any fresh API run."
+  },
+  "tasks": [
+    {
+      "task_id": "A01",
+      "edit_class": "additive",
+      "category": "Bag_Suitcase",
+      "subcategory": "Shopping_bucket",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/Bag_Suitcase_Shopping_bucket.md",
+      "parent_record_id": "rec_a-rectangular-red-plastic-shopping-basket-with-r_20260608_160213_314844_c383d977",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_add-a-removable-inner-caddy-tray-that-seats-on-t_20260609_135308_824047_5030ab7f",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_a01_caddy",
+      "normalized_instruction": "TARGET: add a removable inner caddy tray nested inside the basket below the rim, constrained by the basket interior/rim interface, and connected by one bounded vertical PRISMATIC lift joint. An inner-caddy grip is optional target-local detail, not a required target. KEEP: the basket shell, rim, slot pattern, and original folding bail handle unchanged.",
+      "precondition": "Parent has no inner caddy and already has a basket shell, rim, slots, and folding bail.",
+      "roles": {
+        "target": [
+          "caddy",
+          "body_to_caddy"
+        ],
+        "anchor": [
+          "basket",
+          "rim",
+          "bail"
+        ],
+        "non_target": [
+          "slot",
+          "wall",
+          "base"
+        ]
+      },
+      "scorer": {
+        "target": "Require a semantic removable inner-caddy shell and one bounded PRISMATIC caddy lift joint; a target-local caddy grip is optional.",
+        "anchor": "Parent bail joint type/count and basket-rim topology remain present.",
+        "non_target": "Slot count and basket wall/base semantic parts remain unchanged.",
+        "scale": "N/A",
+        "allowed_structural_delta": "+1 caddy link and +1 bounded PRISMATIC joint required; optional extra caddy-local grip link/joint is allowed but never required."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_a-rectangular-red-plastic-shopping-basket-with-r_20260608_160213_314844_c383d977/revisions/rev_000001/model.py",
+      "parent_model_sha256": "3ce7951b6f630cd0f385d8436ed3b0e2adbb01a0346e1fee5f623c6ac462df78",
+      "original_object_prompt": "A rectangular red plastic shopping basket with rounded edges and a glossy finish, vertical slot perforations on the side walls, a thick rolled top rim, and a tapered stackable body. It has a single dark-red arched bail handle that pivots up and over from two pivot points at the top of the short sides. Glossy red-orange plastic.\n\nreference_image: picture/Bag_Suitcase/Shopping bucket/002.png",
+      "normalized_edit_instruction": "TARGET: add a removable inner caddy tray nested inside the basket below the rim, constrained by the basket interior/rim interface, and connected by one bounded vertical PRISMATIC lift joint. An inner-caddy grip is optional target-local detail, not a required target. KEEP: the basket shell, rim, slot pattern, and original folding bail handle unchanged.",
+      "gold": {
+        "precondition": "Parent has no inner caddy and already has a basket shell, rim, slots, and folding bail.",
+        "roles": {
+          "target": [
+            "caddy",
+            "body_to_caddy"
+          ],
+          "anchor": [
+            "basket",
+            "rim",
+            "bail"
+          ],
+          "non_target": [
+            "slot",
+            "wall",
+            "base"
+          ]
+        },
+        "scorer": {
+          "target": "Require a semantic removable inner-caddy shell and one bounded PRISMATIC caddy lift joint; a target-local caddy grip is optional.",
+          "anchor": "Parent bail joint type/count and basket-rim topology remain present.",
+          "non_target": "Slot count and basket wall/base semantic parts remain unchanged.",
+          "scale": "N/A",
+          "allowed_structural_delta": "+1 caddy link and +1 bounded PRISMATIC joint required; optional extra caddy-local grip link/joint is allowed but never required."
+        },
+        "historical_evidence": {
+          "record_id": "rec_add-a-removable-inner-caddy-tray-that-seats-on-t_20260609_135308_824047_5030ab7f",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/Bag_Suitcase_Shopping_bucket.md",
+          "parent_record_id": "rec_a-rectangular-red-plastic-shopping-basket-with-r_20260608_160213_314844_c383d977",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_a-rectangular-red-plastic-shopping-basket-with-r_20260608_160213_314844_c383d977",
+          "revision_id": "rev_000001",
+          "provider": "anthropic",
+          "model_id": "claude-opus-4-8",
+          "prompt_sha256": "16c55d684b8574f52313bedfe09ea9d7ac1285863a5579cda777b605bcc00b60",
+          "model_py_sha256": "3ce7951b6f630cd0f385d8436ed3b0e2adbb01a0346e1fee5f623c6ac462df78"
+        }
+      }
+    },
+    {
+      "task_id": "A02",
+      "edit_class": "additive",
+      "category": "Technology",
+      "subcategory": "Keyboard",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/Technology_Keyboard.md",
+      "parent_record_id": "rec_a-white-compact-wireless-computer-keyboard-tenke_20260624_123545_283861_38c84f4e",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_keyboard_var_knob",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_a02_knob",
+      "normalized_instruction": "TARGET: add a short cylindrical media_knob at the top-right of the chassis with a visible chassis boss and a continuous REVOLUTE joint about Z. A target-local top-right chassis/keybed width extension is allowed only as needed to support the boss. KEEP: key layout, key count, and all existing key mechanisms unchanged.",
+      "precondition": "Parent top-right area has no rotary knob and exposes a stable chassis anchor.",
+      "roles": {
+        "target": [
+          "media_knob",
+          "knob_boss",
+          "target_local_chassis_keybed_extension",
+          "chassis_to_media_knob"
+        ],
+        "anchor": [
+          "chassis"
+        ],
+        "non_target": [
+          "key",
+          "spacebar"
+        ]
+      },
+      "scorer": {
+        "target": "Require one cylindrical media_knob, visible coaxial boss, and exactly one continuous or full-cycle REVOLUTE Z-axis knob joint.",
+        "anchor": "The original chassis remains the knob parent and visibly supports the boss; only a target-local top-right chassis/keybed extension is allowed.",
+        "non_target": "Key semantic-name set and key-joint count equal the parent.",
+        "scale": "N/A",
+        "allowed_structural_delta": "+1 moving knob link and +1 revolute joint only; boss is inline visual."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_a-white-compact-wireless-computer-keyboard-tenke_20260624_123545_283861_38c84f4e/revisions/rev_000001/model.py",
+      "parent_model_sha256": "6759b8b784d7c6bf72ecfb4baff151b31efff373b2c986a94551562d873f7abb",
+      "original_object_prompt": "A white compact wireless computer keyboard (tenkeyless, no numeric pad). White keycaps with light-gray legends in a standard QWERTY layout, a thin white chassis with a slightly raised back edge, low-profile keys.",
+      "normalized_edit_instruction": "TARGET: add a short cylindrical media_knob at the top-right of the chassis with a visible chassis boss and a continuous REVOLUTE joint about Z. A target-local top-right chassis/keybed width extension is allowed only as needed to support the boss. KEEP: key layout, key count, and all existing key mechanisms unchanged.",
+      "gold": {
+        "precondition": "Parent top-right area has no rotary knob and exposes a stable chassis anchor.",
+        "roles": {
+          "target": [
+            "media_knob",
+            "knob_boss",
+            "target_local_chassis_keybed_extension",
+            "chassis_to_media_knob"
+          ],
+          "anchor": [
+            "chassis"
+          ],
+          "non_target": [
+            "key",
+            "spacebar"
+          ]
+        },
+        "scorer": {
+          "target": "Require one cylindrical media_knob, visible coaxial boss, and exactly one continuous or full-cycle REVOLUTE Z-axis knob joint.",
+          "anchor": "The original chassis remains the knob parent and visibly supports the boss; only a target-local top-right chassis/keybed extension is allowed.",
+          "non_target": "Key semantic-name set and key-joint count equal the parent.",
+          "scale": "N/A",
+          "allowed_structural_delta": "+1 moving knob link and +1 revolute joint only; boss is inline visual."
+        },
+        "historical_evidence": {
+          "record_id": "rec_keyboard_var_knob",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/Technology_Keyboard.md",
+          "parent_record_id": "rec_a-white-compact-wireless-computer-keyboard-tenke_20260624_123545_283861_38c84f4e",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_a-white-compact-wireless-computer-keyboard-tenke_20260624_123545_283861_38c84f4e",
+          "revision_id": "rev_000001",
+          "provider": "openai",
+          "model_id": "gpt-5.5",
+          "prompt_sha256": "22d88edf9595dd9148b618d670353ddf2c7e649d22a6d47e45bb2e6d2141bd2a",
+          "model_py_sha256": "6759b8b784d7c6bf72ecfb4baff151b31efff373b2c986a94551562d873f7abb"
+        }
+      }
+    },
+    {
+      "task_id": "A03",
+      "edit_class": "additive",
+      "category": "Technology",
+      "subcategory": "Remote_Control",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/Technology_Remote_Control.md",
+      "parent_record_id": "rec_a-black-handheld-thermostat-style-remote-control_20260624_124939_052056_fdc967f6",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_remote_control_var_flip_cover",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_a03_flip_cover",
+      "normalized_instruction": "TARGET: add a lower-button-cluster flip cover with visible hinge knuckles and a body_to_cover REVOLUTE joint about the visible cover hinge axis, bounded approximately 0 to 100 degrees. KEEP: body, display, and every existing button and button joint unchanged.",
+      "precondition": "Parent lower button cluster is uncovered and the body has no hinged cover.",
+      "roles": {
+        "target": [
+          "flip_cover",
+          "hinge_knuckle",
+          "body_to_cover"
+        ],
+        "anchor": [
+          "body",
+          "lower_button_cluster"
+        ],
+        "non_target": [
+          "display",
+          "button"
+        ]
+      },
+      "scorer": {
+        "target": "Require cover solid, bilateral visible hinge support, and one bounded REVOLUTE joint about the visible hinge axis with upper range in [90,110] degrees.",
+        "anchor": "Cover joint parent is the original body near the lower cluster.",
+        "non_target": "Display and button semantic-name/joint sets equal parent.",
+        "scale": "N/A",
+        "allowed_structural_delta": "+1 moving cover link and +1 revolute joint only; knuckles inline."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_a-black-handheld-thermostat-style-remote-control_20260624_124939_052056_fdc967f6/revisions/rev_000001/model.py",
+      "parent_model_sha256": "679185ff3c05e96ac845a8b59f1c53296b24ea63de49084eec83b599ae785770",
+      "original_object_prompt": "A black handheld thermostat-style remote control (fireplace/heater remote). A rounded rectangular body with an orange backlit LCD at the top showing temperature, time and mode icons; below it two round buttons (power and light); and a circular directional pad with plus/minus and left/right arrows around a central round MODE button.",
+      "normalized_edit_instruction": "TARGET: add a lower-button-cluster flip cover with visible hinge knuckles and a body_to_cover REVOLUTE joint about the visible cover hinge axis, bounded approximately 0 to 100 degrees. KEEP: body, display, and every existing button and button joint unchanged.",
+      "gold": {
+        "precondition": "Parent lower button cluster is uncovered and the body has no hinged cover.",
+        "roles": {
+          "target": [
+            "flip_cover",
+            "hinge_knuckle",
+            "body_to_cover"
+          ],
+          "anchor": [
+            "body",
+            "lower_button_cluster"
+          ],
+          "non_target": [
+            "display",
+            "button"
+          ]
+        },
+        "scorer": {
+          "target": "Require cover solid, bilateral visible hinge support, and one bounded REVOLUTE joint about the visible hinge axis with upper range in [90,110] degrees.",
+          "anchor": "Cover joint parent is the original body near the lower cluster.",
+          "non_target": "Display and button semantic-name/joint sets equal parent.",
+          "scale": "N/A",
+          "allowed_structural_delta": "+1 moving cover link and +1 revolute joint only; knuckles inline."
+        },
+        "historical_evidence": {
+          "record_id": "rec_remote_control_var_flip_cover",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/Technology_Remote_Control.md",
+          "parent_record_id": "rec_a-black-handheld-thermostat-style-remote-control_20260624_124939_052056_fdc967f6",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_a-black-handheld-thermostat-style-remote-control_20260624_124939_052056_fdc967f6",
+          "revision_id": "rev_000001",
+          "provider": "openai",
+          "model_id": "gpt-5.5",
+          "prompt_sha256": "48f71e87823fa441c76ed05e4bbe761e529b7bc7f78d6364564c623ac283856a",
+          "model_py_sha256": "679185ff3c05e96ac845a8b59f1c53296b24ea63de49084eec83b599ae785770"
+        }
+      }
+    },
+    {
+      "task_id": "A04",
+      "edit_class": "additive",
+      "category": "Technology",
+      "subcategory": "Mobile_Phone",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/Technology_Mobile_Phone.md",
+      "parent_record_id": "rec_black-clamshell-flip-phone-for-seniors-with-a-hi_20260605_174014_810624_7ec9acc7",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_mobile_phone_var_telescoping_antenna",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_a04_phone_antenna",
+      "normalized_instruction": "TARGET: add one external telescoping antenna at the top corner of the phone body: a visible seated boss and fixed guide sleeve plus one cylindrical mast-and-tip child on a bounded PRISMATIC joint along the phone long axis. KEEP: flip_hinge, lid and lid-shell screens, full keypad and key-press joints, body shell, hinge knuckles/end caps, and open-pose default unchanged.",
+      "precondition": "Parent is a clamshell phone with an integrated/internal antenna only: no external mast, boss, sleeve, or antenna joint.",
+      "roles": {
+        "target": [
+          "antenna_boss",
+          "antenna_sleeve",
+          "antenna_mast",
+          "antenna_slide"
+        ],
+        "anchor": [
+          "body",
+          "body_shell"
+        ],
+        "non_target": [
+          "flip_hinge",
+          "lid",
+          "inner_screen",
+          "outer_screen",
+          "key_",
+          "press_",
+          "body_hinge_knuckle_"
+        ]
+      },
+      "scorer": {
+        "target": "Require one cylindrical mast-plus-tip link, one bounded PRISMATIC extension joint on the phone long axis, and visible boss/sleeve visuals on the body.",
+        "anchor": "Boss and sleeve belong to the body and the antenna joint parent is the body.",
+        "non_target": "Flip hinge, lid/screens, full keypad presses, body shell and hinge hardware signatures equal parent.",
+        "scale": "N/A",
+        "allowed_structural_delta": "+1 antenna link and +1 prismatic joint only; boss/sleeve are inline body visuals."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_black-clamshell-flip-phone-for-seniors-with-a-hi_20260605_174014_810624_7ec9acc7/revisions/rev_000001/model.py",
+      "parent_model_sha256": "ea219c7d98f2b8a3bbcfb1352b2f052e9fc836117c54fb6e3d8ec1ea9e888a3e",
+      "original_object_prompt": "black clamshell flip phone for seniors, with a hinged lid, an inner screen, and large pressable keypad buttons\n\nreference_image: picture/Technology/Mobile_Phone/008.png",
+      "normalized_edit_instruction": "TARGET: add one external telescoping antenna at the top corner of the phone body: a visible seated boss and fixed guide sleeve plus one cylindrical mast-and-tip child on a bounded PRISMATIC joint along the phone long axis. KEEP: flip_hinge, lid and lid-shell screens, full keypad and key-press joints, body shell, hinge knuckles/end caps, and open-pose default unchanged.",
+      "gold": {
+        "precondition": "Parent is a clamshell phone with an integrated/internal antenna only: no external mast, boss, sleeve, or antenna joint.",
+        "roles": {
+          "target": [
+            "antenna_boss",
+            "antenna_sleeve",
+            "antenna_mast",
+            "antenna_slide"
+          ],
+          "anchor": [
+            "body",
+            "body_shell"
+          ],
+          "non_target": [
+            "flip_hinge",
+            "lid",
+            "inner_screen",
+            "outer_screen",
+            "key_",
+            "press_",
+            "body_hinge_knuckle_"
+          ]
+        },
+        "scorer": {
+          "target": "Require one cylindrical mast-plus-tip link, one bounded PRISMATIC extension joint on the phone long axis, and visible boss/sleeve visuals on the body.",
+          "anchor": "Boss and sleeve belong to the body and the antenna joint parent is the body.",
+          "non_target": "Flip hinge, lid/screens, full keypad presses, body shell and hinge hardware signatures equal parent.",
+          "scale": "N/A",
+          "allowed_structural_delta": "+1 antenna link and +1 prismatic joint only; boss/sleeve are inline body visuals."
+        },
+        "historical_evidence": {
+          "record_id": "rec_mobile_phone_var_telescoping_antenna",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/Technology_Mobile_Phone.md",
+          "parent_record_id": "rec_black-clamshell-flip-phone-for-seniors-with-a-hi_20260605_174014_810624_7ec9acc7",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_black-clamshell-flip-phone-for-seniors-with-a-hi_20260605_174014_810624_7ec9acc7",
+          "revision_id": "rev_000001",
+          "provider": "openai",
+          "model_id": "gpt-5.5",
+          "prompt_sha256": "034810d6386665c06bb28b80af5abb8489ac99062d69565bfd0e187b1b79ec2e",
+          "model_py_sha256": "ea219c7d98f2b8a3bbcfb1352b2f052e9fc836117c54fb6e3d8ec1ea9e888a3e"
+        }
+      }
+    },
+    {
+      "task_id": "A05",
+      "edit_class": "additive",
+      "category": "0611",
+      "subcategory": "pulley",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/pulley.md",
+      "parent_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260712_064522_904114_797df9d4",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_0611_pulley_var_secondary_becket",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_a05_becket",
+      "normalized_instruction": "TARGET: add a lower secondary becket rope-anchor eye integrated into the fixed pulley mount. KEEP: primary sheave, axle/bearing interface, mount, and sheave joint unchanged.",
+      "precondition": "Parent source-map secondary_module is none and primary sheave mechanism is complete.",
+      "roles": {
+        "target": [
+          "becket",
+          "rope_anchor_eye"
+        ],
+        "anchor": [
+          "mount",
+          "cheek"
+        ],
+        "non_target": [
+          "sheave",
+          "axle",
+          "bearing"
+        ]
+      },
+      "scorer": {
+        "target": "Require one closed lower rope-anchor eye with a real opening and fixed support into mount/cheek.",
+        "anchor": "Eye is below and attached to the fixed mount, not to the rotating sheave.",
+        "non_target": "Sheave joint type/axis/range and sheave/axle names equal parent.",
+        "scale": "N/A",
+        "allowed_structural_delta": "No new moving link or joint; becket is fixed inline geometry."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_use-the-attached-reference-image-as-the-primary-_20260712_064522_904114_797df9d4/revisions/rev_000001/model.py",
+      "parent_model_sha256": "fa1cef3136f0ca47a74ecdbf7b9e08eee1f44d8a044c20cc0a1719d39116127f",
+      "original_object_prompt": "Use the attached reference image as the primary visual source. Create exactly one independent miniature fixed-mount single-sheave pulley assembly from the repeated examples shown: a rounded stainless mounting plate with two countersunk screw holes, twin upright cheek brackets, a deeply grooved metal sheave rotating freely on a transverse axle pin, and realistic washers/retainers. Preserve the compact hardware scale, connected construction, clear rope groove, and articulate the sheave on a continuous revolute joint. Do not model the repeated product array or loose screws shown below it.",
+      "normalized_edit_instruction": "TARGET: add a lower secondary becket rope-anchor eye integrated into the fixed pulley mount. KEEP: primary sheave, axle/bearing interface, mount, and sheave joint unchanged.",
+      "gold": {
+        "precondition": "Parent source-map secondary_module is none and primary sheave mechanism is complete.",
+        "roles": {
+          "target": [
+            "becket",
+            "rope_anchor_eye"
+          ],
+          "anchor": [
+            "mount",
+            "cheek"
+          ],
+          "non_target": [
+            "sheave",
+            "axle",
+            "bearing"
+          ]
+        },
+        "scorer": {
+          "target": "Require one closed lower rope-anchor eye with a real opening and fixed support into mount/cheek.",
+          "anchor": "Eye is below and attached to the fixed mount, not to the rotating sheave.",
+          "non_target": "Sheave joint type/axis/range and sheave/axle names equal parent.",
+          "scale": "N/A",
+          "allowed_structural_delta": "No new moving link or joint; becket is fixed inline geometry."
+        },
+        "historical_evidence": {
+          "record_id": "rec_0611_pulley_var_secondary_becket",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/pulley.md",
+          "parent_record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260712_064522_904114_797df9d4",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_use-the-attached-reference-image-as-the-primary-_20260712_064522_904114_797df9d4",
+          "revision_id": "rev_000001",
+          "provider": "openai",
+          "model_id": "gpt-5.6-sol",
+          "prompt_sha256": "86d77c370d284fff4977021c38f30aaf267e22f63da89e5374ef60e4761fa28f",
+          "model_py_sha256": "fa1cef3136f0ca47a74ecdbf7b9e08eee1f44d8a044c20cc0a1719d39116127f"
+        }
+      }
+    },
+    {
+      "task_id": "A06",
+      "edit_class": "additive",
+      "category": "Household_Laundry",
+      "subcategory": "Clothes_drying_rack_Laundry_drying_rack",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/Household_Laundry_Clothes_drying_rack_Laundry_drying_rack.md",
+      "parent_record_id": "rec_household_laundry__clothes_drying_rack_laundry_drying_rack__001_png_f2ccdd08f2c443439b7d1b190cc6a269",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_drying_rack_var_leg_support_count",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_a06_third_leg",
+      "normalized_instruction": "TARGET: increase the repeated X-leg support count from two to three by adding one centered support through the same shared helper, indexed naming, spacing rule, and uniform REVOLUTE policy. KEEP: top spine, both drying wings, rods, and their joints unchanged.",
+      "precondition": "Parent has exactly two repeated X-leg frames and a stable top spine.",
+      "roles": {
+        "target": [
+          "leg_frame_2",
+          "leg_left_2",
+          "leg_right_2",
+          "leg_joint_2"
+        ],
+        "anchor": [
+          "top_spine"
+        ],
+        "non_target": [
+          "wing",
+          "drying_rod"
+        ]
+      },
+      "scorer": {
+        "target": "Require indexed support set {0,1,2}, shared repeated-layout code path, centered regular spacing, and the same joint policy for all three supports.",
+        "anchor": "All three supports attach to the same top-spine interface family.",
+        "non_target": "Wing/drying-rod names and joint graph equal parent.",
+        "scale": "N/A",
+        "allowed_structural_delta": "Exactly one homologous X-leg support module plus its homologous joint set."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_household_laundry__clothes_drying_rack_laundry_drying_rack__001_png_f2ccdd08f2c443439b7d1b190cc6a269/revisions/rev_000001/model.py",
+      "parent_model_sha256": "f32db69de0ffe9c3cb27e0f9fc1631be94c21da05edd695e278d5caa5426b137",
+      "original_object_prompt": "Use the attached reference image (picture/Household_Laundry/Clothes drying rack_Laundry drying rack/001.png) as the primary visual reference and create exactly one articulated 3D asset for the visible core object. Category context: Household_Laundry / Clothes drying rack_Laundry drying rack. Model a freestanding laundry drying rack with tubular metal bars, folding legs, cross braces, hinged wings or side frames, and small plastic feet or caps. Do not include any clothes even if the image shows laundry. It is acceptable to include several empty clothes hangers hanging on the bars; treat each hanger as an articulated part with a joint that allows small-angle rotation around the drying bar axis. Preserve the rack proportions, bar spacing, folded support geometry, and hinge relationships. Do not create a scene, background, people, animals as characters, text labels, extra props, or unrelated decorative objects. Follow the image content over the folder name if they disagree, and include a concise note in the run output if a classification mismatch is suspected. Keep real-world object logic clear: recognizable main parts, correct proportions, grounded materials, structural relationships, and reasonable part hierarchy. Use joints for movable lids, handles, hinges, wheels, straps, buckles, switches, folding members, sliders, or other mechanisms visible or strongly implied by the reference.",
+      "normalized_edit_instruction": "TARGET: increase the repeated X-leg support count from two to three by adding one centered support through the same shared helper, indexed naming, spacing rule, and uniform REVOLUTE policy. KEEP: top spine, both drying wings, rods, and their joints unchanged.",
+      "gold": {
+        "precondition": "Parent has exactly two repeated X-leg frames and a stable top spine.",
+        "roles": {
+          "target": [
+            "leg_frame_2",
+            "leg_left_2",
+            "leg_right_2",
+            "leg_joint_2"
+          ],
+          "anchor": [
+            "top_spine"
+          ],
+          "non_target": [
+            "wing",
+            "drying_rod"
+          ]
+        },
+        "scorer": {
+          "target": "Require indexed support set {0,1,2}, shared repeated-layout code path, centered regular spacing, and the same joint policy for all three supports.",
+          "anchor": "All three supports attach to the same top-spine interface family.",
+          "non_target": "Wing/drying-rod names and joint graph equal parent.",
+          "scale": "N/A",
+          "allowed_structural_delta": "Exactly one homologous X-leg support module plus its homologous joint set."
+        },
+        "historical_evidence": {
+          "record_id": "rec_drying_rack_var_leg_support_count",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/Household_Laundry_Clothes_drying_rack_Laundry_drying_rack.md",
+          "parent_record_id": "rec_household_laundry__clothes_drying_rack_laundry_drying_rack__001_png_f2ccdd08f2c443439b7d1b190cc6a269",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_household_laundry__clothes_drying_rack_laundry_drying_rack__001_png_f2ccdd08f2c443439b7d1b190cc6a269",
+          "revision_id": "rev_000001",
+          "provider": "openai",
+          "model_id": "gpt-5.5",
+          "prompt_sha256": "0a3069f8e1ff564c35d7349e077cdc0d95ff2290722dc7544808ef763b82a1b8",
+          "model_py_sha256": "f32db69de0ffe9c3cb27e0f9fc1631be94c21da05edd695e278d5caa5426b137"
+        }
+      }
+    },
+    {
+      "task_id": "M01",
+      "edit_class": "modified",
+      "category": "0611",
+      "subcategory": "drawing_compass_with_adjustable_legs",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_drawing_compass_with_adjustable_legs.md",
+      "parent_record_id": "rec_picturex_0611__drawing_compass_with_adjustable_legs__003__png__airflex_batch_20260710_2d7c021809004b9f99791a92647edf13",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_drawing_compass_var_folding_lower_legs_20260714",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_m01_folding_legs",
+      "normalized_instruction": "TARGET: replace each single-piece compass leg with an upper leg and fold-out lower working section joined by one visible supported bounded REVOLUTE knee; deployed left and right tips remain coplanar. KEEP: head, handle, main pivots, adjustment link, adjustment wheel, and left/right tip roles unchanged.",
+      "precondition": "Parent has exactly two single-piece legs, no knee joints, and complete head/main-pivot/adjustment mechanisms.",
+      "roles": {
+        "target": [
+          "left_upper_leg",
+          "left_lower_leg",
+          "right_upper_leg",
+          "right_lower_leg",
+          "left_knee",
+          "right_knee"
+        ],
+        "anchor": [
+          "left_main_pivot",
+          "right_main_pivot"
+        ],
+        "non_target": [
+          "head",
+          "handle",
+          "adjustment_link",
+          "adjustment_wheel",
+          "left_tip",
+          "right_tip"
+        ]
+      },
+      "scorer": {
+        "target": "Require exactly two lower-leg links and two bounded REVOLUTE knee joints with visible barrels, one per leg.",
+        "anchor": "Each upper leg remains on its original main pivot and each lower section carries its original tip role.",
+        "non_target": "Head, handle, main pivots, adjustment link and wheel signatures equal parent.",
+        "scale": "N/A",
+        "allowed_structural_delta": "Split two leg links into upper/lower pairs and add exactly two knee joints."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_picturex_0611__drawing_compass_with_adjustable_legs__003__png__airflex_batch_20260710_2d7c021809004b9f99791a92647edf13/revisions/rev_000001/model.py",
+      "parent_model_sha256": "c6ec93375657e454af922154a03c5302da84ff6cab993b1daeccbf61be07fb4b",
+      "original_object_prompt": "Use the attached reference image as the authoritative primary source and create exactly one independent articulated 3D Articraft asset for pictureX/0611/drawing_compass_with_adjustable_legs/003.png. The subcategory name 'drawing_compass_with_adjustable_legs' is context only; the exact object identity, pose, visible component count, geometry, proportions, construction, materials, and colorway in this one image are authoritative. Never merge it with any other image. Model the exact drawing compass with two tapered legs, head hinge, pivot pin, needle point, pencil or lead holder, fine-adjustment screw or sector, clamps, knurled controls, and metal or plastic finishes. Preserve leg length, opening angle, symmetry, and tip alignment. Give each leg an independent revolute joint about the head and articulate the adjustment screw, pencil clamp, or fine-adjustment linkage when visible.  Treat 003.png as the traceable source image identifier. Model only the core object or one coherent attached assembly. Omit background, room staging, people, shadows, readable branding, packaging, loose props, and unrelated objects. If the image conflicts with the subcategory, follow the image and explicitly note the suspected classification mismatch in the run output. Before modeling, inspect the image closely and derive an image-specific part inventory covering silhouette, dimensions, wall and panel thicknesses, attachment points, seams, fasteners, surface finish, transparent or hollow regions, and functional relationships. Identify all clearly visible and structurally reasonable independently movable parts. Create one physically plausible joint per independent movable part with the correct parent-child hierarchy, axis, origin, travel, and limits. Multiple movable parts require multiple joints; one joint is only a minimum, not a target. Keep every part supported, avoid unintentional intersections, and use realistic absolute scale. Add run_tests() checks for the image-specific geometry, materials, connected hierarchy, and every required non-fixed joint.",
+      "normalized_edit_instruction": "TARGET: replace each single-piece compass leg with an upper leg and fold-out lower working section joined by one visible supported bounded REVOLUTE knee; deployed left and right tips remain coplanar. KEEP: head, handle, main pivots, adjustment link, adjustment wheel, and left/right tip roles unchanged.",
+      "gold": {
+        "precondition": "Parent has exactly two single-piece legs, no knee joints, and complete head/main-pivot/adjustment mechanisms.",
+        "roles": {
+          "target": [
+            "left_upper_leg",
+            "left_lower_leg",
+            "right_upper_leg",
+            "right_lower_leg",
+            "left_knee",
+            "right_knee"
+          ],
+          "anchor": [
+            "left_main_pivot",
+            "right_main_pivot"
+          ],
+          "non_target": [
+            "head",
+            "handle",
+            "adjustment_link",
+            "adjustment_wheel",
+            "left_tip",
+            "right_tip"
+          ]
+        },
+        "scorer": {
+          "target": "Require exactly two lower-leg links and two bounded REVOLUTE knee joints with visible barrels, one per leg.",
+          "anchor": "Each upper leg remains on its original main pivot and each lower section carries its original tip role.",
+          "non_target": "Head, handle, main pivots, adjustment link and wheel signatures equal parent.",
+          "scale": "N/A",
+          "allowed_structural_delta": "Split two leg links into upper/lower pairs and add exactly two knee joints."
+        },
+        "historical_evidence": {
+          "record_id": "rec_drawing_compass_var_folding_lower_legs_20260714",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_drawing_compass_with_adjustable_legs.md",
+          "parent_record_id": "rec_picturex_0611__drawing_compass_with_adjustable_legs__003__png__airflex_batch_20260710_2d7c021809004b9f99791a92647edf13",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_picturex_0611__drawing_compass_with_adjustable_legs__003__png__airflex_batch_20260710_2d7c021809004b9f99791a92647edf13",
+          "revision_id": "rev_000001",
+          "provider": "openai",
+          "model_id": "gpt-5.6-sol",
+          "prompt_sha256": "974bf6acc0e1ebedc0eb8ee8d32068d8e1aa62af705ade8e9181619ddd772f64",
+          "model_py_sha256": "c6ec93375657e454af922154a03c5302da84ff6cab993b1daeccbf61be07fb4b"
+        }
+      }
+    },
+    {
+      "task_id": "M02",
+      "edit_class": "modified",
+      "category": "0611",
+      "subcategory": "ergonomic_clamp_with_adjustable_components",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_ergonomic_clamp_with_adjustable_components.md",
+      "parent_record_id": "rec_picturex_0611__ergonomic_clamp_with_adjustable_components__002__png__airflex_batch_20260710_792cf2b0f2204b51a17dabc1a51732c3",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_laptop_tray_arm_var_sliding_tray_rails",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_m02_rails",
+      "normalized_instruction": "TARGET: replace the fixed wrist-to-tray interface with two visible longitudinal rails, an overlapping carriage on a bounded PRISMATIC joint, and a latch on a REVOLUTE joint. KEEP: desk clamp, arm chain, wrist joint, and tray platform unchanged.",
+      "precondition": "Parent wrist-to-tray interface is fixed and has no sliding rail carriage.",
+      "roles": {
+        "target": [
+          "rail_left",
+          "rail_right",
+          "carriage",
+          "slide_joint",
+          "latch"
+        ],
+        "anchor": [
+          "wrist",
+          "tray"
+        ],
+        "non_target": [
+          "clamp",
+          "arm"
+        ]
+      },
+      "scorer": {
+        "target": "Require two parallel visible rails, engaged overlapping carriage, bounded longitudinal PRISMATIC joint, and one latch REVOLUTE joint.",
+        "anchor": "Rails bridge the original wrist and tray interface with retained engagement at limits.",
+        "non_target": "Clamp/arm/wrist joint type-axis sequence equals parent.",
+        "scale": "N/A",
+        "allowed_structural_delta": "Replace fixed wrist-tray edge with carriage slide and latch edges only."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_picturex_0611__ergonomic_clamp_with_adjustable_components__002__png__airflex_batch_20260710_792cf2b0f2204b51a17dabc1a51732c3/revisions/rev_000001/model.py",
+      "parent_model_sha256": "69ccb56cde85bdb1bce6d4c3b73fe69feb80e193837ad2b0fb60d9ac07338bd9",
+      "original_object_prompt": "Use the attached reference image as the authoritative primary source and create exactly one independent articulated 3D Articraft asset for pictureX/0611/ergonomic_clamp_with_adjustable_components/002.png. The subcategory name 'ergonomic_clamp_with_adjustable_components' is context only; the exact object identity, pose, visible component count, geometry, proportions, construction, materials, and colorway in this one image are authoritative. Never merge it with any other image. Model this exact adjustable clamp variant with all visible frame members, fixed and sliding jaws, spindle, pressure pad, handles, triggers, linkages, release control, pads, fasteners, and material contrasts. Preserve the image-specific component count and proportions. Create separate joints for every independently sliding jaw, rotating screw or pad, pivoting handle, trigger, release lever, or folding support, with realistic limits and supports.  Treat 002.png as the traceable source image identifier. Model only the core object or one coherent attached assembly. Omit background, room staging, people, shadows, readable branding, packaging, loose props, and unrelated objects. If the image conflicts with the subcategory, follow the image and explicitly note the suspected classification mismatch in the run output. Before modeling, inspect the image closely and derive an image-specific part inventory covering silhouette, dimensions, wall and panel thicknesses, attachment points, seams, fasteners, surface finish, transparent or hollow regions, and functional relationships. Identify all clearly visible and structurally reasonable independently movable parts. Create one physically plausible joint per independent movable part with the correct parent-child hierarchy, axis, origin, travel, and limits. Multiple movable parts require multiple joints; one joint is only a minimum, not a target. Keep every part supported, avoid unintentional intersections, and use realistic absolute scale. Add run_tests() checks for the image-specific geometry, materials, connected hierarchy, and every required non-fixed joint.",
+      "normalized_edit_instruction": "TARGET: replace the fixed wrist-to-tray interface with two visible longitudinal rails, an overlapping carriage on a bounded PRISMATIC joint, and a latch on a REVOLUTE joint. KEEP: desk clamp, arm chain, wrist joint, and tray platform unchanged.",
+      "gold": {
+        "precondition": "Parent wrist-to-tray interface is fixed and has no sliding rail carriage.",
+        "roles": {
+          "target": [
+            "rail_left",
+            "rail_right",
+            "carriage",
+            "slide_joint",
+            "latch"
+          ],
+          "anchor": [
+            "wrist",
+            "tray"
+          ],
+          "non_target": [
+            "clamp",
+            "arm"
+          ]
+        },
+        "scorer": {
+          "target": "Require two parallel visible rails, engaged overlapping carriage, bounded longitudinal PRISMATIC joint, and one latch REVOLUTE joint.",
+          "anchor": "Rails bridge the original wrist and tray interface with retained engagement at limits.",
+          "non_target": "Clamp/arm/wrist joint type-axis sequence equals parent.",
+          "scale": "N/A",
+          "allowed_structural_delta": "Replace fixed wrist-tray edge with carriage slide and latch edges only."
+        },
+        "historical_evidence": {
+          "record_id": "rec_laptop_tray_arm_var_sliding_tray_rails",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_ergonomic_clamp_with_adjustable_components.md",
+          "parent_record_id": "rec_picturex_0611__ergonomic_clamp_with_adjustable_components__002__png__airflex_batch_20260710_792cf2b0f2204b51a17dabc1a51732c3",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_picturex_0611__ergonomic_clamp_with_adjustable_components__002__png__airflex_batch_20260710_792cf2b0f2204b51a17dabc1a51732c3",
+          "revision_id": "rev_000001",
+          "provider": "openai",
+          "model_id": "gpt-5.6-sol",
+          "prompt_sha256": "9f32c03dd72796033da66baf804a709cdc7ae5c55a051039e6a6ec4f48e2bfe5",
+          "model_py_sha256": "69ccb56cde85bdb1bce6d4c3b73fe69feb80e193837ad2b0fb60d9ac07338bd9"
+        }
+      }
+    },
+    {
+      "task_id": "M03",
+      "edit_class": "modified",
+      "category": "0611",
+      "subcategory": "Industrial_rolling_work_table",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_Industrial_rolling_work_table.md",
+      "parent_record_id": "rec_picturex_0611__industrial_rolling_work_table__001__png_f858cd8fba4c466aa560b397ff1bf275",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_industrial_rolling_work_table_var_drawer_cabinet",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_m03_drawers",
+      "normalized_instruction": "TARGET: replace the lower open shelf/frame bay with an under-top drawer bank containing at least two complete tray drawers, bilateral longitudinal guides, pulls, and bounded PRISMATIC slides. KEEP: worktop, outer frame, legs, and all casters unchanged.",
+      "precondition": "Parent lower bay is an open shelf/frame and has no drawer bank.",
+      "roles": {
+        "target": [
+          "drawer_cabinet",
+          "drawer_0",
+          "drawer_1",
+          "guide_left",
+          "guide_right",
+          "drawer_slide"
+        ],
+        "anchor": [
+          "outer_frame",
+          "worktop"
+        ],
+        "non_target": [
+          "caster",
+          "leg"
+        ]
+      },
+      "scorer": {
+        "target": "Require >=2 complete containment drawers, each with floor/sides/back/front/pull, bilateral guides, and bounded longitudinal PRISMATIC joint.",
+        "anchor": "Cabinet is supported within original lower-frame bay below worktop.",
+        "non_target": "Worktop, outer-frame, leg, and caster joint/name sets equal parent.",
+        "scale": "N/A",
+        "allowed_structural_delta": "Remove open shelf and add drawer-bank links plus one slide per drawer only."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_picturex_0611__industrial_rolling_work_table__001__png_f858cd8fba4c466aa560b397ff1bf275/revisions/rev_000001/model.py",
+      "parent_model_sha256": "7e18c22117fb1cd2e66eddddf3431d4028a6141175e23f29cc48f58d67f6fe2a",
+      "original_object_prompt": "Use the attached reference image as the primary and authoritative visual source. Create exactly one independent articulated 3D Articraft asset for pictureX/0611/Industrial_rolling_work_table/001.png. Stable trace identifier: picturex_0611__industrial_rolling_work_table__001__png. Subcategory context: Industrial_rolling_work_table. The exact object identity, pose, visible component count, colorway, proportions, and construction in this specific image are authoritative; do not substitute another image from the same folder and never merge multiple images. Model the exact industrial rolling table or workstation: rigid steel frame, top work surface, lower shelf or equipment bays, drawers where visible, monitor/keyboard shelves where present, cross braces, handles, caster wheels and locks, and wood/painted steel materials. Preserve the image-specific height, width, shelf/drawer layout, and color. Give each drawer or keyboard tray a prismatic joint and every caster wheel/swivel or adjustable shelf its own plausible joint. Treat 001.png as the original source filename/image ID. Generate only the core object or one coherent mechanically connected assembly; omit background, room architecture, people, hands, shadows, readable branding, annotations, carrying bags, loose props, and unrelated objects. If the image conflicts with the subcategory name, follow the image and note the suspected misclassification in the trajectory. Identify every clearly visible and structurally reasonable independently movable part. Create an appropriate hierarchy and one physically plausible joint for each such part, with realistic axes, limits, supports, bearings, hinges, rails, or linkage relationships. Multiple movable parts require multiple joints; one joint is a minimum, not a target. Do not invent arbitrary motion and do not fuse distinct mechanisms into one joint. Use realistic absolute dimensions, recognizable image-specific geometry, materials, surface thicknesses, proportions, contacts, fasteners, and construction. Add run_tests() checks for the image-specific silhouette, component layout, materials, connected hierarchy, support/fit, and every required non-fixed joint.",
+      "normalized_edit_instruction": "TARGET: replace the lower open shelf/frame bay with an under-top drawer bank containing at least two complete tray drawers, bilateral longitudinal guides, pulls, and bounded PRISMATIC slides. KEEP: worktop, outer frame, legs, and all casters unchanged.",
+      "gold": {
+        "precondition": "Parent lower bay is an open shelf/frame and has no drawer bank.",
+        "roles": {
+          "target": [
+            "drawer_cabinet",
+            "drawer_0",
+            "drawer_1",
+            "guide_left",
+            "guide_right",
+            "drawer_slide"
+          ],
+          "anchor": [
+            "outer_frame",
+            "worktop"
+          ],
+          "non_target": [
+            "caster",
+            "leg"
+          ]
+        },
+        "scorer": {
+          "target": "Require >=2 complete containment drawers, each with floor/sides/back/front/pull, bilateral guides, and bounded longitudinal PRISMATIC joint.",
+          "anchor": "Cabinet is supported within original lower-frame bay below worktop.",
+          "non_target": "Worktop, outer-frame, leg, and caster joint/name sets equal parent.",
+          "scale": "N/A",
+          "allowed_structural_delta": "Remove open shelf and add drawer-bank links plus one slide per drawer only."
+        },
+        "historical_evidence": {
+          "record_id": "rec_industrial_rolling_work_table_var_drawer_cabinet",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_Industrial_rolling_work_table.md",
+          "parent_record_id": "rec_picturex_0611__industrial_rolling_work_table__001__png_f858cd8fba4c466aa560b397ff1bf275",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_picturex_0611__industrial_rolling_work_table__001__png_f858cd8fba4c466aa560b397ff1bf275",
+          "revision_id": "rev_000001",
+          "provider": "openai",
+          "model_id": "gpt-5.6-sol",
+          "prompt_sha256": "f23560470005e142bfd4b37fec3e123979d5c1afa065e89a2314adf7e23980bc",
+          "model_py_sha256": "7e18c22117fb1cd2e66eddddf3431d4028a6141175e23f29cc48f58d67f6fe2a"
+        }
+      }
+    },
+    {
+      "task_id": "M04",
+      "edit_class": "modified",
+      "category": "0611",
+      "subcategory": "shelving_unit_with_adjustable_shelves",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/shelving_unit_with_adjustable_shelves.md",
+      "parent_record_id": "rec_picturex_0611__shelving_unit_with_adjustable_shelves__001__png_533ba1a88611432880d7a18eb92b3cf3",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_0611_shelving_unit_with_adjustable_var_tray_module_lidded_drawer",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_m04_lidded_drawers",
+      "normalized_instruction": "TARGET: replace the lower open trays with closed top-panel containment drawers having floor, sides, back, front, top panel and pull, each moving on one bounded PRISMATIC-Y frame-guided joint. Visible bilateral guides and an independent lid joint are optional target-local details, not required targets. KEEP: outer frame and all upper adjustable shelves unchanged.",
+      "precondition": "Parent lower modules are open trays, not closed lidded drawers.",
+      "roles": {
+        "target": [
+          "lower_drawer",
+          "drawer_lid",
+          "drawer_front",
+          "pull",
+          "frame_guided_slide"
+        ],
+        "anchor": [
+          "lower_bay",
+          "upright"
+        ],
+        "non_target": [
+          "upper_shelf",
+          "outer_frame"
+        ]
+      },
+      "scorer": {
+        "target": "Require each former lower tray to become a closed top-panel containment drawer with floor/sides/back/front/top/pull and one bounded PRISMATIC-Y frame-guided joint; visible bilateral guides and independent lid joints are optional.",
+        "anchor": "Drawers remain frame-guided inside the original lower bays with positive containment at limits.",
+        "non_target": "Upper shelf and outer-frame semantic-name/joint sets equal parent.",
+        "scale": "N/A",
+        "allowed_structural_delta": "No required link/joint graph delta; convert the existing lower tray links into closed containment drawers while retaining their bounded frame-guided slides."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_picturex_0611__shelving_unit_with_adjustable_shelves__001__png_533ba1a88611432880d7a18eb92b3cf3/revisions/rev_000001/model.py",
+      "parent_model_sha256": "8a878045efdbb6799e425d4ef8cf597d8d1873632f7b1ccc1954a050275afec3",
+      "original_object_prompt": "Use the attached reference image as the primary visual source and create exactly one independent articulated 3D Articraft asset for pictureX/0611/Shelving_unit_with_adjustable_shelves/001.png. Category context: Shelving_unit_with_adjustable_shelves. The exact file, pose, visible component count, colorway, and configuration in this image are authoritative; do not substitute another image from the same subcategory and do not merge source images. Model the exact open shelving unit: vertical metal or wood frame, cross rails, rectangular shelves, open cubbies, shelf pins or brackets, and any lower bins visible in the image. Preserve the modular proportions, shelf spacing, frame thickness, wood or laminate inserts, and the exact tall/low arrangement. Treat each visibly adjustable shelf as a separate child part with a short vertical prismatic repositioning joint guided by the side supports; fixed frame members and dividers must remain connected. Treat 001.png as the source image identifier. Model only the core object or one coherent object assembly visible in this image; omit background, room staging, people, shadows, readable branding, loose props, and unrelated objects. If the image conflicts with the category name, follow the image content and record the suspected classification mismatch in the run notes. Identify every clearly visible and structurally reasonable independently movable part. Create one physically plausible joint per independent movable part, with realistic axes, travel limits, and connected support; multiple visible movable parts require multiple joints. Do not add arbitrary motion and do not fuse separate parts into one joint. Use realistic materials, thicknesses, proportions, contacts, and construction. Add run_tests() checks for the image-specific geometry, materials, connected hierarchy, and every required non-fixed joint.",
+      "normalized_edit_instruction": "TARGET: replace the lower open trays with closed top-panel containment drawers having floor, sides, back, front, top panel and pull, each moving on one bounded PRISMATIC-Y frame-guided joint. Visible bilateral guides and an independent lid joint are optional target-local details, not required targets. KEEP: outer frame and all upper adjustable shelves unchanged.",
+      "gold": {
+        "precondition": "Parent lower modules are open trays, not closed lidded drawers.",
+        "roles": {
+          "target": [
+            "lower_drawer",
+            "drawer_lid",
+            "drawer_front",
+            "pull",
+            "frame_guided_slide"
+          ],
+          "anchor": [
+            "lower_bay",
+            "upright"
+          ],
+          "non_target": [
+            "upper_shelf",
+            "outer_frame"
+          ]
+        },
+        "scorer": {
+          "target": "Require each former lower tray to become a closed top-panel containment drawer with floor/sides/back/front/top/pull and one bounded PRISMATIC-Y frame-guided joint; visible bilateral guides and independent lid joints are optional.",
+          "anchor": "Drawers remain frame-guided inside the original lower bays with positive containment at limits.",
+          "non_target": "Upper shelf and outer-frame semantic-name/joint sets equal parent.",
+          "scale": "N/A",
+          "allowed_structural_delta": "No required link/joint graph delta; convert the existing lower tray links into closed containment drawers while retaining their bounded frame-guided slides."
+        },
+        "historical_evidence": {
+          "record_id": "rec_0611_shelving_unit_with_adjustable_var_tray_module_lidded_drawer",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/shelving_unit_with_adjustable_shelves.md",
+          "parent_record_id": "rec_picturex_0611__shelving_unit_with_adjustable_shelves__001__png_533ba1a88611432880d7a18eb92b3cf3",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_picturex_0611__shelving_unit_with_adjustable_shelves__001__png_533ba1a88611432880d7a18eb92b3cf3",
+          "revision_id": "rev_000001",
+          "provider": "openai",
+          "model_id": "gpt-5.6-sol",
+          "prompt_sha256": "c52c2588e891e2650cccfac7fda49493aa2fac6359482ee340ac42f8115c9509",
+          "model_py_sha256": "8a878045efdbb6799e425d4ef8cf597d8d1873632f7b1ccc1954a050275afec3"
+        }
+      }
+    },
+    {
+      "task_id": "M05",
+      "edit_class": "modified",
+      "category": "0611",
+      "subcategory": "garlic_press",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_garlic_press.md",
+      "parent_record_id": "rec_picturex_0611__garlic_press__004__png_b0766f37d84548ec90c8ef55abf0bac0",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_picturex0611_garlic_press_var_round_cup_grid",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_m05_round_cup",
+      "normalized_instruction": "TARGET: replace the rectangular cup and plunger face with a round perforated basket, radial rim, and matching circular plunger derived from one shared circular profile with explicit clearance. KEEP: main hinge, hinge pin, upper/lower handles, and joint range unchanged.",
+      "precondition": "Parent has a rectangular cup/plunger pair and a complete press hinge.",
+      "roles": {
+        "target": [
+          "round_cup",
+          "round_plunger",
+          "radial_rim",
+          "perforation"
+        ],
+        "anchor": [
+          "hinge",
+          "handle"
+        ],
+        "non_target": [
+          "hinge_pin",
+          "upper_handle",
+          "lower_handle"
+        ]
+      },
+      "scorer": {
+        "target": "Require circular cup and plunger profiles sharing one radius descriptor, round perforation grid, radial rim, and positive mating clearance assertion.",
+        "anchor": "Cup/plunger remain attached to their original handle-side interfaces.",
+        "non_target": "Main hinge type/axis/range and handle semantic names equal parent.",
+        "scale": "N/A",
+        "allowed_structural_delta": "No joint/link graph change; geometry-family replacement only."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_picturex_0611__garlic_press__004__png_b0766f37d84548ec90c8ef55abf0bac0/revisions/rev_000001/model.py",
+      "parent_model_sha256": "70f5d8d70d5bcdef7d4697ea4c41ab7fe1c4e0b36aaaddaccc77ec132ad6b783",
+      "original_object_prompt": "Use the attached reference image as the primary and authoritative visual source. Create exactly one independent articulated 3D Articraft asset for pictureX/0611/garlic_press/004.png. Stable trace identifier: picturex_0611__garlic_press__004__png. Subcategory context: garlic_press. The exact object identity, pose, visible component count, colorway, proportions, and construction in this specific image are authoritative; do not substitute another image from the same folder and never merge multiple images. Model the exact handheld garlic press: two long handles, pivot pin, perforated pressing cup or basket, matching plunger, hinge brackets, cleaning teeth or removable insert where visible, and cast aluminum/stainless/plastic grips. Preserve the cup shape, hole pattern, handle length, finish, and current pose. Give both handle/plunger halves their supported revolute motion and separate any removable basket or cleaning insert only when visibly captured. Treat 004.png as the original source filename/image ID. Generate only the core object or one coherent mechanically connected assembly; omit background, room architecture, people, hands, shadows, readable branding, annotations, carrying bags, loose props, and unrelated objects. If the image conflicts with the subcategory name, follow the image and note the suspected misclassification in the trajectory. Identify every clearly visible and structurally reasonable independently movable part. Create an appropriate hierarchy and one physically plausible joint for each such part, with realistic axes, limits, supports, bearings, hinges, rails, or linkage relationships. Multiple movable parts require multiple joints; one joint is a minimum, not a target. Do not invent arbitrary motion and do not fuse distinct mechanisms into one joint. Use realistic absolute dimensions, recognizable image-specific geometry, materials, surface thicknesses, proportions, contacts, fasteners, and construction. Add run_tests() checks for the image-specific silhouette, component layout, materials, connected hierarchy, support/fit, and every required non-fixed joint.",
+      "normalized_edit_instruction": "TARGET: replace the rectangular cup and plunger face with a round perforated basket, radial rim, and matching circular plunger derived from one shared circular profile with explicit clearance. KEEP: main hinge, hinge pin, upper/lower handles, and joint range unchanged.",
+      "gold": {
+        "precondition": "Parent has a rectangular cup/plunger pair and a complete press hinge.",
+        "roles": {
+          "target": [
+            "round_cup",
+            "round_plunger",
+            "radial_rim",
+            "perforation"
+          ],
+          "anchor": [
+            "hinge",
+            "handle"
+          ],
+          "non_target": [
+            "hinge_pin",
+            "upper_handle",
+            "lower_handle"
+          ]
+        },
+        "scorer": {
+          "target": "Require circular cup and plunger profiles sharing one radius descriptor, round perforation grid, radial rim, and positive mating clearance assertion.",
+          "anchor": "Cup/plunger remain attached to their original handle-side interfaces.",
+          "non_target": "Main hinge type/axis/range and handle semantic names equal parent.",
+          "scale": "N/A",
+          "allowed_structural_delta": "No joint/link graph change; geometry-family replacement only."
+        },
+        "historical_evidence": {
+          "record_id": "rec_picturex0611_garlic_press_var_round_cup_grid",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_garlic_press.md",
+          "parent_record_id": "rec_picturex_0611__garlic_press__004__png_b0766f37d84548ec90c8ef55abf0bac0",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_picturex_0611__garlic_press__004__png_b0766f37d84548ec90c8ef55abf0bac0",
+          "revision_id": "rev_000001",
+          "provider": "anthropic",
+          "model_id": "claude-fable-5",
+          "prompt_sha256": "0f0acb13bd1a405a35b3df6b9b426ca8d525d1edafa86a881d6d8a63d04b179c",
+          "model_py_sha256": "70f5d8d70d5bcdef7d4697ea4c41ab7fe1c4e0b36aaaddaccc77ec132ad6b783"
+        }
+      }
+    },
+    {
+      "task_id": "M06",
+      "edit_class": "modified",
+      "category": "Technology",
+      "subcategory": "Audio_Device",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/Technology_Audio_Device.md",
+      "parent_record_id": "rec_a-wooden-retro-tabletop-radio-a-horizontal-recta_20260624_122658_140987_c610b240",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_audio_device_var_vertical_bar_grille",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_m06_vertical_grille",
+      "normalized_instruction": "TARGET: replace the loop-built horizontal-ribbed grille field mesh with a loop-built, regularly spaced vertical-bar field over the same speaker opening. The compiled field may be one merged visual; artifact-level indexed bar names are not required. KEEP: cabinet, opening/frame, tuning display, knobs, and their joints unchanged.",
+      "precondition": "Parent speaker opening contains horizontal grille ribs and no vertical grille bars.",
+      "roles": {
+        "target": [
+          "vertical_bar_field"
+        ],
+        "anchor": [
+          "speaker_opening",
+          "grille_frame"
+        ],
+        "non_target": [
+          "cabinet",
+          "display",
+          "knob"
+        ]
+      },
+      "scorer": {
+        "target": "Require a loop-built regularly spaced vertical-bar grille field over the original opening and no remaining horizontal-ribbed field; a merged field visual is valid.",
+        "anchor": "Bar extents stay inside the original speaker opening/frame.",
+        "non_target": "Cabinet, display, knob semantic names and joint graph equal parent.",
+        "scale": "N/A",
+        "allowed_structural_delta": "No link/joint graph change; repeated grille visuals only."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_a-wooden-retro-tabletop-radio-a-horizontal-recta_20260624_122658_140987_c610b240/revisions/rev_000001/model.py",
+      "parent_model_sha256": "95aa1605bf19ebd76a1b1d7df00a4ac66dd3d1fdc7689f44b35f2b500a092fbb",
+      "original_object_prompt": "A wooden retro tabletop radio. A horizontal rectangular cherry-wood veneer cabinet with softly rounded edges and a glossy finish. The front face has a recessed cream cloth-and-ribbed speaker grille panel (framed in black) with a circular speaker behind it. Below the grille sits a horizontal tuning-dial scale with red and black AM/FM frequency markings, flanked by two round chrome knobs (left tuning, right volume).",
+      "normalized_edit_instruction": "TARGET: replace the loop-built horizontal-ribbed grille field mesh with a loop-built, regularly spaced vertical-bar field over the same speaker opening. The compiled field may be one merged visual; artifact-level indexed bar names are not required. KEEP: cabinet, opening/frame, tuning display, knobs, and their joints unchanged.",
+      "gold": {
+        "precondition": "Parent speaker opening contains horizontal grille ribs and no vertical grille bars.",
+        "roles": {
+          "target": [
+            "vertical_bar_field"
+          ],
+          "anchor": [
+            "speaker_opening",
+            "grille_frame"
+          ],
+          "non_target": [
+            "cabinet",
+            "display",
+            "knob"
+          ]
+        },
+        "scorer": {
+          "target": "Require a loop-built regularly spaced vertical-bar grille field over the original opening and no remaining horizontal-ribbed field; a merged field visual is valid.",
+          "anchor": "Bar extents stay inside the original speaker opening/frame.",
+          "non_target": "Cabinet, display, knob semantic names and joint graph equal parent.",
+          "scale": "N/A",
+          "allowed_structural_delta": "No link/joint graph change; repeated grille visuals only."
+        },
+        "historical_evidence": {
+          "record_id": "rec_audio_device_var_vertical_bar_grille",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/Technology_Audio_Device.md",
+          "parent_record_id": "rec_a-wooden-retro-tabletop-radio-a-horizontal-recta_20260624_122658_140987_c610b240",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_a-wooden-retro-tabletop-radio-a-horizontal-recta_20260624_122658_140987_c610b240",
+          "revision_id": "rev_000001",
+          "provider": "openai",
+          "model_id": "gpt-5.5",
+          "prompt_sha256": "5ad03078f2407287047f525fe8e0930034844e7da70bbef07a423f1933b86764",
+          "model_py_sha256": "95aa1605bf19ebd76a1b1d7df00a4ac66dd3d1fdc7689f44b35f2b500a092fbb"
+        }
+      }
+    },
+    {
+      "task_id": "S01",
+      "edit_class": "scale",
+      "category": "Bag_Suitcase",
+      "subcategory": "Shopping_bucket",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/Bag_Suitcase_Shopping_bucket.md",
+      "parent_record_id": "rec_a-rectangular-blue-plastic-hand-held-shopping-ba_20260608_160205_213315_254643d5",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_change-the-overall-shape-to-a-rounded-oval-deep-_20260609_052813_481554_2ec27abe",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_s01_deep_oval",
+      "normalized_instruction": "TARGET: change only the basket body envelope from rectangular to a rounded elongated oval deep form: local body height at least 1.25 times the parent, major horizontal span within 0.90 to 1.00 times the parent, and minor horizontal span at most 0.85 times the parent. Refit rim, slots, and handle-lug boundaries from one shared oval profile. KEEP: two folding carry handles and their joint types/axes/ranges, wall slots, rolled rim, and blue plastic material unchanged; handle joint origins may refit only with the target lugs.",
+      "precondition": "Parent has a rectangular body with measurable body AABB, rolled rim, wall slots, and exactly two folding carry handles.",
+      "roles": {
+        "target": [
+          "basket_body",
+          "oval_profile",
+          "rim",
+          "dependent_slot_layout",
+          "handle_lugs"
+        ],
+        "anchor": [
+          "handle_hinge_0",
+          "handle_hinge_1"
+        ],
+        "non_target": [
+          "handle_0",
+          "handle_1"
+        ]
+      },
+      "scorer": {
+        "target": "Require an oval/elliptical body profile with coherent rim, slot and lug consumers.",
+        "anchor": "Both handle joints remain lug-mounted with parent joint signatures.",
+        "non_target": "Exactly two folding handles remain and no link/joint is added.",
+        "scale": "Compiled local basket_tub AABB: height ratio >=1.25, major horizontal ratio in [0.90,1.00], and minor horizontal ratio <=0.85.",
+        "allowed_structural_delta": "Zero link/joint graph delta."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_a-rectangular-blue-plastic-hand-held-shopping-ba_20260608_160205_213315_254643d5/revisions/rev_000001/model.py",
+      "parent_model_sha256": "88c182e2bae491a40a3b3f643242e8b4c9d3ed63fa76bf9e96c143bf5b61e881",
+      "original_object_prompt": "A rectangular blue plastic hand-held shopping basket with slotted/perforated side walls (rows of vertical slots), a reinforced rolled top rim, molded grip ears on the short ends, and a slightly tapered stackable body. It has two black folding carry handles that each pivot up from the long rims and fold down flat into the basket. Bright blue body, black handles.\n\nreference_image: picture/Bag_Suitcase/Shopping bucket/001.png",
+      "normalized_edit_instruction": "TARGET: change only the basket body envelope from rectangular to a rounded elongated oval deep form: local body height at least 1.25 times the parent, major horizontal span within 0.90 to 1.00 times the parent, and minor horizontal span at most 0.85 times the parent. Refit rim, slots, and handle-lug boundaries from one shared oval profile. KEEP: two folding carry handles and their joint types/axes/ranges, wall slots, rolled rim, and blue plastic material unchanged; handle joint origins may refit only with the target lugs.",
+      "historical_gold_measurement": {
+        "measured_before_fresh_run": true,
+        "scorer_version": "urdf_semantic_v2",
+        "measurement_space": "compiled local basket_tub visual AABB",
+        "parent_extents_xyz": [0.518, 0.324, 0.236],
+        "gold_extents_xyz": [0.488, 0.253926, 0.306],
+        "ratios_xyz": [0.9420849421, 0.7837222222, 1.2966101695],
+        "passed": true
+      },
+      "gold": {
+        "pre_freeze_measurement": {
+          "measured_before_fresh_run": true,
+          "scorer_version": "urdf_semantic_v2",
+          "measurement_space": "compiled local basket_tub visual AABB",
+          "parent_extents_xyz": [0.518, 0.324, 0.236],
+          "gold_extents_xyz": [0.488, 0.253926, 0.306],
+          "ratios_xyz": [0.9420849421, 0.7837222222, 1.2966101695],
+          "passed": true
+        },
+        "precondition": "Parent has a rectangular body with measurable body AABB, rolled rim, wall slots, and exactly two folding carry handles.",
+        "roles": {
+          "target": [
+            "basket_body",
+            "oval_profile",
+            "rim",
+            "dependent_slot_layout",
+            "handle_lugs"
+          ],
+          "anchor": [
+            "handle_hinge_0",
+            "handle_hinge_1"
+          ],
+          "non_target": [
+            "handle_0",
+            "handle_1"
+          ]
+        },
+        "scorer": {
+          "target": "Require an oval/elliptical body profile with coherent rim, slot and lug consumers.",
+          "anchor": "Both handle joints remain lug-mounted with parent joint signatures.",
+          "non_target": "Exactly two folding handles remain and no link/joint is added.",
+          "scale": "Compiled local basket_tub AABB: height ratio >=1.25, major horizontal ratio in [0.90,1.00], and minor horizontal ratio <=0.85.",
+          "allowed_structural_delta": "Zero link/joint graph delta."
+        },
+        "historical_evidence": {
+          "record_id": "rec_change-the-overall-shape-to-a-rounded-oval-deep-_20260609_052813_481554_2ec27abe",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/Bag_Suitcase_Shopping_bucket.md",
+          "parent_record_id": "rec_a-rectangular-blue-plastic-hand-held-shopping-ba_20260608_160205_213315_254643d5",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_a-rectangular-blue-plastic-hand-held-shopping-ba_20260608_160205_213315_254643d5",
+          "revision_id": "rev_000001",
+          "provider": "anthropic",
+          "model_id": "claude-opus-4-8",
+          "prompt_sha256": "051bc3567c7f9522bd6b15a21fafb4d8d91bcc78ac1e76900f0c6d1aa8c32ca3",
+          "model_py_sha256": "88c182e2bae491a40a3b3f643242e8b4c9d3ed63fa76bf9e96c143bf5b61e881"
+        }
+      }
+    },
+    {
+      "task_id": "S02",
+      "edit_class": "scale",
+      "category": "Urban_Environment",
+      "subcategory": "bucket1",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/Urban_Environment_bucket1.md",
+      "parent_record_id": "rec_red-painted-sheet-metal-conical-fire-bucket-with_20260608_164532_434098_8f71e941",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_bucket1_var_body_deep_cone",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_s02_deep_cone",
+      "normalized_instruction": "TARGET: change only the conical fire-bucket proportions to a deeper narrower cone: body height at least 1.25 times the parent and top diameter at most 0.85 times the parent, with child height/top-diameter at least 1.25. KEEP: cone/apex family, rolled rim, lugs, and folding bail mechanism unchanged and refit dependent boundaries coherently.",
+      "precondition": "Parent is a conical fire bucket with measurable top rim, apex, and bail.",
+      "roles": {
+        "target": [
+          "conical_body",
+          "rolled_rim",
+          "dependent_lugs"
+        ],
+        "anchor": [
+          "bail_hinge"
+        ],
+        "non_target": [
+          "bail_handle",
+          "apex"
+        ]
+      },
+      "scorer": {
+        "target": "Require conical family/apex and coherent rim/lug consumers.",
+        "anchor": "Bail joint type/axis/count equals parent and remains lug-mounted.",
+        "non_target": "No new links or joints; bail and apex semantic names remain.",
+        "scale": "From compiled local bucket AABB: height ratio >=1.25, top-diameter ratio <=0.85, and child height/top diameter >=1.25.",
+        "allowed_structural_delta": "Zero link/joint graph delta."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_red-painted-sheet-metal-conical-fire-bucket-with_20260608_164532_434098_8f71e941/revisions/rev_000001/model.py",
+      "parent_model_sha256": "55a3df368979d1c389b845ea3f8597f181c0251ed54ecbe4c7eb843666901b17",
+      "original_object_prompt": "Red painted sheet-metal conical fire bucket with a pointed bottom (apex down) so it cannot stand upright: hollow thin-wall weathered red metal cone, open circular top with a rolled rim. Two riveted pivot lugs on opposite sides of the rim hold a steel-wire bail handle; the handle is a revolute joint pivoting about the horizontal diameter line through the two lugs, swinging from down one side, up over the top, to down the other side.\n\nreference_image: picture/Urban Environment/bucket1/001.png",
+      "normalized_edit_instruction": "TARGET: change only the conical fire-bucket proportions to a deeper narrower cone: body height at least 1.25 times the parent and top diameter at most 0.85 times the parent, with child height/top-diameter at least 1.25. KEEP: cone/apex family, rolled rim, lugs, and folding bail mechanism unchanged and refit dependent boundaries coherently.",
+      "historical_gold_measurement": {
+        "measured_before_fresh_run": true,
+        "scorer_version": "urdf_semantic_v2",
+        "measurement_space": "compiled local bucket visual AABB",
+        "parent_extents_xyz": [0.2772, 0.305, 0.256],
+        "gold_extents_xyz": [0.1672, 0.195, 0.406],
+        "ratios_xyz": [0.6031746032, 0.6393442623, 1.5859375],
+        "gold_height_to_top_diameter": 2.0820512821,
+        "passed": true
+      },
+      "gold": {
+        "pre_freeze_measurement": {
+          "measured_before_fresh_run": true,
+          "scorer_version": "urdf_semantic_v2",
+          "measurement_space": "compiled local bucket visual AABB",
+          "parent_extents_xyz": [0.2772, 0.305, 0.256],
+          "gold_extents_xyz": [0.1672, 0.195, 0.406],
+          "ratios_xyz": [0.6031746032, 0.6393442623, 1.5859375],
+          "gold_height_to_top_diameter": 2.0820512821,
+          "passed": true
+        },
+        "precondition": "Parent is a conical fire bucket with measurable top rim, apex, and bail.",
+        "roles": {
+          "target": [
+            "conical_body",
+            "rolled_rim",
+            "dependent_lugs"
+          ],
+          "anchor": [
+            "bail_hinge"
+          ],
+          "non_target": [
+            "bail_handle",
+            "apex"
+          ]
+        },
+        "scorer": {
+          "target": "Require conical family/apex and coherent rim/lug consumers.",
+          "anchor": "Bail joint type/axis/count equals parent and remains lug-mounted.",
+          "non_target": "No new links or joints; bail and apex semantic names remain.",
+          "scale": "From compiled local bucket AABB: height ratio >=1.25, top-diameter ratio <=0.85, and child height/top diameter >=1.25.",
+          "allowed_structural_delta": "Zero link/joint graph delta."
+        },
+        "historical_evidence": {
+          "record_id": "rec_bucket1_var_body_deep_cone",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/Urban_Environment_bucket1.md",
+          "parent_record_id": "rec_red-painted-sheet-metal-conical-fire-bucket-with_20260608_164532_434098_8f71e941",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_red-painted-sheet-metal-conical-fire-bucket-with_20260608_164532_434098_8f71e941",
+          "revision_id": "rev_000001",
+          "provider": "anthropic",
+          "model_id": "claude-opus-4-8",
+          "prompt_sha256": "778d3c4c924ce35af7c92ce5e9aa457f1a6a17dd364c7dda164eaee45eab9ce9",
+          "model_py_sha256": "55a3df368979d1c389b845ea3f8597f181c0251ed54ecbe4c7eb843666901b17"
+        }
+      }
+    },
+    {
+      "task_id": "S03",
+      "edit_class": "scale",
+      "category": "0611",
+      "subcategory": "Folding_table3",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_Folding_table3.md",
+      "parent_record_id": "rec_picturex_0611__folding_table3__002__png_1d2b460cfb1f4c52b963597c7ee88e86",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_picturex0611_folding_table3_var_leaf_narrow_wide",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_s03_narrow_spine_wide_leaves",
+      "normalized_instruction": "TARGET: change only tabletop proportions: reduce the center_top local narrow-axis extent to at most 0.70 times the parent and increase each leaf wood_panel local reach-axis extent to at least 1.08 times the parent, with the two leaf ratios within 0.02. Refit hinge/seam origins coherently. KEEP: exactly two leaves, both center_to_leaf joint types/axes/ranges, leg-frame supports, locking braces, wood finish, and black frame unchanged.",
+      "precondition": "Parent has one measurable center strip, exactly two symmetric oval leaves, and complete leaf/leg/locking-brace joints.",
+      "roles": {
+        "target": [
+          "center_top",
+          "left_leaf",
+          "right_leaf",
+          "dependent_hinge_seams"
+        ],
+        "anchor": [
+          "center_to_left_leaf",
+          "center_to_right_leaf"
+        ],
+        "non_target": [
+          "leg_frame",
+          "locking_brace"
+        ]
+      },
+      "scorer": {
+        "target": "Require a narrower center strip and symmetrically wider leaf spans with coherent seams.",
+        "anchor": "Both leaf hinges remain on the center strip with parent joint signatures.",
+        "non_target": "Two leaves, leg frames, and locking-brace signatures equal parent.",
+        "scale": "Compiled local visuals: center_top narrow-axis ratio <=0.70; each leaf wood_panel reach-axis ratio >=1.08; absolute difference between leaf ratios <=0.02.",
+        "allowed_structural_delta": "Zero link/joint graph delta."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_picturex_0611__folding_table3__002__png_1d2b460cfb1f4c52b963597c7ee88e86/revisions/rev_000001/model.py",
+      "parent_model_sha256": "477161229b171f27eded75bb16bd65508e384d3e293b01243a72150d32f2d1c0",
+      "original_object_prompt": "Use the attached reference image as the primary and authoritative visual source. Create exactly one independent articulated 3D Articraft asset for pictureX/0611/Folding_table3/002.png. Stable trace identifier: picturex_0611__folding_table3__002__png. Subcategory context: Folding_table3. The exact object identity, pose, visible component count, colorway, proportions, and construction in this specific image are authoritative; do not substitute another image from the same folder and never merge multiple images. Model the exact round or oval dining table with folding leaves and folding trestle legs: wood tabletop leaves, center section, leaf hinges, support rails, black metal leg frames, locking braces, feet, and visible stored/open configuration. Preserve the warm wood finish, round footprint, leaf seam geometry, and folded stance. Give each leaf and independent leg frame its own revolute joint with realistic stops and connected support. Treat 002.png as the original source filename/image ID. Generate only the core object or one coherent mechanically connected assembly; omit background, room architecture, people, hands, shadows, readable branding, annotations, carrying bags, loose props, and unrelated objects. If the image conflicts with the subcategory name, follow the image and note the suspected misclassification in the trajectory. Identify every clearly visible and structurally reasonable independently movable part. Create an appropriate hierarchy and one physically plausible joint for each such part, with realistic axes, limits, supports, bearings, hinges, rails, or linkage relationships. Multiple movable parts require multiple joints; one joint is a minimum, not a target. Do not invent arbitrary motion and do not fuse distinct mechanisms into one joint. Use realistic absolute dimensions, recognizable image-specific geometry, materials, surface thicknesses, proportions, contacts, fasteners, and construction. Add run_tests() checks for the image-specific silhouette, component layout, materials, connected hierarchy, support/fit, and every required non-fixed joint.",
+      "normalized_edit_instruction": "TARGET: change only tabletop proportions: reduce the center_top local narrow-axis extent to at most 0.70 times the parent and increase each leaf wood_panel local reach-axis extent to at least 1.08 times the parent, with the two leaf ratios within 0.02. Refit hinge/seam origins coherently. KEEP: exactly two leaves, both center_to_leaf joint types/axes/ranges, leg-frame supports, locking braces, wood finish, and black frame unchanged.",
+      "historical_gold_measurement": {
+        "measured_before_fresh_run": true,
+        "scorer_version": "urdf_semantic_v2",
+        "measurement_space": "compiled local center_top and leaf wood_panel visual AABBs",
+        "center_top_parent_xyz": [0.18, 0.92, 0.036],
+        "center_top_gold_xyz": [0.1, 0.92, 0.036],
+        "center_narrow_ratio": 0.5555555556,
+        "leaf_parent_xyz": [[0.036, 0.905562, 0.42], [0.036, 0.905562, 0.42]],
+        "leaf_gold_xyz": [[0.036, 0.915568, 0.46], [0.036, 0.915568, 0.46]],
+        "leaf_reach_ratios": [1.0952380952, 1.0952380952],
+        "leaf_ratio_absolute_difference": 0.0,
+        "passed": true
+      },
+      "gold": {
+        "pre_freeze_measurement": {
+          "measured_before_fresh_run": true,
+          "scorer_version": "urdf_semantic_v2",
+          "measurement_space": "compiled local center_top and leaf wood_panel visual AABBs",
+          "center_top_parent_xyz": [0.18, 0.92, 0.036],
+          "center_top_gold_xyz": [0.1, 0.92, 0.036],
+          "center_narrow_ratio": 0.5555555556,
+          "leaf_parent_xyz": [[0.036, 0.905562, 0.42], [0.036, 0.905562, 0.42]],
+          "leaf_gold_xyz": [[0.036, 0.915568, 0.46], [0.036, 0.915568, 0.46]],
+          "leaf_reach_ratios": [1.0952380952, 1.0952380952],
+          "leaf_ratio_absolute_difference": 0.0,
+          "passed": true
+        },
+        "precondition": "Parent has one measurable center strip, exactly two symmetric oval leaves, and complete leaf/leg/locking-brace joints.",
+        "roles": {
+          "target": [
+            "center_top",
+            "left_leaf",
+            "right_leaf",
+            "dependent_hinge_seams"
+          ],
+          "anchor": [
+            "center_to_left_leaf",
+            "center_to_right_leaf"
+          ],
+          "non_target": [
+            "leg_frame",
+            "locking_brace"
+          ]
+        },
+        "scorer": {
+          "target": "Require a narrower center strip and symmetrically wider leaf spans with coherent seams.",
+          "anchor": "Both leaf hinges remain on the center strip with parent joint signatures.",
+          "non_target": "Two leaves, leg frames, and locking-brace signatures equal parent.",
+          "scale": "Compiled local visuals: center_top narrow-axis ratio <=0.70; each leaf wood_panel reach-axis ratio >=1.08; absolute difference between leaf ratios <=0.02.",
+          "allowed_structural_delta": "Zero link/joint graph delta."
+        },
+        "historical_evidence": {
+          "record_id": "rec_picturex0611_folding_table3_var_leaf_narrow_wide",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_Folding_table3.md",
+          "parent_record_id": "rec_picturex_0611__folding_table3__002__png_1d2b460cfb1f4c52b963597c7ee88e86",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_picturex_0611__folding_table3__002__png_1d2b460cfb1f4c52b963597c7ee88e86",
+          "revision_id": "rev_000001",
+          "provider": "openai",
+          "model_id": "gpt-5.6-sol",
+          "prompt_sha256": "d4466e6e5cad01f815b8b6a75edd6918031f733686f74277325512a3c745bf39",
+          "model_py_sha256": "477161229b171f27eded75bb16bd65508e384d3e293b01243a72150d32f2d1c0"
+        }
+      }
+    },
+    {
+      "task_id": "S04",
+      "edit_class": "scale",
+      "category": "Technology",
+      "subcategory": "Keyboard",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/Technology_Keyboard.md",
+      "parent_record_id": "rec_full-size-black-wireless-computer-keyboard-with-_20260605_173906_815714_c52b6770",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_keyboard_var_highprofile",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_s04_highprofile",
+      "normalized_instruction": "TARGET: change only compiled chassis Z thickness to a high-profile keyboard, at least 1.15 times the parent, while keeping X and Y footprint each within 5 percent of the parent. KEEP: key layout, key count, keycaps, and every existing key joint unchanged; refit dependent key seating heights coherently.",
+      "precondition": "Parent has a conventional thin chassis with stable key layout and footprint.",
+      "roles": {
+        "target": [
+          "chassis",
+          "dependent_key_seating"
+        ],
+        "anchor": [
+          "key_plate"
+        ],
+        "non_target": [
+          "key",
+          "keycap",
+          "spacebar"
+        ]
+      },
+      "scorer": {
+        "target": "Require coherent thickened chassis and refit key seating without floating keys.",
+        "anchor": "Key plate remains the seating reference.",
+        "non_target": "Key semantic-name set, key count, and joint graph equal parent.",
+        "scale": "Compiled chassis AABB: Z ratio >=1.15 and each of X/Y ratios within [0.95,1.05].",
+        "allowed_structural_delta": "Zero link/joint graph delta."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_full-size-black-wireless-computer-keyboard-with-_20260605_173906_815714_c52b6770/revisions/rev_000001/model.py",
+      "parent_model_sha256": "2a99f4083a9d2205a70a6b81595bc96b20b3c82003960a517b597ede81804e5a",
+      "original_object_prompt": "full-size black wireless computer keyboard with a standard key layout\n\nreference_image: picture/Technology/Keyboard/002.png",
+      "normalized_edit_instruction": "TARGET: change only compiled chassis Z thickness to a high-profile keyboard, at least 1.15 times the parent, while keeping X and Y footprint each within 5 percent of the parent. KEEP: key layout, key count, keycaps, and every existing key joint unchanged; refit dependent key seating heights coherently.",
+      "historical_gold_measurement": {
+        "measured_before_fresh_run": true,
+        "scorer_version": "urdf_semantic_v2",
+        "measurement_space": "compiled chassis-link visual AABB",
+        "parent_extents_xyz": [0.36, 0.13, 0.034375],
+        "gold_extents_xyz": [0.36, 0.13, 0.0407],
+        "ratios_xyz": [1.0, 1.0, 1.184],
+        "threshold_rationale": "A 15 percent minimum distinguishes the historical high-profile chassis while remaining a meaningful preregistered thickness increase.",
+        "passed": true
+      },
+      "gold": {
+        "pre_freeze_measurement": {
+          "measured_before_fresh_run": true,
+          "scorer_version": "urdf_semantic_v2",
+          "measurement_space": "compiled chassis-link visual AABB",
+          "parent_extents_xyz": [0.36, 0.13, 0.034375],
+          "gold_extents_xyz": [0.36, 0.13, 0.0407],
+          "ratios_xyz": [1.0, 1.0, 1.184],
+          "threshold_rationale": "A 15 percent minimum distinguishes the historical high-profile chassis while remaining a meaningful preregistered thickness increase.",
+          "passed": true
+        },
+        "precondition": "Parent has a conventional thin chassis with stable key layout and footprint.",
+        "roles": {
+          "target": [
+            "chassis",
+            "dependent_key_seating"
+          ],
+          "anchor": [
+            "key_plate"
+          ],
+          "non_target": [
+            "key",
+            "keycap",
+            "spacebar"
+          ]
+        },
+        "scorer": {
+          "target": "Require coherent thickened chassis and refit key seating without floating keys.",
+          "anchor": "Key plate remains the seating reference.",
+          "non_target": "Key semantic-name set, key count, and joint graph equal parent.",
+          "scale": "Compiled chassis AABB: Z ratio >=1.15 and each of X/Y ratios within [0.95,1.05].",
+          "allowed_structural_delta": "Zero link/joint graph delta."
+        },
+        "historical_evidence": {
+          "record_id": "rec_keyboard_var_highprofile",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/Technology_Keyboard.md",
+          "parent_record_id": "rec_full-size-black-wireless-computer-keyboard-with-_20260605_173906_815714_c52b6770",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_full-size-black-wireless-computer-keyboard-with-_20260605_173906_815714_c52b6770",
+          "revision_id": "rev_000001",
+          "provider": "anthropic",
+          "model_id": "claude-opus-4-8",
+          "prompt_sha256": "bf782bb3d3ca5c5e2841b81b4663db7befdc9d5ece716259a082a0e8c81fffaa",
+          "model_py_sha256": "2a99f4083a9d2205a70a6b81595bc96b20b3c82003960a517b597ede81804e5a"
+        }
+      }
+    },
+    {
+      "task_id": "S05",
+      "edit_class": "scale",
+      "category": "Technology",
+      "subcategory": "Laptop",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/Technology_Laptop.md",
+      "parent_record_id": "rec_a-black-budget-15-6-inch-clamshell-laptop-open-a_20260624_123651_161143_65d6f0bd",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_laptop_var_rugged",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_s05_rugged",
+      "normalized_instruction": "TARGET: change the local lower_shell and lid_shell thicknesses to a rugged laptop, each at least 1.50 times the parent while keeping each shell's local horizontal extents within 10 percent. Add exactly four corner bumper visuals inline without new links or joints. KEEP: hinge axis/range, keyboard, trackpad, and screen opening unchanged and refit dependent boundaries coherently.",
+      "precondition": "Parent is a conventional thin clamshell laptop with base, lid, and hinge.",
+      "roles": {
+        "target": [
+          "base_shell",
+          "lid_shell",
+          "corner_bumper_",
+          "dependent_openings"
+        ],
+        "anchor": [
+          "hinge"
+        ],
+        "non_target": [
+          "keyboard",
+          "trackpad",
+          "screen"
+        ]
+      },
+      "scorer": {
+        "target": "Require thickened base/lid plus exactly four inline bumper visuals and coherent openings.",
+        "anchor": "Hinge remains between original base/lid semantic parts with same axis/range.",
+        "non_target": "Keyboard, trackpad, screen names and link/joint graph equal parent.",
+        "scale": "Compiled local lower_shell and lid_shell visual AABBs: each Z ratio >=1.50 and each local X/Y ratio within [0.90,1.10].",
+        "allowed_structural_delta": "Zero link/joint graph delta; bumpers must be inline visuals."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_a-black-budget-15-6-inch-clamshell-laptop-open-a_20260624_123651_161143_65d6f0bd/revisions/rev_000001/model.py",
+      "parent_model_sha256": "637b0dc9f66a883222efccf515cb3934032163b7739947a17f400643ed6ee7f5",
+      "original_object_prompt": "A black budget 15.6-inch clamshell laptop, open at a typical viewing angle. Matte black plastic chassis, a full-size island keyboard with a numeric keypad, a large rectangular trackpad below the keyboard, thin bezels around the (off) black display, a small webcam centered at the top of the lid, and a thin overall profile.",
+      "normalized_edit_instruction": "TARGET: change the local lower_shell and lid_shell thicknesses to a rugged laptop, each at least 1.50 times the parent while keeping each shell's local horizontal extents within 10 percent. Add exactly four corner bumper visuals inline without new links or joints. KEEP: hinge axis/range, keyboard, trackpad, and screen opening unchanged and refit dependent boundaries coherently.",
+      "historical_gold_measurement": {
+        "measured_before_fresh_run": true,
+        "scorer_version": "urdf_semantic_v2",
+        "measurement_space": "compiled local lower_shell and lid_shell visual AABBs, not articulated world AABB",
+        "lower_shell_parent_xyz": [0.38, 0.255, 0.018],
+        "lower_shell_gold_xyz": [0.38, 0.255, 0.032],
+        "lower_shell_ratios_xyz": [1.0, 1.0, 1.7777777778],
+        "lid_shell_parent_xyz": [0.372, 0.235, 0.008],
+        "lid_shell_gold_xyz": [0.372, 0.235, 0.014],
+        "lid_shell_ratios_xyz": [1.0, 1.0, 1.75],
+        "passed": true
+      },
+      "gold": {
+        "pre_freeze_measurement": {
+          "measured_before_fresh_run": true,
+          "scorer_version": "urdf_semantic_v2",
+          "measurement_space": "compiled local lower_shell and lid_shell visual AABBs, not articulated world AABB",
+          "lower_shell_parent_xyz": [0.38, 0.255, 0.018],
+          "lower_shell_gold_xyz": [0.38, 0.255, 0.032],
+          "lower_shell_ratios_xyz": [1.0, 1.0, 1.7777777778],
+          "lid_shell_parent_xyz": [0.372, 0.235, 0.008],
+          "lid_shell_gold_xyz": [0.372, 0.235, 0.014],
+          "lid_shell_ratios_xyz": [1.0, 1.0, 1.75],
+          "passed": true
+        },
+        "precondition": "Parent is a conventional thin clamshell laptop with base, lid, and hinge.",
+        "roles": {
+          "target": [
+            "base_shell",
+            "lid_shell",
+            "corner_bumper_",
+            "dependent_openings"
+          ],
+          "anchor": [
+            "hinge"
+          ],
+          "non_target": [
+            "keyboard",
+            "trackpad",
+            "screen"
+          ]
+        },
+        "scorer": {
+          "target": "Require thickened base/lid plus exactly four inline bumper visuals and coherent openings.",
+          "anchor": "Hinge remains between original base/lid semantic parts with same axis/range.",
+          "non_target": "Keyboard, trackpad, screen names and link/joint graph equal parent.",
+          "scale": "Compiled local lower_shell and lid_shell visual AABBs: each Z ratio >=1.50 and each local X/Y ratio within [0.90,1.10].",
+          "allowed_structural_delta": "Zero link/joint graph delta; bumpers must be inline visuals."
+        },
+        "historical_evidence": {
+          "record_id": "rec_laptop_var_rugged",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/Technology_Laptop.md",
+          "parent_record_id": "rec_a-black-budget-15-6-inch-clamshell-laptop-open-a_20260624_123651_161143_65d6f0bd",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_a-black-budget-15-6-inch-clamshell-laptop-open-a_20260624_123651_161143_65d6f0bd",
+          "revision_id": "rev_000001",
+          "provider": "openai",
+          "model_id": "gpt-5.5",
+          "prompt_sha256": "e2dc0c6ef3d52f5b43c0cffe02573a504c80bff338e990c99868df06cb351190",
+          "model_py_sha256": "637b0dc9f66a883222efccf515cb3934032163b7739947a17f400643ed6ee7f5"
+        }
+      }
+    },
+    {
+      "task_id": "S06",
+      "edit_class": "scale",
+      "category": "0611",
+      "subcategory": "hydraulic_jack2",
+      "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_hydraulic_jack2.md",
+      "parent_record_id": "rec_picturex_0611__hydraulic_jack2__001__png_1e3d36c9f6f846b59e6a82e93b80e5e0",
+      "parent_revision_id": "rev_000001",
+      "historical_gold_record_id": "rec_picturex0611_hydraulic_jack2_fork_low_profile_floor_20260714",
+      "historical_gold_revision_id": "rev_000001",
+      "fresh_record_id": "rec_table5_articraft_native_v2_s06_lowprofile_jack2",
+      "normalized_instruction": "TARGET: change only the front/nose chassis_tray envelope to a low-profile form: its frontmost positive longitudinal coordinate at least 1.20 times the parent's and its front-side visual local Z extent at most 0.70 times the parent's. KEEP: cylinder body, piston, lift arm, saddle, pump handle/link, two front wheels, two rear casters, and all joint types/axes and mechanism roles unchanged. The lift_arm_hinge and piston_slide bounded travel limits may refit only for target mount/clearance compatibility; all other joint ranges remain unchanged.",
+      "precondition": "Parent is a floor jack with measurable chassis and complete hydraulic cylinder, piston, lift, pump, saddle, wheel, and caster layers.",
+      "roles": {
+        "target": [
+          "chassis",
+          "dependent_mounts"
+        ],
+        "anchor": [
+          "lift_arm_pivot",
+          "wheel_mounts"
+        ],
+        "non_target": [
+          "cylinder_body",
+          "piston",
+          "lift_arm",
+          "saddle",
+          "pump_handle",
+          "pump_link",
+          "front_wheel_0",
+          "front_wheel_1",
+          "rear_caster_0",
+          "rear_caster_1"
+        ]
+      },
+      "scorer": {
+        "target": "Require a longer and lower chassis with every retained mechanism visibly supported.",
+        "anchor": "Lift and wheel/caster pivots remain mounted on coherent chassis interfaces.",
+        "non_target": "Cylinder, piston, lift, saddle, pump, wheel and caster roles plus joint type/parent/child/axis signatures equal parent; only lift_arm_hinge and piston_slide bounded limits may refit.",
+        "scale": "Compiled chassis target AABB: positive longitudinal xmax ratio >=1.20; local chassis/chassis_tray front-side visual Z-extent ratio <=0.70.",
+        "allowed_structural_delta": "Zero link/joint add/remove delta; bounded-limit modifications are allowed only for lift_arm_hinge and piston_slide."
+      },
+      "parent_model_path": "arti-skill/articraft_data/data/records/rec_picturex_0611__hydraulic_jack2__001__png_1e3d36c9f6f846b59e6a82e93b80e5e0/revisions/rev_000001/model.py",
+      "parent_model_sha256": "c38394be3bd1841dab0e86b058d3b9d2c20d91dea284b68d1dd87ae5664f9d86",
+      "original_object_prompt": "Use the attached reference image as the primary and authoritative visual source. Create exactly one independent articulated 3D Articraft asset for pictureX/0611/hydraulic_jack2/001.png. Stable trace identifier: picturex_0611__hydraulic_jack2__001__png. Subcategory context: hydraulic_jack2. The exact object identity, pose, visible component count, colorway, proportions, and construction in this specific image are authoritative; do not substitute another image from the same folder and never merge multiple images. Model the exact wheeled floor jack: long low steel chassis, front lifting arm and saddle, hydraulic cylinder, long blue handle with loop grip, handle socket and pump linkage, front rollers, rear casters, pivots, and blue/black metal finish. Preserve the low profile, wheelbase, handle angle, and folded lift-arm pose. Give the lift arm, piston, pump handle, wheels, and caster swivels their own physically connected joints. Treat 001.png as the original source filename/image ID. Generate only the core object or one coherent mechanically connected assembly; omit background, room architecture, people, hands, shadows, readable branding, annotations, carrying bags, loose props, and unrelated objects. If the image conflicts with the subcategory name, follow the image and note the suspected misclassification in the trajectory. Identify every clearly visible and structurally reasonable independently movable part. Create an appropriate hierarchy and one physically plausible joint for each such part, with realistic axes, limits, supports, bearings, hinges, rails, or linkage relationships. Multiple movable parts require multiple joints; one joint is a minimum, not a target. Do not invent arbitrary motion and do not fuse distinct mechanisms into one joint. Use realistic absolute dimensions, recognizable image-specific geometry, materials, surface thicknesses, proportions, contacts, fasteners, and construction. Add run_tests() checks for the image-specific silhouette, component layout, materials, connected hierarchy, support/fit, and every required non-fixed joint.",
+      "normalized_edit_instruction": "TARGET: change only the front/nose chassis_tray envelope to a low-profile form: its frontmost positive longitudinal coordinate at least 1.20 times the parent's and its front-side visual local Z extent at most 0.70 times the parent's. KEEP: cylinder body, piston, lift arm, saddle, pump handle/link, two front wheels, two rear casters, and all joint types/axes and mechanism roles unchanged. The lift_arm_hinge and piston_slide bounded travel limits may refit only for target mount/clearance compatibility; all other joint ranges remain unchanged.",
+      "historical_gold_measurement": {
+        "measured_before_fresh_run": true,
+        "scorer_version": "urdf_semantic_v2",
+        "measurement_space": "compiled chassis target frontmost positive longitudinal coordinate plus local chassis/chassis_tray front-side visual Z extent",
+        "parent_front_xmax": 0.43,
+        "gold_front_xmax": 0.52,
+        "front_xmax_ratio": 1.2093023256,
+        "parent_front_side_local_z_extent": 0.113,
+        "gold_front_side_local_z_extent": 0.073,
+        "front_side_local_z_ratio": 0.6460176991,
+        "passed": true
+      },
+      "gold": {
+        "pre_freeze_measurement": {
+          "measured_before_fresh_run": true,
+          "scorer_version": "urdf_semantic_v2",
+          "measurement_space": "compiled chassis target frontmost positive longitudinal coordinate plus local chassis/chassis_tray front-side visual Z extent",
+          "parent_front_xmax": 0.43,
+          "gold_front_xmax": 0.52,
+          "front_xmax_ratio": 1.2093023256,
+          "parent_front_side_local_z_extent": 0.113,
+          "gold_front_side_local_z_extent": 0.073,
+          "front_side_local_z_ratio": 0.6460176991,
+          "passed": true
+        },
+        "precondition": "Parent is a floor jack with measurable chassis and complete hydraulic cylinder, piston, lift, pump, saddle, wheel, and caster layers.",
+        "roles": {
+          "target": [
+            "chassis",
+            "dependent_mounts"
+          ],
+          "anchor": [
+            "lift_arm_pivot",
+            "wheel_mounts"
+          ],
+          "non_target": [
+            "cylinder_body",
+            "piston",
+            "lift_arm",
+            "saddle",
+            "pump_handle",
+            "pump_link",
+            "front_wheel_0",
+            "front_wheel_1",
+            "rear_caster_0",
+            "rear_caster_1"
+          ]
+        },
+        "scorer": {
+          "target": "Require a longer and lower chassis with every retained mechanism visibly supported.",
+          "anchor": "Lift and wheel/caster pivots remain mounted on coherent chassis interfaces.",
+          "non_target": "Cylinder, piston, lift, saddle, pump, wheel and caster roles plus joint type/parent/child/axis signatures equal parent; only lift_arm_hinge and piston_slide bounded limits may refit.",
+          "scale": "Compiled chassis target AABB: positive longitudinal xmax ratio >=1.20; local chassis/chassis_tray front-side visual Z-extent ratio <=0.70.",
+          "allowed_structural_delta": "Zero link/joint add/remove delta; bounded-limit modifications are allowed only for lift_arm_hinge and piston_slide."
+        },
+        "historical_evidence": {
+          "record_id": "rec_picturex0611_hydraulic_jack2_fork_low_profile_floor_20260714",
+          "revision_id": "rev_000001",
+          "source_map": "arti-template/articraft_template_authoring/source_maps/pictureX_0611_hydraulic_jack2.md",
+          "parent_record_id": "rec_picturex_0611__hydraulic_jack2__001__png_1e3d36c9f6f846b59e6a82e93b80e5e0",
+          "parent_revision_id": "rev_000001",
+          "role": "gold_evidence_only_not_evaluation_output"
+        },
+        "parent_provenance": {
+          "record_id": "rec_picturex_0611__hydraulic_jack2__001__png_1e3d36c9f6f846b59e6a82e93b80e5e0",
+          "revision_id": "rev_000001",
+          "provider": "openai",
+          "model_id": "gpt-5.6-sol",
+          "prompt_sha256": "da50f8c22b0578d23602ed09aabd253ae058435e43eea4172b761fecf7d4b74b",
+          "model_py_sha256": "c38394be3bd1841dab0e86b058d3b9d2c20d91dea284b68d1dd87ae5664f9d86"
+        }
+      }
+    }
+  ],
+  "native_protocol_id": "table5_articraft_native_fork_v2",
+  "prompt_contract_sha256": "0ad1443cea1078af2dcfba49b0f2f81e6caf34bf2b4d39600e62ebc871ef3965",
+  "method_protocols": {
+    "articraft_native": {
+      "execution_mode": "official_articraft_fork",
+      "provider": "dashscope",
+      "model_id": "qwen3.7-max-2026-05-20",
+      "thinking_level": "high",
+      "max_turns": 30,
+      "context_window_tokens": 1000000,
+      "max_output_tokens": 65536,
+      "output_safety_tokens": 1024,
+      "max_cost_usd": null,
+      "tools": [
+        "read_file",
+        "replace",
+        "write_file",
+        "compile_model",
+        "probe_model",
+        "find_examples"
+      ],
+      "compile_feedback": true,
+      "agent_repair_across_turns": true,
+      "record_level_retries": 0,
+      "provider_transient_max_attempts": 1,
+      "source_truncation": false
+    },
+    "naive_one_shot": {
+      "execution_mode": "single_provider_request_source_edit",
+      "provider": "dashscope",
+      "model_id": "qwen3.7-max-2026-05-20",
+      "thinking_level": "high",
+      "max_turns": 1,
+      "provider_request_limit": 1,
+      "context_window_tokens": 1000000,
+      "max_output_tokens": 65536,
+      "output_safety_tokens": 1024,
+      "max_cost_usd": null,
+      "tools": [],
+      "automatic_retries": 0,
+      "compile_feedback": false,
+      "automatic_repair": false,
+      "source_truncation": false
+    }
+  },
+  "pricing_snapshot": {
+    "currency": "CNY",
+    "unit": "per_1m_tokens",
+    "uncached_input": 12.0,
+    "cached_input": 2.4,
+    "output": 36.0,
+    "retrieved_at": "2026-08-11",
+    "usd_conversion": null
+  },
+  "cohort_distribution": {
+    "additive": 6,
+    "modified": 6,
+    "scale": 6
+  }
+}

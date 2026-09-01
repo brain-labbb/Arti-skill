@@ -1,0 +1,70 @@
+{
+  "classification": "FORMAL",
+  "cohort": {
+    "j_eval": 3809,
+    "manifest_cohort_sha256": "a9c9c710d9617dea366696603984e330780ce177fead2a34c60410588cc1273c",
+    "n_eval": 800,
+    "receipt_manifest_sha256": "ccb54f4b726fe717efd28a37948e6b92bac994a2c0ba8fb4ea9ac4548d3a9882",
+    "receipt_set": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_physx_mobility_n800_v2",
+    "selection_policy": "all Table 5 frozen receipt-set rows in existing rank order; no resampling or result-based filtering"
+  },
+  "dataset": "PhysX-Mobility",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "execution": {
+    "archive_binding_verified": true,
+    "child_interpreter": "/mnt/zsn/miniconda3/envs/genesis-main/bin/python3.12",
+    "child_timeout_seconds": 3600,
+    "denominator_policy": "all frozen assets, joints and states including failures and unexecuted items",
+    "dof_bins": [
+      "0",
+      "1",
+      "2--3",
+      "4--7",
+      ">=8",
+      "unknown/unparseable"
+    ],
+    "genesis_cache_policy": "per-rank private GS_CACHE_FILE_PATH under output root; rank 1 warmup cache is copied as a read template into each later rank cache",
+    "table3_source": {
+      "records": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table3_physx_mobility_table5cohort_n800_20260819T102939Z/asset_records.jsonl",
+      "sha256": "e97db210faf9a9e38a7083274a6553e1f10648b5df56b606e0ea068e079b614c"
+    },
+    "table4_asset_records": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_physx_mobility_table5cohort_n800_20260819T143442Z/asset_records.json",
+    "table4_asset_records_sha256": "1efcfea5920e8db21f7b8afe9de0713a6bb478577d8b4417a6feb2b207397a3d",
+    "table4_state_records": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_physx_mobility_table5cohort_n800_20260819T143442Z/state_records.jsonl",
+    "table4_state_records_sha256": "eaa461e205e96b9bc2db4538de4295ba5efdd9bce0ac5d52ed0524648b6ec5fa",
+    "workers": 16
+  },
+  "frozen_at_utc": "2026-08-20T03:23:08.277275Z",
+  "metric_rules": {
+    "collision_safe_dof_retention": "\u4e0a\u8ff0\u5b89\u5168\u53ef\u6267\u884c\u5173\u8282\u603b\u6570\u9664\u4ee5\u51bb\u7ed3 J_eval\uff0c\u5199\u4e3a passed / J_eval (percentage)\u3002\u5b83\u662f\u4e0e raw DoF \u6570\u914d\u5957\u7684\u4fdd\u7559\u7387\uff0c\u4e0d\u5f97\u4ee5\u53ea\u7edf\u8ba1\u6210\u529f\u52a0\u8f7d\u8d44\u4ea7\u7684\u6761\u4ef6\u5206\u6bcd\u66ff\u4ee3\u3002",
+    "executable_cf_dof_per_asset": "\u6bcf\u4e2a\u8d44\u4ea7\u4e2d\u540c\u65f6\u901a\u8fc7 Table 3 Joint-level Pass \u548c\u672c\u8868 Joint-level Full-range CF \u7684\u5173\u8282\u6570\uff1b\u8de8 N_eval \u62a5\u544a mean / median / P90\u3002\u89e3\u6790\u3001\u52a0\u8f7d\u6216\u6d4b\u91cf\u5931\u8d25\u8d44\u4ea7\u7684\u5b89\u5168\u53ef\u6267\u884c DoF \u8ba1\u4e3a 0\uff0c\u4e0d\u5f97\u4ece\u8d44\u4ea7\u5206\u6bcd\u5220\u9664\u3002",
+    "joint_level_full_range_cf": "\u5173\u8282\u7ea7 passed / J_eval\u3002\u5bf9\u6bcf\u4e2a movable joint \u4f7f\u7528\u65e2\u6709 Table 4 \u7684\u51bb\u7ed3\u6d4b\u8bd5\u533a\u95f4\u548c K = 21 \u72b6\u6001\uff0c\u5176\u4ed6\u5173\u8282\u4fdd\u6301\u5386\u53f2 q = 0\uff1b\u5168\u90e8 intended states \u5747\u987b\u6210\u529f\u6267\u884c\uff0c\u5e76\u5728\u7edf\u4e00\u3001\u65e0 method-specific allowance \u7684 headline pair policy \u4e0e\u7a7f\u900f\u9608\u503c\u4e0b\u65e0\u975e\u6cd5\u78b0\u649e\u3002\u4efb\u4f55\u672a\u6267\u884c\u72b6\u6001\u3001\u65e0\u6548\u533a\u95f4\u3001\u52a0\u8f7d\u5931\u8d25\u6216\u8d44\u6e90\u5931\u8d25\u5747\u4f7f\u8be5\u5173\u8282 fail closed\u3002\u8be5\u79bb\u6563\u6307\u6807\u4e0d\u8bc1\u660e\u8fde\u7eed\u914d\u7f6e\u7a7a\u95f4\u65e0\u78b0\u649e\u3002",
+    "limit_reachability": "bounded joint \u7684 lower \u548c upper endpoint \u90fd\u53ef\u6267\u884c\u3001transform \u6709\u9650\u4e14\u5728 headline pair policy \u4e0b\u65e0\u975e\u6cd5\u78b0\u649e\u65f6\u901a\u8fc7\uff1b\u62a5\u544a passed / J_bounded (percentage)\u3002continuous joint \u4e0d\u8fdb\u5165 J_bounded\uff0c\u5176\u5206\u6bcd\u5fc5\u987b\u663e\u5f0f\u62a5\u544a\uff1bendpoint \u672a\u6267\u884c\u6216\u4e0d\u53ef\u52a0\u8f7d\u8ba1\u4e3a\u5931\u8d25\u3002",
+    "normalized_clearance_p5": "\u5bf9\u6bcf\u4e2a\u5b9e\u9645\u6d4b\u5f97\u7684 intended state\uff0c\u53d6 headline pair policy \u4e0b\u6240\u6709 eligible non-adjacent collision-surface pair \u7684\u6700\u5c0f signed clearance\uff0c\u518d\u9664\u4ee5\u7edf\u4e00 D_visual\uff1b\u8d1f\u503c\u8868\u793a\u7a7f\u900f\uff0c\u96f6\u8868\u793a\u63a5\u89e6\u3002\u5148\u5bf9\u6bcf\u4e2a\u8d44\u4ea7\u53d6 state-level minimum \u7684 P5\uff0c\u6570\u636e\u96c6\u5355\u5143\u683c\u62a5\u544a\u8fd9\u4e9b asset-level P5 \u7684\u4e2d\u4f4d\u6570\uff0c\u5e76\u540c\u65f6\u5199\u51fa measured / intended state \u548c asset coverage\uff0c\u4ee5\u53ca COMPLETE \u6216 PARTIAL\u3002\u672a\u6d4b\u72b6\u6001\u4e0d\u4f2a\u9020\u8ddd\u79bb\uff0c\u4f46\u5bf9\u5e94 pass metrics \u4ecd fail closed\u3002"
+  },
+  "mode": "formal",
+  "operationalization": {
+    "claim_boundary": "\u5b98\u65b9 PhysX-Mobility URDF \u672a\u58f0\u660e\u4efb\u4f55 collision \u5143\u7d20\uff08\u51bb\u7ed3 Table 5 manifest xml_counts.collision_elements \u603b\u548c\u4e3a 0\uff09\uff1a\u6bcf\u4e2a\u8d44\u4ea7\u7684 eligible collision pair \u6570\u4e3a 0\uff0c\u5168\u90e8 collision-free \u7ed3\u679c\u5747\u4e3a\u7a7a\u5224\u5b9a\uff08vacuous\uff09\uff0c\u4e0d\u5f97\u89e3\u8bfb\u4e3a\u5df2\u9a8c\u8bc1\u7684\u673a\u68b0\u95f4\u9699\uff1bTable 5 receipt set \u5bf9\u8be5\u65b9\u6cd5\u9884\u6ce8\u518c strict_collision: N/E\uff08reason official_urdf_zero_collision_elements\uff09\uff0cTable 4 \u8fd0\u884c\u5df2\u8bb0\u5f55\u540c\u4e00 claim boundary\u3002",
+    "cohort_staging": "\u5b98\u65b9\u53d1\u5e03\u51e0\u4f55\u4e2d\u8d44\u6e90\u4f4d\u4e8e\u6241\u5e73 urdf/ \u76ee\u5f55\u7684 sibling \u76ee\u5f55 partseg/\uff1b\u6bcf\u4e2a\u8d44\u4ea7\u5148\u88ab staging \u4e3a\u590d\u523b\u53d1\u5e03\u51e0\u4f55\u7684\u81ea\u5305\u542b package\uff08\u9010\u5b57\u8282\u54c8\u5e0c\u6821\u9a8c\uff0c\u7ed1\u5b9a\u51bb\u7ed3 Table 5 manifest \u884c\u4e0e\u5b98\u65b9\u5f52\u6863\u5b57\u8282\u7ea7\u7ed1\u5b9a\uff09\uff0cGenesis \u4ece staging package \u52a0\u8f7d\uff1b\u5ba1\u8ba1\u524d\u540e\u91cd\u7b97 package binding\u3002",
+    "engine": "Genesis contact-penetration backend, engine protocol genesis_contact_penetration_v1, version-pinned by the frozen lam_supplementary GenesisTable4aAdapter: Genesis 1.3.1, trimesh 5.0.0, rtree 1.4.1, CPU backend, precision 64, one asset per fresh Genesis process.",
+    "existing_strict_collision_pass_source": "PhysX Table 4 asset_records strict_collision_pass (frozen run urdf_table4_physx_mobility_table5cohort_n800_20260819T143442Z; PyBullet result, reported per DoF bin only).",
+    "illegal_rule": "\u4ec5\u5f53 eligible source-URDF link pair \u7684 Genesis-reported penetration \u4e25\u683c\u5927\u4e8e 1e-6 m \u65f6\u5224\u4e3a\u975e\u6cd5\uff1b\u8868\u9762\u63a5\u89e6\u5141\u8bb8\u3002",
+    "j_bounded": "revolute/prismatic joints with finite declared lower < upper; continuous joints excluded and counted explicitly.",
+    "limit_reachability_endpoints": "endpoint = \u540c\u4e00 K=21 sweep \u7684 sample_index 0\uff08lower\uff09\u4e0e 20\uff08upper\uff09\uff1b'\u53ef\u6267\u884c\u3001transform \u6709\u9650' operationalize \u4e3a\u8be5\u72b6\u6001\u6210\u529f\u6267\u884c\u3001q readback \u6709\u9650\u4e14\u89c2\u6d4b status COMPLETE\uff08Genesis FK/\u63a5\u89e6\u7ba1\u7ebf\u6709\u9650\uff09\u3002",
+    "normalized_clearance_p5": "N/E under this oracle: the frozen adapter sets clearance_status N/E because Genesis contact penetration has no signed clearance for separated pairs; no independent exact-distance backend is registered for this run. measured/intended state coverage is still reported.",
+    "pair_policy": "Headline pair policy = eligible geom pairs on distinct source links excluding the URDF direct parent-child graph (exclude_direct_parent_child); self / neutral / adjacent collision candidate generation enabled; Genesis default filtering or visual fallback \u4e0d\u5f97\u6539\u53d8 pair policy; eligible pairs must be present in the Genesis valid-pair table or the asset fails closed.",
+    "percentile_policy": "median/P90 of per-asset safe-DoF counts with linear interpolation (numpy-style), over all 800 assets including zero-DoF failed assets.",
+    "state_detection": "\u6bcf\u4e2a\u51bb\u7ed3 q-state \u53ea\u505a direct kinematic detection\uff08set_dofs_position + detect_collision + get_contacts\uff0c\u4e0d scene.step\uff09\uff1bq readback \u5fc5\u987b\u5728 1e-9 \u5bb9\u5dee\u5185\u3002",
+    "state_plan": "\u4e25\u683c\u6cbf\u7528\u65e2\u6709 PhysX Table 4 \u7684\u51bb\u7ed3\u5355\u5173\u8282 sweep\uff1a\u6bcf\u5173\u8282 K=21 \u4e2a\u72b6\u6001\uff0c\u53d6\u503c lower + i*(upper-lower)/20\uff0ci=0..20\uff08\u542b\u4e24\u7aef endpoint\uff09\uff1bbounded joint \u4f7f\u7528\u58f0\u660e lower/upper\uff08\u5bbd\u5ea6\u987b > 1e-12\uff09\uff0ccontinuous joint \u4f7f\u7528\u51bb\u7ed3\u533a\u95f4 [-pi, pi]\uff1b\u5176\u4f59\u5173\u8282\u4fdd\u6301 q=0\u3002\u6bcf\u4e2a\u72b6\u6001\u7684\u5168 DoF \u5411\u91cf\u5148\u6309 Genesis \u5185\u90e8 DoF \u987a\u5e8f\u8bfb\u51fa\uff0c\u518d\u91cd\u6392\u4e3a\u51bb\u7ed3 manifest \u5173\u8282\u987a\u5e8f\u540e\u53d6 canonical SHA256\uff0c\u4e0e\u65e2\u6709 PhysX Table 4 state_records.joint_values_sha256 \u9010\u9879\u6838\u5bf9\uff1bPhysX Table 4 \u4e2d\u672a\u6267\u884c\u7684 single-joint \u72b6\u6001\uff0812 \u4e2a getJointState \u5931\u8d25\u8d44\u4ea7\uff09\u65e0\u53c2\u7167\uff0c\u4ec5\u6309\u51bb\u7ed3\u89c4\u5219\u91cd\u751f\u6210\u5e76\u8ba1\u5165 no_reference\u3002",
+    "table3_joint_pass_source": "PhysX Table 3 asset_records joints[].joint_level_pass (frozen run urdf_table3_physx_mobility_table5cohort_n800_20260819T102939Z)."
+  },
+  "protocol_document_sha256": "7cb5b8da1524ddf2c4dfa28423394ab3968aac1240902c50a91bd40f6707aa32",
+  "protocol_id": "table4a_physx_mobility_table5cohort_n800_v1",
+  "runner_identity": {
+    "lam_adapter_module": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_lam_supplementary_v1.py",
+    "lam_adapter_module_sha256": "c43f3047553e4fbc9dfeefcbb7308bc42df8c6f0aab24f2a85f412c5efe12df5",
+    "runner_script": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_table4a_urdf_physx_mobility.py",
+    "runner_script_sha256": "918c87055faa0f7e60fa9ba7e4530bbdc14b9267a71494432ac562a965e257db",
+    "static_module_sha256": "ac77a014a513cd7d0fa675e7aa46dcaf14433dbb7f01a47895c0010ea1bc3a73"
+  }
+}

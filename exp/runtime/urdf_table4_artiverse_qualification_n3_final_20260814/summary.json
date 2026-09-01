@@ -1,0 +1,245 @@
+{
+  "category_macro": {
+    "collision_free_range": 0.6666666666666666,
+    "multi_joint_sobol_cf": 0.6666666666666666,
+    "rest_all_pair_cf": 0.0,
+    "rest_non_adjacent_cf": 0.6666666666666666,
+    "single_joint_sweep_cf": 0.6666666666666666,
+    "strict_collision_pass": 0.6666666666666666
+  },
+  "category_results": {
+    "kitchen_pot": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 21,
+        "passed_states": 21,
+        "rate": 1.0
+      },
+      "collision_state_rate": {
+        "collision_states": 0,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 86,
+        "executed_states": 86,
+        "observed_collision_rate_executed": 0.0,
+        "observed_collision_states": 0,
+        "rate": 0.0,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 1,
+        "fully_measured_assets": 1,
+        "maximum_observed_normalized": 0.013991614753260004,
+        "normalization": "PyBullet q=0 collision-shape union AABB diagonal",
+        "observed_assets": 1,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 1,
+        "passed": 1,
+        "rate": 1.0
+      },
+      "rest_all_pair_cf": {
+        "denominator": 1,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 1,
+        "passed": 1,
+        "rate": 1.0
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 1,
+        "passed": 1,
+        "rate": 1.0
+      },
+      "strict_collision_pass": {
+        "denominator": 1,
+        "passed": 1,
+        "rate": 1.0
+      }
+    },
+    "nightstand": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 21,
+        "passed_states": 21,
+        "rate": 1.0
+      },
+      "collision_state_rate": {
+        "collision_states": 0,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 86,
+        "executed_states": 86,
+        "observed_collision_rate_executed": 0.0,
+        "observed_collision_states": 0,
+        "rate": 0.0,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 1,
+        "fully_measured_assets": 1,
+        "maximum_observed_normalized": 0.15763956305371896,
+        "normalization": "PyBullet q=0 collision-shape union AABB diagonal",
+        "observed_assets": 1,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 1,
+        "passed": 1,
+        "rate": 1.0
+      },
+      "rest_all_pair_cf": {
+        "denominator": 1,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 1,
+        "passed": 1,
+        "rate": 1.0
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 1,
+        "passed": 1,
+        "rate": 1.0
+      },
+      "strict_collision_pass": {
+        "denominator": 1,
+        "passed": 1,
+        "rate": 1.0
+      }
+    },
+    "sideboard": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 63,
+        "passed_states": 0,
+        "rate": 0.0
+      },
+      "collision_state_rate": {
+        "collision_states": 68,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 128,
+        "executed_states": 128,
+        "observed_collision_rate_executed": 0.53125,
+        "observed_collision_states": 68,
+        "rate": 0.53125,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 1,
+        "fully_measured_assets": 1,
+        "maximum_observed_normalized": 0.014459078670262615,
+        "normalization": "PyBullet q=0 collision-shape union AABB diagonal",
+        "observed_assets": 1,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 1,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_all_pair_cf": {
+        "denominator": 1,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 1,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 1,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "strict_collision_pass": {
+        "denominator": 1,
+        "passed": 0,
+        "rate": 0.0
+      }
+    }
+  },
+  "claim_boundary": {
+    "continuous_collision_detection": "not_run",
+    "full_release_result": false,
+    "physical_dynamics_validity": "not_evaluated",
+    "semantic_joint_correctness": "not_evaluated",
+    "shared_category_balanced_result": false
+  },
+  "cohort": {
+    "category_count": 3,
+    "child_timeouts": 0,
+    "label": "Artiverse Table 1 qualification N=3",
+    "load_success": 3,
+    "measurement_complete": 3,
+    "selected": 3
+  },
+  "metrics": {
+    "aor": {
+      "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+      "status": "N/E"
+    },
+    "collision_free_range": {
+      "denominator": 105,
+      "passed_states": 42,
+      "rate": 0.4
+    },
+    "collision_state_rate": {
+      "collision_states": 68,
+      "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+      "denominator": 300,
+      "executed_states": 300,
+      "observed_collision_rate_executed": 0.22666666666666666,
+      "observed_collision_states": 68,
+      "rate": 0.22666666666666666,
+      "unexecuted_states": 0
+    },
+    "max_penetration": {
+      "denominator": 3,
+      "fully_measured_assets": 3,
+      "maximum_observed_normalized": 0.15763956305371896,
+      "normalization": "PyBullet q=0 collision-shape union AABB diagonal",
+      "observed_assets": 3,
+      "status": "COMPLETE"
+    },
+    "multi_joint_sobol_cf": {
+      "denominator": 3,
+      "passed": 2,
+      "rate": 0.6666666666666666
+    },
+    "rest_all_pair_cf": {
+      "denominator": 3,
+      "passed": 0,
+      "rate": 0.0
+    },
+    "rest_non_adjacent_cf": {
+      "denominator": 3,
+      "passed": 2,
+      "rate": 0.6666666666666666
+    },
+    "single_joint_sweep_cf": {
+      "denominator": 3,
+      "passed": 2,
+      "rate": 0.6666666666666666
+    },
+    "strict_collision_pass": {
+      "denominator": 3,
+      "passed": 2,
+      "rate": 0.6666666666666666
+    }
+  },
+  "protocol_id": "urdf_sim_ready_table4_artiverse_qualification_v1",
+  "status": "COMPLETE"
+}

@@ -1,0 +1,580 @@
+{
+  "classification": "NON_FORMAL_SMOKE",
+  "created_at": "2026-08-14T07:50:13.301042Z",
+  "dataset": "LAM released outputs",
+  "evaluation": {
+    "asset_timeout_seconds": 120.0,
+    "category_macro_policy": "unweighted mean of per-category asset rates; all frozen assets and failures retained",
+    "command": [
+      "/mnt/zsn/lyb/arti-skill/exp/scripts/run_table2_urdf_articraft.py",
+      "--mode",
+      "smoke",
+      "--dataset",
+      "LAM released outputs",
+      "--source-root",
+      "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/released_outputs",
+      "--n",
+      "2",
+      "--seed",
+      "20260813",
+      "--workers",
+      "1",
+      "--asset-timeout-seconds",
+      "120.0",
+      "--cohort-manifest",
+      "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table3_lam_n800_seed20260813_20260814T022400Z_v3/asset_records.jsonl"
+    ],
+    "config": {
+      "asset_timeout_seconds": 120,
+      "axis_epsilon": 1e-12,
+      "axis_policy": "Euclidean norm must be greater than AXIS_EPSILON",
+      "bound_dependencies": [
+        "numpy",
+        "urdfpy",
+        "trimesh",
+        "Pillow",
+        "networkx",
+        "pycollada",
+        "pygltflib",
+        "lxml",
+        "six",
+        "scipy"
+      ],
+      "child_process": {
+        "interpreter": "sys.executable fresh interpreter",
+        "job_protocol": "per-job JSON input and atomic per-job JSON result in output-owned scratch",
+        "start_new_session": true,
+        "termination": "SIGTERM owned process group, grace 0.2 seconds, then SIGKILL",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        }
+      },
+      "denominator_policy": "all frozen selected assets, including failures and exceptions",
+      "inertia_dtype": "numpy.float64",
+      "inertia_policy": "eigvalsh(full symmetric float64 tensor); tau=INERTIA_RELATIVE_TOLERANCE*largest_eigenvalue; smallest>tau; largest<=sum(two_smaller)+tau",
+      "inertia_relative_tolerance": 1e-12,
+      "metrics": [
+        "parse_rate",
+        "resource_resolution",
+        "finite_fields",
+        "valid_tree",
+        "valid_joint_spec",
+        "collision_coverage",
+        "inertial_coverage",
+        "inertia_validity",
+        "strict_urdf_pass"
+      ],
+      "parse_rate_scope": "urdfpy 0.0.22 full standard-parser load, including eagerly loaded referenced resources; parse_rate and resource_resolution are not independent",
+      "resource_validation_scope": "URDF mesh/texture, OBJ-MTL-texture, glTF external buffers/images, DAE image closure; trimesh structured scene loading validates GLB/glTF containers and embedded payloads, Pillow validates external raster images",
+      "schema_version": "1.0.0",
+      "selection_algorithm": "existing Table 3 manifest records by selection_rank; join completion JSONL by asset_key; no resampling/reselection",
+      "source_binding": "all regular package files hashed before freeze and before/after audit",
+      "standard_parser": {
+        "package": "urdfpy",
+        "required_version": "0.0.22"
+      },
+      "workers": 4
+    },
+    "config_sha256": "f1ff60ba48a8a3df90a2ef1c420b9ada7c0e8b5c7c5e6bcc6839516fdc204e67",
+    "denominator_policy": "all frozen selected assets, including errors",
+    "environment": {
+      "dependencies": {
+        "Pillow": "12.2.0",
+        "lxml": "6.1.1",
+        "networkx": "3.6.1",
+        "numpy": "2.4.4",
+        "pycollada": "0.6",
+        "pygltflib": "1.16.5",
+        "scipy": "1.17.1",
+        "six": "1.17.0",
+        "trimesh": "4.12.2",
+        "urdfpy": "0.0.22"
+      },
+      "executable": "/mnt/zsn/lyb/arti-skill/arti-template/.venv/bin/python",
+      "gpu_required": false,
+      "platform": "Linux-5.10.134-19.103.al8.x86_64-x86_64-with-glibc2.39",
+      "python": "3.12.3",
+      "python_implementation": "CPython",
+      "standard_parser": {
+        "numpy_compatibility": {
+          "activation": "only when the standard parser is enabled and numpy.float is absent",
+          "aliases": {
+            "numpy.float": "builtins.float"
+          },
+          "parser_errors_suppressed": false,
+          "scope": "synchronized URDF.load call only; alias is removed immediately after parsing",
+          "site_packages_modified": false
+        },
+        "observed_version": "0.0.22",
+        "package": "urdfpy",
+        "required_version": "0.0.22"
+      },
+      "standard_parser_enabled": true,
+      "worker_count": 1
+    },
+    "environment_file_sha256": "e29c8da456acc5674846ae8a2243af3df70c866ea07e5ff06323fe8892427dba",
+    "environment_sha256": "633d6a765901bc14e8ae31e0f88eece2a83b3c0bcb2e41b0bcc65ff43d15a5d0",
+    "evaluator_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_table2_urdf_articraft.py",
+    "evaluator_sha256": "296f2af6fa73721a586a3e4b60459533b4656ed4068d06935828aab61c074d75",
+    "gpu_required": false,
+    "metric_names": [
+      "parse_rate",
+      "resource_resolution",
+      "finite_fields",
+      "valid_tree",
+      "valid_joint_spec",
+      "collision_coverage",
+      "inertial_coverage",
+      "inertia_validity",
+      "strict_urdf_pass"
+    ],
+    "numpy_compatibility": {
+      "activation": "only when the standard parser is enabled and numpy.float is absent",
+      "aliases": {
+        "numpy.float": "builtins.float"
+      },
+      "parser_errors_suppressed": false,
+      "scope": "synchronized URDF.load call only; alias is removed immediately after parsing",
+      "site_packages_modified": false
+    },
+    "protocol_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table2_lam_profile_smoke_n2_20260814_v2/protocol_snapshot.md",
+    "protocol_sha256": "3d1983d503b1ea0a848e0d81f07b88cc9047d5d2d0bbef9ca8132c0983299043",
+    "protocol_source_path": "/mnt/zsn/lyb/arti-skill/exp/URDF-Sim-Ready-Automatic-Evaluation.md",
+    "protocol_source_sha256_at_freeze": "3d1983d503b1ea0a848e0d81f07b88cc9047d5d2d0bbef9ca8132c0983299043",
+    "standard_parser": "urdfpy",
+    "standard_parser_version": "0.0.22",
+    "workers": 1
+  },
+  "manifest_content_sha256": "d8d6d8c8708d6c28be03c427d3b55d1b1445ebecdd3701e1a47b4d674532618a",
+  "mode": "smoke",
+  "records": [
+    {
+      "asset_id": "viable:objects/adjustable_wrench/adjustable_wrench_027",
+      "asset_key": "viable:objects/adjustable_wrench/adjustable_wrench_027",
+      "category": "adjustable_wrench",
+      "declared_joint_count_hint": 2,
+      "model_urdf_sha256": "da90feb7c1bfce9ab4941dae9b33ac3e3a37c51e47afb215eb84f0c830b76e48",
+      "object_release_id": "adjustable_wrench_027",
+      "package": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/released_outputs/objects/adjustable_wrench/adjustable_wrench_027",
+      "package_binding": {
+        "content_manifest_sha256": "f3aa50b16496b1cb7a847ce4bad8b1c4ba4073373bd980f512df5b5c1f1ffb94",
+        "file_count": 16,
+        "files": [
+          {
+            "bytes": 1779,
+            "path": "articulation.json",
+            "sha256": "69f5017463def6201e22bff3b05f8eb0c6828e7d6b2875b98a85e4b5f34539b3"
+          },
+          {
+            "bytes": 30405,
+            "path": "combined_assembly.obj",
+            "sha256": "bbe1ef449b0239f7d1eedf367faafbb2d1bcd3992dfae8df7e31e1048bb1686d"
+          },
+          {
+            "bytes": 3895,
+            "path": "export.js",
+            "sha256": "948e956a716443e2c26726489faeb7d316cec243365464b1ade22fdbec5de5a8"
+          },
+          {
+            "bytes": 917,
+            "path": "generated.urdf",
+            "sha256": "da90feb7c1bfce9ab4941dae9b33ac3e3a37c51e47afb215eb84f0c830b76e48"
+          },
+          {
+            "bytes": 1116,
+            "path": "generation_config.yaml",
+            "sha256": "afa9aba1cc55fdd46b2fa887972c7aadce5d47bda4ffbfe8bafb44e5c360f33d"
+          },
+          {
+            "bytes": 5274,
+            "path": "workflow.json",
+            "sha256": "2d3d935145079c6aab5037d377922ad3d0afa91e296d5b7b05c32c956b33b977"
+          },
+          {
+            "bytes": 1427,
+            "path": "obj_parts/fixedJawTop.obj",
+            "sha256": "f476c9d8aab6f7d825192c3971081368edda164067b83a9f1d41c00892cabd1c"
+          },
+          {
+            "bytes": 1804,
+            "path": "obj_parts/fixedJawVertical.obj",
+            "sha256": "f5f15ef9152b5a0704b8f3f0e35707937754a1b23facc25741252e36cf1ff6a2"
+          },
+          {
+            "bytes": 1794,
+            "path": "obj_parts/handle.obj",
+            "sha256": "ed41ff46524d933bb0ff0ebf6b08d125cb2fed923823fa831fb97597127ce843"
+          },
+          {
+            "bytes": 993,
+            "path": "obj_parts/headBlock.obj",
+            "sha256": "8881f7b28bf9f184f4526a0db54f3ff2f6d836390b9c88a94fff5de032a4dc17"
+          },
+          {
+            "bytes": 1441,
+            "path": "obj_parts/movableJawTop.obj",
+            "sha256": "da8b2f0c5e909bc234db855910130643adc913288d09f6ddb23f9502ad8b66cd"
+          },
+          {
+            "bytes": 1842,
+            "path": "obj_parts/movableJawVertical.obj",
+            "sha256": "5f2d5d1fc3de221a3c9cbc7a46f03703185cd41aefd65cd1f13bc41a434f0059"
+          },
+          {
+            "bytes": 25887,
+            "path": "obj_parts/screwWheel.obj",
+            "sha256": "edc5db1494c777afe24ac5610b84f97c34259d43544e4d3ffdb402dc0c6f340a"
+          },
+          {
+            "bytes": 8005,
+            "path": "obj_parts/group_output/body.obj",
+            "sha256": "b4d3d4335836c8d0be25014abe421d6ab397767808efa8eec967cddef1693ad4"
+          },
+          {
+            "bytes": 4084,
+            "path": "obj_parts/group_output/movableJaw.obj",
+            "sha256": "62284a730e2511871ae19099bece683242f6ff0cc58379ea9517e419d5db70a5"
+          },
+          {
+            "bytes": 46906,
+            "path": "obj_parts/group_output/wormScrew.obj",
+            "sha256": "4640cebee0dcd8146bbbca1d9036a6833b4c7f5421e0221ea483e4325453933d"
+          }
+        ],
+        "total_bytes": 137569
+      },
+      "primary_urdf_relative_path": "generated.urdf",
+      "primary_urdf_sha256": "da90feb7c1bfce9ab4941dae9b33ac3e3a37c51e47afb215eb84f0c830b76e48",
+      "rel_path": "objects/adjustable_wrench/adjustable_wrench_027",
+      "release_order": 760,
+      "selection_hash": "fd8c16d5491f71eef38dabecdbf4b195ce318616c86f0e5b9ac97631008f4635",
+      "selection_index": 0,
+      "selection_rank": 1,
+      "table3_completion_index": 1,
+      "table3_error": null,
+      "table3_manifest_content_sha256": "f8f7fe4da5634d4f806e793c0da919689eab25be1ce0bbed7e2232f3453d15c2",
+      "table3_manifest_record_sha256": "be6dd54e8862de2a3eda364fe892a58ef84deabf12aa267809d5e6a9a8378491",
+      "table3_parse_success": true,
+      "table3_record_sha256": "8e9a6ab6b41fe284529c4ac19365825e3664d033e93476e1245eb42f27004a61",
+      "table3_status": "completed",
+      "table3_strict_kinematic_pass": true,
+      "table3_tree_valid": true,
+      "tier": "viable"
+    },
+    {
+      "asset_id": "viable:objects/cabinet_with_two_drawers/cabinet_with_two_drawers_007",
+      "asset_key": "viable:objects/cabinet_with_two_drawers/cabinet_with_two_drawers_007",
+      "category": "cabinet_with_two_drawers",
+      "declared_joint_count_hint": 4,
+      "model_urdf_sha256": "369d1307960d45072275abe66d04718014aa3aabb823476652e259c8ca0b2ee0",
+      "object_release_id": "cabinet_with_two_drawers_007",
+      "package": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/released_outputs/objects/cabinet_with_two_drawers/cabinet_with_two_drawers_007",
+      "package_binding": {
+        "content_manifest_sha256": "7c88c3ae2893555db5b705e308c2a2f77c9526aea02210d9da82d3b532f97e7c",
+        "file_count": 34,
+        "files": [
+          {
+            "bytes": 2848,
+            "path": "articulation.json",
+            "sha256": "6e6673030c416edbb3d9ff4fbfc1037082b2a955488fb8b5b0d388c430b2215e"
+          },
+          {
+            "bytes": 46681,
+            "path": "combined_assembly.obj",
+            "sha256": "ef197caae9973d8273f9c5cc10a97292e84883feb4fa2503bc3b0a004170a337"
+          },
+          {
+            "bytes": 12698,
+            "path": "export.js",
+            "sha256": "06cd142b0fc49f71edf2a9f4f48924c846fe76e434ca45ccdc4bd62a0abe0402"
+          },
+          {
+            "bytes": 2902,
+            "path": "generated.urdf",
+            "sha256": "369d1307960d45072275abe66d04718014aa3aabb823476652e259c8ca0b2ee0"
+          },
+          {
+            "bytes": 1283,
+            "path": "generation_config.yaml",
+            "sha256": "1e795a85e1973f8e4725b91275ba6b71604d92b9d3e661478708806f1811c60e"
+          },
+          {
+            "bytes": 78,
+            "path": "input_caption.txt",
+            "sha256": "9770b328dd060c3f8f9ebbd3bed6adeb6dfe092208697665bc627175aef62c1c"
+          },
+          {
+            "bytes": 8111,
+            "path": "links.json",
+            "sha256": "a69190eade33f626ac98bf9cf2b600b02b63d925b9901910da6a34248537d5d5"
+          },
+          {
+            "bytes": 18076,
+            "path": "log.txt",
+            "sha256": "008f465489470820dbc631ecbb2fc34136f012b1f219fe5d26f35d9d92b14b23"
+          },
+          {
+            "bytes": 21520,
+            "path": "workflow.json",
+            "sha256": "d834e4bf429a1e15b388b491dd3347ed53f73562034af38e39f12efa47de3a10"
+          },
+          {
+            "bytes": 2127,
+            "path": "obj_parts/body_back_panel.obj",
+            "sha256": "602fead31acdc5acaba45549c3e1cca8090fe080fa9255378a821c563d6fc872"
+          },
+          {
+            "bytes": 1469,
+            "path": "obj_parts/body_bottom_panel.obj",
+            "sha256": "2cce7771a9097ed79b10e2aeb62e41a7ea85931a7c051e931e1a8b4cdada9112"
+          },
+          {
+            "bytes": 2123,
+            "path": "obj_parts/body_horizontal_divider.obj",
+            "sha256": "79972ceb2a321a82782f3c74f5fa9ee47e4e9fa566f50a9bbe6bb3400f72f94c"
+          },
+          {
+            "bytes": 1803,
+            "path": "obj_parts/body_left_panel.obj",
+            "sha256": "22f63c702c211054d466f174447b4a93556e4fde0d14f3a6ab129ad1b4a8d3b2"
+          },
+          {
+            "bytes": 1780,
+            "path": "obj_parts/body_right_panel.obj",
+            "sha256": "784a23ec380bd03f9a1bd863132cef47fbe045562f9020ee74b43292db746097"
+          },
+          {
+            "bytes": 1442,
+            "path": "obj_parts/body_top_panel.obj",
+            "sha256": "226f0b97544a6486a889a37bffdeda7284c010acec9563658627ea757935e687"
+          },
+          {
+            "bytes": 1996,
+            "path": "obj_parts/body_vertical_drawer_divider.obj",
+            "sha256": "ae0ec6a21d88be956b20c20cfed337385cd1cddf8e109d2e287bfc4494f56eb0"
+          },
+          {
+            "bytes": 1779,
+            "path": "obj_parts/door_panel_mesh.obj",
+            "sha256": "7a192da2287b4dca11182d851b9f49037f1064760a30ccb865727b5f6302e1fb"
+          },
+          {
+            "bytes": 2141,
+            "path": "obj_parts/drawer_back_panel.obj",
+            "sha256": "aef4f92a1dd9dfea79bd3bd5adf095a9f7b81460f36babe8970ed2da5b05f3d5"
+          },
+          {
+            "bytes": 2143,
+            "path": "obj_parts/drawer_bottom_panel.obj",
+            "sha256": "5a2bd1399dfbccacc5c25bed315ebe2a966ebeca6117c7728cc51d9168d3447b"
+          },
+          {
+            "bytes": 1938,
+            "path": "obj_parts/drawer_front_panel.obj",
+            "sha256": "0104902b15979a3808d9ccf1c41216500fbccd25bce5bf1ba2c121bc6bd7f2c9"
+          },
+          {
+            "bytes": 2129,
+            "path": "obj_parts/drawer_left_panel.obj",
+            "sha256": "73a3dc54cc1b039743382c5454bd71698feb2edd9e4a41ba930bc5a51616a903"
+          },
+          {
+            "bytes": 2142,
+            "path": "obj_parts/drawer_right_panel.obj",
+            "sha256": "fe53b6a7f6cfa44ea03bb9fea36f8ea2db22c49a852b5bcfa921af8666eced8a"
+          },
+          {
+            "bytes": 2123,
+            "path": "obj_parts/handle_mesh.obj",
+            "sha256": "cb3ba3a06d1546d8241a7aa559b035f1afe727ec07aa642043d8cd606821ca77"
+          },
+          {
+            "bytes": 4969,
+            "path": "obj_parts/hinge1_mesh.obj",
+            "sha256": "16dbb1aef9a7df71ece4fcf190328abeb666b04060aea0a301e3da0cc13fafac"
+          },
+          {
+            "bytes": 4891,
+            "path": "obj_parts/hinge2_mesh.obj",
+            "sha256": "fcd55e17b9bb6ade162746511e222bc57ff8a362ad894546282984192c9a7adb"
+          },
+          {
+            "bytes": 2124,
+            "path": "obj_parts/rail_mesh_L1.obj",
+            "sha256": "918b24e8858dfbb899a4a470ca3b98a9dd3098fa470202736375b1feab3b019d"
+          },
+          {
+            "bytes": 2148,
+            "path": "obj_parts/rail_mesh_L2.obj",
+            "sha256": "3e4815d0a335c6faa86e28ddb048c9301d9b95dbe418e3a311a9d7f2038cd3e2"
+          },
+          {
+            "bytes": 2172,
+            "path": "obj_parts/rail_mesh_R1.obj",
+            "sha256": "48b57721c00d239aedf021e07f4053c8493c767aef597168d72c48db2f580e96"
+          },
+          {
+            "bytes": 2100,
+            "path": "obj_parts/rail_mesh_R2.obj",
+            "sha256": "5603cfd6ac65a0bf503aa823a55ed6ce2ea4c75e7817fae8a9eb783cd497c9c0"
+          },
+          {
+            "bytes": 25985,
+            "path": "obj_parts/group_output/bottom_left_door.obj",
+            "sha256": "f5a1e410e271ccd70baa2407c7b56d8a5917bf062f43ac4a2e0c9bf48b9ecd88"
+          },
+          {
+            "bytes": 25722,
+            "path": "obj_parts/group_output/bottom_right_door.obj",
+            "sha256": "4bbb0c65792e5701c4c4933367bb7fa04ece649c386cae24b5db2d3fa61e7e25"
+          },
+          {
+            "bytes": 29097,
+            "path": "obj_parts/group_output/cabinet_body.obj",
+            "sha256": "4399d8e7e8ed3e26d7d3e4384d672c0ba6fb0cb630890bfa42a4a281481303f3"
+          },
+          {
+            "bytes": 17369,
+            "path": "obj_parts/group_output/upper_drawer_1.obj",
+            "sha256": "32afab07d90e1b935790dddfce9789a0bcd4cbe6a22a86fd37b75a782a3ab54b"
+          },
+          {
+            "bytes": 17153,
+            "path": "obj_parts/group_output/upper_drawer_2.obj",
+            "sha256": "d41e74193499b8c0825ed3d80b9319456d43725709aec55e4c5801edd9a1ee18"
+          }
+        ],
+        "total_bytes": 275062
+      },
+      "primary_urdf_relative_path": "generated.urdf",
+      "primary_urdf_sha256": "369d1307960d45072275abe66d04718014aa3aabb823476652e259c8ca0b2ee0",
+      "rel_path": "objects/cabinet_with_two_drawers/cabinet_with_two_drawers_007",
+      "release_order": 1138,
+      "selection_hash": "a6fe2db4408604e1e63860e5aff4ea0a9ac5b8c8ce2584d165cc9d98b5c6102b",
+      "selection_index": 1,
+      "selection_rank": 2,
+      "table3_completion_index": 2,
+      "table3_error": null,
+      "table3_manifest_content_sha256": "f8f7fe4da5634d4f806e793c0da919689eab25be1ce0bbed7e2232f3453d15c2",
+      "table3_manifest_record_sha256": "c983be9927fe04abdf5b8aa3f883905043ebfc7817b20d9b128b503cbaebc6bb",
+      "table3_parse_success": true,
+      "table3_record_sha256": "d43f40a387f2f5c08290ec35c253e150008c448f3a316f253126e6ee54befaf1",
+      "table3_status": "completed",
+      "table3_strict_kinematic_pass": true,
+      "table3_tree_valid": true,
+      "tier": "viable"
+    }
+  ],
+  "schema_version": "1.1.0",
+  "selection": {
+    "algorithm": "existing Table 3 manifest records by selection_rank; join completion JSONL by asset_key; no resampling/reselection",
+    "completion_order_used_for_selection": false,
+    "limit": null,
+    "n_eval": 2,
+    "outcome_based_reselection": false,
+    "quality_label_blind": true,
+    "requested_n": 2,
+    "seed": 20260813,
+    "selected_asset_ids_sha256": "e337655a108d8f54d6323d3deaf54697ba0e5cad3ac68755496f20d2baebf807",
+    "selected_failures_retained_without_replacement": true,
+    "selection_order_preserved": true,
+    "source_algorithm": "random.Random(seed).sample(sorted(asset_key), n)",
+    "source_selected_asset_keys_sha256": "643aa5b76ac61f57dd943bee26444a3525c01201a8dff3443763a7fd8d8267d3"
+  },
+  "source": {
+    "archives": {
+      "broken.tar.gz": {
+        "bytes": 199627935,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/broken.tar.gz",
+        "sha256": "ef0f6e8506e0432febd5ccc4159c6cbf66a9c5cdadd3bdbcd521478e4c0fda3a"
+      },
+      "loads_only.tar.gz": {
+        "bytes": 194746559,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/loads_only.tar.gz",
+        "sha256": "e616dc455450ca0f8ea1c76955929f340b75b9fa51b974327e160890620f9a9e"
+      },
+      "viable.tar.gz": {
+        "bytes": 1185271461,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/viable.tar.gz",
+        "sha256": "a582ef0aa0f3073749adcc73d289a12200e500c1a5762a4ee1530eefc2c4920d"
+      }
+    },
+    "candidate_pool_sha256": "81304d094da5b8411cbb7e0fb3f911b41a934cb3733766cfda4c2f8364f780fd",
+    "cohort_records_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table3_lam_n800_seed20260813_20260814T022400Z_v3/asset_records.jsonl",
+    "cohort_records_sha256": "7ef1c38d61bc780e41f62c7dd359e66f0bfeabe655c7453c93e2ea9830122d94",
+    "dataset_api_path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/dataset_api.json",
+    "dataset_api_sha256": "4ef6d64310968fab9e280ca19545ef0647e6c5e2eb81dbd681b5ca20fbbc727d",
+    "dataset_inventory": {
+      "archives": [
+        {
+          "bytes": 1185271461,
+          "name": "viable.tar.gz",
+          "sha256": "a582ef0aa0f3073749adcc73d289a12200e500c1a5762a4ee1530eefc2c4920d"
+        },
+        {
+          "bytes": 194746559,
+          "name": "loads_only.tar.gz",
+          "sha256": "e616dc455450ca0f8ea1c76955929f340b75b9fa51b974327e160890620f9a9e"
+        },
+        {
+          "bytes": 199627935,
+          "name": "broken.tar.gz",
+          "sha256": "ef0f6e8506e0432febd5ccc4159c6cbf66a9c5cdadd3bdbcd521478e4c0fda3a"
+        }
+      ],
+      "canonical_path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code",
+      "code_checkout": {
+        "commit": "0b3a87beb8c35273a5acf8681221791aff746d8e",
+        "path": "/mnt/zsn/lyb/arti-skill/exp/baselines/LAM-official",
+        "remote": "https://github.com/gaoypeng/LAM.git"
+      },
+      "manifest": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/manifest.csv",
+      "name": "LAM released outputs",
+      "released_outputs_root": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/released_outputs",
+      "source": {
+        "license": "mit",
+        "repo_id": "YipengGao/Articulated-Object-Code",
+        "revision": "28cec4f5be7e34fd4d586879ecfcb67f7c5e4cc0",
+        "type": "huggingface_dataset"
+      },
+      "status": "VERIFIED_RELEASE_COMPLETE",
+      "verification": {
+        "archive_sha256_failures": 0,
+        "cross_archive_path_collisions": 0,
+        "manifest_objects": 3217,
+        "manifest_urdf_files_present": 3217,
+        "manifest_urdf_xml_parse_failures": 0,
+        "missing_relative_mesh_references": {
+          "broken": 354,
+          "broken_objects_affected": 81,
+          "loads_only": 0,
+          "viable": 0
+        },
+        "recursive_generated_urdf_files_including_pipeline_copies": 4294,
+        "tier_counts": {
+          "broken": 385,
+          "loads_only": 299,
+          "viable": 2533
+        }
+      }
+    },
+    "dataset_inventory_path": "/mnt/zsn/lyb/arti-skill/exp/dataset_inventory.json",
+    "dataset_inventory_sha256": "e281119f870bb6bae9599c3edc02de0a42a257e0d433335361d4a774592c1b5a",
+    "release_asset_count": 3217,
+    "release_manifest_path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/manifest.csv",
+    "release_manifest_sha256": "70216593ec02b71d596e456498ff9863ad0f8e519d5d27d2cf4f58792d412412",
+    "root": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/released_outputs",
+    "table3_manifest_content_sha256": "f8f7fe4da5634d4f806e793c0da919689eab25be1ce0bbed7e2232f3453d15c2",
+    "table3_manifest_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table3_lam_n800_seed20260813_20260814T022400Z_v3/manifest.json",
+    "table3_manifest_sha256": "7e16683bfe4e4f37d7972082d8512713c1d8d1ae4ce142b75bf7dfb0509b9951",
+    "tier_counts": {
+      "broken": 385,
+      "loads_only": 299,
+      "viable": 2533
+    },
+    "upstream_revision": "28cec4f5be7e34fd4d586879ecfcb67f7c5e4cc0"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "classification": "FORMAL",
+  "code_identity": {
+    "runner_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_s1_partnet_mobility.py",
+    "runner_sha256": "a095aa4c6e09e4c4b2790110ce51b171b6df41c6622cfa76ba95d822bd88b3a3",
+    "static_atoms_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_static.py",
+    "static_atoms_sha256": "4701415dad8a5c0a434c16887979bcb70c250ba0b25772014e8db73789098e5f",
+    "verifier_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/verify_s1_partnet_mobility.py",
+    "verifier_sha256": "2b13007b5095f5571ec8eba32ea5ae553d495f5fb6d1efc8f4b68a8cb9ce59ed"
+  },
+  "dataset": "PartNet-Mobility",
+  "intended_n_eval": 800,
+  "limit": null,
+  "n_eval": 800,
+  "pair_policy": {
+    "eligible_pairs": "distinct source-URDF links with collision geometry",
+    "method_specific_allowance": "none in headline",
+    "penetration_threshold_m": 1e-06,
+    "shared_topology_exclusion": "exclude_direct_parent_child",
+    "surface_contact_allowed": true
+  },
+  "protocol_id": "s1_partnet_mobility_table4cohort_n800_salt20260813_v1",
+  "runtime": {
+    "platform": "Linux-5.10.134-19.103.al8.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:38:16) [GCC 14.3.0]",
+    "python_executable": "/mnt/zsn/miniconda3/envs/genesis-main/bin/python"
+  },
+  "schema_version": "supplementary-s1-partnet-mobility/v1",
+  "source": {
+    "cohort_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_partnet_mobility_n800_20260813/frozen_manifest.json",
+    "cohort_manifest_sha256": "2ff015ee6bb377ce693126b52dd632a7565a3eaa9f0007e26122a1bb4ab99900",
+    "dataset_root": "/mnt/zsn/lyb/arti-skill/exp/PartNet-Mobility/data/dataset",
+    "evidence_inventory": "/mnt/zsn/lyb/arti-skill/exp/runtime/s1_partnet_mobility_table4cohort_n800_salt20260813_20260821T085800Z/evidence_inventory.json",
+    "evidence_inventory_sha256": "bb174296502b860f4d727b9e346bc4596523606e39421e25203f12d0e6686776",
+    "ordered_dataset_ids_sha256": "ef6cb964e50dc712280256c5b2f675cc2c957095c3553b21845d3562a5011883",
+    "protocol_document": "/mnt/zsn/lyb/arti-skill/exp/URDF-Sim-Ready-Automatic-Evaluation.md",
+    "protocol_snapshot_sha256": "af459d856674053f6bb3812f543ffd01413cf5576724eb5c899737febdb9dd3b",
+    "table4_asset_records": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_partnet_mobility_n800_20260813/asset_records.json",
+    "table4_asset_records_sha256": "bdbfa385a74e44bd7662cba8f2c15ffbe3d664dfc0953722b8b37c44400430dc",
+    "table4_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_partnet_mobility_n800_20260813/frozen_manifest.json",
+    "table4_manifest_sha256": "2ff015ee6bb377ce693126b52dd632a7565a3eaa9f0007e26122a1bb4ab99900",
+    "table4_state_records": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_partnet_mobility_n800_20260813/state_records.jsonl",
+    "table4_state_records_sha256": "c72728ecfde2b0b6248da7048936b5bf52cb4f4cef0ae7438cf960e27895618c"
+  },
+  "workers": 16
+}

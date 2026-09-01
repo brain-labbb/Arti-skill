@@ -1,0 +1,73 @@
+{
+  "config": {
+    "gap_fraction": 0.002,
+    "geometry_role": "visual",
+    "penetration_depth_fraction": 0.0,
+    "pose_samples": 9,
+    "roi_fraction": 0.02,
+    "skip_penetration": false,
+    "support_threshold": 0.1,
+    "surface_samples": 128
+  },
+  "datasets": {
+    "articraft_10k": {
+      "asset_count": 2,
+      "complete_asset_count": 2,
+      "geometry_coverage": {
+        "complete_assets": 2,
+        "denominator": 2,
+        "percentage": 100.0
+      },
+      "joint_gap_p95_fraction": {
+        "asset_evaluable": 2,
+        "denominator": 2,
+        "unit": "% asset bbox diagonal",
+        "value": 1.9902630765260505
+      },
+      "joint_self_collision_free": {
+        "denominator": 2,
+        "evaluable_assets": 2,
+        "evaluable_poses": 99,
+        "free_poses": 99,
+        "passed": 2,
+        "percentage": 100.0
+      },
+      "joint_support_asset_macro": {
+        "denominator": 2,
+        "evaluable_assets": 2,
+        "mean_rate": 45.0
+      },
+      "joint_support_micro": {
+        "candidate": 11,
+        "percentage": 81.81818181818181,
+        "supported": 9
+      },
+      "pose_swept_valid": {
+        "denominator": 2,
+        "evaluable_assets": 2,
+        "passed": 0,
+        "percentage": 0.0
+      },
+      "rooted_assets": {
+        "denominator": 2,
+        "passed": 0,
+        "percentage": 0.0
+      },
+      "settings": {
+        "gap_fraction": 0.002,
+        "geometry_role": "visual",
+        "penetration_depth_fraction": 0.0,
+        "pose_samples": 9,
+        "roi_fraction": 0.02,
+        "skip_penetration": false,
+        "support_threshold": 0.1,
+        "surface_samples": 128
+      }
+    }
+  },
+  "manifest_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_v2_core200_prepared_five_full_release_articraft10787_infinigen_paired_official_metrics_r2/manifest.json",
+  "manifest_sha256": "d25debf0cd4e1ef6be0e30906730c73455c5a7ab231cefbabd45e4226c3c3b3b",
+  "protocol_id": "structural-integrity-urdf-v1-pilot",
+  "schema_version": "structural_integrity_eval_v1",
+  "script_sha256": "ab3aa0e8a5262b47e9f3896219052d915e74656d34272d61514508a907b16f8d"
+}

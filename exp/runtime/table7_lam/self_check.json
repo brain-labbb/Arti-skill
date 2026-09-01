@@ -1,0 +1,61 @@
+{
+  "checks": {
+    "all_evidence_files_inside_workspace_and_exist": true,
+    "all_rates_have_explicit_numerators_denominators": true,
+    "frozen_release_urdf_hashes_match": true,
+    "manifest_hash_exact": true,
+    "manifest_identities_unique": true,
+    "no_table7_outcome_reselection": true,
+    "protocol_snapshot_exact": true,
+    "released_generated_recovered_layers_separate": true,
+    "requested_matches_manifest_and_records": true,
+    "state_accounting": {
+      "deterministic_build": true,
+      "kinematic_complete": true,
+      "physical_complete": true,
+      "portable_package": true,
+      "semantic_complete": true
+    }
+  },
+  "evidence_files": [
+    {
+      "exists": true,
+      "inside_workspace": true,
+      "path": "arti-skill/exp/runtime/table7_lam/protocol_snapshot.json"
+    },
+    {
+      "exists": true,
+      "inside_workspace": true,
+      "path": "arti-skill/exp/runtime/table7_lam/manifest.json"
+    },
+    {
+      "exists": true,
+      "inside_workspace": true,
+      "path": "arti-skill/exp/runtime/table7_lam/asset_records.json"
+    },
+    {
+      "exists": true,
+      "inside_workspace": true,
+      "path": "arti-skill/exp/runtime/table7_lam/summary.json"
+    },
+    {
+      "exists": true,
+      "inside_workspace": true,
+      "path": "arti-skill/exp/runtime/table7_lam/self_check.json"
+    },
+    {
+      "exists": true,
+      "inside_workspace": true,
+      "path": "arti-skill/exp/runtime/table7_lam/report.md"
+    }
+  ],
+  "protocol_id": "nano3d_table7_production_readiness_v1",
+  "sha256": {
+    "asset_records.json": "59b702a6eec52cee9a325d2e62d4d7a48d65895b9b15b4428328a5cc7c1c228a",
+    "manifest.json": "dec52fe72a823f0c1f41a1886f96d486992f1eb41418bcc5471c2aed8a23f8d9",
+    "protocol_snapshot.json": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+    "report.md": "68d1871c39486d5dc4192344e46fd1e7a2f2ec0b055c770b69bf28e26427d7f8",
+    "summary.json": "023160f560437b483cb11888d5dfffd9435fb6c94bd4afd068d6b4f6e322a146"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,129 @@
+{
+  "classification": "FORMAL",
+  "cohort": {
+    "j_eval": 2865,
+    "n_eval": 800,
+    "ordered_ids_sha256": "8417b0874f111bfe16b63c2702358ea501ced723b22fd328c9ad21e80e6115de",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_articraft10k_n800_20260814/frozen_manifest.json",
+    "source_manifest_file_sha256": "6b4275cf3da29244af70c04acecd87094f0c158dee992db20b04e90c05292c20"
+  },
+  "completed_at_utc": "2026-08-19T22:38:07.736226Z",
+  "dataset": "Articraft-10K",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "baca350a7bc423746f2bbcd4a658c205f36256cc765832a3d655608fb9293467",
+  "metrics": {
+    "collision_safe_dof_retention": {
+      "denominator": 2865,
+      "numerator": 2623,
+      "percent": 91.5532
+    },
+    "dof_bins": {
+      "0": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      },
+      "1": {
+        "joints_intended": 163,
+        "joints_passed": 162,
+        "n_eval": 163,
+        "safe": 162,
+        "strict_pass": 29
+      },
+      "2--3": {
+        "joints_intended": 1004,
+        "joints_passed": 960,
+        "n_eval": 407,
+        "safe": 956,
+        "strict_pass": 70
+      },
+      "4--7": {
+        "joints_intended": 874,
+        "joints_passed": 780,
+        "n_eval": 177,
+        "safe": 773,
+        "strict_pass": 37
+      },
+      ">=8": {
+        "joints_intended": 824,
+        "joints_passed": 740,
+        "n_eval": 53,
+        "safe": 732,
+        "strict_pass": 11
+      },
+      "unknown/unparseable": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      }
+    },
+    "executable_cf_dof_per_asset": {
+      "mean": 3.2788,
+      "median": 2.0,
+      "n_assets": 800,
+      "p90": 6.0,
+      "total_safe_dof": 2623
+    },
+    "joint_level_full_range_cf": {
+      "denominator": 2865,
+      "numerator": 2642,
+      "percent": 92.2164
+    },
+    "limit_reachability": {
+      "continuous_excluded": 560,
+      "denominator": 2305,
+      "numerator": 2118,
+      "percent": 91.8872
+    },
+    "normalized_clearance_p5": {
+      "asset_coverage": {
+        "denominator": 800,
+        "numerator": 776,
+        "percent": 97.0
+      },
+      "coverage_status": "PARTIAL",
+      "reason": "genesis_contact_penetration_has_no_signed_clearance_no_independent_exact_distance_backend_registered",
+      "state_coverage": {
+        "denominator": 60165,
+        "numerator": 57708,
+        "percent": 95.9162
+      },
+      "status": "N/E"
+    },
+    "state_counts": {
+      "executed": 57708,
+      "hash_cross_check": {
+        "mismatch": 0,
+        "no_reference": 41517,
+        "verified": 16191
+      },
+      "intended": 60165
+    },
+    "status_counts": {
+      "completed": 776,
+      "error": 24,
+      "total": 800
+    }
+  },
+  "mode": "formal",
+  "notes": [
+    "Joint-level Full-range CF reuses the exact frozen Table 4 single-joint sweep states (K=21, endpoints included, other joints q=0); per-state q-vector hashes are cross-checked against Table 4 state_records where available (legacy Articraft Table 4 executed 18,648 / 60,165 sweep states; the rest are no_reference).",
+    "State collision oracle = Genesis contact-penetration backend (genesis_contact_penetration_v1), direct kinematic detection only, illegal iff eligible-pair penetration > 1e-6 m.",
+    "Headline pair policy = distinct source links excluding direct parent-child; no method-specific allowance. Assets with zero declared collision geometry have zero eligible pairs and pass vacuously once all states execute.",
+    "Normalized Clearance P5 is N/E under this oracle (no signed clearance for separated pairs; no independent exact-distance backend registered).",
+    "Existing Strict Collision Pass values in DoF bins are historical Table 4 (PyBullet) results reported alongside, not re-executed."
+  ],
+  "protocol_id": "table4a_articraft10k_table2cohort_n800_v1",
+  "run_directory": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4a_urdf_articraft10k_table2cohort_n800_seed20260813_20260819T205155Z",
+  "started_at_utc": "2026-08-19T20:51:57.660605Z",
+  "status_counts": {
+    "completed": 776,
+    "error": 24,
+    "total": 800
+  },
+  "wall_seconds": 6369.845
+}

@@ -1,0 +1,110 @@
+{
+  "gpu_records_completed": 27,
+  "metrics": {
+    "collision_safe_dof_retention": {
+      "denominator": 14968,
+      "numerator": 362,
+      "percent": 2.4185
+    },
+    "dof_bins": {
+      "0": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      },
+      "1": {
+        "joints_intended": 8,
+        "joints_passed": 8,
+        "n_eval": 8,
+        "safe": 8,
+        "strict_pass": 8
+      },
+      "2--3": {
+        "joints_intended": 137,
+        "joints_passed": 67,
+        "n_eval": 59,
+        "safe": 67,
+        "strict_pass": 22
+      },
+      "4--7": {
+        "joints_intended": 162,
+        "joints_passed": 134,
+        "n_eval": 33,
+        "safe": 134,
+        "strict_pass": 20
+      },
+      ">=8": {
+        "joints_intended": 813,
+        "joints_passed": 153,
+        "n_eval": 28,
+        "safe": 153,
+        "strict_pass": 7
+      },
+      "unknown/unparseable": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      }
+    },
+    "executable_cf_dof_per_asset": {
+      "mean": 2.8281,
+      "median": 2.0,
+      "n_assets": 128,
+      "p90": 8.0,
+      "total_safe_dof": 362
+    },
+    "joint_level_full_range_cf": {
+      "denominator": 1120,
+      "numerator": 362,
+      "percent": 32.3214
+    },
+    "limit_reachability": {
+      "continuous_excluded": 163,
+      "denominator": 957,
+      "numerator": 235,
+      "percent": 24.5559
+    },
+    "normalized_clearance_p5": {
+      "asset_coverage": {
+        "denominator": 128,
+        "numerator": 119,
+        "percent": 92.9688
+      },
+      "coverage_status": "PARTIAL",
+      "reason": "genesis_contact_penetration_has_no_signed_clearance_no_independent_exact_distance_backend_registered",
+      "state_coverage": {
+        "denominator": 23520,
+        "numerator": 21378,
+        "percent": 90.8929
+      },
+      "status": "N/E"
+    },
+    "state_counts": {
+      "executed": 21378,
+      "hash_cross_check": {
+        "mismatch": 0,
+        "no_reference": 0,
+        "verified": 21378
+      },
+      "intended": 23520
+    },
+    "status_counts": {
+      "completed": 119,
+      "error": 9,
+      "total": 128
+    }
+  },
+  "mixed_backend": true,
+  "next_selection_index": 128,
+  "prefix_records_reused": 101,
+  "publication_status": "NON_PUBLIC_MIXED_BACKEND",
+  "records_expected": 2655,
+  "records_total": 128,
+  "started_at_utc": "2026-08-25T13:52:05.446690Z",
+  "status": "RUNNING",
+  "updated_at_utc": "2026-08-25T14:15:43.651429Z"
+}

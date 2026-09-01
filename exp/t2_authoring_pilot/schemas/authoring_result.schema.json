@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://articraft.local/schemas/t2-authoring-result-v1.json",
+  "title": "T2 authoring run result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_key",
+    "task_slug",
+    "method_id",
+    "repeat_index",
+    "status",
+    "backend",
+    "metrics",
+    "output"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "run_key": {"type": "string", "minLength": 1},
+    "task_slug": {"type": "string", "minLength": 1},
+    "method_id": {"type": "string", "minLength": 1},
+    "repeat_index": {"type": "integer", "minimum": 0},
+    "status": {"enum": ["completed", "failed", "aborted"]},
+    "backend": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provider", "model"],
+      "properties": {
+        "provider": {"type": "string", "minLength": 1},
+        "model": {"type": "string", "minLength": 1},
+        "temperature": {"type": ["number", "null"]},
+        "executor_version": {"type": ["string", "null"]}
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "first_shot_pass",
+        "final_success",
+        "artifact_saved",
+        "repair_turns",
+        "human_intervention",
+        "wall_seconds",
+        "input_tokens",
+        "output_tokens",
+        "api_cost_usd"
+      ],
+      "properties": {
+        "first_shot_pass": {"type": ["boolean", "null"]},
+        "final_success": {"type": ["boolean", "null"]},
+        "artifact_saved": {"type": ["boolean", "null"]},
+        "repair_turns": {"type": "integer", "minimum": 0},
+        "human_intervention": {"type": "boolean"},
+        "wall_seconds": {"type": "number", "minimum": 0},
+        "input_tokens": {"type": "integer", "minimum": 0},
+        "output_tokens": {"type": "integer", "minimum": 0},
+        "api_cost_usd": {"type": ["number", "null"], "minimum": 0}
+      }
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["template_path", "template_sha256", "evaluator_report_path"],
+      "properties": {
+        "template_path": {"type": ["string", "null"]},
+        "template_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "evaluator_report_path": {"type": ["string", "null"]}
+      }
+    },
+    "error": {"type": ["string", "null"]}
+  }
+}

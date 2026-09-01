@@ -1,0 +1,35 @@
+{
+  "protocol_id": "nano3d_table2_naming_semantic_metric_correction_v1",
+  "frozen_at_utc": "2026-08-11T08:00:00Z",
+  "parent_semantic_protocol": {
+    "path": "exp/reference/table2_naming_semantic_protocol_v1.json",
+    "sha256": "45f2a1aea0051579e84a76f7dff888ab8cba78838af3c28e96f3390451e8e733"
+  },
+  "preexisting_design_source": {
+    "path": "exp/Nano3d.md",
+    "section": "5.3 Metrics / Functional Naming Richness",
+    "definition": "named functional parts / spec functional parts",
+    "extra_part_rule": "Report extra-real-part count separately instead of treating every extra part as a positive richness contribution."
+  },
+  "correction": {
+    "reason": "The v1 judge-validated naming-richness candidate counted all truthfully named links, including duplicate required-role matches and extra real parts, divided by minimal required roles. This is a granularity-sensitive named-link density, not the preexisting Functional Naming Richness metric.",
+    "headline_metric_name": "functional_naming_richness",
+    "headline_asset_macro_formula": "mean over assets of covered required functional roles / required functional roles",
+    "headline_micro_formula": "sum covered required functional roles / sum required functional roles",
+    "supplementary_metric_name": "validated_named_link_density",
+    "supplementary_asset_macro_formula": "mean over assets of consensus truthfully named links / minimal required roles",
+    "supplementary_micro_formula": "sum consensus truthfully named links / sum minimal required roles",
+    "extra_real_part_reporting": "Report consensus extra_real_part count and per-asset mean separately.",
+    "no_judge_changes": true,
+    "no_gold_changes": true,
+    "no_cohort_changes": true,
+    "no_asset_reselection": true
+  },
+  "current_gold_consequence": "All minimal required roles in semantic_gold_v1 are marked functional_core=true, so Functional Naming Richness equals Semantic Recall in this cohort. This equality must be disclosed rather than hidden or treated as an independent result.",
+  "paper_table_policy": {
+    "use_functional_richness_as_headline": true,
+    "remove_duplicate_functional_core_coverage_column": true,
+    "move_validated_named_link_density_to_supplementary": true,
+    "do_not_claim_significant_superiority_when_cluster_confidence_intervals_overlap": true
+  }
+}

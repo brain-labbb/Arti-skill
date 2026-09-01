@@ -1,0 +1,66 @@
+{
+  "command": [
+    "exp/scripts/run_table4b_urdf_sketch_mobility.py",
+    "--mode",
+    "formal",
+    "--smoke-receipt",
+    "exp/runtime/table4b_urdf_sketch_mobility_smoke_n5_20260821T160500Z",
+    "--output-dir",
+    "exp/runtime/table4b_urdf_sketch_mobility_table1cohort_n800_20260821T163500Z"
+  ],
+  "created_at_utc": "2026-08-21T17:41:48.684433Z",
+  "dataset": "SketchMobility",
+  "frozen_config_sha256": "30ca564ed2f32a8acb25963f91bd766fc97c258378a11608a384400ede514812",
+  "geometry_protocol_id": "lam_supplementary_geometry_v1",
+  "manifest_self_sha256_at_write": "deb1e6bf13a1b8b53fc6bc6f9ce285b85636734f0bd872e7c34cb005f21b9d7f",
+  "mode": "formal",
+  "outputs": {
+    "asset_records_sha256": "3b2b5c96d4b3298b5acfae7561f894b1c84270806df7dc0ff56c47ef8d679719",
+    "summary_md_sha256": "70ab1cace209f900669440484f7ac37bf21d4619dc4164d87d8d0a710257d936",
+    "summary_sha256": "646402d3510001a85d066fb1de2255dc1504a441266c78e7d7b4faf355027a47"
+  },
+  "protocol_id": "table4b-sketchmobility-table1-cohort-n800-v1",
+  "record_count": 800,
+  "status_counts": {
+    "completed": 800,
+    "error": 0,
+    "total": 800
+  },
+  "verification": {
+    "all_pass": true,
+    "check_count": 6,
+    "checks": [
+      {
+        "check": "source_manifest_sha256",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "ordered_ids_sha256",
+        "detail": "a88506e1da8e7e8b61a740965dea2faba4e9ab8280f47417e17550024b6dde17",
+        "pass": true
+      },
+      {
+        "check": "record_count",
+        "detail": "800",
+        "pass": true
+      },
+      {
+        "check": "frozen_order_preserved",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "urdf_identity_matches_frozen_manifest",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "aggregate_recomputation_matches",
+        "detail": "",
+        "pass": true
+      }
+    ]
+  },
+  "wall_seconds": 564.062
+}

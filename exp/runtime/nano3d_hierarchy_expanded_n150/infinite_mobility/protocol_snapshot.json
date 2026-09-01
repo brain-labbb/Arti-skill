@@ -1,0 +1,58 @@
+{
+  "protocol_id": "nano3d_infinite_mobility_hierarchy_expanded_n150_v1",
+  "protocol_version": 1,
+  "baseline": "Infinite Mobility",
+  "official_repository": "https://github.com/InternRobotics/Infinite-Mobility.git",
+  "official_commit": "5f5961736fcf5b7a6e6fd0a9b3b7af586f39e151",
+  "source_seed_protocol": "nano3d_infinite_mobility_seed_reliability_v1",
+  "seeds": [
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+    10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+    20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+  ],
+  "nested_original_seeds": [0, 1, 2, 3, 4, 5],
+  "requested_per_category": 30,
+  "requested_count": 150,
+  "categories": [
+    {
+      "category_id": "storage_furniture_cabinet",
+      "category": "storage_furniture",
+      "common_category": "storage furniture/cabinet",
+      "factory": "KitchenCabinetFactory"
+    },
+    {
+      "category_id": "table",
+      "category": "table",
+      "common_category": "table",
+      "factory": "TableDiningFactory"
+    },
+    {
+      "category_id": "refrigerator",
+      "category": "refrigerator",
+      "common_category": "refrigerator",
+      "factory": "BeverageFridgeFactory"
+    },
+    {
+      "category_id": "dishwasher",
+      "category": "dishwasher",
+      "common_category": "dishwasher",
+      "factory": "DishwasherFactory"
+    },
+    {
+      "category_id": "microwave",
+      "category": "microwave",
+      "common_category": "microwave",
+      "factory": "MicrowaveFactory"
+    }
+  ],
+  "selection_rule": "use every pre-frozen numeric seed 0 through 29 for each category; selection is independent of generation status and evaluation results",
+  "failure_policy": "retain terminal timeout, missing package, invalid tree, parse failure, and unscorable cases in the requested denominator without replacement",
+  "oven_boundary": "OvenFactory is excluded because the common correctness category is microwave. Historical oven structure results must not be relabeled as microwave.",
+  "evaluation": {
+    "structure": "hierarchy_extended_metrics.py",
+    "ontology_alignment": "partnet_hierarchy_correctness.py",
+    "role_assignment": "join package-local data_infos_<seed>.json file_name to each URDF visual mesh basename; package labels are prediction-side only",
+    "package_role_labels_are_independent_gold": false
+  },
+  "claim_boundary": "package-level structural validity and PartNet-ontology-referenced induced semantic-parent alignment proxy; not instance-level kinematic correctness"
+}

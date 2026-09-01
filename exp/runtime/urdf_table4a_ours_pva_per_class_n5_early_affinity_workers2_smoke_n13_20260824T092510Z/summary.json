@@ -1,0 +1,135 @@
+{
+  "classification": "SMOKE",
+  "cohort": {
+    "j_eval": 87,
+    "n_eval": 13,
+    "ordered_ids_sha256": "b5c9262eca8e65ede90c597a16e4ed2b0d7348b4eeb326cd64a06cea518c4178",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z/frozen_manifest.json",
+    "source_manifest_file_sha256": "c23d92a582ac7d8d122d6c34d17d2f057dd4a309aa696414b71387debce13f35"
+  },
+  "completed_at_utc": "2026-08-24T09:40:48.240945Z",
+  "dataset": "Ours per-class N=5 (supplementary)",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "5097429eec75a3e4a71ddb1327b50549fc4bf782b3c14155bf4ae9f3730f02aa",
+  "metrics": {
+    "collision_safe_dof_retention": {
+      "denominator": 14968,
+      "numerator": 15,
+      "percent": 0.1002
+    },
+    "dof_bins": {
+      "0": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      },
+      "1": {
+        "joints_intended": 1,
+        "joints_passed": 1,
+        "n_eval": 1,
+        "safe": 1,
+        "strict_pass": 1
+      },
+      "2--3": {
+        "joints_intended": 13,
+        "joints_passed": 2,
+        "n_eval": 6,
+        "safe": 2,
+        "strict_pass": 0
+      },
+      "4--7": {
+        "joints_intended": 12,
+        "joints_passed": 12,
+        "n_eval": 3,
+        "safe": 12,
+        "strict_pass": 0
+      },
+      ">=8": {
+        "joints_intended": 61,
+        "joints_passed": 0,
+        "n_eval": 3,
+        "safe": 0,
+        "strict_pass": 0
+      },
+      "unknown/unparseable": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      }
+    },
+    "executable_cf_dof_per_asset": {
+      "mean": 1.1538,
+      "median": 0.0,
+      "n_assets": 13,
+      "p90": 4.0,
+      "total_safe_dof": 15
+    },
+    "joint_level_full_range_cf": {
+      "denominator": 87,
+      "numerator": 15,
+      "percent": 17.2414
+    },
+    "limit_reachability": {
+      "continuous_excluded": 4,
+      "denominator": 83,
+      "numerator": 15,
+      "percent": 18.0723
+    },
+    "normalized_clearance_p5": {
+      "asset_coverage": {
+        "denominator": 13,
+        "numerator": 13,
+        "percent": 100.0
+      },
+      "coverage_status": "COMPLETE",
+      "reason": "genesis_contact_penetration_has_no_signed_clearance_no_independent_exact_distance_backend_registered",
+      "state_coverage": {
+        "denominator": 1827,
+        "numerator": 1827,
+        "percent": 100.0
+      },
+      "status": "N/E"
+    },
+    "state_counts": {
+      "executed": 1827,
+      "hash_cross_check": {
+        "mismatch": 0,
+        "no_reference": 0,
+        "verified": 1827
+      },
+      "intended": 1827
+    },
+    "status_counts": {
+      "completed": 13,
+      "error": 0,
+      "total": 13
+    }
+  },
+  "mode": "smoke",
+  "notes": [
+    "The intent denominator is 314,328 states (14,968 joints x K=21). Genesis replay is attempted only for the 313,803 states of 14,943 range-evaluable joints; the 525 states belonging to 25 zero-width joints are not submitted to Genesis and remain explicit fail-closed records.",
+    "For states that execute in Genesis, available frozen Table 4 q-vector hashes are cross-checked; missing references remain explicitly classified as no_reference and hash mismatches fail verification.",
+    "Every package file is bound by the canonical cohort manifest and rehashed before scheduling plus immediately before and after each Genesis child; drift invalidates publication.",
+    "State collision oracle = Genesis contact-penetration backend; penetration > 1e-6 m is illegal and all failures remain fail closed.",
+    "PyTorch intra-op and inter-op pools are both fixed to one thread before Genesis import and read back before and after every child evaluation.",
+    "Every Genesis child binds and reads back its four-core CPU affinity in a minimal -S launcher before importing the child runner, then execs the same pinned interpreter and records the same-PID receipt.",
+    "Formal concurrency is fixed at two workers because six-worker calibration reproduced host-wide native-thread exhaustion; this execution control does not change cohort, state, oracle, or denominator semantics.",
+    "Headline pair policy excludes direct parent-child pairs and applies no method-specific allowance.",
+    "Normalized Clearance P5 is N/E because this oracle has no separated-pair signed clearance.",
+    "Existing Strict Collision Pass is read from the explicitly bound Table 4 receipt.",
+    "Resume is unsupported; an interrupted invocation is non-public and must restart in a new output directory. Existing output directories are rejected."
+  ],
+  "protocol_id": "table4a_ours_pva_per_class_n5_max_joints_v1",
+  "run_directory": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4a_ours_pva_per_class_n5_early_affinity_workers2_smoke_n13_20260824T092510Z",
+  "started_at_utc": "2026-08-24T09:26:28.153175Z",
+  "status_counts": {
+    "completed": 13,
+    "error": 0,
+    "total": 13
+  },
+  "wall_seconds": 859.992
+}

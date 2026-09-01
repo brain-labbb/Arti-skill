@@ -1,0 +1,83 @@
+{
+  "base_renderer": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_articraft10k_asset_blender.py",
+  "base_renderer_sha256": "24669921702ddf11c9668e16692f3a4cb7e5b40e040e215a878b92cdd294fe22",
+  "blender": "/mnt/zsn/zsn_workspace/VoxHammer/third_party/blender-4.2.19-linux-x64/blender",
+  "blender_version": "Blender 4.2.19 LTS",
+  "dataset": "PartNet-Mobility",
+  "dataset_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/rosters/partnet/full_release_manifest.json",
+  "dataset_manifest_sha256": "0ee8fac27ab97d3ec4a4914693ce14324bd7820f3c3f39a2e3bee64278377c5b",
+  "full_category_count": 46,
+  "full_model_count": 2347,
+  "material_policy": "native OBJ/MTL diffuse materials, forced opaque; neutral fallback",
+  "output_root": "/mnt/zsn/lyb/arti-skill/exp/.partnet_n5_smoke",
+  "pose_policy": "URDF rest pose; all movable joint coordinates are zero",
+  "render_contract": "partnet_mobility_uniform_studio_v1",
+  "renderer": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_partnet_mobility_asset_blender.py",
+  "renderer_sha256": "eb3f2a3c79ba7f27490ab819922de24aad4e0b2fd82268cdb0f4a2071a2c605a",
+  "resolution": 256,
+  "samples": 4,
+  "samples_per_category": 5,
+  "sampling_contract": "partnet_mobility_category_n5_hash_rank_v1",
+  "schema_version": 1,
+  "selected_category_count": 2,
+  "selected_count": 10,
+  "selection_rule": "first N by (SHA256(asset_id UTF-8), asset_id) within category",
+  "shared_renderer": "/mnt/zsn/lyb/arti-skill/arti-template/scripts/render_exported_asset_blender.py",
+  "shared_renderer_sha256": "f418515a9817218b08d577d95983ec934c34ddf19f17bb89c73bf52aa60bb3a7",
+  "studio": {
+    "camera_direction": [
+      1.25,
+      -1.35,
+      0.85
+    ],
+    "camera_distance_policy": "bounding_sphere_auto_frame_1.18",
+    "camera_vertical_fov_degrees": 42.0,
+    "cycles_denoising": true,
+    "ground_rgba": [
+      0.32,
+      0.35,
+      0.4,
+      1.0
+    ],
+    "ground_roughness": 0.82,
+    "lights": [
+      {
+        "direction": [
+          0.4,
+          -0.8,
+          1.5
+        ],
+        "gain": 42.0,
+        "size_ratio": 1.5
+      },
+      {
+        "direction": [
+          -1.2,
+          -0.3,
+          0.6
+        ],
+        "gain": 15.0,
+        "size_ratio": 1.8
+      },
+      {
+        "direction": [
+          0.2,
+          1.0,
+          1.2
+        ],
+        "gain": 24.0,
+        "size_ratio": 1.2
+      }
+    ],
+    "look": "AgX - Medium High Contrast",
+    "mode": "opaque_studio",
+    "view_transform": "AgX",
+    "world_rgba": [
+      0.8,
+      0.84,
+      0.9,
+      1.0
+    ],
+    "world_strength": 0.55
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "artifact_hash_manifest_sha256": "0b7ef617e1edc2074954f004e4a48b39420e4239fdc071dce6b578b75589a96b",
+  "comparison_label": "category-matched deterministic cohort",
+  "coverage": {
+    "assets_per_category": 7,
+    "categories": 5,
+    "naming_evaluable_assets": 35,
+    "requested_assets": 35,
+    "visual_compile_pass": 35
+  },
+  "cross_seed": {
+    "exact_raw_name_multiset_mode_rate_category_macro": 0.22857142857142856,
+    "interpretation": "raw link-name consistency only; not semantic-role consistency",
+    "raw_name_multiset_weighted_jaccard_category_macro": 0.3899865478436907,
+    "raw_name_multiset_weighted_jaccard_pair_micro": 0.3899865478436907,
+    "raw_unique_name_set_jaccard_category_macro": 0.3899865478436907,
+    "raw_unique_name_set_jaccard_pair_micro": 0.3899865478436907,
+    "within_category_pair_count": 105
+  },
+  "direct_metrics": {
+    "category_cluster_bootstrap_95ci": {
+      "nameability_micro": [
+        1.0,
+        1.0
+      ],
+      "parts_per_asset_mean": [
+        3.4285714285714284,
+        6.485714285714286
+      ]
+    },
+    "hashed_mesh_reference_count": 108,
+    "invalid_visual_geometry_count": 0,
+    "nameability_micro": 1.0,
+    "parts_per_asset_mean": 4.914285714285715,
+    "parts_per_asset_median": 5,
+    "per_category": {
+      "dishwasher": {
+        "assets": 7,
+        "nameability_micro": 1.0,
+        "parts_per_asset_mean": 7.428571428571429
+      },
+      "faucet": {
+        "assets": 7,
+        "nameability_micro": 1.0,
+        "parts_per_asset_mean": 2.7142857142857144
+      },
+      "microwave": {
+        "assets": 7,
+        "nameability_micro": 1.0,
+        "parts_per_asset_mean": 3.7142857142857144
+      },
+      "oven": {
+        "assets": 7,
+        "nameability_micro": 1.0,
+        "parts_per_asset_mean": 6.428571428571429
+      },
+      "refrigerator": {
+        "assets": 7,
+        "nameability_micro": 1.0,
+        "parts_per_asset_mean": 4.285714285714286
+      }
+    },
+    "placeholder_renderable_parts": 0,
+    "representation": "URDF renderable-link",
+    "total_named_renderable_parts": 172,
+    "total_renderable_parts": 172,
+    "valid_visual_geometry_count": 1953
+  },
+  "generated_at_utc": "2026-08-11T06:44:11.526056+00:00",
+  "method": "Ours",
+  "protocol_id": "nano3d_table2_naming_matched_v1",
+  "protocol_sha256": "f4c4d915ce2e1bed5c99efd9dcebb97526a7d2639ad5021e3b068c3cf6105113",
+  "records_sha256": "63d4ce5031830a81fd91d25b213ba594af15ef02c565eb4b01ac10d3e9ae6d8d",
+  "semantic_metrics": {
+    "functional_core_coverage": null,
+    "instance_discriminability": null,
+    "naming_richness": null,
+    "over_segmentation_rate": null,
+    "reason": "No matched-cohort output-independent role gold plus three blind judge verdict sets.",
+    "semantic_precision": null,
+    "semantic_recall": null
+  },
+  "stable_summary_sha256": "dfd1b14207b1a87129cc348d0514105b3303359d1c8283037ee28e32702b31bb",
+  "status": "COMPLETE",
+  "templates": [
+    {
+      "category": "microwave",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "slug": "Kitchen_Microwave",
+      "stem": "microwave",
+      "template": "arti-skill/arti-template/agent/templates/Kitchen_Microwave.py",
+      "template_sha256": "020f661750038dcd7ea9f9041262a802e9246df23726c5b4dffb61a689079446"
+    },
+    {
+      "category": "dishwasher",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "slug": "dishwasher_with_dropdown_door_and_sliding_racks",
+      "stem": "dishwasher_with_dropdown_door_and_sliding_racks",
+      "template": "arti-skill/arti-template/agent/templates/dishwasher_with_dropdown_door_and_sliding_racks.py",
+      "template_sha256": "607b1e45bc8c17d16db0d9526e8104e944bf2e09600dbb05c21a74ac53cde4b3"
+    },
+    {
+      "category": "oven",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "slug": "Other_Built_in_oven",
+      "stem": "built_in_oven",
+      "template": "arti-skill/arti-template/agent/templates/Other_Built_in_oven.py",
+      "template_sha256": "6752353a26e49ec3e96044f93f2b8fca25556fe1f54a9982c517320682039cba"
+    },
+    {
+      "category": "faucet",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "slug": "Other_single_hole_basin_faucet",
+      "stem": "single_hole_basin_faucet",
+      "template": "arti-skill/arti-template/agent/templates/Other_single_hole_basin_faucet.py",
+      "template_sha256": "15e8adc7c30714026d08098ca492f1e3ce5ae988529ff3b66a9a076babb48c7f"
+    },
+    {
+      "category": "refrigerator",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "slug": "refrigerator_with_hinged_doors",
+      "stem": "refrigerator",
+      "template": "arti-skill/arti-template/agent/templates/refrigerator_with_hinged_doors.py",
+      "template_sha256": "5e6618c9ad99c11326a2263d7b4ef4890e99becd6f9decedb8500c106d7a042e"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "artifact_layers": {
+    "locally_generated_assets": 0,
+    "recovered_assets": 0,
+    "released_assets": 100,
+    "scored_layer": "released"
+  },
+  "blockers": [
+    "Self-intersection: exact triangle-triangle backend with adjacent-face exclusion unavailable/not recorded.",
+    "Deterministic build: no two fresh builds from frozen identical inputs were executed.",
+    "Semantic completeness: no output-independent required-part and role specification."
+  ],
+  "cohort": {
+    "available_assets": 100,
+    "geometry_evaluable_assets": 100,
+    "package_evaluable_assets": 100,
+    "requested_assets": 100,
+    "selection": "Table 6 frozen viable release cohort; no Table 7 outcome filtering",
+    "unavailable_assets": 0
+  },
+  "deterministic_build": {
+    "fail": 0,
+    "not_evaluable": 100,
+    "pass": 0,
+    "requested": 100
+  },
+  "geometry": {
+    "degenerate_faces": {
+      "definition": "repeated vertex index OR area <=1e-12 in native squared units",
+      "per_asset_mean": 0.0,
+      "total": 0
+    },
+    "load_failures": 0,
+    "loader": "trimesh scene load, process=false",
+    "manifold": {
+      "definition": "edge-manifold proxy: every undirected edge has <=2 incident faces",
+      "geometry_level": {
+        "denominator": 554,
+        "numerator": 554,
+        "value": 1.0
+      },
+      "per_asset_fraction_mean": 1.0,
+      "tool": "numpy incidence count on trimesh process=false triangle faces",
+      "vertex_manifold_claimed": false
+    },
+    "mesh_scope": "unique final-URDF referenced mesh payloads",
+    "nonmanifold_edges": {
+      "per_asset_mean": 0.0,
+      "total": 0
+    },
+    "open_edges": {
+      "per_asset_mean": 10211.64,
+      "total": 1021164
+    },
+    "readable_geometries": 554,
+    "readable_mesh_files": 554,
+    "self_intersection": {
+      "backend": null,
+      "reason": "no recorded exact triangle-triangle backend with adjacent-face exclusion",
+      "state": "not_evaluable"
+    },
+    "watertight": {
+      "geometry_level": {
+        "denominator": 554,
+        "numerator": 0,
+        "value": 0.0
+      },
+      "per_asset_fraction_mean": 0.0
+    }
+  },
+  "kinematic_complete": {
+    "fail": 65,
+    "not_evaluable": 0,
+    "pass": 35,
+    "requested": 100
+  },
+  "manifest_sha256": "dec52fe72a823f0c1f41a1886f96d486992f1eb41418bcc5471c2aed8a23f8d9",
+  "method": "LAM",
+  "physical_complete": {
+    "fail": 100,
+    "not_evaluable": 0,
+    "pass": 0,
+    "requested": 100
+  },
+  "portable_package": {
+    "fail": 0,
+    "not_evaluable": 0,
+    "pass": 100,
+    "requested": 100
+  },
+  "protocol_id": "nano3d_table7_production_readiness_v1",
+  "protocol_sha256": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+  "release_integrity": {
+    "dependency_clean_assets": {
+      "denominator": 100,
+      "numerator": 100,
+      "value": 1.0
+    },
+    "primary_urdf_hash_match": {
+      "denominator": 100,
+      "numerator": 100,
+      "value": 1.0
+    }
+  },
+  "semantic_complete": {
+    "fail": 0,
+    "field_proxy": {
+      "fail": 0,
+      "not_evaluable": 0,
+      "pass": 100,
+      "requested": 100
+    },
+    "not_evaluable": 100,
+    "pass": 0,
+    "requested": 100,
+    "strict_blocker": "no output-independent required-part and role specification"
+  },
+  "size_bytes": {
+    "denominator": 100,
+    "mesh": {
+      "mean": 1513933.65,
+      "total": 151393365
+    },
+    "source": {
+      "mean": 36473.79,
+      "total": 3647379
+    },
+    "urdf": {
+      "mean": 2884.25,
+      "total": 288425
+    }
+  },
+  "status": "COMPLETE"
+}

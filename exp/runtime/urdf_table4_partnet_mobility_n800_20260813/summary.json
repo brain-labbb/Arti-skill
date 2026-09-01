@@ -1,0 +1,2567 @@
+{
+  "category_macro": {
+    "collision_free_range": 0.7175596218137265,
+    "multi_joint_sobol_cf": 0.691945049849776,
+    "rest_all_pair_cf": 0.02287575788618266,
+    "rest_non_adjacent_cf": 0.7383491819521141,
+    "single_joint_sweep_cf": 0.694280217107776,
+    "strict_collision_pass": 0.6720786718499648
+  },
+  "category_results": {
+    "Bottle": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 840,
+        "passed_states": 170,
+        "rate": 0.20238095238095238
+      },
+      "collision_state_rate": {
+        "collision_states": 1712,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 2335,
+        "executed_states": 2142,
+        "observed_collision_rate_executed": 0.7091503267973857,
+        "observed_collision_states": 1519,
+        "rate": 0.7331905781584582,
+        "unexecuted_states": 193
+      },
+      "max_penetration": {
+        "denominator": 23,
+        "fully_measured_assets": 21,
+        "maximum_observed_normalized": 0.13585954731447147,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 21,
+        "status": "PARTIAL"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 23,
+        "passed": 5,
+        "rate": 0.21739130434782608
+      },
+      "rest_all_pair_cf": {
+        "denominator": 23,
+        "passed": 1,
+        "rate": 0.043478260869565216
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 23,
+        "passed": 6,
+        "rate": 0.2608695652173913
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 23,
+        "passed": 5,
+        "rate": 0.21739130434782608
+      },
+      "strict_collision_pass": {
+        "denominator": 23,
+        "passed": 5,
+        "rate": 0.21739130434782608
+      }
+    },
+    "Box": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 504,
+        "passed_states": 268,
+        "rate": 0.5317460317460317
+      },
+      "collision_state_rate": {
+        "collision_states": 392,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1154,
+        "executed_states": 1154,
+        "observed_collision_rate_executed": 0.3396880415944541,
+        "observed_collision_states": 392,
+        "rate": 0.3396880415944541,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 10,
+        "fully_measured_assets": 10,
+        "maximum_observed_normalized": 0.12433705322717566,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 10,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 10,
+        "passed": 6,
+        "rate": 0.6
+      },
+      "rest_all_pair_cf": {
+        "denominator": 10,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 10,
+        "passed": 7,
+        "rate": 0.7
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 10,
+        "passed": 6,
+        "rate": 0.6
+      },
+      "strict_collision_pass": {
+        "denominator": 10,
+        "passed": 6,
+        "rate": 0.6
+      }
+    },
+    "Bucket": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 210,
+        "passed_states": 210,
+        "rate": 1.0
+      },
+      "collision_state_rate": {
+        "collision_states": 0,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 860,
+        "executed_states": 860,
+        "observed_collision_rate_executed": 0.0,
+        "observed_collision_states": 0,
+        "rate": 0.0,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 10,
+        "fully_measured_assets": 10,
+        "maximum_observed_normalized": 0.24395123912878386,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 10,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 10,
+        "passed": 10,
+        "rate": 1.0
+      },
+      "rest_all_pair_cf": {
+        "denominator": 10,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 10,
+        "passed": 10,
+        "rate": 1.0
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 10,
+        "passed": 10,
+        "rate": 1.0
+      },
+      "strict_collision_pass": {
+        "denominator": 10,
+        "passed": 10,
+        "rate": 1.0
+      }
+    },
+    "Camera": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 1323,
+        "passed_states": 748,
+        "rate": 0.5653817082388511
+      },
+      "collision_state_rate": {
+        "collision_states": 773,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1843,
+        "executed_states": 1843,
+        "observed_collision_rate_executed": 0.41942485078676073,
+        "observed_collision_states": 773,
+        "rate": 0.41942485078676073,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 8,
+        "fully_measured_assets": 8,
+        "maximum_observed_normalized": 0.20030216957783872,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 8,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 8,
+        "passed": 4,
+        "rate": 0.5
+      },
+      "rest_all_pair_cf": {
+        "denominator": 8,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 8,
+        "passed": 5,
+        "rate": 0.625
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 8,
+        "passed": 4,
+        "rate": 0.5
+      },
+      "strict_collision_pass": {
+        "denominator": 8,
+        "passed": 4,
+        "rate": 0.5
+      }
+    },
+    "Cart": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 1050,
+        "passed_states": 1050,
+        "rate": 1.0
+      },
+      "collision_state_rate": {
+        "collision_states": 0,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 2155,
+        "executed_states": 2155,
+        "observed_collision_rate_executed": 0.0,
+        "observed_collision_states": 0,
+        "rate": 0.0,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 17,
+        "fully_measured_assets": 17,
+        "maximum_observed_normalized": 0.17767255199592014,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 17,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 17,
+        "passed": 17,
+        "rate": 1.0
+      },
+      "rest_all_pair_cf": {
+        "denominator": 17,
+        "passed": 1,
+        "rate": 0.058823529411764705
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 17,
+        "passed": 17,
+        "rate": 1.0
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 17,
+        "passed": 17,
+        "rate": 1.0
+      },
+      "strict_collision_pass": {
+        "denominator": 17,
+        "passed": 17,
+        "rate": 1.0
+      }
+    },
+    "Chair": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 7266,
+        "passed_states": 0,
+        "rate": 0.0
+      },
+      "collision_state_rate": {
+        "collision_states": 8631,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 8631,
+        "executed_states": 8209,
+        "observed_collision_rate_executed": 1.0,
+        "observed_collision_states": 8209,
+        "rate": 1.0,
+        "unexecuted_states": 422
+      },
+      "max_penetration": {
+        "denominator": 21,
+        "fully_measured_assets": 20,
+        "maximum_observed_normalized": 0.11112328263801391,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 20,
+        "status": "PARTIAL"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 21,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_all_pair_cf": {
+        "denominator": 21,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 21,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 21,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "strict_collision_pass": {
+        "denominator": 21,
+        "passed": 0,
+        "rate": 0.0
+      }
+    },
+    "Clock": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 315,
+        "passed_states": 63,
+        "rate": 0.2
+      },
+      "collision_state_rate": {
+        "collision_states": 577,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 705,
+        "executed_states": 705,
+        "observed_collision_rate_executed": 0.8184397163120567,
+        "observed_collision_states": 577,
+        "rate": 0.8184397163120567,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 6,
+        "fully_measured_assets": 6,
+        "maximum_observed_normalized": 0.03523130154722412,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 6,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 6,
+        "passed": 1,
+        "rate": 0.16666666666666666
+      },
+      "rest_all_pair_cf": {
+        "denominator": 6,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 6,
+        "passed": 1,
+        "rate": 0.16666666666666666
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 6,
+        "passed": 1,
+        "rate": 0.16666666666666666
+      },
+      "strict_collision_pass": {
+        "denominator": 6,
+        "passed": 1,
+        "rate": 0.16666666666666666
+      }
+    },
+    "CoffeeMachine": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 2373,
+        "passed_states": 2142,
+        "rate": 0.9026548672566371
+      },
+      "collision_state_rate": {
+        "collision_states": 362,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 3478,
+        "executed_states": 3478,
+        "observed_collision_rate_executed": 0.10408280621046578,
+        "observed_collision_states": 362,
+        "rate": 0.10408280621046578,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 17,
+        "fully_measured_assets": 17,
+        "maximum_observed_normalized": 0.27215346911501803,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 17,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 17,
+        "passed": 14,
+        "rate": 0.8235294117647058
+      },
+      "rest_all_pair_cf": {
+        "denominator": 17,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 17,
+        "passed": 15,
+        "rate": 0.8823529411764706
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 17,
+        "passed": 15,
+        "rate": 0.8823529411764706
+      },
+      "strict_collision_pass": {
+        "denominator": 17,
+        "passed": 14,
+        "rate": 0.8235294117647058
+      }
+    },
+    "Dishwasher": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 357,
+        "passed_states": 212,
+        "rate": 0.5938375350140056
+      },
+      "collision_state_rate": {
+        "collision_states": 387,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1137,
+        "executed_states": 965,
+        "observed_collision_rate_executed": 0.22279792746113988,
+        "observed_collision_states": 215,
+        "rate": 0.3403693931398417,
+        "unexecuted_states": 172
+      },
+      "max_penetration": {
+        "denominator": 12,
+        "fully_measured_assets": 10,
+        "maximum_observed_normalized": 0.5860126075879195,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 10,
+        "status": "PARTIAL"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 12,
+        "passed": 8,
+        "rate": 0.6666666666666666
+      },
+      "rest_all_pair_cf": {
+        "denominator": 12,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 12,
+        "passed": 9,
+        "rate": 0.75
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 12,
+        "passed": 8,
+        "rate": 0.6666666666666666
+      },
+      "strict_collision_pass": {
+        "denominator": 12,
+        "passed": 8,
+        "rate": 0.6666666666666666
+      }
+    },
+    "Dispenser": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 1470,
+        "passed_states": 26,
+        "rate": 0.017687074829931974
+      },
+      "collision_state_rate": {
+        "collision_states": 2599,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 2705,
+        "executed_states": 2705,
+        "observed_collision_rate_executed": 0.9608133086876155,
+        "observed_collision_states": 2599,
+        "rate": 0.9608133086876155,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 19,
+        "fully_measured_assets": 19,
+        "maximum_observed_normalized": 0.19398575175497557,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 19,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 19,
+        "passed": 1,
+        "rate": 0.05263157894736842
+      },
+      "rest_all_pair_cf": {
+        "denominator": 19,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 19,
+        "passed": 1,
+        "rate": 0.05263157894736842
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 19,
+        "passed": 1,
+        "rate": 0.05263157894736842
+      },
+      "strict_collision_pass": {
+        "denominator": 19,
+        "passed": 1,
+        "rate": 0.05263157894736842
+      }
+    },
+    "Display": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 588,
+        "passed_states": 504,
+        "rate": 0.8571428571428571
+      },
+      "collision_state_rate": {
+        "collision_states": 149,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1628,
+        "executed_states": 1628,
+        "observed_collision_rate_executed": 0.09152334152334152,
+        "observed_collision_states": 149,
+        "rate": 0.09152334152334152,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 16,
+        "fully_measured_assets": 16,
+        "maximum_observed_normalized": 0.05855103673097388,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 16,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 16,
+        "passed": 15,
+        "rate": 0.9375
+      },
+      "rest_all_pair_cf": {
+        "denominator": 16,
+        "passed": 1,
+        "rate": 0.0625
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 16,
+        "passed": 15,
+        "rate": 0.9375
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 16,
+        "passed": 15,
+        "rate": 0.9375
+      },
+      "strict_collision_pass": {
+        "denominator": 16,
+        "passed": 15,
+        "rate": 0.9375
+      }
+    },
+    "Door": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 462,
+        "passed_states": 333,
+        "rate": 0.7207792207792207
+      },
+      "collision_state_rate": {
+        "collision_states": 196,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1177,
+        "executed_states": 1177,
+        "observed_collision_rate_executed": 0.16652506372132542,
+        "observed_collision_states": 196,
+        "rate": 0.16652506372132542,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 11,
+        "fully_measured_assets": 11,
+        "maximum_observed_normalized": 0.08721529747676653,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 11,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 11,
+        "passed": 4,
+        "rate": 0.36363636363636365
+      },
+      "rest_all_pair_cf": {
+        "denominator": 11,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 11,
+        "passed": 5,
+        "rate": 0.45454545454545453
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 11,
+        "passed": 4,
+        "rate": 0.36363636363636365
+      },
+      "strict_collision_pass": {
+        "denominator": 11,
+        "passed": 3,
+        "rate": 0.2727272727272727
+      }
+    },
+    "Eyeglasses": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 1050,
+        "passed_states": 1011,
+        "rate": 0.9628571428571429
+      },
+      "collision_state_rate": {
+        "collision_states": 409,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 2675,
+        "executed_states": 2675,
+        "observed_collision_rate_executed": 0.15289719626168224,
+        "observed_collision_states": 409,
+        "rate": 0.15289719626168224,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 25,
+        "fully_measured_assets": 25,
+        "maximum_observed_normalized": 0.2545126590101633,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 25,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 25,
+        "passed": 1,
+        "rate": 0.04
+      },
+      "rest_all_pair_cf": {
+        "denominator": 25,
+        "passed": 1,
+        "rate": 0.04
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 25,
+        "passed": 24,
+        "rate": 0.96
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 25,
+        "passed": 20,
+        "rate": 0.8
+      },
+      "strict_collision_pass": {
+        "denominator": 25,
+        "passed": 1,
+        "rate": 0.04
+      }
+    },
+    "Fan": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 714,
+        "passed_states": 714,
+        "rate": 1.0
+      },
+      "collision_state_rate": {
+        "collision_states": 0,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 2729,
+        "executed_states": 2729,
+        "observed_collision_rate_executed": 0.0,
+        "observed_collision_states": 0,
+        "rate": 0.0,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 31,
+        "fully_measured_assets": 31,
+        "maximum_observed_normalized": 0.1889956309542524,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 31,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 31,
+        "passed": 31,
+        "rate": 1.0
+      },
+      "rest_all_pair_cf": {
+        "denominator": 31,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 31,
+        "passed": 31,
+        "rate": 1.0
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 31,
+        "passed": 31,
+        "rate": 1.0
+      },
+      "strict_collision_pass": {
+        "denominator": 31,
+        "passed": 31,
+        "rate": 1.0
+      }
+    },
+    "Faucet": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 819,
+        "passed_states": 813,
+        "rate": 0.9926739926739927
+      },
+      "collision_state_rate": {
+        "collision_states": 11,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 2249,
+        "executed_states": 2249,
+        "observed_collision_rate_executed": 0.004891062694530902,
+        "observed_collision_states": 11,
+        "rate": 0.004891062694530902,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 22,
+        "fully_measured_assets": 22,
+        "maximum_observed_normalized": 0.08759292656281495,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 22,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 22,
+        "passed": 20,
+        "rate": 0.9090909090909091
+      },
+      "rest_all_pair_cf": {
+        "denominator": 22,
+        "passed": 2,
+        "rate": 0.09090909090909091
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 22,
+        "passed": 22,
+        "rate": 1.0
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 22,
+        "passed": 20,
+        "rate": 0.9090909090909091
+      },
+      "strict_collision_pass": {
+        "denominator": 22,
+        "passed": 20,
+        "rate": 0.9090909090909091
+      }
+    },
+    "FoldingChair": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 168,
+        "passed_states": 140,
+        "rate": 0.8333333333333334
+      },
+      "collision_state_rate": {
+        "collision_states": 70,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 623,
+        "executed_states": 623,
+        "observed_collision_rate_executed": 0.11235955056179775,
+        "observed_collision_states": 70,
+        "rate": 0.11235955056179775,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 7,
+        "fully_measured_assets": 7,
+        "maximum_observed_normalized": 0.2897203020025306,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 7,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 7,
+        "passed": 6,
+        "rate": 0.8571428571428571
+      },
+      "rest_all_pair_cf": {
+        "denominator": 7,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 7,
+        "passed": 6,
+        "rate": 0.8571428571428571
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 7,
+        "passed": 6,
+        "rate": 0.8571428571428571
+      },
+      "strict_collision_pass": {
+        "denominator": 7,
+        "passed": 6,
+        "rate": 0.8571428571428571
+      }
+    },
+    "Globe": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 441,
+        "passed_states": 357,
+        "rate": 0.8095238095238095
+      },
+      "collision_state_rate": {
+        "collision_states": 214,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1676,
+        "executed_states": 1676,
+        "observed_collision_rate_executed": 0.1276849642004773,
+        "observed_collision_states": 214,
+        "rate": 0.1276849642004773,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 19,
+        "fully_measured_assets": 19,
+        "maximum_observed_normalized": 0.2818433570570802,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 19,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 19,
+        "passed": 17,
+        "rate": 0.8947368421052632
+      },
+      "rest_all_pair_cf": {
+        "denominator": 19,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 19,
+        "passed": 17,
+        "rate": 0.8947368421052632
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 19,
+        "passed": 17,
+        "rate": 0.8947368421052632
+      },
+      "strict_collision_pass": {
+        "denominator": 19,
+        "passed": 17,
+        "rate": 0.8947368421052632
+      }
+    },
+    "Kettle": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 252,
+        "passed_states": 219,
+        "rate": 0.8690476190476191
+      },
+      "collision_state_rate": {
+        "collision_states": 67,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 967,
+        "executed_states": 967,
+        "observed_collision_rate_executed": 0.06928645294725956,
+        "observed_collision_states": 67,
+        "rate": 0.06928645294725956,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 11,
+        "fully_measured_assets": 11,
+        "maximum_observed_normalized": 0.1259619499315183,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 11,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 11,
+        "passed": 10,
+        "rate": 0.9090909090909091
+      },
+      "rest_all_pair_cf": {
+        "denominator": 11,
+        "passed": 2,
+        "rate": 0.18181818181818182
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 11,
+        "passed": 10,
+        "rate": 0.9090909090909091
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 11,
+        "passed": 10,
+        "rate": 0.9090909090909091
+      },
+      "strict_collision_pass": {
+        "denominator": 11,
+        "passed": 10,
+        "rate": 0.9090909090909091
+      }
+    },
+    "Keyboard": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 24738,
+        "passed_states": 6671,
+        "rate": 0.26966610073571023
+      },
+      "collision_state_rate": {
+        "collision_states": 18650,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 25518,
+        "executed_states": 25518,
+        "observed_collision_rate_executed": 0.7308566502076965,
+        "observed_collision_states": 18650,
+        "rate": 0.7308566502076965,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 12,
+        "fully_measured_assets": 12,
+        "maximum_observed_normalized": 0.020002458143269845,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 12,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 12,
+        "passed": 3,
+        "rate": 0.25
+      },
+      "rest_all_pair_cf": {
+        "denominator": 12,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 12,
+        "passed": 4,
+        "rate": 0.3333333333333333
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 12,
+        "passed": 3,
+        "rate": 0.25
+      },
+      "strict_collision_pass": {
+        "denominator": 12,
+        "passed": 3,
+        "rate": 0.25
+      }
+    },
+    "KitchenPot": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 168,
+        "passed_states": 168,
+        "rate": 1.0
+      },
+      "collision_state_rate": {
+        "collision_states": 0,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 688,
+        "executed_states": 688,
+        "observed_collision_rate_executed": 0.0,
+        "observed_collision_states": 0,
+        "rate": 0.0,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 8,
+        "fully_measured_assets": 8,
+        "maximum_observed_normalized": 0.02867681950293039,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 8,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 8,
+        "passed": 8,
+        "rate": 1.0
+      },
+      "rest_all_pair_cf": {
+        "denominator": 8,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 8,
+        "passed": 8,
+        "rate": 1.0
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 8,
+        "passed": 8,
+        "rate": 1.0
+      },
+      "strict_collision_pass": {
+        "denominator": 8,
+        "passed": 8,
+        "rate": 1.0
+      }
+    },
+    "Knife": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 1071,
+        "passed_states": 827,
+        "rate": 0.7721755368814193
+      },
+      "collision_state_rate": {
+        "collision_states": 404,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 2501,
+        "executed_states": 2501,
+        "observed_collision_rate_executed": 0.16153538584566174,
+        "observed_collision_states": 404,
+        "rate": 0.16153538584566174,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 22,
+        "fully_measured_assets": 22,
+        "maximum_observed_normalized": 0.04254863000942227,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 22,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 22,
+        "passed": 17,
+        "rate": 0.7727272727272727
+      },
+      "rest_all_pair_cf": {
+        "denominator": 22,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 22,
+        "passed": 19,
+        "rate": 0.8636363636363636
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 22,
+        "passed": 17,
+        "rate": 0.7727272727272727
+      },
+      "strict_collision_pass": {
+        "denominator": 22,
+        "passed": 17,
+        "rate": 0.7727272727272727
+      }
+    },
+    "Lamp": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 672,
+        "passed_states": 629,
+        "rate": 0.9360119047619048
+      },
+      "collision_state_rate": {
+        "collision_states": 49,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1517,
+        "executed_states": 1517,
+        "observed_collision_rate_executed": 0.032300593276203035,
+        "observed_collision_states": 49,
+        "rate": 0.032300593276203035,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 13,
+        "fully_measured_assets": 13,
+        "maximum_observed_normalized": 0.06522300199934875,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 13,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 13,
+        "passed": 11,
+        "rate": 0.8461538461538461
+      },
+      "rest_all_pair_cf": {
+        "denominator": 13,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 13,
+        "passed": 12,
+        "rate": 0.9230769230769231
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 13,
+        "passed": 12,
+        "rate": 0.9230769230769231
+      },
+      "strict_collision_pass": {
+        "denominator": 13,
+        "passed": 11,
+        "rate": 0.8461538461538461
+      }
+    },
+    "Laptop": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 504,
+        "passed_states": 462,
+        "rate": 0.9166666666666666
+      },
+      "collision_state_rate": {
+        "collision_states": 172,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 2064,
+        "executed_states": 1892,
+        "observed_collision_rate_executed": 0.0,
+        "observed_collision_states": 0,
+        "rate": 0.08333333333333333,
+        "unexecuted_states": 172
+      },
+      "max_penetration": {
+        "denominator": 24,
+        "fully_measured_assets": 22,
+        "maximum_observed_normalized": 0.03507142385912882,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 22,
+        "status": "PARTIAL"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 24,
+        "passed": 22,
+        "rate": 0.9166666666666666
+      },
+      "rest_all_pair_cf": {
+        "denominator": 24,
+        "passed": 1,
+        "rate": 0.041666666666666664
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 24,
+        "passed": 22,
+        "rate": 0.9166666666666666
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 24,
+        "passed": 22,
+        "rate": 0.9166666666666666
+      },
+      "strict_collision_pass": {
+        "denominator": 24,
+        "passed": 22,
+        "rate": 0.9166666666666666
+      }
+    },
+    "Lighter": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 546,
+        "passed_states": 288,
+        "rate": 0.5274725274725275
+      },
+      "collision_state_rate": {
+        "collision_states": 502,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1261,
+        "executed_states": 1261,
+        "observed_collision_rate_executed": 0.3980967486122125,
+        "observed_collision_states": 502,
+        "rate": 0.3980967486122125,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 11,
+        "fully_measured_assets": 11,
+        "maximum_observed_normalized": 0.12916897533324853,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 11,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 11,
+        "passed": 3,
+        "rate": 0.2727272727272727
+      },
+      "rest_all_pair_cf": {
+        "denominator": 11,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 11,
+        "passed": 5,
+        "rate": 0.45454545454545453
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 11,
+        "passed": 3,
+        "rate": 0.2727272727272727
+      },
+      "strict_collision_pass": {
+        "denominator": 11,
+        "passed": 3,
+        "rate": 0.2727272727272727
+      }
+    },
+    "Microwave": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 357,
+        "passed_states": 315,
+        "rate": 0.8823529411764706
+      },
+      "collision_state_rate": {
+        "collision_states": 172,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 877,
+        "executed_states": 705,
+        "observed_collision_rate_executed": 0.0,
+        "observed_collision_states": 0,
+        "rate": 0.1961231470923603,
+        "unexecuted_states": 172
+      },
+      "max_penetration": {
+        "denominator": 8,
+        "fully_measured_assets": 6,
+        "maximum_observed_normalized": 0.10767215864690158,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 6,
+        "status": "PARTIAL"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 8,
+        "passed": 6,
+        "rate": 0.75
+      },
+      "rest_all_pair_cf": {
+        "denominator": 8,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 8,
+        "passed": 6,
+        "rate": 0.75
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 8,
+        "passed": 6,
+        "rate": 0.75
+      },
+      "strict_collision_pass": {
+        "denominator": 8,
+        "passed": 6,
+        "rate": 0.75
+      }
+    },
+    "Mouse": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 399,
+        "passed_states": 63,
+        "rate": 0.15789473684210525
+      },
+      "collision_state_rate": {
+        "collision_states": 596,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 789,
+        "executed_states": 789,
+        "observed_collision_rate_executed": 0.7553865652724968,
+        "observed_collision_states": 596,
+        "rate": 0.7553865652724968,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 6,
+        "fully_measured_assets": 6,
+        "maximum_observed_normalized": 0.1195447940809925,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 6,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 6,
+        "passed": 2,
+        "rate": 0.3333333333333333
+      },
+      "rest_all_pair_cf": {
+        "denominator": 6,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 6,
+        "passed": 2,
+        "rate": 0.3333333333333333
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 6,
+        "passed": 2,
+        "rate": 0.3333333333333333
+      },
+      "strict_collision_pass": {
+        "denominator": 6,
+        "passed": 2,
+        "rate": 0.3333333333333333
+      }
+    },
+    "Oven": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 630,
+        "passed_states": 535,
+        "rate": 0.8492063492063492
+      },
+      "collision_state_rate": {
+        "collision_states": 207,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1085,
+        "executed_states": 999,
+        "observed_collision_rate_executed": 0.12112112112112113,
+        "observed_collision_states": 121,
+        "rate": 0.19078341013824884,
+        "unexecuted_states": 86
+      },
+      "max_penetration": {
+        "denominator": 7,
+        "fully_measured_assets": 6,
+        "maximum_observed_normalized": 0.25635778822192484,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 6,
+        "status": "PARTIAL"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 7,
+        "passed": 5,
+        "rate": 0.7142857142857143
+      },
+      "rest_all_pair_cf": {
+        "denominator": 7,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 7,
+        "passed": 5,
+        "rate": 0.7142857142857143
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 7,
+        "passed": 5,
+        "rate": 0.7142857142857143
+      },
+      "strict_collision_pass": {
+        "denominator": 7,
+        "passed": 5,
+        "rate": 0.7142857142857143
+      }
+    },
+    "Pen": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 399,
+        "passed_states": 399,
+        "rate": 1.0
+      },
+      "collision_state_rate": {
+        "collision_states": 0,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1569,
+        "executed_states": 1569,
+        "observed_collision_rate_executed": 0.0,
+        "observed_collision_states": 0,
+        "rate": 0.0,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 18,
+        "fully_measured_assets": 18,
+        "maximum_observed_normalized": 0.1267661637920254,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 18,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 18,
+        "passed": 18,
+        "rate": 1.0
+      },
+      "rest_all_pair_cf": {
+        "denominator": 18,
+        "passed": 2,
+        "rate": 0.1111111111111111
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 18,
+        "passed": 18,
+        "rate": 1.0
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 18,
+        "passed": 18,
+        "rate": 1.0
+      },
+      "strict_collision_pass": {
+        "denominator": 18,
+        "passed": 18,
+        "rate": 1.0
+      }
+    },
+    "Phone": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 2793,
+        "passed_states": 699,
+        "rate": 0.2502685284640172
+      },
+      "collision_state_rate": {
+        "collision_states": 2310,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 3313,
+        "executed_states": 3313,
+        "observed_collision_rate_executed": 0.6972532447932388,
+        "observed_collision_states": 2310,
+        "rate": 0.6972532447932388,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 8,
+        "fully_measured_assets": 8,
+        "maximum_observed_normalized": 0.039611079009783806,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 8,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 8,
+        "passed": 4,
+        "rate": 0.5
+      },
+      "rest_all_pair_cf": {
+        "denominator": 8,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 8,
+        "passed": 4,
+        "rate": 0.5
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 8,
+        "passed": 3,
+        "rate": 0.375
+      },
+      "strict_collision_pass": {
+        "denominator": 8,
+        "passed": 3,
+        "rate": 0.375
+      }
+    },
+    "Pliers": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 315,
+        "passed_states": 315,
+        "rate": 1.0
+      },
+      "collision_state_rate": {
+        "collision_states": 0,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1290,
+        "executed_states": 1290,
+        "observed_collision_rate_executed": 0.0,
+        "observed_collision_states": 0,
+        "rate": 0.0,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 15,
+        "fully_measured_assets": 15,
+        "maximum_observed_normalized": 0.07579440073074066,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 15,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 15,
+        "passed": 15,
+        "rate": 1.0
+      },
+      "rest_all_pair_cf": {
+        "denominator": 15,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 15,
+        "passed": 15,
+        "rate": 1.0
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 15,
+        "passed": 15,
+        "rate": 1.0
+      },
+      "strict_collision_pass": {
+        "denominator": 15,
+        "passed": 15,
+        "rate": 1.0
+      }
+    },
+    "Printer": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 2541,
+        "passed_states": 2373,
+        "rate": 0.9338842975206612
+      },
+      "collision_state_rate": {
+        "collision_states": 233,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 3061,
+        "executed_states": 3061,
+        "observed_collision_rate_executed": 0.0761189153871284,
+        "observed_collision_states": 233,
+        "rate": 0.0761189153871284,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 8,
+        "fully_measured_assets": 8,
+        "maximum_observed_normalized": 0.07209066229771699,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 8,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 8,
+        "passed": 7,
+        "rate": 0.875
+      },
+      "rest_all_pair_cf": {
+        "denominator": 8,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 8,
+        "passed": 7,
+        "rate": 0.875
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 8,
+        "passed": 7,
+        "rate": 0.875
+      },
+      "strict_collision_pass": {
+        "denominator": 8,
+        "passed": 7,
+        "rate": 0.875
+      }
+    },
+    "Refrigerator": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 441,
+        "passed_states": 314,
+        "rate": 0.7120181405895691
+      },
+      "collision_state_rate": {
+        "collision_states": 204,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1221,
+        "executed_states": 1221,
+        "observed_collision_rate_executed": 0.16707616707616707,
+        "observed_collision_states": 204,
+        "rate": 0.16707616707616707,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 12,
+        "fully_measured_assets": 12,
+        "maximum_observed_normalized": 0.07234752053413969,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 12,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 12,
+        "passed": 8,
+        "rate": 0.6666666666666666
+      },
+      "rest_all_pair_cf": {
+        "denominator": 12,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 12,
+        "passed": 8,
+        "rate": 0.6666666666666666
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 12,
+        "passed": 8,
+        "rate": 0.6666666666666666
+      },
+      "strict_collision_pass": {
+        "denominator": 12,
+        "passed": 8,
+        "rate": 0.6666666666666666
+      }
+    },
+    "Remote": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 13671,
+        "passed_states": 12432,
+        "rate": 0.9093701996927803
+      },
+      "collision_state_rate": {
+        "collision_states": 1304,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 15101,
+        "executed_states": 15101,
+        "observed_collision_rate_executed": 0.08635189722534932,
+        "observed_collision_states": 1304,
+        "rate": 0.08635189722534932,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 22,
+        "fully_measured_assets": 22,
+        "maximum_observed_normalized": 0.031521196964992566,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 22,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 22,
+        "passed": 21,
+        "rate": 0.9545454545454546
+      },
+      "rest_all_pair_cf": {
+        "denominator": 22,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 22,
+        "passed": 21,
+        "rate": 0.9545454545454546
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 22,
+        "passed": 21,
+        "rate": 0.9545454545454546
+      },
+      "strict_collision_pass": {
+        "denominator": 22,
+        "passed": 21,
+        "rate": 0.9545454545454546
+      }
+    },
+    "Safe": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 966,
+        "passed_states": 304,
+        "rate": 0.3146997929606625
+      },
+      "collision_state_rate": {
+        "collision_states": 672,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1486,
+        "executed_states": 1486,
+        "observed_collision_rate_executed": 0.4522207267833109,
+        "observed_collision_states": 672,
+        "rate": 0.4522207267833109,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 8,
+        "fully_measured_assets": 8,
+        "maximum_observed_normalized": 0.07026076746573404,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 8,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 8,
+        "passed": 5,
+        "rate": 0.625
+      },
+      "rest_all_pair_cf": {
+        "denominator": 8,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 8,
+        "passed": 4,
+        "rate": 0.5
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 8,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "strict_collision_pass": {
+        "denominator": 8,
+        "passed": 0,
+        "rate": 0.0
+      }
+    },
+    "Scissors": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 378,
+        "passed_states": 378,
+        "rate": 1.0
+      },
+      "collision_state_rate": {
+        "collision_states": 0,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1548,
+        "executed_states": 1548,
+        "observed_collision_rate_executed": 0.0,
+        "observed_collision_states": 0,
+        "rate": 0.0,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 18,
+        "fully_measured_assets": 18,
+        "maximum_observed_normalized": 0.03354519299322932,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 18,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 18,
+        "passed": 18,
+        "rate": 1.0
+      },
+      "rest_all_pair_cf": {
+        "denominator": 18,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 18,
+        "passed": 18,
+        "rate": 1.0
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 18,
+        "passed": 18,
+        "rate": 1.0
+      },
+      "strict_collision_pass": {
+        "denominator": 18,
+        "passed": 18,
+        "rate": 1.0
+      }
+    },
+    "Stapler": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 420,
+        "passed_states": 38,
+        "rate": 0.09047619047619047
+      },
+      "collision_state_rate": {
+        "collision_states": 978,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1070,
+        "executed_states": 1070,
+        "observed_collision_rate_executed": 0.914018691588785,
+        "observed_collision_states": 978,
+        "rate": 0.914018691588785,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 10,
+        "fully_measured_assets": 10,
+        "maximum_observed_normalized": 0.20060096587152973,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 10,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 10,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_all_pair_cf": {
+        "denominator": 10,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 10,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 10,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "strict_collision_pass": {
+        "denominator": 10,
+        "passed": 0,
+        "rate": 0.0
+      }
+    },
+    "StorageFurniture": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 4914,
+        "passed_states": 4124,
+        "rate": 0.8392348392348392
+      },
+      "collision_state_rate": {
+        "collision_states": 1142,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 11674,
+        "executed_states": 11674,
+        "observed_collision_rate_executed": 0.09782422477299983,
+        "observed_collision_states": 1142,
+        "rate": 0.09782422477299983,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 104,
+        "fully_measured_assets": 104,
+        "maximum_observed_normalized": 0.41202189782378434,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 104,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 104,
+        "passed": 95,
+        "rate": 0.9134615384615384
+      },
+      "rest_all_pair_cf": {
+        "denominator": 104,
+        "passed": 6,
+        "rate": 0.057692307692307696
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 104,
+        "passed": 94,
+        "rate": 0.9038461538461539
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 104,
+        "passed": 92,
+        "rate": 0.8846153846153846
+      },
+      "strict_collision_pass": {
+        "denominator": 104,
+        "passed": 91,
+        "rate": 0.875
+      }
+    },
+    "Suitcase": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 693,
+        "passed_states": 504,
+        "rate": 0.7272727272727273
+      },
+      "collision_state_rate": {
+        "collision_states": 254,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1213,
+        "executed_states": 1213,
+        "observed_collision_rate_executed": 0.20939818631492169,
+        "observed_collision_states": 254,
+        "rate": 0.20939818631492169,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 8,
+        "fully_measured_assets": 8,
+        "maximum_observed_normalized": 0.045221329642682814,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 8,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 8,
+        "passed": 7,
+        "rate": 0.875
+      },
+      "rest_all_pair_cf": {
+        "denominator": 8,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 8,
+        "passed": 7,
+        "rate": 0.875
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 8,
+        "passed": 7,
+        "rate": 0.875
+      },
+      "strict_collision_pass": {
+        "denominator": 8,
+        "passed": 7,
+        "rate": 0.875
+      }
+    },
+    "Switch": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 1071,
+        "passed_states": 1071,
+        "rate": 1.0
+      },
+      "collision_state_rate": {
+        "collision_states": 0,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 2761,
+        "executed_states": 2761,
+        "observed_collision_rate_executed": 0.0,
+        "observed_collision_states": 0,
+        "rate": 0.0,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 26,
+        "fully_measured_assets": 26,
+        "maximum_observed_normalized": 0.06962131956241266,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 26,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 26,
+        "passed": 26,
+        "rate": 1.0
+      },
+      "rest_all_pair_cf": {
+        "denominator": 26,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 26,
+        "passed": 26,
+        "rate": 1.0
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 26,
+        "passed": 26,
+        "rate": 1.0
+      },
+      "strict_collision_pass": {
+        "denominator": 26,
+        "passed": 26,
+        "rate": 1.0
+      }
+    },
+    "Table": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 2394,
+        "passed_states": 2109,
+        "rate": 0.8809523809523809
+      },
+      "collision_state_rate": {
+        "collision_states": 726,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 4994,
+        "executed_states": 4673,
+        "observed_collision_rate_executed": 0.08666809330194736,
+        "observed_collision_states": 405,
+        "rate": 0.14537444933920704,
+        "unexecuted_states": 321
+      },
+      "max_penetration": {
+        "denominator": 40,
+        "fully_measured_assets": 37,
+        "maximum_observed_normalized": 0.1531184986789468,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 37,
+        "status": "PARTIAL"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 40,
+        "passed": 30,
+        "rate": 0.75
+      },
+      "rest_all_pair_cf": {
+        "denominator": 40,
+        "passed": 2,
+        "rate": 0.05
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 40,
+        "passed": 33,
+        "rate": 0.825
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 40,
+        "passed": 31,
+        "rate": 0.775
+      },
+      "strict_collision_pass": {
+        "denominator": 40,
+        "passed": 30,
+        "rate": 0.75
+      }
+    },
+    "Toaster": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 945,
+        "passed_states": 944,
+        "rate": 0.9989417989417989
+      },
+      "collision_state_rate": {
+        "collision_states": 3,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1725,
+        "executed_states": 1725,
+        "observed_collision_rate_executed": 0.0017391304347826088,
+        "observed_collision_states": 3,
+        "rate": 0.0017391304347826088,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 12,
+        "fully_measured_assets": 12,
+        "maximum_observed_normalized": 0.12397746254143611,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 12,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 12,
+        "passed": 11,
+        "rate": 0.9166666666666666
+      },
+      "rest_all_pair_cf": {
+        "denominator": 12,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 12,
+        "passed": 12,
+        "rate": 1.0
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 12,
+        "passed": 11,
+        "rate": 0.9166666666666666
+      },
+      "strict_collision_pass": {
+        "denominator": 12,
+        "passed": 11,
+        "rate": 0.9166666666666666
+      }
+    },
+    "Toilet": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 1134,
+        "passed_states": 841,
+        "rate": 0.7416225749559083
+      },
+      "collision_state_rate": {
+        "collision_states": 556,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 2694,
+        "executed_states": 2694,
+        "observed_collision_rate_executed": 0.20638455827765403,
+        "observed_collision_states": 556,
+        "rate": 0.20638455827765403,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 24,
+        "fully_measured_assets": 24,
+        "maximum_observed_normalized": 0.2923133940099977,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 24,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 24,
+        "passed": 19,
+        "rate": 0.7916666666666666
+      },
+      "rest_all_pair_cf": {
+        "denominator": 24,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 24,
+        "passed": 21,
+        "rate": 0.875
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 24,
+        "passed": 19,
+        "rate": 0.7916666666666666
+      },
+      "strict_collision_pass": {
+        "denominator": 24,
+        "passed": 19,
+        "rate": 0.7916666666666666
+      }
+    },
+    "TrashCan": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 819,
+        "passed_states": 766,
+        "rate": 0.9352869352869353
+      },
+      "collision_state_rate": {
+        "collision_states": 101,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 2184,
+        "executed_states": 2184,
+        "observed_collision_rate_executed": 0.04624542124542125,
+        "observed_collision_states": 101,
+        "rate": 0.04624542124542125,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 21,
+        "fully_measured_assets": 21,
+        "maximum_observed_normalized": 0.42682097453515927,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 21,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 21,
+        "passed": 18,
+        "rate": 0.8571428571428571
+      },
+      "rest_all_pair_cf": {
+        "denominator": 21,
+        "passed": 1,
+        "rate": 0.047619047619047616
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 21,
+        "passed": 19,
+        "rate": 0.9047619047619048
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 21,
+        "passed": 18,
+        "rate": 0.8571428571428571
+      },
+      "strict_collision_pass": {
+        "denominator": 21,
+        "passed": 18,
+        "rate": 0.8571428571428571
+      }
+    },
+    "USB": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 315,
+        "passed_states": 315,
+        "rate": 1.0
+      },
+      "collision_state_rate": {
+        "collision_states": 0,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1290,
+        "executed_states": 1290,
+        "observed_collision_rate_executed": 0.0,
+        "observed_collision_states": 0,
+        "rate": 0.0,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 15,
+        "fully_measured_assets": 15,
+        "maximum_observed_normalized": 0.16133091631659285,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 15,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 15,
+        "passed": 15,
+        "rate": 1.0
+      },
+      "rest_all_pair_cf": {
+        "denominator": 15,
+        "passed": 4,
+        "rate": 0.26666666666666666
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 15,
+        "passed": 15,
+        "rate": 1.0
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 15,
+        "passed": 15,
+        "rate": 1.0
+      },
+      "strict_collision_pass": {
+        "denominator": 15,
+        "passed": 15,
+        "rate": 1.0
+      }
+    },
+    "WashingMachine": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 714,
+        "passed_states": 714,
+        "rate": 1.0
+      },
+      "collision_state_rate": {
+        "collision_states": 0,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 1104,
+        "executed_states": 1104,
+        "observed_collision_rate_executed": 0.0,
+        "observed_collision_states": 0,
+        "rate": 0.0,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 6,
+        "fully_measured_assets": 6,
+        "maximum_observed_normalized": 0.10486905353064084,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 6,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 6,
+        "passed": 6,
+        "rate": 1.0
+      },
+      "rest_all_pair_cf": {
+        "denominator": 6,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 6,
+        "passed": 6,
+        "rate": 1.0
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 6,
+        "passed": 6,
+        "rate": 1.0
+      },
+      "strict_collision_pass": {
+        "denominator": 6,
+        "passed": 6,
+        "rate": 1.0
+      }
+    },
+    "Window": {
+      "aor": {
+        "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+        "status": "N/E"
+      },
+      "collision_free_range": {
+        "denominator": 1428,
+        "passed_states": 433,
+        "rate": 0.30322128851540614
+      },
+      "collision_state_rate": {
+        "collision_states": 2097,
+        "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+        "denominator": 3313,
+        "executed_states": 3313,
+        "observed_collision_rate_executed": 0.6329610624811349,
+        "observed_collision_states": 2097,
+        "rate": 0.6329610624811349,
+        "unexecuted_states": 0
+      },
+      "max_penetration": {
+        "denominator": 29,
+        "fully_measured_assets": 29,
+        "maximum_observed_normalized": 0.6330174807423453,
+        "normalization": "release bounding_box.json diagonal",
+        "observed_assets": 29,
+        "status": "COMPLETE"
+      },
+      "multi_joint_sobol_cf": {
+        "denominator": 29,
+        "passed": 9,
+        "rate": 0.3103448275862069
+      },
+      "rest_all_pair_cf": {
+        "denominator": 29,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "rest_non_adjacent_cf": {
+        "denominator": 29,
+        "passed": 10,
+        "rate": 0.3448275862068966
+      },
+      "single_joint_sweep_cf": {
+        "denominator": 29,
+        "passed": 8,
+        "rate": 0.27586206896551724
+      },
+      "strict_collision_pass": {
+        "denominator": 29,
+        "passed": 8,
+        "rate": 0.27586206896551724
+      }
+    }
+  },
+  "claim_boundary": {
+    "continuous_collision_detection": "not_run",
+    "full_release_result": false,
+    "physical_dynamics_validity": "not_evaluated",
+    "semantic_joint_correctness": "not_evaluated",
+    "shared_category_balanced_result": false
+  },
+  "cohort": {
+    "category_count": 46,
+    "child_timeouts": 0,
+    "label": "PartNet-Mobility N=800 sampled release cohort",
+    "load_success": 787,
+    "measurement_complete": 787,
+    "selected": 800
+  },
+  "metrics": {
+    "aor": {
+      "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+      "status": "N/E"
+    },
+    "collision_free_range": {
+      "denominator": 85638,
+      "passed_states": 48011,
+      "rate": 0.5606272916228777
+    },
+    "collision_state_rate": {
+      "collision_states": 47881,
+      "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+      "denominator": 137638,
+      "executed_states": 136100,
+      "observed_collision_rate_executed": 0.3405069801616458,
+      "observed_collision_states": 46343,
+      "rate": 0.3478763132274517,
+      "unexecuted_states": 1538
+    },
+    "max_penetration": {
+      "denominator": 800,
+      "fully_measured_assets": 787,
+      "maximum_observed_normalized": 0.6330174807423453,
+      "normalization": "release bounding_box.json diagonal",
+      "observed_assets": 787,
+      "status": "PARTIAL"
+    },
+    "multi_joint_sobol_cf": {
+      "denominator": 800,
+      "passed": 579,
+      "rate": 0.72375
+    },
+    "rest_all_pair_cf": {
+      "denominator": 800,
+      "passed": 24,
+      "rate": 0.03
+    },
+    "rest_non_adjacent_cf": {
+      "denominator": 800,
+      "passed": 622,
+      "rate": 0.7775
+    },
+    "single_joint_sweep_cf": {
+      "denominator": 800,
+      "passed": 591,
+      "rate": 0.73875
+    },
+    "strict_collision_pass": {
+      "denominator": 800,
+      "passed": 567,
+      "rate": 0.70875
+    }
+  },
+  "protocol_id": "urdf_sim_ready_table4_partnet_mobility_n800_v1",
+  "status": "COMPLETE_WITH_RETAINED_FAILURES"
+}

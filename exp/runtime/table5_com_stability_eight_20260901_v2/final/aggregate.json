@@ -1,0 +1,554 @@
+{
+  "classification": "complete",
+  "datasets": [
+    {
+      "dataset_name": "Articraft-10K",
+      "dataset_slug": "articraft_10k",
+      "metrics": {
+        "dataset_attributable_com_static_stability": {
+          "conditional_ready_count": 101,
+          "conditional_ready_denominator": 114,
+          "conditional_ready_percentage": 88.59649122807018,
+          "count": 101,
+          "denominator": 159,
+          "percentage": 63.522012578616355
+        },
+        "dataset_attributable_com_support_margin": {
+          "count": 111,
+          "coverage_percentage": 69.81132075471699,
+          "denominator": 159,
+          "mean_normalized_signed_margin": 0.19911424665259603,
+          "mean_signed_margin_mm": 240.75133847919693,
+          "median_normalized_signed_margin": 0.22360679774785025,
+          "median_signed_margin_mm": 81.7653507219149
+        },
+        "engine_finalized_diagnostic": {
+          "com_static_stability": {
+            "count": 142,
+            "denominator": 159,
+            "percentage": 89.30817610062893
+          },
+          "com_support_margin": {
+            "count": 155,
+            "coverage_percentage": 97.48427672955975,
+            "denominator": 159,
+            "mean_normalized_signed_margin": 0.1978788048898862,
+            "mean_signed_margin_mm": 202.76434140885522,
+            "median_normalized_signed_margin": 0.24282146230952614,
+            "median_signed_margin_mm": 83.14061307788886
+          }
+        },
+        "physics_parameter_coverage": {
+          "count": 114,
+          "denominator": 159,
+          "percentage": 71.69811320754717
+        }
+      },
+      "n": 159,
+      "physics_status_breakdown": {
+        "blocked": {
+          "completed": 45,
+          "n": 45,
+          "static_pass": 41,
+          "support_available": 44
+        },
+        "ready": {
+          "completed": 114,
+          "n": 114,
+          "static_pass": 101,
+          "support_available": 111
+        }
+      },
+      "prepared_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_com_stability_eight_20260901_v2/eligible/articraft_10k/manifest.json",
+      "prepared_manifest_sha256": "903da3f0bcddfb76404e79ec84e117c88d8f7c6aa2d3bfca6bf3e3a6d4ae76f9",
+      "run_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_com_stability_eight_20260901_v2/runs/articraft_10k",
+      "terminal_record_count": 159,
+      "valid_rollout_count": 159
+    },
+    {
+      "dataset_name": "LAM released outputs",
+      "dataset_slug": "lam_released_outputs",
+      "metrics": {
+        "dataset_attributable_com_static_stability": {
+          "conditional_ready_count": 3,
+          "conditional_ready_denominator": 4,
+          "conditional_ready_percentage": 75.0,
+          "count": 3,
+          "denominator": 75,
+          "percentage": 4.0
+        },
+        "dataset_attributable_com_support_margin": {
+          "count": 4,
+          "coverage_percentage": 5.333333333333333,
+          "denominator": 75,
+          "mean_normalized_signed_margin": 0.20643200674860668,
+          "mean_signed_margin_mm": 364.9962621562169,
+          "median_normalized_signed_margin": 0.27501101286849616,
+          "median_signed_margin_mm": 486.25393044198205
+        },
+        "engine_finalized_diagnostic": {
+          "com_static_stability": {
+            "count": 53,
+            "denominator": 75,
+            "percentage": 70.66666666666667
+          },
+          "com_support_margin": {
+            "count": 67,
+            "coverage_percentage": 89.33333333333333,
+            "denominator": 75,
+            "mean_normalized_signed_margin": 0.13115286320098218,
+            "mean_signed_margin_mm": 508.8954232439925,
+            "median_normalized_signed_margin": 0.20471934375935805,
+            "median_signed_margin_mm": 326.1454742116222
+          }
+        },
+        "physics_parameter_coverage": {
+          "count": 4,
+          "denominator": 75,
+          "percentage": 5.333333333333333
+        }
+      },
+      "n": 75,
+      "physics_status_breakdown": {
+        "blocked": {
+          "completed": 71,
+          "n": 71,
+          "static_pass": 50,
+          "support_available": 63
+        },
+        "ready": {
+          "completed": 4,
+          "n": 4,
+          "static_pass": 3,
+          "support_available": 4
+        }
+      },
+      "prepared_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_com_stability_eight_20260901_v2/eligible/lam_released_outputs/manifest.json",
+      "prepared_manifest_sha256": "11a8f85870b9092842bdde081b07bffbc2abcf333be8a1bdc89afe9722b722cb",
+      "run_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_com_stability_eight_20260901_v2/runs/lam_released_outputs",
+      "terminal_record_count": 75,
+      "valid_rollout_count": 75
+    },
+    {
+      "dataset_name": "Artiverse",
+      "dataset_slug": "artiverse",
+      "metrics": {
+        "dataset_attributable_com_static_stability": {
+          "conditional_ready_count": 147,
+          "conditional_ready_denominator": 160,
+          "conditional_ready_percentage": 91.875,
+          "count": 147,
+          "denominator": 160,
+          "percentage": 91.875
+        },
+        "dataset_attributable_com_support_margin": {
+          "count": 159,
+          "coverage_percentage": 99.375,
+          "denominator": 160,
+          "mean_normalized_signed_margin": 0.16571119070406679,
+          "mean_signed_margin_mm": 147.6521227694299,
+          "median_normalized_signed_margin": 0.21060975982422034,
+          "median_signed_margin_mm": 169.76153176695917
+        },
+        "engine_finalized_diagnostic": {
+          "com_static_stability": {
+            "count": 147,
+            "denominator": 160,
+            "percentage": 91.875
+          },
+          "com_support_margin": {
+            "count": 159,
+            "coverage_percentage": 99.375,
+            "denominator": 160,
+            "mean_normalized_signed_margin": 0.16571119070406679,
+            "mean_signed_margin_mm": 147.6521227694299,
+            "median_normalized_signed_margin": 0.21060975982422034,
+            "median_signed_margin_mm": 169.76153176695917
+          }
+        },
+        "physics_parameter_coverage": {
+          "count": 160,
+          "denominator": 160,
+          "percentage": 100.0
+        }
+      },
+      "n": 160,
+      "physics_status_breakdown": {
+        "ready": {
+          "completed": 160,
+          "n": 160,
+          "static_pass": 147,
+          "support_available": 159
+        }
+      },
+      "prepared_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_com_stability_eight_20260901_v2/eligible/artiverse/manifest.json",
+      "prepared_manifest_sha256": "31774cbf1d0cd1956949babe64f0e36cb5644ba13b8fc920a4ee2f417cde23b3",
+      "run_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_com_stability_eight_20260901_v2/runs/artiverse",
+      "terminal_record_count": 160,
+      "valid_rollout_count": 160
+    },
+    {
+      "dataset_name": "PartNet-Mobility",
+      "dataset_slug": "partnet_mobility",
+      "metrics": {
+        "dataset_attributable_com_static_stability": {
+          "conditional_ready_count": 0,
+          "conditional_ready_denominator": 0,
+          "conditional_ready_percentage": null,
+          "count": 0,
+          "denominator": 158,
+          "percentage": 0.0
+        },
+        "dataset_attributable_com_support_margin": {
+          "count": 0,
+          "coverage_percentage": 0.0,
+          "denominator": 158,
+          "mean_normalized_signed_margin": null,
+          "mean_signed_margin_mm": null,
+          "median_normalized_signed_margin": null,
+          "median_signed_margin_mm": null
+        },
+        "engine_finalized_diagnostic": {
+          "com_static_stability": {
+            "count": 151,
+            "denominator": 158,
+            "percentage": 95.56962025316456
+          },
+          "com_support_margin": {
+            "count": 157,
+            "coverage_percentage": 99.36708860759494,
+            "denominator": 158,
+            "mean_normalized_signed_margin": 0.1923327329758779,
+            "mean_signed_margin_mm": 234.1496977189894,
+            "median_normalized_signed_margin": 0.21388387305014278,
+            "median_signed_margin_mm": 220.9175283484014
+          }
+        },
+        "physics_parameter_coverage": {
+          "count": 0,
+          "denominator": 158,
+          "percentage": 0.0
+        }
+      },
+      "n": 158,
+      "physics_status_breakdown": {
+        "blocked": {
+          "completed": 158,
+          "n": 158,
+          "static_pass": 151,
+          "support_available": 157
+        }
+      },
+      "prepared_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_com_stability_eight_20260901_v2/eligible/partnet_mobility/manifest.json",
+      "prepared_manifest_sha256": "9e5ab910f0a077442b57da7977b43ade0a5423381504638c83ff86e466a15d3c",
+      "run_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_com_stability_eight_20260901_v2/runs/partnet_mobility",
+      "terminal_record_count": 158,
+      "valid_rollout_count": 158
+    },
+    {
+      "dataset_name": "PhysX-Mobility",
+      "dataset_slug": "physx_mobility",
+      "metrics": {
+        "dataset_attributable_com_static_stability": {
+          "conditional_ready_count": 110,
+          "conditional_ready_denominator": 130,
+          "conditional_ready_percentage": 84.61538461538461,
+          "count": 110,
+          "denominator": 130,
+          "percentage": 84.61538461538461
+        },
+        "dataset_attributable_com_support_margin": {
+          "count": 129,
+          "coverage_percentage": 99.23076923076923,
+          "denominator": 130,
+          "mean_normalized_signed_margin": 0.09272082574300385,
+          "mean_signed_margin_mm": 322.02414875233507,
+          "median_normalized_signed_margin": 0.2352814575011916,
+          "median_signed_margin_mm": 384.9876408434866
+        },
+        "engine_finalized_diagnostic": {
+          "com_static_stability": {
+            "count": 110,
+            "denominator": 130,
+            "percentage": 84.61538461538461
+          },
+          "com_support_margin": {
+            "count": 129,
+            "coverage_percentage": 99.23076923076923,
+            "denominator": 130,
+            "mean_normalized_signed_margin": 0.09272082574300385,
+            "mean_signed_margin_mm": 322.02414875233507,
+            "median_normalized_signed_margin": 0.2352814575011916,
+            "median_signed_margin_mm": 384.9876408434866
+          }
+        },
+        "physics_parameter_coverage": {
+          "count": 130,
+          "denominator": 130,
+          "percentage": 100.0
+        }
+      },
+      "n": 130,
+      "physics_status_breakdown": {
+        "ready": {
+          "completed": 130,
+          "n": 130,
+          "static_pass": 110,
+          "support_available": 129
+        }
+      },
+      "prepared_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_com_stability_eight_20260901_v2/eligible/physx_mobility/manifest.json",
+      "prepared_manifest_sha256": "35e12ed0ed9daf1706e1edfe6e20ab9f3fe3075c8d42142a1932770238b60d24",
+      "run_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_com_stability_eight_20260901_v2/runs/physx_mobility",
+      "terminal_record_count": 130,
+      "valid_rollout_count": 130
+    },
+    {
+      "dataset_name": "SketchMobility",
+      "dataset_slug": "sketchmobility",
+      "metrics": {
+        "dataset_attributable_com_static_stability": {
+          "conditional_ready_count": 56,
+          "conditional_ready_denominator": 67,
+          "conditional_ready_percentage": 83.58208955223881,
+          "count": 56,
+          "denominator": 163,
+          "percentage": 34.355828220858896
+        },
+        "dataset_attributable_com_support_margin": {
+          "count": 63,
+          "coverage_percentage": 38.65030674846626,
+          "denominator": 163,
+          "mean_normalized_signed_margin": 0.19380950679165482,
+          "mean_signed_margin_mm": 102.88934640947227,
+          "median_normalized_signed_margin": 0.20324551889733639,
+          "median_signed_margin_mm": 96.27478036074426
+        },
+        "engine_finalized_diagnostic": {
+          "com_static_stability": {
+            "count": 144,
+            "denominator": 163,
+            "percentage": 88.34355828220859
+          },
+          "com_support_margin": {
+            "count": 158,
+            "coverage_percentage": 96.93251533742331,
+            "denominator": 163,
+            "mean_normalized_signed_margin": 0.1874183349637842,
+            "mean_signed_margin_mm": 122.93120540066964,
+            "median_normalized_signed_margin": 0.20594893236403294,
+            "median_signed_margin_mm": 108.11669304568494
+          }
+        },
+        "physics_parameter_coverage": {
+          "count": 67,
+          "denominator": 163,
+          "percentage": 41.104294478527606
+        }
+      },
+      "n": 163,
+      "physics_status_breakdown": {
+        "blocked": {
+          "completed": 96,
+          "n": 96,
+          "static_pass": 88,
+          "support_available": 95
+        },
+        "ready": {
+          "completed": 67,
+          "n": 67,
+          "static_pass": 56,
+          "support_available": 63
+        }
+      },
+      "prepared_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_com_stability_eight_20260901_v2/eligible/sketchmobility/manifest.json",
+      "prepared_manifest_sha256": "caa9406a184692b7972fa95b922a42ceb6ce2985885d10aedc6123b5ac245118",
+      "run_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_com_stability_eight_20260901_v2/runs/sketchmobility",
+      "terminal_record_count": 163,
+      "valid_rollout_count": 163
+    },
+    {
+      "dataset_name": "Infinigen-Sim",
+      "dataset_slug": "infinigen_sim",
+      "metrics": {
+        "dataset_attributable_com_static_stability": {
+          "conditional_ready_count": 0,
+          "conditional_ready_denominator": 0,
+          "conditional_ready_percentage": null,
+          "count": 0,
+          "denominator": 170,
+          "percentage": 0.0
+        },
+        "dataset_attributable_com_support_margin": {
+          "count": 0,
+          "coverage_percentage": 0.0,
+          "denominator": 170,
+          "mean_normalized_signed_margin": null,
+          "mean_signed_margin_mm": null,
+          "median_normalized_signed_margin": null,
+          "median_signed_margin_mm": null
+        },
+        "engine_finalized_diagnostic": {
+          "com_static_stability": {
+            "count": 161,
+            "denominator": 170,
+            "percentage": 94.70588235294117
+          },
+          "com_support_margin": {
+            "count": 170,
+            "coverage_percentage": 100.0,
+            "denominator": 170,
+            "mean_normalized_signed_margin": 0.21376852458459555,
+            "mean_signed_margin_mm": 285.91940667951036,
+            "median_normalized_signed_margin": 0.2706999411585021,
+            "median_signed_margin_mm": 163.8296120585212
+          }
+        },
+        "physics_parameter_coverage": {
+          "count": 0,
+          "denominator": 170,
+          "percentage": 0.0
+        }
+      },
+      "n": 170,
+      "physics_status_breakdown": {
+        "blocked": {
+          "completed": 170,
+          "n": 170,
+          "static_pass": 161,
+          "support_available": 170
+        }
+      },
+      "prepared_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_com_stability_eight_20260901_v2/eligible/infinigen_sim/manifest.json",
+      "prepared_manifest_sha256": "84be84015f404cfa6ae51ae80e8f6fa5c7948286f7c8f7f51c611bc35bb062f3",
+      "run_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_com_stability_eight_20260901_v2/runs/infinigen_sim",
+      "terminal_record_count": 170,
+      "valid_rollout_count": 170
+    },
+    {
+      "dataset_name": "Ours (PV-A)",
+      "dataset_slug": "pva",
+      "metrics": {
+        "dataset_attributable_com_static_stability": {
+          "conditional_ready_count": 139,
+          "conditional_ready_denominator": 156,
+          "conditional_ready_percentage": 89.1025641025641,
+          "count": 139,
+          "denominator": 156,
+          "percentage": 89.1025641025641
+        },
+        "dataset_attributable_com_support_margin": {
+          "count": 155,
+          "coverage_percentage": 99.35897435897436,
+          "denominator": 156,
+          "mean_normalized_signed_margin": 0.15915412938428,
+          "mean_signed_margin_mm": 158.67091840113864,
+          "median_normalized_signed_margin": 0.22506929921233085,
+          "median_signed_margin_mm": 97.94312686621419
+        },
+        "engine_finalized_diagnostic": {
+          "com_static_stability": {
+            "count": 139,
+            "denominator": 156,
+            "percentage": 89.1025641025641
+          },
+          "com_support_margin": {
+            "count": 155,
+            "coverage_percentage": 99.35897435897436,
+            "denominator": 156,
+            "mean_normalized_signed_margin": 0.15915412938428,
+            "mean_signed_margin_mm": 158.67091840113864,
+            "median_normalized_signed_margin": 0.22506929921233085,
+            "median_signed_margin_mm": 97.94312686621419
+          }
+        },
+        "physics_parameter_coverage": {
+          "count": 156,
+          "denominator": 156,
+          "percentage": 100.0
+        }
+      },
+      "n": 156,
+      "physics_status_breakdown": {
+        "ready": {
+          "completed": 156,
+          "n": 156,
+          "static_pass": 139,
+          "support_available": 155
+        }
+      },
+      "prepared_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_com_stability_eight_20260901_v2/eligible/pva/manifest.json",
+      "prepared_manifest_sha256": "58bca6117e21b6bd9b5dd0b7e963fd05405d9f4ded55575dc7cf4f66aabd92b4",
+      "run_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_com_stability_eight_20260901_v2/runs/pva",
+      "terminal_record_count": 156,
+      "valid_rollout_count": 156
+    }
+  ],
+  "protocol": {
+    "classification": "diagnostic",
+    "configuration": {
+      "fixed_link_merge": true,
+      "joints": "all_revolute_continuous_prismatic_hard_locked_at_q_zero",
+      "root": "free",
+      "root_orientation": "canonical_identity",
+      "root_translation": "canonical_collision_aabb_bottom_aligned_to_plane"
+    },
+    "environment": {
+      "asset_friction": 0.8,
+      "contact_solver_iterations": 50,
+      "gravity_m_per_s2": [
+        0.0,
+        0.0,
+        -9.81
+      ],
+      "horizon_seconds": 10.0,
+      "horizon_steps": 2400,
+      "initial_clearance_m": 0.002,
+      "surface": "infinite_z_zero_plane",
+      "surface_friction": 0.8,
+      "timestep_s": 0.004166666666666667
+    },
+    "geometry": {
+      "collision_policy": "robust_visual_collision",
+      "visual_fallback": true
+    },
+    "implementation": {
+      "runtime_script": "/mnt/zsn/lyb/arti-skill/exp/scripts/table5_com_stability_runtime.py",
+      "runtime_script_sha256": "33e0e8948244ef70d8aecdfae0a81821d9ef25c6d16b4e5425e3b963715c7e24",
+      "tipover_runtime_script": "/mnt/zsn/lyb/arti-skill/exp/scripts/table5_tipover_runtime.py",
+      "tipover_runtime_script_sha256": "79dce3044726f7e5be7a6814b08117d6c363fca1e6d572de2081c875e40d55b3"
+    },
+    "metrics": {
+      "com_static_stability": "com_support_margin_nonnegative_and_full_10_second_gravity_rollout_passes",
+      "com_support_margin": "signed_com_to_support_polygon_boundary_distance_normalized_by_polygon_diameter"
+    },
+    "pass_gate": {
+      "maximum_final_window_tilt_deg": 15.0,
+      "maximum_root_drop_in_bbox_heights": 1.0,
+      "maximum_transient_tilt_deg": 60.0,
+      "requires_full_finite_horizon": true
+    },
+    "physics": {
+      "policy": "use_Genesis_finalized_link_mass_and_COM_after_import",
+      "recompute_inertia": true
+    },
+    "protocol_id": "table5-genesis-com-static-stability-20260901-v2",
+    "protocol_sha256": "fb3422882c9210f8f6a777d2ce420b264b240e51eb040a965b0eba7d989f03ce",
+    "schema_version": "table5_com_stability_protocol_v1",
+    "simulator": "genesis",
+    "support_region": {
+      "contact_tilt_limit_deg": 5.0,
+      "contact_window_seconds": 0.5,
+      "contact_z_tolerance_m": 0.01,
+      "polygon": "convex_hull_of_deduplicated_contact_positions_xy",
+      "source": "Genesis_plane_contact_positions_during_initial_contact_window"
+    }
+  },
+  "publication_attribution_policy": {
+    "fallback_policy": "Genesis-native COM fallback retained only as a diagnostic",
+    "margin_population": "physics-ready assets with a non-degenerate Genesis contact support polygon",
+    "physics_requirement": "prepared row physics.status must equal ready",
+    "static_denominator": "all free-standing eligible assets; missing attributable physics fails closed"
+  },
+  "schema_version": "table5_com_stability_aggregate_v1"
+}

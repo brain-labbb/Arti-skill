@@ -1,0 +1,90 @@
+{
+  "blockers": [
+    "No frozen shared 54-item articulation task manifest is present.",
+    "No independent semantic joint gold exists for type, recall, parent-child correctness, axis-on-moving-part, origin, or limits.",
+    "Collision is a PyBullet discrete proxy with parent-child self-collision excluded; CCD and low-clearance refinement were not run.",
+    "17 programs fail current strict checks: 13 SDK API compatibility failures and 4 other strict validator failures. Recovered compiler URDFs are swept but never promoted to strict successes."
+  ],
+  "collision_rerun": {
+    "collision_policy": "PyBullet DIRECT, URDF_USE_SELF_COLLISION | URDF_USE_SELF_COLLISION_EXCLUDE_PARENT",
+    "collision_pose_evaluation": "disable movable-joint motors; resetJointState; performCollisionDetection; no stepSimulation",
+    "joint_reset_readback_tolerance": 1e-10,
+    "penetration_tolerance_m": 1e-06,
+    "pybullet_version": "3.2.7",
+    "python_version": "3.11.15",
+    "reason": "corrected self-collision flag and exact reset-pose evaluation; frozen cohort, URDF exports, and samples reused",
+    "record_count": 143,
+    "status": "COMPLETED",
+    "wall_seconds": 12.516558414325118,
+    "zero_width_declared_joint_policy": "retain in declared joint count and metadata; exclude from motion sweeps"
+  },
+  "execution": {
+    "artifact_export_available": "143/143",
+    "strict_compile_success": "126/143",
+    "strict_compile_success_rate": 0.8811188811188811,
+    "strict_failure_classes": {
+      "other_strict_validator": 4,
+      "sdk_api_compatibility": 13
+    },
+    "strict_failures_with_recovered_export": 17,
+    "wall_seconds": 191.65058908984065,
+    "worker_timeout_seconds": 180,
+    "workers": 4
+  },
+  "operational_proxies": {
+    "asset_swept_contact_free_pass": "82/143",
+    "asset_swept_penetration_free_pass": "84/143",
+    "assets_with_zero_width_declared_joints": "0/143",
+    "axis_metadata_valid": "442/442",
+    "bounded_limit_metadata_valid": "360/360",
+    "combined_swept_states_contact_free": "9232/12350",
+    "combined_swept_states_penetration_free": "9362/12350",
+    "declared_movable_joints": 442,
+    "generic_revolute_range": "8/255",
+    "joint_single_sweep_contact_free_pass": "286/442",
+    "joint_single_sweep_penetration_free_pass": "292/442",
+    "motion_sweep_eligible_assets": "143/143",
+    "motion_sweep_eligible_joints": "442/442",
+    "movable_joints": 442,
+    "multi_joint_sobol_states_contact_free": "5720/7488",
+    "multi_joint_sobol_states_penetration_free": "5786/7488",
+    "origin_metadata_valid": "430/442",
+    "penetration_tolerance_m": 1e-06,
+    "rest_states_contact_free": "117/143",
+    "rest_states_penetration_free": "118/143",
+    "single_joint_states_contact_free": "3512/4862",
+    "single_joint_states_penetration_free": "3576/4862",
+    "zero_width_declared_joints": "0/442"
+  },
+  "preliminary_local_pilot_status": "COMPLETED_WITH_STRICT_FAILURES",
+  "schema_version": 1,
+  "scope": "12-category, 143-record frozen Original Articraft single-instance cohort; not the 54-item common Table 6 benchmark",
+  "selection": {
+    "category_count": 12,
+    "ratings": {
+      "4": 48,
+      "5": 95
+    },
+    "record_count": 143,
+    "rule": "all records in every ordered frozen task.records list; no outcome-based reselection",
+    "source_manifest": "exp/runtime/t2_formal_v1/preparation/formal_source_manifest.json",
+    "source_manifest_sha256": "9fea02e938f82d50579a05026fd2a631b9c0da5f473a21556c9996fb1056b1f4"
+  },
+  "status": "BLOCKED_COMMON_TABLE6",
+  "table6_preliminary": {
+    "articulable": "143/143",
+    "articulable_rate": 1.0,
+    "asset_geom_valid": null,
+    "axis_valid": null,
+    "full_range_collision_free": null,
+    "generic_range": null,
+    "joint_geom_valid": null,
+    "joint_recall": null,
+    "joint_type_accuracy": null,
+    "joints_per_asset": 3.090909090909091,
+    "limit_valid": null,
+    "native_joint_exposure": "131/143",
+    "origin_valid": null,
+    "parent_child_accuracy": null
+  }
+}

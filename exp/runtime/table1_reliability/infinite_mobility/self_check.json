@@ -1,0 +1,255 @@
+{
+  "checks": [
+    {
+      "details": {
+        "commit": "5f5961736fcf5b7a6e6fd0a9b3b7af586f39e151",
+        "remote": "https://github.com/InternRobotics/Infinite-Mobility.git",
+        "tree": "e4dbd72b1d6e38a5c13f8a9f0130385b4c98524f"
+      },
+      "name": "official release pin",
+      "passed": true
+    },
+    {
+      "details": {
+        "protocol_factories": [
+          "OfficeChairFactory",
+          "BarChairFactory",
+          "BeverageFridgeFactory",
+          "DishwasherFactory",
+          "MicrowaveFactory",
+          "OvenFactory",
+          "TVFactory",
+          "TapFactory",
+          "ToiletFactory",
+          "LiteDoorFactory",
+          "LampFactory",
+          "PlateOnRackBaseFactory",
+          "KitchenCabinetFactory",
+          "VaseFactory",
+          "BottleFactory",
+          "TableCocktailFactory",
+          "TableDiningFactory",
+          "PotFactory",
+          "PanFactory",
+          "WindowFactory"
+        ],
+        "readme_factories": [
+          "OfficeChairFactory",
+          "BarChairFactory",
+          "BeverageFridgeFactory",
+          "DishwasherFactory",
+          "MicrowaveFactory",
+          "OvenFactory",
+          "TVFactory",
+          "TapFactory",
+          "ToiletFactory",
+          "LiteDoorFactory",
+          "LampFactory",
+          "PlateOnRackBaseFactory",
+          "KitchenCabinetFactory",
+          "VaseFactory",
+          "BottleFactory",
+          "TableCocktailFactory",
+          "TableDiningFactory",
+          "PotFactory",
+          "PanFactory",
+          "WindowFactory"
+        ]
+      },
+      "name": "public factories exactly match official README",
+      "passed": true
+    },
+    {
+      "details": {
+        "seeds": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ]
+      },
+      "name": "seed list exactly 0-35",
+      "passed": true
+    },
+    {
+      "details": {
+        "factory_count": 20,
+        "seed_count": 36,
+        "timeout_seconds": 300
+      },
+      "name": "generation manifest matches frozen public protocol",
+      "passed": true
+    },
+    {
+      "details": {
+        "expected": 720,
+        "records": 720,
+        "unique_records": 720
+      },
+      "name": "requested identities are complete and unique",
+      "passed": true
+    },
+    {
+      "details": {
+        "actual": "96e1cbd9cc1d578d01a7fb26d4dedf55b6d747fc4d3a1f3b153629c43f8641af",
+        "recorded": "96e1cbd9cc1d578d01a7fb26d4dedf55b6d747fc4d3a1f3b153629c43f8641af"
+      },
+      "name": "generation snapshot Python tree matches frozen manifest",
+      "passed": true
+    },
+    {
+      "details": {
+        "cache_snapshot": "42b15e1afd48e76fe2ce867276609ce005c246de3db4299fd747ff1f50ceef68",
+        "official_snapshot": "42b15e1afd48e76fe2ce867276609ce005c246de3db4299fd747ff1f50ceef68",
+        "tracked_files": 6444
+      },
+      "name": "generation snapshot is content-equivalent to official tracked release",
+      "passed": true
+    },
+    {
+      "details": {
+        "expected": 713,
+        "revalidated": 713
+      },
+      "name": "all original PASS structural packages revalidate",
+      "passed": true
+    },
+    {
+      "details": {
+        "expected": 713,
+        "matches": 713,
+        "rehash_enabled": true
+      },
+      "name": "all original PASS package hashes match",
+      "passed": true
+    },
+    {
+      "details": {
+        "expected": 720,
+        "matches": 720
+      },
+      "name": "recorded validation matches structural re-audit",
+      "passed": true
+    },
+    {
+      "details": {
+        "statuses": {
+          "PASS": 713,
+          "TIMEOUT": 7
+        },
+        "structural_pass": 713
+      },
+      "name": "original 300s status denominator preserved",
+      "passed": true
+    },
+    {
+      "details": {
+        "compile_only_all_36": {
+          "denominator": 20,
+          "numerator": 16,
+          "value": 0.8
+        },
+        "failure_count": 18,
+        "seed_compile": {
+          "denominator": 720,
+          "numerator": 702,
+          "value": 0.975
+        }
+      },
+      "name": "180s main telemetry classification is exact",
+      "passed": true
+    },
+    {
+      "details": {
+        "compile_only_all_36": {
+          "denominator": 5,
+          "numerator": 4,
+          "value": 0.8
+        },
+        "factories": [
+          "KitchenCabinetFactory",
+          "TableDiningFactory",
+          "BeverageFridgeFactory",
+          "DishwasherFactory",
+          "OvenFactory"
+        ],
+        "seed_compile": {
+          "denominator": 180,
+          "numerator": 170,
+          "value": 0.9444444444444444
+        }
+      },
+      "name": "matched five-category denominator and classification are exact",
+      "passed": true
+    },
+    {
+      "details": {
+        "expected": 7,
+        "passes": 7
+      },
+      "name": "all 900s recovery packages revalidate",
+      "passed": true
+    },
+    {
+      "details": {
+        "collision_elements": 0,
+        "packages": 713
+      },
+      "name": "native collision geometry is absent",
+      "passed": true
+    },
+    {
+      "details": {
+        "all_36": "N/E",
+        "seed_full_qc": "N/E"
+      },
+      "name": "Full-QC-derived cells fail closed",
+      "passed": true
+    },
+    {
+      "details": {
+        "corner_pass": "N/R",
+        "reason": "no output-independent Infinite Mobility parameter-domain manifest or semantic mapping to PV-A project-native corners is available; random seeds are not corners"
+      },
+      "name": "corner protocol remains N/R",
+      "passed": true
+    }
+  ],
+  "generated_at": "2026-08-12T03:48:45.185630+00:00",
+  "overall_pass": true,
+  "passed": 17,
+  "protocol_id": "nano3d_table1b_infinite_mobility_reliability_v1",
+  "total": 17
+}

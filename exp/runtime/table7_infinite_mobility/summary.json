@@ -1,0 +1,176 @@
+{
+  "cohort_strata": {
+    "generated_with_movable_joint": 658,
+    "generated_without_movable_joint": 55,
+    "generation_status_counts": {
+      "PASS": 713,
+      "TIMEOUT": 7
+    },
+    "generation_timeout": 7
+  },
+  "denominators": {
+    "available_assets": 713,
+    "geometry_evaluable_assets": 713,
+    "native_articulated_packages": 658,
+    "native_simulation_packages": 713,
+    "package_evaluable_assets": 713,
+    "readable_geometries": 12408,
+    "requested_assets": 720,
+    "unavailable_assets": 7
+  },
+  "deterministic_build": {
+    "reason": "no second fresh same-factory same-seed build was executed",
+    "state": "not_evaluable",
+    "state_counts_requested": {
+      "not_evaluable": 720
+    }
+  },
+  "elapsed_seconds": 2776.8069417998195,
+  "generated_at": "2026-08-11T09:40:35.116696+00:00",
+  "geometry": {
+    "degenerate_faces": {
+      "per_geometry_evaluable_asset_mean": 2721.063113604488,
+      "total": 1940118
+    },
+    "edge_manifold_proxy": {
+      "all_readable_geometries_pass_assets": {
+        "denominator": 713,
+        "numerator": 611,
+        "value": 0.8569424964936886
+      },
+      "definition": "every undirected edge has at most two incident faces; vertex-manifold is not claimed",
+      "geometry_level": {
+        "denominator": 12408,
+        "numerator": 12103,
+        "value": 0.9754190844616376
+      },
+      "per_asset_mean_fraction": 0.9659900872902143
+    },
+    "loader_clean_assets": {
+      "denominator": 713,
+      "numerator": 713,
+      "value": 1.0
+    },
+    "mesh_files": 7970,
+    "open_edges": {
+      "per_geometry_evaluable_asset_mean": 590531.4726507714,
+      "total": 421048940
+    },
+    "readable_mesh_files": 7970,
+    "self_intersection": {
+      "reason": "no exact triangle-triangle backend with adjacent-face exclusion was run",
+      "state": "not_evaluable"
+    },
+    "watertight": {
+      "all_readable_geometries_pass_assets": {
+        "denominator": 713,
+        "numerator": 0,
+        "value": 0.0
+      },
+      "geometry_level": {
+        "denominator": 12408,
+        "numerator": 0,
+        "value": 0.0
+      },
+      "per_asset_mean_fraction": 0.0
+    }
+  },
+  "kinematic_complete": {
+    "not_evaluable_no_movable_joint": 55,
+    "not_evaluable_no_package": 7,
+    "pass_applicable": {
+      "denominator": 658,
+      "numerator": 658,
+      "value": 1.0
+    },
+    "pass_intent_to_run": {
+      "denominator": 720,
+      "numerator": 658,
+      "value": 0.9138888888888889
+    },
+    "state_counts_requested": {
+      "not_evaluable": 62,
+      "pass": 658
+    }
+  },
+  "limitations": [
+    "The frozen public 20-factory cohort is not a common-category matched subset.",
+    "Seven generation timeouts remain in the 720-case intent-to-run denominator.",
+    "Self-intersection is not evaluable because no exact backend with adjacent-face exclusion was run.",
+    "Deterministic build is not evaluable because this static audit did not execute two fresh builds.",
+    "Semantic completeness is not evaluable without output-independent required-part and role specifications; the name/tree field proxy is separate.",
+    "Physical completeness fails closed on native metadata; runtime defaults and no-contact observations are never accepted."
+  ],
+  "method": "Infinite Mobility",
+  "physical_complete": {
+    "fail_closed_reason": "all available exported URDFs contain zero native collision elements; absence of detected contact is not physical completeness",
+    "native_collision_element_total": 0,
+    "pass_applicable": {
+      "denominator": 713,
+      "numerator": 0,
+      "value": 0.0
+    },
+    "pass_intent_to_run": {
+      "denominator": 720,
+      "numerator": 0,
+      "value": 0.0
+    },
+    "state_counts_requested": {
+      "fail": 713,
+      "not_evaluable": 7
+    }
+  },
+  "portable_package": {
+    "pass_available": {
+      "denominator": 713,
+      "numerator": 713,
+      "value": 1.0
+    },
+    "pass_intent_to_run": {
+      "denominator": 720,
+      "numerator": 713,
+      "value": 0.9902777777777778
+    },
+    "state_counts_requested": {
+      "not_evaluable": 7,
+      "pass": 713
+    }
+  },
+  "protocol_id": "nano3d_table7_production_readiness_v1",
+  "semantic_complete": {
+    "field_proxy_pass_available": {
+      "denominator": 713,
+      "numerator": 0,
+      "value": 0.0
+    },
+    "field_proxy_state_counts_requested": {
+      "fail": 713,
+      "not_evaluable": 7
+    },
+    "reason": "no output-independent required-part and role specification",
+    "strict_state": "not_evaluable",
+    "strict_state_counts_requested": {
+      "not_evaluable": 720
+    }
+  },
+  "size_bytes": {
+    "mesh": {
+      "denominator": "available_assets",
+      "mean": 26002267.14446003,
+      "total": 18539616474
+    },
+    "source": {
+      "factory_assignment_module_bytes_mean": 33905.1,
+      "per_asset_state": "not_evaluable",
+      "reason": "Infinite Mobility uses shared factory source; no per-asset executable source is delivered",
+      "shared_factory_count": 20,
+      "unique_defining_module_bytes_total": 678102,
+      "unique_defining_module_count": 20
+    },
+    "urdf": {
+      "denominator": "available_assets",
+      "mean": 8914.955119214586,
+      "total": 6356363
+    }
+  }
+}

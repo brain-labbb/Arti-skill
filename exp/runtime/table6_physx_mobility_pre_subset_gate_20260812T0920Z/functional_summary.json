@@ -1,0 +1,71 @@
+{
+  "all_state_executed": 3448,
+  "all_state_expected": 4667,
+  "ccd": false,
+  "child_expectation_mismatch_count": 0,
+  "child_timeout_seconds": 900,
+  "cohort_asset_count": 45,
+  "cohort_sha256": "63dba2b27c2e370b4808029968b5c5a61a934a38a0597d5278643a6affaf0908",
+  "collision_metric_status": "N/A: official archive URDFs have zero collision elements",
+  "contact_counts_collected": false,
+  "declared_movable_joints": 273,
+  "failure_policy": "selected failures retained; no replacement",
+  "functional_motion_joints": 273,
+  "input_hash_mismatch_count": 0,
+  "intent_to_run_asset_count": 45,
+  "joint_mapping_complete_assets": 45,
+  "max_reset_readback_error": 0.0,
+  "motor_policy": "VELOCITY_CONTROL targetVelocity=0 force=0",
+  "motors_disabled": 273,
+  "native_abort_count": 0,
+  "penetration_counts_collected": false,
+  "pose_evaluation": "resetJointState -> performCollisionDetection -> getJointState readback; no stepSimulation",
+  "protocol_id": "nano3d_table6_physx_mobility_reset_readback_v3",
+  "pybullet_load_flags": "URDF_USE_INERTIA_FROM_FILE | URDF_USE_SELF_COLLISION | URDF_USE_SELF_COLLISION_EXCLUDE_PARENT | URDF_IGNORE_VISUAL_SHAPES",
+  "pybullet_load_success_assets": 45,
+  "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+  "records_sha256": "494baada7e0f87054505b6980685ad566096568aa721db83cdd195951050aa98",
+  "reset_readback_complete_assets": 44,
+  "reset_tolerance": 1e-09,
+  "selected_urdf_hashes_sha256": "360f5b41183863f07f055a6d133be5a5d3b7a84667f2fb9bcaa6fb838eadba90",
+  "selection_is_outcome_independent": true,
+  "self_collision_flag_smoke": {
+    "checks": {
+      "exclude_parent_only_has_zero_contacts": true,
+      "none_has_zero_contacts": true,
+      "self_collision_detects_siblings": true,
+      "self_collision_exclude_parent_detects_siblings": true
+    },
+    "contacts": {
+      "exclude_parent_only": 0,
+      "none": 0,
+      "self_collision": 4,
+      "self_collision_exclude_parent": 4
+    },
+    "fixture": "self_collision_flag_smoke.urdf",
+    "fixture_sha256": "466ddf29378fea13716907a794ced7007adb3bafdde188ab959f680148a9ca76",
+    "interpretation": "protocol flag smoke only; excluded from official dataset metrics",
+    "passed": true,
+    "pybullet_api_version": 202010061
+  },
+  "single_state_executed": 1848,
+  "single_state_expected": 3003,
+  "single_states_per_functional_joint": 11,
+  "sobol_state_executed": 1600,
+  "sobol_state_expected": 1664,
+  "sobol_states_per_asset_with_gt_1_functional_joint": 64,
+  "status_counts": {
+    "FAIL": 1,
+    "PASS": 44
+  },
+  "thread_caps": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "timeout_count": 0,
+  "unsupported_motion_joints_excluded": 0,
+  "zero_width_joints_excluded": 0
+}

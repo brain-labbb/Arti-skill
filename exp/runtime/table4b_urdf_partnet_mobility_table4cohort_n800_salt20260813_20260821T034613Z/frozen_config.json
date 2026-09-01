@@ -1,0 +1,39 @@
+{
+  "classification": "FORMAL",
+  "cohort": {
+    "n_eval": 800,
+    "ordered_ids_sha256": "ef6cb964e50dc712280256c5b2f675cc2c957095c3553b21845d3562a5011883",
+    "selection_policy": "all .items[].dataset_id entries from the frozen PartNet-Mobility Table 4 manifest in existing order; no resampling, replacement, or result-based filtering",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_partnet_mobility_n800_20260813/frozen_manifest.json",
+    "source_manifest_sha256": "2ff015ee6bb377ce693126b52dd632a7565a3eaa9f0007e26122a1bb4ab99900"
+  },
+  "dataset": "PartNet-Mobility",
+  "execution": {
+    "child_interpreter": "/mnt/zsn/miniconda3/envs/genesis-main/bin/python3.12",
+    "child_timeout_seconds": 900,
+    "denominator_policy": "all frozen assets including failures and unmeasured items",
+    "process_isolation": "one fresh interpreter process per asset",
+    "workers": 16
+  },
+  "frozen_at_utc": "2026-08-21T03:46:14.461289Z",
+  "geometry_parameters": {
+    "collision_load_time_backend": "trimesh.Trimesh(process=False).triangles_tree+rtree",
+    "collision_load_time_cache_mode": "same_asset_one_unmeasured_warmup_then_warm_cache",
+    "collision_load_time_repeats": "one unmeasured warmup + five measured repeats, geometry rebuilt per repeat",
+    "collision_load_time_threads": "native thread count pinned to 1 via threadpoolctl",
+    "d_visual_definition": "q0_loadable_visual_union_aabb_diagonal_v1",
+    "exact_surface_backend": "trimesh.proximity.ProximityQuery.on_surface + rtree (no Genesis SDF substitute)",
+    "samples_per_direction": 32768,
+    "weld_relative_tolerance": 1e-09
+  },
+  "geometry_protocol_id": "lam_supplementary_geometry_v1",
+  "mode": "formal",
+  "protocol_document_sha256": "000825fd11bd9d6e8ce275bb7eb6a40776f75f01c51894e3e1524ef3a11bbf3b",
+  "protocol_id": "table4b_partnet_mobility_table4cohort_n800_salt20260813_v1",
+  "runner_identity": {
+    "geometry_module": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_geometry.py",
+    "geometry_module_sha256": "65d2641619b0429a37eb3a578b97ab7c0d5f298d84464842d16afcf3a13bd1b9",
+    "runner_script": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4b_partnet_mobility.py",
+    "runner_script_sha256": "76ad4982af7f665aa85384dc6e805d0f26daaa2638f28802b15860467696d839"
+  }
+}

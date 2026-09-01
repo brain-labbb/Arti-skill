@@ -1,0 +1,42 @@
+{
+  "artifact_hash_scope": "all required outputs except self_check.json to avoid circular hashing",
+  "artifact_hashes": {
+    "asset_records.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "manifest.json": "c4a05b83cc2897745268c9541db9383f790ad98527320630bb38b82e8e35796c",
+    "protocol_snapshot.json": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+    "report.md": "d5a16a8592694e00b841bd464395afed325ee6956effdd4ffaa5d7adabb22c98",
+    "summary.json": "6603e0bb3607b398f4ce23c031c5aa118ceee0aea6e42a88761b8e7e4f702a6d"
+  },
+  "checked_at_utc": "2026-08-11T09:54:37.362117+00:00",
+  "checks": {
+    "all_performance_columns_not_evaluable": true,
+    "all_performance_columns_present": true,
+    "all_rates_have_explicit_zero_denominators": true,
+    "all_required_outputs_exist": true,
+    "checkout_matches_recorded_inventory": true,
+    "checkout_matches_table6_pin": true,
+    "denominators_all_zero": true,
+    "interpretation_is_not_experimental_zero": true,
+    "manifest_hash_recorded_and_exact": true,
+    "manifest_identities_unique": true,
+    "no_attributable_final_package": true,
+    "paper_values_not_used": true,
+    "protocol_snapshot_exact": true,
+    "release_placeholder_reconfirmed": true,
+    "requested_denominator_accounted": true,
+    "required_outputs_exactly_declared": true,
+    "status_is_release_blocked": true
+  },
+  "denominator_self_check": {
+    "asset_records": 0,
+    "available_assets": 0,
+    "geometry_evaluable_assets": 0,
+    "manifest_assets": 0,
+    "package_evaluable_assets": 0,
+    "requested_assets": 0
+  },
+  "manifest_sha256": "c4a05b83cc2897745268c9541db9383f790ad98527320630bb38b82e8e35796c",
+  "protocol_sha256": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

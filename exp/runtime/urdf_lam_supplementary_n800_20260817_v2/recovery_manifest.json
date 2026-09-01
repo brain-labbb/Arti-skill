@@ -1,0 +1,49 @@
+{
+  "code_identity_comparison": {
+    "geometry": {
+      "frozen_sha256": "55877794c911b5b760bca407ee0db9f5b4f562cfdd21aea5b513d3d8335f5f55",
+      "matches_freeze": true,
+      "observed_sha256": "55877794c911b5b760bca407ee0db9f5b4f562cfdd21aea5b513d3d8335f5f55"
+    },
+    "runner": {
+      "frozen_sha256": "c43f3047553e4fbc9dfeefcbb7308bc42df8c6f0aab24f2a85f412c5efe12df5",
+      "matches_freeze": true,
+      "observed_sha256": "c43f3047553e4fbc9dfeefcbb7308bc42df8c6f0aab24f2a85f412c5efe12df5"
+    },
+    "static": {
+      "frozen_sha256": "1c2fdc2c3d9f8ebcb3ab6b0bf8144b307c86b4b44790cf3182c2395ab37267ff",
+      "matches_freeze": false,
+      "observed_sha256": "ac77a014a513cd7d0fa675e7aa46dcaf14433dbb7f01a47895c0010ea1bc3a73"
+    },
+    "verifier": {
+      "frozen_sha256": "834f9c92bfc17ce899bd3a36391ed94109763ade0d1ddb734ae2a972a620b830",
+      "matches_freeze": true,
+      "observed_sha256": "834f9c92bfc17ce899bd3a36391ed94109763ade0d1ddb734ae2a972a620b830"
+    }
+  },
+  "drift_note": "lam_supplementary_static.py drifted from the frozen code identity after all 800 child receipts were written (child receipts completed 2026-08-18; the module was edited 2026-08-19 during unrelated Table 2 supplementary work). The frozen execution-binding gate therefore cannot pass; the metric aggregation chain (verifier._validate_strict_state_records + verifier.aggregate_records) does not depend on the drifted module and passes.",
+  "final_artifacts": {
+    "asset_records.jsonl": "d6e33f0ba17f774e193a311b393f66105a6bd326ba076bc9f707a6a8e9a70557",
+    "joint_records.jsonl": "cc0a65ce19ea6f720ab511befd5d1a0bda09200bdda64bdcb8a78d329a071d85",
+    "report.md": "b0933c36278b2feeea05f9368498b2cdb90059155fd52187bfb3d1e0e0a3ec45",
+    "state_records.jsonl": "9267a751e0c1ce53f4b0ea41d155d2dae092f7098289e999b26f0383666fe2b5",
+    "strict_state_records.jsonl": "e89826cba0694865e42ef452b84f62819c83a1e2c1b886c77f6b0b0c4a7518d3",
+    "summary.json": "a62bb85b5b14b3cfff298156e9c150bb889c6fd191cd48dbbffc3378baf4e30b"
+  },
+  "frozen_manifest_sha256": "b8132a43a6b718ecc2b95d1dab83ca3c96666a850a6c0393b9d04ae827289a58",
+  "frozen_protocol_id": "urdf_lam_supplementary_n800_genesis_v1",
+  "kind": "recovery_finalization",
+  "output_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_lam_supplementary_n800_20260817_v2",
+  "repair_audit": {
+    "change": "asset_record.intra_link_redundancy.measured_link_count: 1 -> 0 (status N/E)",
+    "metric_impact": "none: atom remains N/E with identical reason and null numeric fields",
+    "preserved_original_attempt_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_lam_supplementary_n800_20260817_v2/child_attempts/rank_0046.json",
+    "preserved_original_attempt_sha256": "9ec40522c8158a81c2615819cb4c4fed76e45875bb5c7a6c1701cdbec290bbee",
+    "receipt_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_lam_supplementary_n800_20260817_v2/children/rank_0046.json",
+    "receipt_sha256_after_repair": "797708b779057f194e6a1eb79811c81e888e983dc1094656408867eecf3ef760"
+  },
+  "runtime_binding_matches_freeze": true,
+  "schema_version": 1,
+  "summary_status": "PARTIAL",
+  "verification_aggregates_sha256": "86ef90bbf33d948809bbe2d444602e7a3e253100a6a4b274bcef88a9e43f09f4"
+}

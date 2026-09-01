@@ -1,0 +1,61 @@
+{
+  "N_eval": 720,
+  "N_release": 720,
+  "cohort_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/infinite_mobility_urdf_table123_cohort/manifest.json",
+  "cohort_manifest_content_sha256": "f5e29f1becd47cae991f5d238dff3f86b2b009365738df3e46cdbea297032c23",
+  "cohort_manifest_sha256": "cfd9c06ea35dcec57c53d44dbf52903ecba6f33321075495c97c58fe30d23c08",
+  "cohort_type": "SUPPLEMENTARY_FULL_GENERATED_COHORT_NOT_OFFICIAL_FINITE_RELEASE",
+  "dataset": "Infinite Mobility",
+  "evaluator_binding": {
+    "fingerprint_protocol": "simulation-package-fingerprint-v2",
+    "platform": "Linux-5.10.134-19.103.al8.x86_64-x86_64-with-glibc2.39",
+    "python_executable": "/mnt/zsn/lyb/arti-skill/arti-template/.venv/bin/python",
+    "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+    "runner_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_table1_infinite_mobility.py",
+    "runner_sha256": "f53974ef9bca2cde35c31643295694457c3ecaa441c81bbcec06efe3e620e338",
+    "shared_evaluator_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_table1_artiverse.py",
+    "shared_evaluator_sha256": "2b6aac690c5e1715e76ddda00686e76fb957e3ef8905c4d33072d038ce871bcf",
+    "topology_protocol": "rooted-joint-tree-v1"
+  },
+  "formal": true,
+  "limit": null,
+  "manifest_content_sha256": "ecc304fd5f2453bd14ab6f0a6e37d3fd5c5237ad7f6f8eb2206d21b907166405",
+  "protocol_snapshot_sha256": "b05a4edbe61037f2dc4bc1bc1580e66f13f852fc24a3b979e130e8a7aa30ef00",
+  "protocol_source_path": "/mnt/zsn/lyb/arti-skill/exp/URDF-Sim-Ready-Automatic-Evaluation.md",
+  "protocol_source_sha256_at_freeze": "b05a4edbe61037f2dc4bc1bc1580e66f13f852fc24a3b979e130e8a7aa30ef00",
+  "release_status": "SUPPLEMENTARY_FULL_GENERATED_COHORT",
+  "schema_version": 2,
+  "source_bindings": [
+    {
+      "label": "primary_manifest",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/infinite_mobility_v1/manifest.json",
+      "sha256": "94082fbf8a483ceeca14d32ed5e575d95842c81bc16d927f9fe1beda41fdd5a4"
+    },
+    {
+      "label": "primary_records",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/infinite_mobility_v1/records.json",
+      "sha256": "60f762f25ac47b99a4d657d0ac0ba321b4920afd397348cf241514b4b2484a56"
+    },
+    {
+      "label": "recovery_manifest",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/infinite_mobility_timeout_recovery_v1/recovery_manifest.json",
+      "sha256": "2d9a923d8a1dce60d4c181afac5327cd5e345bc38c4c5e462a5589f8203c0c01"
+    },
+    {
+      "label": "recovery_records",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/infinite_mobility_timeout_recovery_v1/recovery_records.json",
+      "sha256": "f7cb8ef63bed51d7f2a68a33482a881f0030607c9466bafa7915a0ad3fa5a385"
+    },
+    {
+      "label": "cohort_freezer",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/infinite_mobility_table123_common.py",
+      "sha256": "ee9de3720db6674f9644724147bc005b5fd52b3c1c506e94ec6b1914876013e5"
+    },
+    {
+      "label": "cohort_preparer",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/prepare_infinite_mobility_table123_cohort.py",
+      "sha256": "9fc4527049bc62e5827f368edd3e710d1aae545e339faa461c76ea79545dbc3a"
+    }
+  ],
+  "workers": 1
+}

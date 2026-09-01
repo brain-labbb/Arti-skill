@@ -1,0 +1,34 @@
+{
+  "command": [
+    "exp/scripts/run_urdf_table4b_partnet_mobility.py",
+    "--mode",
+    "smoke",
+    "--n",
+    "3",
+    "--workers",
+    "3"
+  ],
+  "created_at_utc": "2026-08-21T03:44:57.170965Z",
+  "dataset": "PartNet-Mobility",
+  "frozen_config_sha256": "d78c6bb04697d8594adb0306a01941ca14b43fdf5b6603566b35f48dbaab3c0a",
+  "geometry_protocol_id": "lam_supplementary_geometry_v1",
+  "manifest_self_sha256_at_write": "a7067af19509885bdb75a155ca84c5899ee6dad18c729d608d89d404ccde2dfe",
+  "mode": "smoke",
+  "outputs": {
+    "asset_records_sha256": "4d7513d18cdeeca3d9ad8402dac9f6e47ecb54124df54a83b8ac36068a17e56f",
+    "summary_md_sha256": "034bfed44ca4e88011e5826996bebb09d7ac9604d0b5b0d0ca6737b4f8f821b1",
+    "summary_sha256": "bbe6f5cc5dbd09cdbc05ce0bb61316e0b2bb000544e0a48a056c8c2b1d8d85e5"
+  },
+  "protocol_id": "table4b_partnet_mobility_table4cohort_n800_salt20260813_v1",
+  "record_count": 3,
+  "status_counts": {
+    "completed": 3,
+    "error": 0,
+    "total": 3
+  },
+  "verification": {
+    "all_pass": null,
+    "note": "smoke mode: formal verification skipped"
+  },
+  "wall_seconds": 26.666
+}

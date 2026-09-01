@@ -1,0 +1,86 @@
+{
+  "command": [
+    "scripts/run_urdf_table2sup_partnet_mobility.py",
+    "--mode",
+    "formal"
+  ],
+  "created_at_utc": "2026-08-19T07:30:29.299754Z",
+  "dataset": "PartNet-Mobility",
+  "frozen_config_sha256": "ba24d84c82c644dd1d041a3cc9a3b42f01b7a29ee92e12cb8cafcf349c02423c",
+  "manifest_self_sha256_at_write": "e8767ccc8d095e19ac070cb3b0bce0b2f5b8fa879fa6304bac8b80a63234489e",
+  "mode": "formal",
+  "outputs": {
+    "asset_records_sha256": "45cbe2a2fbd4cc1b21aafbfddf23ee0c105ecf80cd5d9a7bfbd67eb421725b62",
+    "summary_md_sha256": "13ed83b9dbfc45292c002588542cf498dbb92bece5887b8890e6284fca0cb70a",
+    "summary_sha256": "c850217ddbc2076025979e6fd69bb422bd50d67d2b94d2678fb630c7c28f949b"
+  },
+  "protocol_id": "table2_supplementary_partnet_mobility_table4cohort_n800_v1",
+  "record_count": 800,
+  "status_counts": {
+    "completed": 800,
+    "error": 0,
+    "total": 800
+  },
+  "verification": {
+    "all_pass": true,
+    "check_count": 11,
+    "checks": [
+      {
+        "check": "source_manifest_sha256",
+        "detail": "2ff015ee6bb377ce693126b52dd632a7565a3eaa9f0007e26122a1bb4ab99900",
+        "pass": true
+      },
+      {
+        "check": "ordered_ids_sha256",
+        "detail": "ef6cb964e50dc712280256c5b2f675cc2c957095c3553b21845d3562a5011883",
+        "pass": true
+      },
+      {
+        "check": "record_count",
+        "detail": "800",
+        "pass": true
+      },
+      {
+        "check": "frozen_order_preserved",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "j_eval_denominator",
+        "detail": "4078",
+        "pass": true
+      },
+      {
+        "check": "joint_denominators_preserved",
+        "detail": "4078/4078",
+        "pass": true
+      },
+      {
+        "check": "asset_denominator_preserved",
+        "detail": "800",
+        "pass": true
+      },
+      {
+        "check": "urdf_identity_matches_frozen_manifest",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "all_assets_completed",
+        "detail": "completed=800",
+        "pass": true
+      },
+      {
+        "check": "aggregate_recomputation_matches",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "category_count",
+        "detail": "46",
+        "pass": true
+      }
+    ]
+  },
+  "wall_seconds": 270.214
+}

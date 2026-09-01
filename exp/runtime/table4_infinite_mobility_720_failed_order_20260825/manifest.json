@@ -1,0 +1,55 @@
+{
+  "claim_boundary": {
+    "blocked_reason": "BLOCKED_NATIVE_COLLISION_GEOMETRY_ABSENT",
+    "native_collision_geometry_required": true,
+    "vacuous_no_contact_is_not_pass": true,
+    "zero_native_collision_is_blocking": true
+  },
+  "classification": "FORMAL",
+  "cohort_type": "SUPPLEMENTARY_FULL_GENERATED_COHORT_NOT_OFFICIAL_FINITE_RELEASE",
+  "created_at": "2026-08-25T02:20:48Z",
+  "dataset": "Infinite Mobility",
+  "environment": {
+    "platform": "Linux-5.10.134-19.103.al8.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+    "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+    "python_version": "3.12.3",
+    "runner_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_table4_infinite_mobility.py",
+    "runner_sha256": "ffb27d0c2af5b776bbc7de9137985d9f8703cf0005ba87285955e9be64554f98",
+    "thread_environment": {}
+  },
+  "evaluation": {
+    "geometry_policy": "native collision geometry only; no visual fallback",
+    "pair_policy": "all-pair and non-adjacent; direct parent-child excluded for headline",
+    "penetration_threshold_m": 1e-06,
+    "protocol_snapshot": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_infinite_mobility_720/protocol_snapshot.md",
+    "protocol_snapshot_sha256": "ee1ed8c7d3775bb2bf41123849bc6b5690f18217c17d62fc18c62ebc797b19e6",
+    "runner_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_table4_infinite_mobility.py",
+    "runner_sha256": "ffb27d0c2af5b776bbc7de9137985d9f8703cf0005ba87285955e9be64554f98",
+    "scale_protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+    "state_policy": {
+      "rest": "q=0",
+      "single_joint_samples": 21,
+      "sobol_samples": 64,
+      "sobol_seed": 20260813
+    },
+    "workers": 2
+  },
+  "manifest_content_sha256": "bc9c18c24d261a16567929df47171744d4645d507a67540393226dcbb7e40a24",
+  "protocol_id": "urdf_sim_ready_table4_infinite_mobility_n720_v1",
+  "schema_version": "table4-infinite-mobility/v1",
+  "source": {
+    "cohort_artifact_manifest_sha256": "ac31de70d50ed7153178482bb5283659be94fb5945cc2b7157754ac61dfc5439",
+    "cohort_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/infinite_mobility_urdf_table123_cohort/manifest.json",
+    "cohort_manifest_content_sha256": "f5e29f1becd47cae991f5d238dff3f86b2b009365738df3e46cdbea297032c23",
+    "cohort_manifest_sha256": "cfd9c06ea35dcec57c53d44dbf52903ecba6f33321075495c97c58fe30d23c08",
+    "n_release_claim": "not finite; this is the frozen 720-case operational cohort",
+    "table2_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table2_infinite_mobility_720/manifest.json",
+    "table2_manifest_sha256": "3dce6436aac2d25507d7843a3e0e5cbee130e83e0c24c2bfbfb08467ca356290",
+    "table2_records_sha256": "d488501734a41d4b814c294f7ad94ed529df72b0f99cfaed8b1d19a3bf1c2ada",
+    "table3_manifest_sha256": "52d03061d150e23f5f97e0227931047379969a5518c5448a14e7062a3ed6d611",
+    "table3_receipt": "/mnt/zsn/lyb/arti-skill/exp/runtime/table3_infinite_mobility_720",
+    "table3_records_sha256": "e1ebf268e6839869e9d7e8d98e2ae0411e4ed17dea28b5c7692bef326b6f4113"
+  },
+  "status": "BLOCKED"
+}

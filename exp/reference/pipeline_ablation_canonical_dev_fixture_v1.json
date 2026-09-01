@@ -1,0 +1,226 @@
+{
+  "schema_version": "pipeline_ablation_canonical_dev_v1",
+  "evaluation_scope": "development_fixture_only",
+  "task_id": "DEV-SYNTH-HINGED-CONTAINER-01",
+  "claim_boundary": "Synthetic evaluator mutation fixture only. It is not a fresh task, hidden benchmark, paper result, or evidence that real task semantic, source-fidelity, collision, or CCD gold exists.",
+  "adapter": {
+    "config_class": "Config",
+    "config_defaults": {},
+    "resolve_function": "resolve_config",
+    "build_function": "build_synthetic_hinged_container",
+    "source_provenance_export": "SOURCE_PROVENANCE",
+    "config_fields": {
+      "body_style": "body_variant",
+      "door_count": "panel_count"
+    },
+    "resolved_fields": {
+      "body_style": "body_variant",
+      "door_count": "panel_count"
+    }
+  },
+  "source_contract": {
+    "claim_boundary": "Checks the candidate's declared record/revision binding only; it does not prove that source content was read or implemented faithfully.",
+    "records": [
+      {
+        "record_id": "rec_dev_synthetic_hinge",
+        "revision": "rev_000007"
+      }
+    ]
+  },
+  "target_domain": {
+    "slots": {
+      "body_style": [
+        "box",
+        "rounded"
+      ],
+      "door_count": [
+        1,
+        2
+      ]
+    }
+  },
+  "cases": [
+    {
+      "case_id": "canonical_box_single",
+      "canonical_values": {
+        "body_style": "box",
+        "door_count": 1
+      },
+      "gold": {
+        "roles": [
+          {
+            "role_id": "body",
+            "aliases": [
+              "body"
+            ],
+            "exact_count": 1
+          },
+          {
+            "role_id": "door_0",
+            "aliases": [
+              "door_0"
+            ],
+            "exact_count": 1
+          }
+        ],
+        "joints": [
+          {
+            "joint_id": "body_to_door_0",
+            "parent_role": "body",
+            "child_role": "door_0",
+            "type": "revolute",
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "axis_unsigned": true,
+            "axis_tolerance_degrees": 0.1,
+            "origin_xyz": [
+              0.0,
+              0.5,
+              0.4
+            ],
+            "origin_tolerance": 0.001,
+            "lower": 0.0,
+            "upper": 1.2,
+            "limit_tolerance": 0.001
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "canonical_rounded_double",
+      "canonical_values": {
+        "body_style": "rounded",
+        "door_count": 2
+      },
+      "gold": {
+        "roles": [
+          {
+            "role_id": "body",
+            "aliases": [
+              "body"
+            ],
+            "exact_count": 1
+          },
+          {
+            "role_id": "door_0",
+            "aliases": [
+              "door_0"
+            ],
+            "exact_count": 1
+          },
+          {
+            "role_id": "door_1",
+            "aliases": [
+              "door_1"
+            ],
+            "exact_count": 1
+          }
+        ],
+        "joints": [
+          {
+            "joint_id": "body_to_door_0",
+            "parent_role": "body",
+            "child_role": "door_0",
+            "type": "revolute",
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "axis_unsigned": true,
+            "axis_tolerance_degrees": 0.1,
+            "origin_xyz": [
+              0.0,
+              0.5,
+              0.4
+            ],
+            "origin_tolerance": 0.001,
+            "lower": 0.0,
+            "upper": 1.2,
+            "limit_tolerance": 0.001
+          },
+          {
+            "joint_id": "body_to_door_1",
+            "parent_role": "body",
+            "child_role": "door_1",
+            "type": "revolute",
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "axis_unsigned": true,
+            "axis_tolerance_degrees": 0.1,
+            "origin_xyz": [
+              0.0,
+              0.5,
+              0.4
+            ],
+            "origin_tolerance": 0.001,
+            "lower": 0.0,
+            "upper": 1.2,
+            "limit_tolerance": 0.001
+          }
+        ]
+      }
+    }
+  ],
+  "not_evaluable_metrics": [
+    {
+      "metric_id": "source_content_fidelity",
+      "reason": "N/E: this synthetic fixture has a revision binding but no independent source-content fidelity adjudication."
+    },
+    {
+      "metric_id": "collision_geometry_validity",
+      "reason": "N/E: this synthetic fixture intentionally has no independent collision-geometry gold."
+    },
+    {
+      "metric_id": "continuous_collision_detection",
+      "reason": "N/E: no independent CCD engine, sweep manifest, tolerance, or adjudicated contact exceptions are supplied."
+    }
+  ],
+  "development_smoke_required_metrics": [
+    "source_revision_binding",
+    "target_domain_exact",
+    "canonical_value_preserved",
+    "canonical_case_execution",
+    "role_presence",
+    "joint_detection",
+    "joint_axis",
+    "joint_origin",
+    "joint_limit"
+  ],
+  "strict_required_metrics": [
+    "source_revision_binding",
+    "source_content_fidelity",
+    "target_domain_exact",
+    "canonical_value_preserved",
+    "canonical_case_execution",
+    "role_presence",
+    "joint_detection",
+    "joint_axis",
+    "joint_origin",
+    "joint_limit",
+    "collision_geometry_validity",
+    "continuous_collision_detection"
+  ],
+  "mutation_test_contract": {
+    "seed": 2026081201,
+    "required_mutations": {
+      "axis": "joint_axis",
+      "malformed_axis": "joint_axis",
+      "origin": "joint_origin",
+      "malformed_origin": "joint_origin",
+      "limit": "joint_limit",
+      "axis_sign_untransformed_limit": "joint_limit",
+      "ambiguous_joint": "joint_detection",
+      "missing_role": "role_presence",
+      "domain_shrink": "target_domain_exact",
+      "domain_extra": "target_domain_exact",
+      "source_revision": "source_revision_binding"
+    }
+  }
+}

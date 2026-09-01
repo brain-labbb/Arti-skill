@@ -1,0 +1,59 @@
+{
+  "blockers": [
+    "No frozen shared 54-item articulation task manifest is present.",
+    "No independent semantic joint gold exists for type, recall, parent-child correctness, axis-on-moving-part, origin, or limits.",
+    "Collision is a PyBullet discrete proxy with parent-child self-collision excluded; CCD and low-clearance refinement were not run.",
+    "Eight programs fail current strict checks because their recorded historical SDK APIs are unavailable locally; recovered compiler URDFs are swept but never promoted to strict successes."
+  ],
+  "execution": {
+    "artifact_export_available": "12/12",
+    "strict_compile_success": "4/12",
+    "strict_compile_success_rate": 0.3333333333333333,
+    "strict_failures_with_recovered_export": 8,
+    "wall_seconds": 12.339955918490887,
+    "worker_timeout_seconds": 180,
+    "workers": 4
+  },
+  "operational_proxies": {
+    "asset_collision_proxy_pass": "12/12",
+    "axis_metadata_valid": "26/26",
+    "bounded_limit_metadata_valid": "21/21",
+    "combined_swept_states_collision_free": "670/670",
+    "generic_revolute_range": "0/16",
+    "joint_single_sweep_pass": "26/26",
+    "movable_joints": 26,
+    "multi_joint_sobol_states_collision_free": "384/384",
+    "origin_metadata_valid": "25/26",
+    "single_joint_states_collision_free": "286/286"
+  },
+  "preliminary_local_pilot_status": "COMPLETED_WITH_SDK_DRIFT",
+  "schema_version": 1,
+  "scope": "12-category frozen Original Articraft single-instance pilot; not the 54-item common Table 6 benchmark",
+  "selection": {
+    "ratings": {
+      "4": 3,
+      "5": 9
+    },
+    "rule": "first record in each ordered frozen task.records list; no outcome-based reselection",
+    "source_manifest": "exp/runtime/t2_formal_v1/preparation/formal_source_manifest.json",
+    "source_manifest_sha256": "9fea02e938f82d50579a05026fd2a631b9c0da5f473a21556c9996fb1056b1f4",
+    "task_count": 12
+  },
+  "status": "BLOCKED_COMMON_TABLE6",
+  "table6_preliminary": {
+    "articulable": "12/12",
+    "articulable_rate": 1.0,
+    "asset_geom_valid": null,
+    "axis_valid": null,
+    "full_range_collision_free": null,
+    "generic_range": null,
+    "joint_geom_valid": null,
+    "joint_recall": null,
+    "joint_type_accuracy": null,
+    "joints_per_asset": 2.1666666666666665,
+    "limit_valid": null,
+    "native_joint_exposure": "11/12",
+    "origin_valid": null,
+    "parent_child_accuracy": null
+  }
+}

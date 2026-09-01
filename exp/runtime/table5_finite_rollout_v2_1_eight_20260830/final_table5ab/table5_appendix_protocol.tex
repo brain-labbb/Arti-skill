@@ -1,0 +1,78 @@
+% APPENDIX-ONLY MATERIAL for Table 5.
+% Use in the appendix with: \input{table5_appendix_protocol.tex}
+
+\subsection{Table 5 evaluation protocol}
+\label{app:table5_protocol}
+
+Table~\ref{tab:table5_simulation_readiness} evaluates the same fixed set of
+eight articulated-asset datasets used throughout the study. The reported
+denominator is the dataset cohort shown in each panel. In particular, the
+free-standing center-of-mass panel uses an eligibility-filtered denominator,
+so its $N$ can differ from the nominal 200 assets. In Table~5a-II,
+$N_{\mathrm{phys}}$ denotes the number of eligible assets with valid
+dataset-provided physics.
+
+\paragraph{Genesis readiness (Table 5a-I).}
+Each asset is reset three times to its canonical URDF neutral state. Bounded
+coordinates are clamped to their valid ranges during reset. The asset is then
+simulated in Genesis for 10 seconds at 240 Hz with gravity, contacts,
+self-collision, manifest-bound physics, a fixed root, and zero applied joint
+force. Import and DoF mapping require finite simulator states and consistent
+canonical mappings. Genesis simulation validity additionally requires finite
+states and observed poses at all 2,400 steps in every reset repetition.
+Trajectory coverage is the fraction of candidate articulated units with a
+complete observed trajectory.
+
+Complete non-placeholder inertials require every required non-root dynamic link
+to have a positive finite mass, a finite center of mass, and a valid
+positive-definite inertia satisfying the rigid-body triangle inequality. An
+asset is not counted as complete when all required links use the exact unit
+placeholder inertia convention.
+
+\paragraph{Free-root CoM stability (Table 5a-II).}
+For this panel, the root is free and all movable joints are hard-locked at
+canonical $q=0$. The initial pose is placed with the collision bounding-box
+bottom aligned to an infinite plane, with a 2 mm initial clearance. Gravity is
+$[0,0,-9.81]\,\mathrm{m/s^2}$, the timestep is $1/240$ s, and the finite
+horizon is 10 seconds. During the first 0.5 seconds, ground-contact positions
+within the contact tolerance are deduplicated and used to construct a convex
+support polygon in the ground plane.
+
+Physics Coverage is $N_{\mathrm{phys}}/N$, where valid physics requires finite
+mass and center-of-mass parameters. CoM Support Coverage is the fraction of
+$N_{\mathrm{phys}}$ assets with a non-degenerate contact support polygon. CoM
+Static Stability is also computed with $N_{\mathrm{phys}}$ as its denominator;
+it requires a non-negative margin (within the prescribed tolerance), an
+available support polygon, and a passing full 10-second rollout. If
+$N_{\mathrm{phys}}=0$, the conditional CoM metrics are reported as ``N/A''
+rather than as physical-instability failures. The signed CoM support margin is
+the distance from the horizontal center-of-mass projection to the
+support-polygon boundary, positive inside the polygon and negative outside;
+the normalized form divides by the support-polygon diameter. The rollout gate
+limits transient tilt to 60 degrees, final-window tilt to 15 degrees, and root
+drop to one object bounding-box height.
+
+The CoM panel is a diagnostic physical-stability evaluation. To make geometry
+usable across heterogeneous released assets, the runtime applies the declared
+robust collision policy, including visual-geometry fallback and repair of
+degenerate collision meshes when needed, and recomputes inertias for simulator
+execution. Dataset-attributable conditional metrics exclude rows lacking valid
+source physics, while Physics Coverage reports that missingness explicitly.
+Genesis-native fallback mass and CoM are retained only in the supplementary
+diagnostic view. This distinction separates physical-parameter coverage from
+simulator executability.
+
+\paragraph{Cross-simulator evaluation (Table 5b).}
+The same canonical asset selection and joint mapping are evaluated in Genesis,
+PyBullet, and MuJoCo. For each asset or joint, an All-3 result is counted only
+when the corresponding criterion passes in all three simulators. All-3 Import,
+All-3 DoF Mapping, and All-3 Stable are therefore exact intersections, not
+averages of three simulator-level percentages. The stable criterion is the
+finite-horizon numerical-stability gate from Table 5a-I and should not be
+interpreted as physical settling.
+
+\paragraph{Failure and reporting policy.}
+Worker errors, incomplete horizons, missing mappings, unavailable contact
+support, and missing attributable physics are not silently converted to
+passes. Detailed per-asset records, protocol hashes, collision-repair receipts,
+and failure categories are retained with the released experiment artifacts.

@@ -1,0 +1,136 @@
+{
+  "balanced_n5_eligible": 65,
+  "balanced_only": false,
+  "base_driver": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_artiverse_uniform.py",
+  "base_driver_sha256": "3df47eede87d53f52d792ae100c6473b067ef8fda5c63588bc315b033b3817e4",
+  "blender": "/mnt/zsn/zsn_workspace/VoxHammer/third_party/blender-4.2.19-linux-x64/blender",
+  "blender_version": "Blender 4.2.19 LTS",
+  "class_count": 84,
+  "data_root": "/mnt/zsn/lyb/arti-skill/exp/artiverse/data",
+  "dataset": "Artiverse",
+  "dataset_manifest": "/mnt/zsn/lyb/arti-skill/exp/artiverse/dataset_chunks/manifest.json",
+  "dataset_manifest_sha256": "8fa6468254a1f74c58f0c25699598bf88f622fabdaf74f0cd9268ee5663c5586",
+  "driver": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_artiverse_n5_uniform.py",
+  "driver_sha256": "6998d77930b357a9d3b156dc489efaa807e19f34d3ca16ad70a7dbe5c928acf6",
+  "full_category_count": 84,
+  "full_model_count": 3544,
+  "gpu_visibility": [
+    "0",
+    "1"
+  ],
+  "image_layout": "category/source/model_id/imgs/000.png",
+  "input_receipt": {
+    "policy": "manifest_root, byte size, and full segmented GLB SHA256 in official order",
+    "segmented_glb_count": 368,
+    "segmented_glb_receipt_sha256": "ffc5b34502205bf5c3e6f64ec9e7cc1d54b2162680f3991fe17c452cb2ad4455",
+    "segmented_glb_total_bytes": 969667636
+  },
+  "material_policy": "native glTF materials and textures; imported cameras and lights removed",
+  "output_root": "/mnt/zsn/lyb/arti-skill/exp/artiverse_n5_uniform_studio_256_v1",
+  "per_class_count_values": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "per_class_target": 5,
+  "pose_policy": "canonical transforms embedded in segmented.glb",
+  "render_contract": "artiverse_n5_uniform_studio_v1",
+  "render_roster": "/mnt/zsn/lyb/arti-skill/exp/artiverse_n5_uniform_studio_256_v1/render_roster.csv",
+  "render_roster_sha256": "d2fdcdd7d14e30a80c5c2c1d3066f8cd1981a6072b151c98d77eb53ac058d85f",
+  "renderer": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_artiverse_asset_blender.py",
+  "renderer_sha256": "fc6469e7d992fc25aed7cd5f57a125052b1fa5d8eca67e954f9e70fcc0b3eb98",
+  "resolution": 256,
+  "reuse_roots": [
+    "/mnt/zsn/data/particulate/datasets/Artiverse/renders/uniform3544_studio_256_v1",
+    "/mnt/zsn/data/particulate/datasets/Artiverse/renders/uniform84_one_per_category_studio_256_v1"
+  ],
+  "samples": 4,
+  "sampling_contract": "artiverse_category_hash_rank_max5_v1",
+  "schema_version": 1,
+  "selected_category_count": 84,
+  "selected_count": 368,
+  "selection_rule": "first min(5, support(category)) by (SHA256(manifest_root UTF-8), manifest_root)",
+  "shared_renderer": "/mnt/zsn/lyb/arti-skill/arti-template/scripts/render_exported_asset_blender.py",
+  "shared_renderer_sha256": "f418515a9817218b08d577d95983ec934c34ddf19f17bb89c73bf52aa60bb3a7",
+  "shortfall_categories": {
+    "camera": 3,
+    "clasp_knife": 1,
+    "digital_piano": 2,
+    "electric_kettle": 3,
+    "floor_clock": 2,
+    "game_controller": 1,
+    "grill": 3,
+    "lidded_bin": 1,
+    "memory_stick": 2,
+    "moka_pot": 2,
+    "picture_frame": 4,
+    "pliers": 2,
+    "shopping_cart": 4,
+    "storage_box": 2,
+    "stroller": 2,
+    "telescoping_ladder": 3,
+    "tool_cabinet": 1,
+    "washing_machine": 4,
+    "wrench": 1
+  },
+  "studio": {
+    "camera_direction": [
+      1.25,
+      -1.35,
+      0.85
+    ],
+    "camera_distance_policy": "bounding_sphere_auto_frame_1.18",
+    "camera_vertical_fov_degrees": 42.0,
+    "cycles_denoising": true,
+    "ground_rgba": [
+      0.32,
+      0.35,
+      0.4,
+      1.0
+    ],
+    "ground_roughness": 0.82,
+    "lights": [
+      {
+        "direction": [
+          0.4,
+          -0.8,
+          1.5
+        ],
+        "gain": 42.0,
+        "size_ratio": 1.5
+      },
+      {
+        "direction": [
+          -1.2,
+          -0.3,
+          0.6
+        ],
+        "gain": 15.0,
+        "size_ratio": 1.8
+      },
+      {
+        "direction": [
+          0.2,
+          1.0,
+          1.2
+        ],
+        "gain": 24.0,
+        "size_ratio": 1.2
+      }
+    ],
+    "look": "AgX - Medium High Contrast",
+    "mode": "opaque_studio",
+    "view_transform": "AgX",
+    "world_rgba": [
+      0.8,
+      0.84,
+      0.9,
+      1.0
+    ],
+    "world_strength": 0.55
+  },
+  "timeout_seconds": 900.0,
+  "workers_per_gpu": 2
+}

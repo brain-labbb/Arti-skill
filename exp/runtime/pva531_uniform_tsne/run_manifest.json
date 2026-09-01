@@ -1,0 +1,156 @@
+{
+  "artifacts": {
+    "dataset_manifest": "dataset_manifest.json",
+    "generator_roster": "generator_roster_resolved.csv",
+    "raw_image_index": "raw_image_index.csv",
+    "source_comparison": "tsne_source_comparison.png"
+  },
+  "config": {
+    "batch_size": 32,
+    "device": "cuda:0",
+    "force_extract": true,
+    "num_workers": 4,
+    "perplexity": 30.0,
+    "plot_dpi": 180,
+    "seed": 42,
+    "tsne_jobs": 8,
+    "tsne_max_iter": 1000,
+    "tsne_verbose": 1,
+    "uniform_render_root": "/mnt/zsn/data/particulate/datasets/PV-A/renders/uniform531_studio_256_v1",
+    "use_amp": true
+  },
+  "dataset": {
+    "asset_and_dependency_sha256": "8f0be055ffd4c8bf5a1af44525dd8e65cd7d148cbe4b9955d09141969dcb44bd",
+    "blender_version": "Blender 4.2.19 LTS",
+    "builtin_no_picture_count": 99,
+    "generator_count": 531,
+    "image_policy": "one_uniform_blender_render_per_generator",
+    "index_csv": "/mnt/zsn/lyb/arti-skill/template_maps/generator_picture_index.csv",
+    "input_mode": "uniform_blender_seed_0000",
+    "picture_backed_count": 432,
+    "raw_unique_image_count": 531,
+    "render_config": "/mnt/zsn/data/particulate/datasets/PV-A/renders/uniform531_studio_256_v1/render_config.json",
+    "render_config_schema_version": 2,
+    "render_config_sha256": "b97cb912147db3908de0183cf2736f98477a5a17963b6c29c17d98142ed4545e",
+    "render_contract": "pva531_uniform_studio_v1",
+    "render_manifest": "/mnt/zsn/data/particulate/datasets/PV-A/renders/uniform531_studio_256_v1/render_manifest.csv",
+    "render_root": "/mnt/zsn/data/particulate/datasets/PV-A/renders/uniform531_studio_256_v1",
+    "renderer_sha256": "f418515a9817218b08d577d95983ec934c34ddf19f17bb89c73bf52aa60bb3a7",
+    "resolution": 256,
+    "sample_unit": "generator_class",
+    "samples": 4,
+    "studio": {
+      "camera_direction": [
+        1.25,
+        -1.35,
+        0.85
+      ],
+      "camera_distance_policy": "bounding_sphere_auto_frame_1.18",
+      "camera_vertical_fov_degrees": 42.0,
+      "cycles_denoising": true,
+      "ground_rgba": [
+        0.32,
+        0.35,
+        0.4,
+        1.0
+      ],
+      "ground_roughness": 0.82,
+      "lights": [
+        {
+          "direction": [
+            0.4,
+            -0.8,
+            1.5
+          ],
+          "gain": 42.0,
+          "size_ratio": 1.5
+        },
+        {
+          "direction": [
+            -1.2,
+            -0.3,
+            0.6
+          ],
+          "gain": 15.0,
+          "size_ratio": 1.8
+        },
+        {
+          "direction": [
+            0.2,
+            1.0,
+            1.2
+          ],
+          "gain": 24.0,
+          "size_ratio": 1.2
+        }
+      ],
+      "look": "AgX - Medium High Contrast",
+      "mode": "opaque_studio",
+      "view_transform": "AgX",
+      "world_rgba": [
+        0.8,
+        0.84,
+        0.9,
+        1.0
+      ],
+      "world_strength": 0.55
+    },
+    "uniform_image_dimensions": [
+      256,
+      256
+    ]
+  },
+  "models": {
+    "clip": {
+      "artifacts": {
+        "class_features": "class_features.npy",
+        "raw_image_features": "raw_image_features.npy",
+        "tsne_builtin_labels": "tsne_builtin_labels.png",
+        "tsne_by_picture_category": "tsne_by_picture_category.png",
+        "tsne_by_source": "tsne_by_source.png",
+        "tsne_coordinates": "tsne_coordinates.npy",
+        "tsne_coordinates_csv": "tsne_coordinates.csv"
+      },
+      "class_count": 531,
+      "encoder_label": "CLIP ViT-B/32",
+      "feature_cache_reused": false,
+      "feature_dim": 512,
+      "model_path": "/root/.cache/huggingface/hub/models--openai--clip-vit-base-patch32/snapshots/3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+      "tsne": {
+        "input_dim": 512,
+        "max_iter": 1000,
+        "n_jobs": 8,
+        "pca_components": 50,
+        "perplexity": 30.0,
+        "random_state": 42,
+        "sample_count": 531
+      }
+    },
+    "dinov2": {
+      "artifacts": {
+        "class_features": "class_features.npy",
+        "raw_image_features": "raw_image_features.npy",
+        "tsne_builtin_labels": "tsne_builtin_labels.png",
+        "tsne_by_picture_category": "tsne_by_picture_category.png",
+        "tsne_by_source": "tsne_by_source.png",
+        "tsne_coordinates": "tsne_coordinates.npy",
+        "tsne_coordinates_csv": "tsne_coordinates.csv"
+      },
+      "class_count": 531,
+      "encoder_label": "DINOv2",
+      "feature_cache_reused": false,
+      "feature_dim": 768,
+      "model_path": "/root/.cache/huggingface/hub/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+      "tsne": {
+        "input_dim": 768,
+        "max_iter": 1000,
+        "n_jobs": 8,
+        "pca_components": 50,
+        "perplexity": 30.0,
+        "random_state": 42,
+        "sample_count": 531
+      }
+    }
+  },
+  "schema_version": 1
+}

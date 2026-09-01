@@ -1,0 +1,442 @@
+{
+  "comparison_label": "category-matched deterministic cohort",
+  "manifest_viable_category_counts": {
+    "advanced_microwave_oven_with_inverter": 1,
+    "bathroom_faucet_with_single_handle": 4,
+    "bathroom_faucet_with_single_handle_lever_operati": 1,
+    "commercial_faucet_featuring_articulated_spout": 1,
+    "commercial_grade_faucet_with_brass_construction": 1,
+    "commercial_microwave_featuring_programmable_cooking": 1,
+    "countertop_microwave_with_turntable": 2,
+    "dishwasher": 3,
+    "energy_efficient_dishwasher_featuring_adjustable_upper": 1,
+    "energy_efficient_refrigerator_with_adjustable_shel": 1,
+    "energy_efficient_refrigerator_with_adjustable_shelving": 2,
+    "faucet": 2,
+    "functional_microwave_featuring_articulated": 1,
+    "gas_oven_with_broiler": 1,
+    "kitchen_faucet_with_pull_out_spray": 1,
+    "meticulously_crafted_microwave_incorporating": 1,
+    "microwave": 5,
+    "oven": 5,
+    "over_range_microwave_with_exhaust_fan": 3,
+    "over_range_microwave_with_exhaust_fan_and_interior": 1,
+    "premium_dishwasher_with_third_level_rack": 3,
+    "premium_dishwasher_with_third_level_rack_system_a": 1,
+    "professional_grade_microwave_engineered_with": 1,
+    "professional_oven_with_steam": 1,
+    "refrigerater": 2,
+    "sensor_controlled_microwave_with_automatic": 1,
+    "stainless_steel_refrigerator_with": 2,
+    "touchless_faucet_with_sensor_activation": 3,
+    "touchless_faucet_with_sensor_activation_and_temper": 1,
+    "versatile_microwave_with_hinged": 1,
+    "well_designed_microwave_with_moving": 1
+  },
+  "method": "LAM",
+  "pool_audit": {
+    "dishwasher": {
+      "eligible_pool_count": 8,
+      "first_excluded_digest": "ea2816499d07010c17b774b3d49d01a122c9f469291e675df1841c754ae36c85",
+      "selected_count": 7,
+      "selected_release_ids": [
+        "dishwasher_003",
+        "premium_dishwasher_with_third_level_rack_000",
+        "dishwasher_000",
+        "premium_dishwasher_with_third_level_rack_002",
+        "premium_dishwasher_with_third_level_rack_system_a_000",
+        "premium_dishwasher_with_third_level_rack_001",
+        "energy_efficient_dishwasher_featuring_adjustable_upper_000"
+      ],
+      "whitelist": [
+        "dishwasher",
+        "energy_efficient_dishwasher_featuring_adjustable_upper",
+        "premium_dishwasher_with_third_level_rack",
+        "premium_dishwasher_with_third_level_rack_system_a"
+      ]
+    },
+    "faucet": {
+      "eligible_pool_count": 14,
+      "first_excluded_digest": "b77a9d6afa82736aeef6169bb8e30553531e1674cc5f2cb50f9e60430de2d803",
+      "selected_count": 7,
+      "selected_release_ids": [
+        "bathroom_faucet_with_single_handle_003",
+        "touchless_faucet_with_sensor_activation_000",
+        "bathroom_faucet_with_single_handle_001",
+        "touchless_faucet_with_sensor_activation_002",
+        "bathroom_faucet_with_single_handle_002",
+        "touchless_faucet_with_sensor_activation_001",
+        "touchless_faucet_with_sensor_activation_and_temper_000"
+      ],
+      "whitelist": [
+        "bathroom_faucet_with_single_handle",
+        "bathroom_faucet_with_single_handle_lever_operati",
+        "commercial_faucet_featuring_articulated_spout",
+        "commercial_grade_faucet_with_brass_construction",
+        "faucet",
+        "kitchen_faucet_with_pull_out_spray",
+        "touchless_faucet_with_sensor_activation",
+        "touchless_faucet_with_sensor_activation_and_temper"
+      ]
+    },
+    "microwave": {
+      "eligible_pool_count": 19,
+      "first_excluded_digest": "4d0c452c6bd13a9f8a31decddecf8d4f03cfceb3ded9cbcb428507636d8ba5ca",
+      "selected_count": 7,
+      "selected_release_ids": [
+        "over_range_microwave_with_exhaust_fan_002",
+        "over_range_microwave_with_exhaust_fan_000",
+        "advanced_microwave_oven_with_inverter_000",
+        "sensor_controlled_microwave_with_automatic_000",
+        "microwave_002",
+        "versatile_microwave_with_hinged_000",
+        "countertop_microwave_with_turntable_001"
+      ],
+      "whitelist": [
+        "advanced_microwave_oven_with_inverter",
+        "commercial_microwave_featuring_programmable_cooking",
+        "countertop_microwave_with_turntable",
+        "functional_microwave_featuring_articulated",
+        "meticulously_crafted_microwave_incorporating",
+        "microwave",
+        "over_range_microwave_with_exhaust_fan",
+        "over_range_microwave_with_exhaust_fan_and_interior",
+        "professional_grade_microwave_engineered_with",
+        "sensor_controlled_microwave_with_automatic",
+        "versatile_microwave_with_hinged",
+        "well_designed_microwave_with_moving"
+      ]
+    },
+    "oven": {
+      "eligible_pool_count": 7,
+      "first_excluded_digest": null,
+      "selected_count": 7,
+      "selected_release_ids": [
+        "oven_002",
+        "oven_003",
+        "professional_oven_with_steam_001",
+        "gas_oven_with_broiler_000",
+        "oven_004",
+        "oven_000",
+        "oven_001"
+      ],
+      "whitelist": [
+        "gas_oven_with_broiler",
+        "oven",
+        "professional_oven_with_steam"
+      ]
+    },
+    "refrigerator": {
+      "eligible_pool_count": 7,
+      "first_excluded_digest": null,
+      "selected_count": 7,
+      "selected_release_ids": [
+        "refrigerater_000",
+        "refrigerater_001",
+        "energy_efficient_refrigerator_with_adjustable_shelving_000",
+        "stainless_steel_refrigerator_with_001",
+        "energy_efficient_refrigerator_with_adjustable_shelving_001",
+        "energy_efficient_refrigerator_with_adjustable_shel_000",
+        "stainless_steel_refrigerator_with_000"
+      ],
+      "whitelist": [
+        "energy_efficient_refrigerator_with_adjustable_shel",
+        "energy_efficient_refrigerator_with_adjustable_shelving",
+        "refrigerater",
+        "stainless_steel_refrigerator_with"
+      ]
+    }
+  },
+  "protocol_id": "nano3d_table2_naming_matched_v1",
+  "selected": [
+    {
+      "canonical_category": "microwave",
+      "object_release_id": "over_range_microwave_with_exhaust_fan_002",
+      "selection_digest": "013cb859cbfa6514c62918f4284dd1324d3e9aa43fad0d42137e87ffef23069f",
+      "selection_rank": 1,
+      "source_category": "over_range_microwave_with_exhaust_fan",
+      "urdf_sha256": "a00b489aa1fe7b267c898cc483c43da525f22d50a7bb06d4620189f913538bb2"
+    },
+    {
+      "canonical_category": "microwave",
+      "object_release_id": "over_range_microwave_with_exhaust_fan_000",
+      "selection_digest": "094a1bf6c93a90e88284a149d2fe72d1fefb6f4eb8b9d0ea65b23f4c67f9415b",
+      "selection_rank": 2,
+      "source_category": "over_range_microwave_with_exhaust_fan",
+      "urdf_sha256": "19bcb124342c0eb19923f8e2171935f515597a591f61a11ee9f5addfe5f91967"
+    },
+    {
+      "canonical_category": "microwave",
+      "object_release_id": "advanced_microwave_oven_with_inverter_000",
+      "selection_digest": "1c7d6943ab770ec87f0b5f51e6fb1363ae566b001c07940638254183afae6a1e",
+      "selection_rank": 3,
+      "source_category": "advanced_microwave_oven_with_inverter",
+      "urdf_sha256": "caad1e9eb430b194b01251b63fbfa18555c1e52820252f408f8a72f7bf43e012"
+    },
+    {
+      "canonical_category": "microwave",
+      "object_release_id": "sensor_controlled_microwave_with_automatic_000",
+      "selection_digest": "27deaa8fdde8ab2cf6cb6487ccbb7b92f9ff6ce6a1227275fbd329ccf45e30f6",
+      "selection_rank": 4,
+      "source_category": "sensor_controlled_microwave_with_automatic",
+      "urdf_sha256": "32114af8f2c2176e0100cfc81814feeba73e8c356710cdd2b1bce5a2a401cbc4"
+    },
+    {
+      "canonical_category": "microwave",
+      "object_release_id": "microwave_002",
+      "selection_digest": "308e77138c763f467f0d1d95707a0f6be4c3198327c4fb49b92dbcd63d54b796",
+      "selection_rank": 5,
+      "source_category": "microwave",
+      "urdf_sha256": "a413a51fa70092e1a62c434e24e575ac9874008157bf14f7be997df893dcdf67"
+    },
+    {
+      "canonical_category": "microwave",
+      "object_release_id": "versatile_microwave_with_hinged_000",
+      "selection_digest": "384f102574138a020166e57270496f18d333597e91ae0b3fa177a63cd7b8ff2d",
+      "selection_rank": 6,
+      "source_category": "versatile_microwave_with_hinged",
+      "urdf_sha256": "97448bbe4ca8217b4263238dfe1b97c7305e2220af6db9cabfdaa8cc07a4ce04"
+    },
+    {
+      "canonical_category": "microwave",
+      "object_release_id": "countertop_microwave_with_turntable_001",
+      "selection_digest": "3bdfabe6b0d6ae1f900f1900140a6267bf10a79d327ae4bb44800aeb6557f7e5",
+      "selection_rank": 7,
+      "source_category": "countertop_microwave_with_turntable",
+      "urdf_sha256": "7d39477e9c19be87a0119bf7f68b7f51d9bf0c067c7b5a4061fa900792c6d19e"
+    },
+    {
+      "canonical_category": "dishwasher",
+      "object_release_id": "dishwasher_003",
+      "selection_digest": "322fc2577ce7fcd186081dab77f253b8a0ab2cede0ba2c1557f9d9a06f7ae724",
+      "selection_rank": 1,
+      "source_category": "dishwasher",
+      "urdf_sha256": "80545faeb6429d510f0f30e41125b0c3a89d556b6aa0cb35b9d7c0dff2ac3270"
+    },
+    {
+      "canonical_category": "dishwasher",
+      "object_release_id": "premium_dishwasher_with_third_level_rack_000",
+      "selection_digest": "69551ba06543a22bcbcd980907278c332a967cfd798aca0550ce28839383eea3",
+      "selection_rank": 2,
+      "source_category": "premium_dishwasher_with_third_level_rack",
+      "urdf_sha256": "fbbb30471fe9aa01a4561c8fb1c99b7eccdc6f913d8176a4fe0d45ac298b966a"
+    },
+    {
+      "canonical_category": "dishwasher",
+      "object_release_id": "dishwasher_000",
+      "selection_digest": "7e465893983ed29ffe1d6a69b28a68dde3f232d2a03ad3c7bebdca0c1a623efa",
+      "selection_rank": 3,
+      "source_category": "dishwasher",
+      "urdf_sha256": "7e34e0f496841ed733f6a63a0038ba6d3fe6b5ae33ae4801ea0596e87d967186"
+    },
+    {
+      "canonical_category": "dishwasher",
+      "object_release_id": "premium_dishwasher_with_third_level_rack_002",
+      "selection_digest": "8def37e7033b4296937d7b30364051817bb4b00cb60925518e192bd79daa58a8",
+      "selection_rank": 4,
+      "source_category": "premium_dishwasher_with_third_level_rack",
+      "urdf_sha256": "81e1238578b2342cd6f287c8cdabc77428bd6bcc2dbdc49169faecfa9ddae17b"
+    },
+    {
+      "canonical_category": "dishwasher",
+      "object_release_id": "premium_dishwasher_with_third_level_rack_system_a_000",
+      "selection_digest": "a56a805a8579365876416a61177ce1a166ba0c9c6ffb8a99d82ea1ae0dd105c1",
+      "selection_rank": 5,
+      "source_category": "premium_dishwasher_with_third_level_rack_system_a",
+      "urdf_sha256": "af504efc531bb1fc05c324f563f0745b2223d1ecb7b434f209225a18007d736f"
+    },
+    {
+      "canonical_category": "dishwasher",
+      "object_release_id": "premium_dishwasher_with_third_level_rack_001",
+      "selection_digest": "b3e40f3bea9a1f5ef6847979e6c5e7a13657e49d577247907d6e48e5c334ba96",
+      "selection_rank": 6,
+      "source_category": "premium_dishwasher_with_third_level_rack",
+      "urdf_sha256": "7b3e72d40aa5b93aa8086a046654846f71fecde3ea536bfa76672d2bd3da04dd"
+    },
+    {
+      "canonical_category": "dishwasher",
+      "object_release_id": "energy_efficient_dishwasher_featuring_adjustable_upper_000",
+      "selection_digest": "b7f4e057b6027e0af302302053a6bbe1ff54f241be666b2f6b62d1f049450a78",
+      "selection_rank": 7,
+      "source_category": "energy_efficient_dishwasher_featuring_adjustable_upper",
+      "urdf_sha256": "775ff78867969347638d277ad7376a7c4bcc719120e15ae891d57f36c4939346"
+    },
+    {
+      "canonical_category": "oven",
+      "object_release_id": "oven_002",
+      "selection_digest": "1158a7bd9467df37a3c958eafb464e53ab394ec5e1f3733d29e104e257b1d184",
+      "selection_rank": 1,
+      "source_category": "oven",
+      "urdf_sha256": "92028e34e3367ef7ba514032b261177024cd60f9b09e8cc8e1b29d0f5e7539ca"
+    },
+    {
+      "canonical_category": "oven",
+      "object_release_id": "oven_003",
+      "selection_digest": "3c0a243c11de7846b6d400b147fb2e7ac9f221c29350577ca3d02ba37414a31d",
+      "selection_rank": 2,
+      "source_category": "oven",
+      "urdf_sha256": "ab4a7af53657b32db1dc85871a35fad9a0295d95d006f60b1b16af9f7b6028c9"
+    },
+    {
+      "canonical_category": "oven",
+      "object_release_id": "professional_oven_with_steam_001",
+      "selection_digest": "4c0520e2e106a4b3514e54a6c875d6a5ce402af29005a9422b3c0eb2117e9822",
+      "selection_rank": 3,
+      "source_category": "professional_oven_with_steam",
+      "urdf_sha256": "ebb37ed8e218c6b5a178d750d225dd91dd8022c301cf50a484dee86f3f1ad2ba"
+    },
+    {
+      "canonical_category": "oven",
+      "object_release_id": "gas_oven_with_broiler_000",
+      "selection_digest": "7bf2e745b07b7a0ab2b8ae9fc87a12b79ba7c63e1690f1cf08a6818f0c999848",
+      "selection_rank": 4,
+      "source_category": "gas_oven_with_broiler",
+      "urdf_sha256": "37f575ac2f20c615202e00e6a1f28103d39dc803c54a707b7a34ba7178e68398"
+    },
+    {
+      "canonical_category": "oven",
+      "object_release_id": "oven_004",
+      "selection_digest": "7d1121767983200ce3d2b64295ba5b4287c1d3af715d88532fd764d3d985e0d0",
+      "selection_rank": 5,
+      "source_category": "oven",
+      "urdf_sha256": "c612a4e232b374350bfe55551eaa33cbc530ae9dbb141cebee64fbdde08b2f23"
+    },
+    {
+      "canonical_category": "oven",
+      "object_release_id": "oven_000",
+      "selection_digest": "afa43fc08efd16161fb5aa00ed5f4db183e1e880ad74b9d2b400046ee7882585",
+      "selection_rank": 6,
+      "source_category": "oven",
+      "urdf_sha256": "92028e34e3367ef7ba514032b261177024cd60f9b09e8cc8e1b29d0f5e7539ca"
+    },
+    {
+      "canonical_category": "oven",
+      "object_release_id": "oven_001",
+      "selection_digest": "de928976058336451ae4fa225dc34641d891665c885a7bd7153c4ee61dc1cb9f",
+      "selection_rank": 7,
+      "source_category": "oven",
+      "urdf_sha256": "3c4fcb0bd3161c8d24fb827c688257980bf5d177df3a515c7f8da470da9b83b2"
+    },
+    {
+      "canonical_category": "faucet",
+      "object_release_id": "bathroom_faucet_with_single_handle_003",
+      "selection_digest": "190f7addba3765e39f3596cda4ad5ae6160b3ad31c23dae88cae3da028b514f1",
+      "selection_rank": 1,
+      "source_category": "bathroom_faucet_with_single_handle",
+      "urdf_sha256": "34c3112159941b16908c4f4cac66856856578b90f897765dceac44ed5ae7390d"
+    },
+    {
+      "canonical_category": "faucet",
+      "object_release_id": "touchless_faucet_with_sensor_activation_000",
+      "selection_digest": "3f45eef90bd7a8ce1350d7e85758994ae481e9e0090a572290c2ba7904e460dd",
+      "selection_rank": 2,
+      "source_category": "touchless_faucet_with_sensor_activation",
+      "urdf_sha256": "51448acd9a535f3dbf5388d87f64c1a510f1be59643077f84b0777e37ecd2e98"
+    },
+    {
+      "canonical_category": "faucet",
+      "object_release_id": "bathroom_faucet_with_single_handle_001",
+      "selection_digest": "449be1f0e4d6d0c0ba4559e7d20c509347c8a787d411205d8a38444cd081ce01",
+      "selection_rank": 3,
+      "source_category": "bathroom_faucet_with_single_handle",
+      "urdf_sha256": "86e3c8f6a37d7966e7b23b7d040840c8fc953b44e70f213cf5b066d8a2b31eb3"
+    },
+    {
+      "canonical_category": "faucet",
+      "object_release_id": "touchless_faucet_with_sensor_activation_002",
+      "selection_digest": "6c579dc9a2b2b77d25825bc925c011860c3771e9d9ba20cafa3fabb8669fe7ab",
+      "selection_rank": 4,
+      "source_category": "touchless_faucet_with_sensor_activation",
+      "urdf_sha256": "f5ef8938c2034479994ea694f365714fab498effe56436141de6c2c885af3d59"
+    },
+    {
+      "canonical_category": "faucet",
+      "object_release_id": "bathroom_faucet_with_single_handle_002",
+      "selection_digest": "8530bd7cba22475a2d609182184b76ddc59dbb40a21d783c05382b01233098ff",
+      "selection_rank": 5,
+      "source_category": "bathroom_faucet_with_single_handle",
+      "urdf_sha256": "8c7895ee69b2d70c6419c7648e512c9d6f2462a6e95c70d1709574fd125bceac"
+    },
+    {
+      "canonical_category": "faucet",
+      "object_release_id": "touchless_faucet_with_sensor_activation_001",
+      "selection_digest": "88ab1867fe6b8816d52203fbddcbc686fa799b155bd179648e8a7945b065283c",
+      "selection_rank": 6,
+      "source_category": "touchless_faucet_with_sensor_activation",
+      "urdf_sha256": "1a79a9519f4776a994fab9db537f1c5014b28c83c614f1a2d5a981d540d0ecb4"
+    },
+    {
+      "canonical_category": "faucet",
+      "object_release_id": "touchless_faucet_with_sensor_activation_and_temper_000",
+      "selection_digest": "b6cd44887b0afe455b6ef8182a40774b9e3541e5ba142d2e117de9212013f72b",
+      "selection_rank": 7,
+      "source_category": "touchless_faucet_with_sensor_activation_and_temper",
+      "urdf_sha256": "42f3b7677e1fda697618bdcfe986ae210bd00e431de6eef100fd86ba35b6950d"
+    },
+    {
+      "canonical_category": "refrigerator",
+      "object_release_id": "refrigerater_000",
+      "selection_digest": "1dacf056bb9b511efdbb0795e0c84a5b7e58ce6e9d929c19e2a8bde566f7a15c",
+      "selection_rank": 1,
+      "source_category": "refrigerater",
+      "urdf_sha256": "14b1d7cce4c92d7f9ba242ba22319052076526307f93b70f45fc0d855a4dedc7"
+    },
+    {
+      "canonical_category": "refrigerator",
+      "object_release_id": "refrigerater_001",
+      "selection_digest": "51b3dfa10cead72439def85eff3d4052fbb4a86cab8fa65cc29c3adfe6105b8d",
+      "selection_rank": 2,
+      "source_category": "refrigerater",
+      "urdf_sha256": "3d3978d4a7efbd428176a44bf4c9785bbc9587d9ad0e46efd38df6fa6561b51b"
+    },
+    {
+      "canonical_category": "refrigerator",
+      "object_release_id": "energy_efficient_refrigerator_with_adjustable_shelving_000",
+      "selection_digest": "6a818a5bc94b30dfc032bc4ba6c858d85612cd5c3226b3f3a1bcd5903a47b0c2",
+      "selection_rank": 3,
+      "source_category": "energy_efficient_refrigerator_with_adjustable_shelving",
+      "urdf_sha256": "cf579dcd64653bdcd41d0febbb3611ab3e18cb7f7b40a5fa3954d36c68e3bec9"
+    },
+    {
+      "canonical_category": "refrigerator",
+      "object_release_id": "stainless_steel_refrigerator_with_001",
+      "selection_digest": "80022b15ec244ab5a14c27ebebbf88b10655eccab84bb9bf06496cb99428709d",
+      "selection_rank": 4,
+      "source_category": "stainless_steel_refrigerator_with",
+      "urdf_sha256": "216f10cbe18a85f199ab79bb2a124c178d5698ee1c8ef5e60899c4e50bdccef0"
+    },
+    {
+      "canonical_category": "refrigerator",
+      "object_release_id": "energy_efficient_refrigerator_with_adjustable_shelving_001",
+      "selection_digest": "8fdeba61eef3db6cea431b8d05c52eb96cc52a8827b77e600aed9071e906259f",
+      "selection_rank": 5,
+      "source_category": "energy_efficient_refrigerator_with_adjustable_shelving",
+      "urdf_sha256": "4d1597cad5ea4611172c3306e16df07f600e78da86a51cc4235832e16ea25706"
+    },
+    {
+      "canonical_category": "refrigerator",
+      "object_release_id": "energy_efficient_refrigerator_with_adjustable_shel_000",
+      "selection_digest": "a18b9255fe9b2b8240b8dafd986fd5321177e9891050920c7d4517de7606137a",
+      "selection_rank": 6,
+      "source_category": "energy_efficient_refrigerator_with_adjustable_shel",
+      "urdf_sha256": "971e10efcb91d80f4faa6e459b8475aca502c3d046baac99c7b707b27478a3b3"
+    },
+    {
+      "canonical_category": "refrigerator",
+      "object_release_id": "stainless_steel_refrigerator_with_000",
+      "selection_digest": "e7cb79066ad2d81de58e89cc2e68a63ccda667bf2875be1fc2da8976a305296c",
+      "selection_rank": 7,
+      "source_category": "stainless_steel_refrigerator_with",
+      "urdf_sha256": "4802bc3aaee6bf7221bee337801c17d27bd0fa92b9365209ae76ad1349926b61"
+    }
+  ],
+  "selection_policy": {
+    "outcome_independent": true,
+    "policy": "from viable official-release records in the category whitelist, rank records independently within each canonical category by ascending SHA256 of the UTF-8 string below and select the first seven",
+    "rank_string": "nano3d-table2-naming-matched-v1|LAM|<canonical_category>|<object_release_id>|<urdf_sha256>",
+    "tie_breakers": [
+      "object_release_id ascending",
+      "urdf_sha256 ascending"
+    ]
+  }
+}

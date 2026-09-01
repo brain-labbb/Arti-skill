@@ -1,0 +1,1840 @@
+{
+  "asset_count": 36,
+  "blender": "/mnt/zsn/zsn_workspace/VoxHammer/third_party/blender-4.2.19-linux-x64/blender",
+  "blender_version": "Blender 4.2.19 LTS",
+  "contact_sheets": [
+    "contact_sheet_01.png",
+    "contact_sheet_02.png",
+    "contact_sheet_03.png",
+    "contact_sheet_04.png"
+  ],
+  "created_at_utc": "2026-08-31T08:18:14.300139Z",
+  "diagnostics": "diagnostics.json",
+  "driver": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_pva_p0_collision_atlas.py",
+  "driver_sha256": "8d3f4cb08fbd90dcd00a2e5735912debf45ab4b364ab6f3580b47f7a5f217789",
+  "font": "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+  "font_sha256": "79c18ebe7b811951e8311bad7103ebeae8c337ed9988ea69e8a78a66cfe029b9",
+  "index": "README.md",
+  "items": [
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/pictureX_0611_drawing_compass_with_adjustable_legs/seed_0000",
+      "asset_id": "PV-A/pictureX_0611_drawing_compass_with_adjustable_legs/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/01_pictureX_0611_drawing_compass_with_adjustable_legs.png",
+      "category": "pictureX_0611_drawing_compass_with_adjustable_legs",
+      "category_zh": "圆规",
+      "display_order": 1,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "leg_style__sheet_taper__needle_leg",
+      "link_a_zh": "针尖腿",
+      "link_b": "leg_style__sheet_taper__lead_leg",
+      "link_b_zh": "铅芯腿",
+      "note_zh": "两腿真实间隙约 1 mm；v2 的两侧 Bullet margin 把间隙吃掉。同一 seed 在 numerical-zero-margin 的 v3 已通过，属于 v2 误伤。",
+      "ordinal": 204531,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/01_pictureX_0611_drawing_compass_with_adjustable_legs.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/01_pictureX_0611_drawing_compass_with_adjustable_legs.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/01_pictureX_0611_drawing_compass_with_adjustable_legs.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/01_pictureX_0611_drawing_compass_with_adjustable_legs.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 4,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.0010000124269859266,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.0010000124269859266,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/pictureX_0611_drawing_compass_with_adjustable_legs/seed_0000/model.urdf",
+      "urdf_sha256": "89f77fb8e393076b0d31d42cce67de0a6cd0c9b102756c47d46850ec6a4e2071"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/rack_and_pinion_slider/seed_0000",
+      "asset_id": "PV-A/rack_and_pinion_slider/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/02_rack_and_pinion_slider.png",
+      "category": "rack_and_pinion_slider",
+      "category_zh": "齿轮齿条滑台",
+      "display_order": 2,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "rack_carriage",
+      "link_a_zh": "齿条滑架",
+      "link_b": "pinion",
+      "link_b_zh": "小齿轮",
+      "note_zh": "v2 未登记齿轮比和相位，齿条与小齿轮被当成两个自由度。v3 加入可信耦合并校准 margin 后，同一 seed 已通过。",
+      "ordinal": 225047,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/02_rack_and_pinion_slider.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/02_rack_and_pinion_slider.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/02_rack_and_pinion_slider.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/02_rack_and_pinion_slider.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 6,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.0014270169160584118,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.0014270169160584118,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/rack_and_pinion_slider/seed_0000/model.urdf",
+      "urdf_sha256": "ed077ecb5378b49cdc09433296115f75b909945733958fc8d1d445f670f55ffa"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/standing_desk_with_synchronous_telescoping_legs_and_articulated_controls/seed_0000",
+      "asset_id": "PV-A/standing_desk_with_synchronous_telescoping_legs_and_articulated_controls/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/03_standing_desk_with_synchronous_telescoping_legs_and_articulated_controls.png",
+      "category": "standing_desk_with_synchronous_telescoping_legs_and_articulated_controls",
+      "category_zh": "同步升降桌",
+      "display_order": 3,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "leg_0_outer",
+      "link_a_zh": "0号外腿",
+      "link_b": "desktop",
+      "link_b_zh": "桌面",
+      "note_zh": "外腿伸入桌面安装腔 18 mm。它可能是装配所需接触，但当前 pair policy 只排除直接父子 link。",
+      "ordinal": 266373,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/03_standing_desk_with_synchronous_telescoping_legs_and_articulated_controls.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/03_standing_desk_with_synchronous_telescoping_legs_and_articulated_controls.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/03_standing_desk_with_synchronous_telescoping_legs_and_articulated_controls.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/03_standing_desk_with_synchronous_telescoping_legs_and_articulated_controls.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 4,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.018000000000000016,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.018000000000000016,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/standing_desk_with_synchronous_telescoping_legs_and_articulated_controls/seed_0000/model.urdf",
+      "urdf_sha256": "aa945002dcb39721f3faf9f6e059185a4c316dc23283b3bb53e862a4f3665cbe"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/watch/seed_0000",
+      "asset_id": "PV-A/watch/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/04_watch.png",
+      "category": "watch",
+      "category_zh": "手表",
+      "display_order": 4,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "bezel",
+      "link_a_zh": "表圈",
+      "link_b": "minute_hand",
+      "link_b_zh": "分针",
+      "note_zh": "表圈与多层指针的轴向间隙小于默认 margin；v3 可消掉约 2 mm 数值膨胀，但仍有碰撞代理重叠，需要重新分层。",
+      "ordinal": 291449,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/04_watch.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/04_watch.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/04_watch.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/04_watch.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 14,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.0037009451561747873,
+      "sample_index": 0,
+      "secondary_pairs": [
+        {
+          "contact_count": 2,
+          "contact_points": [
+            [
+              2.3401530037983273e-05,
+              6.320829321507758e-05,
+              0.01156597259201253
+            ],
+            [
+              0.0015836846891027806,
+              0.0026338354626460193,
+              0.011026000000000001
+            ]
+          ],
+          "link_a_name": "bezel",
+          "link_b_name": "hour_hand",
+          "penetration_depth_m": 0.0034799451840250573
+        },
+        {
+          "contact_count": 2,
+          "contact_points": [
+            [
+              2.7652021056018446e-05,
+              0.0008172335532550369,
+              0.013796527394062336
+            ],
+            [
+              -0.0024980729261589564,
+              -0.007742385015981351,
+              0.014336499986074865
+            ]
+          ],
+          "link_a_name": "bezel",
+          "link_b_name": "second_hand",
+          "penetration_depth_m": 0.0029009451561747904
+        },
+        {
+          "contact_count": 3,
+          "contact_points": [
+            [
+              0.00027753201886094534,
+              -0.0011157245537329664,
+              0.01280675952179255
+            ],
+            [
+              0.0,
+              0.0,
+              0.013226
+            ],
+            [
+              -0.0008028839918518893,
+              0.0007178936847911431,
+              0.01268602740798747
+            ]
+          ],
+          "link_a_name": "minute_hand",
+          "link_b_name": "second_hand",
+          "penetration_depth_m": 0.0018470808690952112
+        }
+      ],
+      "seed": "seed_0000",
+      "source_depth_m": 0.0037009451561747873,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/watch/seed_0000/model.urdf",
+      "urdf_sha256": "7f80474a3d2f312e6376ae35973fb0a3de5880e11b4ef0b2066fd9975a21c3fc"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Technology_Audio_Device/seed_0000",
+      "asset_id": "PV-A/Technology_Audio_Device/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/05_Technology_Audio_Device.png",
+      "category": "Technology_Audio_Device",
+      "category_zh": "音频设备",
+      "command": [
+        "/mnt/zsn/zsn_workspace/VoxHammer/third_party/blender-4.2.19-linux-x64/blender",
+        "-b",
+        "--factory-startup",
+        "-noaudio",
+        "--python-exit-code",
+        "1",
+        "-P",
+        "/mnt/zsn/lyb/arti-skill/exp/scripts/render_pva_p0_collision_asset_blender.py",
+        "--",
+        "--asset-dir",
+        "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Technology_Audio_Device/seed_0000",
+        "--pose-json",
+        "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/05_Technology_Audio_Device.json",
+        "--raw-output",
+        "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/05_Technology_Audio_Device.png",
+        "--overview-output",
+        "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/05_Technology_Audio_Device.png",
+        "--detail-output",
+        "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/05_Technology_Audio_Device.png",
+        "--resolution",
+        "512",
+        "--samples",
+        "8"
+      ],
+      "display_order": 5,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "cabinet",
+      "link_a_zh": "柜体",
+      "link_b": "control_deck__rotary_knob_bank__knob_00",
+      "link_b_zh": "0号旋钮",
+      "note_zh": "旋钮与机身是毫米级安装接触；同一 seed 在 v3 校准碰撞代理后已通过。",
+      "ordinal": 90457,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/05_Technology_Audio_Device.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/05_Technology_Audio_Device.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/05_Technology_Audio_Device.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/05_Technology_Audio_Device.png"
+      },
+      "render_seconds": 48.90687480196357,
+      "render_status": "rendered",
+      "replay_contact_count": 2,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.0005001062976791454,
+      "returncode": 0,
+      "sample_index": 0,
+      "secondary_pairs": [
+        {
+          "contact_count": 1,
+          "contact_points": [
+            [
+              0.03150718950527609,
+              -0.10074994834127654,
+              0.0202929995011824
+            ]
+          ],
+          "link_a_name": "cabinet",
+          "link_b_name": "control_deck__rotary_knob_bank__knob_01",
+          "penetration_depth_m": 0.0005001062976791454
+        }
+      ],
+      "seed": "seed_0000",
+      "source_depth_m": 0.0005001062976791454,
+      "state_identity_verified": true,
+      "stderr_log": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/logs/05_Technology_Audio_Device.stderr.log",
+      "stdout_log": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/logs/05_Technology_Audio_Device.stdout.log",
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Technology_Audio_Device/seed_0000/model.urdf",
+      "urdf_sha256": "c69a1404b8a37e724641070f58f7301c3a59b384ad30c9c5d9e4435b8253e2a8",
+      "worker_result": {
+        "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Technology_Audio_Device/seed_0000",
+        "base_render": {
+          "device": "OPTIX",
+          "materials": 14,
+          "object_only": false,
+          "objects": 26,
+          "output": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/05_Technology_Audio_Device.png",
+          "surfaces": 26
+        },
+        "detail_object_count": 20,
+        "highlight_link_a": "cabinet",
+        "highlight_link_b": "control_deck__rotary_knob_bank__knob_00",
+        "joint_count": 2,
+        "marker_count": 2,
+        "outputs": {
+          "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/05_Technology_Audio_Device.png",
+          "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/05_Technology_Audio_Device.png",
+          "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/05_Technology_Audio_Device.png"
+        }
+      }
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/clock_tower_with_rotating_hour_and_minute_hands/seed_0000",
+      "asset_id": "PV-A/clock_tower_with_rotating_hour_and_minute_hands/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/06_clock_tower_with_rotating_hour_and_minute_hands.png",
+      "category": "clock_tower_with_rotating_hour_and_minute_hands",
+      "category_zh": "钟楼",
+      "display_order": 6,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "hour_hand_0",
+      "link_a_zh": "时针",
+      "link_b": "minute_hand_0",
+      "link_b_zh": "分针",
+      "note_zh": "时针和分针共轴叠装，本应允许轴心局部重合；当前碰撞片在轴向做得过厚，把正常叠层判成 32 mm 穿透。",
+      "ordinal": 139085,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/06_clock_tower_with_rotating_hour_and_minute_hands.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/06_clock_tower_with_rotating_hour_and_minute_hands.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/06_clock_tower_with_rotating_hour_and_minute_hands.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/06_clock_tower_with_rotating_hour_and_minute_hands.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 2,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.03199999999999942,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.03199999999999942,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/clock_tower_with_rotating_hour_and_minute_hands/seed_0000/model.urdf",
+      "urdf_sha256": "0d8d1c39cd4137b35c053b6c56729b32d39648122cf57535e4b845d415c8d037"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/pictureX_0611_garlic_press/seed_0000",
+      "asset_id": "PV-A/pictureX_0611_garlic_press/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/07_pictureX_0611_garlic_press.png",
+      "category": "pictureX_0611_garlic_press",
+      "category_zh": "压蒜器",
+      "display_order": 7,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "lever_arm",
+      "link_a_zh": "压柄",
+      "link_b": "pivot_pin",
+      "link_b_zh": "枢轴销",
+      "note_zh": "压柄包住枢轴销是铰链装配关系；当前两者不是直接父子 pair，因此局部轴销接触被当作非法碰撞。",
+      "ordinal": 212879,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/07_pictureX_0611_garlic_press.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/07_pictureX_0611_garlic_press.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/07_pictureX_0611_garlic_press.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/07_pictureX_0611_garlic_press.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 1,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.014478268583427387,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.014478268583427387,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/pictureX_0611_garlic_press/seed_0000/model.urdf",
+      "urdf_sha256": "771fd75f5094f9acfd1f8de76543c02c44637b436ca02d987b2f4625aa2b5ded"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Military_Rifle/seed_0000",
+      "asset_id": "PV-A/Military_Rifle/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/08_Military_Rifle.png",
+      "category": "Military_Rifle",
+      "category_zh": "步枪",
+      "display_order": 8,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "barrel",
+      "link_a_zh": "枪管",
+      "link_b": "handguard",
+      "link_b_zh": "护木",
+      "note_zh": "护木包覆枪管属于嵌套装配；简化碰撞体没有挖出内腔，导致两者大面积重叠。",
+      "ordinal": 56828,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/08_Military_Rifle.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/08_Military_Rifle.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/08_Military_Rifle.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/08_Military_Rifle.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 2,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.041754789878681114,
+      "sample_index": 0,
+      "secondary_pairs": [
+        {
+          "contact_count": 1,
+          "contact_points": [
+            [
+              0.29725000262260437,
+              3.4304633786397254e-13,
+              0.15800000727268868
+            ]
+          ],
+          "link_a_name": "front_sight_tower",
+          "link_b_name": "handguard",
+          "penetration_depth_m": 0.0025000233650207537
+        }
+      ],
+      "seed": "seed_0000",
+      "source_depth_m": 0.041754789878681114,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Military_Rifle/seed_0000/model.urdf",
+      "urdf_sha256": "829a85f4baa9da8f5367a1459895aff49c4a35583abb59e74da0c0d36e4d5849"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/pictureX_0611_bevel_gear_pair_with_perpendicular_shafts/seed_0000",
+      "asset_id": "PV-A/pictureX_0611_bevel_gear_pair_with_perpendicular_shafts/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/09_pictureX_0611_bevel_gear_pair_with_perpendicular_shafts.png",
+      "category": "pictureX_0611_bevel_gear_pair_with_perpendicular_shafts",
+      "category_zh": "锥齿轮副",
+      "display_order": 9,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "horizontal_drive",
+      "link_a_zh": "水平锥齿轮轴",
+      "link_b": "vertical_drive",
+      "link_b_zh": "垂直锥齿轮轴",
+      "note_zh": "锥齿轮齿面需要啮合接触；零接触 hard gate 和未登记的齿轮相位会共同惩罚该机构。",
+      "ordinal": 196918,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/09_pictureX_0611_bevel_gear_pair_with_perpendicular_shafts.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/09_pictureX_0611_bevel_gear_pair_with_perpendicular_shafts.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/09_pictureX_0611_bevel_gear_pair_with_perpendicular_shafts.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/09_pictureX_0611_bevel_gear_pair_with_perpendicular_shafts.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 3,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.010237408981925064,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.010237408981925064,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/pictureX_0611_bevel_gear_pair_with_perpendicular_shafts/seed_0000/model.urdf",
+      "urdf_sha256": "c08420201bc9482dfc7a46ad7b6661edbb1b59271fbf3872f55c328166426103"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/sailboat_winch_with_pawl_and_handle/seed_0000",
+      "asset_id": "PV-A/sailboat_winch_with_pawl_and_handle/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/10_sailboat_winch_with_pawl_and_handle.png",
+      "category": "sailboat_winch_with_pawl_and_handle",
+      "category_zh": "帆船绞盘",
+      "display_order": 10,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "crank",
+      "link_a_zh": "曲柄",
+      "link_b": "drum",
+      "link_b_zh": "绞盘鼓",
+      "note_zh": "曲柄轴穿入绞盘鼓是传动装配；需要空心碰撞代理或局部轴孔接触规则。",
+      "ordinal": 250154,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/10_sailboat_winch_with_pawl_and_handle.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/10_sailboat_winch_with_pawl_and_handle.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/10_sailboat_winch_with_pawl_and_handle.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/10_sailboat_winch_with_pawl_and_handle.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 2,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.022367629930767324,
+      "sample_index": 0,
+      "secondary_pairs": [
+        {
+          "contact_count": 1,
+          "contact_points": [
+            [
+              0.043882821561312346,
+              -0.001399670505832717,
+              0.16835799743386454
+            ]
+          ],
+          "link_a_name": "drum",
+          "link_b_name": "pawl_0",
+          "penetration_depth_m": 0.002008005772665607
+        }
+      ],
+      "seed": "seed_0000",
+      "source_depth_m": 0.022367629930767324,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/sailboat_winch_with_pawl_and_handle/seed_0000/model.urdf",
+      "urdf_sha256": "aebbf3dcce75248355e6ca6e8eb8d18d193c17faa84451951e826b88434cb78d"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Bench_Wood_Swing/seed_0000",
+      "asset_id": "PV-A/Bench_Wood_Swing/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/11_Bench_Wood_Swing.png",
+      "category": "Bench_Wood_Swing",
+      "category_zh": "木制秋千",
+      "display_order": 11,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "bench",
+      "link_a_zh": "座椅",
+      "link_b": "hanger_right",
+      "link_b_zh": "右吊架",
+      "note_zh": "右吊架是闭环的第二侧连接点，在 URDF 树中不是直接父子；更像缺少局部 intended-contact 元数据，而不是错误运动。",
+      "ordinal": 9148,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/11_Bench_Wood_Swing.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/11_Bench_Wood_Swing.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/11_Bench_Wood_Swing.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/11_Bench_Wood_Swing.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 96,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.04996469999999997,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.04996469999999997,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Bench_Wood_Swing/seed_0000/model.urdf",
+      "urdf_sha256": "61dbfd35e1c424966ffcf5001b4f992b378a1e660426375d07f2c9eb0cb541fa"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/rolling_toolbox_with_telescoping_handle/seed_0000",
+      "asset_id": "PV-A/rolling_toolbox_with_telescoping_handle/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/12_rolling_toolbox_with_telescoping_handle.png",
+      "category": "rolling_toolbox_with_telescoping_handle",
+      "category_zh": "伸缩拉杆工具箱",
+      "display_order": 12,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "lid",
+      "link_a_zh": "箱盖",
+      "link_b": "handle_inner",
+      "link_b_zh": "内拉杆",
+      "note_zh": "静止位即发生非父子穿透；需复核碰撞代理、装配原点，并判断是否属于局部功能接触。",
+      "ordinal": 247402,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/12_rolling_toolbox_with_telescoping_handle.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/12_rolling_toolbox_with_telescoping_handle.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/12_rolling_toolbox_with_telescoping_handle.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/12_rolling_toolbox_with_telescoping_handle.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 2,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.005287357840109273,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.005287357840109273,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/rolling_toolbox_with_telescoping_handle/seed_0000/model.urdf",
+      "urdf_sha256": "6f5cec7f20b19859ddb0d25da43570a9a865c119b6b81af172e55b628b985fb3"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/miter_saw_arm_assembly/seed_0000",
+      "asset_id": "PV-A/miter_saw_arm_assembly/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/13_miter_saw_arm_assembly.png",
+      "category": "miter_saw_arm_assembly",
+      "category_zh": "斜切锯臂",
+      "display_order": 13,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "miter_table",
+      "link_a_zh": "锯台",
+      "link_b": "blade",
+      "link_b_zh": "锯片",
+      "note_zh": "锯片穿过锯台开槽是正常工作结构；当前锯台碰撞体近似为实心，未表达刀槽。",
+      "ordinal": 174919,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/13_miter_saw_arm_assembly.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/13_miter_saw_arm_assembly.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/13_miter_saw_arm_assembly.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/13_miter_saw_arm_assembly.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 3,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.03700001652862425,
+      "sample_index": 0,
+      "secondary_pairs": [
+        {
+          "contact_count": 1,
+          "contact_points": [
+            [
+              0.004499573811081381,
+              7.985205630299575e-11,
+              0.0644999917356798
+            ]
+          ],
+          "link_a_name": "base",
+          "link_b_name": "blade",
+          "penetration_depth_m": 0.0070000165286403645
+        }
+      ],
+      "seed": "seed_0000",
+      "source_depth_m": 0.03700001652862425,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/miter_saw_arm_assembly/seed_0000/model.urdf",
+      "urdf_sha256": "ca6633b2a8164d47892029dcc0718baa2dc0282bd2f6ad9bfeaa8e252ae2c8a6"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/stand_mixer/seed_0000",
+      "asset_id": "PV-A/stand_mixer/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/14_stand_mixer.png",
+      "category": "stand_mixer",
+      "category_zh": "厨师机",
+      "display_order": 14,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "tool_attachment",
+      "link_a_zh": "搅拌头",
+      "link_b": "mixing_bowl",
+      "link_b_zh": "搅拌碗",
+      "note_zh": "搅拌头位于搅拌碗内部是正常嵌套，但当前碗的碰撞代理近似实心，因此产生大尺度体积重叠。",
+      "ordinal": 264873,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/14_stand_mixer.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/14_stand_mixer.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/14_stand_mixer.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/14_stand_mixer.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 3,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.07565428351185866,
+      "sample_index": 0,
+      "secondary_pairs": [
+        {
+          "contact_count": 2,
+          "contact_points": [
+            [
+              -0.002991921024500254,
+              0.0619600073466147,
+              0.4010000016300499
+            ],
+            [
+              0.0060000012214427995,
+              0.06295998917630422,
+              0.41089344144169404
+            ]
+          ],
+          "link_a_name": "mixer_base",
+          "link_b_name": "head_lock_control",
+          "penetration_depth_m": 0.0028800146932354137
+        }
+      ],
+      "seed": "seed_0000",
+      "source_depth_m": 0.07565428351185866,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/stand_mixer/seed_0000/model.urdf",
+      "urdf_sha256": "15b7ea31ebadd567b58aa93001581b8012b3f22f03012f1551df18e95f723657"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Door_folding_door/seed_0000",
+      "asset_id": "PV-A/Door_folding_door/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/15_Door_folding_door.png",
+      "category": "Door_folding_door",
+      "category_zh": "折叠门",
+      "display_order": 15,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "frame",
+      "link_a_zh": "机架/门框",
+      "link_b": "leaf_1",
+      "link_b_zh": "第二扇门叶",
+      "note_zh": "门框与第二扇门叶在静止位即大幅相交；v3 仍失败，应复核门叶安装原点和碰撞代理。",
+      "ordinal": 29221,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/15_Door_folding_door.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/15_Door_folding_door.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/15_Door_folding_door.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/15_Door_folding_door.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 17,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.051999998882412884,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.051999998882412884,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Door_folding_door/seed_0000/model.urdf",
+      "urdf_sha256": "b186cdfd8bc2e47290a3c26d99bccb65cd269a258b0073980c7879c00286f62d"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Urban_Environment_Tilt_Truck2/seed_0000",
+      "asset_id": "PV-A/Urban_Environment_Tilt_Truck2/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/16_Urban_Environment_Tilt_Truck2.png",
+      "category": "Urban_Environment_Tilt_Truck2",
+      "category_zh": "倾斜式搬运车",
+      "display_order": 16,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "latch",
+      "link_a_zh": "锁扣",
+      "link_b": "hopper",
+      "link_b_zh": "料斗",
+      "note_zh": "静止位出现毫米级非父子接触；优先复核 Bullet margin、碰撞代理间隙，以及该接触是否为装配所需。",
+      "ordinal": 105258,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/16_Urban_Environment_Tilt_Truck2.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/16_Urban_Environment_Tilt_Truck2.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/16_Urban_Environment_Tilt_Truck2.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/16_Urban_Environment_Tilt_Truck2.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 1,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.0005313483254526909,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.0005313483254526909,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Urban_Environment_Tilt_Truck2/seed_0000/model.urdf",
+      "urdf_sha256": "4b78bde371e36fbd623d2a35f4f3ddb926beb8b51745d2913daf6a21b2fc2385"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/screwin_light_bulb_with_socket/seed_0000",
+      "asset_id": "PV-A/screwin_light_bulb_with_socket/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/17_screwin_light_bulb_with_socket.png",
+      "category": "screwin_light_bulb_with_socket",
+      "category_zh": "螺口灯泡与灯座",
+      "display_order": 17,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "bulb_assembly",
+      "link_a_zh": "灯泡组件",
+      "link_b": "thread_axis",
+      "link_b_zh": "螺纹轴",
+      "note_zh": "灯泡螺纹轴旋入灯座属于嵌套/啮合装配；实心代理无法表达螺纹内孔。",
+      "ordinal": 252375,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/17_screwin_light_bulb_with_socket.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/17_screwin_light_bulb_with_socket.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/17_screwin_light_bulb_with_socket.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/17_screwin_light_bulb_with_socket.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 11,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.009038192395588007,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.009038192395588007,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/screwin_light_bulb_with_socket/seed_0000/model.urdf",
+      "urdf_sha256": "7bc0d964455d96be89410496f7b425a5b72608dd51070e54b7ab51b9811620fc"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Industrial_Mine_cart/seed_0000",
+      "asset_id": "PV-A/Industrial_Mine_cart/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/18_Industrial_Mine_cart.png",
+      "category": "Industrial_Mine_cart",
+      "category_zh": "矿车",
+      "display_order": 18,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "tub",
+      "link_a_zh": "车斗",
+      "link_b": "latch_hook",
+      "link_b_zh": "锁钩",
+      "note_zh": "静止位即发生非父子穿透；需复核碰撞代理、装配原点，并判断是否属于局部功能接触。",
+      "ordinal": 47865,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/18_Industrial_Mine_cart.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/18_Industrial_Mine_cart.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/18_Industrial_Mine_cart.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/18_Industrial_Mine_cart.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 4,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.012000000000000122,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.012000000000000122,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Industrial_Mine_cart/seed_0000/model.urdf",
+      "urdf_sha256": "837348e7369a090e825291c7a2182090158aad5df03edc7127f903ddb20f26ed"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/pictureX_0611_ball_transfer_unit_with_spring_loaded_ball/seed_0000",
+      "asset_id": "PV-A/pictureX_0611_ball_transfer_unit_with_spring_loaded_ball/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/19_pictureX_0611_ball_transfer_unit_with_spring_loaded_ball.png",
+      "category": "pictureX_0611_ball_transfer_unit_with_spring_loaded_ball",
+      "category_zh": "弹簧滚珠输送单元",
+      "display_order": 19,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "housing",
+      "link_a_zh": "外壳",
+      "link_b": "load_ball",
+      "link_b_zh": "主滚珠",
+      "note_zh": "主滚珠被壳体包持是设计要求；壳体需要带球窝的凹形代理，不能用实心凸体代替。",
+      "ordinal": 195307,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/19_pictureX_0611_ball_transfer_unit_with_spring_loaded_ball.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/19_pictureX_0611_ball_transfer_unit_with_spring_loaded_ball.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/19_pictureX_0611_ball_transfer_unit_with_spring_loaded_ball.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/19_pictureX_0611_ball_transfer_unit_with_spring_loaded_ball.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 18,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.01588733434148095,
+      "sample_index": 0,
+      "secondary_pairs": [
+        {
+          "contact_count": 1,
+          "contact_points": [
+            [
+              0.01008839975676048,
+              2.249051405159172e-17,
+              0.047672747170740486
+            ]
+          ],
+          "link_a_name": "housing",
+          "link_b_name": "support_ball_00",
+          "penetration_depth_m": 0.014253974341480914
+        },
+        {
+          "contact_count": 1,
+          "contact_points": [
+            [
+              -0.010088399755960343,
+              -2.306442043116025e-17,
+              0.04767274717074049
+            ]
+          ],
+          "link_a_name": "housing",
+          "link_b_name": "support_ball_03",
+          "penetration_depth_m": 0.014253974341480914
+        },
+        {
+          "contact_count": 1,
+          "contact_points": [
+            [
+              -0.005044199731147805,
+              0.008736810114151377,
+              0.047672747170740506
+            ]
+          ],
+          "link_a_name": "housing",
+          "link_b_name": "support_ball_02",
+          "penetration_depth_m": 0.01425397434148074
+        }
+      ],
+      "seed": "seed_0000",
+      "source_depth_m": 0.01588733434148095,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/pictureX_0611_ball_transfer_unit_with_spring_loaded_ball/seed_0000/model.urdf",
+      "urdf_sha256": "d507b8141d1fc5ff82ee7bc6f6d89ef5435b06c6763bf6bbbdbfc67b1e045e42"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/telescoping_boom/seed_0000",
+      "asset_id": "PV-A/telescoping_boom/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/20_telescoping_boom.png",
+      "category": "telescoping_boom",
+      "category_zh": "伸缩臂",
+      "display_order": 20,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "outer_stage",
+      "link_a_zh": "外套筒",
+      "link_b": "inner_stage",
+      "link_b_zh": "内套筒",
+      "note_zh": "多关节组合姿态出现碰撞；需复核联合限位、同步/闭环约束，不能默认各关节完全独立。",
+      "ordinal": 275346,
+      "phase": "multi_joint_sobol",
+      "phase_zh": "多关节 Sobol 姿态",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/20_telescoping_boom.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/20_telescoping_boom.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/20_telescoping_boom.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/20_telescoping_boom.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 97,
+      "replay_depth_abs_delta_m": 0.7241595160887877,
+      "replay_depth_m": 0.07876422203831585,
+      "sample_index": 27,
+      "secondary_pairs": [
+        {
+          "contact_count": 16,
+          "contact_points": [
+            [
+              1.4289995369384525,
+              -3.505549609444732e-08,
+              -0.09223956101922534
+            ],
+            [
+              1.4170004630442798,
+              1.2442936888705808e-07,
+              0.09223956101964044
+            ],
+            [
+              1.416999999999466,
+              0.09223955,
+              2.202079006049533e-08
+            ],
+            [
+              1.4169999999994567,
+              -0.09223955000020544,
+              -6.772481176571483e-08
+            ]
+          ],
+          "link_a_name": "outer_stage",
+          "link_b_name": "middle_stage_3",
+          "penetration_depth_m": 0.06964092203834538
+        },
+        {
+          "contact_count": 16,
+          "contact_points": [
+            [
+              1.5536083574612247,
+              0.004601375010999581,
+              -0.05329569628923378
+            ],
+            [
+              1.5536083584437184,
+              0.011892690668728256,
+              -0.05276074458934828
+            ],
+            [
+              1.5536083584437472,
+              -0.01189267971859823,
+              -0.05276072881097464
+            ],
+            [
+              1.5536083741783775,
+              0.03117808519145595,
+              -0.044193480361417806
+            ]
+          ],
+          "link_a_name": "middle_stage_1",
+          "link_b_name": "inner_stage",
+          "penetration_depth_m": 0.0556995397483176
+        },
+        {
+          "contact_count": 16,
+          "contact_points": [
+            [
+              1.428999536935116,
+              -2.6115345121839333e-08,
+              -0.10126316101921623
+            ],
+            [
+              1.417000463044277,
+              9.108396247910136e-08,
+              0.10126316101951793
+            ],
+            [
+              1.425171243501041,
+              0.10126315,
+              -7.975659077157105e-09
+            ],
+            [
+              1.4170000000000336,
+              -0.10126315000014183,
+              -4.376164268550328e-08
+            ]
+          ],
+          "link_a_name": "outer_stage",
+          "link_b_name": "middle_stage_2",
+          "penetration_depth_m": 0.05159372203835406
+        }
+      ],
+      "seed": "seed_0000",
+      "source_depth_m": 0.8029237381271035,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/telescoping_boom/seed_0000/model.urdf",
+      "urdf_sha256": "b2375290014ec763dbf76a1254415913fd624b944697207a47f1ceb108ec5ed0"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Chair_Folding_chair/seed_0000",
+      "asset_id": "PV-A/Chair_Folding_chair/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/21_Chair_Folding_chair.png",
+      "category": "Chair_Folding_chair",
+      "category_zh": "折叠椅",
+      "display_order": 21,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "front_leg_frame",
+      "link_a_zh": "前腿框",
+      "link_b": "seat_pan",
+      "link_b_zh": "座板",
+      "note_zh": "前腿框与座板在静止位相交；v3 仍失败，应区分铰接处 intended contact 与大面积穿透。",
+      "ordinal": 11004,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/21_Chair_Folding_chair.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/21_Chair_Folding_chair.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/21_Chair_Folding_chair.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/21_Chair_Folding_chair.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 1,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.032648998836841914,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.032648998836841914,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Chair_Folding_chair/seed_0000/model.urdf",
+      "urdf_sha256": "8394ddc6c91840d459a4b714589f6e4073c449cf76577aa58c76ff5d450cad88"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Astronomy_Space_shuttle/seed_0000",
+      "asset_id": "PV-A/Astronomy_Space_shuttle/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/22_Astronomy_Space_shuttle.png",
+      "category": "Astronomy_Space_shuttle",
+      "category_zh": "航天飞机",
+      "display_order": 22,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "left_rudder_panel",
+      "link_a_zh": "左方向舵板",
+      "link_b": "right_rudder_panel",
+      "link_b_zh": "右方向舵板",
+      "note_zh": "静止位出现毫米级非父子接触；优先复核 Bullet margin、碰撞代理间隙，以及该接触是否为装配所需。",
+      "ordinal": 3122,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/22_Astronomy_Space_shuttle.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/22_Astronomy_Space_shuttle.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/22_Astronomy_Space_shuttle.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/22_Astronomy_Space_shuttle.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 1,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.001999999999998194,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.001999999999998194,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Astronomy_Space_shuttle/seed_0000/model.urdf",
+      "urdf_sha256": "cc626bc3e6e94d0f2693b5dd3469f3810171b24b7709e349ed854717276a9d48"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Industrial_Ore_crusher_jaw/seed_0000",
+      "asset_id": "PV-A/Industrial_Ore_crusher_jaw/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/23_Industrial_Ore_crusher_jaw.png",
+      "category": "Industrial_Ore_crusher_jaw",
+      "category_zh": "颚式破碎机",
+      "display_order": 23,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "eccentric_shaft",
+      "link_a_zh": "偏心轴",
+      "link_b": "swing_jaw",
+      "link_b_zh": "动颚",
+      "note_zh": "偏心轴与动颚出现大尺度重叠，另有机架与肘板接触；v3 仍失败，不能用 margin 解释。",
+      "ordinal": 48800,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/23_Industrial_Ore_crusher_jaw.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/23_Industrial_Ore_crusher_jaw.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/23_Industrial_Ore_crusher_jaw.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/23_Industrial_Ore_crusher_jaw.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 3,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.31611241931719963,
+      "sample_index": 0,
+      "secondary_pairs": [
+        {
+          "contact_count": 1,
+          "contact_points": [
+            [
+              0.8309802171998761,
+              -1.1428779401755392e-12,
+              0.5200000001975701
+            ]
+          ],
+          "link_a_name": "frame",
+          "link_b_name": "toggle_plate",
+          "penetration_depth_m": 0.10396049162021126
+        }
+      ],
+      "seed": "seed_0000",
+      "source_depth_m": 0.31611241931719963,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Industrial_Ore_crusher_jaw/seed_0000/model.urdf",
+      "urdf_sha256": "60b4b15da960fe49949d030cb5a3834d444b80450ad1377de5c61b926c14d461"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/pictureX_0611_drum_pedal_with_beater_and_spring_return/seed_0000",
+      "asset_id": "PV-A/pictureX_0611_drum_pedal_with_beater_and_spring_return/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/24_pictureX_0611_drum_pedal_with_beater_and_spring_return.png",
+      "category": "pictureX_0611_drum_pedal_with_beater_and_spring_return",
+      "category_zh": "鼓踏板",
+      "display_order": 24,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "frame_style__cast_post__frame",
+      "link_a_zh": "踏板机架",
+      "link_b": "beater_style__fixed_head__angle_screw",
+      "link_b_zh": "打击杆调节螺钉",
+      "note_zh": "静止位即发生非父子穿透；需复核碰撞代理、装配原点，并判断是否属于局部功能接触。",
+      "ordinal": 207731,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/24_pictureX_0611_drum_pedal_with_beater_and_spring_return.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/24_pictureX_0611_drum_pedal_with_beater_and_spring_return.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/24_pictureX_0611_drum_pedal_with_beater_and_spring_return.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/24_pictureX_0611_drum_pedal_with_beater_and_spring_return.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 11,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.006999977961027212,
+      "sample_index": 0,
+      "secondary_pairs": [
+        {
+          "contact_count": 2,
+          "contact_points": [
+            [
+              0.008170606959566677,
+              0.1204400000000016,
+              0.03672399999999999
+            ],
+            [
+              0.006,
+              0.12044,
+              0.037831649999999994
+            ]
+          ],
+          "link_a_name": "spring_style__coil_return__return_spring",
+          "link_b_name": "spring_style__coil_return__tension_nut",
+          "penetration_depth_m": 0.003999999999999997
+        }
+      ],
+      "seed": "seed_0000",
+      "source_depth_m": 0.006999977961027212,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/pictureX_0611_drum_pedal_with_beater_and_spring_return/seed_0000/model.urdf",
+      "urdf_sha256": "cea2cfec7d70bdd2d1c7cd3eb9cb7267d5f5e0979b6d0cac32c90448b0969960"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Vehicle_Sports_car/seed_0000",
+      "asset_id": "PV-A/Vehicle_Sports_car/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/25_Vehicle_Sports_car.png",
+      "category": "Vehicle_Sports_car",
+      "category_zh": "跑车",
+      "display_order": 25,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "body",
+      "link_a_zh": "车身",
+      "link_b": "wheel_front_left",
+      "link_b_zh": "左前轮",
+      "note_zh": "静止位即发生非父子穿透；需复核碰撞代理、装配原点，并判断是否属于局部功能接触。",
+      "ordinal": 110713,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/25_Vehicle_Sports_car.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/25_Vehicle_Sports_car.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/25_Vehicle_Sports_car.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/25_Vehicle_Sports_car.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 16,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.3400553342825365,
+      "sample_index": 0,
+      "secondary_pairs": [
+        {
+          "contact_count": 8,
+          "contact_points": [
+            [
+              -0.7881853942901943,
+              1.210293332053981,
+              0.3965455629728082
+            ],
+            [
+              -0.8284641759660586,
+              1.2041171786861309,
+              0.3960992436639159
+            ],
+            [
+              -0.6654132887746802,
+              1.3824660871984351,
+              0.25193026209121083
+            ],
+            [
+              -0.8344957692872448,
+              1.3875776499971186,
+              0.5102424560278546
+            ]
+          ],
+          "link_a_name": "body",
+          "link_b_name": "wheel_front_right",
+          "penetration_depth_m": 0.34005487648147037
+        }
+      ],
+      "seed": "seed_0000",
+      "source_depth_m": 0.3400553342825365,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Vehicle_Sports_car/seed_0000/model.urdf",
+      "urdf_sha256": "8ed61add9888a7a105a1e3d64c39c62dd68b13106d8f4111cf3f71ef457f3822"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/pictureX_0611_gyroscope_with_spinning_wheel_and_gimbal_rings/seed_0000",
+      "asset_id": "PV-A/pictureX_0611_gyroscope_with_spinning_wheel_and_gimbal_rings/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/26_pictureX_0611_gyroscope_with_spinning_wheel_and_gimbal_rings.png",
+      "category": "pictureX_0611_gyroscope_with_spinning_wheel_and_gimbal_rings",
+      "category_zh": "陀螺仪",
+      "display_order": 26,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "outer_gimbal_ring",
+      "link_a_zh": "外万向环",
+      "link_b": "rotor",
+      "link_b_zh": "转子",
+      "note_zh": "转子嵌在万向环内部；当前环体/转子的凸碰撞代理未保留内腔，造成大面积重叠。",
+      "ordinal": 215845,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/26_pictureX_0611_gyroscope_with_spinning_wheel_and_gimbal_rings.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/26_pictureX_0611_gyroscope_with_spinning_wheel_and_gimbal_rings.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/26_pictureX_0611_gyroscope_with_spinning_wheel_and_gimbal_rings.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/26_pictureX_0611_gyroscope_with_spinning_wheel_and_gimbal_rings.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 12,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.06085700043271866,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.06085700043271866,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/pictureX_0611_gyroscope_with_spinning_wheel_and_gimbal_rings/seed_0000/model.urdf",
+      "urdf_sha256": "3e079c573adb3d31442c09d3f776f8c769fda3bcd427cf2922af65ec16fc2315"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/retractable_patio_awning/seed_0000",
+      "asset_id": "PV-A/retractable_patio_awning/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/27_retractable_patio_awning.png",
+      "category": "retractable_patio_awning",
+      "category_zh": "伸缩遮阳篷",
+      "display_order": 27,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "head",
+      "link_a_zh": "前横梁",
+      "link_b": "forearm_0",
+      "link_b_zh": "0号前臂杆",
+      "note_zh": "前臂杆插入前横梁的铰接安装区；需用局部轴孔代理或 intended-contact 元数据表达。",
+      "ordinal": 232734,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/27_retractable_patio_awning.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/27_retractable_patio_awning.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/27_retractable_patio_awning.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/27_retractable_patio_awning.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 36,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.1578139367902634,
+      "sample_index": 0,
+      "secondary_pairs": [
+        {
+          "contact_count": 6,
+          "contact_points": [
+            [
+              0.6400673998874483,
+              1.3723057107468601,
+              2.4932771840609496
+            ],
+            [
+              0.6298295971586465,
+              2.4865106652019584,
+              2.297647685999963
+            ],
+            [
+              0.6631789330408193,
+              2.146341698271888,
+              2.418642820400058
+            ],
+            [
+              0.6916998923087957,
+              1.631425190039646,
+              2.485213736640463
+            ]
+          ],
+          "link_a_name": "head",
+          "link_b_name": "forearm_1",
+          "penetration_depth_m": 0.1578139367902634
+        },
+        {
+          "contact_count": 12,
+          "contact_points": [
+            [
+              -0.7000000000000001,
+              2.500593379266526,
+              2.319687441696705
+            ],
+            [
+              -0.6,
+              2.500593379266526,
+              2.319687441696705
+            ],
+            [
+              -0.7000000000000001,
+              2.42102319950177,
+              2.3238282898044123
+            ],
+            [
+              -0.6,
+              2.42102319950177,
+              2.3238282898044123
+            ]
+          ],
+          "link_a_name": "front_bar",
+          "link_b_name": "forearm_0",
+          "penetration_depth_m": 0.06242511660658989
+        },
+        {
+          "contact_count": 12,
+          "contact_points": [
+            [
+              0.6,
+              2.500593379266526,
+              2.319687441696705
+            ],
+            [
+              0.7000000000000001,
+              2.500593379266526,
+              2.319687441696705
+            ],
+            [
+              0.6,
+              2.42102319950177,
+              2.3238282898044123
+            ],
+            [
+              0.7000000000000001,
+              2.42102319950177,
+              2.3238282898044123
+            ]
+          ],
+          "link_a_name": "front_bar",
+          "link_b_name": "forearm_1",
+          "penetration_depth_m": 0.06242511660658989
+        }
+      ],
+      "seed": "seed_0000",
+      "source_depth_m": 0.1578139367902634,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/retractable_patio_awning/seed_0000/model.urdf",
+      "urdf_sha256": "8f1321b507e450244f898d1d3aa4946d998946e1d969445f3599169350a12c2a"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/globe/seed_0000",
+      "asset_id": "PV-A/globe/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/28_globe.png",
+      "category": "globe",
+      "category_zh": "地球仪",
+      "display_order": 28,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "base",
+      "link_a_zh": "底座",
+      "link_b": "globe",
+      "link_b_zh": "球体",
+      "note_zh": "球体应嵌在底座支架的开口内；当前底座碰撞代理封住了内部空间，因此把正常包围关系报告成超大穿透。",
+      "ordinal": 154545,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/28_globe.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/28_globe.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/28_globe.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/28_globe.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 6,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.514875,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.514875,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/globe/seed_0000/model.urdf",
+      "urdf_sha256": "719059cc6407088925458bdbf56874be4953107cc3887c61cdda55b516979a43"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/metronome/seed_0000",
+      "asset_id": "PV-A/metronome/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/29_metronome.png",
+      "category": "metronome",
+      "category_zh": "节拍器",
+      "display_order": 29,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "housing",
+      "link_a_zh": "外壳",
+      "link_b": "sliding_weight",
+      "link_b_zh": "滑动配重",
+      "note_zh": "外壳与滑动配重在静止位已有明显重叠，运动后还会加深；需修碰撞代理或配重轨迹。",
+      "ordinal": 168519,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/29_metronome.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/29_metronome.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/29_metronome.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/29_metronome.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 3,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.015000000000000005,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.015000000000000005,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/metronome/seed_0000/model.urdf",
+      "urdf_sha256": "ea9b8cf7e3b3eb6c423a8dcf27dc1b7a80810cbd31ae922b593117a24bd0306a"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/pictureX_0611_crimping_tool/seed_0000",
+      "asset_id": "PV-A/pictureX_0611_crimping_tool/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/30_pictureX_0611_crimping_tool.png",
+      "category": "pictureX_0611_crimping_tool",
+      "category_zh": "压线钳",
+      "display_order": 30,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "moving_handle",
+      "link_a_zh": "活动手柄",
+      "link_b": "drive_link",
+      "link_b_zh": "驱动连杆",
+      "note_zh": "静止位即发生非父子穿透；需复核碰撞代理、装配原点，并判断是否属于局部功能接触。",
+      "ordinal": 203231,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/30_pictureX_0611_crimping_tool.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/30_pictureX_0611_crimping_tool.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/30_pictureX_0611_crimping_tool.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/30_pictureX_0611_crimping_tool.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 2,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.003099999994039534,
+      "sample_index": 0,
+      "secondary_pairs": [
+        {
+          "contact_count": 1,
+          "contact_points": [
+            [
+              -0.0037722945389881447,
+              0.05509761037169319,
+              -0.002250000019557774
+            ]
+          ],
+          "link_a_name": "fixed_body",
+          "link_b_name": "die_carrier",
+          "penetration_depth_m": 0.0013989378510107795
+        }
+      ],
+      "seed": "seed_0000",
+      "source_depth_m": 0.003099999994039534,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/pictureX_0611_crimping_tool/seed_0000/model.urdf",
+      "urdf_sha256": "0b5ccad3817186e59055b452c4f5408c739a030e4fc554f81dd280bc16182084"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/rivet_squeeze/seed_0000",
+      "asset_id": "PV-A/rivet_squeeze/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/31_rivet_squeeze.png",
+      "category": "rivet_squeeze",
+      "category_zh": "铆钉挤压钳",
+      "display_order": 31,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "head_module__stepped_cylinder_dies__upper_die",
+      "link_a_zh": "上压模",
+      "link_b": "head_module__stepped_cylinder_dies__lower_die",
+      "link_b_zh": "下压模",
+      "note_zh": "上、下压模在闭合夹持姿态会接触；该 Sobol 状态应结合工具闭合语义和限位评估，不能只用全程零接触作为质量分数。",
+      "ordinal": 235620,
+      "phase": "multi_joint_sobol",
+      "phase_zh": "多关节 Sobol 姿态",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/31_rivet_squeeze.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/31_rivet_squeeze.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/31_rivet_squeeze.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/31_rivet_squeeze.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 1,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.001002689673486352,
+      "sample_index": 17,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.001002689673486352,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/rivet_squeeze/seed_0000/model.urdf",
+      "urdf_sha256": "2ab95dc91539a7311b763ad02fa2c710feb5ca337544770de65a0951a56e105f"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/wind_turbine/seed_0001",
+      "asset_id": "PV-A/wind_turbine/seed_0001",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/32_wind_turbine.png",
+      "category": "wind_turbine",
+      "category_zh": "风力机",
+      "display_order": 32,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "rotor",
+      "link_a_zh": "转子",
+      "link_b": "lock_pin",
+      "link_b_zh": "锁止销",
+      "note_zh": "锁止销插入转子锁孔属于停机锁定结构；应表达孔洞或局部锁止接触。",
+      "ordinal": 297744,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/32_wind_turbine.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/32_wind_turbine.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/32_wind_turbine.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/32_wind_turbine.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 9,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.06890934847062925,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0001",
+      "source_depth_m": 0.06890934847062925,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/wind_turbine/seed_0001/model.urdf",
+      "urdf_sha256": "579bc0ba41738c4d618a010f77fff5c2a671abcc420b113cc608ec245cbb18c0"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Container_Barrel/seed_0000",
+      "asset_id": "PV-A/Container_Barrel/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/33_Container_Barrel.png",
+      "category": "Container_Barrel",
+      "category_zh": "带箍桶",
+      "display_order": 33,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "barrel_body",
+      "link_a_zh": "桶体",
+      "link_b": "clasp_ring",
+      "link_b_zh": "锁紧环",
+      "note_zh": "桶体与锁紧环属于夹持装配区域；需要局部接触规则或更贴合的碰撞代理，不能放行整个 link。",
+      "ordinal": 11657,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/33_Container_Barrel.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/33_Container_Barrel.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/33_Container_Barrel.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/33_Container_Barrel.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 1,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.004056100239667779,
+      "sample_index": 0,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.004056100239667779,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/Container_Barrel/seed_0000/model.urdf",
+      "urdf_sha256": "774c6fa47d72f365758c299d4183a20e9ce1bd6275b43316663a9a563583523c"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/twojoint_prismatic_chain/seed_0001",
+      "asset_id": "PV-A/twojoint_prismatic_chain/seed_0001",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/34_twojoint_prismatic_chain.png",
+      "category": "twojoint_prismatic_chain",
+      "category_zh": "双滑动关节链",
+      "display_order": 34,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "end_effector",
+      "link_a_zh": "末端滑块",
+      "link_b": "first_stage",
+      "link_b_zh": "第一级滑块",
+      "note_zh": "静止位即发生非父子穿透；需复核碰撞代理、装配原点，并判断是否属于局部功能接触。",
+      "ordinal": 282737,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/34_twojoint_prismatic_chain.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/34_twojoint_prismatic_chain.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/34_twojoint_prismatic_chain.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/34_twojoint_prismatic_chain.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 3,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.002491192077530867,
+      "sample_index": 0,
+      "secondary_pairs": [
+        {
+          "contact_count": 2,
+          "contact_points": [
+            [
+              0.12597071535798132,
+              0.03970686451984179,
+              0.027072807922469126
+            ],
+            [
+              0.1275941276052723,
+              -0.03970686451984179,
+              0.02982377385891675
+            ]
+          ],
+          "link_a_name": "grounded_base",
+          "link_b_name": "end_effector",
+          "penetration_depth_m": 0.0019507287792708897
+        }
+      ],
+      "seed": "seed_0001",
+      "source_depth_m": 0.002491192077530867,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/twojoint_prismatic_chain/seed_0001/model.urdf",
+      "urdf_sha256": "81121cbec6076eecdb0220a2ef60c5d932bbdb17f3c3127ff2500cee8e7044f1"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/louvered_shutter_assembly/seed_0001",
+      "asset_id": "PV-A/louvered_shutter_assembly/seed_0001",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/35_louvered_shutter_assembly.png",
+      "category": "louvered_shutter_assembly",
+      "category_zh": "百叶窗组件",
+      "display_order": 35,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "louver_slat_0_5",
+      "link_a_zh": "第6片百叶片",
+      "link_b": "tilt_rod_0",
+      "link_b_zh": "0号联动杆",
+      "note_zh": "百叶片与联动杆的连接点属于多杆联动铰接；当前只排直接父子，跨树枝的连接接触会被判错。",
+      "ordinal": 163781,
+      "phase": "rest",
+      "phase_zh": "静止位 q=0",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/35_louvered_shutter_assembly.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/35_louvered_shutter_assembly.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/35_louvered_shutter_assembly.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/35_louvered_shutter_assembly.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 68,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.005000000000000001,
+      "sample_index": 0,
+      "secondary_pairs": [
+        {
+          "contact_count": 2,
+          "contact_points": [
+            [
+              -0.11369300000000004,
+              -0.00015599999999999815,
+              0.5065999999999999
+            ],
+            [
+              -0.09369300000000003,
+              -0.00015599999999999815,
+              0.5025999999999999
+            ]
+          ],
+          "link_a_name": "louver_slat_0_4",
+          "link_b_name": "tilt_rod_0",
+          "penetration_depth_m": 0.005000000000000001
+        },
+        {
+          "contact_count": 2,
+          "contact_points": [
+            [
+              -0.11369300000000004,
+              -0.00015599999999999815,
+              0.433
+            ],
+            [
+              -0.09369300000000003,
+              -0.00015599999999999815,
+              0.429
+            ]
+          ],
+          "link_a_name": "louver_slat_0_3",
+          "link_b_name": "tilt_rod_0",
+          "penetration_depth_m": 0.005000000000000001
+        },
+        {
+          "contact_count": 2,
+          "contact_points": [
+            [
+              -0.11369300000000004,
+              -0.00015599999999999815,
+              0.35939999999999994
+            ],
+            [
+              -0.09369300000000003,
+              -0.00015599999999999815,
+              0.35539999999999994
+            ]
+          ],
+          "link_a_name": "louver_slat_0_2",
+          "link_b_name": "tilt_rod_0",
+          "penetration_depth_m": 0.005000000000000001
+        }
+      ],
+      "seed": "seed_0001",
+      "source_depth_m": 0.005000000000000001,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/louvered_shutter_assembly/seed_0001/model.urdf",
+      "urdf_sha256": "597813dde73fba51e3536bb456e3e63b7e45d6970732d424b763df770123ad5f"
+    },
+    {
+      "asset_dir": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/turntable/seed_0000",
+      "asset_id": "PV-A/turntable/seed_0000",
+      "card_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/cards/36_turntable.png",
+      "category": "turntable",
+      "category_zh": "转台",
+      "display_order": 36,
+      "effective_record_source": "parent",
+      "joint_name": null,
+      "link_a": "platter",
+      "link_a_zh": "转盘",
+      "link_b": "tonearm",
+      "link_b_zh": "唱臂",
+      "note_zh": "唱臂在多关节组合姿态碰到转盘；需复核唱臂联合限位和停靠区，而非仅看整机 hard pass。",
+      "ordinal": 280269,
+      "phase": "multi_joint_sobol",
+      "phase_zh": "多关节 Sobol 姿态",
+      "pose_json": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/poses/36_turntable.json",
+      "render_outputs": {
+        "detail": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/detail/36_turntable.png",
+        "overview": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/highlighted/36_turntable.png",
+        "raw": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_p0_blender_diagnostics_20260831/raw/36_turntable.png"
+      },
+      "render_status": "reused",
+      "replay_contact_count": 5,
+      "replay_depth_abs_delta_m": 0.0,
+      "replay_depth_m": 0.0037238579567620907,
+      "sample_index": 54,
+      "secondary_pairs": [],
+      "seed": "seed_0000",
+      "source_depth_m": 0.0037238579567620907,
+      "state_identity_verified": true,
+      "urdf": "/mnt/zsn/data/particulate/datasets/PV-A/extracted/turntable/seed_0000/model.urdf",
+      "urdf_sha256": "ec3fe8b88ebb6d4fe539e615de18ca61cd1268605198622dbe520a53fdc0b351"
+    }
+  ],
+  "resolution": 512,
+  "samples": 8,
+  "schema_version": "pva_p0_blender_collision_atlas_v1",
+  "verification": {
+    "all_replays_have_contacts": true,
+    "all_state_identities_verified": true,
+    "expected_assets": 36,
+    "image_failures": [],
+    "rendered_assets": 36,
+    "sheet_count": 4,
+    "status": "PASS"
+  },
+  "worker": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_pva_p0_collision_asset_blender.py",
+  "worker_sha256": "08247aa738b81b27f6f8cb85558ef6978366e75aec3471f69b7c732e55d05f52",
+  "workers": 4
+}

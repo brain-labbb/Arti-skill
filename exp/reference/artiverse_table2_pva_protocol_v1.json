@@ -1,0 +1,79 @@
+{
+  "protocol_id": "artiverse_table2_pva_v1",
+  "protocol_version": 1,
+  "paper": {
+    "title": "Artiverse: A Diverse and Physically Grounded Dataset for Articulated Objects",
+    "url": "https://arxiv.org/abs/2605.24403",
+    "table": "Table 2",
+    "page": 6,
+    "source_sections": [
+      "3.1 Functional part specification",
+      "3.2.1 Part Segmentation",
+      "3.2.3 Motion Annotation",
+      "4.2 Data Schema",
+      "Supplement B.2-B.3"
+    ]
+  },
+  "columns": [
+    "n_obj",
+    "category_total",
+    "category_avg_objects",
+    "functional_parts_total",
+    "functional_parts_avg",
+    "articulated_parts_total",
+    "articulated_parts_avg",
+    "joints_1dof",
+    "joints_2dof"
+  ],
+  "definitions": {
+    "functional_parts": "Final disjoint functional part instances after semantic segmentation and geometric grouping; includes articulated and interaction-related components.",
+    "articulated_parts": "Part instances assigned to the articulation/kinematic layer.",
+    "logical_joints": "Logical motion-joint annotation records, not exported XML joint elements.",
+    "joint_dof_columns": "Count logical joints by semantic joint type; revolute, continuous, prismatic, and screw are 1-DoF; cylindrical and universal are 2-DoF. Retain 3-DoF and unsupported types in diagnostics."
+  },
+  "modes": {
+    "structural-proxy": {
+      "status": "NOT_SEMANTIC_GOLD",
+      "functional_parts": "URDF links with at least one visual element",
+      "articulated_parts": "Unique child links of non-fixed XML joints",
+      "logical_joints": "Non-fixed XML joint elements"
+    },
+    "semantic": {
+      "status": "PAPER_ALIGNED_IF_SIDECAR_IS_COMPLETE",
+      "sidecar_required": true,
+      "sidecar_schema": "artiverse_table2_pva_annotation_v1"
+    }
+  },
+  "annotation_sidecar_schema": {
+    "row": {
+      "asset_id": "PV-A/<slug>/seed_<n>",
+      "functional_parts": "list of unique part records or non-negative count",
+      "articulated_parts": "list of unique part records or non-negative count",
+      "joints": "list of logical joint records; each record has type or joint_type; repeated pid/id values are grouped as one logical joint"
+    },
+    "joint_types": [
+      "revolute",
+      "continuous",
+      "prismatic",
+      "screw",
+      "cylindrical",
+      "universal",
+      "planar",
+      "floating",
+      "free",
+      "spherical"
+    ]
+  },
+  "denominator_policy": "All selected roster rows remain in N_eval. Failed rows are reported and make metric coverage incomplete; averages are null rather than silently changing denominator.",
+  "average_policy": {
+    "category_avg_objects": "n_obj / category_total",
+    "parts_avg": "part total / n_obj",
+    "rounding_digits": 1,
+    "incomplete_run": "null"
+  },
+  "semantic_grouping_policy": {
+    "group_key": "pid, then id; records without either key are independent rows",
+    "free_placeholder": "ignore free when a concrete motion type exists in the same group; retain free-only groups as 3-DoF diagnostics",
+    "fixed_only_group": "excluded from logical motion-joint counts"
+  }
+}

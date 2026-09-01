@@ -1,0 +1,153 @@
+{
+  "declared_license": null,
+  "downloaded_file_count": 8,
+  "hierarchy_blockers": [
+    "no category field",
+    "no object identity field",
+    "no URDF field",
+    "no semantic hierarchy field",
+    "no mobility annotation field"
+  ],
+  "hierarchy_usable": false,
+  "license_status": "absent from dataset card metadata at pinned revision",
+  "metadata_files": [
+    {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/baselines/partnet-mobility-hf/snapshot/bf39e304f19a6c131b5244f128b79ec35000bb02/README.md",
+      "sha256": "1c20dcf6de72dcf13ed161ae29b6519003d82a8cc0126a9b9d2a18b34d2cccd3",
+      "size_bytes": 402
+    },
+    {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/baselines/partnet-mobility-hf/snapshot/bf39e304f19a6c131b5244f128b79ec35000bb02/.gitattributes",
+      "sha256": "f4e703ea6e44bbebe53aceed2a89c11e40b88b7ae130c480c89860ab805ffc8f",
+      "size_bytes": 2307
+    }
+  ],
+  "num_rows": 2290,
+  "parquet_download_size_bytes": 1745807861,
+  "parquet_shard_count": 6,
+  "published_features": [
+    "xyz",
+    "rgb",
+    "mask"
+  ],
+  "repo_id": "yuchen0187/partnet-mobility",
+  "revision": "bf39e304f19a6c131b5244f128b79ec35000bb02",
+  "schema": "xyz: list<element: list<element: double>>\n  child 0, element: list<element: double>\n      child 0, element: double\nrgb: list<element: list<element: uint8>>\n  child 0, element: list<element: uint8>\n      child 0, element: uint8\nmask: list<element: list<element: bool>>\n  child 0, element: list<element: bool>\n      child 0, element: bool\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"xyz\": {\"feature\": {\"feature\": {\"dty' + 306",
+  "schema_consistent_across_shards": true,
+  "schema_names": [
+    "xyz",
+    "rgb",
+    "mask"
+  ],
+  "shards": [
+    {
+      "expected_size_bytes": 290601821,
+      "hf_lfs_oid_sha256": "22e75485ca8952f8a149bb7b7d03264e79556dfb8e3de793f78b7b499636bbf0",
+      "num_row_groups": 1,
+      "num_rows": 382,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/baselines/partnet-mobility-hf/snapshot/bf39e304f19a6c131b5244f128b79ec35000bb02/data/train-00000-of-00006.parquet",
+      "repo_relative_path": "data/train-00000-of-00006.parquet",
+      "schema": "xyz: list<element: list<element: double>>\n  child 0, element: list<element: double>\n      child 0, element: double\nrgb: list<element: list<element: uint8>>\n  child 0, element: list<element: uint8>\n      child 0, element: uint8\nmask: list<element: list<element: bool>>\n  child 0, element: list<element: bool>\n      child 0, element: bool\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"xyz\": {\"feature\": {\"feature\": {\"dty' + 306",
+      "schema_names": [
+        "xyz",
+        "rgb",
+        "mask"
+      ],
+      "sha256": "22e75485ca8952f8a149bb7b7d03264e79556dfb8e3de793f78b7b499636bbf0",
+      "sha256_matches_lfs_oid": true,
+      "size_bytes": 290601821,
+      "size_matches": true
+    },
+    {
+      "expected_size_bytes": 290660007,
+      "hf_lfs_oid_sha256": "1323c916c9c556412161ca5dc3fa54f7ac234be82f0bff85791349aff1826cd0",
+      "num_row_groups": 1,
+      "num_rows": 382,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/baselines/partnet-mobility-hf/snapshot/bf39e304f19a6c131b5244f128b79ec35000bb02/data/train-00001-of-00006.parquet",
+      "repo_relative_path": "data/train-00001-of-00006.parquet",
+      "schema": "xyz: list<element: list<element: double>>\n  child 0, element: list<element: double>\n      child 0, element: double\nrgb: list<element: list<element: uint8>>\n  child 0, element: list<element: uint8>\n      child 0, element: uint8\nmask: list<element: list<element: bool>>\n  child 0, element: list<element: bool>\n      child 0, element: bool\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"xyz\": {\"feature\": {\"feature\": {\"dty' + 306",
+      "schema_names": [
+        "xyz",
+        "rgb",
+        "mask"
+      ],
+      "sha256": "1323c916c9c556412161ca5dc3fa54f7ac234be82f0bff85791349aff1826cd0",
+      "sha256_matches_lfs_oid": true,
+      "size_bytes": 290660007,
+      "size_matches": true
+    },
+    {
+      "expected_size_bytes": 291740259,
+      "hf_lfs_oid_sha256": "6ee6a1804540ab112740733e1a53d4a32110ac3d9e98544be7ebd62d335c819b",
+      "num_row_groups": 1,
+      "num_rows": 382,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/baselines/partnet-mobility-hf/snapshot/bf39e304f19a6c131b5244f128b79ec35000bb02/data/train-00002-of-00006.parquet",
+      "repo_relative_path": "data/train-00002-of-00006.parquet",
+      "schema": "xyz: list<element: list<element: double>>\n  child 0, element: list<element: double>\n      child 0, element: double\nrgb: list<element: list<element: uint8>>\n  child 0, element: list<element: uint8>\n      child 0, element: uint8\nmask: list<element: list<element: bool>>\n  child 0, element: list<element: bool>\n      child 0, element: bool\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"xyz\": {\"feature\": {\"feature\": {\"dty' + 306",
+      "schema_names": [
+        "xyz",
+        "rgb",
+        "mask"
+      ],
+      "sha256": "6ee6a1804540ab112740733e1a53d4a32110ac3d9e98544be7ebd62d335c819b",
+      "sha256_matches_lfs_oid": true,
+      "size_bytes": 291740259,
+      "size_matches": true
+    },
+    {
+      "expected_size_bytes": 291133220,
+      "hf_lfs_oid_sha256": "c96487e5d6be3187b9270aca285dad57174189e72622ad4c614e0b0723a8921f",
+      "num_row_groups": 1,
+      "num_rows": 382,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/baselines/partnet-mobility-hf/snapshot/bf39e304f19a6c131b5244f128b79ec35000bb02/data/train-00003-of-00006.parquet",
+      "repo_relative_path": "data/train-00003-of-00006.parquet",
+      "schema": "xyz: list<element: list<element: double>>\n  child 0, element: list<element: double>\n      child 0, element: double\nrgb: list<element: list<element: uint8>>\n  child 0, element: list<element: uint8>\n      child 0, element: uint8\nmask: list<element: list<element: bool>>\n  child 0, element: list<element: bool>\n      child 0, element: bool\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"xyz\": {\"feature\": {\"feature\": {\"dty' + 306",
+      "schema_names": [
+        "xyz",
+        "rgb",
+        "mask"
+      ],
+      "sha256": "c96487e5d6be3187b9270aca285dad57174189e72622ad4c614e0b0723a8921f",
+      "sha256_matches_lfs_oid": true,
+      "size_bytes": 291133220,
+      "size_matches": true
+    },
+    {
+      "expected_size_bytes": 290738883,
+      "hf_lfs_oid_sha256": "35b2c76151d108f6e723b6c78811c4bc40d33d6309eda71e3af7bf9c610daf7c",
+      "num_row_groups": 1,
+      "num_rows": 381,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/baselines/partnet-mobility-hf/snapshot/bf39e304f19a6c131b5244f128b79ec35000bb02/data/train-00004-of-00006.parquet",
+      "repo_relative_path": "data/train-00004-of-00006.parquet",
+      "schema": "xyz: list<element: list<element: double>>\n  child 0, element: list<element: double>\n      child 0, element: double\nrgb: list<element: list<element: uint8>>\n  child 0, element: list<element: uint8>\n      child 0, element: uint8\nmask: list<element: list<element: bool>>\n  child 0, element: list<element: bool>\n      child 0, element: bool\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"xyz\": {\"feature\": {\"feature\": {\"dty' + 306",
+      "schema_names": [
+        "xyz",
+        "rgb",
+        "mask"
+      ],
+      "sha256": "35b2c76151d108f6e723b6c78811c4bc40d33d6309eda71e3af7bf9c610daf7c",
+      "sha256_matches_lfs_oid": true,
+      "size_bytes": 290738883,
+      "size_matches": true
+    },
+    {
+      "expected_size_bytes": 290933671,
+      "hf_lfs_oid_sha256": "17e799205c446dacaf5ed6f9fb606791f71324c74ebeabad461d5b72e546ab34",
+      "num_row_groups": 1,
+      "num_rows": 381,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/baselines/partnet-mobility-hf/snapshot/bf39e304f19a6c131b5244f128b79ec35000bb02/data/train-00005-of-00006.parquet",
+      "repo_relative_path": "data/train-00005-of-00006.parquet",
+      "schema": "xyz: list<element: list<element: double>>\n  child 0, element: list<element: double>\n      child 0, element: double\nrgb: list<element: list<element: uint8>>\n  child 0, element: list<element: uint8>\n      child 0, element: uint8\nmask: list<element: list<element: bool>>\n  child 0, element: list<element: bool>\n      child 0, element: bool\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"xyz\": {\"feature\": {\"feature\": {\"dty' + 306",
+      "schema_names": [
+        "xyz",
+        "rgb",
+        "mask"
+      ],
+      "sha256": "17e799205c446dacaf5ed6f9fb606791f71324c74ebeabad461d5b72e546ab34",
+      "sha256_matches_lfs_oid": true,
+      "size_bytes": 290933671,
+      "size_matches": true
+    }
+  ],
+  "snapshot_path": "/mnt/zsn/lyb/arti-skill/exp/baselines/partnet-mobility-hf/snapshot/bf39e304f19a6c131b5244f128b79ec35000bb02"
+}

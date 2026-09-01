@@ -1,0 +1,117 @@
+{
+  "claim_boundary": {
+    "aor": "N/E",
+    "collision_metric_status": "BLOCKED_NATIVE_COLLISION_GEOMETRY_ABSENT",
+    "collision_queries_executed": false,
+    "continuous_collision_detection": "not_run",
+    "max_penetration": "N/E",
+    "native_collision_element_total": 0,
+    "physical_dynamics_validity": "not_evaluated",
+    "semantic_joint_correctness": "not_evaluated",
+    "vacuous_no_contact_is_not_pass": true,
+    "visual_geometry_fallback": false
+  },
+  "classification": "FORMAL",
+  "completed_at": "2026-08-25T02:21:47Z",
+  "dataset": "Infinite Mobility",
+  "fail_closed_projection": {
+    "collision_free_range": {
+      "denominator": 99183,
+      "passed_states": 0
+    },
+    "collision_state_rate": {
+      "collision_states": 142463,
+      "denominator": 142463
+    },
+    "label": "not a headline metric; hypothetical if blocked states were counted as failures",
+    "strict_collision_pass": {
+      "denominator": 720,
+      "passed": 0
+    }
+  },
+  "j_eval": 4723,
+  "manifest_content_sha256": "bc9c18c24d261a16567929df47171744d4645d507a67540393226dcbb7e40a24",
+  "metrics": {
+    "aor": {
+      "reason": "BLOCKED_NATIVE_COLLISION_GEOMETRY_ABSENT",
+      "status": "N/E"
+    },
+    "collision_free_range": {
+      "denominator": 99183,
+      "passed": null,
+      "passed_states": null,
+      "rate": null,
+      "reason": "BLOCKED_NATIVE_COLLISION_GEOMETRY_ABSENT",
+      "status": "N/E",
+      "unexecuted_states": 99183
+    },
+    "collision_state_rate": {
+      "collision_states": null,
+      "denominator": 142463,
+      "passed": null,
+      "rate": null,
+      "reason": "BLOCKED_NATIVE_COLLISION_GEOMETRY_ABSENT",
+      "status": "N/E",
+      "unexecuted_states": 142463
+    },
+    "max_penetration": {
+      "denominator": 720,
+      "maximum_observed_normalized": null,
+      "measured_assets": 0,
+      "normalization": "pybullet_q0_collision_shape_union_aabb_v1 (undefined for empty collision-shape union)",
+      "reason": "BLOCKED_NATIVE_COLLISION_GEOMETRY_ABSENT",
+      "status": "N/E"
+    },
+    "multi_joint_sobol_cf": {
+      "denominator": 720,
+      "passed": null,
+      "rate": null,
+      "reason": "BLOCKED_NATIVE_COLLISION_GEOMETRY_ABSENT",
+      "status": "N/E"
+    },
+    "rest_all_pair_cf": {
+      "denominator": 720,
+      "passed": null,
+      "rate": null,
+      "reason": "BLOCKED_NATIVE_COLLISION_GEOMETRY_ABSENT",
+      "status": "N/E"
+    },
+    "rest_non_adjacent_cf": {
+      "denominator": 720,
+      "passed": null,
+      "rate": null,
+      "reason": "BLOCKED_NATIVE_COLLISION_GEOMETRY_ABSENT",
+      "status": "N/E"
+    },
+    "single_joint_sweep_cf": {
+      "denominator": 720,
+      "passed": null,
+      "rate": null,
+      "reason": "BLOCKED_NATIVE_COLLISION_GEOMETRY_ABSENT",
+      "status": "N/E"
+    },
+    "strict_collision_pass": {
+      "denominator": 720,
+      "passed": null,
+      "rate": null,
+      "reason": "BLOCKED_NATIVE_COLLISION_GEOMETRY_ABSENT",
+      "status": "N/E"
+    }
+  },
+  "n_eval": 720,
+  "native_collision_element_total": 0,
+  "protocol_id": "urdf_sim_ready_table4_infinite_mobility_n720_v1",
+  "records_missing_counted_as_failures": 0,
+  "records_present": 720,
+  "schema_version": "table4-infinite-mobility/v1",
+  "state_plan": {
+    "rest_expected": 720,
+    "single_executable_if_geometry_available": 98427,
+    "single_expected": 99183,
+    "sobol_executable_if_geometry_available": 40256,
+    "sobol_expected": 42560,
+    "total_expected": 142463
+  },
+  "status": "BLOCKED",
+  "zero_joint_assets": 55
+}

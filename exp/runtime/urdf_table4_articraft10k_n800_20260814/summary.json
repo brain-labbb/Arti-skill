@@ -1,0 +1,78 @@
+{
+  "category_macro": {
+    "reason": "no authoritative category labels",
+    "status": "N/E"
+  },
+  "category_results": {},
+  "claim_boundary": {
+    "continuous_collision_detection": "not_run",
+    "full_release_result": false,
+    "physical_dynamics_validity": "not_evaluated",
+    "semantic_joint_correctness": "not_evaluated",
+    "shared_category_balanced_result": false
+  },
+  "cohort": {
+    "category_count": 0,
+    "child_timeouts": 0,
+    "label": "Articraft-10K fixed N=800 cohort",
+    "load_success": 223,
+    "measurement_complete": 223,
+    "selected": 800
+  },
+  "metrics": {
+    "aor": {
+      "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+      "status": "N/E"
+    },
+    "collision_free_range": {
+      "denominator": 60165,
+      "passed_states": 14292,
+      "rate": 0.23754674644727
+    },
+    "collision_state_rate": {
+      "collision_states": 86157,
+      "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+      "denominator": 112165,
+      "executed_states": 33143,
+      "observed_collision_rate_executed": 0.21527924448601515,
+      "observed_collision_states": 7135,
+      "rate": 0.7681273124414925,
+      "unexecuted_states": 79022
+    },
+    "max_penetration": {
+      "denominator": 800,
+      "fully_measured_assets": 223,
+      "maximum_observed_normalized": 0.4765525203859249,
+      "normalization": "PyBullet q=0 collision-shape union AABB diagonal",
+      "observed_assets": 223,
+      "status": "PARTIAL"
+    },
+    "multi_joint_sobol_cf": {
+      "denominator": 800,
+      "passed": 147,
+      "rate": 0.18375
+    },
+    "rest_all_pair_cf": {
+      "denominator": 800,
+      "passed": 13,
+      "rate": 0.01625
+    },
+    "rest_non_adjacent_cf": {
+      "denominator": 800,
+      "passed": 187,
+      "rate": 0.23375
+    },
+    "single_joint_sweep_cf": {
+      "denominator": 800,
+      "passed": 156,
+      "rate": 0.195
+    },
+    "strict_collision_pass": {
+      "denominator": 800,
+      "passed": 147,
+      "rate": 0.18375
+    }
+  },
+  "protocol_id": "urdf_sim_ready_table4_articraft10k_n800_v1",
+  "status": "COMPLETE_WITH_RETAINED_FAILURES"
+}

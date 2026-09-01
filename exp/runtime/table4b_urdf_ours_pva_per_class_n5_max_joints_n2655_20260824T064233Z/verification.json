@@ -1,0 +1,67 @@
+{
+  "checks": [
+    {
+      "check": "source_manifest_sha256",
+      "detail": "c23d92a582ac7d8d122d6c34d17d2f057dd4a309aa696414b71387debce13f35",
+      "pass": true
+    },
+    {
+      "check": "source_manifest_self_hash",
+      "detail": "b43bf43a5e89aaa5812c5a1979987c9881ee41644fa58f7eb0c34f8f3a51440f",
+      "pass": true
+    },
+    {
+      "check": "record_count",
+      "detail": "2655",
+      "pass": true
+    },
+    {
+      "check": "frozen_order_preserved",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "urdf_identity_matches_frozen_manifest",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "package_identity_matches_frozen_manifest",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "completed_relevant_input_binding_matches_expected",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "aggregate_recomputation_matches",
+      "detail": "",
+      "pass": true
+    }
+  ],
+  "cohort": {
+    "category_count": 531,
+    "manifest": "/mnt/zsn/lyb/arti-skill/exp/PV-A-per-class-n5-max-joints/manifest.json",
+    "manifest_content_sha256": "eea55287dd70b710a7c03b11b16c6685208bbaa63cde925232293cb9012c8158",
+    "manifest_sha256": "e78f4b767023f8a5c1517d96bfab35a39482d6eee28238820a9b91ac3ea8d293",
+    "n_eval": 2655,
+    "ordered_ids_sha256": "b5c9262eca8e65ede90c597a16e4ed2b0d7348b4eeb326cd64a06cea518c4178",
+    "per_class": 5
+  },
+  "protocol_id": "table4b-ours-pva-per-class-n5-max-joints-v1",
+  "record_count": 2655,
+  "run_manifest_sha256": "3617e6d01cab0a1384db0ee218d0251a6f5bcab9f72f032506f2330f3e3f782e",
+  "schema_version": "table4b-verification-receipt/v1",
+  "status": "PASS",
+  "upstream_table4": {
+    "n_eval": 2655,
+    "ordered_ids_sha256": "b5c9262eca8e65ede90c597a16e4ed2b0d7348b4eeb326cd64a06cea518c4178",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z/frozen_manifest.json",
+    "source_manifest_content_sha256": "b43bf43a5e89aaa5812c5a1979987c9881ee41644fa58f7eb0c34f8f3a51440f",
+    "source_manifest_sha256": "c23d92a582ac7d8d122d6c34d17d2f057dd4a309aa696414b71387debce13f35",
+    "source_protocol_id": "urdf-sim-ready-table4-ours-per-class-n5-max-joints-v1",
+    "table4_dir": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z"
+  }
+}

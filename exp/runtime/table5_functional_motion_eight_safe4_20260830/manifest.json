@@ -1,0 +1,81 @@
+{
+  "articraft_prepared": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_v2_articraft_diagnostic_resample_20260830/prepared/manifest.json",
+  "articraft_prepared_sha256": "f16ad4b62290ad6ea11c9a2814401950515b1d36630a18a7c9ce399e8b681f9d",
+  "dataset_slugs": [
+    "articraft_10k",
+    "lam_released_outputs",
+    "artiverse",
+    "partnet_mobility",
+    "physx_mobility",
+    "sketchmobility",
+    "infinigen_sim",
+    "pva"
+  ],
+  "formal_prepared": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_v2_core200_prepared_five_full_release_articraft10787_infinigen_paired_official_metrics_r2/manifest.json",
+  "formal_prepared_sha256": "d25debf0cd4e1ef6be0e30906730c73455c5a7ab231cefbabd45e4226c3c3b3b",
+  "manifest_sha256": "24c1831d99d83b24fa2f21535265152ec020b16b08427310a0b87231a3688c4a",
+  "protocol": {
+    "collision": {
+      "contact_pruning_tolerance_m": null,
+      "eligible_pairs": "distinct source links excluding direct URDF parent-child pairs",
+      "fail_closed_on_unmapped_pair_or_capacity": true,
+      "illegal_penetration_m": 1e-06,
+      "oracle": "Genesis detect_collision plus get_contacts"
+    },
+    "engine": {
+      "backend": "cpu",
+      "base": "fixed",
+      "execution": "direct kinematic configuration replay",
+      "gravity_m_per_s2": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "name": "Genesis",
+      "precision": "64",
+      "torch_threads": {
+        "inter_op": 1,
+        "intra_op": 1
+      },
+      "version": "1.3.1"
+    },
+    "engine_protocol_id": "genesis_contact_penetration_v1",
+    "implementation": {
+      "genesis_collision_adapter": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_lam_supplementary_v1.py",
+      "genesis_collision_adapter_sha256": "c43f3047553e4fbc9dfeefcbb7308bc42df8c6f0aab24f2a85f412c5efe12df5",
+      "runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/table5_functional_motion.py",
+      "runner_sha256": "f603e9d5ff60873d7da50a68fa7b346ebc4561f000e61856026fa30cc6fd4a1b"
+    },
+    "motion_scope": {
+      "dependency_policy": "deterministic depth-first search over joint order and endpoint direction; completed joints remain at the reached endpoint",
+      "eligible_joint_types": [
+        "revolute",
+        "prismatic"
+      ],
+      "functional_claim": "collision-constrained dependency-aware motion proxy without independent semantic ground truth",
+      "neutral_policy": "zero_clamped_to_declared_joint_range",
+      "range_fractions": [
+        0.1,
+        0.9
+      ],
+      "requires_finite_strict_bounds": true
+    },
+    "protocol_id": "table5-dependency-aware-functional-motion-genesis-20260830",
+    "protocol_sha256": "c1473f46e7482da26fada29b34a05ab47b825dd5ca3d54959f6cad48cecde0e5",
+    "schema_version": "table5_dependency_aware_functional_motion_v1",
+    "search": {
+      "approach_samples": 3,
+      "maximum_collision_queries": 6000,
+      "maximum_nodes": 192,
+      "sweep_samples": 5
+    },
+    "verification": {
+      "approach_samples": 5,
+      "requires_complete_plan_for_every_eligible_joint": true,
+      "requires_exact_joint_readback": true,
+      "sweep_samples": 11
+    }
+  },
+  "requested_row_count": 1600,
+  "schema_version": "table5_dependency_aware_functional_motion_summary_v1"
+}

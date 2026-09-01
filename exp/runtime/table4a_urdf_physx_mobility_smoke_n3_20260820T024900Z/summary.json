@@ -1,0 +1,136 @@
+{
+  "claim_boundary": {
+    "official_urdf_zero_collision_elements": true,
+    "table5_receipt_strict_collision": "N/E",
+    "table5_receipt_strict_collision_reason": "official_urdf_zero_collision_elements",
+    "vacuous_collision_free_outcomes": true
+  },
+  "classification": "SMOKE",
+  "cohort": {
+    "j_eval": 7,
+    "manifest_cohort_sha256": "a9c9c710d9617dea366696603984e330780ce177fead2a34c60410588cc1273c",
+    "n_eval": 3,
+    "receipt_manifest_sha256": "ccb54f4b726fe717efd28a37948e6b92bac994a2c0ba8fb4ea9ac4548d3a9882",
+    "receipt_set": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_physx_mobility_n800_v2"
+  },
+  "completed_at_utc": "2026-08-20T03:05:02.155528Z",
+  "dataset": "PhysX-Mobility",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "2e851018f1ad0d406bd72c79df891671696f5e52f3de4033495cffba563f9abd",
+  "metrics": {
+    "collision_safe_dof_retention": {
+      "denominator": 3809,
+      "numerator": 7,
+      "percent": 0.1838
+    },
+    "dof_bins": {
+      "0": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      },
+      "1": {
+        "joints_intended": 1,
+        "joints_passed": 1,
+        "n_eval": 1,
+        "safe": 1,
+        "strict_pass": 1
+      },
+      "2--3": {
+        "joints_intended": 6,
+        "joints_passed": 6,
+        "n_eval": 2,
+        "safe": 6,
+        "strict_pass": 2
+      },
+      "4--7": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      },
+      ">=8": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      },
+      "unknown/unparseable": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      }
+    },
+    "executable_cf_dof_per_asset": {
+      "mean": 2.3333,
+      "median": 3.0,
+      "n_assets": 3,
+      "p90": 3.0,
+      "total_safe_dof": 7
+    },
+    "joint_level_full_range_cf": {
+      "denominator": 7,
+      "numerator": 7,
+      "percent": 100.0
+    },
+    "limit_reachability": {
+      "continuous_excluded": 0,
+      "denominator": 7,
+      "numerator": 7,
+      "percent": 100.0
+    },
+    "normalized_clearance_p5": {
+      "asset_coverage": {
+        "denominator": 3,
+        "numerator": 3,
+        "percent": 100.0
+      },
+      "coverage_status": "COMPLETE",
+      "reason": "genesis_contact_penetration_has_no_signed_clearance_no_independent_exact_distance_backend_registered",
+      "state_coverage": {
+        "denominator": 147,
+        "numerator": 147,
+        "percent": 100.0
+      },
+      "status": "N/E"
+    },
+    "state_counts": {
+      "executed": 147,
+      "hash_cross_check": {
+        "mismatch": 0,
+        "no_reference": 0,
+        "verified": 147
+      },
+      "intended": 147
+    },
+    "status_counts": {
+      "completed": 3,
+      "error": 0,
+      "total": 3
+    }
+  },
+  "mode": "smoke",
+  "notes": [
+    "Joint-level Full-range CF reuses the exact frozen PhysX Table 4 single-joint sweep states (K=21, endpoints included, other joints q=0); per-state q-vector hashes are cross-checked against the PhysX Table 4 state_records where available.",
+    "State collision oracle = Genesis contact-penetration backend (genesis_contact_penetration_v1), direct kinematic detection only, illegal iff eligible-pair penetration > 1e-6 m.",
+    "Headline pair policy = distinct source links excluding direct parent-child; no method-specific allowance.",
+    "Normalized Clearance P5 is N/E under this oracle (no signed clearance for separated pairs; no independent exact-distance backend registered).",
+    "Existing Strict Collision Pass values in DoF bins are historical PhysX Table 4 (PyBullet) results reported alongside, not re-executed.",
+    "Official PhysX-Mobility URDFs declare zero collision elements: every asset maps to 0 eligible collision pairs; all collision-free outcomes are vacuous and must not be read as verified mechanical clearance."
+  ],
+  "protocol_id": "table4a_physx_mobility_table5cohort_n800_v1",
+  "run_directory": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4a_urdf_physx_mobility_smoke_n3_20260820T024900Z",
+  "started_at_utc": "2026-08-20T03:03:59.885148Z",
+  "status_counts": {
+    "completed": 3,
+    "error": 0,
+    "total": 3
+  },
+  "wall_seconds": 62.251
+}

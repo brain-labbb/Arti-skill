@@ -1,0 +1,19 @@
+{
+  "protocol_id": "articulated-structural-collision-fk-v1",
+  "structural": {
+    "gap_fraction": 0.002,
+    "geometry_role": "visual",
+    "pose_samples": 9,
+    "roi_fraction": 0.02,
+    "support_threshold": 0.1,
+    "surface_samples": 128
+  },
+  "collision": {
+    "absolute_fraction": 0.002,
+    "geometry_role": "collision",
+    "growth_fraction": 0.002,
+    "joint_contact_roi_radius_fraction": 0.02,
+    "max_contacts": 128,
+    "pose_samples": 9
+  }
+}

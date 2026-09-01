@@ -1,0 +1,83 @@
+{
+  "artifacts": {
+    "asset_records.jsonl": {
+      "bytes": 3043,
+      "sha256": "db81c606dc3d986fdb1ab8fb608a119a8df39cbcc6c7f8dedb5083f184fe8f50"
+    },
+    "frozen_config.json": {
+      "bytes": 4506,
+      "sha256": "09a9273d5ecf84b72f64ac9afc6f874461244755749f93651e241696d378a4cb"
+    },
+    "protocol_snapshot.md": {
+      "bytes": 235982,
+      "sha256": "af459d856674053f6bb3812f543ffd01413cf5576724eb5c899737febdb9dd3b"
+    },
+    "summary.json": {
+      "bytes": 1569,
+      "sha256": "783cac10f8bec6f4ce73b07e364c8dc1701024560df9c3f7bceacbf0462464c1"
+    },
+    "summary.md": {
+      "bytes": 571,
+      "sha256": "6b6dc4d9b1e69ec4c4ca18c8ba79c37db2377e6420e7295022c75939e3a2b703"
+    }
+  },
+  "classification": "SMOKE",
+  "code_identity": {
+    "cohort_loader_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_table1_physx_mobility.py",
+    "cohort_loader_sha256": "6e53d4f5522bc6d1025384299e74fbc1911f9ef8eff972ccb34aae04e9b389b4",
+    "runner_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_s1_physx_mobility.py",
+    "runner_sha256": "3ef6676e4b072f2ddec4a71832f258c104ff3387cb1ee1cc689eacb1826fc211",
+    "static_atoms_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_static.py",
+    "static_atoms_sha256": "4701415dad8a5c0a434c16887979bcb70c250ba0b25772014e8db73789098e5f",
+    "table5_contract_path": "/mnt/zsn/lyb/arti-skill-table5-physx-n800/exp/scripts/table5_physx_common.py",
+    "table5_contract_sha256": "9a239bd1cba3d98c28b1478feb2c84e6c5e9f3993659323461ad9605e1466bd9",
+    "verifier_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/verify_s1_physx_mobility.py",
+    "verifier_sha256": "9573dbf93ac04059f8ce25745021963e183e07d6755d330c1384d6d92d51faf8"
+  },
+  "cohort": {
+    "archive_binding_verified": false,
+    "cohort_sha256": "a9c9c710d9617dea366696603984e330780ce177fead2a34c60410588cc1273c",
+    "n_eval": 2,
+    "ordered_dataset_ids_sha256": "12dddf242e3e65dbe5d41b047752ed9b59d7ecb4387b81c9327bc0bc533172ad",
+    "protocol_sha256": "4403a4190e2393c2812cf25193cbc6a08e75b350e65f47302db7f7c8a7321101",
+    "selection": {
+      "candidate_count": 2024,
+      "rank_salt": "arti-skill-table5-physx-mobility-n800-v1",
+      "selected_count": 800,
+      "selection_rule": "ascending (rank_sha256, integer dataset_id), first N"
+    },
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_physx_mobility_n800_v2/manifest.json",
+    "source_manifest_file_sha256": "ccb54f4b726fe717efd28a37948e6b92bac994a2c0ba8fb4ea9ac4548d3a9882",
+    "source_receipt": {
+      "archive_bytes": 937374668,
+      "archive_member_prefix": "PhysX_mobility",
+      "archive_path": "/mnt/zsn/lyb/arti-skill/exp/PhysX-Mobility/PhysX-Mobility.zip",
+      "archive_sha256": "88308cc2a4cc6177c59e32c2de51e881e6b961737295e5082d7ed01cca221908",
+      "dataset": "Caoza/PhysX-Mobility",
+      "revision": "d0768ee9e1415f6be8db78d6389ba018b85134c0"
+    }
+  },
+  "created_at": "2026-08-21T08:58:21.860235Z",
+  "dataset": "PhysX-Mobility",
+  "manifest_content_sha256": "af8642821d8fe2259b51bd3eff1f1e7849c78192f7a9fc30ee64202b1511db5d",
+  "n_eval": 2,
+  "post_manifest_receipts": {
+    "verification.json": "independent verifier receipt generated after manifest finalization; excluded from the non-circular manifest artifact closure"
+  },
+  "protocol_id": "s1_physx_mobility_table5cohort_n800_v1",
+  "schema_version": "supplementary-s1-physx-mobility/v1",
+  "table4_source": {
+    "artifact_manifest_file_sha256": "29193c31078ebe67c2b7202a092627c6e90a40db82d051c4d8dd02c2aa4e16f5",
+    "artifact_manifest_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_physx_mobility_table5cohort_n800_20260819T143442Z/artifact_manifest.json",
+    "asset_records_file_sha256": "1efcfea5920e8db21f7b8afe9de0713a6bb478577d8b4417a6feb2b207397a3d",
+    "asset_records_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_physx_mobility_table5cohort_n800_20260819T143442Z/asset_records.json",
+    "denominator": 2,
+    "manifest_file_sha256": "671d107836fd1344fee34565aa9b16439b208598d179ee5bb59bbfb9bdbfef87",
+    "manifest_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_physx_mobility_table5cohort_n800_20260819T143442Z/manifest.json",
+    "protocol_id": "urdf_sim_ready_table4_physx_mobility_n800_v1",
+    "state_record_count": 214,
+    "state_records_file_sha256": "eaa461e205e96b9bc2db4538de4295ba5efdd9bce0ac5d52ed0524648b6ec5fa",
+    "state_records_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_physx_mobility_table5cohort_n800_20260819T143442Z/state_records.jsonl",
+    "strict_passed": 2
+  }
+}

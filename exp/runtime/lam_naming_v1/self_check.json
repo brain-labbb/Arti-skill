@@ -1,0 +1,43 @@
+{
+  "protocol_id": "nano3d_lam_naming_self_check_v1.1",
+  "status": "PASS",
+  "primary": "arti-skill/exp/runtime/lam_naming_v1",
+  "repro": "arti-skill/.tmp/lam_naming_repro_v11",
+  "checks": {
+    "both_status_complete": true,
+    "summary_equal_excluding_generated_at": true,
+    "records_byte_identical": true,
+    "reports_byte_identical": true,
+    "records_sha_matches_primary_summary": true,
+    "records_sha_matches_repro_summary": true,
+    "stable_metrics_sha_equal": true,
+    "manifest_records_conserved": true,
+    "manifest_artifact_parse_evaluable_conserved": true,
+    "tar_manifest_urdf_set_exact_match": true,
+    "intermediate_urdfs_excluded_from_final_set": true,
+    "manifest_parsed_links_conserved": true,
+    "parts_summary_conserved": true,
+    "named_summary_conserved": true,
+    "placeholder_conserved": true,
+    "placeholder_asset_count_conserved": true,
+    "geometry_summary_conserved": true,
+    "archive_unambiguous": true
+  },
+  "conservation_sums": {
+    "records": 2533,
+    "manifest_links": 15009,
+    "parsed_links": 15009,
+    "parts": 15009,
+    "named_parts": 14909,
+    "placeholder_parts": 100,
+    "valid_visual_geometry": 15009,
+    "invalid_visual_geometry": 0,
+    "assets_with_placeholders": 12
+  },
+  "primary_records_sha256": "0ec93a27881e4941ed2792277f7e762c1aeee1f6d13ee2b7a1afc11c4e22251c",
+  "repro_records_sha256": "0ec93a27881e4941ed2792277f7e762c1aeee1f6d13ee2b7a1afc11c4e22251c",
+  "primary_report_sha256": "03ddb7dde06214d1d63b6574f90a27cd63ad7055a629dccc1fda3b5e7a2d1009",
+  "repro_report_sha256": "03ddb7dde06214d1d63b6574f90a27cd63ad7055a629dccc1fda3b5e7a2d1009",
+  "stable_metrics_sha256": "33eff8b5d6e39eba6f48b629384ad9a6862135be89f58c0dc07a151abb5cc064",
+  "verifier_sha256": "5dbda2556555f6fc9afcf34f2a5fa23c9fa24b554cb2793177e91eb26bcd4478"
+}

@@ -1,0 +1,163 @@
+{
+  "protocol_id": "nano3d_lam_naming_release_v1.1",
+  "common_protocol_id": "nano3d_table2_baseline_naming_v1.1",
+  "status": "COMPLETE",
+  "generated_at_utc": "2026-08-11T04:23:20.310023+00:00",
+  "network_accessed": false,
+  "generated_code_executed": false,
+  "paper_values_reused": false,
+  "comparison_scope": "official viable release cohort; not a shared prompt-matched rerun against other methods",
+  "release": {
+    "code_repository": "https://github.com/gaoypeng/LAM.git",
+    "code_commit": "0b3a87beb8c35273a5acf8681221791aff746d8e",
+    "code_worktree_clean": true,
+    "official_origin_match": true,
+    "dataset": "YipengGao/Articulated-Object-Code",
+    "cohort": "all manifest rows with tier=viable"
+  },
+  "coverage": {
+    "release_manifest_rows": 3217,
+    "tier_counts": {
+      "broken": 385,
+      "loads_only": 299,
+      "viable": 2533
+    },
+    "requested_viable_assets": 2533,
+    "requested_unique_release_ids": 2533,
+    "requested_unique_rel_paths": 2533,
+    "requested_categories": 597,
+    "artifact_found_assets": 2533,
+    "parse_success_assets": 2533,
+    "naming_evaluable_assets": 2533,
+    "failed_artifact_assets": 0,
+    "manifest_link_count_mismatch_assets": 0
+  },
+  "archive_audit": {
+    "member_count": 204029,
+    "type_counts": {
+      "directory": 28885,
+      "regular_file": 175144
+    },
+    "regular_file_count": 175144,
+    "total_uncompressed_bytes": 9169739350,
+    "unsafe_member_count": 0,
+    "unsafe_members": [],
+    "duplicate_member_count": 0,
+    "duplicate_members": [],
+    "link_member_count": 0,
+    "link_members": [],
+    "special_member_count": 0,
+    "special_members": [],
+    "streamed_without_extraction": true,
+    "expected_generated_urdf_count": 2533,
+    "generated_urdf_member_count": 2533,
+    "all_named_generated_urdf_member_count": 3351,
+    "intermediate_log_generated_urdf_count": 818,
+    "missing_expected_generated_urdf_count": 0,
+    "missing_expected_generated_urdfs": [],
+    "extra_generated_urdf_count": 0,
+    "extra_generated_urdfs": [],
+    "archive_safe_for_evaluation": true,
+    "manifest_urdf_set_exact_match": true
+  },
+  "direct_metrics": {
+    "requested_assets": 2533,
+    "artifact_found_assets": 2533,
+    "parse_success_assets": 2533,
+    "naming_evaluable_assets": 2533,
+    "total_renderable_parts": 15009,
+    "total_named_renderable_parts": 14909,
+    "parts_per_asset_mean": 5.925384919068298,
+    "parts_per_asset_median": 4,
+    "nameability_micro": 0.9933373309347725,
+    "nameability_asset_macro": 0.9961926085494975,
+    "assets_with_placeholder_parts": 12,
+    "fully_nameable_assets": 2521,
+    "parts_per_asset_min": 2,
+    "parts_per_asset_max": 119,
+    "placeholder_renderable_parts": 100,
+    "placeholder_name_counts": {
+      "link_1": 9,
+      "link_2": 9,
+      "link_3": 9,
+      "link_4": 9,
+      "link_5": 9,
+      "link_0": 8,
+      "link_6": 7,
+      "link_7": 7,
+      "link_8": 7,
+      "link_9": 6,
+      "link_10": 4,
+      "link_11": 4,
+      "link1": 2,
+      "link_01": 1,
+      "link_02": 1,
+      "link_03": 1,
+      "link_04": 1,
+      "link_05": 1,
+      "link_06": 1,
+      "link_07": 1,
+      "link_08": 1,
+      "link2": 1,
+      "link3": 1
+    },
+    "valid_visual_geometry_count": 15009,
+    "invalid_visual_geometry_count": 0,
+    "valid_geometry_types": {
+      "mesh": 15009
+    },
+    "invalid_geometry_reasons": {},
+    "bootstrap_ci": {
+      "method": "asset bootstrap with replacement",
+      "resamples": 10000,
+      "confidence": 0.95,
+      "seed": 260811002,
+      "parts_mean": [
+        5.658497828661666,
+        6.213590604026846
+      ],
+      "nameability_micro": [
+        0.9888880498263164,
+        0.9971270304595431
+      ]
+    },
+    "representation": "URDF renderable-link; not merged with GLB-node results"
+  },
+  "cross_seed": {
+    "eligible": false,
+    "status": "N/A",
+    "reason": "LAM release rows are independent per-asset generations and expose no frozen reusable factory/template plus seed identity",
+    "raw_unique_name_set_jaccard": null,
+    "raw_name_multiset_weighted_jaccard": null,
+    "exact_raw_name_multiset_mode_rate": null
+  },
+  "semantic_evidence": {
+    "output_independent_lam_role_gold": false,
+    "lam_linked_complete_blind_judges": 0,
+    "required_blind_judges": 3,
+    "existing_naming_gold_is_lam_linked": false,
+    "existing_judge_packet_is_lam_linked": false
+  },
+  "semantic_metrics": {
+    "semantic_precision": null,
+    "semantic_recall": null,
+    "naming_richness": null,
+    "functional_core_coverage": null,
+    "instance_discriminability": null,
+    "over_segmentation_rate": null
+  },
+  "semantic_status": "N/A: no LAM-linked output-independent role gold and no three complete independent blind judges",
+  "provenance": {
+    "manifest_csv_sha256": "70216593ec02b71d596e456498ff9863ad0f8e519d5d27d2cf4f58792d412412",
+    "manifest_parquet_sha256": "589a75c3bf63cb20e22596a7786b06215eb44d44177d1620289cf397ec43c0c1",
+    "articulated_code_parquet_sha256": "ab45cf9154c5d98deef7b9032f622286efecd21228d9d0e9165a2f0811da6764",
+    "viable_archive_sha256": "a582ef0aa0f3073749adcc73d289a12200e500c1a5762a4ee1530eefc2c4920d",
+    "dataset_readme_sha256": "85b28c2338d0d64bf336cd032faca192df493762de8477af125844410e307eb3",
+    "code_agents_sha256": "52f8282fb95863113eeeba45393e0e49f445e0af765c10be52005b46ad8e63c4",
+    "common_protocol_sha256": "4e9d90300018ea47dd0473fc09cb866656b42cdc749377e5a46fb0a9c699cb1e",
+    "judge_protocol_sha256": "6e8b50435b7ac30d2b96be0f882a3d59bc62108f5da19d2709ddf1dd140645e8",
+    "evaluator_sha256": "863295216d0e8e6b11511e82ee74df6f261d2e850df7b1112d955c15b9a0d022",
+    "records_sha256": "0ec93a27881e4941ed2792277f7e762c1aeee1f6d13ee2b7a1afc11c4e22251c",
+    "stable_metrics_sha256": "33eff8b5d6e39eba6f48b629384ad9a6862135be89f58c0dc07a151abb5cc064"
+  }
+}

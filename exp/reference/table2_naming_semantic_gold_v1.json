@@ -1,0 +1,954 @@
+{
+  "semantic_gold_id": "nano3d_table2_naming_semantic_gold_v1",
+  "schema_version": "1.0",
+  "frozen_at_utc": "2026-08-11T07:00:09Z",
+  "parent_protocol": {
+    "path": "exp/reference/table2_naming_matched_protocol_v1.json",
+    "protocol_id": "nano3d_table2_naming_matched_v1",
+    "sha256": "f4c4d915ce2e1bed5c99efd9dcebb97526a7d2639ad5021e3b068c3cf6105113"
+  },
+  "purpose": "Asset-independent English semantic-role gold for blind judging of renderable URDF link names in the frozen Table 2 Naming matched panel.",
+  "independence": {
+    "construction_inputs": [
+      "the frozen matched-panel protocol named in parent_protocol",
+      "public official manufacturer product, support, and owner-documentation pages listed in sources"
+    ],
+    "not_inspected": [
+      "exp/runtime",
+      "generated URDF files",
+      "evaluation records or manifests",
+      "asset link names",
+      "method-specific outputs"
+    ],
+    "statement": "Roles and synonyms were fixed from category definitions and public product terminology, without observing evaluated names or artifacts."
+  },
+  "scope": {
+    "canonical_categories": [
+      "microwave",
+      "dishwasher",
+      "oven",
+      "faucet",
+      "refrigerator"
+    ],
+    "representation": "renderable URDF links only",
+    "language": "English",
+    "unit_of_judgment": "one renderable link name interpreted together with the link's visible geometry, placement, and motion",
+    "out_of_scope": [
+      "non-renderable links",
+      "joint names",
+      "GLB node names",
+      "internal components not represented as distinct renderable links",
+      "materials, colors, style, and brand names",
+      "kinematic correctness beyond what is needed to identify a visible semantic role"
+    ]
+  },
+  "normalization": {
+    "comparison": "case-insensitive after splitting camel case and treating spaces, hyphens, and underscores as token separators",
+    "allowed_morphology": [
+      "singular or plural",
+      "transparent numeric instance suffixes",
+      "left, right, upper, lower, top, bottom, front, rear, inner, and outer qualifiers when geometrically correct"
+    ],
+    "compound_rule": "A listed synonym may occur inside a more specific, truthful compound, but substring coincidence inside an unrelated token is not acceptance.",
+    "generic_rejection_tokens": [
+      "link",
+      "part",
+      "component",
+      "object",
+      "mesh",
+      "geometry",
+      "node",
+      "piece"
+    ],
+    "generic_token_rule": "A generic token alone, or with only an opaque number or hash, is not a semantic role name.",
+    "truthfulness_rule": "A lexical match is rejected when geometry, location, or motion clearly realizes a different role."
+  },
+  "judging_contract": {
+    "role_assignment": "Assign each named renderable link to the most specific supported canonical role, an allowed specialization, other_truthful_semantic, generic_placeholder, or incorrect_semantic.",
+    "minimal_role_interpretation": "Minimal required roles describe category-level functional coverage. They do not require one link per role: fused geometry may realize multiple roles, and absent separate segmentation is not a naming error.",
+    "optional_role_interpretation": "An optional role is judged only when that component is visibly realized as a distinct renderable link. Its absence is never an error.",
+    "unlisted_truthful_names": "A precise, truthful component name not listed as a synonym is labeled other_truthful_semantic rather than incorrect; judges must record it for adjudication without changing this frozen gold.",
+    "synonym_boundary": "Synonyms license the semantic role, not arbitrary token replacement across distinct roles such as door versus door frame or rack versus rack rail.",
+    "multi_role_links": "For a fused link, accept the most inclusive truthful name. Do not require the name to enumerate every fused subrole.",
+    "metric_gate": "This gold alone does not activate semantic metrics. The parent protocol's requirement for three blind judges remains mandatory."
+  },
+  "global_instance_discriminability": {
+    "singleton_rule": "Do not require an instance qualifier for a role represented exactly once.",
+    "repeated_role_rule": "Every simultaneously visible repeated instance of the same role must be distinguishable as a set by stable semantic qualifiers or deterministic ordinals.",
+    "qualifier_priority": [
+      "functional identity, such as hot versus cold",
+      "compartment or level, such as freezer versus refrigerator or upper versus lower",
+      "laterality or depth, such as left versus right or front versus rear",
+      "one-based ordinal in a documented stable order"
+    ],
+    "ordinal_rule": "Ordinals are acceptable only when no more informative visible distinction exists and the ordering convention is stated consistently for the asset.",
+    "opaque_id_rule": "Random hashes, source IDs, and non-consecutive opaque numbers do not establish instance discriminability.",
+    "group_rule": "A single link that visibly represents a coherent inseparable group may use a plural or group name and is not penalized for lacking per-member indices."
+  },
+  "categories": {
+    "microwave": {
+      "category_definition": "microwave cooking appliance; microwave oven is an accepted category synonym",
+      "minimal_required_roles": [
+        {
+          "role_id": "microwave_housing",
+          "functional_core": true,
+          "definition": "the main enclosure and structural body around the cooking chamber",
+          "acceptable_synonyms": [
+            "microwave_body",
+            "oven_body",
+            "body",
+            "housing",
+            "cabinet",
+            "chassis",
+            "enclosure"
+          ]
+        },
+        {
+          "role_id": "microwave_door",
+          "functional_core": true,
+          "definition": "the closure providing access to the microwave cooking chamber",
+          "acceptable_synonyms": [
+            "microwave_door",
+            "oven_door",
+            "door",
+            "access_door"
+          ]
+        }
+      ],
+      "optional_roles": [
+        {
+          "role_id": "door_handle",
+          "functional_core": false,
+          "presence_condition": "only when a distinct graspable handle is present; recessed grips and push-button-only models need no handle role",
+          "acceptable_synonyms": [
+            "door_handle",
+            "handle",
+            "pull_handle",
+            "door_pull"
+          ]
+        },
+        {
+          "role_id": "door_release_button",
+          "functional_core": false,
+          "presence_condition": "only when a distinct push control releases the door",
+          "acceptable_synonyms": [
+            "door_release_button",
+            "door_open_button",
+            "open_button",
+            "door_button"
+          ]
+        },
+        {
+          "role_id": "control_panel",
+          "functional_core": false,
+          "presence_condition": "only when controls form a distinct renderable panel or link",
+          "acceptable_synonyms": [
+            "control_panel",
+            "control_interface",
+            "keypad",
+            "touch_panel",
+            "button_panel"
+          ]
+        },
+        {
+          "role_id": "display",
+          "functional_core": false,
+          "presence_condition": "only when a display is separately segmented",
+          "acceptable_synonyms": [
+            "display",
+            "screen",
+            "timer_display",
+            "control_display"
+          ]
+        },
+        {
+          "role_id": "turntable",
+          "functional_core": false,
+          "presence_condition": "only on models with a distinct rotating cooking platter",
+          "acceptable_synonyms": [
+            "turntable",
+            "rotating_tray",
+            "rotating_plate",
+            "glass_turntable",
+            "cooking_tray"
+          ]
+        },
+        {
+          "role_id": "vent_or_exhaust_panel",
+          "functional_core": false,
+          "presence_condition": "only when an over-range or ventilating microwave visibly segments this component",
+          "acceptable_synonyms": [
+            "vent",
+            "vent_panel",
+            "exhaust_grille",
+            "vent_grille",
+            "air_grille"
+          ]
+        }
+      ],
+      "exclusive_or_alternative_role_groups": [
+        {
+          "group_id": "door_opening_hardware",
+          "kind": "zero_or_one_primary_realization",
+          "roles": [
+            "door_handle",
+            "door_release_button"
+          ],
+          "rule": "A model may use a handle, a release button, an integrated grip, or powered opening; do not require either optional role."
+        },
+        {
+          "group_id": "food_support_motion",
+          "kind": "optional_configuration",
+          "roles": [
+            "turntable",
+            "fixed_cavity_floor"
+          ],
+          "rule": "Turntable and flat-floor configurations are alternatives; fixed_cavity_floor is contextual and never requires a separate link."
+        }
+      ],
+      "instance_discriminability_rules": [
+        "The single main door needs no qualifier.",
+        "Repeated control buttons should use function labels when knowable; otherwise stable one-based ordinals are acceptable.",
+        "Multiple trays or racks, when present, use upper/lower or stable ordinal qualifiers."
+      ]
+    },
+    "dishwasher": {
+      "category_definition": "dishwashing appliance",
+      "minimal_required_roles": [
+        {
+          "role_id": "dishwasher_housing",
+          "functional_core": true,
+          "definition": "the main appliance enclosure or tub-supporting body",
+          "acceptable_synonyms": [
+            "dishwasher_body",
+            "body",
+            "housing",
+            "cabinet",
+            "chassis",
+            "enclosure",
+            "tub"
+          ]
+        },
+        {
+          "role_id": "dishwasher_door",
+          "functional_core": true,
+          "definition": "the main closure providing access to the washing compartment",
+          "acceptable_synonyms": [
+            "dishwasher_door",
+            "door",
+            "front_door",
+            "access_door",
+            "drop_down_door"
+          ]
+        },
+        {
+          "role_id": "dish_rack",
+          "functional_core": true,
+          "definition": "a load-bearing rack or basket that holds items during washing",
+          "acceptable_synonyms": [
+            "dish_rack",
+            "rack",
+            "dish_basket",
+            "loading_rack",
+            "tray"
+          ],
+          "allowed_specializations": [
+            "upper_rack",
+            "lower_rack",
+            "top_rack",
+            "bottom_rack",
+            "third_rack",
+            "cutlery_rack"
+          ]
+        }
+      ],
+      "optional_roles": [
+        {
+          "role_id": "third_rack",
+          "functional_core": false,
+          "presence_condition": "only on models with a distinct third loading level",
+          "acceptable_synonyms": [
+            "third_rack",
+            "top_cutlery_rack",
+            "utensil_rack",
+            "cutlery_tray"
+          ]
+        },
+        {
+          "role_id": "silverware_basket",
+          "functional_core": false,
+          "presence_condition": "only when a distinct removable utensil basket is represented",
+          "acceptable_synonyms": [
+            "silverware_basket",
+            "cutlery_basket",
+            "utensil_basket"
+          ]
+        },
+        {
+          "role_id": "spray_arm",
+          "functional_core": true,
+          "presence_condition": "only when a spray arm is externally visible and separately rendered",
+          "acceptable_synonyms": [
+            "spray_arm",
+            "sprayer_arm",
+            "wash_arm",
+            "sprinkler"
+          ]
+        },
+        {
+          "role_id": "detergent_dispenser",
+          "functional_core": false,
+          "presence_condition": "only when separately segmented on the door or tub",
+          "acceptable_synonyms": [
+            "detergent_dispenser",
+            "soap_dispenser",
+            "detergent_compartment"
+          ]
+        },
+        {
+          "role_id": "control_panel",
+          "functional_core": false,
+          "presence_condition": "only when controls form a distinct renderable panel or link",
+          "acceptable_synonyms": [
+            "control_panel",
+            "control_interface",
+            "button_panel",
+            "touch_panel"
+          ]
+        },
+        {
+          "role_id": "door_handle",
+          "functional_core": false,
+          "presence_condition": "only when a distinct handle is visible; pocket and integrated pulls need no separate role",
+          "acceptable_synonyms": [
+            "door_handle",
+            "handle",
+            "pull_handle",
+            "door_pull"
+          ]
+        }
+      ],
+      "exclusive_or_alternative_role_groups": [
+        {
+          "group_id": "rack_count_configuration",
+          "kind": "alternative_configuration",
+          "roles": [
+            "two_rack_layout",
+            "three_rack_layout"
+          ],
+          "rule": "Two-rack and three-rack layouts are both valid; third_rack is never universally required."
+        },
+        {
+          "group_id": "utensil_storage",
+          "kind": "nonexclusive_alternatives",
+          "roles": [
+            "silverware_basket",
+            "third_rack"
+          ],
+          "rule": "A model may use either or both; score only visibly present distinct components."
+        }
+      ],
+      "instance_discriminability_rules": [
+        "Two main racks should be identified as upper/lower or top/bottom rather than opaque rack numbers.",
+        "A third top loading level should be named third_rack, cutlery_rack, or another truthful specialization.",
+        "Repeated spray arms should use upper/lower/top/bottom qualifiers according to location.",
+        "Repeated rack wheels or tines may use a plural group name when fused into one renderable link; otherwise apply side and ordinal qualifiers."
+      ]
+    },
+    "oven": {
+      "category_definition": "standalone or built-in oven, excluding toaster ovens and microwave ovens",
+      "minimal_required_roles": [
+        {
+          "role_id": "oven_housing",
+          "functional_core": true,
+          "definition": "the main structural enclosure around the oven cavity",
+          "acceptable_synonyms": [
+            "oven_body",
+            "body",
+            "housing",
+            "cabinet",
+            "chassis",
+            "enclosure"
+          ]
+        },
+        {
+          "role_id": "oven_door",
+          "functional_core": true,
+          "definition": "the closure providing access to an oven cavity",
+          "acceptable_synonyms": [
+            "oven_door",
+            "door",
+            "access_door",
+            "drop_down_door"
+          ]
+        },
+        {
+          "role_id": "oven_rack",
+          "functional_core": true,
+          "definition": "a support rack for cookware inside the oven cavity",
+          "acceptable_synonyms": [
+            "oven_rack",
+            "rack",
+            "baking_rack",
+            "wire_rack",
+            "roller_rack"
+          ]
+        }
+      ],
+      "optional_roles": [
+        {
+          "role_id": "control_panel",
+          "functional_core": false,
+          "presence_condition": "only when controls form a distinct renderable panel or link",
+          "acceptable_synonyms": [
+            "control_panel",
+            "control_interface",
+            "touch_panel",
+            "button_panel"
+          ]
+        },
+        {
+          "role_id": "control_knob",
+          "functional_core": false,
+          "presence_condition": "only on models with distinct rotary controls",
+          "acceptable_synonyms": [
+            "control_knob",
+            "oven_knob",
+            "knob",
+            "dial",
+            "selector_dial"
+          ]
+        },
+        {
+          "role_id": "door_handle",
+          "functional_core": false,
+          "presence_condition": "only when separately segmented from the door",
+          "acceptable_synonyms": [
+            "door_handle",
+            "handle",
+            "pull_handle",
+            "door_pull"
+          ]
+        },
+        {
+          "role_id": "convection_fan",
+          "functional_core": false,
+          "presence_condition": "only for a convection model with a visible, separately rendered fan or fan assembly",
+          "acceptable_synonyms": [
+            "convection_fan",
+            "oven_fan",
+            "circulation_fan",
+            "fan"
+          ]
+        },
+        {
+          "role_id": "heating_element",
+          "functional_core": true,
+          "presence_condition": "only when a heating element is visibly modeled as a separate renderable link",
+          "acceptable_synonyms": [
+            "heating_element",
+            "bake_element",
+            "broil_element",
+            "heater",
+            "burner"
+          ]
+        },
+        {
+          "role_id": "cooktop",
+          "functional_core": false,
+          "presence_condition": "only for a range or stove configuration; built-in wall ovens need no cooktop",
+          "acceptable_synonyms": [
+            "cooktop",
+            "stovetop",
+            "range_top",
+            "hob"
+          ]
+        },
+        {
+          "role_id": "storage_or_warming_drawer",
+          "functional_core": false,
+          "presence_condition": "only when a distinct lower drawer is present",
+          "acceptable_synonyms": [
+            "storage_drawer",
+            "warming_drawer",
+            "lower_drawer",
+            "drawer"
+          ]
+        }
+      ],
+      "exclusive_or_alternative_role_groups": [
+        {
+          "group_id": "appliance_installation_form",
+          "kind": "alternative_configuration",
+          "roles": [
+            "standalone_or_range_oven",
+            "built_in_or_wall_oven"
+          ],
+          "rule": "A cooktop and lower drawer may accompany a range oven but are not required for a built-in or wall oven."
+        },
+        {
+          "group_id": "air_circulation",
+          "kind": "alternative_configuration",
+          "roles": [
+            "conventional_cavity",
+            "convection_fan"
+          ],
+          "rule": "Convection hardware is model-dependent; conventional_cavity is contextual and never requires a separate link."
+        },
+        {
+          "group_id": "controls",
+          "kind": "nonexclusive_alternatives",
+          "roles": [
+            "control_panel",
+            "control_knob"
+          ],
+          "rule": "Touch controls, buttons, and knobs may occur separately or together."
+        }
+      ],
+      "instance_discriminability_rules": [
+        "In a double oven, doors and cavity-specific parts should use upper/lower or top/bottom qualifiers.",
+        "Multiple racks should use vertical-position qualifiers when stable; otherwise use one-based ordinals in bottom-to-top order.",
+        "Multiple heating elements should use functional or positional names such as bake_element and broil_element.",
+        "Repeated cooktop burners or knobs should use position and, when knowable, controlled-burner identity before ordinals."
+      ]
+    },
+    "faucet": {
+      "category_definition": "water-control faucet; tap is an accepted category synonym",
+      "minimal_required_roles": [
+        {
+          "role_id": "faucet_body",
+          "functional_core": true,
+          "definition": "the main mounted body or base carrying the faucet assembly",
+          "acceptable_synonyms": [
+            "faucet_body",
+            "tap_body",
+            "body",
+            "base",
+            "faucet_base",
+            "tap_base",
+            "housing"
+          ]
+        },
+        {
+          "role_id": "spout",
+          "functional_core": true,
+          "definition": "the outlet-bearing member that directs water into the basin or sink",
+          "acceptable_synonyms": [
+            "spout",
+            "faucet_spout",
+            "tap_spout",
+            "outlet",
+            "water_outlet",
+            "gooseneck"
+          ]
+        }
+      ],
+      "optional_roles": [
+        {
+          "role_id": "control_handle",
+          "functional_core": true,
+          "presence_condition": "only on manually controlled or touch-assisted models with a distinct handle",
+          "acceptable_synonyms": [
+            "handle",
+            "faucet_handle",
+            "tap_handle",
+            "control_handle",
+            "lever",
+            "control_lever"
+          ],
+          "allowed_specializations": [
+            "hot_handle",
+            "cold_handle",
+            "temperature_handle",
+            "flow_handle"
+          ]
+        },
+        {
+          "role_id": "control_knob",
+          "functional_core": true,
+          "presence_condition": "only when a rotary knob rather than a lever is distinctly modeled",
+          "acceptable_synonyms": [
+            "knob",
+            "faucet_knob",
+            "tap_knob",
+            "control_knob",
+            "valve_knob"
+          ]
+        },
+        {
+          "role_id": "sensor",
+          "functional_core": true,
+          "presence_condition": "only when a dedicated proximity or touch sensor is separately visible; a whole-body sensor needs no extra sensor link",
+          "acceptable_synonyms": [
+            "sensor",
+            "proximity_sensor",
+            "touch_sensor",
+            "motion_sensor",
+            "activation_sensor"
+          ]
+        },
+        {
+          "role_id": "pull_out_spray_head",
+          "functional_core": false,
+          "presence_condition": "only for a detachable pull-down or pull-out outlet head",
+          "acceptable_synonyms": [
+            "spray_head",
+            "sprayer_head",
+            "pull_down_sprayer",
+            "pull_out_sprayer",
+            "wand",
+            "spray_wand"
+          ]
+        },
+        {
+          "role_id": "side_sprayer",
+          "functional_core": false,
+          "presence_condition": "only when a separate side-mounted sprayer is present",
+          "acceptable_synonyms": [
+            "side_sprayer",
+            "side_spray",
+            "vegetable_sprayer",
+            "sprayer"
+          ]
+        },
+        {
+          "role_id": "hose",
+          "functional_core": false,
+          "presence_condition": "only when an exposed or separately rendered hose is present",
+          "acceptable_synonyms": [
+            "hose",
+            "sprayer_hose",
+            "pull_out_hose",
+            "water_hose"
+          ]
+        },
+        {
+          "role_id": "aerator",
+          "functional_core": false,
+          "presence_condition": "only when the outlet aerator is visibly and separately segmented",
+          "acceptable_synonyms": [
+            "aerator",
+            "spout_aerator",
+            "outlet_aerator"
+          ]
+        }
+      ],
+      "exclusive_or_alternative_role_groups": [
+        {
+          "group_id": "primary_activation",
+          "kind": "at_least_one_functional_mode_not_necessarily_separate_link",
+          "roles": [
+            "control_handle",
+            "control_knob",
+            "sensor",
+            "whole_body_sensor"
+          ],
+          "rule": "Manual lever/knob and hands-free sensing are alternative primary modes, but touch-assisted products may combine a handle with sensing; whole_body_sensor is contextual and requires no separate link."
+        },
+        {
+          "group_id": "manual_handle_count",
+          "kind": "alternative_configuration",
+          "roles": [
+            "single_mixing_handle",
+            "hot_and_cold_handle_pair"
+          ],
+          "rule": "Single-handle and two-handle layouts are both valid; do not require two handles universally."
+        },
+        {
+          "group_id": "auxiliary_spray",
+          "kind": "nonexclusive_alternatives",
+          "roles": [
+            "pull_out_spray_head",
+            "side_sprayer"
+          ],
+          "rule": "Neither spray configuration is universal, and either is judged only when visibly present."
+        }
+      ],
+      "instance_discriminability_rules": [
+        "A two-handle faucet should use hot/cold qualifiers when function is knowable; left/right is acceptable when only placement is supportable.",
+        "A single mixing handle needs no qualifier.",
+        "Distinguish the main spout from a side_sprayer or pull_out_spray_head when both are separate links.",
+        "Repeated valves or mounting elements use function, side, then stable ordinals in that priority order."
+      ]
+    },
+    "refrigerator": {
+      "category_definition": "refrigerator appliance; fridge and the release typo refrigerater are accepted category lexical variants",
+      "minimal_required_roles": [
+        {
+          "role_id": "refrigerator_cabinet",
+          "functional_core": true,
+          "definition": "the main insulated appliance enclosure",
+          "acceptable_synonyms": [
+            "refrigerator_body",
+            "fridge_body",
+            "refrigerator_cabinet",
+            "fridge_cabinet",
+            "body",
+            "cabinet",
+            "housing",
+            "chassis",
+            "enclosure"
+          ]
+        },
+        {
+          "role_id": "refrigerated_compartment_door",
+          "functional_core": true,
+          "definition": "a hinged closure providing access to the refrigerated food compartment",
+          "acceptable_synonyms": [
+            "refrigerator_door",
+            "fridge_door",
+            "fresh_food_door",
+            "cooler_door",
+            "door",
+            "access_door"
+          ],
+          "allowed_specializations": [
+            "left_refrigerator_door",
+            "right_refrigerator_door",
+            "upper_refrigerator_door",
+            "single_refrigerator_door"
+          ]
+        }
+      ],
+      "optional_roles": [
+        {
+          "role_id": "freezer_door",
+          "functional_core": true,
+          "presence_condition": "only when the appliance includes a freezer compartment with a hinged closure",
+          "acceptable_synonyms": [
+            "freezer_door",
+            "freezer_compartment_door",
+            "lower_freezer_door",
+            "upper_freezer_door"
+          ]
+        },
+        {
+          "role_id": "freezer_drawer",
+          "functional_core": true,
+          "presence_condition": "only when the freezer compartment is accessed by a sliding drawer",
+          "acceptable_synonyms": [
+            "freezer_drawer",
+            "bottom_freezer_drawer",
+            "lower_freezer_drawer",
+            "freezer_bin"
+          ]
+        },
+        {
+          "role_id": "shelf",
+          "functional_core": false,
+          "presence_condition": "only when a shelf is a distinct renderable link",
+          "acceptable_synonyms": [
+            "shelf",
+            "refrigerator_shelf",
+            "fridge_shelf",
+            "glass_shelf",
+            "storage_shelf"
+          ]
+        },
+        {
+          "role_id": "interior_drawer",
+          "functional_core": false,
+          "presence_condition": "only when a distinct internal storage drawer is present",
+          "acceptable_synonyms": [
+            "drawer",
+            "crisper_drawer",
+            "produce_drawer",
+            "deli_drawer",
+            "storage_drawer"
+          ]
+        },
+        {
+          "role_id": "door_bin",
+          "functional_core": false,
+          "presence_condition": "only when a distinct door-mounted storage bin or shelf is present",
+          "acceptable_synonyms": [
+            "door_bin",
+            "door_shelf",
+            "bottle_bin",
+            "gallon_bin"
+          ]
+        },
+        {
+          "role_id": "door_handle",
+          "functional_core": false,
+          "presence_condition": "only when separately segmented; recessed, pocket, and integrated pulls need no separate role",
+          "acceptable_synonyms": [
+            "door_handle",
+            "refrigerator_handle",
+            "fridge_handle",
+            "handle",
+            "door_pull"
+          ]
+        },
+        {
+          "role_id": "water_or_ice_dispenser",
+          "functional_core": false,
+          "presence_condition": "only on models with a visible dispenser assembly",
+          "acceptable_synonyms": [
+            "water_dispenser",
+            "ice_dispenser",
+            "water_and_ice_dispenser",
+            "dispenser"
+          ]
+        },
+        {
+          "role_id": "ice_bin_or_ice_maker",
+          "functional_core": false,
+          "presence_condition": "only when separately and visibly represented",
+          "acceptable_synonyms": [
+            "ice_bin",
+            "ice_storage_bin",
+            "ice_maker",
+            "icemaker"
+          ]
+        }
+      ],
+      "exclusive_or_alternative_role_groups": [
+        {
+          "group_id": "refrigerated_door_layout",
+          "kind": "alternative_configuration",
+          "roles": [
+            "single_refrigerator_door",
+            "left_and_right_refrigerator_door_pair"
+          ],
+          "rule": "Single-door and French-door refrigerated compartments are both valid."
+        },
+        {
+          "group_id": "freezer_access",
+          "kind": "optional_alternative_configuration",
+          "roles": [
+            "freezer_door",
+            "freezer_drawer"
+          ],
+          "rule": "A refrigerator may have no freezer; if it has one, hinged-door and drawer access are alternatives and model-specific."
+        },
+        {
+          "group_id": "external_dispensing",
+          "kind": "optional_configuration",
+          "roles": [
+            "water_or_ice_dispenser",
+            "no_external_dispenser"
+          ],
+          "rule": "External water or ice dispensing is not universal; no_external_dispenser is contextual and requires no link."
+        }
+      ],
+      "instance_discriminability_rules": [
+        "French-door pairs must distinguish left and right refrigerated doors.",
+        "Top-freezer and bottom-freezer closures must be distinguished from refrigerated-compartment doors by compartment and position.",
+        "Repeated shelves should use compartment plus vertical position when stable; otherwise use one-based ordinals in bottom-to-top order.",
+        "Repeated interior drawers should use function such as crisper or deli when knowable, then level or side, then stable ordinals.",
+        "Door handles should inherit the corresponding door's compartment and laterality when more than one handle is present."
+      ]
+    }
+  },
+  "sources": [
+    {
+      "source_id": "protocol",
+      "kind": "local_frozen_protocol",
+      "title": "Table 2 Naming matched protocol v1",
+      "path": "exp/reference/table2_naming_matched_protocol_v1.json",
+      "sha256": "f4c4d915ce2e1bed5c99efd9dcebb97526a7d2639ad5021e3b068c3cf6105113",
+      "supports": "category scope, category definitions, representation, and semantic-metric gate"
+    },
+    {
+      "source_id": "microwave_parts_whirlpool",
+      "kind": "official_manufacturer_webpage",
+      "title": "What Are the Parts of a Microwave?",
+      "url": "https://www.whirlpool.com/blog/kitchen/what-are-the-parts-of-a-microwave.html",
+      "accessed_at_utc": "2026-08-11T07:00:09Z",
+      "supports": "microwave housing/cavity, door, control, turntable, and model-dependent over-range components"
+    },
+    {
+      "source_id": "microwave_manual_whirlpool",
+      "kind": "official_owner_manual",
+      "title": "Whirlpool Microwave Oven Owner's Manual W10497768 RevA",
+      "url": "https://www.whirlpool.com/content/dam/global/documents/201204/owners-manual-W10497768-RevA.pdf",
+      "accessed_at_utc": "2026-08-11T07:00:09Z",
+      "supports": "door-handle versus push-open variation, control panel, door lock, and turntable terminology"
+    },
+    {
+      "source_id": "dishwasher_parts_bosch",
+      "kind": "official_manufacturer_support_page",
+      "title": "Dishwasher Spare Parts",
+      "url": "https://www.bosch-home.com/us/owner-support/spare-parts/dishwasher",
+      "accessed_at_utc": "2026-08-11T07:00:09Z",
+      "supports": "racks, doors/housings, handles, spray arms, dispensers, and other dishwasher terminology"
+    },
+    {
+      "source_id": "dishwasher_parts_whirlpool",
+      "kind": "official_manufacturer_webpage",
+      "title": "Parts of a Dishwasher: A Quick Reference Guide",
+      "url": "https://www.whirlpool.com/blog/kitchen/parts-of-a-dishwasher.html",
+      "accessed_at_utc": "2026-08-11T07:00:09Z",
+      "supports": "door, control panel, and two-rack versus three-rack model variation"
+    },
+    {
+      "source_id": "oven_parts_whirlpool",
+      "kind": "official_manufacturer_webpage",
+      "title": "Parts of an Oven: A Quick Guide",
+      "url": "https://www.whirlpool.com/blog/kitchen/parts-of-an-oven.html",
+      "accessed_at_utc": "2026-08-11T07:00:09Z",
+      "supports": "oven rack, heating elements, convection fan, and model-dependent component terminology"
+    },
+    {
+      "source_id": "range_parts_whirlpool",
+      "kind": "official_manufacturer_webpage",
+      "title": "What Are the Parts of a Stove?",
+      "url": "https://www.whirlpool.com/blog/kitchen/what-are-the-parts-of-a-stove.html",
+      "accessed_at_utc": "2026-08-11T07:00:09Z",
+      "supports": "range-only cooktop, knobs, burners, and warming-drawer variation relative to wall ovens"
+    },
+    {
+      "source_id": "faucet_touchless_delta",
+      "kind": "official_product_page",
+      "title": "Electronic Lavatory Faucet with Proximity Sensing Technology 620TPA3310",
+      "url": "https://www.deltafaucet.com/commercial/electronics/product/620TPA3310.html",
+      "accessed_at_utc": "2026-08-11T07:00:09Z",
+      "supports": "hands-free whole-body/spout sensing without a required manual handle"
+    },
+    {
+      "source_id": "faucet_two_handle_delta",
+      "kind": "official_product_page",
+      "title": "Two Handle Kitchen Faucet with Spray 2402",
+      "url": "https://www.deltafaucet.com/kitchen/product/2402.html",
+      "accessed_at_utc": "2026-08-11T07:00:09Z",
+      "supports": "two-handle configuration, swinging spout, and optional side sprayer"
+    },
+    {
+      "source_id": "faucet_pull_down_delta",
+      "kind": "official_product_page",
+      "title": "Single Handle Pull-Down Kitchen Faucet 19978Z-SS-DST",
+      "url": "https://www.deltafaucet.com/kitchen/product/19978Z-SS-DST.html",
+      "accessed_at_utc": "2026-08-11T07:00:09Z",
+      "supports": "single-handle control and pull-down spray-head terminology"
+    },
+    {
+      "source_id": "refrigerator_design_bosch",
+      "kind": "official_manufacturer_catalog",
+      "title": "Bosch 2025 Lookbook",
+      "url": "https://media3.bosch-home.com/Documents/27046282_Bosch-Lookbook-2025.pdf",
+      "accessed_at_utc": "2026-08-11T07:00:09Z",
+      "supports": "single-door, French-door, bottom-freezer, and column refrigerator configurations"
+    },
+    {
+      "source_id": "refrigerator_storage_whirlpool",
+      "kind": "official_manufacturer_support_page",
+      "title": "Installing the Bins and Shelves",
+      "url": "https://producthelp.whirlpool.com/Refrigeration/Full-Size_Refrigerators/Product_Info/Installation_Support/Installing_the_Bins_and_Shelves",
+      "accessed_at_utc": "2026-08-11T07:00:09Z",
+      "supports": "model-dependent shelves, door bins, crisper bins, drawers, baskets, and specialty storage"
+    }
+  ],
+  "limitations": [
+    "This is a role-and-synonym gold, not an inventory of parts that every instance must contain.",
+    "Optional-role absence must never be interpreted as a method failure or missing semantic coverage.",
+    "Manufacturer terminology varies by region and model; listed synonyms are intentionally conservative rather than exhaustive.",
+    "The gold does not prescribe link granularity. A component fused into a larger renderable link need not appear as its own link.",
+    "Names alone cannot prove geometry, articulation axis, joint limits, physical validity, or actual appliance function.",
+    "A truthful unlisted term requires blind adjudication and must not be silently added after results are observed.",
+    "The role set covers externally visible and commonly modeled parts; hidden service components are outside scope unless visibly represented as distinct renderable geometry.",
+    "Source webpages may change after the frozen access time; their URLs and the access timestamp are provenance, not content-addressed snapshots.",
+    "No claim is made that benchmark assets contain any optional component described by the public sources.",
+    "The parent protocol's three-blind-judge gate and all other completeness gates remain in force."
+  ]
+}

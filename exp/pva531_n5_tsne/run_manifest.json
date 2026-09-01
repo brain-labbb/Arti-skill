@@ -1,0 +1,293 @@
+{
+  "artifacts": {
+    "audit": "audit.json",
+    "centroid_comparison": "tsne_class_centroid_comparison.png",
+    "class_color_index": "generator_class_color_index.csv",
+    "class_color_key": "generator_class_color_key.png",
+    "dataset_manifest": "dataset_manifest.json",
+    "release_receipt": "release_receipt.json",
+    "render_sample_index": "render_sample_index.csv",
+    "sample_comparison": "tsne_generator_class_comparison.png",
+    "source_comparison": "tsne_source_comparison.png"
+  },
+  "color_index_source": {
+    "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva531_uniform_tsne/generator_class_color_index.csv",
+    "sha256": "7f90c9dbbbe407cd14fed459b610b0e23d6a0f41b4d681021f7cd4372bd4036f",
+    "size_bytes": 48332
+  },
+  "config": {
+    "batch_size": 128,
+    "device": "cuda:0",
+    "force_extract": false,
+    "num_workers": 8,
+    "output_dir": "/mnt/zsn/lyb/arti-skill/exp/pva531_n5_tsne",
+    "perplexity": 30.0,
+    "plot_dpi": 180,
+    "seed": 42,
+    "tsne_jobs": 16,
+    "tsne_max_iter": 1000,
+    "tsne_verbose": 1,
+    "use_amp": true
+  },
+  "dataset": {
+    "blender_version": "Blender 4.2.19 LTS",
+    "class_count": 531,
+    "class_unit": "PV-A generator_index",
+    "index_csv": {
+      "path": "/mnt/zsn/lyb/arti-skill/template_maps/generator_picture_index.csv",
+      "sha256": "30f719dfcb2d5db2c5e1f753e2ecf345f791f5e38802dd860c73a6175414c69d",
+      "size_bytes": 130141
+    },
+    "input_mode": "uniform_blender_531_classes_x_5_assets",
+    "ordered_render_png_receipts_sha256": "b77dba8dc54399ac63ac1fb1a113f6daaa3106ced62aee06dbf2a83433522845",
+    "per_class": 5,
+    "raw_unique_image_count": 2655,
+    "render_config": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/uniform531_n5_studio_256_v1/render_config.json",
+      "sha256": "894d4b59ae169be2693d5301c44dc71d6e0ec4c52d36e7d78b83f09f61f340ef",
+      "size_bytes": 3925
+    },
+    "render_contract": "pva531_n5_uniform_studio_v1",
+    "render_manifest": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/uniform531_n5_studio_256_v1/render_manifest.csv",
+      "sha256": "df08d24be1d6a8e8e186e4140776b27bbece9c4af615987aa4fcd01f8f72554b",
+      "size_bytes": 2271149
+    },
+    "render_root": "/mnt/zsn/lyb/arti-skill/exp/uniform531_n5_studio_256_v1",
+    "render_roster": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/uniform531_n5_studio_256_v1/render_roster.csv",
+      "sha256": "3ea31423b1a4e77db6f332e8f5b342cbb22ca9ca608124c1fe654dce4f3e45e9",
+      "size_bytes": 1283969
+    },
+    "renderer_sha256": "f418515a9817218b08d577d95983ec934c34ddf19f17bb89c73bf52aa60bb3a7",
+    "resolution": 256,
+    "sample_count": 2655,
+    "sample_unit": "one uniformly rendered asset",
+    "samples": 4,
+    "source_type_counts": {
+      "builtin_no_picture": 495,
+      "picture_backed": 2160
+    },
+    "studio": {
+      "camera_direction": [
+        1.25,
+        -1.35,
+        0.85
+      ],
+      "camera_distance_policy": "bounding_sphere_auto_frame_1.18",
+      "camera_vertical_fov_degrees": 42.0,
+      "cycles_denoising": true,
+      "ground_rgba": [
+        0.32,
+        0.35,
+        0.4,
+        1.0
+      ],
+      "ground_roughness": 0.82,
+      "lights": [
+        {
+          "direction": [
+            0.4,
+            -0.8,
+            1.5
+          ],
+          "gain": 42.0,
+          "size_ratio": 1.5
+        },
+        {
+          "direction": [
+            -1.2,
+            -0.3,
+            0.6
+          ],
+          "gain": 15.0,
+          "size_ratio": 1.8
+        },
+        {
+          "direction": [
+            0.2,
+            1.0,
+            1.2
+          ],
+          "gain": 24.0,
+          "size_ratio": 1.2
+        }
+      ],
+      "look": "AgX - Medium High Contrast",
+      "mode": "opaque_studio",
+      "view_transform": "AgX",
+      "world_rgba": [
+        0.8,
+        0.84,
+        0.9,
+        1.0
+      ],
+      "world_strength": 0.55
+    },
+    "unique_image_path_count": 2655,
+    "unique_png_content_count": 2655
+  },
+  "implementation": {
+    "feature_helper": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/visualize_pva531_picture_tsne.py",
+      "sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0",
+      "size_bytes": 48267
+    },
+    "script": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/visualize_pva531_n5_tsne.py",
+      "sha256": "36e8df97a019957210a32a78592e3c8fbe286e3479cf13e459e5f9fa3485db04",
+      "size_bytes": 59558
+    }
+  },
+  "interpretation_limits": [
+    "All 531 RGB values are unique, but they are not all perceptually distinguishable.",
+    "Colors identify classes; they do not encode semantic similarity.",
+    "Distances and axes are not comparable across the independently fitted encoder panels.",
+    "t-SNE preserves local neighborhoods imperfectly and does not establish dataset quality alone."
+  ],
+  "models": {
+    "clip": {
+      "artifacts": {
+        "class_centroids_2d": "clip/class_centroids_2d.npy",
+        "class_centroids_2d_csv": "clip/class_centroids_2d.csv",
+        "class_features": "clip/class_features.npy",
+        "feature_manifest": "clip/feature_manifest.json",
+        "image_tsne_coordinates": "clip/image_tsne_coordinates.npy",
+        "image_tsne_coordinates_csv": "clip/image_tsne_coordinates.csv",
+        "plot": "clip/tsne_by_generator_class.png",
+        "raw_image_features": "clip/raw_image_features.npy"
+      },
+      "class_feature_shape": [
+        531,
+        512
+      ],
+      "effective_force_extract": true,
+      "encoder_label": "CLIP ViT-B/32",
+      "feature_cache_reused": false,
+      "feature_extraction": {
+        "alpha_composite_background_rgb": [
+          255,
+          255,
+          255
+        ],
+        "amp": true,
+        "batch_size": 128,
+        "device": "cuda:0",
+        "encoder_label": "CLIP ViT-B/32",
+        "feature_dim": 512,
+        "feature_source": "vision_model.visual_projection",
+        "image_count": 2655,
+        "image_processor_use_fast": false,
+        "model_type": "clip",
+        "num_workers": 8
+      },
+      "model_path": "/root/.cache/huggingface/hub/models--openai--clip-vit-base-patch32/snapshots/3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+      "raw_feature_receipt": {
+        "path": "/mnt/zsn/lyb/arti-skill/exp/pva531_n5_tsne/clip/raw_image_features.npy",
+        "sha256": "1cf7a0fff1e70a9f9ba8724f89e6d401ba66cb06b191dd55d6dd9bf64c43f29d",
+        "size_bytes": 5437568
+      },
+      "raw_feature_shape": [
+        2655,
+        512
+      ],
+      "strict_feature_cache_was_valid": false,
+      "tsne": {
+        "input_dim": 512,
+        "max_iter": 1000,
+        "n_jobs": 16,
+        "pca_components": 50,
+        "perplexity": 30.0,
+        "random_state": 42,
+        "sample_count": 2655
+      }
+    },
+    "dinov2": {
+      "artifacts": {
+        "class_centroids_2d": "dinov2/class_centroids_2d.npy",
+        "class_centroids_2d_csv": "dinov2/class_centroids_2d.csv",
+        "class_features": "dinov2/class_features.npy",
+        "feature_manifest": "dinov2/feature_manifest.json",
+        "image_tsne_coordinates": "dinov2/image_tsne_coordinates.npy",
+        "image_tsne_coordinates_csv": "dinov2/image_tsne_coordinates.csv",
+        "plot": "dinov2/tsne_by_generator_class.png",
+        "raw_image_features": "dinov2/raw_image_features.npy"
+      },
+      "class_feature_shape": [
+        531,
+        768
+      ],
+      "effective_force_extract": true,
+      "encoder_label": "DINOv2-base",
+      "feature_cache_reused": false,
+      "feature_extraction": {
+        "alpha_composite_background_rgb": [
+          255,
+          255,
+          255
+        ],
+        "amp": true,
+        "batch_size": 128,
+        "device": "cuda:0",
+        "encoder_label": "DINOv2",
+        "feature_dim": 768,
+        "feature_source": "last_hidden_state.cls_token",
+        "image_count": 2655,
+        "image_processor_use_fast": false,
+        "model_type": "dinov2",
+        "num_workers": 8
+      },
+      "model_path": "/root/.cache/huggingface/hub/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+      "raw_feature_receipt": {
+        "path": "/mnt/zsn/lyb/arti-skill/exp/pva531_n5_tsne/dinov2/raw_image_features.npy",
+        "sha256": "4bffbe891f378697b45e723ca2e96e19c5fe1447f55cc13d322b887c93703c73",
+        "size_bytes": 8156288
+      },
+      "raw_feature_shape": [
+        2655,
+        768
+      ],
+      "strict_feature_cache_was_valid": false,
+      "tsne": {
+        "input_dim": 768,
+        "max_iter": 1000,
+        "n_jobs": 16,
+        "pca_components": 50,
+        "perplexity": 30.0,
+        "random_state": 42,
+        "sample_count": 2655
+      }
+    }
+  },
+  "protocol": {
+    "centroid_policy": "arithmetic mean of each class's 5 2D sample coordinates",
+    "color_unit": "one frozen unique RGB value per generator_index",
+    "coordinate_policy": "raw t-SNE coordinates; no jitter or collision separation",
+    "encoder_policy": "DINOv2 and CLIP fitted independently",
+    "projection": "L2-normalized feature -> PCA(50) -> 2D t-SNE",
+    "sample_unit": "one uniformly rendered PV-A asset",
+    "samples_per_class": 5
+  },
+  "runtime_environment": {
+    "cuda_available": true,
+    "cuda_devices": [
+      "NVIDIA L20X",
+      "NVIDIA L20X",
+      "NVIDIA L20X",
+      "NVIDIA L20X",
+      "NVIDIA L20X",
+      "NVIDIA L20X",
+      "NVIDIA L20X",
+      "NVIDIA L20X"
+    ],
+    "cuda_runtime": "12.4",
+    "numpy": "2.2.6",
+    "pillow": "9.5.0.post2",
+    "python": "3.10.20",
+    "scikit_learn": "1.7.2",
+    "torch": "2.6.0+cu124",
+    "torch_deterministic_algorithms": false,
+    "transformers": "5.9.0"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,47 @@
+{
+  "dtype": "float32",
+  "extraction": {
+    "alpha_composite_background_rgb": [
+      255,
+      255,
+      255
+    ],
+    "amp": true,
+    "batch_size": 128,
+    "device": "cuda:0",
+    "encoder_label": "CLIP ViT-B/32",
+    "feature_dim": 512,
+    "feature_source": "vision_model.visual_projection",
+    "image_count": 2655,
+    "image_processor_use_fast": false,
+    "model_type": "clip",
+    "num_workers": 8
+  },
+  "model_fingerprint": "86f46fca5a8237efe2cf121efe7beb117fd924e6ed088f150c114349f08ff344",
+  "model_path": "/root/.cache/huggingface/hub/models--openai--clip-vit-base-patch32/snapshots/3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+  "preprocessing": {
+    "alpha_composite_background_rgb": [
+      255,
+      255,
+      255
+    ],
+    "image_processor_use_fast": false
+  },
+  "raw_feature_receipt": {
+    "path": "/mnt/zsn/lyb/arti-skill/exp/pva531_n5_tsne/clip/raw_image_features.npy",
+    "sha256": "1cf7a0fff1e70a9f9ba8724f89e6d401ba66cb06b191dd55d6dd9bf64c43f29d",
+    "size_bytes": 5437568
+  },
+  "raw_image_count": 2655,
+  "raw_paths_fingerprint": "5a8999746e60b8ab3a3e55f108a3db68df1b9d84279fbc1ddc73e1fffd27c60e",
+  "schema_version": 2,
+  "strict_cache_contract": {
+    "feature_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0",
+    "model_name": "clip",
+    "model_path": "/root/.cache/huggingface/hub/models--openai--clip-vit-base-patch32/snapshots/3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "requested_batch_size": 128,
+    "requested_device": "cuda:0",
+    "requested_use_amp": true,
+    "schema_version": 1
+  }
+}

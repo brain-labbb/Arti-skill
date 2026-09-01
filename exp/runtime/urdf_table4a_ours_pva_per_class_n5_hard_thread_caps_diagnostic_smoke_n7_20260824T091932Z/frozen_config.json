@@ -1,0 +1,122 @@
+{
+  "classification": "SMOKE",
+  "cohort": {
+    "category_mapping_policy": "exact canonical cohort dataset_id/category join",
+    "category_mapping_sha256": "41e8ef9aa45b3fd2268ce7bccdbd1816dce61843ea6b6125d62f4170f72dcdce",
+    "category_records_revision": "eea55287dd70b710a7c03b11b16c6685208bbaa63cde925232293cb9012c8158",
+    "category_records_root": "/mnt/zsn/lyb/arti-skill/exp/PV-A-per-class-n5-max-joints/manifest.json",
+    "dataset_root": "/mnt/zsn/lyb/arti-skill",
+    "eval_category_count": 531,
+    "j_eval": 18,
+    "n_eval": 7,
+    "ordered_ids_sha256": "b5c9262eca8e65ede90c597a16e4ed2b0d7348b4eeb326cd64a06cea518c4178",
+    "selection_policy": "exact frozen PV-A per-class N=5 cohort order with fence/ferris max-joint overrides; no resampling or result-based filtering",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z/frozen_manifest.json",
+    "source_manifest_content_sha256": "b43bf43a5e89aaa5812c5a1979987c9881ee41644fa58f7eb0c34f8f3a51440f",
+    "source_manifest_file_sha256": "c23d92a582ac7d8d122d6c34d17d2f057dd4a309aa696414b71387debce13f35",
+    "table2_cohort_content_sha256": "afff3beb6ba320ccb4855ecb380de47b6de7ca91fdc77f2ba071a53944e03c14",
+    "table2_cohort_file_sha256": "97b7df486b75f961978bc86eb7a2985cb8e40eba63336ed7531700a4ff234471",
+    "table2_cohort_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table2_pva_per_class_n5_max_joints/manifest.json"
+  },
+  "dataset": "Ours per-class N=5 (supplementary)",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "execution": {
+    "child_cpu_affinity_width": 4,
+    "child_interpreter": "/mnt/zsn/miniconda3/envs/genesis-main/bin/python3.12",
+    "child_timeout_seconds": 1800,
+    "denominator_policy": "all frozen assets, joints and states including failures and unexecuted items",
+    "dof_bins": [
+      "0",
+      "1",
+      "2--3",
+      "4--7",
+      ">=8",
+      "unknown/unparseable"
+    ],
+    "early_cpu_affinity_launcher": {
+      "bytes": 2179,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/exec_with_cpu_affinity.py",
+      "sha256": "5d8bdf549b4de7ae62f43ee62ab2b1d1bd6283b491a8b5de429220a5b36d4f52"
+    },
+    "genesis_cache_policy": "per-rank private GS_CACHE_FILE_PATH; rank 1 warms a read template copied to later ranks",
+    "table3_source": {
+      "records": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table3_pva_per_class_n5_max_joints_n2655_20260824T0310Z/asset_records.jsonl",
+      "sha256": "1e573c5f097eef8c6a63b8de295502c17104320131110fafa432edf5edf78d86"
+    },
+    "table4_asset_records": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z/asset_records.jsonl",
+      "sha256": "5b12532a35ace2a46286440ce24cfb6aed540e29248aa78170fcfbd2fcff0862"
+    },
+    "table4_state_records": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z/state_records.jsonl",
+      "sha256": "30ee16550ec6abf35150f78a1c9da8b58ca2f368c0e2090f7000de30db3dea14"
+    },
+    "workers": 6
+  },
+  "frozen_at_utc": "2026-08-24T09:20:58.920383Z",
+  "frozen_config_sha256": "1b0462a8da0b0338f6081b660e26d03af1acbe3de96fd0a94d96d9f7ae01e3ac",
+  "metric_rules": {
+    "collision_safe_dof_retention": "\u4e0a\u8ff0\u5b89\u5168\u53ef\u6267\u884c\u5173\u8282\u603b\u6570\u9664\u4ee5\u51bb\u7ed3 J_eval\uff0c\u5199\u4e3a passed / J_eval (percentage)\u3002\u5b83\u662f\u4e0e raw DoF \u6570\u914d\u5957\u7684\u4fdd\u7559\u7387\uff0c\u4e0d\u5f97\u4ee5\u53ea\u7edf\u8ba1\u6210\u529f\u52a0\u8f7d\u8d44\u4ea7\u7684\u6761\u4ef6\u5206\u6bcd\u66ff\u4ee3\u3002",
+    "executable_cf_dof_per_asset": "\u6bcf\u4e2a\u8d44\u4ea7\u4e2d\u540c\u65f6\u901a\u8fc7 Table 3 Joint-level Pass \u548c\u672c\u8868 Joint-level Full-range CF \u7684\u5173\u8282\u6570\uff1b\u8de8 N_eval \u62a5\u544a mean / median / P90\u3002\u89e3\u6790\u3001\u52a0\u8f7d\u6216\u6d4b\u91cf\u5931\u8d25\u8d44\u4ea7\u7684\u5b89\u5168\u53ef\u6267\u884c DoF \u8ba1\u4e3a 0\uff0c\u4e0d\u5f97\u4ece\u8d44\u4ea7\u5206\u6bcd\u5220\u9664\u3002",
+    "joint_level_full_range_cf": "\u5173\u8282\u7ea7 passed / J_eval\u3002\u5bf9\u6bcf\u4e2a movable joint \u4f7f\u7528\u65e2\u6709 Table 4 \u7684\u51bb\u7ed3\u6d4b\u8bd5\u533a\u95f4\u548c K = 21 \u72b6\u6001\uff0c\u5176\u4ed6\u5173\u8282\u4fdd\u6301\u5386\u53f2 q = 0\uff1b\u5168\u90e8 intended states \u5747\u987b\u6210\u529f\u6267\u884c\uff0c\u5e76\u5728\u7edf\u4e00\u3001\u65e0 method-specific allowance \u7684 headline pair policy \u4e0e\u7a7f\u900f\u9608\u503c\u4e0b\u65e0\u975e\u6cd5\u78b0\u649e\u3002\u4efb\u4f55\u672a\u6267\u884c\u72b6\u6001\u3001\u65e0\u6548\u533a\u95f4\u3001\u52a0\u8f7d\u5931\u8d25\u6216\u8d44\u6e90\u5931\u8d25\u5747\u4f7f\u8be5\u5173\u8282 fail closed\u3002\u8be5\u79bb\u6563\u6307\u6807\u4e0d\u8bc1\u660e\u8fde\u7eed\u914d\u7f6e\u7a7a\u95f4\u65e0\u78b0\u649e\u3002",
+    "limit_reachability": "bounded joint \u7684 lower \u548c upper endpoint \u90fd\u53ef\u6267\u884c\u3001transform \u6709\u9650\u4e14\u5728 headline pair policy \u4e0b\u65e0\u975e\u6cd5\u78b0\u649e\u65f6\u901a\u8fc7\uff1b\u62a5\u544a passed / J_bounded (percentage)\u3002continuous joint \u4e0d\u8fdb\u5165 J_bounded\uff0c\u5176\u5206\u6bcd\u5fc5\u987b\u663e\u5f0f\u62a5\u544a\uff1bendpoint \u672a\u6267\u884c\u6216\u4e0d\u53ef\u52a0\u8f7d\u8ba1\u4e3a\u5931\u8d25\u3002",
+    "normalized_clearance_p5": "\u5bf9\u6bcf\u4e2a\u5b9e\u9645\u6d4b\u5f97\u7684 intended state\uff0c\u53d6 headline pair policy \u4e0b\u6240\u6709 eligible non-adjacent collision-surface pair \u7684\u6700\u5c0f signed clearance\uff0c\u518d\u9664\u4ee5\u7edf\u4e00 D_visual\uff1b\u8d1f\u503c\u8868\u793a\u7a7f\u900f\uff0c\u96f6\u8868\u793a\u63a5\u89e6\u3002\u5148\u5bf9\u6bcf\u4e2a\u8d44\u4ea7\u53d6 state-level minimum \u7684 P5\uff0c\u6570\u636e\u96c6\u5355\u5143\u683c\u62a5\u544a\u8fd9\u4e9b asset-level P5 \u7684\u4e2d\u4f4d\u6570\uff0c\u5e76\u540c\u65f6\u5199\u51fa measured / intended state \u548c asset coverage\uff0c\u4ee5\u53ca COMPLETE \u6216 PARTIAL\u3002\u672a\u6d4b\u72b6\u6001\u4e0d\u4f2a\u9020\u8ddd\u79bb\uff0c\u4f46\u5bf9\u5e94 pass metrics \u4ecd fail closed\u3002"
+  },
+  "mode": "smoke",
+  "operationalization": {
+    "category_source": "category embedded in the canonical PV-A cohort manifest",
+    "early_cpu_affinity": {
+      "affinity_environment": "LAM_GENESIS_CPU_AFFINITY",
+      "binding_point": "before importing the Table 4a child runner",
+      "child_cpu_affinity_width": 4,
+      "exec_preserves_pid": true,
+      "receipt_environment": "TABLE4A_EARLY_CPU_AFFINITY_RECEIPT"
+    },
+    "early_cpu_affinity_launcher_binding": {
+      "bytes": 2179,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/exec_with_cpu_affinity.py",
+      "sha256": "5d8bdf549b4de7ae62f43ee62ab2b1d1bd6283b491a8b5de429220a5b36d4f52"
+    },
+    "engine": "Genesis contact-penetration backend, engine protocol genesis_contact_penetration_v1, version-pinned by the frozen lam_supplementary GenesisTable4aAdapter: Genesis 1.3.1, trimesh 5.0.0, rtree 1.4.1, CPU backend, precision 64, one asset per fresh Genesis process.",
+    "existing_strict_collision_pass_source": "explicit --table4-dir asset_records.jsonl",
+    "illegal_rule": "\u4ec5\u5f53 eligible source-URDF link pair \u7684 Genesis-reported penetration \u4e25\u683c\u5927\u4e8e 1e-6 m \u65f6\u5224\u4e3a\u975e\u6cd5\uff1b\u8868\u9762\u63a5\u89e6\u5141\u8bb8\u3002",
+    "j_bounded": "revolute/prismatic joints with finite declared lower < upper; continuous joints excluded and counted explicitly.",
+    "limit_reachability_endpoints": "endpoint = \u540c\u4e00 K=21 sweep \u7684 sample_index 0\uff08lower\uff09\u4e0e 20\uff08upper\uff09\uff1b'\u53ef\u6267\u884c\u3001transform \u6709\u9650' operationalize \u4e3a\u8be5\u72b6\u6001\u6210\u529f\u6267\u884c\u3001q readback \u6709\u9650\u4e14\u89c2\u6d4b status COMPLETE\uff08Genesis FK/\u63a5\u89e6\u7ba1\u7ebf\u6709\u9650\uff09\u3002",
+    "normalized_clearance_p5": "N/E under this oracle: the frozen adapter sets clearance_status N/E because Genesis contact penetration has no signed clearance for separated pairs; no independent exact-distance backend is registered for this run. measured/intended state coverage is still reported.",
+    "package_input_binding": "exact recursive package file roster, byte count and SHA-256 from the canonical cohort package binding; audited before scheduling and before/after each child",
+    "pair_policy": "Headline pair policy = eligible geom pairs on distinct source links excluding the URDF direct parent-child graph (exclude_direct_parent_child); self / neutral / adjacent collision candidate generation enabled; Genesis default filtering or visual fallback \u4e0d\u5f97\u6539\u53d8 pair policy; eligible pairs must be present in the Genesis valid-pair table or the asset fails closed. Assets with zero declared collision geometry have zero eligible pairs and vacuously satisfy the collision rule once all states execute (fail-closed execution still applies).",
+    "percentile_policy": "linear interpolation over all 2,655 frozen assets including fail-closed zeros",
+    "resume_policy": "Resume is unsupported; an interrupted invocation is non-public and must restart in a new output directory. Existing output directories are rejected.",
+    "shared_table4a_runner_binding": {
+      "bytes": 60483,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4a_articraft10k.py",
+      "sha256": "f42693496ed0cf8c2517e2543a1adbd7a2bd1465fdc9efbb7a26837523726f7a"
+    },
+    "source_table4_artifact_manifest_binding": {
+      "bytes": 2036,
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z/artifact_manifest.json",
+      "sha256": "55c0f6f02367462eca88be7cc1989aac2afd96de7f5683ca10eaebe0a9df0234"
+    },
+    "state_detection": "\u6bcf\u4e2a\u51bb\u7ed3 q-state \u53ea\u505a direct kinematic detection\uff08set_dofs_position + detect_collision + get_contacts\uff0c\u4e0d scene.step\uff09\uff1bq readback \u5fc5\u987b\u5728 1e-9 \u5bb9\u5dee\u5185\u3002",
+    "state_plan": "Full intent denominator = 14,968 movable joints x K=21 = 314,328 states. Only 14,943 range-evaluable joints (313,803 states) enter Genesis replay; 25 zero-width joints (525 states) are not replayed and are retained fail closed. Executed states cross-check available frozen Table 4 q-vector hashes, with mismatch forbidden and no_reference reported explicitly.",
+    "table3_joint_pass_source": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table3_pva_per_class_n5_max_joints_n2655_20260824T0310Z/asset_records.jsonl (sha256 1e573c5f097eef8c6a63b8de295502c17104320131110fafa432edf5edf78d86)",
+    "torch_threading": {
+      "binding": "torch.set_num_threads(1) and torch.set_num_interop_threads(1) before Genesis import",
+      "expected": {
+        "inter_op_threads": 1,
+        "intra_op_threads": 1
+      },
+      "readback": "completed children record before/after values; parent-enforced timeouts remain explicit NOT_OBSERVED fail-closed records"
+    }
+  },
+  "protocol_document_sha256": "b05a4edbe61037f2dc4bc1bc1580e66f13f852fc24a3b979e130e8a7aa30ef00",
+  "protocol_id": "table4a_ours_pva_per_class_n5_max_joints_v1",
+  "runner_identity": {
+    "lam_supplementary_runner_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_lam_supplementary_v1.py",
+    "lam_supplementary_runner_sha256": "c43f3047553e4fbc9dfeefcbb7308bc42df8c6f0aab24f2a85f412c5efe12df5",
+    "runner_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4a_ours_pva_per_class_n5.py",
+    "runner_sha256": "f297b10f7a5d54eaf503a62a1c0b4bc992a3deb329fb6cc4cc0cc8321fe63be2",
+    "static_atoms_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_static.py",
+    "static_atoms_sha256": "4701415dad8a5c0a434c16887979bcb70c250ba0b25772014e8db73789098e5f"
+  }
+}

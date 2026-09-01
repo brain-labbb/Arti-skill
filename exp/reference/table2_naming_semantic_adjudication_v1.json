@@ -1,0 +1,37 @@
+{
+  "protocol_id": "nano3d_table2_naming_semantic_blind_re_review_v1",
+  "frozen_at_utc": "2026-08-11T07:30:00Z",
+  "parent_semantic_protocol": {
+    "path": "exp/reference/table2_naming_semantic_protocol_v1.json",
+    "sha256": "45f2a1aea0051579e84a76f7dff888ab8cba78838af3c28e96f3390451e8e733"
+  },
+  "trigger": "A metric-required field has no exact two-of-three majority after three complete first-round blind files.",
+  "selection": "Select item IDs from blind queue and first-round field votes only. Do not read or join the method/source audit during selection or re-review.",
+  "scope": [
+    "judge_geometry_role",
+    "judge_instance_id"
+  ],
+  "procedure": {
+    "same_judges": true,
+    "independent_contexts": true,
+    "other_judge_votes_hidden": true,
+    "method_identity_hidden": true,
+    "own_first_round_annotation_visible": true,
+    "task_inputs": "Same frozen gold, role definitions, node name, highlighted preview, and anonymous within-asset node list as round one.",
+    "locked_fields": "All fields that reached first-round consensus, including name verdict, required matched role, geometry-real flag, and same-part relation, are immutable.",
+    "replacement": "For each triggered field, use an exact two-of-three majority of independent round-two votes. Do not mix one first-round vote with round-two votes.",
+    "failure_policy": "If a triggered field still has no round-two majority, the dependent formal metric remains null and the unresolved count is reported."
+  },
+  "geometry_role_clarification": [
+    "Choose the most specific frozen required or optional role supported by geometry and placement.",
+    "Use other_real_part:<short_snake_case_label> only for a coherent role absent from the frozen ontology.",
+    "Use unknown only when the highlighted preview cannot support a defensible physical role."
+  ],
+  "instance_clarification": [
+    "Compare all nodes in the anonymous asset that share the physical role.",
+    "Use a stable qualifier or ordinal only when it is actually conveyed by the node name.",
+    "Use ambiguous for repeated physical-role instances whose names do not distinguish them.",
+    "Use not_applicable only when the physical role is a singleton in that asset."
+  ],
+  "disclosure": "This is a blind field-only re-review for annotation completeness, not an independent fourth judge and not a change to any first-round semantic verdict."
+}

@@ -1,0 +1,115 @@
+{
+  "attestation": {
+    "child_attested": 720,
+    "package_after": 720,
+    "package_before": 720,
+    "runtime_match": 720
+  },
+  "category_macro": {
+    "category_count": 20,
+    "joint_metric_category_count": 19,
+    "metrics": {
+      "joint_level_pass": {
+        "category_count": 19,
+        "rate": 0.9538063565874492
+      },
+      "joint_sweep_success": {
+        "category_count": 19,
+        "rate": 0.9980385746976136
+      },
+      "non_degenerate_motion": {
+        "category_count": 19,
+        "rate": 0.9538063565874492
+      },
+      "strict_kinematic_pass": {
+        "category_count": 20,
+        "rate": 0.7513888888888889
+      },
+      "subtree_consistency": {
+        "category_count": 19,
+        "rate": 0.9980385746976136
+      },
+      "valid_range": {
+        "category_count": 19,
+        "rate": 0.9980385746976136
+      }
+    },
+    "state": "evaluated"
+  },
+  "classification": "FORMAL",
+  "cohort_type": "SUPPLEMENTARY_FULL_GENERATED_COHORT_NOT_OFFICIAL_FINITE_RELEASE",
+  "completed_at": "2026-08-24T15:46:45Z",
+  "dataset": "Infinite Mobility",
+  "j_eval": 4723,
+  "joint_denominator": {
+    "expected": 4723,
+    "match": true,
+    "observed": 4723
+  },
+  "manifest_content_sha256": "28ac7cec9b80221786c14dca2e546e7ecca73c813a6ad9a101dc43d3d4a6335b",
+  "metrics": {
+    "fk_roundtrip_error": {
+      "denominator": 4723,
+      "max_normalized_translation": 0.0,
+      "max_rotation_rad": 0.0,
+      "measured_joint_count": 4687,
+      "passed_threshold": 4687,
+      "status": "PARTIAL"
+    },
+    "joint_level_pass": {
+      "denominator": 4723,
+      "passed": 4537,
+      "rate": 0.9606182511115816
+    },
+    "joint_sweep_success": {
+      "denominator": 4723,
+      "passed": 4687,
+      "rate": 0.9923777260215965
+    },
+    "non_degenerate_motion": {
+      "denominator": 4723,
+      "passed": 4537,
+      "rate": 0.9606182511115816
+    },
+    "strict_kinematic_pass": {
+      "denominator": 720,
+      "passed": 541,
+      "rate": 0.7513888888888889
+    },
+    "subtree_consistency": {
+      "denominator": 4723,
+      "passed": 4687,
+      "rate": 0.9923777260215965
+    },
+    "valid_range": {
+      "denominator": 4723,
+      "passed": 4687,
+      "rate": 0.9923777260215965
+    }
+  },
+  "mode": "formal",
+  "n_eval": 720,
+  "parse_success": 720,
+  "records_missing_counted_as_failures": 0,
+  "records_present": 720,
+  "recovery_count": 7,
+  "schema_version": 1,
+  "source_provenance": {
+    "original_pass": 713,
+    "recovery_overlay": 7
+  },
+  "status": "completed",
+  "status_counts": {
+    "completed": 720
+  },
+  "valid_tree": 720,
+  "zero_joint_assets": {
+    "asset_ids_sha256": "9b58c190e65e742f36bfe03fcf3a3ead49dc147b9b20230c65cd39bc331c83cf",
+    "count": 55,
+    "factory_counts": {
+      "TableDiningFactory": 19,
+      "VaseFactory": 36
+    },
+    "strict_fail_count": 55
+  }
+}

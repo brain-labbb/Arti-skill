@@ -1,0 +1,616 @@
+{
+  "classification": "SMOKE",
+  "cohort_label": "Ours-500K full acquired roster (Table 2 formal manifest order)",
+  "created_at": "2026-08-19T10:34:59.940463Z",
+  "dataset": "Ours-500K",
+  "evaluation": {
+    "adapter_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_ours_500k.py",
+    "adapter_sha256": "ab3c6766515a7f2f157967d2da72d0ccc143d2d9a570e6381ed5148bf9ffbd93",
+    "child_python": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+    "child_timeout_seconds": 900.0,
+    "core_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+    "core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+    "pair_policy": "all-pair and non-adjacent (direct parent-child excluded); surface contact allowed; penetration > threshold illegal; no method-specific allowlist",
+    "penetration_threshold_m": 1e-06,
+    "protocol_path": "/mnt/zsn/lyb/arti-skill/exp/URDF-Sim-Ready-Automatic-Evaluation.md",
+    "reset_tolerance": 1e-09,
+    "rest_state_policy": "q=0 for every evaluable joint",
+    "runtime_identity": {
+      "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_ours_500k.py",
+      "adapter_runner_sha256": "ab3c6766515a7f2f157967d2da72d0ccc143d2d9a570e6381ed5148bf9ffbd93",
+      "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+      "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+      "core_runtime": {
+        "numpy_version": "2.5.1",
+        "pybullet_api_version": 202010061,
+        "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+        "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+        "python_cache_tag": "cpython-312",
+        "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+        "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+        "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+        "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+        "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+        "scipy_version": "1.18.0"
+      },
+      "hostname": "dedicated-developjob-saining-4au54-66f4bf865-dzjb7",
+      "pybullet_api_version": 202010061,
+      "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+      "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+      "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+      "python_version": "3.12.3"
+    },
+    "scale_protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+    "single_samples": 21,
+    "sobol_samples": 64,
+    "sobol_seed": 20260813,
+    "workers": 3
+  },
+  "items": [
+    {
+      "asset_id": "Science_First_aid_cabinet/seed_0",
+      "asset_root_relpath": "Science_First_aid_cabinet/seed_0",
+      "audit_issue": null,
+      "category": "Science_First_aid_cabinet",
+      "collision_mesh_files": [
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/body_hinge_0.obj",
+          "resolved_relpath": "assets/meshes/body_hinge_0.obj",
+          "safe": true,
+          "sha256": "d62cceabdc5907c5c8abbb482b1b2ee8848ee9facc33ac8c519576984ea19a42",
+          "size_bytes": 59005
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/body_hinge_1.obj",
+          "resolved_relpath": "assets/meshes/body_hinge_1.obj",
+          "safe": true,
+          "sha256": "289598ba519113ea10289d436eaad30f8aed6dbf0dc7e6cd83ee00294e80aab6",
+          "size_bytes": 59058
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/cabinet_body_shell.obj",
+          "resolved_relpath": "assets/meshes/cabinet_body_shell.obj",
+          "safe": true,
+          "sha256": "9fbff0fc49380e53c1644160ed683b24c3aa422922a3b09a5eb890ff7c5e4d1f",
+          "size_bytes": 1758
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/cabinet_handle.obj",
+          "resolved_relpath": "assets/meshes/cabinet_handle.obj",
+          "safe": true,
+          "sha256": "5b72ff5b5979c93ad8c6acaa4439161f6a16706572c31ed601625fd8640601ac",
+          "size_bytes": 47190
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__solid_panel__leaf_0_banner.obj",
+          "resolved_relpath": "assets/meshes/door_panel__solid_panel__leaf_0_banner.obj",
+          "safe": true,
+          "sha256": "b21796b45a1f0c4ff7a244a83b2469a53c117a98b80dea694349346002e66ff2",
+          "size_bytes": 814
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__solid_panel__leaf_0_cross.obj",
+          "resolved_relpath": "assets/meshes/door_panel__solid_panel__leaf_0_cross.obj",
+          "safe": true,
+          "sha256": "141c0fb434f22e3dd50ba4c9b73bc7b473a14d44f333c12bdd8705011b751f27",
+          "size_bytes": 2612
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__solid_panel__leaf_0_knob.obj",
+          "resolved_relpath": "assets/meshes/door_panel__solid_panel__leaf_0_knob.obj",
+          "safe": true,
+          "sha256": "75e22e55576e8334cf338db716f38cdc396337fb7e105bdfdf7ea088b908082e",
+          "size_bytes": 283533
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__solid_panel__leaf_0_knuckles.obj",
+          "resolved_relpath": "assets/meshes/door_panel__solid_panel__leaf_0_knuckles.obj",
+          "safe": true,
+          "sha256": "29925b813a2d9230179b6cd14270325882121b91daed55c358c7f8cefba30930",
+          "size_bytes": 68517
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__solid_panel__leaf_0_panel.obj",
+          "resolved_relpath": "assets/meshes/door_panel__solid_panel__leaf_0_panel.obj",
+          "safe": true,
+          "sha256": "eb07deb36dd0aa09511c859dca03d5a9530de2ba369a8d45bd3413a01a9ec3b4",
+          "size_bytes": 23333
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__solid_panel__leaf_1_banner.obj",
+          "resolved_relpath": "assets/meshes/door_panel__solid_panel__leaf_1_banner.obj",
+          "safe": true,
+          "sha256": "bdd3dfc3869afb92f032c44b4fbd8b3f8668e3dadc8ff7200cffd17f4b17896c",
+          "size_bytes": 838
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__solid_panel__leaf_1_cross.obj",
+          "resolved_relpath": "assets/meshes/door_panel__solid_panel__leaf_1_cross.obj",
+          "safe": true,
+          "sha256": "7ff238b1aa19cf39a282fee342084bdd7e3fd9ae29ad3523b4c5bb10c5a15cfc",
+          "size_bytes": 2684
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__solid_panel__leaf_1_knob.obj",
+          "resolved_relpath": "assets/meshes/door_panel__solid_panel__leaf_1_knob.obj",
+          "safe": true,
+          "sha256": "0961f3ca4120ce245da4779df73ae39d2fbeb922f88797929414e2303d558dd1",
+          "size_bytes": 288166
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__solid_panel__leaf_1_knuckles.obj",
+          "resolved_relpath": "assets/meshes/door_panel__solid_panel__leaf_1_knuckles.obj",
+          "safe": true,
+          "sha256": "29925b813a2d9230179b6cd14270325882121b91daed55c358c7f8cefba30930",
+          "size_bytes": 68517
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__solid_panel__leaf_1_panel.obj",
+          "resolved_relpath": "assets/meshes/door_panel__solid_panel__leaf_1_panel.obj",
+          "safe": true,
+          "sha256": "b31b1b053381f93cb9b07decd40fd738b16bf2672f218ab892567637c6212aba",
+          "size_bytes": 23877
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/first_aid_shelf.obj",
+          "resolved_relpath": "assets/meshes/first_aid_shelf.obj",
+          "safe": true,
+          "sha256": "bd1584103bccf70938f4b61a76e96b039a576d0d7b12c9fa67310087658aac25",
+          "size_bytes": 850
+        }
+      ],
+      "collision_mesh_inventory_sha256": "09dab41d69fdbb046a4dccaf39e59323e7c7dbc8dadf0574b4e240c044747838",
+      "dataset_id": "Science_First_aid_cabinet/seed_0",
+      "input_identity_sha256": "a55fbb52a483cee523e1e7ac3cb416106b100a98065fd192be4c78faf299f37a",
+      "joint_specs_sha256": "aae43e06d2e297272a7f075af926a52ba88499af54802529e15a5412f20d63a3",
+      "missing_collision_mesh_reference_count": 0,
+      "movable_dof_count": 2,
+      "object_bbox_diagonal_m": 0.7280173531634219,
+      "order": 0,
+      "package_audit_success": true,
+      "primary_urdf_relpath": "Science_First_aid_cabinet/seed_0/model.urdf",
+      "protocol_id": "urdf_sim_ready_table4_ours_500k_table2_n500_v1",
+      "range_evaluable_dof_count": 2,
+      "raw_category": "Science_First_aid_cabinet",
+      "rest_state_expected": 1,
+      "runtime_binding": {
+        "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_ours_500k.py",
+        "adapter_runner_sha256": "ab3c6766515a7f2f157967d2da72d0ccc143d2d9a570e6381ed5148bf9ffbd93",
+        "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+        "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+        "core_runtime": {
+          "numpy_version": "2.5.1",
+          "pybullet_api_version": 202010061,
+          "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+          "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+          "python_cache_tag": "cpython-312",
+          "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+          "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+          "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+          "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+          "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+          "scipy_version": "1.18.0"
+        },
+        "hostname": "dedicated-developjob-saining-4au54-66f4bf865-dzjb7",
+        "pybullet_api_version": 202010061,
+        "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+        "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+        "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+        "python_version": "3.12.3"
+      },
+      "scale_derivation": {
+        "collision_link_indices": [
+          -1,
+          0,
+          1
+        ],
+        "diagonal_m": 0.7280173531634219,
+        "joint_state": "q=0 for every simulator joint",
+        "load_flags": 1048578,
+        "maximum_m": [
+          0.21800000005215406,
+          0.13249999943375587,
+          0.5395000000149012
+        ],
+        "minimum_m": [
+          -0.21800000005215406,
+          -0.07850000196695328,
+          -0.004000014543533381
+        ],
+        "protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+        "status": "PASS"
+      },
+      "scale_derivation_sha256": "f7e0b7c18e395aacf842c7584bf3eef8906910a10333620718814b28a80d2d33",
+      "seed_name": "seed_0",
+      "selection_rank": 1,
+      "single_state_expected": 42,
+      "sobol_state_expected": 64,
+      "unsafe_collision_mesh_reference_count": 0,
+      "urdf_sha256": "2b1c3bb3c9b90096a80f16dd99ce83f2d6939257a393230e0c5f482adc7380c9",
+      "valid_tree": true
+    },
+    {
+      "asset_id": "Science_First_aid_cabinet/seed_1",
+      "asset_root_relpath": "Science_First_aid_cabinet/seed_1",
+      "audit_issue": null,
+      "category": "Science_First_aid_cabinet",
+      "collision_mesh_files": [
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/body_hinge_0.obj",
+          "resolved_relpath": "assets/meshes/body_hinge_0.obj",
+          "safe": true,
+          "sha256": "0ea815442a89a6847d674de55913b1d27fcc80067acd2e051583a1b44ab3e993",
+          "size_bytes": 59006
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/cabinet_body_shell.obj",
+          "resolved_relpath": "assets/meshes/cabinet_body_shell.obj",
+          "safe": true,
+          "sha256": "050cbed461434dc07bbe0a25de2227cb04ce83772a71e97390dee919d8a85a17",
+          "size_bytes": 3630
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/cabinet_handle.obj",
+          "resolved_relpath": "assets/meshes/cabinet_handle.obj",
+          "safe": true,
+          "sha256": "5b72ff5b5979c93ad8c6acaa4439161f6a16706572c31ed601625fd8640601ac",
+          "size_bytes": 47190
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__glazed_window__leaf_0_banner.obj",
+          "resolved_relpath": "assets/meshes/door_panel__glazed_window__leaf_0_banner.obj",
+          "safe": true,
+          "sha256": "10d079765fbee88439ebf2ba21c9ee06571f2db4759c4ffb274423e6af3e1b28",
+          "size_bytes": 814
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__glazed_window__leaf_0_cross.obj",
+          "resolved_relpath": "assets/meshes/door_panel__glazed_window__leaf_0_cross.obj",
+          "safe": true,
+          "sha256": "966e16764fe6012edd5e5a7d9e9d5becd220fdb83306618b34d2a383c5da9501",
+          "size_bytes": 2612
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__glazed_window__leaf_0_frame.obj",
+          "resolved_relpath": "assets/meshes/door_panel__glazed_window__leaf_0_frame.obj",
+          "safe": true,
+          "sha256": "5a42b8d02bab98d3385ce49efbeadda449acf8b57a00ee7effe851ef73549237",
+          "size_bytes": 47339
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__glazed_window__leaf_0_knob.obj",
+          "resolved_relpath": "assets/meshes/door_panel__glazed_window__leaf_0_knob.obj",
+          "safe": true,
+          "sha256": "0271dfb78fab83be087d782dc5dd856cf61c529031be057570bb122a01ac1d80",
+          "size_bytes": 283533
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__glazed_window__leaf_0_knuckles.obj",
+          "resolved_relpath": "assets/meshes/door_panel__glazed_window__leaf_0_knuckles.obj",
+          "safe": true,
+          "sha256": "9a0b322fa6db2e0c8ef88d420044cd3119e2ec4b35023099729debee4d96cee4",
+          "size_bytes": 68516
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/drawer_0_pull.obj",
+          "resolved_relpath": "assets/meshes/drawer_0_pull.obj",
+          "safe": true,
+          "sha256": "36371641238cfcb74f37acf86533e5616d91ed5e405da0ac5aa393b93d238314",
+          "size_bytes": 35813
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/drawer_0_tray.obj",
+          "resolved_relpath": "assets/meshes/drawer_0_tray.obj",
+          "safe": true,
+          "sha256": "501752e08620d7a25555ec71ca80053a3f941d3266dc55987ff4713a54f3d8f3",
+          "size_bytes": 55360
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/first_aid_shelf.obj",
+          "resolved_relpath": "assets/meshes/first_aid_shelf.obj",
+          "safe": true,
+          "sha256": "9710a685215047aeee574de95315edbf4c17c3e70f2c1ed74aacf1de8e37fbaa",
+          "size_bytes": 850
+        }
+      ],
+      "collision_mesh_inventory_sha256": "bf4b84d0148e20f7e265da41bdb3af40b8ca0033d046035af9ef568a91fb1182",
+      "dataset_id": "Science_First_aid_cabinet/seed_1",
+      "input_identity_sha256": "cfd1e3951fc3b474db9d0542a11ba5b9b712b223241e7f06731e941f73fcd594",
+      "joint_specs_sha256": "4a481a653b4169f43ff82f368d5e01df5960f8ba7fc8ff08d675706de739956f",
+      "missing_collision_mesh_reference_count": 0,
+      "movable_dof_count": 2,
+      "object_bbox_diagonal_m": 0.6582630493439465,
+      "order": 1,
+      "package_audit_success": true,
+      "primary_urdf_relpath": "Science_First_aid_cabinet/seed_1/model.urdf",
+      "protocol_id": "urdf_sim_ready_table4_ours_500k_table2_n500_v1",
+      "range_evaluable_dof_count": 2,
+      "raw_category": "Science_First_aid_cabinet",
+      "rest_state_expected": 1,
+      "runtime_binding": {
+        "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_ours_500k.py",
+        "adapter_runner_sha256": "ab3c6766515a7f2f157967d2da72d0ccc143d2d9a570e6381ed5148bf9ffbd93",
+        "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+        "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+        "core_runtime": {
+          "numpy_version": "2.5.1",
+          "pybullet_api_version": 202010061,
+          "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+          "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+          "python_cache_tag": "cpython-312",
+          "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+          "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+          "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+          "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+          "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+          "scipy_version": "1.18.0"
+        },
+        "hostname": "dedicated-developjob-saining-4au54-66f4bf865-dzjb7",
+        "pybullet_api_version": 202010061,
+        "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+        "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+        "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+        "python_version": "3.12.3"
+      },
+      "scale_derivation": {
+        "collision_link_indices": [
+          -1,
+          0,
+          1
+        ],
+        "diagonal_m": 0.6582630493439465,
+        "joint_state": "q=0 for every simulator joint",
+        "load_flags": 1048578,
+        "maximum_m": [
+          0.18349999868869782,
+          0.1314999994337559,
+          0.4965000000149012
+        ],
+        "minimum_m": [
+          -0.18950000005215406,
+          -0.07749999994039536,
+          -0.003999993324279749
+        ],
+        "protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+        "status": "PASS"
+      },
+      "scale_derivation_sha256": "7052e408261d59af0e64216a050ebbff9198a9a02d65dc680c1c4ca88b65d064",
+      "seed_name": "seed_1",
+      "selection_rank": 2,
+      "single_state_expected": 42,
+      "sobol_state_expected": 64,
+      "unsafe_collision_mesh_reference_count": 0,
+      "urdf_sha256": "6a4c1b929d9e42b0b599e7b0f874c54cffc54583ffcd4a2b0ffda9e4ee01e05b",
+      "valid_tree": true
+    },
+    {
+      "asset_id": "Science_First_aid_cabinet/seed_2",
+      "asset_root_relpath": "Science_First_aid_cabinet/seed_2",
+      "audit_issue": null,
+      "category": "Science_First_aid_cabinet",
+      "collision_mesh_files": [
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/body_hinge_0.obj",
+          "resolved_relpath": "assets/meshes/body_hinge_0.obj",
+          "safe": true,
+          "sha256": "bf32df0f8195dc35f008babe9ee6e21f27cd7a96f3fb760cceadde844768c3a4",
+          "size_bytes": 59006
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/cabinet_body_shell.obj",
+          "resolved_relpath": "assets/meshes/cabinet_body_shell.obj",
+          "safe": true,
+          "sha256": "d4a5fe278211d9a9fb5adfb14f9d7914c4262612294dcb319c4b997940ef50eb",
+          "size_bytes": 1758
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/cabinet_handle.obj",
+          "resolved_relpath": "assets/meshes/cabinet_handle.obj",
+          "safe": true,
+          "sha256": "5b72ff5b5979c93ad8c6acaa4439161f6a16706572c31ed601625fd8640601ac",
+          "size_bytes": 47190
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__glazed_window__leaf_0_banner.obj",
+          "resolved_relpath": "assets/meshes/door_panel__glazed_window__leaf_0_banner.obj",
+          "safe": true,
+          "sha256": "887eebced57ea5b961f05fdaaba41801d9d8cdc9192a307073c169037cc101ed",
+          "size_bytes": 814
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__glazed_window__leaf_0_cross.obj",
+          "resolved_relpath": "assets/meshes/door_panel__glazed_window__leaf_0_cross.obj",
+          "safe": true,
+          "sha256": "6733b0fdf5dc2145bfa67926b80c72c78ad53a8f742f9fb32ad9d7b97aeb8fea",
+          "size_bytes": 2612
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__glazed_window__leaf_0_frame.obj",
+          "resolved_relpath": "assets/meshes/door_panel__glazed_window__leaf_0_frame.obj",
+          "safe": true,
+          "sha256": "0472a58b38648da952bc358310a3bd159fee8fce393d51246e5cea0cb83d9aa7",
+          "size_bytes": 47338
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__glazed_window__leaf_0_knob.obj",
+          "resolved_relpath": "assets/meshes/door_panel__glazed_window__leaf_0_knob.obj",
+          "safe": true,
+          "sha256": "7d4b55a382c59f6266fc73fb3039829948faafdc1ba22c4ec31a03fcab5db61c",
+          "size_bytes": 283531
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/door_panel__glazed_window__leaf_0_knuckles.obj",
+          "resolved_relpath": "assets/meshes/door_panel__glazed_window__leaf_0_knuckles.obj",
+          "safe": true,
+          "sha256": "a99fa4b9e50551cd11b82ca1aac70198f1e8544348e62ba54569a6139f2e32b0",
+          "size_bytes": 68516
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "assets/meshes/first_aid_shelf.obj",
+          "resolved_relpath": "assets/meshes/first_aid_shelf.obj",
+          "safe": true,
+          "sha256": "e2914e2a1ffd775e848178d693191e39b41c94f78550acc6997480adb31b5292",
+          "size_bytes": 850
+        }
+      ],
+      "collision_mesh_inventory_sha256": "b46a653e4e81353ef4cae823619b4e19c2e18cf29900b5c57b049453cb27f906",
+      "dataset_id": "Science_First_aid_cabinet/seed_2",
+      "input_identity_sha256": "b947da1c4a29f7d1ac7b61ccdafe0491bad7d0810deda4bcc94fb93d345a7825",
+      "joint_specs_sha256": "9ad82c5676288695413d536e2dd11876f00ec618f281c6cd74216d5fcaa7c11b",
+      "missing_collision_mesh_reference_count": 0,
+      "movable_dof_count": 1,
+      "object_bbox_diagonal_m": 0.6899161232606821,
+      "order": 2,
+      "package_audit_success": true,
+      "primary_urdf_relpath": "Science_First_aid_cabinet/seed_2/model.urdf",
+      "protocol_id": "urdf_sim_ready_table4_ours_500k_table2_n500_v1",
+      "range_evaluable_dof_count": 1,
+      "raw_category": "Science_First_aid_cabinet",
+      "rest_state_expected": 1,
+      "runtime_binding": {
+        "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_ours_500k.py",
+        "adapter_runner_sha256": "ab3c6766515a7f2f157967d2da72d0ccc143d2d9a570e6381ed5148bf9ffbd93",
+        "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+        "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+        "core_runtime": {
+          "numpy_version": "2.5.1",
+          "pybullet_api_version": 202010061,
+          "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+          "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+          "python_cache_tag": "cpython-312",
+          "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+          "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+          "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+          "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+          "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+          "scipy_version": "1.18.0"
+        },
+        "hostname": "dedicated-developjob-saining-4au54-66f4bf865-dzjb7",
+        "pybullet_api_version": 202010061,
+        "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+        "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+        "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+        "python_version": "3.12.3"
+      },
+      "scale_derivation": {
+        "collision_link_indices": [
+          -1,
+          0
+        ],
+        "diagonal_m": 0.6899161232606821,
+        "joint_state": "q=0 for every simulator joint",
+        "load_flags": 1048578,
+        "maximum_m": [
+          0.20400000298023224,
+          0.13999999943375588,
+          0.4995000000149012
+        ],
+        "minimum_m": [
+          -0.21000000005215408,
+          -0.0860000022649765,
+          -0.004000003814697284
+        ],
+        "protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+        "status": "PASS"
+      },
+      "scale_derivation_sha256": "eae0e3e7ae48e9152e218f365a1d9f824a23e390cadd059a4cc6618f06bfc8ac",
+      "seed_name": "seed_2",
+      "selection_rank": 3,
+      "single_state_expected": 21,
+      "sobol_state_expected": 64,
+      "unsafe_collision_mesh_reference_count": 0,
+      "urdf_sha256": "5a1bb82bbc435b719fe8635baf9ccb19118ccbaa30cbec817957e7d1db175298",
+      "valid_tree": true
+    }
+  ],
+  "manifest_content_sha256": "c427e223697a2808b40cf58f8fb5437854319026c5f56019040ee69748ab13a5",
+  "protocol_document_at_freeze_sha256": "ec5ae6b97a625b9c1bb976f80c20d82503e0c9bd06109f69c33f9d3f46b71727",
+  "protocol_id": "urdf_sim_ready_table4_ours_500k_table2_n500_v1",
+  "schema_version": "table4_ours_500k_frozen_manifest_v1",
+  "selection": {
+    "algorithm": "exact Table 2 manifest .assets[] order; optional smoke prefix only",
+    "ordered_identities_sha256": "9f2eef17cca076fab54e38e0c954fd1d1ea0766d5d643ce4885c8762402e26a4",
+    "selected_asset_ids_sha256": "5939eccd0ec0126d05dcd83505acd8dc19da047b52d961dd5f4b7b53501a12a7"
+  },
+  "source": {
+    "archive_sha256": "ffedf5bd90ae5eb96a061d0e127b700915ed6c221eeb7c5afe282b7249bfbd66",
+    "category_count": 1,
+    "cohort_type": "FULL_ACQUIRED_RELEASE_SAMPLE_NO_SUBSAMPLING",
+    "dataset_root": "/mnt/zsn/lyb/arti-skill/exp/Brain/extracted/arti_cabinet_drawer_geometry_500_20260813",
+    "n_eval": 3,
+    "n_release": 500,
+    "table2_manifest_content_sha256": "8b1bdb53bef17ac104bb42daa331899dfa498020be131fe5727f16df0f0427fa",
+    "table2_manifest_file_sha256": "f6f2eb2e9a5a0b257d2843674e987946a9d014274348784018540772f2660b71",
+    "table2_manifest_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/.table2_urdf_ours_500k_table1cohort_n500_20260819T094919Z.runs/run.01dd2969dce7451eb8ef977852765d15/manifest.json"
+  }
+}

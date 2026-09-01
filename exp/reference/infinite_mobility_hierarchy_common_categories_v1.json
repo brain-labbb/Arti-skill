@@ -1,0 +1,77 @@
+{
+  "protocol_id": "nano3d_infinite_mobility_hierarchy_common_categories_v1",
+  "baseline": "Infinite Mobility",
+  "official_repository": "https://github.com/InternRobotics/Infinite-Mobility.git",
+  "official_commit": "5f5961736fcf5b7a6e6fd0a9b3b7af586f39e151",
+  "official_tree": "e4dbd72b1d6e38a5c13f8a9f0130385b4c98524f",
+  "official_license": "BSD-3-Clause",
+  "source_seed_protocol": "nano3d_infinite_mobility_seed_reliability_v1",
+  "seeds": [
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+    12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
+    24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35
+  ],
+  "paper_main_seeds": [0, 1, 2, 3, 4, 5],
+  "paper_main_selection_rule": "Use the first six values of the already frozen seed list for every category, yielding 5 categories x 6 seeds = 30. The rule is numeric-order based and does not replace failed cases.",
+  "categories": [
+    {
+      "category_id": "storage_furniture_cabinet",
+      "common_category": "storage furniture/cabinet",
+      "factory": "KitchenCabinetFactory",
+      "selection_reason": "The official semantic registry assigns KitchenCabinetFactory to Storage, and it is the only cabinet factory in the frozen public 20-factory release."
+    },
+    {
+      "category_id": "table",
+      "common_category": "table",
+      "factory": "TableDiningFactory",
+      "selection_reason": "The official semantic registry assigns TableDiningFactory to Table. It is the generic dining-table generator; TableCocktailFactory is a narrower cocktail-table alternative, so exactly one factory is frozen to avoid category duplication."
+    },
+    {
+      "category_id": "refrigerator",
+      "common_category": "refrigerator",
+      "factory": "BeverageFridgeFactory",
+      "selection_reason": "BeverageFridgeFactory is the sole refrigerator/fridge factory in the frozen public 20-factory release."
+    },
+    {
+      "category_id": "dishwasher",
+      "common_category": "dishwasher",
+      "factory": "DishwasherFactory",
+      "selection_reason": "DishwasherFactory is the sole dishwasher factory in the frozen public 20-factory release."
+    },
+    {
+      "category_id": "oven",
+      "common_category": "oven",
+      "factory": "OvenFactory",
+      "selection_reason": "OvenFactory is the sole oven factory in the frozen public 20-factory release."
+    }
+  ],
+  "denominator_policy": "The paper main retains six requested seeds per category and the supplement retains all seeds 0-35. Terminal timeout or missing-asset cases remain failures in the corresponding requested denominator.",
+  "hierarchy_mapping": {
+    "scene_node": "named URDF link",
+    "flat_depth": 1,
+    "semantic_depth": "maximum named-link root-to-leaf path length; root counts as 1",
+    "named_group": "named link with children and no visual geometry",
+    "pivot": "named non-fixed URDF joint",
+    "has_hierarchy": "valid tree and semantic_depth > 1"
+  },
+  "cross_seed_scope": "Topology stability only. Raw named-edge and name-free canonical-shape signatures are reported; neither is semantic correctness.",
+  "independent_hierarchy_gold": {
+    "manifest": null,
+    "status": "NOT_AVAILABLE",
+    "required_for_edge_f1": "An independently authored, asset-aligned parent-child edge set plus a frozen predicted-node to gold-node matching policy.",
+    "required_for_exact_match": "A complete independently authored gold tree for every scored asset and a frozen canonicalization policy.",
+    "required_for_semantic_nesting": "Independent semantic parent assignments or blinded human adjudications for every scored child node.",
+    "rejected_as_gold": [
+      "the generated URDF being evaluated",
+      "the Infinite Mobility factory source code used to generate the asset",
+      "raw or canonical topology signatures derived from the generated output",
+      "tree validity, root count, or hierarchy depth inferred from the generated output"
+    ]
+  },
+  "notes": [
+    "This is the paper-facing common-category subset of the already frozen public-factory 36-seed run.",
+    "The balanced 30-asset main view uses seeds 0-5 for every category; the full 180-case view remains the seed-distribution supplement.",
+    "No asset is regenerated or replaced for this subset.",
+    "Parent-child Edge F1, hierarchy exact match against gold, and semantic nesting accuracy remain N/A because no independent hierarchy gold is available."
+  ]
+}

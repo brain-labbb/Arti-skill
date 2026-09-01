@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "amendment_id": "nano3d_table6_artiverse_contact_predicate_amendment_v1",
+  "created_at": "2026-08-12",
+  "applies_to_protocol_id": "nano3d_table6_artiverse_articulation_reference_v1",
+  "applies_to_protocol_sha256": "663b4d62914372cc06a1d4f89519f35efd181e481388ea4716920af6fd96688d",
+  "amendment_type": "POST_DIAGNOSTIC_SCORER_CORRECTION",
+  "reason": "PyBullet contact tuple field 8 is signed contactDistance: negative values indicate penetration and positive values indicate distance. The invalidated diagnostic scorer treated every retained contact manifold as a collision failure. Seven of its 49 FAIL assets had zero measured penetration, so that predicate was not physically supported.",
+  "threshold_selection": {
+    "penetration_tolerance_m": 1e-06,
+    "source": "the independently existing Nano3D Table 6 scorer constant PENETRATION_TOLERANCE_M",
+    "selection_statement": "The tolerance was inherited for cross-method comparability and was not selected to maximize the Artiverse score."
+  },
+  "invalidated_diagnostic": {
+    "state": "INVALIDATED_DIAGNOSTIC_EXCLUDED",
+    "protocol_sha256": "ebf053343ffd6df92dec801e9ba3a5bab189ca90077eb5467918c5dea8401ddb",
+    "cohort_manifest_sha256": "7f6321ba472d070fcffa2559fbd02d1c8a164ee1ea9088ee91036151b956840d",
+    "runner_sha256": "8acc11a9cb1b5f198904152333d495475ab0db93b9e431bfc30f4fb4aef5ca68",
+    "run_config_sha256": "c966b6340a5d4f6c0899a9dadfd04e4b74207587fa939d42e2359daf69def49f",
+    "summary_sha256": "99e9a44c40aed1c58aad90429e15c9c3862839622f01f0d8cdd64b8f56d136f7",
+    "reported_outcome": "51 PASS / 49 FAIL / 0 not evaluable",
+    "zero_penetration_false_fail_asset_count": 7,
+    "publication_authorized": false
+  },
+  "corrected_predicate": {
+    "failure": "retained contactDistance < -1e-6 m",
+    "within_tolerance": "retained contactDistance >= -1e-6 m is diagnostic and does not fail the penetration-free proxy",
+    "required_witness": "first and deepest penetration witness with trajectory, state index, semantic configuration hash, link pair, signed distance, and penetration depth"
+  },
+  "cohort_lock": {
+    "selection_change_allowed": false,
+    "identity_order_must_match_invalidated_diagnostic": true,
+    "failure_replacement_allowed": false,
+    "canonical_digest": "SHA-256 of JSON with sorted keys and compact separators",
+    "ordered_identity_sha256": "956c1c5533da76c2fcf8faa4fcfd0532a3a6022705adc794c25ef9f8aeaca50c",
+    "ordered_index_identity_selection_sha256": "b6495d8a230a136391a5d74d7f99cd9757f59d5126f482bbb19fd1f6a65eef51"
+  },
+  "claim_boundary": "The corrected result is a discrete penetration-free proxy on frozen paths, not a strict continuous collision certificate or independent articulation-semantic gold."
+}

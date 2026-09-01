@@ -1,0 +1,111 @@
+{
+  "classification": "NON_FORMAL_SMOKE",
+  "created_at": "2026-08-14T02:12:05Z",
+  "dataset": "LAM released outputs (Articulated-Object-Code)",
+  "evaluation": {
+    "config": {
+      "asset_timeout_seconds": 30.0,
+      "continuous_interval": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "continuous_non_degenerate_policy": "maximum_excursion_from_q0_over_frozen_interval",
+      "protocol_id": "urdf-sim-ready-table3-lam-n800-v1",
+      "q0_policy": "zero_clipped_to_declared_interval",
+      "rotation_motion_threshold_rad": 1e-06,
+      "roundtrip_rotation_tolerance_rad": 1e-09,
+      "roundtrip_translation_tolerance_bbox_diagonal": 1e-09,
+      "samples_per_joint": 21,
+      "strict_asset_requires_at_least_one_declared_movable_joint": true,
+      "translation_motion_threshold_bbox_diagonal": 1e-06,
+      "unchanged_rotation_tolerance_rad": 1e-09,
+      "unchanged_translation_tolerance_bbox_diagonal": 1e-09,
+      "workers": 2
+    },
+    "config_sha256": "1c8b81aee4fee51b2dc2ee4039a1d3364bb2906bc540f5b6ea4b128105b36d0b",
+    "environment": {
+      "numpy": "2.5.1",
+      "platform": "Linux-5.10.134-19.103.al8.x86_64-x86_64-with-glibc2.39",
+      "python": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+      "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+      "thread_environment": {
+        "MKL_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null
+      }
+    },
+    "environment_sha256": "f6fb6d6e26ba5105e40ffade559d47b5b990ef8cf14a6c4f5e7b7e43661fbf5e",
+    "evaluator_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table3_lam.py",
+    "evaluator_sha256": "d9445a35d9363fc24837a4259731546a43f5b8492bb8037c0e363f20c88e0e6d",
+    "protocol_path": "/mnt/zsn/lyb/arti-skill/exp/URDF-Sim-Ready-Automatic-Evaluation.md",
+    "protocol_sha256": "8115a160ab229aa52f3c98498a652851bc27eabc96feb17e1463e61541f6cf22"
+  },
+  "manifest_content_sha256": "2d192d2e277f44a07d144d70c45089beaab08fcf90320bbfb621421bd6fdf050",
+  "records": [
+    {
+      "asset_key": "viable:objects/adjustable_wrench/adjustable_wrench_027",
+      "category": "adjustable_wrench",
+      "declared_joint_count_hint": 2,
+      "object_release_id": "adjustable_wrench_027",
+      "rel_path": "objects/adjustable_wrench/adjustable_wrench_027",
+      "release_order": 760,
+      "selection_hash": "fd8c16d5491f71eef38dabecdbf4b195ce318616c86f0e5b9ac97631008f4635",
+      "selection_rank": 1,
+      "tier": "viable",
+      "urdf_exists": true,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/released_outputs/objects/adjustable_wrench/adjustable_wrench_027/generated.urdf",
+      "urdf_sha256": "da90feb7c1bfce9ab4941dae9b33ac3e3a37c51e47afb215eb84f0c830b76e48"
+    },
+    {
+      "asset_key": "viable:objects/cabinet_with_two_drawers/cabinet_with_two_drawers_007",
+      "category": "cabinet_with_two_drawers",
+      "declared_joint_count_hint": 4,
+      "object_release_id": "cabinet_with_two_drawers_007",
+      "rel_path": "objects/cabinet_with_two_drawers/cabinet_with_two_drawers_007",
+      "release_order": 1138,
+      "selection_hash": "a6fe2db4408604e1e63860e5aff4ea0a9ac5b8c8ce2584d165cc9d98b5c6102b",
+      "selection_rank": 2,
+      "tier": "viable",
+      "urdf_exists": true,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/released_outputs/objects/cabinet_with_two_drawers/cabinet_with_two_drawers_007/generated.urdf",
+      "urdf_sha256": "369d1307960d45072275abe66d04718014aa3aabb823476652e259c8ca0b2ee0"
+    },
+    {
+      "asset_key": "viable:objects/lever_style_nutcracker_with_mechanical/lever_style_nutcracker_with_mechanical_000",
+      "category": "lever_style_nutcracker_with_mechanical",
+      "declared_joint_count_hint": 1,
+      "object_release_id": "lever_style_nutcracker_with_mechanical_000",
+      "rel_path": "objects/lever_style_nutcracker_with_mechanical/lever_style_nutcracker_with_mechanical_000",
+      "release_order": 2188,
+      "selection_hash": "2a88f8d1701a799deab04d683b9344f06f7b789b6a3ead22819710426bc8a2fb",
+      "selection_rank": 3,
+      "tier": "viable",
+      "urdf_exists": true,
+      "urdf_path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/released_outputs/objects/lever_style_nutcracker_with_mechanical/lever_style_nutcracker_with_mechanical_000/generated.urdf",
+      "urdf_sha256": "22f0772e00a347fd118ba01c9a28883499755bec4b631f76373f4f52d84498b0"
+    }
+  ],
+  "schema_version": 1,
+  "selection": {
+    "algorithm": "random.Random(seed).sample(sorted(asset_key), n)",
+    "n_eval": 3,
+    "quality_label_blind": true,
+    "seed": 20260813,
+    "selected_asset_keys_sha256": "910cf037969dfb3cd298adb5e827fcd260a9e2fe37af6171368820d2dc4af1b2"
+  },
+  "source": {
+    "candidate_pool_sha256": "81304d094da5b8411cbb7e0fb3f911b41a934cb3733766cfda4c2f8364f780fd",
+    "dataset_api": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/dataset_api.json",
+    "dataset_api_sha256": "4ef6d64310968fab9e280ca19545ef0647e6c5e2eb81dbd681b5ca20fbbc727d",
+    "n_release": 3217,
+    "release_manifest": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/manifest.csv",
+    "release_manifest_sha256": "70216593ec02b71d596e456498ff9863ad0f8e519d5d27d2cf4f58792d412412",
+    "source_root": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/released_outputs",
+    "tier_counts": {
+      "broken": 385,
+      "loads_only": 299,
+      "viable": 2533
+    },
+    "upstream_revision": "28cec4f5be7e34fd4d586879ecfcb67f7c5e4cc0"
+  }
+}

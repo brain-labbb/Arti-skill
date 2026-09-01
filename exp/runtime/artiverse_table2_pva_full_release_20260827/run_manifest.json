@@ -1,0 +1,49 @@
+{
+  "annotation_sidecar": null,
+  "annotation_sidecar_sha256": null,
+  "artifacts": {
+    "asset_records.jsonl": {
+      "bytes": 339952743,
+      "sha256": "a98cb472ec74d9807e8f91bd2a0bb8cc57a763a2fb535950f5cfab8b5d7afbca"
+    },
+    "summary.json": {
+      "bytes": 21517,
+      "sha256": "233d20eb5c1c4abcc00fbe0840e63ed999fcd45d9e12549799efcfdad35d14e5"
+    },
+    "table2.csv": {
+      "bytes": 251,
+      "sha256": "b208ca09b74fc86966e377c8a591e89e43d8961ae213d03c62ea90632aa17991"
+    },
+    "table2.md": {
+      "bytes": 1379,
+      "sha256": "58698a357385ca21b7f6ee4d6d984cd959bb81b9113c098ab7a7930f6ea4000b"
+    }
+  },
+  "asset_records": "asset_records.jsonl",
+  "classification": "STRUCTURAL_PROXY",
+  "dataset": "Ours / PV-A",
+  "elapsed_seconds": 588.5962495896965,
+  "limit": null,
+  "manifest_content_sha256": "3e83e367d7a58e77534380b7c4699a9d2aa47570605566972781e742d44de15b",
+  "mode": "structural-proxy",
+  "paper_url": "https://arxiv.org/abs/2605.24403",
+  "protocol": "/mnt/zsn/lyb/arti-skill/exp/reference/artiverse_table2_pva_protocol_v1.json",
+  "protocol_id": "artiverse_table2_pva_v1",
+  "protocol_sha256": "b908de0e6635e64b811a3941add143eaf6f037a5ece183944e7fe50cc4459071",
+  "roster_jsonl": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table1234_full_release_20260826/roster/full_release_roster.jsonl",
+  "roster_jsonl_sha256": "6110f8ec301ddbd0934dee5f4a828bca91a37dc554a0fec764c74ecea3482c91",
+  "roster_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table1234_full_release_20260826/roster/roster_manifest.json",
+  "roster_manifest_sha256": "4c2e5e9dc5ca65f037a65a3048e740c55c5530f5bc86956b36f6d80ac22b4c1a",
+  "runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_artiverse_table2_pva.py",
+  "runner_sha256": "6ab0e126335adc979cd7f12da88e602b4ad5b661beed57da70b0fb723c64cd94",
+  "schema_version": "artiverse_table2_pva_run_v1",
+  "started_epoch": 1787817680.1673508,
+  "strict": {
+    "failures": [],
+    "passed": true,
+    "requested": false
+  },
+  "summary": "summary.json",
+  "verify_input_hashes": true,
+  "workers": 32
+}

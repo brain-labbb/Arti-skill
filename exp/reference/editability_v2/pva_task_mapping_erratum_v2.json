@@ -1,0 +1,325 @@
+{
+  "protocol_id": "nano3d_table5_pva_representation_matched_v2_erratum_v2",
+  "source_manifest_sha256": "d8d6e47ab3ab4ca22dbccb90d29796d515c1e772093f1e5d099c62a74a66e94d",
+  "source_scorer_sha256": "7ce66aa02aa33869949ac561b59d0f7ff8ef81b591cb4d3565756cb7e02aa877",
+  "source_prompt_contract_sha256": "0ad1443cea1078af2dcfba49b0f2f81e6caf34bf2b4d39600e62ebc871ef3965",
+  "source_budget_guard_sha256": "d76d833031b05ccfbeb11d674746134d32681ddff590093246caa036ed5de368",
+  "freeze_state": "final",
+  "erratum": {
+    "base_mapping_sha256": "cccee25ea89ecd235e3d32364ec9987bf89d773b0fb3c670cc54959635db6dc7",
+    "scope": "S05 compiled local visual AABB selector and shared-contract threshold only",
+    "no_task_semantics_change": true
+  },
+  "main_seed": 0,
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+  "tasks": [
+    {
+      "task_id": "A01", "status": "ready", "manifest_binding_sha256": "cc62a57d6833fc1da7d4fa20e6e84ae811ae1f4ee2b385c0b7dae218f2c17ca1",
+      "slug": "Bag_Suitcase_Shopping_bucket", "stem": "shopping_bucket",
+      "shared_overrides": {"body_form": "rectangular", "wall_style": "slotted_perforated", "top_configuration": "open_bail_swing", "palette_style": "blue_plastic"},
+      "parent_overrides": {"secondary_storage": "none"}, "edited_overrides": {"secondary_storage": "removable_inner_caddy"},
+      "target_fields": ["secondary_storage"], "numeric_predicates": [], "compiled_predicates": [],
+      "source_rules": [
+        {"scope": "delta_added", "entity": "part", "tokens": ["inner_caddy"], "min_count": 1, "max_count": 1},
+        {"scope": "delta_added", "entity": "joint", "tokens": ["tub_to_caddy"], "joint_type": "prismatic", "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "joint", "tokens": ["tub_to_bail"], "joint_type": "revolute", "min_count": 1, "max_count": 1}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["inner_caddy"], "allowed_changed_joint_tokens": ["tub_to_caddy"], "canonical_replacements": {}}
+    },
+    {
+      "task_id": "A02", "status": "ready", "manifest_binding_sha256": "a9ba754643be7f0eb16dfcd71aa9aca1b3f7aef40602393a26076f02689720bc",
+      "slug": "Technology_Keyboard", "stem": "keyboard",
+      "shared_overrides": {"chassis_family": "tapered_low_profile", "key_array": "sculpted_prismatic_keys", "support_module": "fixed_pads", "key_count": 61},
+      "parent_overrides": {"control_module": "plain_deck"}, "edited_overrides": {"control_module": "rotary_media_knob"},
+      "target_fields": ["control_module"], "numeric_predicates": [], "compiled_predicates": [],
+      "source_rules": [
+        {"scope": "delta_added", "entity": "part", "tokens": ["\"role\": \"media_knob\""], "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "part", "tokens": ["rotary_media_knob", "boss"], "min_count": 1, "max_count": 1},
+        {"scope": "delta_added", "entity": "joint", "tokens": ["rotary_media_knob"], "joint_type": "revolute", "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "joint", "tokens": ["press_joint"], "joint_type": "prismatic", "min_count": 61, "max_count": 61}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["keyboard_chassis", "keybed", "media_knob"], "allowed_changed_joint_tokens": ["rotary_media_knob", "fixed_mount"], "canonical_replacements": {}}
+    },
+    {
+      "task_id": "A03", "status": "ready", "manifest_binding_sha256": "56b9c36f0d0465b3b21bdcf14e9ee96b4977abcb849ea4b20f5c0eec9297df9f",
+      "slug": "Technology_Remote_Control", "stem": "remote_control",
+      "shared_overrides": {"enclosure_family": "rounded_thermostat", "primary_control": "directional_pad", "button_array": "media_round_grid", "button_count": 4},
+      "parent_overrides": {"cover_module": "open_face"}, "edited_overrides": {"cover_module": "flip_cover"},
+      "target_fields": ["cover_module"], "numeric_predicates": [], "compiled_predicates": [],
+      "source_rules": [
+        {"scope": "delta_added", "entity": "part", "tokens": ["flip_cover", "panel"], "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "part", "tokens": ["hinge_boss", "knuckle"], "min_count": 1, "max_count": 1},
+        {"scope": "delta_added", "entity": "joint", "tokens": ["flip_cover", "joint"], "joint_type": "revolute", "min_count": 1, "max_count": 1}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["cover_mount", "flip_cover"], "allowed_changed_joint_tokens": ["cover_module"], "canonical_replacements": {}}
+    },
+    {
+      "task_id": "A04", "status": "ready", "manifest_binding_sha256": "540a78b56d10989ce3b7cde07ad6b92c82b4a837a5f7ce9ebec11b0a5b894a8a",
+      "slug": "Technology_Mobile_Phone", "stem": "mobile_phone",
+      "shared_overrides": {"host_mechanism": "senior_clamshell", "front_module": "senior_large_keypad", "palette": 1},
+      "parent_overrides": {"antenna_module": "integrated_internal"}, "edited_overrides": {"antenna_module": "telescoping_mast"},
+      "target_fields": ["antenna_module"], "numeric_predicates": [], "compiled_predicates": [],
+      "source_rules": [
+        {"scope": "edited", "entity": "part", "tokens": ["telescoping_mast", "boss", "guide_sleeve"], "min_count": 1, "max_count": 1},
+        {"scope": "delta_added", "entity": "part", "tokens": ["telescoping_mast", "mast_rod", "tip_bulb"], "min_count": 1, "max_count": 1},
+        {"scope": "delta_added", "entity": "joint", "tokens": ["telescoping_mast", "extend_joint"], "joint_type": "prismatic", "min_count": 1, "max_count": 1}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["handset_body", "telescoping_mast"], "allowed_changed_joint_tokens": ["telescoping_mast"], "canonical_replacements": {}}
+    },
+    {
+      "task_id": "A05", "status": "ready", "manifest_binding_sha256": "1f79036ee4333478b9084bdd45b52602b9f56d0498d614f0354f5e872f44f229",
+      "slug": "pulley", "stem": "pulley",
+      "shared_overrides": {"frame_construction": "enclosed_shell", "mount_interface": "swivel_hook", "sheave_profile": "deep_u", "sheave_count": 1},
+      "parent_overrides": {"secondary_module": "none"}, "edited_overrides": {"secondary_module": "becket_eye"},
+      "target_fields": ["secondary_module"], "numeric_predicates": [], "compiled_predicates": [],
+      "source_rules": [
+        {"scope": "edited", "entity": "part", "tokens": ["becket_eye"], "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "joint", "tokens": ["sheave", "rotation_0"], "joint_type": "continuous", "min_count": 1, "max_count": 1}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["frame_construction"], "allowed_changed_joint_tokens": [], "canonical_replacements": {}}
+    },
+    {
+      "task_id": "A06", "status": "ready", "manifest_binding_sha256": "d1bcbd2fedbf0e33d3c779b51ba57c0703ff0ce0af5729a5fdfa2316f816062c",
+      "slug": "Household_Laundry_Clothes_drying_rack_Laundry_drying_rack", "stem": "household_laundry_clothes_drying_rack_laundry_drying_rack",
+      "shared_overrides": {"leg_family": "scissor_x_legs"},
+      "parent_overrides": {"leg_frame_count": 2}, "edited_overrides": {"leg_frame_count": 3},
+      "target_fields": ["leg_frame_count"], "numeric_predicates": [], "compiled_predicates": [],
+      "source_rules": [
+        {"scope": "delta_added", "entity": "part", "tokens": ["frame_2", "leg_frame"], "min_count": 1, "max_count": 1},
+        {"scope": "delta_added", "entity": "joint", "tokens": ["spine_to_leg_2"], "joint_type": "revolute", "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "joint", "tokens": ["spine_to_leg_"], "joint_type": "revolute", "min_count": 3, "max_count": 3}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["main_frame", "leg_family"], "allowed_changed_joint_tokens": ["spine_to_leg", "leg_family"], "canonical_replacements": {}}
+    },
+    {
+      "task_id": "M01", "status": "ready", "manifest_binding_sha256": "64a5bb711aafe4add5fc8660f41574b9cc2758b43cebf2fe09a0e45a40543427",
+      "slug": "pictureX_0611_drawing_compass_with_adjustable_legs", "stem": "pictureX_0611_drawing_compass_with_adjustable_legs",
+      "shared_overrides": {"head_style": "spring_bow", "adjuster_style": "cross_screw", "lead_end_style": "extension_rail", "needle_end_style": "collet_cartridge", "handle_style": "knurled_handle"},
+      "parent_overrides": {"leg_style": "sheet_taper"}, "edited_overrides": {"leg_style": "folding_knee"},
+      "target_fields": ["leg_style"], "numeric_predicates": [], "compiled_predicates": [],
+      "source_rules": [
+        {"scope": "edited", "entity": "part", "tokens": ["folding_knee", "lower_leg"], "min_count": 2, "max_count": 2},
+        {"scope": "edited", "entity": "joint", "tokens": ["needle_knee"], "joint_type": "revolute", "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "joint", "tokens": ["lead_knee"], "joint_type": "revolute", "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "joint", "tokens": ["folding_knee", "hinge"], "joint_type": "revolute", "min_count": 2, "max_count": 2}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["leg_style"], "allowed_changed_joint_tokens": ["leg_style"], "canonical_replacements": {}}
+    },
+    {
+      "task_id": "M02", "status": "ready", "manifest_binding_sha256": "b462fdd64e961b64cf8c2684672e65bf1bcd7d6e340fd7aec58bb14368d10fbe",
+      "slug": "pictureX_0611_ergonomic_clamp_with_adjustable_components", "stem": "picturex_0611_ergonomic_clamp_with_adjustable_components",
+      "shared_overrides": {"clamp_form": "dual_screw", "arm_form": "gas_spring_parallelogram", "tray_width": "fixed_deck", "tilt_lock": "sector_pawl"},
+      "parent_overrides": {"tray_head": "fixed_tilt_tray"}, "edited_overrides": {"tray_head": "sliding_rails"},
+      "target_fields": ["tray_head"], "numeric_predicates": [], "compiled_predicates": [],
+      "source_rules": [
+        {"scope": "edited", "entity": "part", "tokens": ["sliding_rails", "guide_rod_0", "guide_rod_1"], "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "part", "tokens": ["sliding_rails", "rail_carriage"], "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "joint", "tokens": ["tray_slide"], "joint_type": "prismatic", "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "joint", "tokens": ["slide_latch_pivot"], "joint_type": "revolute", "min_count": 1, "max_count": 1}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["tray_head"], "allowed_changed_joint_tokens": ["tray_head"], "canonical_replacements": {}}
+    },
+    {
+      "task_id": "M03", "status": "ready", "manifest_binding_sha256": "241eedc2e743fe5e2f0a91744d3671372b6085dbe17aea68527c3d2740abada1",
+      "slug": "pictureX_0611_Industrial_rolling_work_table", "stem": "picturex_0611_industrial_rolling_work_table",
+      "shared_overrides": {"top_surface": "stainless_deck", "leg_form": "fixed_post", "bench_accessory": "equipment_shelf", "side_bracing": "plain_rails", "storage_level_count": 2},
+      "parent_overrides": {"storage_module": "open_shelf"}, "edited_overrides": {"storage_module": "drawer_bank"},
+      "target_fields": ["storage_module"], "numeric_predicates": [], "compiled_predicates": [],
+      "source_rules": [
+        {"scope": "edited", "entity": "part", "tokens": ["drawer_bank", "tray_0", "front_face_0", "pull_0", "runner_0_0", "runner_0_1"], "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "part", "tokens": ["drawer_bank", "tray_1", "front_face_1", "pull_1", "runner_1_0", "runner_1_1"], "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "joint", "tokens": ["frame_to_storage_item"], "joint_type": "prismatic", "min_count": 2, "max_count": 2}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["storage_module"], "allowed_changed_joint_tokens": ["frame_to_storage_item"], "canonical_replacements": {}}
+    },
+    {
+      "task_id": "M04", "status": "ready", "manifest_binding_sha256": "bda6145f902d0cedb5734e74c1eda1eb0aeb6b449fcb48457f18b15a0037ca6f",
+      "slug": "shelving_unit_with_adjustable_shelves", "stem": "shelving_unit_with_adjustable_shelves",
+      "shared_overrides": {"bay_count": 4, "level_count": 4, "shelf_count": 5},
+      "parent_overrides": {"assembly_family": "stepped_grid_open_bins"}, "edited_overrides": {"assembly_family": "stepped_grid_lidded_drawers"},
+      "target_fields": ["assembly_family"], "numeric_predicates": [], "compiled_predicates": [],
+      "source_rules": [
+        {"scope": "edited", "entity": "part", "tokens": ["lidded_drawer", "bin_bottom", "bin_side_left", "bin_side_right", "bin_front", "bin_rear", "front_pull_lip"], "min_count": 4, "max_count": 4},
+        {"scope": "edited", "entity": "part", "tokens": ["storage_lid", "hinged_lid_panel"], "min_count": 4, "max_count": 4},
+        {"scope": "edited", "entity": "joint", "tokens": ["pull_storage"], "joint_type": "prismatic", "min_count": 4, "max_count": 4}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["storage_", "storage_lid"], "allowed_changed_joint_tokens": ["pull_storage", "hinge_lid"], "canonical_replacements": {"assembly_family__stepped_grid_open_bins": "assembly_family__FAMILY", "assembly_family__stepped_grid_lidded_drawers": "assembly_family__FAMILY", "stepped_grid_open_bins": "FAMILY", "stepped_grid_lidded_drawers": "FAMILY"}}
+    },
+    {
+      "task_id": "M05", "status": "ready", "manifest_binding_sha256": "dd7d0527bf338aadb598293f8910c26e637440357cb98562bf919d5622da62ed",
+      "slug": "pictureX_0611_garlic_press", "stem": "pictureX_0611_garlic_press",
+      "shared_overrides": {"plunger_drive": "rigid_pad", "accessory": "none", "arm_profile": "flat_bar", "palette_style": "polished_steel"},
+      "parent_overrides": {"chamber": "rect_trough"}, "edited_overrides": {"chamber": "round_cup"},
+      "target_fields": ["chamber"], "numeric_predicates": [], "compiled_predicates": [],
+      "source_rules": [
+        {"scope": "edited", "entity": "part", "tokens": ["chamber__round_cup__shell"], "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "part", "tokens": ["plunger_drive__rigid_pad__face"], "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "joint", "tokens": ["frame_to_lever"], "joint_type": "revolute", "min_count": 1, "max_count": 1}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["press_frame", "lever_arm"], "allowed_changed_joint_tokens": [], "canonical_replacements": {}}
+    },
+    {
+      "task_id": "M06", "status": "ready", "manifest_binding_sha256": "907e92d4b0f4c5ea35c3622cd79c6e12c4747df39eed990f4caa97032cceb5c7",
+      "slug": "Technology_Audio_Device", "stem": "audio_device",
+      "shared_overrides": {"cabinet_form": "landscape_cabinet", "speaker_layout": "single_field", "control_deck": "rotary_knob_bank", "carry_handle": "molded_top_lip", "antenna_module": "no_antenna", "control_count": 2},
+      "parent_overrides": {"grille_style": "horizontal_ribbed"}, "edited_overrides": {"grille_style": "vertical_bar"},
+      "target_fields": ["grille_style"], "numeric_predicates": [], "compiled_predicates": [],
+      "source_rules": [
+        {"scope": "parent", "entity": "part", "tokens": ["horizontal_ribbed", "field_0"], "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "part", "tokens": ["vertical_bar", "field_0"], "min_count": 1, "max_count": 1}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["cabinet"], "allowed_changed_joint_tokens": [], "canonical_replacements": {}}
+    },
+    {
+      "task_id": "S01", "status": "ready", "manifest_binding_sha256": "8655ad4286bf38a6191132094f652bc984e75aecca15bf2dcd934dfe3516dc02",
+      "slug": "Bag_Suitcase_Shopping_bucket", "stem": "shopping_bucket",
+      "shared_overrides": {"wall_style": "slotted_perforated", "top_configuration": "open_bail_dual_fold", "secondary_storage": "none", "mouth_len_m": 0.36, "palette_style": "blue_plastic"},
+      "parent_overrides": {"body_form": "rectangular", "mouth_depth_m": 0.26, "body_height_m": 0.20},
+      "edited_overrides": {"body_form": "rounded_oval_deep", "mouth_depth_m": 0.21, "body_height_m": 0.27},
+      "target_fields": ["body_form", "body_height_m", "mouth_depth_m"],
+      "numeric_predicates": [
+        {"edited_field": "body_height_m", "parent_field": "body_height_m", "op": "ge", "factor": 1.25},
+        {"edited_field": "mouth_len_m", "parent_field": "mouth_len_m", "op": "ge", "factor": 0.90},
+        {"edited_field": "mouth_len_m", "parent_field": "mouth_len_m", "op": "le", "factor": 1.00},
+        {"edited_field": "mouth_depth_m", "parent_field": "mouth_depth_m", "op": "le", "factor": 0.85}
+      ],
+      "compiled_predicates": [
+        {"link_tokens": ["basket_tub"], "visual_tokens": ["tub_shell"], "axis": "z", "measure": "extent", "op": "ge", "factor": 1.25},
+        {"link_tokens": ["basket_tub"], "visual_tokens": ["tub_shell"], "axis": "x", "measure": "extent", "op": "ge", "factor": 0.90},
+        {"link_tokens": ["basket_tub"], "visual_tokens": ["tub_shell"], "axis": "x", "measure": "extent", "op": "le", "factor": 1.00},
+        {"link_tokens": ["basket_tub"], "visual_tokens": ["tub_shell"], "axis": "y", "measure": "extent", "op": "le", "factor": 0.85}
+      ],
+      "source_rules": [
+        {"scope": "edited", "entity": "part", "tokens": ["tub_shell"], "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "joint", "tokens": ["tub_to_bail_"], "joint_type": "revolute", "min_count": 2, "max_count": 2}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["basket_tub", "carry_bail"], "allowed_changed_joint_tokens": ["tub_to_bail"], "canonical_replacements": {}}
+    },
+    {
+      "task_id": "S02", "status": "ready", "manifest_binding_sha256": "3dbae0ac264406959aa259cb538b7d92ebb6f54ff57a08621e8e050316a579c9",
+      "slug": "Urban_Environment_bucket1", "stem": "bucket1",
+      "shared_overrides": {"body_profile": "pointed_fire_bucket", "rim_profile": "flared_fold", "bail_profile": "round_arch", "ear_style": "round_stamped_lug", "material_style": "fire_red_enamel"},
+      "parent_overrides": {"mouth_radius_m": 0.14, "pointed_aspect_ratio": 1.70},
+      "edited_overrides": {"mouth_radius_m": 0.119, "pointed_aspect_ratio": 2.50},
+      "target_fields": ["mouth_radius_m", "pointed_aspect_ratio"],
+      "numeric_predicates": [
+        {"edited_field": "body_height_m", "parent_field": "body_height_m", "op": "ge", "factor": 1.25},
+        {"edited_field": "mouth_radius_m", "parent_field": "mouth_radius_m", "op": "le", "factor": 0.85},
+        {"source": "config", "edited_field": "pointed_aspect_ratio", "op": "ge", "value": 2.50}
+      ],
+      "compiled_predicates": [
+        {"link_tokens": ["bucket_body"], "visual_tokens": ["hollow_shell"], "axis": "z", "measure": "extent", "op": "ge", "factor": 1.25},
+        {"link_tokens": ["bucket_body"], "visual_tokens": ["hollow_shell"], "axis": "x", "measure": "extent", "op": "le", "factor": 0.85},
+        {"comparison": "edited_ratio", "link_tokens": ["bucket_body"], "visual_tokens": ["hollow_shell"], "axis": "z", "measure": "extent", "denominator": {"link_tokens": ["bucket_body"], "visual_tokens": ["hollow_shell"], "axis": "x", "measure": "extent"}, "op": "ge", "value": 1.25}
+      ],
+      "source_rules": [
+        {"scope": "edited", "entity": "part", "tokens": ["pointed_fire_bucket", "hollow_shell", "flared_fold", "round_stamped_lug"], "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "joint", "tokens": ["bucket_to_swing_bail"], "joint_type": "revolute", "min_count": 1, "max_count": 1}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["bucket_body", "swing_bail"], "allowed_changed_joint_tokens": ["bucket_to_swing_bail"], "canonical_replacements": {}}
+    },
+    {
+      "task_id": "S03", "status": "ready", "manifest_binding_sha256": "7c8de8243e130cdcfc60af99681a0e1904d9e42cd9dd544c3f6a02eaeb9599bf",
+      "slug": "pictureX_0611_Folding_table3", "stem": "picturex_0611_folding_table3",
+      "shared_overrides": {"top_profile": "ellipse_oval", "support_system": "corner_fold_legs", "leaf_stay": "prop_arm", "stay_per_leaf": 1, "top_length_m": 0.90, "top_width_m": 1.20, "palette_style": "warm_oak"},
+      "parent_overrides": {"center_width_ratio": 0.40}, "edited_overrides": {"center_width_ratio": 0.28},
+      "target_fields": ["center_width_ratio"],
+      "numeric_predicates": [
+        {"edited_field": "center_width_ratio", "parent_field": "center_width_ratio", "op": "le", "factor": 0.70},
+        {"edited_field": "leaf_reach_m", "parent_field": "leaf_reach_m", "op": "ge", "factor": 1.08}
+      ],
+      "compiled_predicates": [
+        {"link_tokens": ["table_center"], "visual_tokens": ["center_slab"], "axis": "x", "measure": "extent", "op": "le", "factor": 0.70},
+        {"link_tokens": ["drop_leaf_0"], "visual_tokens": ["leaf_slab_0"], "axis": "x", "measure": "extent", "op": "ge", "factor": 1.08},
+        {"link_tokens": ["drop_leaf_1"], "visual_tokens": ["leaf_slab_1"], "axis": "x", "measure": "extent", "op": "ge", "factor": 1.08},
+        {"comparison": "ratio_difference", "link_tokens": ["drop_leaf_0"], "visual_tokens": ["leaf_slab_0"], "axis": "x", "measure": "extent", "second_selector": {"link_tokens": ["drop_leaf_1"], "visual_tokens": ["leaf_slab_1"], "axis": "x", "measure": "extent"}, "op": "le", "value": 0.02}
+      ],
+      "source_rules": [
+        {"scope": "edited", "entity": "part", "tokens": ["ellipse_oval", "drop_leaf"], "min_count": 2, "max_count": 2},
+        {"scope": "edited", "entity": "joint", "tokens": ["center_to_leaf"], "joint_type": "revolute", "min_count": 2, "max_count": 2},
+        {"scope": "edited", "entity": "part", "tokens": ["support_member"], "min_count": 4, "max_count": 4}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["table_center", "drop_leaf"], "allowed_changed_joint_tokens": ["center_to_leaf", "center_to_support_member"], "canonical_replacements": {}}
+    },
+    {
+      "task_id": "S04", "status": "ready", "manifest_binding_sha256": "60c774019bb33d9f05e6d142510c6eaac5ff48d12131f8816fcba621696335d8",
+      "slug": "Technology_Keyboard", "stem": "keyboard",
+      "shared_overrides": {"key_array": "sculpted_prismatic_keys", "control_module": "plain_deck", "support_module": "fixed_pads", "key_count": 61, "low_profile_depth_m": 0.125},
+      "parent_overrides": {"chassis_family": "tapered_low_profile"}, "edited_overrides": {"chassis_family": "stepped_high_profile"},
+      "target_fields": ["chassis_family"],
+      "numeric_predicates": [
+        {"edited_field": "deck_z_m", "parent_field": "deck_z_m", "op": "ge", "factor": 1.50},
+        {"edited_field": "case_width_m", "parent_field": "case_width_m", "op": "ge", "factor": 0.95},
+        {"edited_field": "case_width_m", "parent_field": "case_width_m", "op": "le", "factor": 1.05},
+        {"edited_field": "case_depth_m", "parent_field": "case_depth_m", "op": "ge", "factor": 0.95},
+        {"edited_field": "case_depth_m", "parent_field": "case_depth_m", "op": "le", "factor": 1.05}
+      ],
+      "compiled_predicates": [
+        {"link_tokens": ["keyboard_chassis"], "axis": "z", "measure": "extent", "op": "ge", "factor": 1.50},
+        {"link_tokens": ["keyboard_chassis"], "axis": "x", "measure": "extent", "op": "ge", "factor": 0.95},
+        {"link_tokens": ["keyboard_chassis"], "axis": "x", "measure": "extent", "op": "le", "factor": 1.05},
+        {"link_tokens": ["keyboard_chassis"], "axis": "y", "measure": "extent", "op": "ge", "factor": 0.95},
+        {"link_tokens": ["keyboard_chassis"], "axis": "y", "measure": "extent", "op": "le", "factor": 1.05}
+      ],
+      "source_rules": [
+        {"scope": "edited", "entity": "part", "tokens": ["stepped_high_profile", "keyboard_chassis"], "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "joint", "tokens": ["press_joint"], "joint_type": "prismatic", "min_count": 61, "max_count": 61}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["keyboard_chassis", "keybed", "press_key"], "allowed_changed_joint_tokens": ["fixed_mount", "press_joint"], "canonical_replacements": {}}
+    },
+    {
+      "task_id": "S05", "status": "ready", "manifest_binding_sha256": "0a692c0d2bd16cc531be103027f8d03b690a267a3b6f2dde494902f3bc97f42a",
+      "slug": "Technology_Laptop", "stem": "laptop",
+      "shared_overrides": {"hinge_style": "full_width_barrel", "pointing_system": "integrated_clickpad", "key_array": "island_keyboard", "support_module": "rubber_feet", "foot_count": 4, "budget_base_width_m": 0.38, "rugged_base_thickness_m": 0.032},
+      "parent_overrides": {"shell_family": "budget_plastic"}, "edited_overrides": {"shell_family": "rugged_bumper"},
+      "target_fields": ["shell_family"],
+      "numeric_predicates": [
+        {"edited_field": "base_thickness_m", "parent_field": "base_thickness_m", "op": "ge", "factor": 1.50},
+        {"edited_field": "lid_thickness_m", "parent_field": "lid_thickness_m", "op": "ge", "factor": 1.50},
+        {"edited_field": "base_width_m", "parent_field": "base_width_m", "op": "ge", "factor": 0.90},
+        {"edited_field": "base_width_m", "parent_field": "base_width_m", "op": "le", "factor": 1.10},
+        {"edited_field": "base_depth_m", "parent_field": "base_depth_m", "op": "ge", "factor": 0.90},
+        {"edited_field": "base_depth_m", "parent_field": "base_depth_m", "op": "le", "factor": 1.10}
+      ],
+      "compiled_predicates": [
+        {"link_tokens": ["base_chassis"], "visual_tokens": ["lower_shell"], "coordinate_space": "visual_geometry_local", "axis": "z", "measure": "extent", "op": "ge", "factor": 1.50},
+        {"link_tokens": ["base_chassis"], "visual_tokens": ["lower_shell"], "coordinate_space": "visual_geometry_local", "axis": "x", "measure": "extent", "op": "ge", "factor": 0.90},
+        {"link_tokens": ["base_chassis"], "visual_tokens": ["lower_shell"], "coordinate_space": "visual_geometry_local", "axis": "x", "measure": "extent", "op": "le", "factor": 1.10},
+        {"link_tokens": ["base_chassis"], "visual_tokens": ["lower_shell"], "coordinate_space": "visual_geometry_local", "axis": "y", "measure": "extent", "op": "ge", "factor": 0.90},
+        {"link_tokens": ["base_chassis"], "visual_tokens": ["lower_shell"], "coordinate_space": "visual_geometry_local", "axis": "y", "measure": "extent", "op": "le", "factor": 1.10},
+        {"link_tokens": ["screen_lid"], "visual_tokens": ["lid_shell"], "coordinate_space": "visual_geometry_local", "axis": "z", "measure": "extent", "op": "ge", "factor": 1.50},
+        {"link_tokens": ["screen_lid"], "visual_tokens": ["lid_shell"], "coordinate_space": "visual_geometry_local", "axis": "x", "measure": "extent", "op": "ge", "factor": 0.90},
+        {"link_tokens": ["screen_lid"], "visual_tokens": ["lid_shell"], "coordinate_space": "visual_geometry_local", "axis": "x", "measure": "extent", "op": "le", "factor": 1.10},
+        {"link_tokens": ["screen_lid"], "visual_tokens": ["lid_shell"], "coordinate_space": "visual_geometry_local", "axis": "y", "measure": "extent", "op": "ge", "factor": 0.90},
+        {"link_tokens": ["screen_lid"], "visual_tokens": ["lid_shell"], "coordinate_space": "visual_geometry_local", "axis": "y", "measure": "extent", "op": "le", "factor": 1.10}
+      ],
+      "source_rules": [
+        {"scope": "edited", "entity": "part", "tokens": ["rugged_bumper", "corner_bumper"], "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "joint", "tokens": ["screen_joint"], "joint_type": "revolute", "min_count": 1, "max_count": 1}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["base_chassis", "screen_lid"], "allowed_changed_joint_tokens": ["screen_joint", "fixed_mount", "clickpad"], "canonical_replacements": {}}
+    },
+    {
+      "task_id": "S06", "status": "ready", "manifest_binding_sha256": "ed86f1e5e67c1da05a0686ca2564a031e9270daefc7f05017503bfec33871c78",
+      "slug": "pictureX_0611_hydraulic_jack2", "stem": "picturex_0611_hydraulic_jack2",
+      "shared_overrides": {"saddle_head": "disc_saddle", "pump_drive": "lever_handle", "wheel_station": "swivel_caster", "rear_station_count": 2, "chassis_len_m": 0.614, "chassis_width_m": 0.2383, "arm_reach_ratio": 0.7034, "palette_style": "jack_blue"},
+      "parent_overrides": {"chassis_style": "plate_frame"}, "edited_overrides": {"chassis_style": "low_profile"},
+      "target_fields": ["chassis_style"],
+      "numeric_predicates": [
+        {"edited_field": "chassis_front_extent_m", "parent_field": "chassis_front_extent_m", "op": "ge", "factor": 1.20},
+        {"edited_field": "chassis_front_side_height_m", "parent_field": "chassis_front_side_height_m", "op": "le", "factor": 0.70}
+      ],
+      "compiled_predicates": [
+        {"link_tokens": ["jack_chassis"], "visual_tokens": ["chassis_style__FAMILY"], "axis": "y", "measure": "max", "op": "ge", "factor": 1.20},
+        {"link_tokens": ["jack_chassis"], "visual_tokens": ["chassis_style__FAMILY__side_"], "axis": "z", "measure": "extent", "op": "le", "factor": 0.70}
+      ],
+      "source_rules": [
+        {"scope": "edited", "entity": "part", "tokens": ["chassis_style__FAMILY", "nose_deck", "rear_hump"], "min_count": 1, "max_count": 1},
+        {"scope": "edited", "entity": "joint", "tokens": ["chassis_to_front_roller_"], "joint_type": "continuous", "min_count": 2, "max_count": 2},
+        {"scope": "edited", "entity": "joint", "tokens": ["chassis_to_wheel_station_"], "joint_type": "revolute", "min_count": 2, "max_count": 2},
+        {"scope": "edited", "entity": "joint", "tokens": ["wheel_station_", "spin"], "joint_type": "continuous", "min_count": 2, "max_count": 2}
+      ],
+      "locality": {"allowed_changed_part_tokens": ["jack_chassis"], "allowed_changed_joint_tokens": [], "canonical_replacements": {"chassis_style__plate_frame": "chassis_style__FAMILY", "chassis_style__low_profile": "chassis_style__FAMILY"}}
+    }
+  ]
+}

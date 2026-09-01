@@ -1,0 +1,23 @@
+{
+  "data_dir": "/mnt/zsn/lyb/arti-skill/articraft_data/picture",
+  "dtype": "float32",
+  "extraction": {
+    "amp": true,
+    "batch_size": 128,
+    "device": "cuda:0",
+    "encoder_label": "CLIP ViT-B/32",
+    "feature_dim": 512,
+    "feature_source": "visual_projection",
+    "model_name_or_path": "/root/.cache/huggingface/hub/models--openai--clip-vit-base-patch32/snapshots/3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "model_type": "clip",
+    "num_workers": 8,
+    "sample_count": 914
+  },
+  "feature_dim": 512,
+  "feature_file": "image_features.npy",
+  "model_fingerprint": "1820ec13bca1c4e2c727adf4f97f0de249039e55e90593a2e47dd22f648650a9",
+  "model_name_or_path": "/root/.cache/huggingface/hub/models--openai--clip-vit-base-patch32/snapshots/3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+  "sample_count": 914,
+  "sample_fingerprint": "6f55c612a08a584fa974897b58b3f9006b49bd3df0d14eebb02718c0b59cec50",
+  "schema_version": 1
+}

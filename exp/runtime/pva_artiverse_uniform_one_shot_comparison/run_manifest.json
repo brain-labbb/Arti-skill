@@ -1,0 +1,294 @@
+{
+  "artifacts": {
+    "artiverse_category_index": "artiverse_category_index.csv",
+    "artiverse_model_index": "artiverse_model_index.csv",
+    "artiverse_one_shot_index": "artiverse_one_shot_index.csv",
+    "high_dimensional_metrics": "high_dimensional_metrics.json",
+    "joint_source_comparison": "joint_source_comparison.png",
+    "run_contract": "run_contract.json"
+  },
+  "config": {
+    "artiverse_one_shot_only": true,
+    "artiverse_render_root": "/mnt/zsn/data/particulate/datasets/Artiverse/renders/uniform84_one_per_category_studio_256_v1",
+    "batch_size": 64,
+    "device": "cuda:0",
+    "force_extract": true,
+    "neighbor_fraction": 0.06,
+    "num_workers": 8,
+    "output_dir": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_artiverse_uniform_one_shot_comparison",
+    "perplexity": 30.0,
+    "plot_dpi": 180,
+    "pva_dir": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva531_uniform_tsne",
+    "seed": 42,
+    "skip_glb_hash_verification": false,
+    "tsne_jobs": 8,
+    "tsne_max_iter": 1000,
+    "tsne_verbose": 1,
+    "use_amp": true
+  },
+  "dataset": {
+    "artiverse_category_count": 84,
+    "artiverse_models_per_category_max": 490,
+    "artiverse_models_per_category_min": 1,
+    "artiverse_official_universe_model_count": 3544,
+    "artiverse_render_samples_used": 84,
+    "pva_generator_count": 531
+  },
+  "encoders": {
+    "clip": {
+      "feature_cache_reused": false,
+      "feature_dim": 512,
+      "independent": {
+        "one_shot": {
+          "coordinates": "clip/artiverse_one_shot_tsne_coordinates.csv",
+          "plot": "clip/artiverse_one_shot_tsne.png",
+          "tsne": {
+            "input_dim": 512,
+            "max_iter": 1000,
+            "n_jobs": 8,
+            "pca_components": 50,
+            "perplexity": 27.666666666666668,
+            "random_state": 42,
+            "sample_count": 84
+          }
+        }
+      },
+      "joint": {
+        "one_shot": {
+          "coordinates": "clip/joint_one_shot_tsne_coordinates.csv",
+          "plot": "clip/joint_one_shot_tsne.png",
+          "tsne": {
+            "input_dim": 512,
+            "max_iter": 1000,
+            "n_jobs": 8,
+            "pca_components": 50,
+            "perplexity": 30.0,
+            "random_state": 42,
+            "sample_count": 615
+          }
+        }
+      },
+      "label": "CLIP ViT-B/32"
+    },
+    "dinov2": {
+      "feature_cache_reused": false,
+      "feature_dim": 768,
+      "independent": {
+        "one_shot": {
+          "coordinates": "dinov2/artiverse_one_shot_tsne_coordinates.csv",
+          "plot": "dinov2/artiverse_one_shot_tsne.png",
+          "tsne": {
+            "input_dim": 768,
+            "max_iter": 1000,
+            "n_jobs": 8,
+            "pca_components": 50,
+            "perplexity": 27.666666666666668,
+            "random_state": 42,
+            "sample_count": 84
+          }
+        }
+      },
+      "joint": {
+        "one_shot": {
+          "coordinates": "dinov2/joint_one_shot_tsne_coordinates.csv",
+          "plot": "dinov2/joint_one_shot_tsne.png",
+          "tsne": {
+            "input_dim": 768,
+            "max_iter": 1000,
+            "n_jobs": 8,
+            "pca_components": 50,
+            "perplexity": 30.0,
+            "random_state": 42,
+            "sample_count": 615
+          }
+        }
+      },
+      "label": "DINOv2"
+    }
+  },
+  "implementation": {
+    "reused_feature_tsne_script": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/visualize_pva531_picture_tsne.py",
+      "sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0",
+      "size_bytes": 48267
+    },
+    "script": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/compare_pva_artiverse_uniform.py",
+      "sha256": "07970f003086c1dd487a39352bb5c0b36b0684a9567212ed74c45a0ed9e1f2cd",
+      "size_bytes": 85461
+    }
+  },
+  "inputs": {
+    "artiverse": {
+      "category_one_shot_roster": {
+        "path": "/mnt/zsn/data/particulate/datasets/Artiverse/renders/uniform84_one_per_category_studio_256_v1/category_one_shot_roster.csv",
+        "sha256": "45f02386aac2fc81b18b1f3b0f3f76d45d881eaa05146fc5c76b566fe1f84bb0",
+        "size_bytes": 46455
+      },
+      "dataset_manifest": {
+        "path": "/mnt/zsn/lyb/arti-skill/exp/artiverse/dataset_chunks/manifest.json",
+        "sha256": "8fa6468254a1f74c58f0c25699598bf88f622fabdaf74f0cd9268ee5663c5586",
+        "size_bytes": 255798
+      },
+      "ordered_image_receipt_sha256": "b45da9271249d81bd30d747900b48707f70c23976b4f4fdfa595113b81496e78",
+      "render_config": {
+        "path": "/mnt/zsn/data/particulate/datasets/Artiverse/renders/uniform84_one_per_category_studio_256_v1/render_config.json",
+        "sha256": "f5866f6589725ea28a02ea6de31da8ed2f427885c7ed7bede5f58fcfcba35ac6",
+        "size_bytes": 2939
+      },
+      "render_manifest": {
+        "path": "/mnt/zsn/data/particulate/datasets/Artiverse/renders/uniform84_one_per_category_studio_256_v1/render_manifest.csv",
+        "sha256": "b95c21bca1c93e06eeb0b1e5414474f9bf2898a5e2bda0c98ae599d6ad1fadee",
+        "size_bytes": 120651
+      },
+      "renderer": {
+        "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_artiverse_asset_blender.py",
+        "sha256": "fc6469e7d992fc25aed7cd5f57a125052b1fa5d8eca67e954f9e70fcc0b3eb98",
+        "size_bytes": 8434
+      },
+      "shared_renderer": {
+        "path": "/mnt/zsn/lyb/arti-skill/arti-template/scripts/render_exported_asset_blender.py",
+        "sha256": "f418515a9817218b08d577d95983ec934c34ddf19f17bb89c73bf52aa60bb3a7",
+        "size_bytes": 40486
+      }
+    },
+    "pva": {
+      "encoders": {
+        "clip": {
+          "class_features": {
+            "dtype": "float32",
+            "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva531_uniform_tsne/clip/class_features.npy",
+            "sha256": "9a25469c5c1b8fa6ee1a8820a20666da669b4b68aeb1c29c0d52ea7dd1501d92",
+            "shape": [
+              531,
+              512
+            ],
+            "size_bytes": 1087616
+          },
+          "feature_manifest": {
+            "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva531_uniform_tsne/clip/feature_manifest.json",
+            "sha256": "dcc6875e0f0fc0b2e549df17cc3776973e84ba6763479541581dad1fb5219125",
+            "size_bytes": 933
+          },
+          "model_fingerprint": "86f46fca5a8237efe2cf121efe7beb117fd924e6ed088f150c114349f08ff344",
+          "model_path": "/root/.cache/huggingface/hub/models--openai--clip-vit-base-patch32/snapshots/3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268"
+        },
+        "dinov2": {
+          "class_features": {
+            "dtype": "float32",
+            "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva531_uniform_tsne/dinov2/class_features.npy",
+            "sha256": "57bae754b3558b14d9a1fe3aa4a40d2fa84bbe418b2a91512718a3093c9c317e",
+            "shape": [
+              531,
+              768
+            ],
+            "size_bytes": 1631360
+          },
+          "feature_manifest": {
+            "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva531_uniform_tsne/dinov2/feature_manifest.json",
+            "sha256": "d341ebbaa2da1cbf03897653ae019142749018903a5e0f524bf546edf0ecc745",
+            "size_bytes": 917
+          },
+          "model_fingerprint": "4206b0d68ec780ee11d4ae6020f36adb8df3609741ccee888dbce04507e63587",
+          "model_path": "/root/.cache/huggingface/hub/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415"
+        }
+      },
+      "render_config": {
+        "path": "/mnt/zsn/data/particulate/datasets/PV-A/renders/uniform531_studio_256_v1/render_config.json",
+        "sha256": "b97cb912147db3908de0183cf2736f98477a5a17963b6c29c17d98142ed4545e",
+        "size_bytes": 2601
+      },
+      "renderer": {
+        "path": "/mnt/zsn/lyb/arti-skill/arti-template/scripts/render_exported_asset_blender.py",
+        "sha256": "f418515a9817218b08d577d95983ec934c34ddf19f17bb89c73bf52aa60bb3a7",
+        "size_bytes": 40486
+      },
+      "roster": {
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva531_uniform_tsne/generator_roster_resolved.csv",
+        "sha256": "8c9f2af9bcdf769b9109dc273f08942633d64b437fc5bbfca3813d9e09da0ec2",
+        "size_bytes": 102255
+      },
+      "run_manifest": {
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva531_uniform_tsne/run_manifest.json",
+        "sha256": "5895da02d1b6be3e81f322b99feb97e51e33281f66f967f205c8e81b6266c1bd",
+        "size_bytes": 4796
+      }
+    }
+  },
+  "interpretation_limits": [
+    "The primary Artiverse result uses one identity-hash-selected representative per category; category support in the 3,544-model universe is metadata only.",
+    "One representative per category avoids support averaging but has representative-selection variance.",
+    "t-SNE axes and global geometry are not comparable across independently fitted panels.",
+    "Dataset-source separation can reflect material and asset-domain differences, not semantic diversity alone."
+  ],
+  "protocol": {
+    "artiverse_full_category": null,
+    "artiverse_mode": "one_shot_only",
+    "artiverse_one_shot": "content-independent representative frozen by render manifest",
+    "artiverse_render_unit": "one hash-selected uniform render per category",
+    "encoder_spaces_combined": false,
+    "joint_projection": "concatenate high-dimensional features per encoder, L2, PCA50, then one fitted t-SNE",
+    "pva_sample_unit": "one seed_0000 render per generator class",
+    "render": "identical camera, lights, background, resolution, samples, Blender version, and studio values"
+  },
+  "render_contract_match": {
+    "artiverse_contract": "artiverse_uniform_studio_v1",
+    "matched_fields": [
+      "resolution",
+      "samples",
+      "studio",
+      "blender_version"
+    ],
+    "pva_contract": "pva531_uniform_studio_v1",
+    "values_equal": true
+  },
+  "schema_version": 1,
+  "stable_run_contract": {
+    "artifact_contract": "pva_artiverse_uniform_comparison_v1",
+    "artiverse_mode": "one_shot_only",
+    "counts": {
+      "artiverse_categories": 84,
+      "artiverse_official_universe_models": 3544,
+      "artiverse_render_samples_used": 84,
+      "pva": 531
+    },
+    "implementation": {
+      "feature_tsne_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0",
+      "script_sha256": "07970f003086c1dd487a39352bb5c0b36b0684a9567212ed74c45a0ed9e1f2cd"
+    },
+    "inputs": {
+      "artiverse_dataset_manifest_sha256": "8fa6468254a1f74c58f0c25699598bf88f622fabdaf74f0cd9268ee5663c5586",
+      "artiverse_one_shot_roster_sha256": "45f02386aac2fc81b18b1f3b0f3f76d45d881eaa05146fc5c76b566fe1f84bb0",
+      "artiverse_ordered_image_receipt_sha256": "b45da9271249d81bd30d747900b48707f70c23976b4f4fdfa595113b81496e78",
+      "artiverse_render_config_sha256": "f5866f6589725ea28a02ea6de31da8ed2f427885c7ed7bede5f58fcfcba35ac6",
+      "artiverse_render_manifest_sha256": "b95c21bca1c93e06eeb0b1e5414474f9bf2898a5e2bda0c98ae599d6ad1fadee",
+      "artiverse_render_root": "/mnt/zsn/data/particulate/datasets/Artiverse/renders/uniform84_one_per_category_studio_256_v1",
+      "pva_encoders": {
+        "clip": {
+          "class_features_sha256": "9a25469c5c1b8fa6ee1a8820a20666da669b4b68aeb1c29c0d52ea7dd1501d92",
+          "feature_manifest_sha256": "dcc6875e0f0fc0b2e549df17cc3776973e84ba6763479541581dad1fb5219125",
+          "model_fingerprint": "86f46fca5a8237efe2cf121efe7beb117fd924e6ed088f150c114349f08ff344"
+        },
+        "dinov2": {
+          "class_features_sha256": "57bae754b3558b14d9a1fe3aa4a40d2fa84bbe418b2a91512718a3093c9c317e",
+          "feature_manifest_sha256": "d341ebbaa2da1cbf03897653ae019142749018903a5e0f524bf546edf0ecc745",
+          "model_fingerprint": "4206b0d68ec780ee11d4ae6020f36adb8df3609741ccee888dbce04507e63587"
+        }
+      },
+      "pva_render_config_sha256": "b97cb912147db3908de0183cf2736f98477a5a17963b6c29c17d98142ed4545e",
+      "pva_root": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva531_uniform_tsne",
+      "pva_roster_sha256": "8c9f2af9bcdf769b9109dc273f08942633d64b437fc5bbfca3813d9e09da0ec2",
+      "pva_run_manifest_sha256": "5895da02d1b6be3e81f322b99feb97e51e33281f66f967f205c8e81b6266c1bd"
+    },
+    "projection_and_metrics": {
+      "neighbor_fraction": 0.06,
+      "perplexity": 30.0,
+      "plot_dpi": 180,
+      "seed": 42,
+      "tsne_jobs": 8,
+      "tsne_max_iter": 1000,
+      "tsne_verbose": 1
+    },
+    "schema_version": 1
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://arti-skill.local/schemas/pipeline-ablation-p0-contract-v1.json",
+  "title": "Pipeline ablation P0 freshness and factor packet contract",
+  "contract_version": 1,
+  "claim_boundary": "A local scan may disqualify a development task but never certifies freshness. Author-visible packets contain only exposed factors and no withheld-factor hashes or validation diagnostics.",
+  "freshness_statuses": [
+    "development_only",
+    "no_local_conflict_found",
+    "indeterminate"
+  ],
+  "factor_semantics": {
+    "S_factor": "Source provenance, source-pool review, exact source navigation, distinction, and evidence from a strict SourceMap.",
+    "D_factor": "A redacted semantic design projection containing slots, candidate aliases, parameters, interfaces, multiplicities, bindings, category anchors, and assembly notes. It excludes all source provenance and implementation-function navigation.",
+    "factor_assignment": {
+      "TemplateDesign.candidate.implementation_function": "S_factor.source_map.source_to_owner_functions"
+    },
+    "private_only_information": [
+      "private input hashes",
+      "private factor hashes",
+      "validation diagnostics",
+      "withheld-factor metadata"
+    ]
+  },
+  "$defs": {
+    "parameter": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "mode": {"enum": ["independent", "derived"]},
+        "value_type": {"type": "string", "minLength": 1},
+        "unit": {"type": ["string", "null"]},
+        "minimum": {"type": ["number", "null"]},
+        "maximum": {"type": ["number", "null"]},
+        "choices": {"type": "array"},
+        "expression": {"type": "string"},
+        "depends_on": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "rationale": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "surface_relation": {
+      "type": "object",
+      "required": ["subject_role", "opening_expression", "normal_band_expression", "required_author_check"],
+      "properties": {
+        "subject_role": {"type": "string", "minLength": 1},
+        "opening_expression": {"type": "string", "minLength": 1},
+        "normal_band_expression": {"type": "string", "minLength": 1},
+        "required_author_check": {"type": "string", "minLength": 1},
+        "motion_expression": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "interface": {
+      "type": "object",
+      "required": ["name", "kind", "role", "part"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["plane", "axis"]},
+        "role": {"enum": ["provider", "consumer", "bidirectional"]},
+        "part": {"type": "string", "minLength": 1},
+        "frame": {"type": "object"},
+        "dimensions": {"type": "object"},
+        "surface_relation": {
+          "oneOf": [
+            {"$ref": "#/$defs/surface_relation"},
+            {"type": "null"}
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "d_candidate": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "parameters": {"type": "array", "items": {"$ref": "#/$defs/parameter"}},
+        "interfaces": {"type": "array", "items": {"$ref": "#/$defs/interface"}},
+        "notes": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "d_slot": {
+      "type": "object",
+      "required": ["name", "component_type", "candidates"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "component_type": {"type": "string", "minLength": 1},
+        "required": {"type": "boolean"},
+        "candidates": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/d_candidate"}}
+      },
+      "additionalProperties": false
+    },
+    "multiplicity": {
+      "type": "object",
+      "required": ["name", "item_slot", "values", "spacing_expression", "host_capacity_expression"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "item_slot": {"type": "string", "minLength": 1},
+        "values": {"type": "array", "minItems": 1, "items": {"type": "integer", "minimum": 1}, "uniqueItems": true},
+        "spacing_expression": {"type": "string", "minLength": 1},
+        "host_capacity_expression": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "binding": {
+      "type": "object",
+      "required": ["binding_id", "provider", "consumer"],
+      "properties": {
+        "binding_id": {"type": "string", "minLength": 1},
+        "provider": {"type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_]*\\.[A-Za-z_][A-Za-z0-9_]*$"},
+        "consumer": {"type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_]*\\.[A-Za-z_][A-Za-z0-9_]*$"},
+        "joint_type": {"type": "string", "minLength": 1},
+        "derived": {"type": "array", "items": {"$ref": "#/$defs/parameter"}}
+      },
+      "additionalProperties": false
+    },
+    "anchor_applies_to": {
+      "type": "object",
+      "required": ["slot", "candidates"],
+      "properties": {
+        "slot": {"type": "string", "minLength": 1},
+        "candidates": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+      },
+      "additionalProperties": false
+    },
+    "role_requirement": {
+      "type": "object",
+      "required": ["role"],
+      "properties": {
+        "role": {"type": "string", "minLength": 1},
+        "exact_count": {"type": ["integer", "null"], "minimum": 0},
+        "count_from": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "relation_requirement": {
+      "type": "object",
+      "required": ["parent_role", "child_role", "joint_type"],
+      "properties": {
+        "parent_role": {"type": "string", "minLength": 1},
+        "child_role": {"type": "string", "minLength": 1},
+        "joint_type": {"type": "string", "minLength": 1},
+        "axis": {
+          "oneOf": [
+            {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}},
+            {"type": "null"}
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "category_anchor": {
+      "type": "object",
+      "required": ["anchor_id", "applies_to", "required_roles"],
+      "properties": {
+        "anchor_id": {"type": "string", "minLength": 1},
+        "applies_to": {"$ref": "#/$defs/anchor_applies_to"},
+        "required_roles": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/role_requirement"}},
+        "required_relations": {"type": "array", "items": {"$ref": "#/$defs/relation_requirement"}},
+        "required_author_checks": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+      },
+      "additionalProperties": false
+    },
+    "source_review": {
+      "type": "object",
+      "required": ["record_id", "revision", "source_ref", "review_status", "decision", "note", "model_path", "input_paths"],
+      "properties": {
+        "record_id": {"type": "string", "pattern": "^rec_"},
+        "revision": {"type": "string", "pattern": "^rev_[0-9]+$"},
+        "source_ref": {"type": "string", "minLength": 1},
+        "review_status": {"type": "string", "minLength": 1},
+        "decision": {"type": "string", "minLength": 1},
+        "note": {"type": "string", "minLength": 1},
+        "model_path": {"type": ["string", "null"]},
+        "input_paths": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "source_candidate": {
+      "type": "object",
+      "required": ["slot", "candidate", "component_type", "record_id", "revision", "source_ref", "source_spans", "distinction", "evidence", "model_path"],
+      "properties": {
+        "slot": {"type": "string", "minLength": 1},
+        "candidate": {"type": "string", "minLength": 1},
+        "component_type": {"type": "string", "minLength": 1},
+        "record_id": {"type": "string", "pattern": "^rec_"},
+        "revision": {"type": "string", "pattern": "^rev_[0-9]+$"},
+        "source_ref": {"type": "string", "minLength": 1},
+        "source_spans": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^model\\.py:L[0-9]+-L[0-9]+$"}},
+        "distinction": {"enum": ["structure", "motion", "structure+motion"]},
+        "evidence": {"type": "string", "minLength": 1},
+        "model_path": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "source_to_owner_function": {
+      "type": "object",
+      "required": ["slot", "candidate", "record_id", "revision", "source_spans", "implementation_function"],
+      "properties": {
+        "slot": {"type": "string", "minLength": 1},
+        "candidate": {"type": "string", "minLength": 1},
+        "record_id": {"type": "string", "pattern": "^rec_"},
+        "revision": {"type": "string", "pattern": "^rev_[0-9]+$"},
+        "source_spans": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^model\\.py:L[0-9]+-L[0-9]+$"}},
+        "implementation_function": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "S_factor": {
+      "type": "object",
+      "required": ["schema_version", "factor_kind", "source_map"],
+      "properties": {
+        "schema_version": {"const": 1},
+        "factor_kind": {"const": "S_factor"},
+        "source_map": {
+          "type": "object",
+          "required": ["path", "export_category", "picture_category", "picture_subcategory", "category_scope", "reviews", "candidates", "source_to_owner_functions"],
+          "properties": {
+            "path": {"type": "string", "minLength": 1},
+            "export_category": {"type": "string", "minLength": 1},
+            "picture_category": {"type": "string", "minLength": 1},
+            "picture_subcategory": {"type": "string", "minLength": 1},
+            "category_scope": {"type": "string", "minLength": 1},
+            "reviews": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source_review"}},
+            "candidates": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source_candidate"}},
+            "source_to_owner_functions": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source_to_owner_function"}}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "D_factor": {
+      "type": "object",
+      "required": ["schema_version", "factor_kind", "slug", "slots", "multiplicities", "bindings", "category_anchors", "assembly_notes"],
+      "properties": {
+        "schema_version": {"const": 1},
+        "factor_kind": {"const": "D_factor"},
+        "slug": {"type": "string", "minLength": 1},
+        "slots": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/d_slot"}},
+        "multiplicities": {"type": "array", "items": {"$ref": "#/$defs/multiplicity"}},
+        "bindings": {"type": "array", "items": {"$ref": "#/$defs/binding"}},
+        "category_anchors": {"type": "array", "items": {"$ref": "#/$defs/category_anchor"}},
+        "assembly_notes": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "common_authoring_packet": {
+      "type": "object",
+      "required": ["schema_version", "packet_kind", "task", "raw_source_pool", "sdk_contract"],
+      "properties": {
+        "schema_version": {"const": 1},
+        "packet_kind": {"const": "pipeline_ablation_common_authoring_packet"},
+        "task": {
+          "type": "object",
+          "required": ["slug", "prompt"],
+          "properties": {
+            "slug": {"type": "string", "minLength": 1},
+            "prompt": {"type": "string", "minLength": 1}
+          },
+          "additionalProperties": true
+        },
+        "raw_source_pool": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["record_id", "revision", "model_source"],
+            "properties": {
+              "record_id": {"type": "string", "pattern": "^rec_"},
+              "revision": {"type": "string", "pattern": "^rev_[0-9]+$"},
+              "model_source": {"type": "string", "minLength": 1}
+            },
+            "additionalProperties": true
+          }
+        },
+        "sdk_contract": {
+          "type": "object",
+          "required": ["authoring_instructions", "allowed_api"],
+          "properties": {
+            "authoring_instructions": {"type": "string", "minLength": 1},
+            "allowed_api": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "author_packet": {
+      "type": "object",
+      "required": ["schema_version", "packet_kind", "arm_id", "slug", "common_authoring_packet", "exposed_factors", "factors"],
+      "properties": {
+        "schema_version": {"const": 1},
+        "packet_kind": {"const": "pipeline_ablation_author_packet"},
+        "arm_id": {"enum": ["A00", "A10", "A01", "A11"]},
+        "slug": {"type": "string", "minLength": 1},
+        "common_authoring_packet": {"$ref": "#/$defs/common_authoring_packet"},
+        "exposed_factors": {
+          "type": "array",
+          "items": {"enum": ["S_factor", "D_factor"]},
+          "uniqueItems": true
+        },
+        "factors": {
+          "type": "object",
+          "properties": {
+            "S_factor": {"$ref": "#/$defs/S_factor"},
+            "D_factor": {"$ref": "#/$defs/D_factor"}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

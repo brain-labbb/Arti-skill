@@ -1,0 +1,129 @@
+{
+  "classification": "FORMAL",
+  "cohort": {
+    "j_eval": 4078,
+    "n_eval": 800,
+    "ordered_ids_sha256": "ef6cb964e50dc712280256c5b2f675cc2c957095c3553b21845d3562a5011883",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_partnet_mobility_n800_20260813/frozen_manifest.json",
+    "source_manifest_sha256": "2ff015ee6bb377ce693126b52dd632a7565a3eaa9f0007e26122a1bb4ab99900"
+  },
+  "completed_at_utc": "2026-08-19T18:45:29.081550Z",
+  "dataset": "PartNet-Mobility",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "c7815f555f89590eed5fce3c431083fcab2e3408d73163178b324c6e38e050ee",
+  "metrics": {
+    "collision_safe_dof_retention": {
+      "denominator": 4078,
+      "numerator": 2604,
+      "percent": 63.8548
+    },
+    "dof_bins": {
+      "0": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      },
+      "1": {
+        "joints_intended": 327,
+        "joints_passed": 271,
+        "n_eval": 327,
+        "safe": 271,
+        "strict_pass": 318
+      },
+      "2--3": {
+        "joints_intended": 654,
+        "joints_passed": 429,
+        "n_eval": 288,
+        "safe": 429,
+        "strict_pass": 152
+      },
+      "4--7": {
+        "joints_intended": 449,
+        "joints_passed": 276,
+        "n_eval": 99,
+        "safe": 276,
+        "strict_pass": 53
+      },
+      ">=8": {
+        "joints_intended": 2648,
+        "joints_passed": 1628,
+        "n_eval": 86,
+        "safe": 1628,
+        "strict_pass": 44
+      },
+      "unknown/unparseable": {
+        "joints_intended": 0,
+        "joints_passed": 0,
+        "n_eval": 0,
+        "safe": 0,
+        "strict_pass": 0
+      }
+    },
+    "executable_cf_dof_per_asset": {
+      "mean": 3.255,
+      "median": 1.0,
+      "n_assets": 800,
+      "p90": 4.0,
+      "total_safe_dof": 2604
+    },
+    "joint_level_full_range_cf": {
+      "denominator": 4078,
+      "numerator": 2604,
+      "percent": 63.8548
+    },
+    "limit_reachability": {
+      "continuous_excluded": 662,
+      "denominator": 3416,
+      "numerator": 2321,
+      "percent": 67.945
+    },
+    "normalized_clearance_p5": {
+      "asset_coverage": {
+        "denominator": 800,
+        "numerator": 646,
+        "percent": 80.75
+      },
+      "coverage_status": "PARTIAL",
+      "reason": "genesis_contact_penetration_has_no_signed_clearance_no_independent_exact_distance_backend_registered",
+      "state_coverage": {
+        "denominator": 85638,
+        "numerator": 62958,
+        "percent": 73.5164
+      },
+      "status": "N/E"
+    },
+    "state_counts": {
+      "executed": 62958,
+      "hash_cross_check": {
+        "mismatch": 0,
+        "no_reference": 0,
+        "verified": 62958
+      },
+      "intended": 85638
+    },
+    "status_counts": {
+      "completed": 646,
+      "error": 154,
+      "total": 800
+    }
+  },
+  "mode": "formal",
+  "notes": [
+    "Joint-level Full-range CF reuses the exact frozen Table 4 single-joint sweep states (K=21, endpoints included, other joints q=0); per-state q-vector hashes are cross-checked against Table 4 state_records where available.",
+    "State collision oracle = Genesis contact-penetration backend (genesis_contact_penetration_v1), direct kinematic detection only, illegal iff eligible-pair penetration > 1e-6 m.",
+    "Headline pair policy = distinct source links excluding direct parent-child; no method-specific allowance.",
+    "Normalized Clearance P5 is N/E under this oracle (no signed clearance for separated pairs; no independent exact-distance backend registered).",
+    "Existing Strict Collision Pass values in DoF bins are historical Table 4 (PyBullet) results reported alongside, not re-executed."
+  ],
+  "protocol_id": "table4a_partnet_mobility_table4cohort_n800_v1",
+  "run_directory": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4a_urdf_partnet_mobility_table4cohort_n800_salt20260813_20260819T123437Z",
+  "started_at_utc": "2026-08-19T12:34:38.337796Z",
+  "status_counts": {
+    "completed": 646,
+    "error": 154,
+    "total": 800
+  },
+  "wall_seconds": 22250.666
+}

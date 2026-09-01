@@ -1,0 +1,2161 @@
+{
+  "audit_summary": {
+    "collision_coverage_complete": 3,
+    "movable_dof_count": 13,
+    "package_audit_success": 3,
+    "package_audit_success_asset_keys_sha256": "2c438078bba3ccebff75fb556ffc6270282379ddeffb03ae43c8f69cb0d4787c",
+    "range_evaluable_dof_count": 13,
+    "rest_state_expected": 5,
+    "retained_package_failures": 2,
+    "single_state_expected": 273,
+    "sobol_state_expected": 320
+  },
+  "cohort_boundary": {
+    "authoritative_category_labels_available": true,
+    "is_full_release_cohort": false,
+    "is_shared_category_balanced_cohort": false,
+    "paper_table_role": "qualification only"
+  },
+  "cohort_label": "LAM released outputs qualification N=5",
+  "collision_policy": {
+    "aor": "N/E: no stable exact overlap-volume implementation",
+    "complete_collision_coverage_required": true,
+    "continuous_collision_detection": "not_run",
+    "object_scale": "PyBullet q=0 collision-shape union AABB diagonal",
+    "object_scale_protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+    "penetration_threshold_m": 1e-06,
+    "rest_panels": [
+      "all_pair",
+      "exclude_direct_parent_child"
+    ],
+    "surface_contact_allowed": true,
+    "sweep_sobol_strict_policy": "exclude_direct_parent_child",
+    "unexecuted_states_fail_closed": true,
+    "visual_geometry_fallback": false
+  },
+  "created_at_utc": "2026-08-14T09:17:22Z",
+  "dataset_root": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code",
+  "execution_policy": {
+    "child_timeout_seconds": 900,
+    "timeout_failure": "retained_fail_closed",
+    "timeout_scope": "per_asset_subprocess"
+  },
+  "items": [
+    {
+      "asset_key": "viable:objects/adjustable_wrench/adjustable_wrench_027",
+      "audit_issue": "ValueError: collision coverage incomplete: 0/3",
+      "category": "adjustable_wrench",
+      "collision_coverage_complete": false,
+      "collision_covered_link_count": 0,
+      "collision_element_count": 0,
+      "collision_mesh_files": [],
+      "collision_mesh_inventory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "dataset_id": "lam_0000",
+      "input_identity_sha256": "39d6f74a322caa90b51e69cbdb09c784e81f39fd1a5c4ddd4c27f3845398eefb",
+      "joint_specs": [
+        {
+          "lower": 0.0,
+          "name": "body_to_movableJaw",
+          "range_evaluable": true,
+          "type": "prismatic",
+          "upper": 0.02,
+          "xml_index": 0
+        },
+        {
+          "lower": null,
+          "name": "body_to_wormScrew",
+          "range_evaluable": true,
+          "type": "continuous",
+          "upper": null,
+          "xml_index": 1
+        }
+      ],
+      "joint_specs_sha256": "229f366de181e502f398c76195eb58392f331e0e7f6efad467b230a6dd503989",
+      "link_count": 3,
+      "missing_collision_mesh_reference_count": 0,
+      "model_urdf_sha256": "da90feb7c1bfce9ab4941dae9b33ac3e3a37c51e47afb215eb84f0c830b76e48",
+      "movable_dof_count": 2,
+      "object_bbox_diagonal_m": null,
+      "object_release_id": "adjustable_wrench_027",
+      "order": 0,
+      "package_audit_success": false,
+      "package_binding": {
+        "content_manifest_sha256": "f3aa50b16496b1cb7a847ce4bad8b1c4ba4073373bd980f512df5b5c1f1ffb94",
+        "file_count": 16,
+        "files": [
+          {
+            "bytes": 1779,
+            "path": "articulation.json",
+            "sha256": "69f5017463def6201e22bff3b05f8eb0c6828e7d6b2875b98a85e4b5f34539b3"
+          },
+          {
+            "bytes": 30405,
+            "path": "combined_assembly.obj",
+            "sha256": "bbe1ef449b0239f7d1eedf367faafbb2d1bcd3992dfae8df7e31e1048bb1686d"
+          },
+          {
+            "bytes": 3895,
+            "path": "export.js",
+            "sha256": "948e956a716443e2c26726489faeb7d316cec243365464b1ade22fdbec5de5a8"
+          },
+          {
+            "bytes": 917,
+            "path": "generated.urdf",
+            "sha256": "da90feb7c1bfce9ab4941dae9b33ac3e3a37c51e47afb215eb84f0c830b76e48"
+          },
+          {
+            "bytes": 1116,
+            "path": "generation_config.yaml",
+            "sha256": "afa9aba1cc55fdd46b2fa887972c7aadce5d47bda4ffbfe8bafb44e5c360f33d"
+          },
+          {
+            "bytes": 5274,
+            "path": "workflow.json",
+            "sha256": "2d3d935145079c6aab5037d377922ad3d0afa91e296d5b7b05c32c956b33b977"
+          },
+          {
+            "bytes": 1427,
+            "path": "obj_parts/fixedJawTop.obj",
+            "sha256": "f476c9d8aab6f7d825192c3971081368edda164067b83a9f1d41c00892cabd1c"
+          },
+          {
+            "bytes": 1804,
+            "path": "obj_parts/fixedJawVertical.obj",
+            "sha256": "f5f15ef9152b5a0704b8f3f0e35707937754a1b23facc25741252e36cf1ff6a2"
+          },
+          {
+            "bytes": 1794,
+            "path": "obj_parts/handle.obj",
+            "sha256": "ed41ff46524d933bb0ff0ebf6b08d125cb2fed923823fa831fb97597127ce843"
+          },
+          {
+            "bytes": 993,
+            "path": "obj_parts/headBlock.obj",
+            "sha256": "8881f7b28bf9f184f4526a0db54f3ff2f6d836390b9c88a94fff5de032a4dc17"
+          },
+          {
+            "bytes": 1441,
+            "path": "obj_parts/movableJawTop.obj",
+            "sha256": "da8b2f0c5e909bc234db855910130643adc913288d09f6ddb23f9502ad8b66cd"
+          },
+          {
+            "bytes": 1842,
+            "path": "obj_parts/movableJawVertical.obj",
+            "sha256": "5f2d5d1fc3de221a3c9cbc7a46f03703185cd41aefd65cd1f13bc41a434f0059"
+          },
+          {
+            "bytes": 25887,
+            "path": "obj_parts/screwWheel.obj",
+            "sha256": "edc5db1494c777afe24ac5610b84f97c34259d43544e4d3ffdb402dc0c6f340a"
+          },
+          {
+            "bytes": 8005,
+            "path": "obj_parts/group_output/body.obj",
+            "sha256": "b4d3d4335836c8d0be25014abe421d6ab397767808efa8eec967cddef1693ad4"
+          },
+          {
+            "bytes": 4084,
+            "path": "obj_parts/group_output/movableJaw.obj",
+            "sha256": "62284a730e2511871ae19099bece683242f6ff0cc58379ea9517e419d5db70a5"
+          },
+          {
+            "bytes": 46906,
+            "path": "obj_parts/group_output/wormScrew.obj",
+            "sha256": "4640cebee0dcd8146bbbca1d9036a6833b4c7f5421e0221ea483e4325453933d"
+          }
+        ],
+        "total_bytes": 137569
+      },
+      "package_binding_sha256": "a77b98e33c81f2262431619c564348f13efc5d4e038b51689bc4798c3e26a5f3",
+      "package_content_manifest_sha256": "f3aa50b16496b1cb7a847ce4bad8b1c4ba4073373bd980f512df5b5c1f1ffb94",
+      "package_relpath": "released_outputs/objects/adjustable_wrench/adjustable_wrench_027",
+      "primary_urdf_relpath": "released_outputs/objects/adjustable_wrench/adjustable_wrench_027/generated.urdf",
+      "protocol_id": "urdf_sim_ready_table4_lam_qualification_v1",
+      "range_evaluable_dof_count": 2,
+      "rel_path": "objects/adjustable_wrench/adjustable_wrench_027",
+      "rest_state_expected": 1,
+      "runtime_identity": {
+        "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_lam.py",
+        "adapter_runner_sha256": "cdba0dccbef991b2ed4a3f4e418f28725d4e233cad758b81431ce78cb1bbdd4a",
+        "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+        "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+        "numpy_version": "2.5.1",
+        "pybullet_api_version": 202010061,
+        "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+        "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+        "python_cache_tag": "cpython-312",
+        "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+        "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+        "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+        "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+        "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+        "scipy_version": "1.18.0"
+      },
+      "runtime_identity_sha256": "72cef157a77f1ca78d22e834bddfe4831f850d35066cf35b36044ea620cbadf1",
+      "scale_derivation": {
+        "protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+        "status": "N/E"
+      },
+      "scale_derivation_sha256": "d3ef8714b725ecd48e2d248bd7e7237a17d74d314a048388efff3e93c090266f",
+      "selection_hash": "fd8c16d5491f71eef38dabecdbf4b195ce318616c86f0e5b9ac97631008f4635",
+      "selection_rank": 1,
+      "single_state_expected": 42,
+      "sobol_state_expected": 64,
+      "source_manifest_record_sha256": "be6dd54e8862de2a3eda364fe892a58ef84deabf12aa267809d5e6a9a8378491",
+      "source_record_sha256": "8e9a6ab6b41fe284529c4ac19365825e3664d033e93476e1245eb42f27004a61",
+      "tier": "viable",
+      "unsafe_collision_mesh_reference_count": 0,
+      "urdf_sha256": "da90feb7c1bfce9ab4941dae9b33ac3e3a37c51e47afb215eb84f0c830b76e48",
+      "valid_tree": true
+    },
+    {
+      "asset_key": "viable:objects/cabinet_with_two_drawers/cabinet_with_two_drawers_007",
+      "audit_issue": null,
+      "category": "cabinet_with_two_drawers",
+      "collision_coverage_complete": true,
+      "collision_covered_link_count": 5,
+      "collision_element_count": 5,
+      "collision_mesh_files": [
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "obj_parts/group_output/bottom_left_door.obj",
+          "resolved_relpath": "released_outputs/objects/cabinet_with_two_drawers/cabinet_with_two_drawers_007/obj_parts/group_output/bottom_left_door.obj",
+          "safe": true,
+          "sha256": "f5a1e410e271ccd70baa2407c7b56d8a5917bf062f43ac4a2e0c9bf48b9ecd88",
+          "size_bytes": 25985
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "obj_parts/group_output/bottom_right_door.obj",
+          "resolved_relpath": "released_outputs/objects/cabinet_with_two_drawers/cabinet_with_two_drawers_007/obj_parts/group_output/bottom_right_door.obj",
+          "safe": true,
+          "sha256": "4bbb0c65792e5701c4c4933367bb7fa04ece649c386cae24b5db2d3fa61e7e25",
+          "size_bytes": 25722
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "obj_parts/group_output/cabinet_body.obj",
+          "resolved_relpath": "released_outputs/objects/cabinet_with_two_drawers/cabinet_with_two_drawers_007/obj_parts/group_output/cabinet_body.obj",
+          "safe": true,
+          "sha256": "4399d8e7e8ed3e26d7d3e4384d672c0ba6fb0cb630890bfa42a4a281481303f3",
+          "size_bytes": 29097
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "obj_parts/group_output/upper_drawer_1.obj",
+          "resolved_relpath": "released_outputs/objects/cabinet_with_two_drawers/cabinet_with_two_drawers_007/obj_parts/group_output/upper_drawer_1.obj",
+          "safe": true,
+          "sha256": "32afab07d90e1b935790dddfce9789a0bcd4cbe6a22a86fd37b75a782a3ab54b",
+          "size_bytes": 17369
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "obj_parts/group_output/upper_drawer_2.obj",
+          "resolved_relpath": "released_outputs/objects/cabinet_with_two_drawers/cabinet_with_two_drawers_007/obj_parts/group_output/upper_drawer_2.obj",
+          "safe": true,
+          "sha256": "d41e74193499b8c0825ed3d80b9319456d43725709aec55e4c5801edd9a1ee18",
+          "size_bytes": 17153
+        }
+      ],
+      "collision_mesh_inventory_sha256": "f85bb13791ea06921dc1675dce96fd54372d1679024be2d14ff302a9ad81c93c",
+      "dataset_id": "lam_0001",
+      "input_identity_sha256": "b4f9087b542005b595dcd1941bf2968f9c235303314cfbd1862ba7999bed0ae0",
+      "joint_specs": [
+        {
+          "lower": 0.0,
+          "name": "cabinet_to_upper_drawer_1",
+          "range_evaluable": true,
+          "type": "prismatic",
+          "upper": 1.0,
+          "xml_index": 0
+        },
+        {
+          "lower": 0.0,
+          "name": "cabinet_to_upper_drawer_2",
+          "range_evaluable": true,
+          "type": "prismatic",
+          "upper": 1.0,
+          "xml_index": 1
+        },
+        {
+          "lower": 0.0,
+          "name": "cabinet_to_bottom_left_door",
+          "range_evaluable": true,
+          "type": "revolute",
+          "upper": 1.57,
+          "xml_index": 2
+        },
+        {
+          "lower": -1.57,
+          "name": "cabinet_to_bottom_right_door",
+          "range_evaluable": true,
+          "type": "revolute",
+          "upper": 0.0,
+          "xml_index": 3
+        }
+      ],
+      "joint_specs_sha256": "fbdeae7cd5010cd2b793f12f75b5de6752265a103090de960af54ee165702f37",
+      "link_count": 5,
+      "missing_collision_mesh_reference_count": 0,
+      "model_urdf_sha256": "369d1307960d45072275abe66d04718014aa3aabb823476652e259c8ca0b2ee0",
+      "movable_dof_count": 4,
+      "object_bbox_diagonal_m": 11.217136714561525,
+      "object_release_id": "cabinet_with_two_drawers_007",
+      "order": 1,
+      "package_audit_success": true,
+      "package_binding": {
+        "content_manifest_sha256": "7c88c3ae2893555db5b705e308c2a2f77c9526aea02210d9da82d3b532f97e7c",
+        "file_count": 34,
+        "files": [
+          {
+            "bytes": 2848,
+            "path": "articulation.json",
+            "sha256": "6e6673030c416edbb3d9ff4fbfc1037082b2a955488fb8b5b0d388c430b2215e"
+          },
+          {
+            "bytes": 46681,
+            "path": "combined_assembly.obj",
+            "sha256": "ef197caae9973d8273f9c5cc10a97292e84883feb4fa2503bc3b0a004170a337"
+          },
+          {
+            "bytes": 12698,
+            "path": "export.js",
+            "sha256": "06cd142b0fc49f71edf2a9f4f48924c846fe76e434ca45ccdc4bd62a0abe0402"
+          },
+          {
+            "bytes": 2902,
+            "path": "generated.urdf",
+            "sha256": "369d1307960d45072275abe66d04718014aa3aabb823476652e259c8ca0b2ee0"
+          },
+          {
+            "bytes": 1283,
+            "path": "generation_config.yaml",
+            "sha256": "1e795a85e1973f8e4725b91275ba6b71604d92b9d3e661478708806f1811c60e"
+          },
+          {
+            "bytes": 78,
+            "path": "input_caption.txt",
+            "sha256": "9770b328dd060c3f8f9ebbd3bed6adeb6dfe092208697665bc627175aef62c1c"
+          },
+          {
+            "bytes": 8111,
+            "path": "links.json",
+            "sha256": "a69190eade33f626ac98bf9cf2b600b02b63d925b9901910da6a34248537d5d5"
+          },
+          {
+            "bytes": 18076,
+            "path": "log.txt",
+            "sha256": "008f465489470820dbc631ecbb2fc34136f012b1f219fe5d26f35d9d92b14b23"
+          },
+          {
+            "bytes": 21520,
+            "path": "workflow.json",
+            "sha256": "d834e4bf429a1e15b388b491dd3347ed53f73562034af38e39f12efa47de3a10"
+          },
+          {
+            "bytes": 2127,
+            "path": "obj_parts/body_back_panel.obj",
+            "sha256": "602fead31acdc5acaba45549c3e1cca8090fe080fa9255378a821c563d6fc872"
+          },
+          {
+            "bytes": 1469,
+            "path": "obj_parts/body_bottom_panel.obj",
+            "sha256": "2cce7771a9097ed79b10e2aeb62e41a7ea85931a7c051e931e1a8b4cdada9112"
+          },
+          {
+            "bytes": 2123,
+            "path": "obj_parts/body_horizontal_divider.obj",
+            "sha256": "79972ceb2a321a82782f3c74f5fa9ee47e4e9fa566f50a9bbe6bb3400f72f94c"
+          },
+          {
+            "bytes": 1803,
+            "path": "obj_parts/body_left_panel.obj",
+            "sha256": "22f63c702c211054d466f174447b4a93556e4fde0d14f3a6ab129ad1b4a8d3b2"
+          },
+          {
+            "bytes": 1780,
+            "path": "obj_parts/body_right_panel.obj",
+            "sha256": "784a23ec380bd03f9a1bd863132cef47fbe045562f9020ee74b43292db746097"
+          },
+          {
+            "bytes": 1442,
+            "path": "obj_parts/body_top_panel.obj",
+            "sha256": "226f0b97544a6486a889a37bffdeda7284c010acec9563658627ea757935e687"
+          },
+          {
+            "bytes": 1996,
+            "path": "obj_parts/body_vertical_drawer_divider.obj",
+            "sha256": "ae0ec6a21d88be956b20c20cfed337385cd1cddf8e109d2e287bfc4494f56eb0"
+          },
+          {
+            "bytes": 1779,
+            "path": "obj_parts/door_panel_mesh.obj",
+            "sha256": "7a192da2287b4dca11182d851b9f49037f1064760a30ccb865727b5f6302e1fb"
+          },
+          {
+            "bytes": 2141,
+            "path": "obj_parts/drawer_back_panel.obj",
+            "sha256": "aef4f92a1dd9dfea79bd3bd5adf095a9f7b81460f36babe8970ed2da5b05f3d5"
+          },
+          {
+            "bytes": 2143,
+            "path": "obj_parts/drawer_bottom_panel.obj",
+            "sha256": "5a2bd1399dfbccacc5c25bed315ebe2a966ebeca6117c7728cc51d9168d3447b"
+          },
+          {
+            "bytes": 1938,
+            "path": "obj_parts/drawer_front_panel.obj",
+            "sha256": "0104902b15979a3808d9ccf1c41216500fbccd25bce5bf1ba2c121bc6bd7f2c9"
+          },
+          {
+            "bytes": 2129,
+            "path": "obj_parts/drawer_left_panel.obj",
+            "sha256": "73a3dc54cc1b039743382c5454bd71698feb2edd9e4a41ba930bc5a51616a903"
+          },
+          {
+            "bytes": 2142,
+            "path": "obj_parts/drawer_right_panel.obj",
+            "sha256": "fe53b6a7f6cfa44ea03bb9fea36f8ea2db22c49a852b5bcfa921af8666eced8a"
+          },
+          {
+            "bytes": 2123,
+            "path": "obj_parts/handle_mesh.obj",
+            "sha256": "cb3ba3a06d1546d8241a7aa559b035f1afe727ec07aa642043d8cd606821ca77"
+          },
+          {
+            "bytes": 4969,
+            "path": "obj_parts/hinge1_mesh.obj",
+            "sha256": "16dbb1aef9a7df71ece4fcf190328abeb666b04060aea0a301e3da0cc13fafac"
+          },
+          {
+            "bytes": 4891,
+            "path": "obj_parts/hinge2_mesh.obj",
+            "sha256": "fcd55e17b9bb6ade162746511e222bc57ff8a362ad894546282984192c9a7adb"
+          },
+          {
+            "bytes": 2124,
+            "path": "obj_parts/rail_mesh_L1.obj",
+            "sha256": "918b24e8858dfbb899a4a470ca3b98a9dd3098fa470202736375b1feab3b019d"
+          },
+          {
+            "bytes": 2148,
+            "path": "obj_parts/rail_mesh_L2.obj",
+            "sha256": "3e4815d0a335c6faa86e28ddb048c9301d9b95dbe418e3a311a9d7f2038cd3e2"
+          },
+          {
+            "bytes": 2172,
+            "path": "obj_parts/rail_mesh_R1.obj",
+            "sha256": "48b57721c00d239aedf021e07f4053c8493c767aef597168d72c48db2f580e96"
+          },
+          {
+            "bytes": 2100,
+            "path": "obj_parts/rail_mesh_R2.obj",
+            "sha256": "5603cfd6ac65a0bf503aa823a55ed6ce2ea4c75e7817fae8a9eb783cd497c9c0"
+          },
+          {
+            "bytes": 25985,
+            "path": "obj_parts/group_output/bottom_left_door.obj",
+            "sha256": "f5a1e410e271ccd70baa2407c7b56d8a5917bf062f43ac4a2e0c9bf48b9ecd88"
+          },
+          {
+            "bytes": 25722,
+            "path": "obj_parts/group_output/bottom_right_door.obj",
+            "sha256": "4bbb0c65792e5701c4c4933367bb7fa04ece649c386cae24b5db2d3fa61e7e25"
+          },
+          {
+            "bytes": 29097,
+            "path": "obj_parts/group_output/cabinet_body.obj",
+            "sha256": "4399d8e7e8ed3e26d7d3e4384d672c0ba6fb0cb630890bfa42a4a281481303f3"
+          },
+          {
+            "bytes": 17369,
+            "path": "obj_parts/group_output/upper_drawer_1.obj",
+            "sha256": "32afab07d90e1b935790dddfce9789a0bcd4cbe6a22a86fd37b75a782a3ab54b"
+          },
+          {
+            "bytes": 17153,
+            "path": "obj_parts/group_output/upper_drawer_2.obj",
+            "sha256": "d41e74193499b8c0825ed3d80b9319456d43725709aec55e4c5801edd9a1ee18"
+          }
+        ],
+        "total_bytes": 275062
+      },
+      "package_binding_sha256": "0d4dc2f54f19521402e64caf64e2d58e4e3d99f002ee4bb082658fa5f283075d",
+      "package_content_manifest_sha256": "7c88c3ae2893555db5b705e308c2a2f77c9526aea02210d9da82d3b532f97e7c",
+      "package_relpath": "released_outputs/objects/cabinet_with_two_drawers/cabinet_with_two_drawers_007",
+      "primary_urdf_relpath": "released_outputs/objects/cabinet_with_two_drawers/cabinet_with_two_drawers_007/generated.urdf",
+      "protocol_id": "urdf_sim_ready_table4_lam_qualification_v1",
+      "range_evaluable_dof_count": 4,
+      "rel_path": "objects/cabinet_with_two_drawers/cabinet_with_two_drawers_007",
+      "rest_state_expected": 1,
+      "runtime_identity": {
+        "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_lam.py",
+        "adapter_runner_sha256": "cdba0dccbef991b2ed4a3f4e418f28725d4e233cad758b81431ce78cb1bbdd4a",
+        "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+        "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+        "numpy_version": "2.5.1",
+        "pybullet_api_version": 202010061,
+        "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+        "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+        "python_cache_tag": "cpython-312",
+        "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+        "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+        "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+        "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+        "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+        "scipy_version": "1.18.0"
+      },
+      "runtime_identity_sha256": "72cef157a77f1ca78d22e834bddfe4831f850d35066cf35b36044ea620cbadf1",
+      "scale_derivation": {
+        "collision_link_indices": [
+          -1,
+          0,
+          1,
+          2,
+          3
+        ],
+        "diagonal_m": 11.217136714561525,
+        "joint_state": "q=0 for every simulator joint",
+        "load_flags": 1048578,
+        "maximum_m": [
+          4.554000190734863,
+          3.0029999999999997,
+          1.354000023841858
+        ],
+        "minimum_m": [
+          -4.554000190734863,
+          -3.0029999999999997,
+          -1.2529999999999997
+        ],
+        "protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+        "status": "PASS"
+      },
+      "scale_derivation_sha256": "6d387a8545d784e5198505d6a68f51682d45d5c9e556810a285f3d9c2d47dc7c",
+      "selection_hash": "a6fe2db4408604e1e63860e5aff4ea0a9ac5b8c8ce2584d165cc9d98b5c6102b",
+      "selection_rank": 2,
+      "single_state_expected": 84,
+      "sobol_state_expected": 64,
+      "source_manifest_record_sha256": "c983be9927fe04abdf5b8aa3f883905043ebfc7817b20d9b128b503cbaebc6bb",
+      "source_record_sha256": "d43f40a387f2f5c08290ec35c253e150008c448f3a316f253126e6ee54befaf1",
+      "tier": "viable",
+      "unsafe_collision_mesh_reference_count": 0,
+      "urdf_sha256": "369d1307960d45072275abe66d04718014aa3aabb823476652e259c8ca0b2ee0",
+      "valid_tree": true
+    },
+    {
+      "asset_key": "viable:objects/lever_style_nutcracker_with_mechanical/lever_style_nutcracker_with_mechanical_000",
+      "audit_issue": null,
+      "category": "lever_style_nutcracker_with_mechanical",
+      "collision_coverage_complete": true,
+      "collision_covered_link_count": 5,
+      "collision_element_count": 5,
+      "collision_mesh_files": [
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "links/fixed_handle_frame.obj",
+          "resolved_relpath": "released_outputs/objects/lever_style_nutcracker_with_mechanical/lever_style_nutcracker_with_mechanical_000/links/fixed_handle_frame.obj",
+          "safe": true,
+          "sha256": "a161d317a04ce652a4ce6b1625308463d6316ffe0694959a3c99602bf5a919a8",
+          "size_bytes": 71829
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "links/lower_jaw_insert.obj",
+          "resolved_relpath": "released_outputs/objects/lever_style_nutcracker_with_mechanical/lever_style_nutcracker_with_mechanical_000/links/lower_jaw_insert.obj",
+          "safe": true,
+          "sha256": "bd3c81876317b446837b4d401a6aa79e2d6c05c165e605ca9a64f35262d9585a",
+          "size_bytes": 169568
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "links/main_pivot_axle.obj",
+          "resolved_relpath": "released_outputs/objects/lever_style_nutcracker_with_mechanical/lever_style_nutcracker_with_mechanical_000/links/main_pivot_axle.obj",
+          "safe": true,
+          "sha256": "f59ef2a859a5c7e130fa4e3a532d08dfe141cafa54f23a8ded0c0b3f81874a9d",
+          "size_bytes": 21464
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "links/moving_lever_frame.obj",
+          "resolved_relpath": "released_outputs/objects/lever_style_nutcracker_with_mechanical/lever_style_nutcracker_with_mechanical_000/links/moving_lever_frame.obj",
+          "safe": true,
+          "sha256": "70f884d77d1ed29ed537301fcb1f9075b879c40b634e318cf41124ece129ce35",
+          "size_bytes": 22917
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "links/upper_jaw_insert.obj",
+          "resolved_relpath": "released_outputs/objects/lever_style_nutcracker_with_mechanical/lever_style_nutcracker_with_mechanical_000/links/upper_jaw_insert.obj",
+          "safe": true,
+          "sha256": "e132c01e6374ed68775ab484e4400ff7f25281d12b441cf459150bc79c4ddc74",
+          "size_bytes": 107880
+        }
+      ],
+      "collision_mesh_inventory_sha256": "f48834f7f6e17e829f98e2f5638858016afd6517fb36ccce9a0a50763ce17601",
+      "dataset_id": "lam_0002",
+      "input_identity_sha256": "ac08bf79cf25f465aefafffae88918d4b89fc1ecee7a566a52d9cb5e26a2571b",
+      "joint_specs": [
+        {
+          "lower": 0.0,
+          "name": "handle_pivot_joint",
+          "range_evaluable": true,
+          "type": "revolute",
+          "upper": 1.047,
+          "xml_index": 2
+        }
+      ],
+      "joint_specs_sha256": "24b979f370b2ad32ff337bee67bce156222f80c5df355be6dd1dc03f784346dd",
+      "link_count": 5,
+      "missing_collision_mesh_reference_count": 0,
+      "model_urdf_sha256": "22f0772e00a347fd118ba01c9a28883499755bec4b631f76373f4f52d84498b0",
+      "movable_dof_count": 1,
+      "object_bbox_diagonal_m": 34.313733019311876,
+      "object_release_id": "lever_style_nutcracker_with_mechanical_000",
+      "order": 2,
+      "package_audit_success": true,
+      "package_binding": {
+        "content_manifest_sha256": "16e8b52356c57dd91ccd8c8cb0e75388989ce6557e3b172f0ed3562f058327b4",
+        "file_count": 57,
+        "files": [
+          {
+            "bytes": 262464,
+            "path": "combined_assembly.obj",
+            "sha256": "691f1e86c4c49d25981d78a6d66f6bb7ea3877d671f60903e2a5ba1dd4171f5e"
+          },
+          {
+            "bytes": 2473,
+            "path": "generated.urdf",
+            "sha256": "22f0772e00a347fd118ba01c9a28883499755bec4b631f76373f4f52d84498b0"
+          },
+          {
+            "bytes": 2703,
+            "path": "log.txt",
+            "sha256": "906b9b6c3bbbb244333ed656764803f27979c26da6f74da221e4319c377225ed"
+          },
+          {
+            "bytes": 16221,
+            "path": "_export_temp/export.js",
+            "sha256": "4cc6f9f3c2b5c21ee08b876cee71f2d97341a7dd99dec8d7e5336005ac513029"
+          },
+          {
+            "bytes": 16425,
+            "path": "_export_temp/export_failed_attempt_1.js",
+            "sha256": "f74367fea4b085f07dd485aba941333134e2edae62efaeeb448e5ae89ac3ade4"
+          },
+          {
+            "bytes": 16380,
+            "path": "_export_temp/export_fix_attempt_1_fix_1.js",
+            "sha256": "547528c6c731d8f28a749a814cc1395dded8a944811d139f392c80fa634d1fbe"
+          },
+          {
+            "bytes": 16221,
+            "path": "_export_temp/export_fixed.js",
+            "sha256": "4cc6f9f3c2b5c21ee08b876cee71f2d97341a7dd99dec8d7e5336005ac513029"
+          },
+          {
+            "bytes": 16428,
+            "path": "_export_temp/export_fixed_by_agent_1.js",
+            "sha256": "4e3d787fe0c13dbaef03d8212d04f411d0041f2ec955f5eca961ac6665f5a5e0"
+          },
+          {
+            "bytes": 18,
+            "path": "_export_temp/package.json",
+            "sha256": "e3d5a4a2d8551aa52c5a01d2a0efb2e06a2d9711b4f5c5f1d20de6e21807e2cd"
+          },
+          {
+            "bytes": 2311,
+            "path": "configs/articulation.json",
+            "sha256": "5e2f48b08f047f70ab428e32787c073c3a894efc98a6b3f150442296a46da704"
+          },
+          {
+            "bytes": 1092,
+            "path": "configs/generation_config.yaml",
+            "sha256": "1deb798460a97832d24f486bf24a32853a64c959b84d152a3065d77e9d3e894d"
+          },
+          {
+            "bytes": 12162,
+            "path": "configs/links.json",
+            "sha256": "2c48c4987352bcc572ced2d5eb189365f4ae46627ae6081e85031cc16ab03ae5"
+          },
+          {
+            "bytes": 4029,
+            "path": "configs/workflow.json",
+            "sha256": "88a7a3490cd2b592e6fb62bd4fe6cb17666dd1496f496e1f12629b6f1c261496"
+          },
+          {
+            "bytes": 71829,
+            "path": "links/fixed_handle_frame.obj",
+            "sha256": "a161d317a04ce652a4ce6b1625308463d6316ffe0694959a3c99602bf5a919a8"
+          },
+          {
+            "bytes": 169568,
+            "path": "links/lower_jaw_insert.obj",
+            "sha256": "bd3c81876317b446837b4d401a6aa79e2d6c05c165e605ca9a64f35262d9585a"
+          },
+          {
+            "bytes": 21464,
+            "path": "links/main_pivot_axle.obj",
+            "sha256": "f59ef2a859a5c7e130fa4e3a532d08dfe141cafa54f23a8ded0c0b3f81874a9d"
+          },
+          {
+            "bytes": 22917,
+            "path": "links/moving_lever_frame.obj",
+            "sha256": "70f884d77d1ed29ed537301fcb1f9075b879c40b634e318cf41124ece129ce35"
+          },
+          {
+            "bytes": 107880,
+            "path": "links/upper_jaw_insert.obj",
+            "sha256": "e132c01e6374ed68775ab484e4400ff7f25281d12b441cf459150bc79c4ddc74"
+          },
+          {
+            "bytes": 124348,
+            "path": "part_meshes/combined_parts.obj",
+            "sha256": "75ea28db0a2e2be9de5e9891456c986435e8212a237fb23e5acf870713f3dc29"
+          },
+          {
+            "bytes": 2208,
+            "path": "part_meshes/fixed_handle_frame/fixedEtchedPatternBottom.obj",
+            "sha256": "cc3c96324c62c7d1d84f4d75303e73d867170a0adeda388ed11ec37937e8b8f4"
+          },
+          {
+            "bytes": 2121,
+            "path": "part_meshes/fixed_handle_frame/fixedEtchedPatternTop.obj",
+            "sha256": "14acd189742107fd933d6ec23949a2c7e8f690b4891076d10d5c75f217589beb"
+          },
+          {
+            "bytes": 1988,
+            "path": "part_meshes/fixed_handle_frame/fixedHandleBaseFlare.obj",
+            "sha256": "be8363038da3d4840b89320fd8982ecbb25d2264cdf2ad3daebe94b60e82826a"
+          },
+          {
+            "bytes": 1531,
+            "path": "part_meshes/fixed_handle_frame/fixedHandleMainBody.obj",
+            "sha256": "b926f17b3832e27755a5a61f4ceca87808c6225c23f4d1cfbefa2fe8818ab9cb"
+          },
+          {
+            "bytes": 1714,
+            "path": "part_meshes/fixed_handle_frame/fixedJawSupportSection.obj",
+            "sha256": "f14123c927dc9e68937c3c287dcc5bd6641a6ebf34cacee696fc9ec805d2b504"
+          },
+          {
+            "bytes": 1771,
+            "path": "part_meshes/fixed_handle_frame/fixedPivotPlateLeft.obj",
+            "sha256": "04aba898d8403627e71dd6a2e694737e0ef612041703b32a2aca1e7497da156b"
+          },
+          {
+            "bytes": 1748,
+            "path": "part_meshes/fixed_handle_frame/fixedPivotPlateRight.obj",
+            "sha256": "1b8fd3474d08fdcd7261e77258526d44fd10c8fdb76fe04c134af96c23f90244"
+          },
+          {
+            "bytes": 1984,
+            "path": "part_meshes/fixed_handle_frame/lower_handle_wood_inlay_left.obj",
+            "sha256": "20e3e3dc73b3248411a6f10951a6abb4ce339316e7d18dcb7025eafffc9a1c60"
+          },
+          {
+            "bytes": 1961,
+            "path": "part_meshes/fixed_handle_frame/lower_handle_wood_inlay_right.obj",
+            "sha256": "53b9bd1444681095a66e1674b48552c705ceaa3dbd62707bad4fb6c7e3dda897"
+          },
+          {
+            "bytes": 12022,
+            "path": "part_meshes/fixed_handle_frame/pivot_collar_left.obj",
+            "sha256": "18ec41c4026b1b2d88bedb9b99ff8af344256a061895f37d0fa46877b7b6b09b"
+          },
+          {
+            "bytes": 11923,
+            "path": "part_meshes/fixed_handle_frame/pivot_collar_right.obj",
+            "sha256": "4e5f25bc373a12e79dd34f15dc5a88c7255bebeec3ec2ea7979ce2e107781002"
+          },
+          {
+            "bytes": 26865,
+            "path": "part_meshes/lower_jaw_insert/lowerJawMesh.obj",
+            "sha256": "0a5e115d8ae5d7eff5ce3189e3ad8bad6a79a6b47002ead945f3ee3ee16af7ea"
+          },
+          {
+            "bytes": 4173,
+            "path": "part_meshes/lower_jaw_insert/unnamed_mesh_0.obj",
+            "sha256": "54de582f5f92c82b26b5ff19fe495a2e9780803160c3a3555da55a9a46cfbb0c"
+          },
+          {
+            "bytes": 4305,
+            "path": "part_meshes/lower_jaw_insert/unnamed_mesh_1.obj",
+            "sha256": "bda1d93b2f16cad758bcd21fd3681d7a712e8382399bc44d38deade25dae61c2"
+          },
+          {
+            "bytes": 4221,
+            "path": "part_meshes/lower_jaw_insert/unnamed_mesh_2.obj",
+            "sha256": "3f58467bbb38e2a9251a144e897ae26ec48531fc5756f1ccd03b5cfd094f8a8f"
+          },
+          {
+            "bytes": 4345,
+            "path": "part_meshes/lower_jaw_insert/unnamed_mesh_3.obj",
+            "sha256": "30d9422ee0d6daed11bfffb26cfbc8722c56a8d40cddee624281650408bc60bb"
+          },
+          {
+            "bytes": 4393,
+            "path": "part_meshes/lower_jaw_insert/unnamed_mesh_4.obj",
+            "sha256": "2e76277442e8ec105ff45b465d93de37a672639ff29eb71d3a23b73bbdacafe8"
+          },
+          {
+            "bytes": 4385,
+            "path": "part_meshes/lower_jaw_insert/unnamed_mesh_5.obj",
+            "sha256": "d2f3c1db1c379e6c93804069bb1db45ce1367ea46d7a0fcb9f7f7a787c41c187"
+          },
+          {
+            "bytes": 4265,
+            "path": "part_meshes/lower_jaw_insert/unnamed_mesh_6.obj",
+            "sha256": "4b05009fd0b054876bf417b0cb24f4b157531211d1a015091bc8fe6487679a40"
+          },
+          {
+            "bytes": 4345,
+            "path": "part_meshes/lower_jaw_insert/unnamed_mesh_7.obj",
+            "sha256": "fd8d806228214a1c20c039cc9dabc54b0dc0de708b7d5b0ad63c307f5cff4781"
+          },
+          {
+            "bytes": 11078,
+            "path": "part_meshes/main_pivot_axle/pivotAxleMesh.obj",
+            "sha256": "87cf79ccb137a0283b5c68a82267056c55a9aab3dee1575ddce28a1388b4cb5a"
+          },
+          {
+            "bytes": 2658,
+            "path": "part_meshes/moving_lever_frame/mainLeverArm.obj",
+            "sha256": "c6b43dab15a128336e9823a48cb49cd742f2bfbd46f8fa0fba6dc04cb61582fc"
+          },
+          {
+            "bytes": 2671,
+            "path": "part_meshes/moving_lever_frame/movingEtchedPatternBottom.obj",
+            "sha256": "431d2071a1c3792c0498e9730ceb0433ad408c76b282bc46f9f4428812596015"
+          },
+          {
+            "bytes": 2674,
+            "path": "part_meshes/moving_lever_frame/movingEtchedPatternTop.obj",
+            "sha256": "6e3172b095e863d1cd827f2e786024f307de1cdfc4373ed0ef0db3a9b7f563a5"
+          },
+          {
+            "bytes": 2659,
+            "path": "part_meshes/moving_lever_frame/movingLeverPivotEnd.obj",
+            "sha256": "c00ae825fc3c5383d73503d1d2f31d9ca71a84c20e083bdcf6e7d90ece8e1697"
+          },
+          {
+            "bytes": 2512,
+            "path": "part_meshes/moving_lever_frame/upper_handle_wood_inlay_left.obj",
+            "sha256": "0d61d261391c36d22217e604052349b6ef91b3fcca42971a27e2a9f8cfa69421"
+          },
+          {
+            "bytes": 2489,
+            "path": "part_meshes/moving_lever_frame/upper_handle_wood_inlay_right.obj",
+            "sha256": "7d1997483f4c1e6acf103b75e958b5aa4c62cb967a5d5d692bbd12dbea00d0c7"
+          },
+          {
+            "bytes": 28781,
+            "path": "part_meshes/upper_jaw_insert/upperJawMesh.obj",
+            "sha256": "252beb778f4c9096624f4e5c9330fb34f0863f2c719fe49daa0bed3d21057182"
+          },
+          {
+            "bytes": 1132,
+            "path": "pipeline_logs/pipeline_run.log",
+            "sha256": "8c062f8bd7d6f243efd71f084ea1fd88da659f2bc922b8b77d326e90a3db8152"
+          },
+          {
+            "bytes": 25784,
+            "path": "pipeline_logs/stage_1_linker/llm_interaction.txt",
+            "sha256": "2f732c0905368255d47255580d743fe366002a83c996a3acd642239fad386728"
+          },
+          {
+            "bytes": 571,
+            "path": "pipeline_logs/stage_1_linker/metadata.json",
+            "sha256": "ef868ee9b5e2b054ac50835cc0f8f446e8cc325ee4979678f10a1301932f28ae"
+          },
+          {
+            "bytes": 3966,
+            "path": "pipeline_logs/stage_1_linker/system_prompt.txt",
+            "sha256": "a215f830faf25e3f67e011476b1576be511173d544be5ed531ed8b66f3ce0210"
+          },
+          {
+            "bytes": 46598,
+            "path": "pipeline_logs/stage_2_shape/llm_interaction.txt",
+            "sha256": "598c39de67262ddc3d533438347ca54c5b0e4d3ee8e4cd35f0e1c5d06d6f8bdf"
+          },
+          {
+            "bytes": 13038,
+            "path": "pipeline_logs/stage_2_shape/metadata.json",
+            "sha256": "d782d755f3904a92feff1e593ee657ed15b9cde5163b306596150f1a39119324"
+          },
+          {
+            "bytes": 96974,
+            "path": "pipeline_logs/stage_2_shape/system_prompt.txt",
+            "sha256": "bae8655915c83d041d4255d347569824375dce709cb687c64a996d5b645b3c19"
+          },
+          {
+            "bytes": 10381,
+            "path": "pipeline_logs/stage_3_articulation/llm_interaction.txt",
+            "sha256": "4d5205877daa7ac12e30d7df2c6abc453ac60100ac68c5cc4e201b741e2b0b18"
+          },
+          {
+            "bytes": 5751,
+            "path": "pipeline_logs/stage_3_articulation/metadata.json",
+            "sha256": "adc0b39c9846a83addc4fc043cad7cb4603eb51e361eec122c93c91b80a327fd"
+          },
+          {
+            "bytes": 14316,
+            "path": "pipeline_logs/stage_3_articulation/system_prompt.txt",
+            "sha256": "1c9a1fd7b9369ed06e63747ba2cf5d2f060c64075fc1d277059a4c0920f82164"
+          }
+        ],
+        "total_bytes": 1263234
+      },
+      "package_binding_sha256": "0b97f38556704295e2903efb837d54378b157cdc08588bec6ef5274fd1a2835d",
+      "package_content_manifest_sha256": "16e8b52356c57dd91ccd8c8cb0e75388989ce6557e3b172f0ed3562f058327b4",
+      "package_relpath": "released_outputs/objects/lever_style_nutcracker_with_mechanical/lever_style_nutcracker_with_mechanical_000",
+      "primary_urdf_relpath": "released_outputs/objects/lever_style_nutcracker_with_mechanical/lever_style_nutcracker_with_mechanical_000/generated.urdf",
+      "protocol_id": "urdf_sim_ready_table4_lam_qualification_v1",
+      "range_evaluable_dof_count": 1,
+      "rel_path": "objects/lever_style_nutcracker_with_mechanical/lever_style_nutcracker_with_mechanical_000",
+      "rest_state_expected": 1,
+      "runtime_identity": {
+        "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_lam.py",
+        "adapter_runner_sha256": "cdba0dccbef991b2ed4a3f4e418f28725d4e233cad758b81431ce78cb1bbdd4a",
+        "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+        "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+        "numpy_version": "2.5.1",
+        "pybullet_api_version": 202010061,
+        "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+        "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+        "python_cache_tag": "cpython-312",
+        "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+        "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+        "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+        "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+        "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+        "scipy_version": "1.18.0"
+      },
+      "runtime_identity_sha256": "72cef157a77f1ca78d22e834bddfe4831f850d35066cf35b36044ea620cbadf1",
+      "scale_derivation": {
+        "collision_link_indices": [
+          -1,
+          0,
+          1,
+          2,
+          3
+        ],
+        "diagonal_m": 34.313733019311876,
+        "joint_state": "q=0 for every simulator joint",
+        "load_flags": 1048578,
+        "maximum_m": [
+          19.5541880645752,
+          9.520025543212892,
+          3.0029999999999997
+        ],
+        "minimum_m": [
+          -12.603000381469725,
+          -0.8373616256713868,
+          -3.0029999999999997
+        ],
+        "protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+        "status": "PASS"
+      },
+      "scale_derivation_sha256": "668dff3203bd35566997522895cbe9fe2b10724395be29d4a9264d8b40880c36",
+      "selection_hash": "2a88f8d1701a799deab04d683b9344f06f7b789b6a3ead22819710426bc8a2fb",
+      "selection_rank": 3,
+      "single_state_expected": 21,
+      "sobol_state_expected": 64,
+      "source_manifest_record_sha256": "744c106ddf3fd2a68d7b3c0d848e7cf2550031dd39c45d01b61ea4c39b7db5e8",
+      "source_record_sha256": "115222fb8c77b7dedf25a92bc509cb3af1db9127f4e74aefc1bb1286a1aec33b",
+      "tier": "viable",
+      "unsafe_collision_mesh_reference_count": 0,
+      "urdf_sha256": "22f0772e00a347fd118ba01c9a28883499755bec4b631f76373f4f52d84498b0",
+      "valid_tree": true
+    },
+    {
+      "asset_key": "viable:objects/sport_motorcycle_with_adjustable_suspension/sport_motorcycle_with_adjustable_suspension_001",
+      "audit_issue": null,
+      "category": "sport_motorcycle_with_adjustable_suspension",
+      "collision_coverage_complete": true,
+      "collision_covered_link_count": 12,
+      "collision_element_count": 12,
+      "collision_mesh_files": [
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "links/adjustable_front_suspension.obj",
+          "resolved_relpath": "released_outputs/objects/sport_motorcycle_with_adjustable_suspension/sport_motorcycle_with_adjustable_suspension_001/links/adjustable_front_suspension.obj",
+          "safe": true,
+          "sha256": "7b52d7d0ee0912538abee360219a0c47c41ee85a44851c566778fa7c89d74779",
+          "size_bytes": 40732
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "links/adjustable_rear_suspension.obj",
+          "resolved_relpath": "released_outputs/objects/sport_motorcycle_with_adjustable_suspension/sport_motorcycle_with_adjustable_suspension_001/links/adjustable_rear_suspension.obj",
+          "safe": true,
+          "sha256": "e2ad5f0401dc39089aff65ac68ff2d0968e239e320f5a525d62925afaa267290",
+          "size_bytes": 184394
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "links/engine.obj",
+          "resolved_relpath": "released_outputs/objects/sport_motorcycle_with_adjustable_suspension/sport_motorcycle_with_adjustable_suspension_001/links/engine.obj",
+          "safe": true,
+          "sha256": "ebd91357ead234d52da57eceb9861b5aaecfada1e718476685d3ffbc4c28c6b9",
+          "size_bytes": 73128
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "links/frame.obj",
+          "resolved_relpath": "released_outputs/objects/sport_motorcycle_with_adjustable_suspension/sport_motorcycle_with_adjustable_suspension_001/links/frame.obj",
+          "safe": true,
+          "sha256": "1bfd04fa88318f6acf6f76e25d6c1606693bb4d99125603a6afe563a2ef00f49",
+          "size_bytes": 680297
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "links/front_fork.obj",
+          "resolved_relpath": "released_outputs/objects/sport_motorcycle_with_adjustable_suspension/sport_motorcycle_with_adjustable_suspension_001/links/front_fork.obj",
+          "safe": true,
+          "sha256": "dab5d7d50c6b04a0f069fb4ac294d72b753a5fec4866867b80400a7c85e38d8f",
+          "size_bytes": 167575
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "links/front_wheel.obj",
+          "resolved_relpath": "released_outputs/objects/sport_motorcycle_with_adjustable_suspension/sport_motorcycle_with_adjustable_suspension_001/links/front_wheel.obj",
+          "safe": true,
+          "sha256": "eebc8ddd22a796eb9f5980413f93b0cb21f61c36fc30a78b367d5b9bc51436de",
+          "size_bytes": 1345566
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "links/fuel_tank.obj",
+          "resolved_relpath": "released_outputs/objects/sport_motorcycle_with_adjustable_suspension/sport_motorcycle_with_adjustable_suspension_001/links/fuel_tank.obj",
+          "safe": true,
+          "sha256": "94524d8b29a4b9716de0dc03bdfcf0efe6676be7758213023c7ff32678177ee7",
+          "size_bytes": 158594
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "links/handlebars.obj",
+          "resolved_relpath": "released_outputs/objects/sport_motorcycle_with_adjustable_suspension/sport_motorcycle_with_adjustable_suspension_001/links/handlebars.obj",
+          "safe": true,
+          "sha256": "f63066217850629e8a8ae4f3d778a9cf4cb1d34dd8ea5a8b9d098f102d2e8e32",
+          "size_bytes": 78391
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "links/rear_swingarm.obj",
+          "resolved_relpath": "released_outputs/objects/sport_motorcycle_with_adjustable_suspension/sport_motorcycle_with_adjustable_suspension_001/links/rear_swingarm.obj",
+          "safe": true,
+          "sha256": "a08ac71d9d6d9128fdadb2d61370a064c0403fd9d2b3c8145ef942e085f05674",
+          "size_bytes": 60732
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "links/rear_wheel.obj",
+          "resolved_relpath": "released_outputs/objects/sport_motorcycle_with_adjustable_suspension/sport_motorcycle_with_adjustable_suspension_001/links/rear_wheel.obj",
+          "safe": true,
+          "sha256": "638b35001f415c6afeda05dc5801f54279c5f80e08bfcf50f711035e781c2bde",
+          "size_bytes": 1388727
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "links/seat.obj",
+          "resolved_relpath": "released_outputs/objects/sport_motorcycle_with_adjustable_suspension/sport_motorcycle_with_adjustable_suspension_001/links/seat.obj",
+          "safe": true,
+          "sha256": "630f794cd7f0ebbafa752b5cfbe800f8827b6421f0acae98bccaecf7a00679f8",
+          "size_bytes": 6166
+        },
+        {
+          "exists": true,
+          "is_symlink": false,
+          "path": "links/shock_spring_group.obj",
+          "resolved_relpath": "released_outputs/objects/sport_motorcycle_with_adjustable_suspension/sport_motorcycle_with_adjustable_suspension_001/links/shock_spring_group.obj",
+          "safe": true,
+          "sha256": "72923795d8ae0b05a10bd43702312ca356bd94cc78800651c24d096081a6f0ba",
+          "size_bytes": 3175629
+        }
+      ],
+      "collision_mesh_inventory_sha256": "55fe0e6ab162dcf3b2acda528722d537ed599f79998ec3e0eba543f26dc51587",
+      "dataset_id": "lam_0003",
+      "input_identity_sha256": "1d66d24fde89bf83aa585405a13d65c47784708886ebd76df071b5430978cec1",
+      "joint_specs": [
+        {
+          "lower": -0.7,
+          "name": "steering_joint",
+          "range_evaluable": true,
+          "type": "revolute",
+          "upper": 0.7,
+          "xml_index": 3
+        },
+        {
+          "lower": null,
+          "name": "front_axle",
+          "range_evaluable": true,
+          "type": "continuous",
+          "upper": null,
+          "xml_index": 6
+        },
+        {
+          "lower": -0.26,
+          "name": "swingarm_pivot",
+          "range_evaluable": true,
+          "type": "revolute",
+          "upper": 0.26,
+          "xml_index": 7
+        },
+        {
+          "lower": null,
+          "name": "rear_axle",
+          "range_evaluable": true,
+          "type": "continuous",
+          "upper": null,
+          "xml_index": 8
+        },
+        {
+          "lower": 0.0,
+          "name": "rear_shock_mount",
+          "range_evaluable": true,
+          "type": "prismatic",
+          "upper": 0.15,
+          "xml_index": 9
+        }
+      ],
+      "joint_specs_sha256": "bb78996e072cec0ac02c8c82553a5f9b4627502cc3f417171cba832ab9c957ec",
+      "link_count": 12,
+      "missing_collision_mesh_reference_count": 0,
+      "model_urdf_sha256": "bcad8d2fa69036fa25bb48d8c4687dbccbe1ea5f5b615f46f30f550b236aa0ac",
+      "movable_dof_count": 5,
+      "object_bbox_diagonal_m": 7.416503380089432,
+      "object_release_id": "sport_motorcycle_with_adjustable_suspension_001",
+      "order": 3,
+      "package_audit_success": true,
+      "package_binding": {
+        "content_manifest_sha256": "8ea98979d779224d8f719725138818536f25b425d02c77579b802bc5fd0674d0",
+        "file_count": 117,
+        "files": [
+          {
+            "bytes": 3972160,
+            "path": "combined_assembly.obj",
+            "sha256": "79126af621e3942ac5743926d984ab30ba05564a3977be3ef4ec94cda29b418a"
+          },
+          {
+            "bytes": 6267,
+            "path": "generated.urdf",
+            "sha256": "bcad8d2fa69036fa25bb48d8c4687dbccbe1ea5f5b615f46f30f550b236aa0ac"
+          },
+          {
+            "bytes": 1093,
+            "path": "log.txt",
+            "sha256": "8b7f2fca8d0016006ac95f18c6d641b9706f5142afd79aa06a2a9ede5d65cfdb"
+          },
+          {
+            "bytes": 22919,
+            "path": "_export_temp/export.js",
+            "sha256": "36df5194a6750a14505d03c60615b62803c39c29b6fb963b36c3f581f70b54cb"
+          },
+          {
+            "bytes": 18,
+            "path": "_export_temp/package.json",
+            "sha256": "e3d5a4a2d8551aa52c5a01d2a0efb2e06a2d9711b4f5c5f1d20de6e21807e2cd"
+          },
+          {
+            "bytes": 4636,
+            "path": "configs/articulation.json",
+            "sha256": "7865c5fec61d88e3e285d14940ed27d048309d0ba015f92d264787e28031b9e6"
+          },
+          {
+            "bytes": 1271,
+            "path": "configs/generation_config.yaml",
+            "sha256": "f934781be7382912b41e14a3617f7b4523c4a9f1af27e76f39c6466358ed414b"
+          },
+          {
+            "bytes": 7973,
+            "path": "configs/links.json",
+            "sha256": "491564c2372961f5bb6fd441839bad8521b850bd5a07acf56b7d5049abd8034d"
+          },
+          {
+            "bytes": 9243,
+            "path": "configs/workflow.json",
+            "sha256": "29788b7404dad78474fb27a2778c9190972136e5a6268830c9f38c352929ec03"
+          },
+          {
+            "bytes": 40732,
+            "path": "links/adjustable_front_suspension.obj",
+            "sha256": "7b52d7d0ee0912538abee360219a0c47c41ee85a44851c566778fa7c89d74779"
+          },
+          {
+            "bytes": 184394,
+            "path": "links/adjustable_rear_suspension.obj",
+            "sha256": "e2ad5f0401dc39089aff65ac68ff2d0968e239e320f5a525d62925afaa267290"
+          },
+          {
+            "bytes": 73128,
+            "path": "links/engine.obj",
+            "sha256": "ebd91357ead234d52da57eceb9861b5aaecfada1e718476685d3ffbc4c28c6b9"
+          },
+          {
+            "bytes": 680297,
+            "path": "links/frame.obj",
+            "sha256": "1bfd04fa88318f6acf6f76e25d6c1606693bb4d99125603a6afe563a2ef00f49"
+          },
+          {
+            "bytes": 167575,
+            "path": "links/front_fork.obj",
+            "sha256": "dab5d7d50c6b04a0f069fb4ac294d72b753a5fec4866867b80400a7c85e38d8f"
+          },
+          {
+            "bytes": 1345566,
+            "path": "links/front_wheel.obj",
+            "sha256": "eebc8ddd22a796eb9f5980413f93b0cb21f61c36fc30a78b367d5b9bc51436de"
+          },
+          {
+            "bytes": 158594,
+            "path": "links/fuel_tank.obj",
+            "sha256": "94524d8b29a4b9716de0dc03bdfcf0efe6676be7758213023c7ff32678177ee7"
+          },
+          {
+            "bytes": 78391,
+            "path": "links/handlebars.obj",
+            "sha256": "f63066217850629e8a8ae4f3d778a9cf4cb1d34dd8ea5a8b9d098f102d2e8e32"
+          },
+          {
+            "bytes": 60732,
+            "path": "links/rear_swingarm.obj",
+            "sha256": "a08ac71d9d6d9128fdadb2d61370a064c0403fd9d2b3c8145ef942e085f05674"
+          },
+          {
+            "bytes": 1388727,
+            "path": "links/rear_wheel.obj",
+            "sha256": "638b35001f415c6afeda05dc5801f54279c5f80e08bfcf50f711035e781c2bde"
+          },
+          {
+            "bytes": 6166,
+            "path": "links/seat.obj",
+            "sha256": "630f794cd7f0ebbafa752b5cfbe800f8827b6421f0acae98bccaecf7a00679f8"
+          },
+          {
+            "bytes": 3175629,
+            "path": "links/shock_spring_group.obj",
+            "sha256": "72923795d8ae0b05a10bd43702312ca356bd94cc78800651c24d096081a6f0ba"
+          },
+          {
+            "bytes": 3972160,
+            "path": "part_meshes/combined_parts.obj",
+            "sha256": "281dbbd415fde92470bec02cea8d5617e494be3339c6e5fa310115c5ed4ba706"
+          },
+          {
+            "bytes": 20141,
+            "path": "part_meshes/adjustable_front_suspension/left_preload_adjuster.obj",
+            "sha256": "e57677f4e7b79ae7f09bba174f232096c57d6dcbc9476e911d4903811152b0f6"
+          },
+          {
+            "bytes": 20286,
+            "path": "part_meshes/adjustable_front_suspension/right_preload_adjuster.obj",
+            "sha256": "668d3bd41e96749dffc26679568b9abd972cc4563f8cf939513a57321ee5a9ad"
+          },
+          {
+            "bytes": 27377,
+            "path": "part_meshes/adjustable_rear_suspension/shock_body.obj",
+            "sha256": "2d96101996bdaad0be080088e125cbc435aa6c7364d3718037549c3c4813722c"
+          },
+          {
+            "bytes": 77922,
+            "path": "part_meshes/adjustable_rear_suspension/shock_eyelet_bottom.obj",
+            "sha256": "cfd3294cff037ef0071504d16b172477f029d0c785a1d2d3dbb034e21d8e329f"
+          },
+          {
+            "bytes": 77869,
+            "path": "part_meshes/adjustable_rear_suspension/shock_eyelet_top.obj",
+            "sha256": "9eca18bd992df770de75087f5f011f4254c9c296c49085a369c6021f8888be07"
+          },
+          {
+            "bytes": 25841,
+            "path": "part_meshes/engine/cylinder_head_1.obj",
+            "sha256": "dad181b7ad4848bdf76cfe523713eff4097f28f7c452a2a097d1ee9706f2282c"
+          },
+          {
+            "bytes": 25973,
+            "path": "part_meshes/engine/cylinder_head_2.obj",
+            "sha256": "088902225ad2ff822817bef802112f4e1d5f14f8f6dc02a2b9ed3c4b28ce1954"
+          },
+          {
+            "bytes": 2838,
+            "path": "part_meshes/engine/engine_block.obj",
+            "sha256": "281c8f6da477fd69511f93568821dc10fa8fc934c0ef8c15e9bbf19df0d35862"
+          },
+          {
+            "bytes": 17750,
+            "path": "part_meshes/engine/exhaust_stub.obj",
+            "sha256": "dbc8b4684d50b1ca7b6547302a59d9b36d92c42f5392bc069a807e53aad7a465"
+          },
+          {
+            "bytes": 2777,
+            "path": "part_meshes/frame/engine_mount_front_left.obj",
+            "sha256": "1b4b270129aca17fe732f6f4f57c43157ec8d70436aa881f3ac74b6272d4638d"
+          },
+          {
+            "bytes": 2814,
+            "path": "part_meshes/frame/engine_mount_front_right.obj",
+            "sha256": "8047f8e42007f1629c98ade3dce2159dd23fe31525a68a80cf100689811403ab"
+          },
+          {
+            "bytes": 2794,
+            "path": "part_meshes/frame/engine_mount_rear_left.obj",
+            "sha256": "ae6e31346fbfe284ac64601b052cdf2d6fa361de565999d1089501087f7cdee7"
+          },
+          {
+            "bytes": 2831,
+            "path": "part_meshes/frame/engine_mount_rear_right.obj",
+            "sha256": "15d69467e50a51fe54d736b9c31d8caf47d7f2c277104a397abd54c43c73c445"
+          },
+          {
+            "bytes": 30991,
+            "path": "part_meshes/frame/head_tube.obj",
+            "sha256": "82a8b716dbb3381d0a01ed09fd7aa059cb9932ba02a3ccb6a86edc6cff25441c"
+          },
+          {
+            "bytes": 31603,
+            "path": "part_meshes/frame/main_spar_left.obj",
+            "sha256": "af13e640a4a08322a507f4e039cba898f96a14f0ea34f4ceafea17f1f1f46d46"
+          },
+          {
+            "bytes": 31820,
+            "path": "part_meshes/frame/main_spar_right.obj",
+            "sha256": "f9d643133dd3e562c92230dc9745b859c71c36f94326abe0c8697ed5c11de8da"
+          },
+          {
+            "bytes": 18642,
+            "path": "part_meshes/frame/pivot_cross_brace.obj",
+            "sha256": "972939c7ad0c1bea0fe2102e3b027f09a83b003a658d57de752eb8695619abf5"
+          },
+          {
+            "bytes": 19439,
+            "path": "part_meshes/frame/subframe_cross_brace.obj",
+            "sha256": "cd6c0918a67a8cbeb6ace3e33ec92e1125cdca67b9769b06e4bd6c29aa1d94c1"
+          },
+          {
+            "bytes": 22020,
+            "path": "part_meshes/frame/subframe_left.obj",
+            "sha256": "a1e5ecfb0a64cb9f410dd4246388575005f419ca8c6edaca230e9b621c000db1"
+          },
+          {
+            "bytes": 22165,
+            "path": "part_meshes/frame/subframe_right.obj",
+            "sha256": "0c2508dce706c072485f68128b5ec3ddca430b6d9a2491de838986c76da285e4"
+          },
+          {
+            "bytes": 485509,
+            "path": "part_meshes/frame/top_spine_tube.obj",
+            "sha256": "080f42cab1a2873887220b3cb88fe49934f5887beeb73f181c7d7acfe382a180"
+          },
+          {
+            "bytes": 19295,
+            "path": "part_meshes/front_fork/front_axle.obj",
+            "sha256": "23b18ce5d95575e9f36a2bcd33cfc9e8a8713e9c5e17a0a715af8746f0eb8111"
+          },
+          {
+            "bytes": 3097,
+            "path": "part_meshes/front_fork/front_brake_caliper.obj",
+            "sha256": "254799a230a0939beb897d893172ba9248628c37629940de6e274f095a647fa5"
+          },
+          {
+            "bytes": 26986,
+            "path": "part_meshes/front_fork/left_slider.obj",
+            "sha256": "24d5d9a2998c829d0b6a494268e29d2cd4cd0b3758d3d186696f373c3d7365b2"
+          },
+          {
+            "bytes": 27015,
+            "path": "part_meshes/front_fork/left_stanchion.obj",
+            "sha256": "20143a07495a20a155a4ac255b33f8a426f8a81fd5a87f581bf09ad84148a647"
+          },
+          {
+            "bytes": 4029,
+            "path": "part_meshes/front_fork/lower_triple_clamp.obj",
+            "sha256": "45cc37102ae83bac206bffdbb03adec74bf23eaa67fb64c30d1758f683ab1198"
+          },
+          {
+            "bytes": 27179,
+            "path": "part_meshes/front_fork/right_slider.obj",
+            "sha256": "2e1e11dce0c9e51143efb1ff0423eadd2b3407badb653d0d6a19938a499413db"
+          },
+          {
+            "bytes": 27208,
+            "path": "part_meshes/front_fork/right_stanchion.obj",
+            "sha256": "a7f8e5981606d57c6a45529e912e76374b3e0260a1751fd0f00815ee2c6878fb"
+          },
+          {
+            "bytes": 26109,
+            "path": "part_meshes/front_fork/steering_stem.obj",
+            "sha256": "fdcd960b8a7a7c9209289745c703ac412d93b6faef31ffe212d42f7ba0446ef7"
+          },
+          {
+            "bytes": 3993,
+            "path": "part_meshes/front_fork/upper_triple_clamp.obj",
+            "sha256": "f36c19dcfe462b2ebb71b5deb751b7eac45dbc858990b7ded9b29d60da09db18"
+          },
+          {
+            "bytes": 39885,
+            "path": "part_meshes/front_wheel/front_brake_disc.obj",
+            "sha256": "92cc26d639c59b26e2babaa760cdf8a893bf9d03323a917b42a3250aa498bc38"
+          },
+          {
+            "bytes": 22908,
+            "path": "part_meshes/front_wheel/front_hub.obj",
+            "sha256": "49b46d3cce74537237962577faf6d333cfc78aa0dc135bc95f045967c56c1a84"
+          },
+          {
+            "bytes": 417792,
+            "path": "part_meshes/front_wheel/front_rim.obj",
+            "sha256": "63768f669d869a1980791b278377fb069daa5d3262934879884b4180d103f079"
+          },
+          {
+            "bytes": 11973,
+            "path": "part_meshes/front_wheel/front_spoke_0.obj",
+            "sha256": "e3dec10bfcdb4d27433d81b0253461d590924bf51238bfe765cd7da6a30ffdb7"
+          },
+          {
+            "bytes": 12733,
+            "path": "part_meshes/front_wheel/front_spoke_1.obj",
+            "sha256": "c9191474e7e355b8632ce4c627876237aa9907a51eb60af0e992176b3499c945"
+          },
+          {
+            "bytes": 12797,
+            "path": "part_meshes/front_wheel/front_spoke_10.obj",
+            "sha256": "e3b20ec706fc067572c568139ed9d84353294d25f36a0d97b6644c535fad8606"
+          },
+          {
+            "bytes": 12760,
+            "path": "part_meshes/front_wheel/front_spoke_11.obj",
+            "sha256": "022d7ee0e43e51133ad9c5fbe1d7944cd7e231741af6e2a701cc1a9c548e8840"
+          },
+          {
+            "bytes": 12690,
+            "path": "part_meshes/front_wheel/front_spoke_2.obj",
+            "sha256": "d41d31e1d9360c72546ace0b61c426d3d8ac5d7c7646439c2a6940d3820489e4"
+          },
+          {
+            "bytes": 9447,
+            "path": "part_meshes/front_wheel/front_spoke_3.obj",
+            "sha256": "9cd9820657e1ec182dedf264913630f7927949f9b6db021f8c5bc36ff0ec345f"
+          },
+          {
+            "bytes": 12677,
+            "path": "part_meshes/front_wheel/front_spoke_4.obj",
+            "sha256": "03392c782d608332fc2fff99efd4c3fc2041ff06edd4fc103bdb2c6cbb7f7e1b"
+          },
+          {
+            "bytes": 12748,
+            "path": "part_meshes/front_wheel/front_spoke_5.obj",
+            "sha256": "7b4b1a381d457c6c258fa225509cc36a2f91f051e6d9d96c9470ecb1139fe912"
+          },
+          {
+            "bytes": 12015,
+            "path": "part_meshes/front_wheel/front_spoke_6.obj",
+            "sha256": "c474ff61191b0d74694d212131a29085f5fe1ce79794d305d124c497b286b4c5"
+          },
+          {
+            "bytes": 12774,
+            "path": "part_meshes/front_wheel/front_spoke_7.obj",
+            "sha256": "399ba75e6d08d28732fc113957a04fd9ca14118a35d2ad2a415311fe78ab2f6e"
+          },
+          {
+            "bytes": 12783,
+            "path": "part_meshes/front_wheel/front_spoke_8.obj",
+            "sha256": "2271ac1b96fab5e1d8ce05c5efe11b1e7eddf21f93c5749784d22f006ef8e04d"
+          },
+          {
+            "bytes": 10170,
+            "path": "part_meshes/front_wheel/front_spoke_9.obj",
+            "sha256": "9cb71f9df8467262375db2a14ffa0d98a9da21c4d59971bdd92fe21d30aa4640"
+          },
+          {
+            "bytes": 707005,
+            "path": "part_meshes/front_wheel/front_tire.obj",
+            "sha256": "ecdc8c3c09ab187258c1f674b3bf7e8e76cdd44edb2b911cdf7206bcc1ff7681"
+          },
+          {
+            "bytes": 21301,
+            "path": "part_meshes/fuel_tank/filler_cap.obj",
+            "sha256": "56f3dabc4da08b07e2d9b1e00c353e6eb89e73694a65a145a059e072c4ca8f91"
+          },
+          {
+            "bytes": 136888,
+            "path": "part_meshes/fuel_tank/main_fuel_tank.obj",
+            "sha256": "1e04b8ee1662d356bd3580643d28ae6dd5d74589b9d178daa3467ea7a90d1093"
+          },
+          {
+            "bytes": 25951,
+            "path": "part_meshes/handlebars/handlebar_center_clamp.obj",
+            "sha256": "364f29f687788f3f9018c9e1170503de09f30542465b433550f71385bd87a6c2"
+          },
+          {
+            "bytes": 25823,
+            "path": "part_meshes/handlebars/left_handlebar.obj",
+            "sha256": "a115eeed86e20ed0678dae7a6ac74ed10b9afdef6dc681512551e4b1e5551cee"
+          },
+          {
+            "bytes": 26016,
+            "path": "part_meshes/handlebars/right_handlebar.obj",
+            "sha256": "cc9fcd94fa8e76fcbccc97be4848868886b509edae9e81516ed24d7d09a046b6"
+          },
+          {
+            "bytes": 2881,
+            "path": "part_meshes/rear_swingarm/chain_adjuster_left.obj",
+            "sha256": "f0bdd48bb9054a7b5611ac6dde47b0efc0093763a1684d1333a469f3d7d82cdd"
+          },
+          {
+            "bytes": 2918,
+            "path": "part_meshes/rear_swingarm/chain_adjuster_right.obj",
+            "sha256": "c893c769cb012ae88d3c1c577ea71a8cdc1079d21c99677ec0ebb0c6d4bbbb0f"
+          },
+          {
+            "bytes": 5085,
+            "path": "part_meshes/rear_swingarm/left_swingarm_box.obj",
+            "sha256": "70b578a9f2a1eaa070c88607d3dafa94d8716b52d91937d9cf036df0eb14930a"
+          },
+          {
+            "bytes": 18745,
+            "path": "part_meshes/rear_swingarm/rear_axle_bridge.obj",
+            "sha256": "bb9f5d34ee5793bba297dfa098f14b81c4e0cde04a0934cd7fde4bd9b9e6608d"
+          },
+          {
+            "bytes": 5122,
+            "path": "part_meshes/rear_swingarm/right_swingarm_box.obj",
+            "sha256": "d3a30913a90b203aba50a24725a92cb4597ec509850a04407348f708184e67ca"
+          },
+          {
+            "bytes": 25229,
+            "path": "part_meshes/rear_swingarm/swingarm_pivot_shaft.obj",
+            "sha256": "23eb2c6e97cbe45a9610d7097bc30264fe7539f57832e2d8e1ed1e54d71b021e"
+          },
+          {
+            "bytes": 39476,
+            "path": "part_meshes/rear_wheel/rear_brake_disc.obj",
+            "sha256": "0021d01f138ca69cc61ecd22293da64360e6eac127275dc87755dbb1e03324ed"
+          },
+          {
+            "bytes": 25057,
+            "path": "part_meshes/rear_wheel/rear_hub.obj",
+            "sha256": "ba2df72595f11305c929da9d4632cf7cb4180424a7e730d15ad54488a47275d8"
+          },
+          {
+            "bytes": 417911,
+            "path": "part_meshes/rear_wheel/rear_rim.obj",
+            "sha256": "fa55f7629ab4b4c2bcaca45c3b28709819689041bead1d58f019f07582152c38"
+          },
+          {
+            "bytes": 12078,
+            "path": "part_meshes/rear_wheel/rear_spoke_0.obj",
+            "sha256": "9d4f761aa2d572d4faa1456991b80f9da0c9d92287a2002dcb40910f05013488"
+          },
+          {
+            "bytes": 12823,
+            "path": "part_meshes/rear_wheel/rear_spoke_1.obj",
+            "sha256": "c0a02ad97e6ae76bcea180224f91dffa198f318d9694b1aaffae20ebec7f7949"
+          },
+          {
+            "bytes": 12847,
+            "path": "part_meshes/rear_wheel/rear_spoke_10.obj",
+            "sha256": "dace2c0cf4726628fbe39d20c3afb0d99429bef92c208e55eac8dc3415b31ef6"
+          },
+          {
+            "bytes": 12890,
+            "path": "part_meshes/rear_wheel/rear_spoke_11.obj",
+            "sha256": "c8b499b90be4996b8cb61191922266fbe25c0b74e74db77a98a75f217a5f1c96"
+          },
+          {
+            "bytes": 12757,
+            "path": "part_meshes/rear_wheel/rear_spoke_2.obj",
+            "sha256": "b33afffa35a5853b490fff98e3ab27be761f848cc1afcd7966b53195ea17c111"
+          },
+          {
+            "bytes": 9684,
+            "path": "part_meshes/rear_wheel/rear_spoke_3.obj",
+            "sha256": "ad5140205d8dd1a841205396fe879645aa2f85d6037e5561af20e3746b20f414"
+          },
+          {
+            "bytes": 12754,
+            "path": "part_meshes/rear_wheel/rear_spoke_4.obj",
+            "sha256": "c108944d27041f29c1e473f4f25f51c35d9193bd5df2beffc4c0c85879473dd4"
+          },
+          {
+            "bytes": 12820,
+            "path": "part_meshes/rear_wheel/rear_spoke_5.obj",
+            "sha256": "1aee582f5feb3eb949168605015c06eb7fa1bff68c0b97ccdb5568a80c3cb12d"
+          },
+          {
+            "bytes": 12024,
+            "path": "part_meshes/rear_wheel/rear_spoke_6.obj",
+            "sha256": "6857b96b3e837377f29f4da120a7ad8cd11a549e1d41e87b2342bf4653a6626c"
+          },
+          {
+            "bytes": 12886,
+            "path": "part_meshes/rear_wheel/rear_spoke_7.obj",
+            "sha256": "9b021fe2c64734f6dc24e2582aa83625e35286aeb03f4bcbc5f59f004e4a3b77"
+          },
+          {
+            "bytes": 12843,
+            "path": "part_meshes/rear_wheel/rear_spoke_8.obj",
+            "sha256": "a1cedbf64b5a4b56f6eba4f959a8e7713960e9566ff803f83b9242d20a47cea3"
+          },
+          {
+            "bytes": 9735,
+            "path": "part_meshes/rear_wheel/rear_spoke_9.obj",
+            "sha256": "ad047d7428119e2e43b70032edc6af20a32a9c5babd3b36ccc9449b46a1a4f9c"
+          },
+          {
+            "bytes": 39350,
+            "path": "part_meshes/rear_wheel/rear_sprocket.obj",
+            "sha256": "c2667d445878f0d12faf820a9885cfe04b0b6a7cbbf02136e24e281ca390061a"
+          },
+          {
+            "bytes": 707196,
+            "path": "part_meshes/rear_wheel/rear_tire.obj",
+            "sha256": "567efd667464e0a0a4bc9745fd3e591c1df5bca13963cd27534818deb81568e3"
+          },
+          {
+            "bytes": 3105,
+            "path": "part_meshes/seat/seat_base.obj",
+            "sha256": "8b1046b6b10a00d36d45fc9552323a79f79be0cb1c94fef48a3f88f9a98f2999"
+          },
+          {
+            "bytes": 3056,
+            "path": "part_meshes/seat/seat_rear_hump.obj",
+            "sha256": "40c6a390f682ec804d5591e9b1e4d91469464382239be8ed1e4a8c12044891bf"
+          },
+          {
+            "bytes": 347821,
+            "path": "part_meshes/shock_spring_group/spring_ring_0.obj",
+            "sha256": "823dac413680b52372283f0d477439bd37a02e19b6fc4ddb349e1718a9d361fd"
+          },
+          {
+            "bytes": 348499,
+            "path": "part_meshes/shock_spring_group/spring_ring_1.obj",
+            "sha256": "0411c54aee839ae6b1305d84b931b7544df139ac4afb053fcffd629c9e0e0331"
+          },
+          {
+            "bytes": 347947,
+            "path": "part_meshes/shock_spring_group/spring_ring_2.obj",
+            "sha256": "601321fdb1b2422fba3076b7d6a8f23b345451102b964879915af413fbfb5aaf"
+          },
+          {
+            "bytes": 347635,
+            "path": "part_meshes/shock_spring_group/spring_ring_3.obj",
+            "sha256": "88144471ac31a5ce0fc5ebbe2dc13ab385aaff2067915cdef54fdeff0799f67d"
+          },
+          {
+            "bytes": 346621,
+            "path": "part_meshes/shock_spring_group/spring_ring_4.obj",
+            "sha256": "597f8f6f38a6763cb57112d503eb03d595abe7920ce64ce0f5d04d5329b29279"
+          },
+          {
+            "bytes": 346591,
+            "path": "part_meshes/shock_spring_group/spring_ring_5.obj",
+            "sha256": "0797a54fff0fb94e7aff5e8c679f0671b529cc9fb1920478d5874eeb9bce59bc"
+          },
+          {
+            "bytes": 346675,
+            "path": "part_meshes/shock_spring_group/spring_ring_6.obj",
+            "sha256": "e91505b8fa8bc4bba55cc1970a28eba31ea30ce3e8ce3018d48b240f774d4016"
+          },
+          {
+            "bytes": 346453,
+            "path": "part_meshes/shock_spring_group/spring_ring_7.obj",
+            "sha256": "04476cc020e146df7593c80cff006bf2f8ca801024a3bb6431acf19ca8896c4e"
+          },
+          {
+            "bytes": 346507,
+            "path": "part_meshes/shock_spring_group/spring_ring_8.obj",
+            "sha256": "8e560003b84cb71509da67c4020baecd81691ddd6bdbc35baad2c2bc0b2a8c76"
+          },
+          {
+            "bytes": 1079,
+            "path": "pipeline_logs/pipeline_run.log",
+            "sha256": "d40ca284a41ec25afadef8fabc9c1f3daf0cfb0bbbef14ae1a6d7dc261ce2ad7"
+          },
+          {
+            "bytes": 17161,
+            "path": "pipeline_logs/stage_1_linker/llm_interaction.txt",
+            "sha256": "bf4b5debb8555dbb6e08147f9e18970da6b3bde95810c0552f0c49b3e275a7aa"
+          },
+          {
+            "bytes": 619,
+            "path": "pipeline_logs/stage_1_linker/metadata.json",
+            "sha256": "59d6b391c9659191f392d2dc7e7af70236c3f683bf69edce83ed8214ab1fb35a"
+          },
+          {
+            "bytes": 3956,
+            "path": "pipeline_logs/stage_1_linker/system_prompt.txt",
+            "sha256": "6e93f4c68e2e15d1a511d4b975e1dd34c5b67cb86c595069d801244b88ac2b7d"
+          },
+          {
+            "bytes": 55988,
+            "path": "pipeline_logs/stage_2_shape/llm_interaction.txt",
+            "sha256": "40db52f286d3a7e6ffe2b35bdf6251cdc45df68642516e2d83a0e0c81dc3aac2"
+          },
+          {
+            "bytes": 543,
+            "path": "pipeline_logs/stage_2_shape/metadata.json",
+            "sha256": "db4f044099302cfd042c9a8b30b8bc4a0c43fb5c7791e74ed6f48ca3cfc86adb"
+          },
+          {
+            "bytes": 96963,
+            "path": "pipeline_logs/stage_2_shape/system_prompt.txt",
+            "sha256": "598ae8e46af3a5d3a5df5e3565059d160a06979d6a38ddb31b84287fd833ce0b"
+          },
+          {
+            "bytes": 118671,
+            "path": "pipeline_logs/stage_3_articulation/llm_interaction.txt",
+            "sha256": "cdec27675994be1fd3ab3cb5a916cb5edbe292204d577a2e0c15896bad027fa9"
+          },
+          {
+            "bytes": 579,
+            "path": "pipeline_logs/stage_3_articulation/metadata.json",
+            "sha256": "1ba39ca50e41e0c1b1a614a5b3bd556714fcaaf74a2e3ade99270310de057628"
+          },
+          {
+            "bytes": 14314,
+            "path": "pipeline_logs/stage_3_articulation/system_prompt.txt",
+            "sha256": "9506067e11df2748003f6a11f3deb5f062aa76b4fae156e3ade7adf917508bbf"
+          }
+        ],
+        "total_bytes": 22937014
+      },
+      "package_binding_sha256": "b612312e055580228d0d11755ad846b3f800ed6cb0439372769c27f78d53e355",
+      "package_content_manifest_sha256": "8ea98979d779224d8f719725138818536f25b425d02c77579b802bc5fd0674d0",
+      "package_relpath": "released_outputs/objects/sport_motorcycle_with_adjustable_suspension/sport_motorcycle_with_adjustable_suspension_001",
+      "primary_urdf_relpath": "released_outputs/objects/sport_motorcycle_with_adjustable_suspension/sport_motorcycle_with_adjustable_suspension_001/generated.urdf",
+      "protocol_id": "urdf_sim_ready_table4_lam_qualification_v1",
+      "range_evaluable_dof_count": 5,
+      "rel_path": "objects/sport_motorcycle_with_adjustable_suspension/sport_motorcycle_with_adjustable_suspension_001",
+      "rest_state_expected": 1,
+      "runtime_identity": {
+        "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_lam.py",
+        "adapter_runner_sha256": "cdba0dccbef991b2ed4a3f4e418f28725d4e233cad758b81431ce78cb1bbdd4a",
+        "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+        "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+        "numpy_version": "2.5.1",
+        "pybullet_api_version": 202010061,
+        "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+        "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+        "python_cache_tag": "cpython-312",
+        "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+        "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+        "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+        "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+        "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+        "scipy_version": "1.18.0"
+      },
+      "runtime_identity_sha256": "72cef157a77f1ca78d22e834bddfe4831f850d35066cf35b36044ea620cbadf1",
+      "scale_derivation": {
+        "collision_link_indices": [
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "diagonal_m": 7.416503380089432,
+        "joint_state": "q=0 for every simulator joint",
+        "load_flags": 1048578,
+        "maximum_m": [
+          3.5238383331298824,
+          1.632999995231628,
+          0.9039999761581421
+        ],
+        "minimum_m": [
+          -3.28399997138977,
+          -0.6884211597545306,
+          -0.9039999761581421
+        ],
+        "protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+        "status": "PASS"
+      },
+      "scale_derivation_sha256": "88df3e89147aff314c0db99d0ce1645c79782a38f6b4f64ca31299d337d0b087",
+      "selection_hash": "91c2cf768f476f7a783cc70f27e877dd6408f194c987d05bc414912e0e149188",
+      "selection_rank": 4,
+      "single_state_expected": 105,
+      "sobol_state_expected": 64,
+      "source_manifest_record_sha256": "5d7de775f21d47be415bdeabf200cfa9c1581701710025e328bd089c4d50423f",
+      "source_record_sha256": "f0d9a8474767e93fef908963fe37b184385d5c98e977b6378536382e99a65b20",
+      "tier": "viable",
+      "unsafe_collision_mesh_reference_count": 0,
+      "urdf_sha256": "bcad8d2fa69036fa25bb48d8c4687dbccbe1ea5f5b615f46f30f550b236aa0ac",
+      "valid_tree": true
+    },
+    {
+      "asset_key": "viable:objects/hinged_door/hinged_door_030",
+      "audit_issue": "ValueError: collision coverage incomplete: 0/2",
+      "category": "hinged_door",
+      "collision_coverage_complete": false,
+      "collision_covered_link_count": 0,
+      "collision_element_count": 0,
+      "collision_mesh_files": [],
+      "collision_mesh_inventory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "dataset_id": "lam_0004",
+      "input_identity_sha256": "408698e469095b0a1d256c6b7399d440626785f1a288edf06ffeae93c1b73e49",
+      "joint_specs": [
+        {
+          "lower": 0.0,
+          "name": "door_hinge",
+          "range_evaluable": true,
+          "type": "revolute",
+          "upper": 1.5708,
+          "xml_index": 0
+        }
+      ],
+      "joint_specs_sha256": "a8a75e92e235fd905d0673815a44d4e6e7981cd88d0297bfdf714e032dca729b",
+      "link_count": 2,
+      "missing_collision_mesh_reference_count": 0,
+      "model_urdf_sha256": "32ac804e8170a48cf085e59c8088a439e44f976be6f02cf38382cd3845779851",
+      "movable_dof_count": 1,
+      "object_bbox_diagonal_m": null,
+      "object_release_id": "hinged_door_030",
+      "order": 4,
+      "package_audit_success": false,
+      "package_binding": {
+        "content_manifest_sha256": "dd04c27ac0d959513960b416ac6981a8f418e573613d00ae04006137174871fe",
+        "file_count": 25,
+        "files": [
+          {
+            "bytes": 848,
+            "path": "articulation.json",
+            "sha256": "ad42d7856c6916d81d57298b86877f03474f6f0e9f7b83ded9b57b433a501bb7"
+          },
+          {
+            "bytes": 43754,
+            "path": "combined_assembly.obj",
+            "sha256": "aa995669b1365aedcb417164cc198657377ed3e50591b1d0034e094d3bb87635"
+          },
+          {
+            "bytes": 9553,
+            "path": "export.js",
+            "sha256": "debaad4a0a6f9e108b1c6097ca2ae3f40ed5a8108d00796859471c31053cf622"
+          },
+          {
+            "bytes": 709,
+            "path": "generated.urdf",
+            "sha256": "32ac804e8170a48cf085e59c8088a439e44f976be6f02cf38382cd3845779851"
+          },
+          {
+            "bytes": 1180,
+            "path": "generation_config.yaml",
+            "sha256": "2c41ea6e8f38577113338d186b973a000da52f75fa97131cfef76555285ffe7d"
+          },
+          {
+            "bytes": 13,
+            "path": "input_caption.txt",
+            "sha256": "cc2bd78a1b0fe4ac0398d024cabe5eca838fbb208069e1e99f5a0c068183abb1"
+          },
+          {
+            "bytes": 5123,
+            "path": "links.json",
+            "sha256": "634fcba7e9a7230e2d8b00e6ded8a91c80721a5d9c91299a8bc474527d4f875f"
+          },
+          {
+            "bytes": 11589,
+            "path": "log.txt",
+            "sha256": "ffb6d9b0cbf2dc0f0ddc049d17cdb16c3f436f77fc2a29edf5bbb1b36d58101b"
+          },
+          {
+            "bytes": 9630,
+            "path": "workflow.json",
+            "sha256": "c79c593f079b8c5041d7d459a49dc24843f6efabe43b062bf24d58d1477fa804"
+          },
+          {
+            "bytes": 13034,
+            "path": "obj_parts/handle_base.obj",
+            "sha256": "a2919ac2174ef48aa13b914339b22c4c6eac3fbeca0e924f8602ee6fbeb4945b"
+          },
+          {
+            "bytes": 2184,
+            "path": "obj_parts/handle_lever.obj",
+            "sha256": "44325a47f9d2d866f2a166ee203f600855b2bd75eed8b98ba9a43af16f9464b8"
+          },
+          {
+            "bytes": 1806,
+            "path": "obj_parts/header.obj",
+            "sha256": "9bcb68fed2258860806e1445f25529a5bb65c87cae87b8036c89f9558313440c"
+          },
+          {
+            "bytes": 2237,
+            "path": "obj_parts/hinge1_door_plate.obj",
+            "sha256": "0f13af3a8c806bb41e988d4878fe8a0d697c2c256b0195a03717f2abfc60f325"
+          },
+          {
+            "bytes": 2250,
+            "path": "obj_parts/hinge1_frame_plate.obj",
+            "sha256": "7318687b58be9be29fa7dc5a27e4b9d1bf7e40d0c696d5c32162a30c5266de88"
+          },
+          {
+            "bytes": 6205,
+            "path": "obj_parts/hinge1_pin.obj",
+            "sha256": "d454922f90e487c61d3128255314942cc5fcd94165b1abbe4b1def4a71f5a1d3"
+          },
+          {
+            "bytes": 2261,
+            "path": "obj_parts/hinge2_door_plate.obj",
+            "sha256": "d19f82b02ab51927b04ef0a9231e13f713cf19e2be12e9cc5edda0840f679a5d"
+          },
+          {
+            "bytes": 2274,
+            "path": "obj_parts/hinge2_frame_plate.obj",
+            "sha256": "9557375d6feb427166db063b6779ccb48ffcad0baa4cfc315b5547a3eed38aea"
+          },
+          {
+            "bytes": 6647,
+            "path": "obj_parts/hinge2_pin.obj",
+            "sha256": "be4a15b1c74e181e47fd0600357e55847132ba4f63c3d34c1a27c2d10290c433"
+          },
+          {
+            "bytes": 5174,
+            "path": "obj_parts/latch_bolt.obj",
+            "sha256": "859a807fbe11e5f04a0dfd66a4e9fcaa88419277dda4596fe20ebc0c43695737"
+          },
+          {
+            "bytes": 2206,
+            "path": "obj_parts/left_stile.obj",
+            "sha256": "8732cf91ebb1136b73406e21101eae9f8d2f44eb79efbb0421bffe4b440a4f33"
+          },
+          {
+            "bytes": 1810,
+            "path": "obj_parts/panel_main.obj",
+            "sha256": "bcfb9711563470de8c6be9caa85077907112c2611c8f8a257ad1fd6db8107e7c"
+          },
+          {
+            "bytes": 2183,
+            "path": "obj_parts/right_stile.obj",
+            "sha256": "8b452dfdaf99930aae74683232c33d02dc0816ae0b9ba745ce969d12f2a5abd8"
+          },
+          {
+            "bytes": 2208,
+            "path": "obj_parts/strike_plate.obj",
+            "sha256": "88bf6c9bc06ff3aba1485ac91d24e53817540a16859ab370172958a2f94ef4bc"
+          },
+          {
+            "bytes": 49703,
+            "path": "obj_parts/group_output/door_frame.obj",
+            "sha256": "e5669dce3b38e520c009a4683b20d4fa69963fa45e75a449081d0813ff5e2fb0"
+          },
+          {
+            "bytes": 40973,
+            "path": "obj_parts/group_output/door_panel.obj",
+            "sha256": "38ebefaf9b770a488a2fda1e6b34efeddffcea243900dbcea224f34f648f64fc"
+          }
+        ],
+        "total_bytes": 225554
+      },
+      "package_binding_sha256": "326a2214f036f7c087fdaced45e1424ef13fcd985b4faf6a6bea712ede32258d",
+      "package_content_manifest_sha256": "dd04c27ac0d959513960b416ac6981a8f418e573613d00ae04006137174871fe",
+      "package_relpath": "released_outputs/objects/hinged_door/hinged_door_030",
+      "primary_urdf_relpath": "released_outputs/objects/hinged_door/hinged_door_030/generated.urdf",
+      "protocol_id": "urdf_sim_ready_table4_lam_qualification_v1",
+      "range_evaluable_dof_count": 1,
+      "rel_path": "objects/hinged_door/hinged_door_030",
+      "rest_state_expected": 1,
+      "runtime_identity": {
+        "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_lam.py",
+        "adapter_runner_sha256": "cdba0dccbef991b2ed4a3f4e418f28725d4e233cad758b81431ce78cb1bbdd4a",
+        "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+        "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+        "numpy_version": "2.5.1",
+        "pybullet_api_version": 202010061,
+        "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+        "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+        "python_cache_tag": "cpython-312",
+        "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+        "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+        "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+        "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+        "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+        "scipy_version": "1.18.0"
+      },
+      "runtime_identity_sha256": "72cef157a77f1ca78d22e834bddfe4831f850d35066cf35b36044ea620cbadf1",
+      "scale_derivation": {
+        "protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+        "status": "N/E"
+      },
+      "scale_derivation_sha256": "d3ef8714b725ecd48e2d248bd7e7237a17d74d314a048388efff3e93c090266f",
+      "selection_hash": "5bea8e2c6bcb3a6ecbbbc8fec3dcdfdca28f18cb77edd0ff34b6987fbcb26bce",
+      "selection_rank": 5,
+      "single_state_expected": 21,
+      "sobol_state_expected": 64,
+      "source_manifest_record_sha256": "7e618638aaadc693baf58d8e32ae7c807c771f5a423ece04cfa753f7366b7221",
+      "source_record_sha256": "109e76804e2cf7b2b6274d84751b29e809352beb20b6065ac7d6e8694a6f2810",
+      "tier": "viable",
+      "unsafe_collision_mesh_reference_count": 0,
+      "urdf_sha256": "32ac804e8170a48cf085e59c8088a439e44f976be6f02cf38382cd3845779851",
+      "valid_tree": true
+    }
+  ],
+  "items_sha256": "9a6d010496fe07ded00557ca4e12f4eda874de5adf8051363c437901409af932",
+  "manifest_content_sha256": "ba7625d5628dea3c965544ece43241dcbcd4cfcd681a010f784d9bf98df304a3",
+  "ordered_selected_asset_keys_sha256": "1b85a1dbcb8797aea61481ae2d9ee3078ffebf885be9dfbcdb36b861f54e5ffd",
+  "protocol_id": "urdf_sim_ready_table4_lam_qualification_v1",
+  "qualification_smoke": true,
+  "release_asset_count": 3217,
+  "runtime": {
+    "child": {
+      "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_lam.py",
+      "adapter_runner_sha256": "cdba0dccbef991b2ed4a3f4e418f28725d4e233cad758b81431ce78cb1bbdd4a",
+      "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+      "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+      "numpy_version": "2.5.1",
+      "pybullet_api_version": 202010061,
+      "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+      "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+      "python_cache_tag": "cpython-312",
+      "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+      "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+      "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+      "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+      "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+      "scipy_version": "1.18.0"
+    },
+    "child_launcher": {
+      "entry_type": "symlink",
+      "launch_path": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+      "protocol_id": "exact_venv_launcher_binding_v1",
+      "pyvenv_cfg_bytes": 113,
+      "pyvenv_cfg_path": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/pyvenv.cfg",
+      "pyvenv_cfg_sha256": "a0151eba26bcc62dbba81f521d095126e9c3ab83db1471f592c4e14961b6341f",
+      "resolved_executable_bytes": 8023232,
+      "resolved_executable_path": "/usr/bin/python3.12",
+      "resolved_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+      "schema_version": "1.0.0",
+      "symlink_target": "/usr/bin/python3.12"
+    },
+    "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+    "manifest_builder": {
+      "adapter_runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_lam.py",
+      "adapter_runner_sha256": "cdba0dccbef991b2ed4a3f4e418f28725d4e233cad758b81431ce78cb1bbdd4a",
+      "collision_core": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4_partnet_mobility.py",
+      "collision_core_sha256": "e710d15cb79c50506487ff1335a88591bb58c11cf726c71198103c05f6d01ff0",
+      "numpy_version": "2.5.1",
+      "pybullet_api_version": 202010061,
+      "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so",
+      "pybullet_module_sha256": "7f2c59f905b7c0bfddde27472164642cf37aa2e7e0ca511aa4c9bf58d7c40afb",
+      "python_cache_tag": "cpython-312",
+      "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+      "python_executable_sha256": "c0736aec631466e7bc4f5541b67358543193b8922ec3b63f6c1b247d70716591",
+      "python_version": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+      "scipy_qmc_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/scipy/stats/_qmc.py",
+      "scipy_qmc_module_sha256": "54bdaad11441432013886630ded7d1c66d1b8d85643495107392a29844a5cd9f",
+      "scipy_version": "1.18.0"
+    },
+    "runner_sha256": "cdba0dccbef991b2ed4a3f4e418f28725d4e233cad758b81431ce78cb1bbdd4a"
+  },
+  "sample_size": 5,
+  "sampling": {
+    "continuous_joint_interval": [
+      -3.141592653589793,
+      3.141592653589793
+    ],
+    "rest_state": "native URDF/PyBullet q=0",
+    "single_joint_other_joint_state": 0.0,
+    "single_joint_states_per_declared_nonfixed_joint": 21,
+    "sobol_scramble": true,
+    "sobol_seed": 20260813,
+    "sobol_states_per_asset_with_nonfixed_joint": 64
+  },
+  "selection_policy": {
+    "algorithm": "asset_records.jsonl membership joined to the frozen Table 3 manifest and ordered by selection_rank; qualification uses an exact prefix",
+    "identity_fields_used": [
+      "asset_key",
+      "selection_rank",
+      "selection_hash",
+      "tier",
+      "rel_path",
+      "object_release_id",
+      "package_relpath",
+      "model_urdf_sha256",
+      "package_content_manifest_sha256",
+      "source_record_sha256",
+      "source_manifest_record_sha256"
+    ],
+    "outcome_based_filtering": false,
+    "selected_failures_retained_without_replacement": true
+  },
+  "source": {
+    "candidate_pool_sha256": "81304d094da5b8411cbb7e0fb3f911b41a934cb3733766cfda4c2f8364f780fd",
+    "ordered_asset_identities_sha256": "d2e51d1443152384636d0ff24f4947069529a9cf24850d3cb9fade8ca7100251",
+    "protocol_document_path": "/mnt/zsn/lyb/arti-skill/exp/URDF-Sim-Ready-Automatic-Evaluation.md",
+    "protocol_document_sha256_at_freeze": "c59de12cd9b51fc8556291d4a590a36115060df259ee31f0ccf3e87fccb19d86",
+    "protocol_document_snapshot": "protocol_document_at_freeze.md",
+    "provenance": {
+      "archives": {
+        "broken.tar.gz": {
+          "bytes": 199627935,
+          "path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/broken.tar.gz",
+          "sha256": "ef0f6e8506e0432febd5ccc4159c6cbf66a9c5cdadd3bdbcd521478e4c0fda3a"
+        },
+        "loads_only.tar.gz": {
+          "bytes": 194746559,
+          "path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/loads_only.tar.gz",
+          "sha256": "e616dc455450ca0f8ea1c76955929f340b75b9fa51b974327e160890620f9a9e"
+        },
+        "viable.tar.gz": {
+          "bytes": 1185271461,
+          "path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/viable.tar.gz",
+          "sha256": "a582ef0aa0f3073749adcc73d289a12200e500c1a5762a4ee1530eefc2c4920d"
+        }
+      },
+      "dataset_api": {
+        "bytes": 1936,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/dataset_api.json",
+        "sha256": "4ef6d64310968fab9e280ca19545ef0647e6c5e2eb81dbd681b5ca20fbbc727d"
+      },
+      "dataset_inventory": {
+        "bytes": 7012,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/dataset_inventory.json",
+        "sha256": "e281119f870bb6bae9599c3edc02de0a42a257e0d433335361d4a774592c1b5a"
+      },
+      "release_manifest": {
+        "bytes": 1004461,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/Articulated-Object-Code/manifest.csv",
+        "sha256": "70216593ec02b71d596e456498ff9863ad0f8e519d5d27d2cf4f58792d412412"
+      }
+    },
+    "repo_id": "YipengGao/Articulated-Object-Code",
+    "revision": "28cec4f5be7e34fd4d586879ecfcb67f7c5e4cc0",
+    "selected_asset_keys_sha256": "643aa5b76ac61f57dd943bee26444a3525c01201a8dff3443763a7fd8d8267d3",
+    "selection_algorithm": "random.Random(seed).sample(sorted(asset_key), n)",
+    "table3_asset_records_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table3_lam_n800_seed20260813_20260814T022400Z_v3/asset_records.jsonl",
+    "table3_asset_records_sha256": "7ef1c38d61bc780e41f62c7dd359e66f0bfeabe655c7453c93e2ea9830122d94",
+    "table3_manifest_content_sha256": "f8f7fe4da5634d4f806e793c0da919689eab25be1ce0bbed7e2232f3453d15c2",
+    "table3_manifest_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table3_lam_n800_seed20260813_20260814T022400Z_v3/manifest.json",
+    "table3_manifest_sha256": "7e16683bfe4e4f37d7972082d8512713c1d8d1ae4ce142b75bf7dfb0509b9951",
+    "tier_counts": {
+      "broken": 385,
+      "loads_only": 299,
+      "viable": 2533
+    }
+  },
+  "status": "FROZEN"
+}

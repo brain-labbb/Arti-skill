@@ -1,0 +1,85 @@
+{
+  "command": [
+    "exp/scripts/run_urdf_table4a_artiverse.py",
+    "--mode",
+    "formal",
+    "--workers",
+    "16"
+  ],
+  "created_at_utc": "2026-08-19T21:59:57.159279Z",
+  "dataset": "Artiverse",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "4aeda0c4db358be1c92d60f12f60baf4837d9996aa4c195a81f46df31e0bfd89",
+  "manifest_self_sha256_at_write": "4ee2c7932bdad0c41024fbca7ef12a5c707430fca20df6054eac25fe6968a8ae",
+  "mode": "formal",
+  "outputs": {
+    "asset_records_sha256": "9080c81c22e54a9b1ac6d1c38ebba689282e4b72f57b3acc0ce24b4858025561",
+    "joint_records_sha256": "afa25a4a7542444f17fce6750a757277874a13336a27aea8ad12a52a1597e2ba",
+    "summary_md_sha256": "781beecd13eb862d269aac7fda10b9467a85877b060563fefb7ce65ed5cd321e",
+    "summary_sha256": "6d274b6580e2fcf48910868e8eaf008a972276d66616007996b035b10915ee2c"
+  },
+  "protocol_id": "table4a_artiverse_table1cohort_n800_seed20260813_v1",
+  "record_count": 800,
+  "status_counts": {
+    "completed": 595,
+    "error": 205,
+    "total": 800
+  },
+  "verification": {
+    "all_pass": true,
+    "check_count": 10,
+    "checks": [
+      {
+        "check": "source_manifest_sha256",
+        "detail": "0e69335a3d1574a1e1510124ade6e743cfd66fe894c1da3816b072954c75aedb",
+        "pass": true
+      },
+      {
+        "check": "ordered_ids_sha256",
+        "detail": "118038a746cafb91251afde5eb4f1164915d141acb3b529ea721a9d376bde3fa",
+        "pass": true
+      },
+      {
+        "check": "record_count",
+        "detail": "800",
+        "pass": true
+      },
+      {
+        "check": "frozen_order_preserved",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "j_eval_denominator",
+        "detail": "3875",
+        "pass": true
+      },
+      {
+        "check": "retention_denominator",
+        "detail": "3875",
+        "pass": true
+      },
+      {
+        "check": "urdf_identity_matches_frozen_manifest",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "state_hash_cross_check_no_mismatch",
+        "detail": "{'verified': 58548, 'mismatch': 0, 'no_reference': 0}",
+        "pass": true
+      },
+      {
+        "check": "state_intended_count",
+        "detail": "81375",
+        "pass": true
+      },
+      {
+        "check": "aggregate_recomputation_matches",
+        "detail": "",
+        "pass": true
+      }
+    ]
+  },
+  "wall_seconds": 23096.165
+}

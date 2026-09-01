@@ -1,0 +1,408 @@
+{
+  "code_identity": {
+    "geometry": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_geometry.py",
+      "sha256": "55877794c911b5b760bca407ee0db9f5b4f562cfdd21aea5b513d3d8335f5f55"
+    },
+    "runner": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_lam_supplementary_v1.py",
+      "sha256": "fa6df45132e14a6b7d8138f9bb0d170f4352071ff0e1f50576ebf66f6735cb65"
+    },
+    "static": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_static.py",
+      "sha256": "1c2fdc2c3d9f8ebcb3ab6b0bf8144b307c86b4b44790cf3182c2395ab37267ff"
+    },
+    "verifier": {
+      "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/verify_urdf_lam_supplementary_v1.py",
+      "sha256": "639dada0a00fa0f14b217b4c95d761be1d02b3ba013c0579bb2a29637913840b"
+    }
+  },
+  "cohort": {
+    "assets": 800,
+    "evaluated_asset_count": 2,
+    "fail_closed_asset_count": 798,
+    "joints": 2395,
+    "pilot_selected_ranks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      474,
+      521
+    ],
+    "selected": 800,
+    "strict_state_expected": 50336,
+    "strict_state_record_count": 50336
+  },
+  "input_binding": {
+    "ordered_selected_asset_keys_sha256": "643aa5b76ac61f57dd943bee26444a3525c01201a8dff3443763a7fd8d8267d3",
+    "table3_asset_records_sha256": "7ef1c38d61bc780e41f62c7dd359e66f0bfeabe655c7453c93e2ea9830122d94",
+    "table3_manifest_content_sha256": "f8f7fe4da5634d4f806e793c0da919689eab25be1ce0bbed7e2232f3453d15c2",
+    "table3_manifest_sha256": "7e16683bfe4e4f37d7972082d8512713c1d8d1ae4ce142b75bf7dfb0509b9951"
+  },
+  "protocol_id": "urdf_lam_supplementary_n800_genesis_v1",
+  "runtime_binding": {
+    "backend": "cpu",
+    "cache": {
+      "mode": "GS_CACHE_FILE_PATH",
+      "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_lam_supplementary_genesis_qualification_n10_20260817_v1/genesis-cache"
+    },
+    "collision_detection": "contact_penetration",
+    "device": "cpu",
+    "engine": "genesis",
+    "engine_protocol_id": "genesis_contact_penetration_v1",
+    "genesis_source": {
+      "git_commit": "b1ddc20e102e010ca0a967c88bfc21715c1bc597",
+      "git_tree": "45d8924770ec410f5c39b5e8509381f09c98b1fd",
+      "module_path": "/mnt/zsn/zsn_workspace/PhysAI/simulation/genesis-world/genesis/__init__.py",
+      "package_tree_identity": "git-tree:45d8924770ec410f5c39b5e8509381f09c98b1fd",
+      "source_root": "/mnt/zsn/zsn_workspace/PhysAI/simulation/genesis-world",
+      "tracked_tree_clean": true
+    },
+    "genesis_version": "1.3.1",
+    "launcher": "/mnt/zsn/miniconda3/envs/genesis-main/bin/python3.12",
+    "launcher_sha256": "850588eadef664531c2cbc6e6f64813dca7e43c2a4cda1c62caccdfce543b7c7",
+    "morph": {
+      "align": false,
+      "collision": true,
+      "convexify": false,
+      "decimate": false,
+      "fixed": true,
+      "merge_fixed_links": false,
+      "merge_submeshes_for_collision": false,
+      "recompute_inertia": false,
+      "visualization": false,
+      "watertighten": 0
+    },
+    "penetration_threshold_m": 1e-06,
+    "platform": {
+      "machine": "x86_64",
+      "release": "5.10.134-19.103.al8.x86_64",
+      "system": "Linux"
+    },
+    "precision": "64",
+    "python": {
+      "executable": "/mnt/zsn/miniconda3/envs/genesis-main/bin/python3.12",
+      "executable_sha256": "850588eadef664531c2cbc6e6f64813dca7e43c2a4cda1c62caccdfce543b7c7",
+      "implementation": "CPython",
+      "version": "3.12.13"
+    },
+    "q_readback_tolerance": 1e-09,
+    "rigid_options": {
+      "contact_pruning_tolerance": null,
+      "enable_adjacent_collision": true,
+      "enable_collision": true,
+      "enable_neutral_collision": true,
+      "enable_self_collision": true,
+      "gravity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_collision_pairs": 16384,
+      "max_contacts": 16384
+    },
+    "rtree_version": "1.4.1",
+    "scipy_version": "1.18.0",
+    "thread_environment": {
+      "BLIS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "trimesh_version": "5.0.0",
+    "version": "1.3.1"
+  },
+  "schema_version": 1,
+  "scope": {
+    "engine_protocol_id": "genesis_contact_penetration_v1",
+    "formal_claim": false,
+    "mode": "pilot qualification smoke",
+    "selected_rank_count": 10,
+    "state_record_policy": "all_intended",
+    "strict_state_record_policy": "all_intended"
+  },
+  "status": "PARTIAL",
+  "verification_aggregates": {
+    "cohort": {
+      "assets": 800,
+      "executed_full_range_states": 105,
+      "intended_full_range_states": 50295,
+      "intended_multi_joint_sobol_states": 49536,
+      "intended_rest_states": 800,
+      "intended_strict_states": 50336,
+      "joints": 2395,
+      "retained_failure_assets": 798,
+      "sobol_movable_assets": 774,
+      "unexecuted_full_range_states": 50190
+    },
+    "schema_version": 1,
+    "supplementary_s1": {
+      "allowance_density": {
+        "eligible_pairs": 98,
+        "rate": 0.0,
+        "registered_pairs": 0
+      },
+      "deterministic_rebuild_match": {
+        "asset_denominator": 800,
+        "denominator": 0,
+        "eligible_assets": 0,
+        "passed": null,
+        "rate": null,
+        "reason": "LAM release has no frozen public build recipe",
+        "status": "N/E"
+      },
+      "receipt_bound_assets": {
+        "denominator": 800,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "receipt_replay_pass": {
+        "denominator": 800,
+        "passed": 0,
+        "rate": 0.0
+      },
+      "registered_allowance_gain_pp": {
+        "denominator": 800,
+        "no_allowance_passed": 2,
+        "registered_passed": 2,
+        "value": 0.0
+      },
+      "strict_pass_no_method_allowance": {
+        "denominator": 800,
+        "passed": 2,
+        "rate": 0.0025
+      }
+    },
+    "table2_supplementary": {
+      "joint_dynamics_coverage": {
+        "denominator": 2395,
+        "present": 0,
+        "rate": 0.0
+      },
+      "joint_limit_portability": {
+        "denominator": 2395,
+        "passed": 16,
+        "rate": 0.006680584551148226
+      },
+      "placeholder_mass_incidence": {
+        "denominator": 0,
+        "placeholder": null,
+        "rate": null,
+        "reason": "placeholder registry is empty; no mass values are evaluable",
+        "status": "N/E"
+      },
+      "visual_bearing_link_collision_coverage": {
+        "asset_denominator": 800,
+        "complete_assets": 7,
+        "denominator": 800,
+        "link_micro_covered": 36,
+        "link_micro_denominator": 47,
+        "link_micro_rate": 0.7659574468085106,
+        "passed": 7,
+        "rate": 0.00875
+      }
+    },
+    "table4a": {
+      "collision_safe_dof_retention": {
+        "denominator": 2395,
+        "passed": 5,
+        "rate": 0.0020876826722338203
+      },
+      "dof_bins": {
+        "0": {
+          "assets": 26,
+          "collision_safe_dof_retention": {
+            "denominator": 0,
+            "passed": 0,
+            "rate": null
+          },
+          "joint_level_full_range_cf": {
+            "denominator": 0,
+            "passed": 0,
+            "rate": null
+          },
+          "joints": 0,
+          "strict_collision_pass_no_method_allowance": {
+            "denominator": 26,
+            "passed": 0,
+            "rate": 0.0
+          }
+        },
+        "1": {
+          "assets": 295,
+          "collision_safe_dof_retention": {
+            "denominator": 295,
+            "passed": 1,
+            "rate": 0.003389830508474576
+          },
+          "joint_level_full_range_cf": {
+            "denominator": 295,
+            "passed": 1,
+            "rate": 0.003389830508474576
+          },
+          "joints": 295,
+          "strict_collision_pass_no_method_allowance": {
+            "denominator": 295,
+            "passed": 1,
+            "rate": 0.003389830508474576
+          }
+        },
+        "2-3": {
+          "assets": 304,
+          "collision_safe_dof_retention": {
+            "denominator": 716,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "joint_level_full_range_cf": {
+            "denominator": 716,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "joints": 716,
+          "strict_collision_pass_no_method_allowance": {
+            "denominator": 304,
+            "passed": 0,
+            "rate": 0.0
+          }
+        },
+        "4-7": {
+          "assets": 132,
+          "collision_safe_dof_retention": {
+            "denominator": 616,
+            "passed": 4,
+            "rate": 0.006493506493506494
+          },
+          "joint_level_full_range_cf": {
+            "denominator": 616,
+            "passed": 4,
+            "rate": 0.006493506493506494
+          },
+          "joints": 616,
+          "strict_collision_pass_no_method_allowance": {
+            "denominator": 132,
+            "passed": 1,
+            "rate": 0.007575757575757576
+          }
+        },
+        ">=8": {
+          "assets": 43,
+          "collision_safe_dof_retention": {
+            "denominator": 768,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "joint_level_full_range_cf": {
+            "denominator": 768,
+            "passed": 0,
+            "rate": 0.0
+          },
+          "joints": 768,
+          "strict_collision_pass_no_method_allowance": {
+            "denominator": 43,
+            "passed": 0,
+            "rate": 0.0
+          }
+        }
+      },
+      "executable_cf_dof_per_asset": {
+        "asset_denominator": 800,
+        "mean": 0.00625,
+        "median": 0.0,
+        "p90": 0.0,
+        "sum": 5
+      },
+      "joint_level_full_range_cf": {
+        "denominator": 2395,
+        "passed": 5,
+        "rate": 0.0020876826722338203
+      },
+      "limit_reachability": {
+        "denominator": 2004,
+        "passed": 5,
+        "rate": 0.00249500998003992
+      },
+      "normalized_clearance_p5": {
+        "asset_coverage": 0.0,
+        "intended_assets": 800,
+        "intended_states": 50295,
+        "measured_assets": 0,
+        "measured_states": 0,
+        "median_asset_p5": null,
+        "reason": "Genesis contact backend has no complete exact signed clearance for separated pairs",
+        "state_coverage": 0.0,
+        "status": "N/E"
+      }
+    },
+    "table4b": {
+      "analytic_collision_share": {
+        "analytic_elements": 0,
+        "loadable_collision_elements": 26,
+        "rate": 0.0
+      },
+      "collision_load_time_seconds": {
+        "coverage": 0.00625,
+        "intended": 800,
+        "measured": 5,
+        "median": 0.057102548,
+        "p90": 0.5189397706000001,
+        "status": "PARTIAL"
+      },
+      "collision_mesh_triangles_per_asset": {
+        "coverage": 0.00625,
+        "intended": 800,
+        "measured": 5,
+        "median": 1344.0,
+        "p90": 11274.400000000001,
+        "status": "PARTIAL"
+      },
+      "collision_to_visual_p95_normalized": {
+        "coverage": 0.00625,
+        "intended": 800,
+        "measured": 5,
+        "median": 6.11431858627383e-17,
+        "p90": 9.669417569063413e-17,
+        "status": "PARTIAL",
+        "value": 6.11431858627383e-17
+      },
+      "intra_link_redundancy": {
+        "asset_coverage": 0.005,
+        "complete_assets": 1,
+        "intended": 26,
+        "intended_assets": 800,
+        "link_coverage": 0.6538461538461539,
+        "measured": 17,
+        "measured_assets": 4,
+        "redundant_volume_m3": 0.0,
+        "shape_volume_m3": 220.8640658267767,
+        "status": "PARTIAL",
+        "value": 0.0
+      },
+      "shapes_per_visual_bearing_link": {
+        "coverage": 0.00625,
+        "intended": 800,
+        "measured": 5,
+        "median": 1.0,
+        "p90": 1.0,
+        "status": "PARTIAL"
+      },
+      "visual_to_collision_p95_normalized": {
+        "coverage": 0.00625,
+        "intended": 800,
+        "measured": 5,
+        "median": 6.114940916087741e-17,
+        "p90": 9.495873039393337e-17,
+        "status": "PARTIAL",
+        "value": 6.114940916087741e-17
+      }
+    }
+  },
+  "verification_aggregates_sha256": "1abfaf6333a8348c23742d0a53fcff5633cda63bae39dc2b5897c897e39b0045"
+}

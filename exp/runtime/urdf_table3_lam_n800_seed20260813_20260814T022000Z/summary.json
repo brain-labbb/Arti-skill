@@ -1,0 +1,56 @@
+{
+  "classification": "FORMAL",
+  "completed_at": "2026-08-14T02:17:57Z",
+  "dataset": "LAM released outputs (Articulated-Object-Code)",
+  "j_eval": 2395,
+  "manifest_content_sha256": "82937ff0c4e805ec8d8e28f1c71949715416eec980fe42486bee3854a694a879",
+  "metrics": {
+    "fk_roundtrip_error": {
+      "denominator": 2395,
+      "max_normalized_translation": 0.0,
+      "max_rotation_rad": 0.0,
+      "measured_joint_count": 2005,
+      "passed_threshold": 2005,
+      "status": "PARTIAL"
+    },
+    "joint_level_pass": {
+      "denominator": 2395,
+      "passed": 2000,
+      "rate": 0.8350730688935282
+    },
+    "joint_sweep_success": {
+      "denominator": 2395,
+      "passed": 2005,
+      "rate": 0.837160751565762
+    },
+    "non_degenerate_motion": {
+      "denominator": 2395,
+      "passed": 2000,
+      "rate": 0.8350730688935282
+    },
+    "strict_kinematic_pass": {
+      "denominator": 800,
+      "passed": 692,
+      "rate": 0.865
+    },
+    "subtree_consistency": {
+      "denominator": 2395,
+      "passed": 2005,
+      "rate": 0.837160751565762
+    },
+    "valid_range": {
+      "denominator": 2395,
+      "passed": 2378,
+      "rate": 0.992901878914405
+    }
+  },
+  "n_eval": 800,
+  "parse_success": 800,
+  "schema_version": 1,
+  "status": "completed",
+  "status_counts": {
+    "completed": 798,
+    "error": 2
+  },
+  "valid_tree": 733
+}

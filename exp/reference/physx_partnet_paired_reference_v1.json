@@ -1,0 +1,31 @@
+{
+  "protocol_id": "physx_partnet_paired_reference_v1",
+  "protocol_version": 1,
+  "role": "shared-identity paired reference protocol for PartNet-Mobility and PhysX-Mobility",
+  "partnet_mobility_root": "/mnt/zsn/lyb/PartNet_Mobility/data/dataset",
+  "physx_identity_root": "/mnt/zsn/zsn_workspace/Ctrl-3D-trellis2-controlnet-dev/demo/physical_edit_demo/third_party/physx_mobility/extracted/PhysX_mobility/urdf",
+  "categories": {
+    "storage_furniture": "StorageFurniture",
+    "table": "Table",
+    "refrigerator": "Refrigerator",
+    "dishwasher": "Dishwasher",
+    "microwave": "Microwave"
+  },
+  "selection": {
+    "requested_per_category": 6,
+    "rank_hash": "SHA256",
+    "rank_payload_encoding": "UTF-8",
+    "rank_payload_format": "nano3d-table3-physx-partnet-paired-v1\n<category>\n<dataset_id>",
+    "rank_payload_salt": "nano3d-table3-physx-partnet-paired-v1",
+    "eligible_pool": "dataset IDs present in the PhysX-Mobility URDF filename set and in PartNet-Mobility with an exact target-category meta.model_cat",
+    "ranking_rule": "within category, ascending SHA256(rank payload), then dataset_id; take first six",
+    "selection_inputs": [
+      "category",
+      "dataset_id"
+    ],
+    "physx_content_or_results_used_for_selection": false,
+    "content_blind": true,
+    "failure_policy": "retain every frozen shared ID in both requested denominators; never replace failures"
+  },
+  "claim_boundary": "paired same-object representation comparison; PartNet-Mobility and PhysX-Mobility remain datasets, not generated methods"
+}

@@ -1,0 +1,99 @@
+{
+  "classification": "FORMAL",
+  "cohort": {
+    "n_eval": 800,
+    "ordered_ids_sha256": "ef6cb964e50dc712280256c5b2f675cc2c957095c3553b21845d3562a5011883",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_partnet_mobility_n800_20260813/frozen_manifest.json",
+    "source_manifest_sha256": "2ff015ee6bb377ce693126b52dd632a7565a3eaa9f0007e26122a1bb4ab99900"
+  },
+  "completed_at_utc": "2026-08-21T04:04:28.839571Z",
+  "dataset": "PartNet-Mobility",
+  "frozen_config_sha256": "169ef58fa4cc6c81f3fd66820a424812720822a68697c5122171f48d6407a7d7",
+  "geometry_protocol_id": "lam_supplementary_geometry_v1",
+  "metrics": {
+    "analytic_collision_share": {
+      "analytic_elements": 0,
+      "loadable_collision_elements": 34501,
+      "rate": 0.0
+    },
+    "collision_load_time_seconds": {
+      "coverage": 0.98375,
+      "intended": 800,
+      "mean": 0.8268990596365946,
+      "measured": 787,
+      "median": 0.320295401,
+      "p90": 1.8593657987999999,
+      "status": "PARTIAL"
+    },
+    "collision_mesh_triangles_per_asset": {
+      "coverage": 0.98375,
+      "intended": 800,
+      "mean": 17341.968233799238,
+      "measured": 787,
+      "median": 6768.0,
+      "p90": 41052.79999999999,
+      "status": "PARTIAL"
+    },
+    "collision_to_visual_p95_normalized": {
+      "coverage": 0.995,
+      "intended": 800,
+      "measured": 796,
+      "median": 6.490705727354933e-17,
+      "p90": 3.9553216929697766e-16,
+      "status": "PARTIAL",
+      "value": 6.490705727354933e-17
+    },
+    "intra_link_redundancy": {
+      "asset_coverage": 0.01,
+      "complete_assets": 0,
+      "intended": 4807,
+      "intended_assets": 800,
+      "link_coverage": 0.0029124193883919283,
+      "measured": 14,
+      "measured_assets": 8,
+      "redundant_volume_m3": 0.0,
+      "shape_volume_m3": 2.4642449139293525,
+      "status": "PARTIAL",
+      "value": 0.0
+    },
+    "shapes_per_visual_bearing_link": {
+      "coverage": 0.98375,
+      "intended": 800,
+      "mean": 11.606176981044579,
+      "measured": 787,
+      "median": 6.0,
+      "p90": 23.15999999999999,
+      "status": "PARTIAL"
+    },
+    "status_counts": {
+      "completed": 800,
+      "error": 0,
+      "total": 800
+    },
+    "visual_to_collision_p95_normalized": {
+      "coverage": 0.995,
+      "intended": 800,
+      "measured": 796,
+      "median": 6.496618271838608e-17,
+      "p90": 4.169429707925277e-16,
+      "status": "PARTIAL",
+      "value": 6.496618271838608e-17
+    }
+  },
+  "mode": "formal",
+  "notes": [
+    "Exact surface backend is trimesh proximity + rtree; Genesis SDF is not used for Table 4b.",
+    "D_visual = q0 loadable visual union AABB diagonal; assets without a positive finite D_visual keep surface metrics N/E fail-closed.",
+    "Collision load time follows the frozen timing protocol (one unmeasured warmup + five measured repeats, process isolation, native thread count 1).",
+    "All failure modes (parse, resource, measurement, crash, timeout) remain fail-closed in every denominator."
+  ],
+  "protocol_id": "table4b_partnet_mobility_table4cohort_n800_salt20260813_v1",
+  "run_directory": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4b_urdf_partnet_mobility_table4cohort_n800_salt20260813_20260821T034613Z",
+  "started_at_utc": "2026-08-21T03:46:14.473521Z",
+  "status_counts": {
+    "completed": 800,
+    "error": 0,
+    "total": 800
+  },
+  "wall_seconds": 1094.281
+}

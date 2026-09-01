@@ -1,0 +1,46 @@
+{
+  "classification": "SMOKE",
+  "code_identity": {
+    "runner_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_s1_ours_500k.py",
+    "runner_sha256": "b0fc46b5456c22056f42002c02feccc9921bcd21468e5342b4ce9337552a74f4",
+    "static_atoms_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_static.py",
+    "static_atoms_sha256": "4701415dad8a5c0a434c16887979bcb70c250ba0b25772014e8db73789098e5f",
+    "verifier_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/verify_s1_ours_500k.py",
+    "verifier_sha256": "2b54a0a4f6fa383324c36028da66add2d6fd1566f190f8901a32d4124a936574"
+  },
+  "dataset": "Ours-500K",
+  "intended_n_eval": 500,
+  "limit": 5,
+  "n_eval": 5,
+  "pair_policy": {
+    "eligible_pairs": "distinct source-URDF links with collision geometry",
+    "method_specific_allowance": "none in headline",
+    "penetration_threshold_m": 1e-06,
+    "shared_topology_exclusion": "exclude_direct_parent_child",
+    "surface_contact_allowed": true
+  },
+  "protocol_id": "s1_ours_500k_table1cohort_n500_v1",
+  "runtime": {
+    "platform": "Linux-5.10.134-19.103.al8.x86_64-x86_64-with-glibc2.39",
+    "python": "3.13.2 | packaged by conda-forge | (main, Feb 17 2025, 14:10:22) [GCC 13.3.0]",
+    "python_executable": "/mnt/zsn/miniconda3/bin/python"
+  },
+  "schema_version": "supplementary-s1-ours-500k/v1",
+  "source": {
+    "cohort_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_500k_table2_n500_20260819T104011Z/frozen_manifest.json",
+    "cohort_manifest_sha256": "1b29d868112dcda326a08f8e3439d6b96c65833b99cc33af3bfcdb58fb4c2e24",
+    "dataset_root": "/mnt/zsn/lyb/arti-skill/exp/Brain/extracted/arti_cabinet_drawer_geometry_500_20260813",
+    "evidence_inventory": "/mnt/zsn/lyb/arti-skill/exp/runtime/s1_ours_500k_smoke_n5_20260823T064905Z/evidence_inventory.json",
+    "evidence_inventory_sha256": "9e731161cba5d2e90457b1001eeebb0869520486b8f23e6731df66f6aca8a13b",
+    "ordered_dataset_ids_sha256": "7fae0247526f0f31f92e5e12716cf2fa90750f90b77ed8ec268e4067c1fb4617",
+    "protocol_document": "/mnt/zsn/lyb/arti-skill/exp/URDF-Sim-Ready-Automatic-Evaluation.md",
+    "protocol_snapshot_sha256": "a1ab41642374338741def575ccdab756a15fcdc87830bccb26ac9b69ab64e58f",
+    "table4_asset_records": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_500k_table2_n500_20260819T104011Z/asset_records.jsonl",
+    "table4_asset_records_sha256": "7095ca2c75b1fb7f9a108ad0ef6451dbf85847a2c5401202e87d1c8e09f9012d",
+    "table4_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_500k_table2_n500_20260819T104011Z/frozen_manifest.json",
+    "table4_manifest_sha256": "1b29d868112dcda326a08f8e3439d6b96c65833b99cc33af3bfcdb58fb4c2e24",
+    "table4_state_records": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_ours_500k_table2_n500_20260819T104011Z/state_records.jsonl",
+    "table4_state_records_sha256": "1fcefb39b36db33ce48fa8f52b161ac87eb2e81e0599dfd38c429e173b9b922e"
+  },
+  "workers": 5
+}

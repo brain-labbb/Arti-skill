@@ -1,0 +1,59 @@
+{
+  "classification": "FORMAL",
+  "code_identity": {
+    "runner_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_s1_articraft10k.py",
+    "runner_sha256": "043f38e3de177760f899744e600fa96eeadb54d603faf07747eb2eb4d75b80dd",
+    "static_atoms_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_static.py",
+    "static_atoms_sha256": "4701415dad8a5c0a434c16887979bcb70c250ba0b25772014e8db73789098e5f",
+    "verifier_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/verify_s1_articraft10k.py",
+    "verifier_sha256": "dcd289a7396e66ca779e6327e6a9910d77469c509aa17ed5a34baa853403a591"
+  },
+  "cohort": {
+    "n_eval": 800,
+    "ordered_asset_ids_sha256": "79c44441600077513d3cde1cda8fef38324e1a0ee660730b860d5313f0ae9784",
+    "selection_policy": "all .records[].package entries from the frozen Table 2 manifest in existing order; no resampling, replacement, or result filtering",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table2_urdf_articraft10k_n800_seed20260813_20260813T145915Z/manifest.json",
+    "source_manifest_content_sha256": "576852cb6da00775e1c51360b82b4be40e0a614e4fb0cfb1bae066912eed56a3",
+    "source_manifest_file_sha256": "13c47e2b2affadb951a01cab826bae139852fca5769e99ec081cc916ffa6373d"
+  },
+  "dataset": "Articraft-10K",
+  "execution": {
+    "runtime": {
+      "gpu_required": false,
+      "platform": "Linux-5.10.134-19.103.al8.x86_64-x86_64-with-glibc2.39",
+      "python_executable": "/mnt/zsn/lyb/arti-skill/arti-template/.venv/bin/python",
+      "python_implementation": "CPython",
+      "python_version": "3.12.3"
+    },
+    "workers": 4
+  },
+  "frozen_at": "2026-08-21T05:30:07.966865Z",
+  "metric_operationalization": {
+    "allowance": "compile_report.overlap_allowances plus valid release registry files; eligible denominator is source-link pairs excluding direct parent-child",
+    "rebuild": "eligible only with a frozen recipe, runner identity, complete bound inputs, and declared canonical output fingerprint",
+    "receipt": "release package receipt must bind URDF, recursive resource closure, protocol, runner, pair policy, thresholds, and conclusion; compile_report is explicitly excluded",
+    "receipt_replay": "missing or non-replayable receipt fails closed",
+    "registered_allowance": "empty registry is exactly equivalent to no allowance; a non-empty registry requires pair-specific replay and is rejected by this frozen run",
+    "strict_pass": "independent reaggregation of frozen unified PyBullet Table 4 rest, single-joint, and Sobol raw state records; penetration threshold 1e-6 m; direct parent-child excluded; no method-specific allowance"
+  },
+  "protocol_document": {
+    "path": "/mnt/zsn/lyb/arti-skill/exp/URDF-Sim-Ready-Automatic-Evaluation.md",
+    "sha256_at_freeze": "36c8c05491177e4b12628c32af2ada3ca659f9a4487b431c7b751d6d181730a1"
+  },
+  "protocol_id": "s1_articraft10k_table2cohort_n800_seed20260813_v1",
+  "release_sources": {
+    "category_records_root": "/mnt/zsn/lyb/arti-skill/exp/baselines/Articraft-10K-official/records",
+    "official_source_manifest_sha256": "11a37014d2d73782f502f2043b589915f663e16094470366529d5e944d777f47"
+  },
+  "schema_version": "s1-articraft10k-run/v1",
+  "table4_source": {
+    "asset_records_file_sha256": "b732a53a464a8aeebb74799d5ec737de75f3cca377c9a5b274a5dd35adbe301b",
+    "asset_records_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_articraft10k_n800_20260814/asset_records.json",
+    "manifest_file_sha256": "6b4275cf3da29244af70c04acecd87094f0c158dee992db20b04e90c05292c20",
+    "manifest_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_articraft10k_n800_20260814/frozen_manifest.json",
+    "protocol_id": "urdf_sim_ready_table4_articraft10k_n800_v1",
+    "state_record_count": 33143,
+    "state_records_file_sha256": "6efd4031ecebf74f30f8d3ec3c312ae2faf1b521322b5d4a8b57bb732177ac8b",
+    "state_records_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_articraft10k_n800_20260814/state_records.jsonl"
+  }
+}

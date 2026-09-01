@@ -1,0 +1,123 @@
+{
+  "artifact_hash_scope": "required outputs except self_check.json to avoid a circular hash",
+  "artifact_hashes": {
+    "asset_records.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "manifest.json": "463278f07d4a185de98fd5a32edba143955d03ccd2c90d113b39b7755bf8ac52",
+    "protocol_snapshot.json": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+    "report.md": "555c492bcbc6d33eed8f75c498214b4ce41fd91ee7f645e3412d2821d3925625",
+    "summary.json": "5e12891438dfaa477dc7f2867c195a4a2e86ad817dcf4f1def3043dd9db5a7a2"
+  },
+  "checks": {
+    "all_local_columns_not_evaluable": true,
+    "all_local_rates_have_explicit_zero_denominators": true,
+    "all_referenced_evidence_exists_inside_workspace": true,
+    "checkout_commit_matches_table6_freeze": true,
+    "checkout_contains_no_final_asset": true,
+    "manifest_and_records_match": true,
+    "manifest_identities_unique": true,
+    "manifest_sha256_recorded": true,
+    "paper_only_layer_is_separate": true,
+    "protocol_snapshot_hash_matches_source": true,
+    "requested_equals_available_plus_unavailable": true,
+    "required_denominators_are_zero_and_explicit": true,
+    "state_partitions_conserve_requested_denominator": true
+  },
+  "manifest_sha256": "463278f07d4a185de98fd5a32edba143955d03ccd2c90d113b39b7755bf8ac52",
+  "protocol_id": "nano3d_table7_production_readiness_v1",
+  "protocol_sha256": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+  "schema_version": "1.0.0",
+  "state_accounting": {
+    "degenerate_faces": {
+      "conserved": true,
+      "denominator": 0,
+      "fail": 0,
+      "not_evaluable_assets": 0,
+      "pass": 0
+    },
+    "deterministic_build": {
+      "conserved": true,
+      "denominator": 0,
+      "fail": 0,
+      "not_evaluable_assets": 0,
+      "pass": 0
+    },
+    "kinematic_complete": {
+      "conserved": true,
+      "denominator": 0,
+      "fail": 0,
+      "not_evaluable_assets": 0,
+      "pass": 0
+    },
+    "manifold": {
+      "conserved": true,
+      "denominator": 0,
+      "fail": 0,
+      "not_evaluable_assets": 0,
+      "pass": 0
+    },
+    "mesh_bytes": {
+      "conserved": true,
+      "denominator": 0,
+      "fail": 0,
+      "not_evaluable_assets": 0,
+      "pass": 0
+    },
+    "open_edges": {
+      "conserved": true,
+      "denominator": 0,
+      "fail": 0,
+      "not_evaluable_assets": 0,
+      "pass": 0
+    },
+    "physical_complete": {
+      "conserved": true,
+      "denominator": 0,
+      "fail": 0,
+      "not_evaluable_assets": 0,
+      "pass": 0
+    },
+    "portable_package": {
+      "conserved": true,
+      "denominator": 0,
+      "fail": 0,
+      "not_evaluable_assets": 0,
+      "pass": 0
+    },
+    "self_intersection": {
+      "conserved": true,
+      "denominator": 0,
+      "fail": 0,
+      "not_evaluable_assets": 0,
+      "pass": 0
+    },
+    "semantic_complete": {
+      "conserved": true,
+      "denominator": 0,
+      "fail": 0,
+      "not_evaluable_assets": 0,
+      "pass": 0
+    },
+    "source_bytes": {
+      "conserved": true,
+      "denominator": 0,
+      "fail": 0,
+      "not_evaluable_assets": 0,
+      "pass": 0
+    },
+    "urdf_bytes": {
+      "conserved": true,
+      "denominator": 0,
+      "fail": 0,
+      "not_evaluable_assets": 0,
+      "pass": 0
+    },
+    "watertight": {
+      "conserved": true,
+      "denominator": 0,
+      "fail": 0,
+      "not_evaluable_assets": 0,
+      "pass": 0
+    }
+  },
+  "status": "PASS"
+}

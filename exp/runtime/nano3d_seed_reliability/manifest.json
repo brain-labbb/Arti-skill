@@ -1,0 +1,354 @@
+{
+  "compile_gate": "compile_urdf_report: run_checks=False,target=full,motion_qc=False; only run after strict failure",
+  "created_utc": "2026-08-05T07:28:53.178956+00:00",
+  "numerical_thread_env": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "protocol": "nano3d_seed_distribution_reliability_v1",
+  "schema_version": 1,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35
+  ],
+  "source_asset_list": "/mnt/zsn/lyb/arti-skill/exp/Nano3dasset.md",
+  "source_asset_list_sha256": "ddbca244436e712090cd946f81cd1b8a726c0cc577c0dc3ea40480445e30bd36",
+  "strict_gate": "template_sweep._compile_one: run_checks=True,target=full,motion_qc=True + overlap/rigid/disconnected policies",
+  "template_repo": "/mnt/zsn/lyb/arti-skill/arti-template",
+  "templates": [
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/Astronomy_Antenna_dish/seed_343",
+      "selected_asset_seed": 343,
+      "selected_asset_source": "seed_exports",
+      "slug": "Astronomy_Antenna_dish",
+      "stem": "astronomy_antenna_dish",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/Astronomy_Antenna_dish.py",
+      "template_sha256": "49a1d3be2e80abbe2eb7d7ad859547ce49e50efeca6b85cfb9cd958115415f95"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/Door_Double_Door/seed_222",
+      "selected_asset_seed": 222,
+      "selected_asset_source": "seed_exports",
+      "slug": "Door_Double_Door",
+      "stem": "double_door",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/Door_Double_Door.py",
+      "template_sha256": "d121c441f6bb1234274399198eb9324352736ca8808cbb92d4702ef6f47d5682"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/Electrical_Wiring_Wire_stripper/seed_5943",
+      "selected_asset_seed": 5943,
+      "selected_asset_source": "seed_exports",
+      "slug": "Electrical_Wiring_Wire_stripper",
+      "stem": "wire_stripper",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/Electrical_Wiring_Wire_stripper.py",
+      "template_sha256": "275b878d3c06d7e6b3bc2f13c7f539c8cf6ee50b1bcecf84ac77009f1dfae46f"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/Bag_Suitcase_Shopping_bucket/seed_148",
+      "selected_asset_seed": 148,
+      "selected_asset_source": "seed_exports_physics_10",
+      "slug": "Bag_Suitcase_Shopping_bucket",
+      "stem": "shopping_bucket",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/Bag_Suitcase_Shopping_bucket.py",
+      "template_sha256": "c9457e73478b7b4f46467247af134d6cdc5355736dc82512ce084d73be3483bd"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/Door_Other/seed_431",
+      "selected_asset_seed": 431,
+      "selected_asset_source": "seed_exports_physics_10",
+      "slug": "Door_Other",
+      "stem": "door_other",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/Door_Other.py",
+      "template_sha256": "e2fb949c75ee678f7b43ebea7203d67d3bf0853782e2374e42b6a5d19e25c198"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/Door_Trap_door/seed_1495",
+      "selected_asset_seed": 1495,
+      "selected_asset_source": "seed_exports_physics_10",
+      "slug": "Door_Trap_door",
+      "stem": "trap_door",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/Door_Trap_door.py",
+      "template_sha256": "96dcb198af1e85756f3ab101dccb895a86f45853d4b1c7b5ba0d6206a08f1a4d"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/Handtools_clothes_peg/seed_453",
+      "selected_asset_seed": 453,
+      "selected_asset_source": "seed_exports_physics_10",
+      "slug": "Handtools_clothes_peg",
+      "stem": "clothes_peg",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/Handtools_clothes_peg.py",
+      "template_sha256": "638bd81c1566708394a442a386152cc5ee1bcf679171330b9e629f948d8b2e70"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/Urban_Environment_bucket1/seed_1009",
+      "selected_asset_seed": 1009,
+      "selected_asset_source": "seed_exports_physics_10",
+      "slug": "Urban_Environment_bucket1",
+      "stem": "bucket1",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/Urban_Environment_bucket1.py",
+      "template_sha256": "ea7ddebf69bb4e45ccf1ab54b8aa6cdc7cfb9baa271459bfffe311964d2c9cb7"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/Urban_Environment_bucket2/seed_6101",
+      "selected_asset_seed": 6101,
+      "selected_asset_source": "seed_exports_physics_10",
+      "slug": "Urban_Environment_bucket2",
+      "stem": "bucket2",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/Urban_Environment_bucket2.py",
+      "template_sha256": "344a5df99a87e2df1111e73a8c11be4a5a4c1a1d9c865ec02f4d2db74e5fc15b"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/pictureX_0611_garlic_press/seed_2",
+      "selected_asset_seed": 2,
+      "selected_asset_source": "seed_exports_physics_10",
+      "slug": "pictureX_0611_garlic_press",
+      "stem": "pictureX_0611_garlic_press",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/pictureX_0611_garlic_press.py",
+      "template_sha256": "f1746455bfe51bb581cec8262958c953080e48d857ffa4c17eb7626cac28d4a5"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/pictureX_0611_guitar_tuning_peg_mechanism/seed_202",
+      "selected_asset_seed": 202,
+      "selected_asset_source": "seed_exports_physics_10",
+      "slug": "pictureX_0611_guitar_tuning_peg_mechanism",
+      "stem": "pictureX_0611_guitar_tuning_peg_mechanism",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/pictureX_0611_guitar_tuning_peg_mechanism.py",
+      "template_sha256": "693e3db600d1dada6382e8735c8dc0a7af98dba3e6ad5b14ed07bb4610301ebb"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/Industrial_Mine_cart/seed_13",
+      "selected_asset_seed": 13,
+      "selected_asset_source": "seed_exports",
+      "slug": "Industrial_Mine_cart",
+      "stem": "industrial_mine_cart",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/Industrial_Mine_cart.py",
+      "template_sha256": "a652ff513d59bd89be99bb0e3a032e0d79f9bcefa58bf6d77f916f3e8da378c2"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_C_shaped_sofa_side_table/seed_0",
+      "selected_asset_seed": 0,
+      "selected_asset_source": "seed_exports",
+      "slug": "pictureX_0611_C_shaped_sofa_side_table",
+      "stem": "picturex_0611_c_shaped_sofa_side_table",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/pictureX_0611_C_shaped_sofa_side_table.py",
+      "template_sha256": "2cb0794cbffe8bf727915523d106da089907de429efd2cf1c40a2b3d2a7d3c4c"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_Dressing_table/seed_0",
+      "selected_asset_seed": 0,
+      "selected_asset_source": "seed_exports",
+      "slug": "pictureX_0611_Dressing_table",
+      "stem": "picturex_0611_dressing_table",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/pictureX_0611_Dressing_table.py",
+      "template_sha256": "0b33c9422bb756b9c79effd513ea3e6e320b30a6638b1491cfa44d1ce8ad234d"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_Butter_maker/seed_0",
+      "selected_asset_seed": 0,
+      "selected_asset_source": "seed_exports",
+      "slug": "pictureX_0611_Butter_maker",
+      "stem": "picturex_0611_butter_maker",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/pictureX_0611_Butter_maker.py",
+      "template_sha256": "9a633f1f317ad5e9def69a9be09077b8799a5e86642771326c74d04c7c777507"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_Garden_pruner/seed_0",
+      "selected_asset_seed": 0,
+      "selected_asset_source": "seed_exports",
+      "slug": "pictureX_0611_Garden_pruner",
+      "stem": "picturex_0611_garden_pruner",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/pictureX_0611_Garden_pruner.py",
+      "template_sha256": "459cb75afd2b918f82a32e477093b0e72ec98f8f651e08be551c37156d5ec141"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_Ice_crream_machine/seed_0",
+      "selected_asset_seed": 0,
+      "selected_asset_source": "seed_exports",
+      "slug": "pictureX_0611_Ice_crream_machine",
+      "stem": "picturex_0611_ice_crream_machine",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/pictureX_0611_Ice_crream_machine.py",
+      "template_sha256": "c487ceb2d4fcc4d33d20817f2e400c1218f1918a3cd9e68080a4d44604802d4e"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_juicer_press_with_handle/seed_0",
+      "selected_asset_seed": 0,
+      "selected_asset_source": "seed_exports",
+      "slug": "pictureX_0611_juicer_press_with_handle",
+      "stem": "pictureX_0611_juicer_press_with_handle",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/pictureX_0611_juicer_press_with_handle.py",
+      "template_sha256": "cd58719bccd2250126a3c97e50de9255be3e857366919e8b43974d7ab1896ee8"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_bi_fold_closet_door_system/seed_0",
+      "selected_asset_seed": 0,
+      "selected_asset_source": "seed_exports",
+      "slug": "pictureX_0611_bi_fold_closet_door_system",
+      "stem": "picturex_0611_bi_fold_closet_door_system",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/pictureX_0611_bi_fold_closet_door_system.py",
+      "template_sha256": "fa6aac1f722b1b6f24d3f7c0e3a91c40019510753b3866cdb18d6713c399eeb5"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/riot_shield/seed_3141",
+      "selected_asset_seed": 3141,
+      "selected_asset_source": "seed_exports",
+      "slug": "riot_shield",
+      "stem": "riot_shield",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/riot_shield.py",
+      "template_sha256": "d033337968afc967ddc9e8de208d9e3944b4dfe59d23eb58d601a28c471d79a2"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/Stationary_Pencil_sharpener/seed_6",
+      "selected_asset_seed": 6,
+      "selected_asset_source": "seed_exports_physics_10",
+      "slug": "Stationary_Pencil_sharpener",
+      "stem": "pencil_sharpener",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/Stationary_Pencil_sharpener.py",
+      "template_sha256": "483372e74af11529d94763759ca74c108a871e8501e35eec0ea95a6a1880dabe"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports_physics_10/sailboat_winch_with_pawl_and_handle/seed_11",
+      "selected_asset_seed": 11,
+      "selected_asset_source": "seed_exports_physics_10",
+      "slug": "sailboat_winch_with_pawl_and_handle",
+      "stem": "sailboat_winch_with_pawl_and_handle",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/sailboat_winch_with_pawl_and_handle.py",
+      "template_sha256": "ee0a21b0af0a1122669defa867b729f360ee91a72ac0ec410d1cb40d6949628b"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/Astronomy_Space_shuttle/seed_0",
+      "selected_asset_seed": 0,
+      "selected_asset_source": "seed_exports",
+      "slug": "Astronomy_Space_shuttle",
+      "stem": "astronomy_space_shuttle",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/Astronomy_Space_shuttle.py",
+      "template_sha256": "c23eeb69dd2a3bd4a69ed05b27b9b0deca94353a2c5d0dc08b0f22a140fe178d"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/Household_Laundry_Clothes_drying_rack_Laundry_drying_rack/seed_1341",
+      "selected_asset_seed": 1341,
+      "selected_asset_source": "seed_exports",
+      "slug": "Household_Laundry_Clothes_drying_rack_Laundry_drying_rack",
+      "stem": "household_laundry_clothes_drying_rack_laundry_drying_rack",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/Household_Laundry_Clothes_drying_rack_Laundry_drying_rack.py",
+      "template_sha256": "8d06e8e5da64680e00abff77305c9f944788b824b81cd946381372f7ca886c0d"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/Vehicle_Sports_car/seed_202",
+      "selected_asset_seed": 202,
+      "selected_asset_source": "seed_exports",
+      "slug": "Vehicle_Sports_car",
+      "stem": "sports_car",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/Vehicle_Sports_car.py",
+      "template_sha256": "90f2f52bc6f186b147dd9bb577b7125dd13132ac694a5c791b1de1b1a4d13125"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_Industrial_rolling_work_table/seed_0",
+      "selected_asset_seed": 0,
+      "selected_asset_source": "seed_exports",
+      "slug": "pictureX_0611_Industrial_rolling_work_table",
+      "stem": "picturex_0611_industrial_rolling_work_table",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/pictureX_0611_Industrial_rolling_work_table.py",
+      "template_sha256": "00c22dd8061bf6ddddaf477f6bed4167c8f0503e99e3005730b106248d613108"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_Hole_punch/seed_0",
+      "selected_asset_seed": 0,
+      "selected_asset_source": "seed_exports",
+      "slug": "pictureX_0611_Hole_punch",
+      "stem": "picturex_0611_hole_punch",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/pictureX_0611_Hole_punch.py",
+      "template_sha256": "c6e08ac2d6ab46aed6328cac17c750db4b116447ff1b309b66dc9644fc24cf44"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_drawing_compass_with_adjustable_legs/seed_0",
+      "selected_asset_seed": 0,
+      "selected_asset_source": "seed_exports",
+      "slug": "pictureX_0611_drawing_compass_with_adjustable_legs",
+      "stem": "pictureX_0611_drawing_compass_with_adjustable_legs",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/pictureX_0611_drawing_compass_with_adjustable_legs.py",
+      "template_sha256": "238e95dda2db22fffa8dc2dddc0a3c11c647c158adaa1b77655ecd15d0cd7107"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_ergonomic_clamp_with_adjustable_components/seed_0",
+      "selected_asset_seed": 0,
+      "selected_asset_source": "seed_exports",
+      "slug": "pictureX_0611_ergonomic_clamp_with_adjustable_components",
+      "stem": "picturex_0611_ergonomic_clamp_with_adjustable_components",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/pictureX_0611_ergonomic_clamp_with_adjustable_components.py",
+      "template_sha256": "267970179dabc69383e4d54895b446e677509cb696100fdc6c5de4cf919a498a"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_Hand_crank_clothes_wringer/seed_0",
+      "selected_asset_seed": 0,
+      "selected_asset_source": "seed_exports",
+      "slug": "pictureX_0611_Hand_crank_clothes_wringer",
+      "stem": "picturex_0611_hand_crank_clothes_wringer",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/pictureX_0611_Hand_crank_clothes_wringer.py",
+      "template_sha256": "27c68957911b91a0139973e2aeba9cd915cfda8dec268f4fd27f5e1ca674c8a7"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_ergonomic_clamp_with_adjustable/seed_0",
+      "selected_asset_seed": 0,
+      "selected_asset_source": "seed_exports",
+      "slug": "pictureX_0611_ergonomic_clamp_with_adjustable",
+      "stem": "picturex_0611_ergonomic_clamp_with_adjustable",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/pictureX_0611_ergonomic_clamp_with_adjustable.py",
+      "template_sha256": "763b885427b453c0ca9144a409929bf2a299293efa9f399f6fb0a05c101071ce"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/Astronomy_Pressurised_module_door/seed_1020",
+      "selected_asset_seed": 1020,
+      "selected_asset_source": "seed_exports",
+      "slug": "Astronomy_Pressurised_module_door",
+      "stem": "astronomy_pressurised_module_door",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/Astronomy_Pressurised_module_door.py",
+      "template_sha256": "4cf01b2697be203ee2d04dcb934d1b79ca8beb89c9296075d7d5678527b3afa7"
+    },
+    {
+      "selected_asset_path": "/mnt/zsn/lyb/arti-skill/seed_exports/pictureX_0611_Folding_table5/seed_2",
+      "selected_asset_seed": 2,
+      "selected_asset_source": "seed_exports",
+      "slug": "pictureX_0611_Folding_table5",
+      "stem": "picturex_0611_folding_table5",
+      "template_path": "/mnt/zsn/lyb/arti-skill/arti-template/agent/templates/pictureX_0611_Folding_table5.py",
+      "template_sha256": "0b38c2ff706dd56594617085d604988c8868b5d0806ac341291214d59e999796"
+    }
+  ]
+}

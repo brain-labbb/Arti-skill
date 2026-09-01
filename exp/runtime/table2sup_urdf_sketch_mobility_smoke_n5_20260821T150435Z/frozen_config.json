@@ -1,0 +1,25 @@
+{
+  "denominator_policy": "all intended assets and movable joints fail closed",
+  "execution": {
+    "asset_timeout_seconds": 120.0,
+    "fresh_child_per_asset": true,
+    "placeholder_registry": [],
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "workers": 4
+  },
+  "manifest_content_sha256": "001e7cf894b20f409571b9a57e9f798470b470abd12ce25ae420f238b93d8a51",
+  "metric_atom": {
+    "numpy_version": "2.4.4",
+    "protocol_version": "lam-supplementary-static/v1.2",
+    "python_executable": "/mnt/zsn/miniconda3/bin/python",
+    "python_version": "3.13.2",
+    "static_module": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_static.py",
+    "static_module_sha256": "4701415dad8a5c0a434c16887979bcb70c250ba0b25772014e8db73789098e5f",
+    "trimesh_version": "4.12.2"
+  }
+}

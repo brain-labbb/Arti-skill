@@ -1,0 +1,353 @@
+{
+  "schema_version": "table5_sketch_mobility_protocol_v1",
+  "claim_boundary": {
+    "release_level_contact_runtime_diagnostic": true,
+    "source_release_status": "RELEASED_MIXED_LICENSE_SECONDARY_CURATION",
+    "not_evidence_of": [
+      "semantic_joint_correctness",
+      "calibrated_real_world_dynamics",
+      "continuous_collision_freedom",
+      "real_world_fidelity"
+    ],
+    "strict_collision": "reuse frozen Table 4 strict_collision_pass without reinterpretation",
+    "strict_sim_ready": "logical conjunction of frozen Table 2/3/4 strict gates, all-three runtime pass, and frozen cross-simulator thresholds"
+  },
+  "source": {
+    "dataset": "SketchMobility",
+    "release_status": "RELEASED_MIXED_LICENSE_SECONDARY_CURATION",
+    "required_release_count": 4956,
+    "required_selected_count": 800,
+    "required_raw_category_count": 67,
+    "table1_manifest_sha256": "081e9e9125f8945cad67a751949e659f6d4e73817704c07cd3fcd4b657ffc696",
+    "release_manifest_sha256": "5b4b0891bafeba5029e5e1dd71042e5be8543eccb2990edfbc9aba71a1ac56fb",
+    "release_universe_sha256": "a9c128d24ab9cba03d593ecff17f1e7284ef1f74f09f69939cbef7c0cc8af346",
+    "ordered_identity_sha256": "f7cd81b2c6ef85c915582a911e3040fbc330a90e626aafdf71a9c5919ab1402f",
+    "ordered_manifest_root_sha256": "a88506e1da8e7e8b61a740965dea2faba4e9ab8280f47417e17550024b6dde17",
+    "ordered_package_binding_sha256": "5fa3622502d74feacffd327b61c7a43f7c30d6d6109d4439d79651a39a39805d",
+    "ordered_urdf_binding_sha256": "4fee367147d3f83482ee34959723bf12539c22472153b10dce252d36967d2f86"
+  },
+  "selection": {
+    "source": "Table1 manifest assets exact stored order",
+    "identity_authority": "manifest_root",
+    "internal_id": "sketch_<zero_based_order:04d>",
+    "selected_count": 800,
+    "access_order": "reuse Table 1 membership and order before simulator access; no resampling or outcome filtering",
+    "replacement": "never",
+    "retained_preflight_failures": 489
+  },
+  "upstream_strict_gates": {
+    "table2": {
+      "record_key": "asset_id",
+      "field": "strict_urdf_pass",
+      "denominator": 800,
+      "artifact_set": {
+        "artifact_set_sha256": "f404a084b68e257222c6d6c146f67c8ea90db27ec8728702be4d9691e27fb589",
+        "file_count": 9,
+        "total_bytes": 13486161
+      },
+      "required_files": [
+        "artifact_manifest.json",
+        "asset_records.jsonl",
+        "checkpoint.json",
+        "environment.json",
+        "manifest.json",
+        "summary.json",
+        "summary.md",
+        "release_roster_reverified.jsonl"
+      ],
+      "summary_expectations": {
+        "classification": "FORMAL",
+        "dataset": "SketchMobility",
+        "n_eval": 800,
+        "records_present": 800,
+        "error_count": 0,
+        "status_counts": {"completed": 800},
+        "strict_passed": 0,
+        "metric_pass_counts": {
+          "collision_coverage": 311,
+          "finite_fields": 800,
+          "inertia_validity": 338,
+          "inertial_coverage": 338,
+          "parse_rate": 686,
+          "resource_resolution": 789,
+          "strict_urdf_pass": 0,
+          "valid_joint_spec": 800,
+          "valid_tree": 800
+        }
+      }
+    },
+    "table3": {
+      "record_key": "asset_id",
+      "field": "strict_kinematic_pass",
+      "denominator": 800,
+      "artifact_set": {
+        "artifact_set_sha256": "506819f33acf0acc638280a419e5d9cd44280cf858dfc5fb324ea4140b009d2d",
+        "file_count": 13,
+        "total_bytes": 10953965
+      },
+      "required_files": [
+        "asset_records.jsonl",
+        "checkpoint.json",
+        "manifest.json",
+        "summary.json",
+        "summary.md"
+      ],
+      "summary_expectations": {
+        "schema_version": "1.0.0-sketch-mobility",
+        "status": "completed",
+        "dataset": "SketchMobility",
+        "n_eval": 800,
+        "j_eval": 1824,
+        "parse_success": 800,
+        "valid_tree": 800,
+        "status_counts": {"completed": 800},
+        "strict_passed": 572
+      }
+    },
+    "table4": {
+      "record_key": "dataset_id",
+      "field": "strict_collision_pass",
+      "denominator": 800,
+      "bbox_field": "object_bbox_diagonal_m",
+      "bbox_protocol": "pybullet_q0_collision_shape_union_aabb_v1",
+      "artifact_set": {
+        "artifact_set_sha256": "7201f8299f8fe0ec1f93a6269149e506bb75614a64eb96d1b8362c96f800aaa7",
+        "file_count": 20,
+        "total_bytes": 45951870
+      },
+      "required_files": [
+        "asset_records.jsonl",
+        "checkpoint.json",
+        "manifest.json",
+        "pair_policy_smoke.json",
+        "pair_policy_smoke.urdf",
+        "state_records.jsonl",
+        "summary.json",
+        "verification.json"
+      ],
+      "summary_expectations": {
+        "status": "COMPLETE_WITH_RETAINED_FAILURES",
+        "protocol_id": "urdf-sim-ready-table4-sketch-mobility-table1-cohort-v1",
+        "selected": 800,
+        "category_count": 67,
+        "load_success": 311,
+        "measurement_complete": 311,
+        "strict_passed": 224,
+        "verification_status": "PASS"
+      }
+    }
+  },
+  "runtime": {
+    "base": "fixed",
+    "contacts": "enabled",
+    "gravity_m_per_s2": [0, 0, -9.81],
+    "timestep_s": {"numerator": 1, "denominator": 240},
+    "solver_iterations": 50,
+    "initial_scalar_joint_state": "declared_midpoint",
+    "reset_repetitions": 3,
+    "passive_settling": {"steps": 240, "seconds": 1.0},
+    "actuation": {
+      "eligibility": {
+        "types": ["revolute", "prismatic"],
+        "bounded": true,
+        "require_finite_lower_upper": true,
+        "require_lower_less_than_upper": true,
+        "require_positive_finite_effort_velocity": true
+      },
+      "one_joint_at_a_time": true,
+      "other_scalar_joints": "midpoint",
+      "trajectory": {
+        "shape": "minimum_jerk",
+        "initial_normalized": 0.0,
+        "target_normalized": 1.0,
+        "ramp_steps": 240,
+        "hold_steps": 120
+      },
+      "normalization": {
+        "position": "(q - lower) / (upper - lower)",
+        "speed": "qdot / declared_velocity",
+        "position_error": "target_normalized - measured_normalized_position"
+      },
+      "effort_controller": {
+        "formula": "tau = effort * clip(kp * normalized_position_error - kd * normalized_speed, -1, 1)",
+        "kp": 2.0,
+        "kd": 0.2,
+        "clip": [-1.0, 1.0]
+      },
+      "unsupported_asset_result": "fail_closed"
+    },
+    "limit_enforcement": {
+      "reset": "midpoint",
+      "targets_normalized": [-0.1, 1.1],
+      "steps_each": 120,
+      "tolerance": {
+        "absolute_si": 0.000001,
+        "relative_declared_range": 0.001
+      }
+    },
+    "child_timeout_s": 300,
+    "thread_caps": {
+      "omp": 1,
+      "mkl": 1,
+      "openblas": 1,
+      "numexpr": 1,
+      "veclib": 1,
+      "taichi": 1
+    },
+    "random_seed": 20260813
+  },
+  "metrics": {
+    "load": {
+      "require_exact_link_joint_counts_and_names": true,
+      "fixed_structure_folding": "strict_fail"
+    },
+    "reset": {"all_repetitions": true, "require_finite_scalar_state": true},
+    "settling": {
+      "require_finite_states": true,
+      "max_normalized_displacement": 0.05,
+      "max_normalized_speed_per_s": 10.0
+    },
+    "actuation": {
+      "min_declared_range_fraction": 0.9,
+      "no_supported_or_any_unsupported_movable": "fail_closed"
+    },
+    "limit_enforcement": {"all_supported_bounded_joints": true},
+    "constraint_drift": {
+      "translation_over_bbox_diagonal_max": 0.001,
+      "rotation_rad_max": 0.01,
+      "reference": "URDF_FK_at_measured_joint_states"
+    },
+    "simulator_pass": {
+      "logical_and": [
+        "load",
+        "reset",
+        "settling",
+        "actuation",
+        "limit_enforcement",
+        "constraint_drift"
+      ]
+    },
+    "strict_collision": {
+      "source": "manifest.strict_gates.table4.strict_collision_pass",
+      "denominator": 800,
+      "fail_closed": true
+    },
+    "strict_sim_ready": {
+      "logical_and": [
+        "manifest.strict_gates.table2.strict_urdf_pass",
+        "manifest.strict_gates.table3.strict_kinematic_pass",
+        "manifest.strict_gates.table4.strict_collision_pass",
+        "all_three_runtime_pass",
+        "cross_simulator_thresholds"
+      ],
+      "denominator": 800,
+      "fail_closed": true
+    }
+  },
+  "cross_simulator": {
+    "trajectory_samples": 31,
+    "sample_cadence_steps": 12,
+    "pairing": {
+      "asset_key": "manifest.manifest_root",
+      "runtime_asset_key": "manifest.dataset_id",
+      "joint_key": "urdf_joint_name"
+    },
+    "joint_rmse": {
+      "position": "normalized_joint_position",
+      "sample_steps": [
+        0, 12, 24, 36, 48, 60, 72, 84, 96, 108, 120, 132, 144, 156, 168, 180,
+        192, 204, 216, 228, 240, 252, 264, 276, 288, 300, 312, 324, 336, 348, 360
+      ],
+      "separate_denominators": ["revolute", "prismatic"]
+    },
+    "pose_comparison": {
+      "link_scope": "reachable_descendant_urdf_child_links",
+      "frame_alignment": "shared_named_root",
+      "translation_error": "norm(delta_translation) / object_bounding_box_diagonal",
+      "rotation_error": "quaternion_angular_error_rad",
+      "aggregate": "maximum_across_available_simulator_pairs"
+    },
+    "type_denominators": ["revolute", "prismatic", "link"],
+    "failure_treatment": "preflight_missing_mapping_unsupported_timeout_or_failed_simulator_remain_explicit_and_cannot_improve_strict_rate",
+    "strict_runtime_relationship": "missing_or_failed_pairs_cannot_improve_strict_rates",
+    "thresholds": {
+      "normalized_joint_rmse": 0.1,
+      "translation_over_bbox_diagonal": 0.02,
+      "rotation_rad": 0.1
+    },
+    "all_three_denominator": 800
+  },
+  "adapters": {
+    "pybullet": {
+      "version": "3.2.7",
+      "connection": "DIRECT",
+      "fixed_link_merge": false,
+      "maintain_link_order": false,
+      "ignore_collision": false,
+      "self_collision": true,
+      "contacts": "enabled",
+      "default_motors": "disabled",
+      "control": "torque",
+      "visual_shapes": "ignored_after_manifest_resource_validation",
+      "inertials": "source_URDF"
+    },
+    "mujoco": {
+      "version": "3.10.0",
+      "importer": "native_URDF",
+      "contacts": "enabled",
+      "self_collision": true,
+      "control": "direct_qfrc",
+      "fixed_structure": "folding_recorded_as_strict_load_failure_mapped_movable_diagnostics_continue"
+    },
+    "genesis": {
+      "version": "1.3.1",
+      "backend": "cuda",
+      "gpu_binding": {
+        "cuda_visible_devices": "3",
+        "physical_device_index": 3,
+        "visible_device_index": 0,
+        "gpu_uuid": "GPU-ebc0d328-a3fa-7e89-2733-cadb001661f7"
+      },
+      "precision": "float32",
+      "substeps": 1,
+      "collision": true,
+      "self_collision": true,
+      "enable_neutral_collision": true,
+      "contacts": "enabled",
+      "visualization": false,
+      "fixed": true,
+      "fixed_link_merge": false,
+      "recompute_inertia": false,
+      "requires_jac_and_IK": false,
+      "logging": "retain_source_mesh_and_inertia_warnings",
+      "control": "direct_DOF_force"
+    }
+  },
+  "artifacts": {
+    "terminal_records": "atomic_per_asset",
+    "resume_binding": [
+      "schema_version",
+      "run_phase",
+      "simulator",
+      "adapter_name",
+      "adapter_version",
+      "adapter_config_sha256",
+      "effective_workers",
+      "dataset_id",
+      "manifest_root",
+      "manifest_row_sha256",
+      "urdf_sha256",
+      "package_content_manifest_sha256",
+      "protocol_sha256",
+      "cohort_sha256"
+    ],
+    "timeout_retention": "terminal_failure",
+    "preflight_failure_retention": "terminal_failure_without_simulator_launch",
+    "retry": "none",
+    "publication": {
+      "receipt_set_marker": "receipt_set.json",
+      "marker_written_last": true,
+      "marker_binds": ["protocol.json_sha256", "manifest.json_sha256"]
+    }
+  }
+}

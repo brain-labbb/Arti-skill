@@ -1,0 +1,40 @@
+{
+  "artifact_hash_scope": "all required outputs except self_check.json to avoid circular hashing",
+  "artifact_hashes": {
+    "asset_records.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "manifest.json": "529d093d1bec4970e81d6a849c141633344540ddcf2eb4755a516ff58bf6a6e1",
+    "protocol_snapshot.json": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+    "report.md": "5fe2943071d0bc672d88eee38916a3fa7c59418ff1fc204d0f2dd431f524e99f",
+    "summary.json": "6302c9b0dc182469405f3ab4ae388da091c097d3072e98f1c9b9118af3d14dcc"
+  },
+  "checks": {
+    "all_13_columns_not_evaluable": true,
+    "all_13_columns_present": true,
+    "all_denominators_zero": true,
+    "all_rates_explicit_n0": true,
+    "all_referenced_evidence_exists": true,
+    "all_required_outputs_exist": true,
+    "asset_records_match_manifest": true,
+    "interpretation_is_not_experimental_zero": true,
+    "manifest_hash_recorded": true,
+    "manifest_identities_unique": true,
+    "model_inputs_absent": true,
+    "model_revision_pinned": true,
+    "no_method_generated_outputs": true,
+    "official_code_available": true,
+    "output_adapter_absent": true,
+    "paper_values_not_used": true,
+    "protocol_hash_recorded": true,
+    "protocol_snapshot_exact": true,
+    "requested_denominator_accounted": true,
+    "required_outputs_match_protocol": true,
+    "source_archive_hash_matches_pin": true,
+    "source_commit_pinned": true,
+    "status_is_blocked_missing_model_outputs": true,
+    "trellis_revision_pinned": true
+  },
+  "manifest_sha256": "529d093d1bec4970e81d6a849c141633344540ddcf2eb4755a516ff58bf6a6e1",
+  "protocol_sha256": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "dataset": "SketchMobility",
+  "associatedPaper": "https://arxiv.org/abs/2604.25781",
+  "releaseDate": "2026-07-25",
+  "mixedLicense": true,
+  "sketchMobilityContributionLicense": "CC-BY-4.0",
+  "licenseTexts": {
+    "CC-BY-4.0": {
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    "GPL-3.0": {
+      "path": "LICENSES/GPL-3.0.txt",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    }
+  },
+  "pathRules": [
+    {
+      "path": "data/Agentic/**",
+      "releaseLabel": "Agentic",
+      "upstreamProject": "Articraft Data",
+      "upstreamPaper": "https://arxiv.org/abs/2605.15187",
+      "licenseSource": "https://github.com/mattzh72/articraft-data",
+      "upstreamLicense": "CC-BY-4.0",
+      "objectCount": 205
+    },
+    {
+      "path": "data/Infinigen/**",
+      "releaseLabel": "Infinigen",
+      "upstreamProject": "Infinigen-Articulated",
+      "upstreamPaper": "https://arxiv.org/abs/2505.10755",
+      "licenseSource": "https://huggingface.co/datasets/princeton-vl/infinigen-articulated",
+      "upstreamLicense": "CC-BY-4.0",
+      "objectCount": 726
+    },
+    {
+      "path": "data/PartNeXt/**",
+      "releaseLabel": "PartNeXt",
+      "upstreamProject": "PartNeXt",
+      "upstreamPaper": "https://arxiv.org/abs/2510.20155",
+      "licenseSource": "https://huggingface.co/datasets/AuWang/PartNeXt",
+      "upstreamLicense": "CC-BY-4.0",
+      "objectCount": 2177,
+      "note": "PartNeXt documents Objaverse, Amazon Berkeley Objects, and 3D-FUTURE as object sources; preserve upstreamId and review applicable asset-level terms."
+    },
+    {
+      "path": "data/Shape2Motion/**",
+      "releaseLabel": "Shape2Motion",
+      "upstreamProject": "Shape2Motion",
+      "upstreamPaper": "https://arxiv.org/abs/1903.03911",
+      "licenseSource": "https://github.com/wangxiaogang866/Shape2Motion",
+      "upstreamLicense": "GPL-3.0",
+      "distributionTreatment": "GPL-3.0",
+      "objectCount": 1848,
+      "note": "The official repository publishes Motion Dataset V0 but provides no separate data-only license, so this release uses the repository GPL-3.0 license conservatively."
+    }
+  ],
+  "notes": [
+    "SketchMobility licensing does not replace or expand upstream rights.",
+    "See LICENSE.md and ATTRIBUTION.md for human-readable terms and credits.",
+    "upstreamId in each annotation.json is the provenance key and is not replaced by the release ID."
+  ]
+}

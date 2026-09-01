@@ -1,0 +1,2743 @@
+{
+  "comparison_label": "category-matched deterministic cohort",
+  "method": "Articraft",
+  "pool_audit": {
+    "counts": {
+      "eligible_target_records": 198,
+      "parseable_records": 18799,
+      "record_directories": 18799,
+      "target_category_records": 235,
+      "target_not_dataset": 15,
+      "target_not_primary_rating": 22
+    },
+    "eligible_pool_counts": {
+      "dishwasher": 35,
+      "faucet": 46,
+      "microwave": 36,
+      "oven": 44,
+      "refrigerator": 37
+    },
+    "mode": "targeted_current_checkout_with_verified_lfs_overlay",
+    "resolution_counts": {
+      "checkout_hydrated": 13300,
+      "lfs_oid_mirror": 6291
+    }
+  },
+  "prohibited_label": "same-prompt or same-seed comparison",
+  "schema_version": 1,
+  "selected": [
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "microwave",
+      "category_slug": "microwave_oven",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97/collections/dataset.json",
+            "lfs_oid": "f98dc88a69e0aa43657ed78d3fb2088e6d16bee9c915f64d1904302a80061494",
+            "payload_sha256": "f98dc88a69e0aa43657ed78d3fb2088e6d16bee9c915f64d1904302a80061494",
+            "payload_size": 244,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97/collections/dataset.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97/revisions/rev_000001/model.py",
+            "lfs_oid": "d78835203a694e61f646b3c7a358f018f71a5dc98a4f14252d3ec96e462dfbca",
+            "payload_sha256": "d78835203a694e61f646b3c7a358f018f71a5dc98a4f14252d3ec96e462dfbca",
+            "payload_size": 14857,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97/revisions/rev_000001/model.py",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97/revisions/rev_000001/prompt.txt",
+            "lfs_oid": "428bbff6e8aea9b7a4dc90b3b9c4165d7006e1657f4a5236b22a5f0a5e97c42a",
+            "payload_sha256": "428bbff6e8aea9b7a4dc90b3b9c4165d7006e1657f4a5236b22a5f0a5e97c42a",
+            "payload_size": 530,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97/revisions/rev_000001/prompt.txt",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97/revisions/rev_000001/provenance.json",
+            "lfs_oid": "36e0cc2dce9322dcea0dcd684bb945264e80c3872bb1e732415079160631fef4",
+            "payload_sha256": "36e0cc2dce9322dcea0dcd684bb945264e80c3872bb1e732415079160631fef4",
+            "payload_size": 1058,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97/revisions/rev_000001/provenance.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97/record.json",
+            "lfs_oid": "3acc5e50fe636135b40147b5890888dbb8501d403db841bd48e630f1409a68d0",
+            "payload_sha256": "3acc5e50fe636135b40147b5890888dbb8501d403db841bd48e630f1409a68d0",
+            "payload_size": 1921,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97/record.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.5-2026-04-23",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97",
+      "selection_digest": "",
+      "selection_rank": 1,
+      "source_paths": {
+        "dataset_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97/record.json"
+      },
+      "source_sha256": {
+        "model_py": "d78835203a694e61f646b3c7a358f018f71a5dc98a4f14252d3ec96e462dfbca",
+        "prompt_txt": "428bbff6e8aea9b7a4dc90b3b9c4165d7006e1657f4a5236b22a5f0a5e97c42a",
+        "provenance_json": "36e0cc2dce9322dcea0dcd684bb945264e80c3872bb1e732415079160631fef4",
+        "record_json": "3acc5e50fe636135b40147b5890888dbb8501d403db841bd48e630f1409a68d0"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "microwave",
+      "category_slug": "microwave_oven",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_1d58bdf24b4c45abab11b74ca527f0c1/collections/dataset.json",
+            "lfs_oid": "602ed804bcee22304d714e5f81a5129e91571a9d744e5046fd6a8fefe535ef7f",
+            "payload_sha256": "602ed804bcee22304d714e5f81a5129e91571a9d744e5046fd6a8fefe535ef7f",
+            "payload_size": 244,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_1d58bdf24b4c45abab11b74ca527f0c1/collections/dataset.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_1d58bdf24b4c45abab11b74ca527f0c1/revisions/rev_000001/model.py",
+            "lfs_oid": "ae6543c6f615bd97fc99824136e2859a9fe555218e6e405e9b5868178f630787",
+            "payload_sha256": "ae6543c6f615bd97fc99824136e2859a9fe555218e6e405e9b5868178f630787",
+            "payload_size": 11074,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_1d58bdf24b4c45abab11b74ca527f0c1/revisions/rev_000001/model.py",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_1d58bdf24b4c45abab11b74ca527f0c1/revisions/rev_000001/prompt.txt",
+            "lfs_oid": "6666e105fa6e0a1f7d11cf97c8be37b115eb4bb7fb008a68930df6095f9dfa58",
+            "payload_sha256": "6666e105fa6e0a1f7d11cf97c8be37b115eb4bb7fb008a68930df6095f9dfa58",
+            "payload_size": 341,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_1d58bdf24b4c45abab11b74ca527f0c1/revisions/rev_000001/prompt.txt",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_1d58bdf24b4c45abab11b74ca527f0c1/revisions/rev_000001/provenance.json",
+            "lfs_oid": "3d5e3d22d950251f816a4a6cfffa0fa324bea67386c53063ec264b47a77b0efd",
+            "payload_sha256": "3d5e3d22d950251f816a4a6cfffa0fa324bea67386c53063ec264b47a77b0efd",
+            "payload_size": 1073,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_1d58bdf24b4c45abab11b74ca527f0c1/revisions/rev_000001/provenance.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_1d58bdf24b4c45abab11b74ca527f0c1/record.json",
+            "lfs_oid": "845afd8e69f531e15e6fed8817c3307e86fb305812e8bbe03bbd19eaa0d58e21",
+            "payload_sha256": "845afd8e69f531e15e6fed8817c3307e86fb305812e8bbe03bbd19eaa0d58e21",
+            "payload_size": 1928,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_1d58bdf24b4c45abab11b74ca527f0c1/record.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 4,
+      "provider": "openai",
+      "record_id": "rec_microwave_oven_1d58bdf24b4c45abab11b74ca527f0c1",
+      "selection_digest": "",
+      "selection_rank": 2,
+      "source_paths": {
+        "dataset_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_1d58bdf24b4c45abab11b74ca527f0c1/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_1d58bdf24b4c45abab11b74ca527f0c1/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_1d58bdf24b4c45abab11b74ca527f0c1/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_1d58bdf24b4c45abab11b74ca527f0c1/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_1d58bdf24b4c45abab11b74ca527f0c1/record.json"
+      },
+      "source_sha256": {
+        "model_py": "ae6543c6f615bd97fc99824136e2859a9fe555218e6e405e9b5868178f630787",
+        "prompt_txt": "6666e105fa6e0a1f7d11cf97c8be37b115eb4bb7fb008a68930df6095f9dfa58",
+        "provenance_json": "3d5e3d22d950251f816a4a6cfffa0fa324bea67386c53063ec264b47a77b0efd",
+        "record_json": "845afd8e69f531e15e6fed8817c3307e86fb305812e8bbe03bbd19eaa0d58e21"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "microwave",
+      "category_slug": "microwave_oven",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_b0d66713e96e4865af1d7093b5d42b11/collections/dataset.json",
+            "lfs_oid": "8bdf81df0e254620380569e28fdfdf4bbfa67707d7353f3e5cba8dc136d4da3d",
+            "payload_sha256": "8bdf81df0e254620380569e28fdfdf4bbfa67707d7353f3e5cba8dc136d4da3d",
+            "payload_size": 244,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_b0d66713e96e4865af1d7093b5d42b11/collections/dataset.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_b0d66713e96e4865af1d7093b5d42b11/revisions/rev_000001/model.py",
+            "lfs_oid": "6d07ad3f04204cbc1bf368caead079babe7c8d058a397a6a94cd369cee5b0177",
+            "payload_sha256": "6d07ad3f04204cbc1bf368caead079babe7c8d058a397a6a94cd369cee5b0177",
+            "payload_size": 11873,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_b0d66713e96e4865af1d7093b5d42b11/revisions/rev_000001/model.py",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_b0d66713e96e4865af1d7093b5d42b11/revisions/rev_000001/prompt.txt",
+            "lfs_oid": "627632af8c79214d1cffc05c8621bcb4d6cb41bdf8e37a26bc67a51055a829f0",
+            "payload_sha256": "627632af8c79214d1cffc05c8621bcb4d6cb41bdf8e37a26bc67a51055a829f0",
+            "payload_size": 306,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_b0d66713e96e4865af1d7093b5d42b11/revisions/rev_000001/prompt.txt",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_b0d66713e96e4865af1d7093b5d42b11/revisions/rev_000001/provenance.json",
+            "lfs_oid": "447fb1024bba497db952f4c135163b20de2342f6dfd82cf3e6507bd23732f032",
+            "payload_sha256": "447fb1024bba497db952f4c135163b20de2342f6dfd82cf3e6507bd23732f032",
+            "payload_size": 1073,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_b0d66713e96e4865af1d7093b5d42b11/revisions/rev_000001/provenance.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_b0d66713e96e4865af1d7093b5d42b11/record.json",
+            "lfs_oid": "ca96e34f405b9f0962298b7b4f1763f37d74c7dd207b4d46a907ea64b7521c54",
+            "payload_sha256": "ca96e34f405b9f0962298b7b4f1763f37d74c7dd207b4d46a907ea64b7521c54",
+            "payload_size": 1928,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_b0d66713e96e4865af1d7093b5d42b11/record.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 4,
+      "provider": "openai",
+      "record_id": "rec_microwave_oven_b0d66713e96e4865af1d7093b5d42b11",
+      "selection_digest": "",
+      "selection_rank": 3,
+      "source_paths": {
+        "dataset_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_b0d66713e96e4865af1d7093b5d42b11/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_b0d66713e96e4865af1d7093b5d42b11/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_b0d66713e96e4865af1d7093b5d42b11/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_b0d66713e96e4865af1d7093b5d42b11/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_b0d66713e96e4865af1d7093b5d42b11/record.json"
+      },
+      "source_sha256": {
+        "model_py": "6d07ad3f04204cbc1bf368caead079babe7c8d058a397a6a94cd369cee5b0177",
+        "prompt_txt": "627632af8c79214d1cffc05c8621bcb4d6cb41bdf8e37a26bc67a51055a829f0",
+        "provenance_json": "447fb1024bba497db952f4c135163b20de2342f6dfd82cf3e6507bd23732f032",
+        "record_json": "ca96e34f405b9f0962298b7b4f1763f37d74c7dd207b4d46a907ea64b7521c54"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "microwave",
+      "category_slug": "microwave_oven",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_fb440d519c3c4a8bb5f706eac35e1397/collections/dataset.json",
+            "lfs_oid": "002056e9cac2d857ad95c1ea726ab94b7d2b36aab05d2390e063481f709475ee",
+            "payload_sha256": "002056e9cac2d857ad95c1ea726ab94b7d2b36aab05d2390e063481f709475ee",
+            "payload_size": 244,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_fb440d519c3c4a8bb5f706eac35e1397/collections/dataset.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_fb440d519c3c4a8bb5f706eac35e1397/revisions/rev_000001/model.py",
+            "lfs_oid": "98948e2ad117667a15f562060f07c6f968e73c118d354949d0454ded6c77e7ed",
+            "payload_sha256": "98948e2ad117667a15f562060f07c6f968e73c118d354949d0454ded6c77e7ed",
+            "payload_size": 9889,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_fb440d519c3c4a8bb5f706eac35e1397/revisions/rev_000001/model.py",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_fb440d519c3c4a8bb5f706eac35e1397/revisions/rev_000001/prompt.txt",
+            "lfs_oid": "7b8a6076eeb1de8a59a69297c95795876a303dc338d51d11836ba0fdb7a280ed",
+            "payload_sha256": "7b8a6076eeb1de8a59a69297c95795876a303dc338d51d11836ba0fdb7a280ed",
+            "payload_size": 297,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_fb440d519c3c4a8bb5f706eac35e1397/revisions/rev_000001/prompt.txt",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_fb440d519c3c4a8bb5f706eac35e1397/revisions/rev_000001/provenance.json",
+            "lfs_oid": "f986be7d812cd2c69207719717700a640227659dcb03c8fe526f0b18c29c0583",
+            "payload_sha256": "f986be7d812cd2c69207719717700a640227659dcb03c8fe526f0b18c29c0583",
+            "payload_size": 1071,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_fb440d519c3c4a8bb5f706eac35e1397/revisions/rev_000001/provenance.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_fb440d519c3c4a8bb5f706eac35e1397/record.json",
+            "lfs_oid": "3b4fcafc29c1fcd513980ea8bc90e6f0a99393b301d6555e7770e075dec5e715",
+            "payload_sha256": "3b4fcafc29c1fcd513980ea8bc90e6f0a99393b301d6555e7770e075dec5e715",
+            "payload_size": 1927,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_fb440d519c3c4a8bb5f706eac35e1397/record.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 4,
+      "provider": "openai",
+      "record_id": "rec_microwave_oven_fb440d519c3c4a8bb5f706eac35e1397",
+      "selection_digest": "",
+      "selection_rank": 4,
+      "source_paths": {
+        "dataset_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_fb440d519c3c4a8bb5f706eac35e1397/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_fb440d519c3c4a8bb5f706eac35e1397/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_fb440d519c3c4a8bb5f706eac35e1397/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_fb440d519c3c4a8bb5f706eac35e1397/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_fb440d519c3c4a8bb5f706eac35e1397/record.json"
+      },
+      "source_sha256": {
+        "model_py": "98948e2ad117667a15f562060f07c6f968e73c118d354949d0454ded6c77e7ed",
+        "prompt_txt": "7b8a6076eeb1de8a59a69297c95795876a303dc338d51d11836ba0fdb7a280ed",
+        "provenance_json": "f986be7d812cd2c69207719717700a640227659dcb03c8fe526f0b18c29c0583",
+        "record_json": "3b4fcafc29c1fcd513980ea8bc90e6f0a99393b301d6555e7770e075dec5e715"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "microwave",
+      "category_slug": "microwave_oven",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_c04249fcff2d4e2086d5eabc27a084fc/collections/dataset.json",
+            "lfs_oid": "52d1bd3d21600d73e17662c1f4433fd1fa85a2d9513f4b21f48e4b02e8517a5b",
+            "payload_sha256": "52d1bd3d21600d73e17662c1f4433fd1fa85a2d9513f4b21f48e4b02e8517a5b",
+            "payload_size": 244,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_c04249fcff2d4e2086d5eabc27a084fc/collections/dataset.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_c04249fcff2d4e2086d5eabc27a084fc/revisions/rev_000001/model.py",
+            "lfs_oid": "6311bd08f9eb6f3a2fd2a1735e4037f9cb6e9dfa5d79c500929b64cf0e421c81",
+            "payload_sha256": "6311bd08f9eb6f3a2fd2a1735e4037f9cb6e9dfa5d79c500929b64cf0e421c81",
+            "payload_size": 14677,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_c04249fcff2d4e2086d5eabc27a084fc/revisions/rev_000001/model.py",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_c04249fcff2d4e2086d5eabc27a084fc/revisions/rev_000001/prompt.txt",
+            "lfs_oid": "0ac5f541b44b3d42beee6eaffe394886bfbd7d9482ef3f1d60f1ac06dd326521",
+            "payload_sha256": "0ac5f541b44b3d42beee6eaffe394886bfbd7d9482ef3f1d60f1ac06dd326521",
+            "payload_size": 343,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_c04249fcff2d4e2086d5eabc27a084fc/revisions/rev_000001/prompt.txt",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_c04249fcff2d4e2086d5eabc27a084fc/revisions/rev_000001/provenance.json",
+            "lfs_oid": "b39eaad803d9b6f0900f1690845a185a479a28aa52793b700f3fbf53f759c4d5",
+            "payload_sha256": "b39eaad803d9b6f0900f1690845a185a479a28aa52793b700f3fbf53f759c4d5",
+            "payload_size": 1073,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_c04249fcff2d4e2086d5eabc27a084fc/revisions/rev_000001/provenance.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_c04249fcff2d4e2086d5eabc27a084fc/record.json",
+            "lfs_oid": "76c67c170b08d88f521924f8c268bd97e96de20c24130cdddc9531d819c9002e",
+            "payload_sha256": "76c67c170b08d88f521924f8c268bd97e96de20c24130cdddc9531d819c9002e",
+            "payload_size": 1928,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_c04249fcff2d4e2086d5eabc27a084fc/record.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_microwave_oven_c04249fcff2d4e2086d5eabc27a084fc",
+      "selection_digest": "",
+      "selection_rank": 5,
+      "source_paths": {
+        "dataset_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_c04249fcff2d4e2086d5eabc27a084fc/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_c04249fcff2d4e2086d5eabc27a084fc/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_c04249fcff2d4e2086d5eabc27a084fc/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_c04249fcff2d4e2086d5eabc27a084fc/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_c04249fcff2d4e2086d5eabc27a084fc/record.json"
+      },
+      "source_sha256": {
+        "model_py": "6311bd08f9eb6f3a2fd2a1735e4037f9cb6e9dfa5d79c500929b64cf0e421c81",
+        "prompt_txt": "0ac5f541b44b3d42beee6eaffe394886bfbd7d9482ef3f1d60f1ac06dd326521",
+        "provenance_json": "b39eaad803d9b6f0900f1690845a185a479a28aa52793b700f3fbf53f759c4d5",
+        "record_json": "76c67c170b08d88f521924f8c268bd97e96de20c24130cdddc9531d819c9002e"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "microwave",
+      "category_slug": "microwave_oven",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_01133e8e1b6b4b7599795753004680d6/collections/dataset.json",
+            "lfs_oid": "bc8e21f5e2c6e7f90ba228a11e4ccbdc4ff4fc94ce027d3d55ed3ba0c39241cc",
+            "payload_sha256": "bc8e21f5e2c6e7f90ba228a11e4ccbdc4ff4fc94ce027d3d55ed3ba0c39241cc",
+            "payload_size": 244,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_01133e8e1b6b4b7599795753004680d6/collections/dataset.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_01133e8e1b6b4b7599795753004680d6/revisions/rev_000001/model.py",
+            "lfs_oid": "4b2fe78f840bac4dfa00b822fc6c04570bd79f69b3cd64b1ad90c1a3d7543417",
+            "payload_sha256": "4b2fe78f840bac4dfa00b822fc6c04570bd79f69b3cd64b1ad90c1a3d7543417",
+            "payload_size": 14188,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_01133e8e1b6b4b7599795753004680d6/revisions/rev_000001/model.py",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_01133e8e1b6b4b7599795753004680d6/revisions/rev_000001/prompt.txt",
+            "lfs_oid": "b498f6cddf9b6db98340dc2f590666ff905de52a91cb2dc3ba25da3ea9f1499c",
+            "payload_sha256": "b498f6cddf9b6db98340dc2f590666ff905de52a91cb2dc3ba25da3ea9f1499c",
+            "payload_size": 363,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_01133e8e1b6b4b7599795753004680d6/revisions/rev_000001/prompt.txt",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_01133e8e1b6b4b7599795753004680d6/revisions/rev_000001/provenance.json",
+            "lfs_oid": "b5d38b4c4dde604fe62d91d35b3e91bb537eceaf68d10f420a600bbc5031ce4f",
+            "payload_sha256": "b5d38b4c4dde604fe62d91d35b3e91bb537eceaf68d10f420a600bbc5031ce4f",
+            "payload_size": 1071,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_01133e8e1b6b4b7599795753004680d6/revisions/rev_000001/provenance.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_01133e8e1b6b4b7599795753004680d6/record.json",
+            "lfs_oid": "7a770e1a78fe8c89f81cf56c230fb38e7e51977a9a5ed1fccb410d21c55c2f73",
+            "payload_sha256": "7a770e1a78fe8c89f81cf56c230fb38e7e51977a9a5ed1fccb410d21c55c2f73",
+            "payload_size": 1928,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_01133e8e1b6b4b7599795753004680d6/record.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 4,
+      "provider": "openai",
+      "record_id": "rec_microwave_oven_01133e8e1b6b4b7599795753004680d6",
+      "selection_digest": "",
+      "selection_rank": 6,
+      "source_paths": {
+        "dataset_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_01133e8e1b6b4b7599795753004680d6/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_01133e8e1b6b4b7599795753004680d6/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_01133e8e1b6b4b7599795753004680d6/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_01133e8e1b6b4b7599795753004680d6/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_01133e8e1b6b4b7599795753004680d6/record.json"
+      },
+      "source_sha256": {
+        "model_py": "4b2fe78f840bac4dfa00b822fc6c04570bd79f69b3cd64b1ad90c1a3d7543417",
+        "prompt_txt": "b498f6cddf9b6db98340dc2f590666ff905de52a91cb2dc3ba25da3ea9f1499c",
+        "provenance_json": "b5d38b4c4dde604fe62d91d35b3e91bb537eceaf68d10f420a600bbc5031ce4f",
+        "record_json": "7a770e1a78fe8c89f81cf56c230fb38e7e51977a9a5ed1fccb410d21c55c2f73"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "microwave",
+      "category_slug": "microwave_oven",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_191811c1738c4cd3855ba45e6f49c198/collections/dataset.json",
+            "lfs_oid": "55fe8ae5d9ebc4c288b710e95f5187a2b5c2139ba7547d6a608900916196941e",
+            "payload_sha256": "55fe8ae5d9ebc4c288b710e95f5187a2b5c2139ba7547d6a608900916196941e",
+            "payload_size": 244,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_191811c1738c4cd3855ba45e6f49c198/collections/dataset.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_191811c1738c4cd3855ba45e6f49c198/revisions/rev_000001/model.py",
+            "lfs_oid": "aff36c2f154ac11fd6cd133b3ba100646039e4fdf0e1cfbbc8b7227aefad1f33",
+            "payload_sha256": "aff36c2f154ac11fd6cd133b3ba100646039e4fdf0e1cfbbc8b7227aefad1f33",
+            "payload_size": 13538,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_191811c1738c4cd3855ba45e6f49c198/revisions/rev_000001/model.py",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_191811c1738c4cd3855ba45e6f49c198/revisions/rev_000001/prompt.txt",
+            "lfs_oid": "aa1e24f8a034dc73f3ee8984eb9d60aa91833c48a8fd506640b6f574bbba6014",
+            "payload_sha256": "aa1e24f8a034dc73f3ee8984eb9d60aa91833c48a8fd506640b6f574bbba6014",
+            "payload_size": 894,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_191811c1738c4cd3855ba45e6f49c198/revisions/rev_000001/prompt.txt",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_191811c1738c4cd3855ba45e6f49c198/revisions/rev_000001/provenance.json",
+            "lfs_oid": "f41d10babe66669beb293c5bd9588b87b2ec1ec6e8a7eeeb04d1a6812c6ef368",
+            "payload_sha256": "f41d10babe66669beb293c5bd9588b87b2ec1ec6e8a7eeeb04d1a6812c6ef368",
+            "payload_size": 1057,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_191811c1738c4cd3855ba45e6f49c198/revisions/rev_000001/provenance.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_microwave_oven_191811c1738c4cd3855ba45e6f49c198/record.json",
+            "lfs_oid": "23a637c47e0fd89ac2bc7fd6803674a5d74866a47c6655591876d84b1df2d105",
+            "payload_sha256": "23a637c47e0fd89ac2bc7fd6803674a5d74866a47c6655591876d84b1df2d105",
+            "payload_size": 1957,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_191811c1738c4cd3855ba45e6f49c198/record.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.5-2026-04-23",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_microwave_oven_191811c1738c4cd3855ba45e6f49c198",
+      "selection_digest": "",
+      "selection_rank": 7,
+      "source_paths": {
+        "dataset_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_191811c1738c4cd3855ba45e6f49c198/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_191811c1738c4cd3855ba45e6f49c198/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_191811c1738c4cd3855ba45e6f49c198/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_191811c1738c4cd3855ba45e6f49c198/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_microwave_oven_191811c1738c4cd3855ba45e6f49c198/record.json"
+      },
+      "source_sha256": {
+        "model_py": "aff36c2f154ac11fd6cd133b3ba100646039e4fdf0e1cfbbc8b7227aefad1f33",
+        "prompt_txt": "aa1e24f8a034dc73f3ee8984eb9d60aa91833c48a8fd506640b6f574bbba6014",
+        "provenance_json": "f41d10babe66669beb293c5bd9588b87b2ec1ec6e8a7eeeb04d1a6812c6ef368",
+        "record_json": "23a637c47e0fd89ac2bc7fd6803674a5d74866a47c6655591876d84b1df2d105"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "dishwasher",
+      "category_slug": "dishwasher_with_dropdown_door_and_sliding_racks",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9dd15c0aefb940f2acd9fd2596b80ced/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "7a6958cf41f185eaf44c6e08fc99e9df44132b3df7da02607e520721c894a9e3",
+            "payload_size": 343,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9dd15c0aefb940f2acd9fd2596b80ced/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9dd15c0aefb940f2acd9fd2596b80ced/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "0f89ee4ccb6dfe400effb227d5daf7783cdc42970f359eb766393f31568c2942",
+            "payload_size": 27808,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9dd15c0aefb940f2acd9fd2596b80ced/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9dd15c0aefb940f2acd9fd2596b80ced/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "0c781cf68006ca3e18ceb4595bbe566dd6fe063e5a49fd1dc31a33b6db534343",
+            "payload_size": 678,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9dd15c0aefb940f2acd9fd2596b80ced/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9dd15c0aefb940f2acd9fd2596b80ced/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "2471ebf2ed137d4d0e4840d9c991617e40b7538da181249d616bcbba1582e9b5",
+            "payload_size": 1111,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9dd15c0aefb940f2acd9fd2596b80ced/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9dd15c0aefb940f2acd9fd2596b80ced/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "e95b6fdd2f46af886f119060f9f9311f26d0eb6570bdb623fdcad0d94f2335c3",
+            "payload_size": 1931,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9dd15c0aefb940f2acd9fd2596b80ced/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_dishwasher_with_dropdown_door_and_sliding_racks_9dd15c0aefb940f2acd9fd2596b80ced",
+      "selection_digest": "",
+      "selection_rank": 1,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9dd15c0aefb940f2acd9fd2596b80ced/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9dd15c0aefb940f2acd9fd2596b80ced/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9dd15c0aefb940f2acd9fd2596b80ced/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9dd15c0aefb940f2acd9fd2596b80ced/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9dd15c0aefb940f2acd9fd2596b80ced/record.json"
+      },
+      "source_sha256": {
+        "model_py": "0f89ee4ccb6dfe400effb227d5daf7783cdc42970f359eb766393f31568c2942",
+        "prompt_txt": "0c781cf68006ca3e18ceb4595bbe566dd6fe063e5a49fd1dc31a33b6db534343",
+        "provenance_json": "2471ebf2ed137d4d0e4840d9c991617e40b7538da181249d616bcbba1582e9b5",
+        "record_json": "e95b6fdd2f46af886f119060f9f9311f26d0eb6570bdb623fdcad0d94f2335c3"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "dishwasher",
+      "category_slug": "dishwasher_with_dropdown_door_and_sliding_racks",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_bf452bbfb955442e813a56e70bfaf897/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "7e0bc7746cbe9c56bea798a5709f39418c0226c8a1c66671d1a0627dce3127f6",
+            "payload_size": 343,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_bf452bbfb955442e813a56e70bfaf897/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_bf452bbfb955442e813a56e70bfaf897/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "0ac885057ccf0219690f8d23b38ddaf7a0e95c9f459ff1d83b5dd880865686bf",
+            "payload_size": 20429,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_bf452bbfb955442e813a56e70bfaf897/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_bf452bbfb955442e813a56e70bfaf897/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "0c1bad0c60f0c15729d81792940c9a35ee776797219f47e509729d9831916b89",
+            "payload_size": 618,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_bf452bbfb955442e813a56e70bfaf897/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_bf452bbfb955442e813a56e70bfaf897/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "ad87064e3192c683ccfd795bf1e784d97a5b59d0e107483887fd463a4f8a498b",
+            "payload_size": 1090,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_bf452bbfb955442e813a56e70bfaf897/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_bf452bbfb955442e813a56e70bfaf897/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "86a6f586b84eb4a5a5504a4ed726ee33fff7e6bbafb01022862be8b15aef267a",
+            "payload_size": 2090,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_bf452bbfb955442e813a56e70bfaf897/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.5-2026-04-23",
+      "primary_rating": 4,
+      "provider": "openai",
+      "record_id": "rec_dishwasher_with_dropdown_door_and_sliding_racks_bf452bbfb955442e813a56e70bfaf897",
+      "selection_digest": "",
+      "selection_rank": 2,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_bf452bbfb955442e813a56e70bfaf897/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_bf452bbfb955442e813a56e70bfaf897/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_bf452bbfb955442e813a56e70bfaf897/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_bf452bbfb955442e813a56e70bfaf897/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_bf452bbfb955442e813a56e70bfaf897/record.json"
+      },
+      "source_sha256": {
+        "model_py": "0ac885057ccf0219690f8d23b38ddaf7a0e95c9f459ff1d83b5dd880865686bf",
+        "prompt_txt": "0c1bad0c60f0c15729d81792940c9a35ee776797219f47e509729d9831916b89",
+        "provenance_json": "ad87064e3192c683ccfd795bf1e784d97a5b59d0e107483887fd463a4f8a498b",
+        "record_json": "86a6f586b84eb4a5a5504a4ed726ee33fff7e6bbafb01022862be8b15aef267a"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "dishwasher",
+      "category_slug": "dishwasher_with_dropdown_door_and_sliding_racks",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "f8bdd0863e517055ef6762dc2e3aa2b57a8c6ccc3f63580bbfba2b9afb557b8a",
+            "payload_size": 343,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "b04f8222c7ce78b94579e5edc0c2e8b652c4d7d440c69e1a71b36ec1bf925ec8",
+            "payload_size": 17405,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "d815ef2c1c2fc7eeb0163f95e033dfe2754c96077bfcae7d7f7b5d6e28f286ea",
+            "payload_size": 753,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "289c7f0dcb4911299a48ddc063cbdd0dc0705a32c7705ea1225848d125336c02",
+            "payload_size": 1091,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "9eac980cfbf9712c6466910805fb4899e15f05a23303580714ef680bf6b2917a",
+            "payload_size": 2054,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.5-2026-04-23",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61",
+      "selection_digest": "",
+      "selection_rank": 3,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61/record.json"
+      },
+      "source_sha256": {
+        "model_py": "b04f8222c7ce78b94579e5edc0c2e8b652c4d7d440c69e1a71b36ec1bf925ec8",
+        "prompt_txt": "d815ef2c1c2fc7eeb0163f95e033dfe2754c96077bfcae7d7f7b5d6e28f286ea",
+        "provenance_json": "289c7f0dcb4911299a48ddc063cbdd0dc0705a32c7705ea1225848d125336c02",
+        "record_json": "9eac980cfbf9712c6466910805fb4899e15f05a23303580714ef680bf6b2917a"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "dishwasher",
+      "category_slug": "dishwasher_with_dropdown_door_and_sliding_racks",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_f64b47dba9c54168b352c390fca47511/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "d353211e4f41c5106ed92c728576316c7cf4c4296226c6bda7be7ed9437172d1",
+            "payload_size": 343,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_f64b47dba9c54168b352c390fca47511/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_f64b47dba9c54168b352c390fca47511/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "3e2f74c184d827370262b4dd7095e7d8ad3eef053437b55fdcf68ec6b9189019",
+            "payload_size": 16560,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_f64b47dba9c54168b352c390fca47511/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_f64b47dba9c54168b352c390fca47511/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "d284ff6bfb4cbc80994902bacac567735c6784ea06d7c0396ce2f08dab7075b0",
+            "payload_size": 796,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_f64b47dba9c54168b352c390fca47511/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_f64b47dba9c54168b352c390fca47511/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "9f95b455934f79712be9d89269974d471696f37e5a07d9b89b74ee362059ded9",
+            "payload_size": 1090,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_f64b47dba9c54168b352c390fca47511/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_f64b47dba9c54168b352c390fca47511/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "7d5d6c2f9bf4a1ec468ce2fb7c06ab263f7ae68d99d7d4a857e15f3c33371356",
+            "payload_size": 2088,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_f64b47dba9c54168b352c390fca47511/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.5-2026-04-23",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_dishwasher_with_dropdown_door_and_sliding_racks_f64b47dba9c54168b352c390fca47511",
+      "selection_digest": "",
+      "selection_rank": 4,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_f64b47dba9c54168b352c390fca47511/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_f64b47dba9c54168b352c390fca47511/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_f64b47dba9c54168b352c390fca47511/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_f64b47dba9c54168b352c390fca47511/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_f64b47dba9c54168b352c390fca47511/record.json"
+      },
+      "source_sha256": {
+        "model_py": "3e2f74c184d827370262b4dd7095e7d8ad3eef053437b55fdcf68ec6b9189019",
+        "prompt_txt": "d284ff6bfb4cbc80994902bacac567735c6784ea06d7c0396ce2f08dab7075b0",
+        "provenance_json": "9f95b455934f79712be9d89269974d471696f37e5a07d9b89b74ee362059ded9",
+        "record_json": "7d5d6c2f9bf4a1ec468ce2fb7c06ab263f7ae68d99d7d4a857e15f3c33371356"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "dishwasher",
+      "category_slug": "dishwasher_with_dropdown_door_and_sliding_racks",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "d79c40db0dedddd6036159ce3bdbb2debd352c13350a72b81b367fbaa1b50a02",
+            "payload_size": 343,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "db9c220d72e6b58b6a878d54c66fa10ea48ae476249c0056558493192d5342fb",
+            "payload_size": 26880,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "cd750a04842302912c23cd036766cff1e6a9263e8ff3345324ccb432da621663",
+            "payload_size": 621,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "e5868bb67f028d2daa62ca8fbbee84fc5c26be5e3809bf009c95969a2fbe3219",
+            "payload_size": 1112,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "5ce460286704ed8850c40b8cd9ef37c60ebf0478de026b48d2af49c347800417",
+            "payload_size": 1937,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d",
+      "selection_digest": "",
+      "selection_rank": 5,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d/record.json"
+      },
+      "source_sha256": {
+        "model_py": "db9c220d72e6b58b6a878d54c66fa10ea48ae476249c0056558493192d5342fb",
+        "prompt_txt": "cd750a04842302912c23cd036766cff1e6a9263e8ff3345324ccb432da621663",
+        "provenance_json": "e5868bb67f028d2daa62ca8fbbee84fc5c26be5e3809bf009c95969a2fbe3219",
+        "record_json": "5ce460286704ed8850c40b8cd9ef37c60ebf0478de026b48d2af49c347800417"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "dishwasher",
+      "category_slug": "dishwasher_with_dropdown_door_and_sliding_racks",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9739c4060ce04d0a880acc202ee62ef9/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "63dbcf49ca8d8d8108cd0baf960a536db05f7ebbe2e5e1c67589b747bc3d1113",
+            "payload_size": 343,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9739c4060ce04d0a880acc202ee62ef9/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9739c4060ce04d0a880acc202ee62ef9/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "032df8b1e2d489e9daefc1d8648501697990714f441698507ceeff6876eb08f3",
+            "payload_size": 21190,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9739c4060ce04d0a880acc202ee62ef9/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9739c4060ce04d0a880acc202ee62ef9/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "601f528e0fa44c5b8631626817169ca3326a16c2b98e979352aeae431a75a1cf",
+            "payload_size": 667,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9739c4060ce04d0a880acc202ee62ef9/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9739c4060ce04d0a880acc202ee62ef9/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "94c95b80177f4a6240af20659d7647b0c12741b9266998876df43fd6ddb44d4f",
+            "payload_size": 1111,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9739c4060ce04d0a880acc202ee62ef9/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9739c4060ce04d0a880acc202ee62ef9/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "cec0b62f03c12feef25608e46a6e8ca6dd5c61c50de43dc4850a2743857f4f74",
+            "payload_size": 1932,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9739c4060ce04d0a880acc202ee62ef9/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 4,
+      "provider": "openai",
+      "record_id": "rec_dishwasher_with_dropdown_door_and_sliding_racks_9739c4060ce04d0a880acc202ee62ef9",
+      "selection_digest": "",
+      "selection_rank": 6,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9739c4060ce04d0a880acc202ee62ef9/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9739c4060ce04d0a880acc202ee62ef9/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9739c4060ce04d0a880acc202ee62ef9/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9739c4060ce04d0a880acc202ee62ef9/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_9739c4060ce04d0a880acc202ee62ef9/record.json"
+      },
+      "source_sha256": {
+        "model_py": "032df8b1e2d489e9daefc1d8648501697990714f441698507ceeff6876eb08f3",
+        "prompt_txt": "601f528e0fa44c5b8631626817169ca3326a16c2b98e979352aeae431a75a1cf",
+        "provenance_json": "94c95b80177f4a6240af20659d7647b0c12741b9266998876df43fd6ddb44d4f",
+        "record_json": "cec0b62f03c12feef25608e46a6e8ca6dd5c61c50de43dc4850a2743857f4f74"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "dishwasher",
+      "category_slug": "dishwasher_with_dropdown_door_and_sliding_racks",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_6031139969f5409cbb18a74a9ff4f52d/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "0d3d5345e22b16ac1b7940321b6469e88c9ae3fc93818e6aa1d1ed5b3298f2f7",
+            "payload_size": 343,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_6031139969f5409cbb18a74a9ff4f52d/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_6031139969f5409cbb18a74a9ff4f52d/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "e7cf684722f2cd9d2b35aaa9178c1c542f3e80f77ccf7c5e3487076458c26ecd",
+            "payload_size": 27183,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_6031139969f5409cbb18a74a9ff4f52d/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_6031139969f5409cbb18a74a9ff4f52d/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "78f30f021eb2914a64840dbf0f4efd4ac18fce18999d9fa37f275f58735a96ba",
+            "payload_size": 661,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_6031139969f5409cbb18a74a9ff4f52d/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_6031139969f5409cbb18a74a9ff4f52d/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "6f06a758959d6888b58c3b5a9ef20df62fb7f67576086bbc8e48ccfa9d6d001f",
+            "payload_size": 1111,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_6031139969f5409cbb18a74a9ff4f52d/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_6031139969f5409cbb18a74a9ff4f52d/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "74183fb3834cd9c8da4f01fc3b35f723afa98b3250fed1f26ac93b16ef9fc570",
+            "payload_size": 1935,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_6031139969f5409cbb18a74a9ff4f52d/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_dishwasher_with_dropdown_door_and_sliding_racks_6031139969f5409cbb18a74a9ff4f52d",
+      "selection_digest": "",
+      "selection_rank": 7,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_6031139969f5409cbb18a74a9ff4f52d/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_6031139969f5409cbb18a74a9ff4f52d/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_6031139969f5409cbb18a74a9ff4f52d/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_6031139969f5409cbb18a74a9ff4f52d/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_dishwasher_with_dropdown_door_and_sliding_racks_6031139969f5409cbb18a74a9ff4f52d/record.json"
+      },
+      "source_sha256": {
+        "model_py": "e7cf684722f2cd9d2b35aaa9178c1c542f3e80f77ccf7c5e3487076458c26ecd",
+        "prompt_txt": "78f30f021eb2914a64840dbf0f4efd4ac18fce18999d9fa37f275f58735a96ba",
+        "provenance_json": "6f06a758959d6888b58c3b5a9ef20df62fb7f67576086bbc8e48ccfa9d6d001f",
+        "record_json": "74183fb3834cd9c8da4f01fc3b35f723afa98b3250fed1f26ac93b16ef9fc570"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "oven",
+      "category_slug": "conventional_oven_with_dropdown_door",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_6cd525cc08414113ac06c95144f71d28/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "41f6ee4119e0a9ec1edeae155dcab6a36f90e6252e451974a72230371839152d",
+            "payload_size": 310,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_6cd525cc08414113ac06c95144f71d28/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_6cd525cc08414113ac06c95144f71d28/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "4b5073e5c1c5e0748ffdfc0d0b9ed587267b69686ad3750a077b1220ad18b201",
+            "payload_size": 11305,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_6cd525cc08414113ac06c95144f71d28/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_6cd525cc08414113ac06c95144f71d28/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "3b9346baff64eb96f0dd8098b80183285faa608b13804ca1287a41d4b112694a",
+            "payload_size": 263,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_6cd525cc08414113ac06c95144f71d28/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_6cd525cc08414113ac06c95144f71d28/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "be331b62973c38970de25ad91da0e78a832c5da63c89fac54f33f3f32858f406",
+            "payload_size": 1080,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_6cd525cc08414113ac06c95144f71d28/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_6cd525cc08414113ac06c95144f71d28/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "081e9ec630b30d7a5de39b9b39856538d774195f4e2cebab9cb1af94c52d705d",
+            "payload_size": 2011,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_6cd525cc08414113ac06c95144f71d28/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.5-2026-04-23",
+      "primary_rating": 4,
+      "provider": "openai",
+      "record_id": "rec_conventional_oven_with_dropdown_door_6cd525cc08414113ac06c95144f71d28",
+      "selection_digest": "",
+      "selection_rank": 1,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_6cd525cc08414113ac06c95144f71d28/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_6cd525cc08414113ac06c95144f71d28/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_6cd525cc08414113ac06c95144f71d28/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_6cd525cc08414113ac06c95144f71d28/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_6cd525cc08414113ac06c95144f71d28/record.json"
+      },
+      "source_sha256": {
+        "model_py": "4b5073e5c1c5e0748ffdfc0d0b9ed587267b69686ad3750a077b1220ad18b201",
+        "prompt_txt": "3b9346baff64eb96f0dd8098b80183285faa608b13804ca1287a41d4b112694a",
+        "provenance_json": "be331b62973c38970de25ad91da0e78a832c5da63c89fac54f33f3f32858f406",
+        "record_json": "081e9ec630b30d7a5de39b9b39856538d774195f4e2cebab9cb1af94c52d705d"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "oven",
+      "category_slug": "conventional_oven_with_dropdown_door",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2df979bdb12b4537b5fa36651c282144/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "61fd4bae9ca8b9250d0f0814b64a15c075be0dc3f51f17bc970acd1609faa045",
+            "payload_size": 310,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2df979bdb12b4537b5fa36651c282144/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2df979bdb12b4537b5fa36651c282144/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "4efdf83b3c11835592e5a932ad340941fdb9d1d15c3c8f506167198e0b9b0e50",
+            "payload_size": 19290,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2df979bdb12b4537b5fa36651c282144/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2df979bdb12b4537b5fa36651c282144/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "b3dee0c180cd458631b5a6dd0d7a4e890daee43b2fa9e51187139d6a6b3a4758",
+            "payload_size": 284,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2df979bdb12b4537b5fa36651c282144/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2df979bdb12b4537b5fa36651c282144/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "51cf5afc43ee6724ec0f1f527c70876528b84cbad2f693f1e2a9474b329e5fb6",
+            "payload_size": 1094,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2df979bdb12b4537b5fa36651c282144/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2df979bdb12b4537b5fa36651c282144/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "46e2c96481386a61ba49c141c90d6738d8663748c77c1dce6cc588f24505a818",
+            "payload_size": 1989,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2df979bdb12b4537b5fa36651c282144/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_conventional_oven_with_dropdown_door_2df979bdb12b4537b5fa36651c282144",
+      "selection_digest": "",
+      "selection_rank": 2,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2df979bdb12b4537b5fa36651c282144/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2df979bdb12b4537b5fa36651c282144/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2df979bdb12b4537b5fa36651c282144/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2df979bdb12b4537b5fa36651c282144/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2df979bdb12b4537b5fa36651c282144/record.json"
+      },
+      "source_sha256": {
+        "model_py": "4efdf83b3c11835592e5a932ad340941fdb9d1d15c3c8f506167198e0b9b0e50",
+        "prompt_txt": "b3dee0c180cd458631b5a6dd0d7a4e890daee43b2fa9e51187139d6a6b3a4758",
+        "provenance_json": "51cf5afc43ee6724ec0f1f527c70876528b84cbad2f693f1e2a9474b329e5fb6",
+        "record_json": "46e2c96481386a61ba49c141c90d6738d8663748c77c1dce6cc588f24505a818"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "oven",
+      "category_slug": "conventional_oven_with_dropdown_door",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_003f4e9a119e4c5ab30a01925e517ee9/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "0228cf2087d6da9d14f86b25b0839d51e9dd8237e6b66437622ea1b79d97ea3f",
+            "payload_size": 310,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_003f4e9a119e4c5ab30a01925e517ee9/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_003f4e9a119e4c5ab30a01925e517ee9/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "a80740b82e92535822037824ec1238ea396bc1a5ea5b985fe104530cf64ac7c6",
+            "payload_size": 14537,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_003f4e9a119e4c5ab30a01925e517ee9/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_003f4e9a119e4c5ab30a01925e517ee9/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "47736c5efe741cec063bb966fbfac47bca9026a6c0e2679f2fc65cadb41c880b",
+            "payload_size": 226,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_003f4e9a119e4c5ab30a01925e517ee9/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_003f4e9a119e4c5ab30a01925e517ee9/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "11d86f2a2b733e579e75c233a73486a899345ce4ea9f9cdfc6ccf9eb67e588ec",
+            "payload_size": 1067,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_003f4e9a119e4c5ab30a01925e517ee9/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_003f4e9a119e4c5ab30a01925e517ee9/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "693d8bb12c09df20d92d160d9f1c079c6a7a8fed0d99509be1d5eb490534511c",
+            "payload_size": 1948,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_003f4e9a119e4c5ab30a01925e517ee9/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 4,
+      "provider": "openai",
+      "record_id": "rec_conventional_oven_with_dropdown_door_003f4e9a119e4c5ab30a01925e517ee9",
+      "selection_digest": "",
+      "selection_rank": 3,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_003f4e9a119e4c5ab30a01925e517ee9/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_003f4e9a119e4c5ab30a01925e517ee9/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_003f4e9a119e4c5ab30a01925e517ee9/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_003f4e9a119e4c5ab30a01925e517ee9/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_003f4e9a119e4c5ab30a01925e517ee9/record.json"
+      },
+      "source_sha256": {
+        "model_py": "a80740b82e92535822037824ec1238ea396bc1a5ea5b985fe104530cf64ac7c6",
+        "prompt_txt": "47736c5efe741cec063bb966fbfac47bca9026a6c0e2679f2fc65cadb41c880b",
+        "provenance_json": "11d86f2a2b733e579e75c233a73486a899345ce4ea9f9cdfc6ccf9eb67e588ec",
+        "record_json": "693d8bb12c09df20d92d160d9f1c079c6a7a8fed0d99509be1d5eb490534511c"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "oven",
+      "category_slug": "conventional_oven_with_dropdown_door",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_5956a7640c674c99ab6163df9e0d757c/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "5a35ef956bbe7b11886c64acc9cd87885fecc87730e375a7bb3f86c1e2cdff66",
+            "payload_size": 310,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_5956a7640c674c99ab6163df9e0d757c/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_5956a7640c674c99ab6163df9e0d757c/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "64e4d9f8867ec9b24a7226d7bae41e1bb5e2039782a4d7b30a9d669a0e0581ef",
+            "payload_size": 22206,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_5956a7640c674c99ab6163df9e0d757c/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_5956a7640c674c99ab6163df9e0d757c/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "f968989565e65493a3c4d928bedff97f639a3812e33e77aa67bfc4de1040c99d",
+            "payload_size": 271,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_5956a7640c674c99ab6163df9e0d757c/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_5956a7640c674c99ab6163df9e0d757c/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "3c055ec48061f037b1b4d239420c8a986d8adb5802863d395db4634fb20a9ceb",
+            "payload_size": 1095,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_5956a7640c674c99ab6163df9e0d757c/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_5956a7640c674c99ab6163df9e0d757c/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "656fc8d6c0756f90b93c634f26187c471c0a7106cd7d24d1028514cfd7ef8b5b",
+            "payload_size": 1898,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_5956a7640c674c99ab6163df9e0d757c/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_conventional_oven_with_dropdown_door_5956a7640c674c99ab6163df9e0d757c",
+      "selection_digest": "",
+      "selection_rank": 4,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_5956a7640c674c99ab6163df9e0d757c/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_5956a7640c674c99ab6163df9e0d757c/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_5956a7640c674c99ab6163df9e0d757c/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_5956a7640c674c99ab6163df9e0d757c/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_5956a7640c674c99ab6163df9e0d757c/record.json"
+      },
+      "source_sha256": {
+        "model_py": "64e4d9f8867ec9b24a7226d7bae41e1bb5e2039782a4d7b30a9d669a0e0581ef",
+        "prompt_txt": "f968989565e65493a3c4d928bedff97f639a3812e33e77aa67bfc4de1040c99d",
+        "provenance_json": "3c055ec48061f037b1b4d239420c8a986d8adb5802863d395db4634fb20a9ceb",
+        "record_json": "656fc8d6c0756f90b93c634f26187c471c0a7106cd7d24d1028514cfd7ef8b5b"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "oven",
+      "category_slug": "conventional_oven_with_dropdown_door",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_0006/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "cb879d20846cca4d8d296ce286ea983164b56e0c129586bc635dfdb6c3afba47",
+            "payload_size": 254,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_0006/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_0006/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "9a428995b16532437e2be748fe38b002b1892aceccbe11e0a8ceb6656f73a0ab",
+            "payload_size": 14029,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_0006/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_0006/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "e7a665288d29dce915f686dbe23e90f8fd924f9e5a4347820945c8092749336a",
+            "payload_size": 145,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_0006/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_0006/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "49be7027ec8826c172742d1f976b62eff0f3e2eca98d225eec48f9a8e99ec646",
+            "payload_size": 1013,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_0006/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_0006/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "c4730cc4361ac8dd2645e3d863e77c3a44ac1ef6432ba2cda842c8faf2c87357",
+            "payload_size": 1819,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_0006/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_conventional_oven_with_dropdown_door_0006",
+      "selection_digest": "",
+      "selection_rank": 5,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_0006/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_0006/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_0006/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_0006/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_0006/record.json"
+      },
+      "source_sha256": {
+        "model_py": "9a428995b16532437e2be748fe38b002b1892aceccbe11e0a8ceb6656f73a0ab",
+        "prompt_txt": "e7a665288d29dce915f686dbe23e90f8fd924f9e5a4347820945c8092749336a",
+        "provenance_json": "49be7027ec8826c172742d1f976b62eff0f3e2eca98d225eec48f9a8e99ec646",
+        "record_json": "c4730cc4361ac8dd2645e3d863e77c3a44ac1ef6432ba2cda842c8faf2c87357"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "oven",
+      "category_slug": "conventional_oven_with_dropdown_door",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_963cb7bc2dc149b18e3c36411f95e3df/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "9a6fe40d0ae02bcb9afeb399c71ae3ad06c1faac763a9f9c5de4bc2e646e28b5",
+            "payload_size": 310,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_963cb7bc2dc149b18e3c36411f95e3df/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_963cb7bc2dc149b18e3c36411f95e3df/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "d725c5fcaa117960c94527d8ef80e1a777d71a8a784a90f7962e6ff3f5ff1576",
+            "payload_size": 13350,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_963cb7bc2dc149b18e3c36411f95e3df/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_963cb7bc2dc149b18e3c36411f95e3df/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "0717ff206b97897230040864e76a3da3382115773758e95bfac0142e71ec07de",
+            "payload_size": 225,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_963cb7bc2dc149b18e3c36411f95e3df/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_963cb7bc2dc149b18e3c36411f95e3df/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "556542504d5786a7462527de4a8185bc892155804482a5ff820d9237cb279199",
+            "payload_size": 1079,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_963cb7bc2dc149b18e3c36411f95e3df/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_963cb7bc2dc149b18e3c36411f95e3df/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "dc9d1297c58fc5e95db5dc7defd7e861e50681fa80a15a4ea9b0fc0445662931",
+            "payload_size": 2046,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_963cb7bc2dc149b18e3c36411f95e3df/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.5-2026-04-23",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_conventional_oven_with_dropdown_door_963cb7bc2dc149b18e3c36411f95e3df",
+      "selection_digest": "",
+      "selection_rank": 6,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_963cb7bc2dc149b18e3c36411f95e3df/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_963cb7bc2dc149b18e3c36411f95e3df/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_963cb7bc2dc149b18e3c36411f95e3df/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_963cb7bc2dc149b18e3c36411f95e3df/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_963cb7bc2dc149b18e3c36411f95e3df/record.json"
+      },
+      "source_sha256": {
+        "model_py": "d725c5fcaa117960c94527d8ef80e1a777d71a8a784a90f7962e6ff3f5ff1576",
+        "prompt_txt": "0717ff206b97897230040864e76a3da3382115773758e95bfac0142e71ec07de",
+        "provenance_json": "556542504d5786a7462527de4a8185bc892155804482a5ff820d9237cb279199",
+        "record_json": "dc9d1297c58fc5e95db5dc7defd7e861e50681fa80a15a4ea9b0fc0445662931"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "oven",
+      "category_slug": "conventional_oven_with_dropdown_door",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2046bc5ec5354d7493d74a29a64bc7af/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "ca1665854515d690a49defd31da9313b8938e83b96b7c9d6d8365cb70573767f",
+            "payload_size": 310,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2046bc5ec5354d7493d74a29a64bc7af/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2046bc5ec5354d7493d74a29a64bc7af/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "11f3df2cc1315d8b8fc51efca4b35f217fc14c3359a928f2e4b0145b66144187",
+            "payload_size": 23227,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2046bc5ec5354d7493d74a29a64bc7af/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2046bc5ec5354d7493d74a29a64bc7af/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "0717ff206b97897230040864e76a3da3382115773758e95bfac0142e71ec07de",
+            "payload_size": 225,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2046bc5ec5354d7493d74a29a64bc7af/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2046bc5ec5354d7493d74a29a64bc7af/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "bfc01618357340147de7089d28e02b405705b2f3ff3d0477379c6672e2e05431",
+            "payload_size": 1040,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2046bc5ec5354d7493d74a29a64bc7af/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2046bc5ec5354d7493d74a29a64bc7af/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "b167dc43e47cb4441f46f22a1622d25167eda2cc49bceee15548fc8742650a78",
+            "payload_size": 1956,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2046bc5ec5354d7493d74a29a64bc7af/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_conventional_oven_with_dropdown_door_2046bc5ec5354d7493d74a29a64bc7af",
+      "selection_digest": "",
+      "selection_rank": 7,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2046bc5ec5354d7493d74a29a64bc7af/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2046bc5ec5354d7493d74a29a64bc7af/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2046bc5ec5354d7493d74a29a64bc7af/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2046bc5ec5354d7493d74a29a64bc7af/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_conventional_oven_with_dropdown_door_2046bc5ec5354d7493d74a29a64bc7af/record.json"
+      },
+      "source_sha256": {
+        "model_py": "11f3df2cc1315d8b8fc51efca4b35f217fc14c3359a928f2e4b0145b66144187",
+        "prompt_txt": "0717ff206b97897230040864e76a3da3382115773758e95bfac0142e71ec07de",
+        "provenance_json": "bfc01618357340147de7089d28e02b405705b2f3ff3d0477379c6672e2e05431",
+        "record_json": "b167dc43e47cb4441f46f22a1622d25167eda2cc49bceee15548fc8742650a78"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "faucet",
+      "category_slug": "faucet_with_side_handle",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_6f8b865d7bd64db28f340a59e3698f1c/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "c5398954cce2290d540953fb4f19d47dbb48c943a6029eff72207ed00d3d6b68",
+            "payload_size": 271,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_6f8b865d7bd64db28f340a59e3698f1c/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_6f8b865d7bd64db28f340a59e3698f1c/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "68c7d08b100284abc60de06bd123b51e00306843449a46810c274609afd97cdd",
+            "payload_size": 5256,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_6f8b865d7bd64db28f340a59e3698f1c/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_6f8b865d7bd64db28f340a59e3698f1c/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "0a8b78d8eda4d2def3cc3517834b9fc0f380692ac11b395b082b2dd888552323",
+            "payload_size": 245,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_6f8b865d7bd64db28f340a59e3698f1c/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_6f8b865d7bd64db28f340a59e3698f1c/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "18f47d102d89ac229f4fedaa97e7531d417ff875f8e00591b04a8c969edf7110",
+            "payload_size": 1067,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_6f8b865d7bd64db28f340a59e3698f1c/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_6f8b865d7bd64db28f340a59e3698f1c/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "33a0904bd4b1bb9db9bc8000814047826eec10236be9dbcef1483b928420dfa9",
+            "payload_size": 1958,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_6f8b865d7bd64db28f340a59e3698f1c/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.5-2026-04-23",
+      "primary_rating": 4,
+      "provider": "openai",
+      "record_id": "rec_faucet_with_side_handle_6f8b865d7bd64db28f340a59e3698f1c",
+      "selection_digest": "",
+      "selection_rank": 1,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_6f8b865d7bd64db28f340a59e3698f1c/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_6f8b865d7bd64db28f340a59e3698f1c/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_6f8b865d7bd64db28f340a59e3698f1c/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_6f8b865d7bd64db28f340a59e3698f1c/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_6f8b865d7bd64db28f340a59e3698f1c/record.json"
+      },
+      "source_sha256": {
+        "model_py": "68c7d08b100284abc60de06bd123b51e00306843449a46810c274609afd97cdd",
+        "prompt_txt": "0a8b78d8eda4d2def3cc3517834b9fc0f380692ac11b395b082b2dd888552323",
+        "provenance_json": "18f47d102d89ac229f4fedaa97e7531d417ff875f8e00591b04a8c969edf7110",
+        "record_json": "33a0904bd4b1bb9db9bc8000814047826eec10236be9dbcef1483b928420dfa9"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "faucet",
+      "category_slug": "faucet_with_side_handle",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_f24420ad5e834928a303ca761d1f9087/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "89b71dbe3e41a69bbba8e491a29e8737893f1c003fb416e748f5c9fb93ef2a91",
+            "payload_size": 271,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_f24420ad5e834928a303ca761d1f9087/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_f24420ad5e834928a303ca761d1f9087/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "b0c4f2182055758d78fe624f3b25d2174e35513251afa881ed786891734adcf7",
+            "payload_size": 7112,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_f24420ad5e834928a303ca761d1f9087/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_f24420ad5e834928a303ca761d1f9087/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "0a8b78d8eda4d2def3cc3517834b9fc0f380692ac11b395b082b2dd888552323",
+            "payload_size": 245,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_f24420ad5e834928a303ca761d1f9087/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_f24420ad5e834928a303ca761d1f9087/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "7cb8d54703e8e643e7f1c32db2da3681d9fb69f2df06db82feb40c0468079032",
+            "payload_size": 1080,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_f24420ad5e834928a303ca761d1f9087/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_f24420ad5e834928a303ca761d1f9087/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "053f58ef76bb86efc8950896b242ce302794fea86850bdb9758d57994deddc11",
+            "payload_size": 1856,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_f24420ad5e834928a303ca761d1f9087/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_faucet_with_side_handle_f24420ad5e834928a303ca761d1f9087",
+      "selection_digest": "",
+      "selection_rank": 2,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_f24420ad5e834928a303ca761d1f9087/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_f24420ad5e834928a303ca761d1f9087/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_f24420ad5e834928a303ca761d1f9087/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_f24420ad5e834928a303ca761d1f9087/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_f24420ad5e834928a303ca761d1f9087/record.json"
+      },
+      "source_sha256": {
+        "model_py": "b0c4f2182055758d78fe624f3b25d2174e35513251afa881ed786891734adcf7",
+        "prompt_txt": "0a8b78d8eda4d2def3cc3517834b9fc0f380692ac11b395b082b2dd888552323",
+        "provenance_json": "7cb8d54703e8e643e7f1c32db2da3681d9fb69f2df06db82feb40c0468079032",
+        "record_json": "053f58ef76bb86efc8950896b242ce302794fea86850bdb9758d57994deddc11"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "faucet",
+      "category_slug": "faucet_with_side_handle",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_21c2659785934b7ba60044db44c06e4a/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "1fc75deb4cd04f810345cc5a925f63d19d59f84f3a0f7686c34b2f2b35636175",
+            "payload_size": 271,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_21c2659785934b7ba60044db44c06e4a/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_21c2659785934b7ba60044db44c06e4a/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "ab54be2889c593b0a609fc09d0a7f7a30f70e4481af9e81fb8519ae197c96eef",
+            "payload_size": 9380,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_21c2659785934b7ba60044db44c06e4a/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_21c2659785934b7ba60044db44c06e4a/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "f66730bf45a560bd392ea89f28a1da14e4bc60418f495f03fbb1ebfd24bddb8f",
+            "payload_size": 249,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_21c2659785934b7ba60044db44c06e4a/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_21c2659785934b7ba60044db44c06e4a/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "6b6cba131fc5d4b3ed7dde03c498617660d95739d3054f3c1e431d8e7e1c515f",
+            "payload_size": 1066,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_21c2659785934b7ba60044db44c06e4a/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_21c2659785934b7ba60044db44c06e4a/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "e5a4beade7d6ef8a01f1d889cc74d022355e4adb9e1de5f5ab862627f0643185",
+            "payload_size": 1959,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_21c2659785934b7ba60044db44c06e4a/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.5-2026-04-23",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_faucet_with_side_handle_21c2659785934b7ba60044db44c06e4a",
+      "selection_digest": "",
+      "selection_rank": 3,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_21c2659785934b7ba60044db44c06e4a/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_21c2659785934b7ba60044db44c06e4a/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_21c2659785934b7ba60044db44c06e4a/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_21c2659785934b7ba60044db44c06e4a/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_21c2659785934b7ba60044db44c06e4a/record.json"
+      },
+      "source_sha256": {
+        "model_py": "ab54be2889c593b0a609fc09d0a7f7a30f70e4481af9e81fb8519ae197c96eef",
+        "prompt_txt": "f66730bf45a560bd392ea89f28a1da14e4bc60418f495f03fbb1ebfd24bddb8f",
+        "provenance_json": "6b6cba131fc5d4b3ed7dde03c498617660d95739d3054f3c1e431d8e7e1c515f",
+        "record_json": "e5a4beade7d6ef8a01f1d889cc74d022355e4adb9e1de5f5ab862627f0643185"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "faucet",
+      "category_slug": "faucet_with_side_handle",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0002/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "993445eff475574e415a09b8015f13bb2c4b284a1208b1724354e44d52396ab0",
+            "payload_size": 215,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0002/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0002/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "2e1a235baaff7db0e383e652bff211b6feb84bb5746901c6d237f4fd177bf069",
+            "payload_size": 9789,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0002/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0002/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "647e9c0b3a3a361201384cc35e670b6cba7f04ace3a36a722bceba1c36ecbf82",
+            "payload_size": 171,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0002/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0002/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "90f5272b77766068407a5a7776a13da03814b45bc7f8dce11224dff338f4c29d",
+            "payload_size": 999,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0002/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0002/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "a9e0483734c4784382ed9fb3d259180ab42ce2de0f34e57811d3fa73aebd5212",
+            "payload_size": 1764,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0002/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 4,
+      "provider": "openai",
+      "record_id": "rec_faucet_with_side_handle_0002",
+      "selection_digest": "",
+      "selection_rank": 4,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0002/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0002/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0002/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0002/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0002/record.json"
+      },
+      "source_sha256": {
+        "model_py": "2e1a235baaff7db0e383e652bff211b6feb84bb5746901c6d237f4fd177bf069",
+        "prompt_txt": "647e9c0b3a3a361201384cc35e670b6cba7f04ace3a36a722bceba1c36ecbf82",
+        "provenance_json": "90f5272b77766068407a5a7776a13da03814b45bc7f8dce11224dff338f4c29d",
+        "record_json": "a9e0483734c4784382ed9fb3d259180ab42ce2de0f34e57811d3fa73aebd5212"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "faucet",
+      "category_slug": "faucet_with_side_handle",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0006/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "c7cd90958b910bb307d5c5adc5f8b1ad22ba30fe0d27c1727d2ad04f37421dbf",
+            "payload_size": 215,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0006/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0006/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "70723f21529fcef9e06dcfb0e0997162cb226ab90c457d8d80022ae4156aa906",
+            "payload_size": 11251,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0006/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0006/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "b42b318a12376b46078413df2da4e31176a80292a903951578f42c52c067d058",
+            "payload_size": 147,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0006/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0006/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "e73772808a48dcbe3be70059da60145442ad6499fbcabb6c4b2d200a2c7df538",
+            "payload_size": 999,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0006/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0006/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "96e287a89aa8715559a1e94c44e4be5cda9c44269b3c6d0c291c85301d4ba625",
+            "payload_size": 1784,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0006/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_faucet_with_side_handle_0006",
+      "selection_digest": "",
+      "selection_rank": 5,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0006/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0006/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0006/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0006/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_0006/record.json"
+      },
+      "source_sha256": {
+        "model_py": "70723f21529fcef9e06dcfb0e0997162cb226ab90c457d8d80022ae4156aa906",
+        "prompt_txt": "b42b318a12376b46078413df2da4e31176a80292a903951578f42c52c067d058",
+        "provenance_json": "e73772808a48dcbe3be70059da60145442ad6499fbcabb6c4b2d200a2c7df538",
+        "record_json": "96e287a89aa8715559a1e94c44e4be5cda9c44269b3c6d0c291c85301d4ba625"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "faucet",
+      "category_slug": "faucet_with_side_handle",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_a05cebd441af40d5bc3f8e1d73a6f1ec/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "87014b1fe4fb324add5869c45f39239c64f1c888c4f125e952d8886b3fe87ef7",
+            "payload_size": 271,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_a05cebd441af40d5bc3f8e1d73a6f1ec/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_a05cebd441af40d5bc3f8e1d73a6f1ec/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "4ecf7e14e25ae357f30608a906db7d31336a3a9142bc370ba2f6460f42c97189",
+            "payload_size": 8517,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_a05cebd441af40d5bc3f8e1d73a6f1ec/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_a05cebd441af40d5bc3f8e1d73a6f1ec/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "6658c8fde2489d6e519858662d622fe68880923bf7775c306ee6982989c75dc1",
+            "payload_size": 231,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_a05cebd441af40d5bc3f8e1d73a6f1ec/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_a05cebd441af40d5bc3f8e1d73a6f1ec/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "648a6cd0fa70c618bddd1cd2540c516dcde21cc27c471aa0514f6e370450865c",
+            "payload_size": 1066,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_a05cebd441af40d5bc3f8e1d73a6f1ec/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_a05cebd441af40d5bc3f8e1d73a6f1ec/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "f6b5db42b994c0b796ef65f929f519cfc70d711d89a472232e0c6b7280d3e7b9",
+            "payload_size": 1959,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_a05cebd441af40d5bc3f8e1d73a6f1ec/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.5-2026-04-23",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_faucet_with_side_handle_a05cebd441af40d5bc3f8e1d73a6f1ec",
+      "selection_digest": "",
+      "selection_rank": 6,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_a05cebd441af40d5bc3f8e1d73a6f1ec/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_a05cebd441af40d5bc3f8e1d73a6f1ec/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_a05cebd441af40d5bc3f8e1d73a6f1ec/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_a05cebd441af40d5bc3f8e1d73a6f1ec/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_a05cebd441af40d5bc3f8e1d73a6f1ec/record.json"
+      },
+      "source_sha256": {
+        "model_py": "4ecf7e14e25ae357f30608a906db7d31336a3a9142bc370ba2f6460f42c97189",
+        "prompt_txt": "6658c8fde2489d6e519858662d622fe68880923bf7775c306ee6982989c75dc1",
+        "provenance_json": "648a6cd0fa70c618bddd1cd2540c516dcde21cc27c471aa0514f6e370450865c",
+        "record_json": "f6b5db42b994c0b796ef65f929f519cfc70d711d89a472232e0c6b7280d3e7b9"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "faucet",
+      "category_slug": "faucet_with_side_handle",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_068322598e4b4f218e8764a9d30c12e2/collections/dataset.json",
+            "lfs_oid": null,
+            "payload_sha256": "4d24b668ef8b946d3e9c61ad063ffe48a1c87be771eee1a8da9a02e5d992603b",
+            "payload_size": 271,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_068322598e4b4f218e8764a9d30c12e2/collections/dataset.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_068322598e4b4f218e8764a9d30c12e2/revisions/rev_000001/model.py",
+            "lfs_oid": null,
+            "payload_sha256": "a82efb96ea497c9942d2a76e2cb04b19c76fd0c5a407d4f38165fbc192de27ee",
+            "payload_size": 7910,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_068322598e4b4f218e8764a9d30c12e2/revisions/rev_000001/model.py",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_068322598e4b4f218e8764a9d30c12e2/revisions/rev_000001/prompt.txt",
+            "lfs_oid": null,
+            "payload_sha256": "6e9680c42a71f948f8e364442028da2adc77a04d75e8b51bd5840777e3eaea5d",
+            "payload_size": 347,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_068322598e4b4f218e8764a9d30c12e2/revisions/rev_000001/prompt.txt",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_068322598e4b4f218e8764a9d30c12e2/revisions/rev_000001/provenance.json",
+            "lfs_oid": null,
+            "payload_sha256": "81ad01f1574164fbb6ef79e3b74bfa7dbda7d04c33ea9201164fdc02a9c7e920",
+            "payload_size": 1056,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_068322598e4b4f218e8764a9d30c12e2/revisions/rev_000001/provenance.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_068322598e4b4f218e8764a9d30c12e2/record.json",
+            "lfs_oid": null,
+            "payload_sha256": "61f522f15fa64b0121b58511501dffcd0d1ac5512fa6a9b794063a464f1d3a74",
+            "payload_size": 1837,
+            "resolved_path": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_068322598e4b4f218e8764a9d30c12e2/record.json",
+            "status": "checkout_hydrated",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 4,
+      "provider": "openai",
+      "record_id": "rec_faucet_with_side_handle_068322598e4b4f218e8764a9d30c12e2",
+      "selection_digest": "",
+      "selection_rank": 7,
+      "source_paths": {
+        "dataset_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_068322598e4b4f218e8764a9d30c12e2/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_068322598e4b4f218e8764a9d30c12e2/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_068322598e4b4f218e8764a9d30c12e2/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_068322598e4b4f218e8764a9d30c12e2/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill/articraft_data/data/records/rec_faucet_with_side_handle_068322598e4b4f218e8764a9d30c12e2/record.json"
+      },
+      "source_sha256": {
+        "model_py": "a82efb96ea497c9942d2a76e2cb04b19c76fd0c5a407d4f38165fbc192de27ee",
+        "prompt_txt": "6e9680c42a71f948f8e364442028da2adc77a04d75e8b51bd5840777e3eaea5d",
+        "provenance_json": "81ad01f1574164fbb6ef79e3b74bfa7dbda7d04c33ea9201164fdc02a9c7e920",
+        "record_json": "61f522f15fa64b0121b58511501dffcd0d1ac5512fa6a9b794063a464f1d3a74"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "refrigerator",
+      "category_slug": "refrigerator_with_hinged_doors",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_51ee060a52e04ad69ddffa6bc2e993bb/collections/dataset.json",
+            "lfs_oid": "896158dcd9ab8de26605503b576dbf150ed50c35fb90d90d9d0528e53c62afab",
+            "payload_sha256": "896158dcd9ab8de26605503b576dbf150ed50c35fb90d90d9d0528e53c62afab",
+            "payload_size": 292,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_51ee060a52e04ad69ddffa6bc2e993bb/collections/dataset.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_51ee060a52e04ad69ddffa6bc2e993bb/revisions/rev_000001/model.py",
+            "lfs_oid": "64dfacfffd825c88345051ab5d279b1a2ec68b2662e1cb8f4727f21c8f249f64",
+            "payload_sha256": "64dfacfffd825c88345051ab5d279b1a2ec68b2662e1cb8f4727f21c8f249f64",
+            "payload_size": 10053,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_51ee060a52e04ad69ddffa6bc2e993bb/revisions/rev_000001/model.py",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_51ee060a52e04ad69ddffa6bc2e993bb/revisions/rev_000001/prompt.txt",
+            "lfs_oid": "c3d86447682a696acab5f8907ab8d35aad4f22fa99e792e45df49d1a21a4bad2",
+            "payload_sha256": "c3d86447682a696acab5f8907ab8d35aad4f22fa99e792e45df49d1a21a4bad2",
+            "payload_size": 286,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_51ee060a52e04ad69ddffa6bc2e993bb/revisions/rev_000001/prompt.txt",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_51ee060a52e04ad69ddffa6bc2e993bb/revisions/rev_000001/provenance.json",
+            "lfs_oid": "c6b234e3f6594cb267e693a35ef8f86c51fc20a90bbc16dc7d5437505eaa2bd3",
+            "payload_sha256": "c6b234e3f6594cb267e693a35ef8f86c51fc20a90bbc16dc7d5437505eaa2bd3",
+            "payload_size": 1073,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_51ee060a52e04ad69ddffa6bc2e993bb/revisions/rev_000001/provenance.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_51ee060a52e04ad69ddffa6bc2e993bb/record.json",
+            "lfs_oid": "815ffbbae85beabae1f2b18bffea7bbfb2ddaccb322a0f55db9bcf87cb471f32",
+            "payload_sha256": "815ffbbae85beabae1f2b18bffea7bbfb2ddaccb322a0f55db9bcf87cb471f32",
+            "payload_size": 2021,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_51ee060a52e04ad69ddffa6bc2e993bb/record.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.5-2026-04-23",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_refrigerator_with_hinged_doors_51ee060a52e04ad69ddffa6bc2e993bb",
+      "selection_digest": "",
+      "selection_rank": 1,
+      "source_paths": {
+        "dataset_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_51ee060a52e04ad69ddffa6bc2e993bb/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_51ee060a52e04ad69ddffa6bc2e993bb/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_51ee060a52e04ad69ddffa6bc2e993bb/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_51ee060a52e04ad69ddffa6bc2e993bb/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_51ee060a52e04ad69ddffa6bc2e993bb/record.json"
+      },
+      "source_sha256": {
+        "model_py": "64dfacfffd825c88345051ab5d279b1a2ec68b2662e1cb8f4727f21c8f249f64",
+        "prompt_txt": "c3d86447682a696acab5f8907ab8d35aad4f22fa99e792e45df49d1a21a4bad2",
+        "provenance_json": "c6b234e3f6594cb267e693a35ef8f86c51fc20a90bbc16dc7d5437505eaa2bd3",
+        "record_json": "815ffbbae85beabae1f2b18bffea7bbfb2ddaccb322a0f55db9bcf87cb471f32"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "refrigerator",
+      "category_slug": "refrigerator_with_hinged_doors",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_effbcb60f4fc4f53bbf0fdcaffbfb5ab/collections/dataset.json",
+            "lfs_oid": "a754faf4e73778d685b4c3ff64552ce1472a7197096d3b9f0d05503b7e0317ed",
+            "payload_sha256": "a754faf4e73778d685b4c3ff64552ce1472a7197096d3b9f0d05503b7e0317ed",
+            "payload_size": 292,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_effbcb60f4fc4f53bbf0fdcaffbfb5ab/collections/dataset.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_effbcb60f4fc4f53bbf0fdcaffbfb5ab/revisions/rev_000001/model.py",
+            "lfs_oid": "3886c9f2577658a5ab1354b824b3c05861585ad2a84e694dbb5f7d9413c66d33",
+            "payload_sha256": "3886c9f2577658a5ab1354b824b3c05861585ad2a84e694dbb5f7d9413c66d33",
+            "payload_size": 11687,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_effbcb60f4fc4f53bbf0fdcaffbfb5ab/revisions/rev_000001/model.py",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_effbcb60f4fc4f53bbf0fdcaffbfb5ab/revisions/rev_000001/prompt.txt",
+            "lfs_oid": "e1fbcfa792325cd0cea94f0d3e3d327c84a0d0e70692a1791c049870f87ea4f4",
+            "payload_sha256": "e1fbcfa792325cd0cea94f0d3e3d327c84a0d0e70692a1791c049870f87ea4f4",
+            "payload_size": 344,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_effbcb60f4fc4f53bbf0fdcaffbfb5ab/revisions/rev_000001/prompt.txt",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_effbcb60f4fc4f53bbf0fdcaffbfb5ab/revisions/rev_000001/provenance.json",
+            "lfs_oid": "ea1c3128e796573a6eb9bc7585acf6eb2788e60aea2bfdc2cde823fa98003feb",
+            "payload_sha256": "ea1c3128e796573a6eb9bc7585acf6eb2788e60aea2bfdc2cde823fa98003feb",
+            "payload_size": 1074,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_effbcb60f4fc4f53bbf0fdcaffbfb5ab/revisions/rev_000001/provenance.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_effbcb60f4fc4f53bbf0fdcaffbfb5ab/record.json",
+            "lfs_oid": "b1190507789a9df3b12a84125f4d7975ac8ace1764baa33739378565ce2fd457",
+            "payload_sha256": "b1190507789a9df3b12a84125f4d7975ac8ace1764baa33739378565ce2fd457",
+            "payload_size": 1986,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_effbcb60f4fc4f53bbf0fdcaffbfb5ab/record.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.5-2026-04-23",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_refrigerator_with_hinged_doors_effbcb60f4fc4f53bbf0fdcaffbfb5ab",
+      "selection_digest": "",
+      "selection_rank": 2,
+      "source_paths": {
+        "dataset_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_effbcb60f4fc4f53bbf0fdcaffbfb5ab/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_effbcb60f4fc4f53bbf0fdcaffbfb5ab/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_effbcb60f4fc4f53bbf0fdcaffbfb5ab/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_effbcb60f4fc4f53bbf0fdcaffbfb5ab/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_effbcb60f4fc4f53bbf0fdcaffbfb5ab/record.json"
+      },
+      "source_sha256": {
+        "model_py": "3886c9f2577658a5ab1354b824b3c05861585ad2a84e694dbb5f7d9413c66d33",
+        "prompt_txt": "e1fbcfa792325cd0cea94f0d3e3d327c84a0d0e70692a1791c049870f87ea4f4",
+        "provenance_json": "ea1c3128e796573a6eb9bc7585acf6eb2788e60aea2bfdc2cde823fa98003feb",
+        "record_json": "b1190507789a9df3b12a84125f4d7975ac8ace1764baa33739378565ce2fd457"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "refrigerator",
+      "category_slug": "refrigerator_with_hinged_doors",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_ecd4377fc27549a78cfb51c08c83f23b/collections/dataset.json",
+            "lfs_oid": "525f9bb55c21d5ba11ee9eeec8573c9a72369e7d2981bdfc52185109efac89f5",
+            "payload_sha256": "525f9bb55c21d5ba11ee9eeec8573c9a72369e7d2981bdfc52185109efac89f5",
+            "payload_size": 292,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_ecd4377fc27549a78cfb51c08c83f23b/collections/dataset.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_ecd4377fc27549a78cfb51c08c83f23b/revisions/rev_000001/model.py",
+            "lfs_oid": "52f323a7354a3faaa44f916d0cca6c2341d1e124a87ed8e2c57b567edc0da738",
+            "payload_sha256": "52f323a7354a3faaa44f916d0cca6c2341d1e124a87ed8e2c57b567edc0da738",
+            "payload_size": 19846,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_ecd4377fc27549a78cfb51c08c83f23b/revisions/rev_000001/model.py",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_ecd4377fc27549a78cfb51c08c83f23b/revisions/rev_000001/prompt.txt",
+            "lfs_oid": "98d8c7d2d395f851cd1dbda9fc75c338cfa3f419c3b27e17fdc4e8ef17e2833e",
+            "payload_sha256": "98d8c7d2d395f851cd1dbda9fc75c338cfa3f419c3b27e17fdc4e8ef17e2833e",
+            "payload_size": 370,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_ecd4377fc27549a78cfb51c08c83f23b/revisions/rev_000001/prompt.txt",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_ecd4377fc27549a78cfb51c08c83f23b/revisions/rev_000001/provenance.json",
+            "lfs_oid": "8d5a32aac9080082439ba660195084f2a584672d45389455634490122a9e16d6",
+            "payload_sha256": "8d5a32aac9080082439ba660195084f2a584672d45389455634490122a9e16d6",
+            "payload_size": 1064,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_ecd4377fc27549a78cfb51c08c83f23b/revisions/rev_000001/provenance.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_ecd4377fc27549a78cfb51c08c83f23b/record.json",
+            "lfs_oid": "765c7854e777eb000ded968433f6f35445497181be3333e1a7a6026ae9f8ab3d",
+            "payload_sha256": "765c7854e777eb000ded968433f6f35445497181be3333e1a7a6026ae9f8ab3d",
+            "payload_size": 1878,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_ecd4377fc27549a78cfb51c08c83f23b/record.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_refrigerator_with_hinged_doors_ecd4377fc27549a78cfb51c08c83f23b",
+      "selection_digest": "",
+      "selection_rank": 3,
+      "source_paths": {
+        "dataset_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_ecd4377fc27549a78cfb51c08c83f23b/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_ecd4377fc27549a78cfb51c08c83f23b/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_ecd4377fc27549a78cfb51c08c83f23b/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_ecd4377fc27549a78cfb51c08c83f23b/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_ecd4377fc27549a78cfb51c08c83f23b/record.json"
+      },
+      "source_sha256": {
+        "model_py": "52f323a7354a3faaa44f916d0cca6c2341d1e124a87ed8e2c57b567edc0da738",
+        "prompt_txt": "98d8c7d2d395f851cd1dbda9fc75c338cfa3f419c3b27e17fdc4e8ef17e2833e",
+        "provenance_json": "8d5a32aac9080082439ba660195084f2a584672d45389455634490122a9e16d6",
+        "record_json": "765c7854e777eb000ded968433f6f35445497181be3333e1a7a6026ae9f8ab3d"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "refrigerator",
+      "category_slug": "refrigerator_with_hinged_doors",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_b6330c25046542158bb3f8c4048de904/collections/dataset.json",
+            "lfs_oid": "6b6205b0c3fcfad0b37abdc95ac17aae883a416c624f5da8929f6ee2ae1a96d8",
+            "payload_sha256": "6b6205b0c3fcfad0b37abdc95ac17aae883a416c624f5da8929f6ee2ae1a96d8",
+            "payload_size": 292,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_b6330c25046542158bb3f8c4048de904/collections/dataset.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_b6330c25046542158bb3f8c4048de904/revisions/rev_000001/model.py",
+            "lfs_oid": "e5096ae29aae33d0d71e548cfa0a080a8bf318c8f84f29b64817ef4c1460ebc1",
+            "payload_sha256": "e5096ae29aae33d0d71e548cfa0a080a8bf318c8f84f29b64817ef4c1460ebc1",
+            "payload_size": 14974,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_b6330c25046542158bb3f8c4048de904/revisions/rev_000001/model.py",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_b6330c25046542158bb3f8c4048de904/revisions/rev_000001/prompt.txt",
+            "lfs_oid": "9354a03b04e492279cc19fc604591563c87b2e4f35ecfbf8f74943cdd76573b3",
+            "payload_sha256": "9354a03b04e492279cc19fc604591563c87b2e4f35ecfbf8f74943cdd76573b3",
+            "payload_size": 346,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_b6330c25046542158bb3f8c4048de904/revisions/rev_000001/prompt.txt",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_b6330c25046542158bb3f8c4048de904/revisions/rev_000001/provenance.json",
+            "lfs_oid": "b7b46a8df067c198aceb967189912d5c1f545d6b43e9bc7871fcb72d5fc14523",
+            "payload_sha256": "b7b46a8df067c198aceb967189912d5c1f545d6b43e9bc7871fcb72d5fc14523",
+            "payload_size": 1073,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_b6330c25046542158bb3f8c4048de904/revisions/rev_000001/provenance.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_b6330c25046542158bb3f8c4048de904/record.json",
+            "lfs_oid": "d421b5a58351c947e4d664b7db432f6d8c80f7041b295f3836cb872979459cb2",
+            "payload_sha256": "d421b5a58351c947e4d664b7db432f6d8c80f7041b295f3836cb872979459cb2",
+            "payload_size": 2022,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_b6330c25046542158bb3f8c4048de904/record.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.5-2026-04-23",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_refrigerator_with_hinged_doors_b6330c25046542158bb3f8c4048de904",
+      "selection_digest": "",
+      "selection_rank": 4,
+      "source_paths": {
+        "dataset_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_b6330c25046542158bb3f8c4048de904/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_b6330c25046542158bb3f8c4048de904/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_b6330c25046542158bb3f8c4048de904/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_b6330c25046542158bb3f8c4048de904/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_b6330c25046542158bb3f8c4048de904/record.json"
+      },
+      "source_sha256": {
+        "model_py": "e5096ae29aae33d0d71e548cfa0a080a8bf318c8f84f29b64817ef4c1460ebc1",
+        "prompt_txt": "9354a03b04e492279cc19fc604591563c87b2e4f35ecfbf8f74943cdd76573b3",
+        "provenance_json": "b7b46a8df067c198aceb967189912d5c1f545d6b43e9bc7871fcb72d5fc14523",
+        "record_json": "d421b5a58351c947e4d664b7db432f6d8c80f7041b295f3836cb872979459cb2"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "refrigerator",
+      "category_slug": "refrigerator_with_hinged_doors",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_1a855fe199cd4cd4bf4416180799a579/collections/dataset.json",
+            "lfs_oid": "4c94b09d2511ea38159905a096514ebbb1cb94fd7612a946048fe4167602875b",
+            "payload_sha256": "4c94b09d2511ea38159905a096514ebbb1cb94fd7612a946048fe4167602875b",
+            "payload_size": 292,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1a855fe199cd4cd4bf4416180799a579/collections/dataset.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_1a855fe199cd4cd4bf4416180799a579/revisions/rev_000001/model.py",
+            "lfs_oid": "20ef9ed0a707c6fff83555cee4068ac9c51c3e9fb6be6100aaba3941a31ee1fd",
+            "payload_sha256": "20ef9ed0a707c6fff83555cee4068ac9c51c3e9fb6be6100aaba3941a31ee1fd",
+            "payload_size": 16206,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1a855fe199cd4cd4bf4416180799a579/revisions/rev_000001/model.py",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_1a855fe199cd4cd4bf4416180799a579/revisions/rev_000001/prompt.txt",
+            "lfs_oid": "652b7bd53b5a1333f586969ec01a174203f1c2d8a1aac72d53a5305791e41d86",
+            "payload_sha256": "652b7bd53b5a1333f586969ec01a174203f1c2d8a1aac72d53a5305791e41d86",
+            "payload_size": 278,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1a855fe199cd4cd4bf4416180799a579/revisions/rev_000001/prompt.txt",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_1a855fe199cd4cd4bf4416180799a579/revisions/rev_000001/provenance.json",
+            "lfs_oid": "4a39dee3925140c4de96a612ebdc1720adf54482116621ad51e6a0834ef2579c",
+            "payload_sha256": "4a39dee3925140c4de96a612ebdc1720adf54482116621ad51e6a0834ef2579c",
+            "payload_size": 1089,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1a855fe199cd4cd4bf4416180799a579/revisions/rev_000001/provenance.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_1a855fe199cd4cd4bf4416180799a579/record.json",
+            "lfs_oid": "3ca8408795f06ee07bec19a9e72dbf191ca93daede22d2caf08bea7f68980a14",
+            "payload_sha256": "3ca8408795f06ee07bec19a9e72dbf191ca93daede22d2caf08bea7f68980a14",
+            "payload_size": 1991,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1a855fe199cd4cd4bf4416180799a579/record.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.4",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_refrigerator_with_hinged_doors_1a855fe199cd4cd4bf4416180799a579",
+      "selection_digest": "",
+      "selection_rank": 5,
+      "source_paths": {
+        "dataset_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1a855fe199cd4cd4bf4416180799a579/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1a855fe199cd4cd4bf4416180799a579/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1a855fe199cd4cd4bf4416180799a579/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1a855fe199cd4cd4bf4416180799a579/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1a855fe199cd4cd4bf4416180799a579/record.json"
+      },
+      "source_sha256": {
+        "model_py": "20ef9ed0a707c6fff83555cee4068ac9c51c3e9fb6be6100aaba3941a31ee1fd",
+        "prompt_txt": "652b7bd53b5a1333f586969ec01a174203f1c2d8a1aac72d53a5305791e41d86",
+        "provenance_json": "4a39dee3925140c4de96a612ebdc1720adf54482116621ad51e6a0834ef2579c",
+        "record_json": "3ca8408795f06ee07bec19a9e72dbf191ca93daede22d2caf08bea7f68980a14"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "refrigerator",
+      "category_slug": "refrigerator_with_hinged_doors",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_f635a104e34f4e5ea39ac1598bd6f630/collections/dataset.json",
+            "lfs_oid": "91d6445b66c4a7c8032ed890bb6433e8269b682b64ac03039c12b67c1e1cc201",
+            "payload_sha256": "91d6445b66c4a7c8032ed890bb6433e8269b682b64ac03039c12b67c1e1cc201",
+            "payload_size": 292,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_f635a104e34f4e5ea39ac1598bd6f630/collections/dataset.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_f635a104e34f4e5ea39ac1598bd6f630/revisions/rev_000001/model.py",
+            "lfs_oid": "ef6ef646a98b10c1d9c3375adc79274ff64eb6e020be8f23b2da199ba2a2a6a9",
+            "payload_sha256": "ef6ef646a98b10c1d9c3375adc79274ff64eb6e020be8f23b2da199ba2a2a6a9",
+            "payload_size": 14029,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_f635a104e34f4e5ea39ac1598bd6f630/revisions/rev_000001/model.py",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_f635a104e34f4e5ea39ac1598bd6f630/revisions/rev_000001/prompt.txt",
+            "lfs_oid": "22bb0c8442a462200593068dfefc7a8e0e07ebcfc2070d160af040d90fe05ff6",
+            "payload_sha256": "22bb0c8442a462200593068dfefc7a8e0e07ebcfc2070d160af040d90fe05ff6",
+            "payload_size": 502,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_f635a104e34f4e5ea39ac1598bd6f630/revisions/rev_000001/prompt.txt",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_f635a104e34f4e5ea39ac1598bd6f630/revisions/rev_000001/provenance.json",
+            "lfs_oid": "953362400c4bf67b511a044da0417f18b6bae23c01ccd8170c17b558403af75d",
+            "payload_sha256": "953362400c4bf67b511a044da0417f18b6bae23c01ccd8170c17b558403af75d",
+            "payload_size": 1073,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_f635a104e34f4e5ea39ac1598bd6f630/revisions/rev_000001/provenance.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_f635a104e34f4e5ea39ac1598bd6f630/record.json",
+            "lfs_oid": "e085c6659c7f525793a064a2284c6ed1e1d9714b9df1af2617e44b02257c639d",
+            "payload_sha256": "e085c6659c7f525793a064a2284c6ed1e1d9714b9df1af2617e44b02257c639d",
+            "payload_size": 1987,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_f635a104e34f4e5ea39ac1598bd6f630/record.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gpt-5.5-2026-04-23",
+      "primary_rating": 5,
+      "provider": "openai",
+      "record_id": "rec_refrigerator_with_hinged_doors_f635a104e34f4e5ea39ac1598bd6f630",
+      "selection_digest": "",
+      "selection_rank": 6,
+      "source_paths": {
+        "dataset_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_f635a104e34f4e5ea39ac1598bd6f630/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_f635a104e34f4e5ea39ac1598bd6f630/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_f635a104e34f4e5ea39ac1598bd6f630/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_f635a104e34f4e5ea39ac1598bd6f630/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_f635a104e34f4e5ea39ac1598bd6f630/record.json"
+      },
+      "source_sha256": {
+        "model_py": "ef6ef646a98b10c1d9c3375adc79274ff64eb6e020be8f23b2da199ba2a2a6a9",
+        "prompt_txt": "22bb0c8442a462200593068dfefc7a8e0e07ebcfc2070d160af040d90fe05ff6",
+        "provenance_json": "953362400c4bf67b511a044da0417f18b6bae23c01ccd8170c17b558403af75d",
+        "record_json": "e085c6659c7f525793a064a2284c6ed1e1d9714b9df1af2617e44b02257c639d"
+      }
+    },
+    {
+      "active_revision_id": "rev_000001",
+      "canonical_category": "refrigerator",
+      "category_slug": "refrigerator_with_hinged_doors",
+      "checkout_provenance": {
+        "all_required_files_verified": true,
+        "files": {
+          "dataset_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_1c87ae6696f048708b1189d32157a5c6/collections/dataset.json",
+            "lfs_oid": "0eb0bd4c9f5b3ba56d2fef5e116eddde38897c574b402a89d1b1b48152f19951",
+            "payload_sha256": "0eb0bd4c9f5b3ba56d2fef5e116eddde38897c574b402a89d1b1b48152f19951",
+            "payload_size": 292,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1c87ae6696f048708b1189d32157a5c6/collections/dataset.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "model_py": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_1c87ae6696f048708b1189d32157a5c6/revisions/rev_000001/model.py",
+            "lfs_oid": "b27c653a954a571edcb78817875f27189f2e6cc4731b76c31d597be577715011",
+            "payload_sha256": "b27c653a954a571edcb78817875f27189f2e6cc4731b76c31d597be577715011",
+            "payload_size": 6301,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1c87ae6696f048708b1189d32157a5c6/revisions/rev_000001/model.py",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "prompt_txt": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_1c87ae6696f048708b1189d32157a5c6/revisions/rev_000001/prompt.txt",
+            "lfs_oid": "98d8c7d2d395f851cd1dbda9fc75c338cfa3f419c3b27e17fdc4e8ef17e2833e",
+            "payload_sha256": "98d8c7d2d395f851cd1dbda9fc75c338cfa3f419c3b27e17fdc4e8ef17e2833e",
+            "payload_size": 370,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1c87ae6696f048708b1189d32157a5c6/revisions/rev_000001/prompt.txt",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "provenance_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_1c87ae6696f048708b1189d32157a5c6/revisions/rev_000001/provenance.json",
+            "lfs_oid": "bcc699dc13ef8ac738fb597a484ee976174c71df21b328f70275b0e7b50a4153",
+            "payload_sha256": "bcc699dc13ef8ac738fb597a484ee976174c71df21b328f70275b0e7b50a4153",
+            "payload_size": 1072,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1c87ae6696f048708b1189d32157a5c6/revisions/rev_000001/provenance.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          },
+          "record_json": {
+            "checkout_path": "arti-skill/articraft_data/data/records/rec_refrigerator_with_hinged_doors_1c87ae6696f048708b1189d32157a5c6/record.json",
+            "lfs_oid": "ad2a344fb4560f24da69324013fb225fad7c873204b5379d7c1913623cc60578",
+            "payload_sha256": "ad2a344fb4560f24da69324013fb225fad7c873204b5379d7c1913623cc60578",
+            "payload_size": 1986,
+            "resolved_path": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1c87ae6696f048708b1189d32157a5c6/record.json",
+            "status": "lfs_oid_mirror",
+            "verified": true
+          }
+        }
+      },
+      "model_id": "gemini-3.1-pro-preview",
+      "primary_rating": 4,
+      "provider": "gemini",
+      "record_id": "rec_refrigerator_with_hinged_doors_1c87ae6696f048708b1189d32157a5c6",
+      "selection_digest": "",
+      "selection_rank": 7,
+      "source_paths": {
+        "dataset_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1c87ae6696f048708b1189d32157a5c6/collections/dataset.json",
+        "inputs_dir": null,
+        "model_py": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1c87ae6696f048708b1189d32157a5c6/revisions/rev_000001/model.py",
+        "prompt_txt": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1c87ae6696f048708b1189d32157a5c6/revisions/rev_000001/prompt.txt",
+        "provenance_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1c87ae6696f048708b1189d32157a5c6/revisions/rev_000001/provenance.json",
+        "record_json": "arti-skill-removed-official-assets-20260806-6mjVay/records/rec_refrigerator_with_hinged_doors_1c87ae6696f048708b1189d32157a5c6/record.json"
+      },
+      "source_sha256": {
+        "model_py": "b27c653a954a571edcb78817875f27189f2e6cc4731b76c31d597be577715011",
+        "prompt_txt": "98d8c7d2d395f851cd1dbda9fc75c338cfa3f419c3b27e17fdc4e8ef17e2833e",
+        "provenance_json": "bcc699dc13ef8ac738fb597a484ee976174c71df21b328f70275b0e7b50a4153",
+        "record_json": "ad2a344fb4560f24da69324013fb225fad7c873204b5379d7c1913623cc60578"
+      }
+    }
+  ],
+  "selection_audit": {
+    "dishwasher": {
+      "eligible_pool_count": 35,
+      "exact_source_category": "dishwasher_with_dropdown_door_and_sliding_racks",
+      "first_excluded_digest": "467201d6328d041bd3ace1e016e97cd92c14bb7671409524fa1bbb024e2e3eba",
+      "selected_count": 7,
+      "selected_record_ids": [
+        "rec_dishwasher_with_dropdown_door_and_sliding_racks_9dd15c0aefb940f2acd9fd2596b80ced",
+        "rec_dishwasher_with_dropdown_door_and_sliding_racks_bf452bbfb955442e813a56e70bfaf897",
+        "rec_dishwasher_with_dropdown_door_and_sliding_racks_2fcd8639e5af4667a778aefdf4456d61",
+        "rec_dishwasher_with_dropdown_door_and_sliding_racks_f64b47dba9c54168b352c390fca47511",
+        "rec_dishwasher_with_dropdown_door_and_sliding_racks_c5e1fea68689460f9170ba73efb04f9d",
+        "rec_dishwasher_with_dropdown_door_and_sliding_racks_9739c4060ce04d0a880acc202ee62ef9",
+        "rec_dishwasher_with_dropdown_door_and_sliding_racks_6031139969f5409cbb18a74a9ff4f52d"
+      ]
+    },
+    "faucet": {
+      "eligible_pool_count": 46,
+      "exact_source_category": "faucet_with_side_handle",
+      "first_excluded_digest": "28004c84c15c0a80d772b0ca892685328e2e67beea56649e94e74bfccb72c38d",
+      "selected_count": 7,
+      "selected_record_ids": [
+        "rec_faucet_with_side_handle_6f8b865d7bd64db28f340a59e3698f1c",
+        "rec_faucet_with_side_handle_f24420ad5e834928a303ca761d1f9087",
+        "rec_faucet_with_side_handle_21c2659785934b7ba60044db44c06e4a",
+        "rec_faucet_with_side_handle_0002",
+        "rec_faucet_with_side_handle_0006",
+        "rec_faucet_with_side_handle_a05cebd441af40d5bc3f8e1d73a6f1ec",
+        "rec_faucet_with_side_handle_068322598e4b4f218e8764a9d30c12e2"
+      ]
+    },
+    "microwave": {
+      "eligible_pool_count": 36,
+      "exact_source_category": "microwave_oven",
+      "first_excluded_digest": "4475ebecd96e43bf7f478e7ac0d494c6240b61d16b27a5042db2681f94438999",
+      "selected_count": 7,
+      "selected_record_ids": [
+        "rec_microwave_oven_47dc895bb93344b9bee2eb9b47092c97",
+        "rec_microwave_oven_1d58bdf24b4c45abab11b74ca527f0c1",
+        "rec_microwave_oven_b0d66713e96e4865af1d7093b5d42b11",
+        "rec_microwave_oven_fb440d519c3c4a8bb5f706eac35e1397",
+        "rec_microwave_oven_c04249fcff2d4e2086d5eabc27a084fc",
+        "rec_microwave_oven_01133e8e1b6b4b7599795753004680d6",
+        "rec_microwave_oven_191811c1738c4cd3855ba45e6f49c198"
+      ]
+    },
+    "oven": {
+      "eligible_pool_count": 44,
+      "exact_source_category": "conventional_oven_with_dropdown_door",
+      "first_excluded_digest": "215abca71dc1d5c78c43431146373a1d77188c3f66898768f8a5c3a0d634dad5",
+      "selected_count": 7,
+      "selected_record_ids": [
+        "rec_conventional_oven_with_dropdown_door_6cd525cc08414113ac06c95144f71d28",
+        "rec_conventional_oven_with_dropdown_door_2df979bdb12b4537b5fa36651c282144",
+        "rec_conventional_oven_with_dropdown_door_003f4e9a119e4c5ab30a01925e517ee9",
+        "rec_conventional_oven_with_dropdown_door_5956a7640c674c99ab6163df9e0d757c",
+        "rec_conventional_oven_with_dropdown_door_0006",
+        "rec_conventional_oven_with_dropdown_door_963cb7bc2dc149b18e3c36411f95e3df",
+        "rec_conventional_oven_with_dropdown_door_2046bc5ec5354d7493d74a29a64bc7af"
+      ]
+    },
+    "refrigerator": {
+      "eligible_pool_count": 37,
+      "exact_source_category": "refrigerator_with_hinged_doors",
+      "first_excluded_digest": "2403ecb573a8f20a82ba589b5052bffb393d36b783ac12bc0f0875038223fe57",
+      "selected_count": 7,
+      "selected_record_ids": [
+        "rec_refrigerator_with_hinged_doors_51ee060a52e04ad69ddffa6bc2e993bb",
+        "rec_refrigerator_with_hinged_doors_effbcb60f4fc4f53bbf0fdcaffbfb5ab",
+        "rec_refrigerator_with_hinged_doors_ecd4377fc27549a78cfb51c08c83f23b",
+        "rec_refrigerator_with_hinged_doors_b6330c25046542158bb3f8c4048de904",
+        "rec_refrigerator_with_hinged_doors_1a855fe199cd4cd4bf4416180799a579",
+        "rec_refrigerator_with_hinged_doors_f635a104e34f4e5ea39ac1598bd6f630",
+        "rec_refrigerator_with_hinged_doors_1c87ae6696f048708b1189d32157a5c6"
+      ]
+    }
+  },
+  "selection_policy": {
+    "outcome_independent": true,
+    "policy": "from eligible retained official-checkout records in the exact category, rank records independently within each canonical category by ascending SHA256 of the UTF-8 string below and select the first seven",
+    "rank_string": "nano3d-table2-naming-matched-v1|Articraft|<canonical_category>|<record_id>|<source_sha256.model_py>",
+    "tie_breakers": [
+      "record_id ascending",
+      "source_sha256.model_py ascending"
+    ]
+  },
+  "shared_protocol_id": "nano3d_table2_naming_matched_v1",
+  "shared_protocol_sha256": "f4c4d915ce2e1bed5c99efd9dcebb97526a7d2639ad5021e3b068c3cf6105113"
+}

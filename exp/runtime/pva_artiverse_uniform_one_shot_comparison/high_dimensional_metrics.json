@@ -1,0 +1,262 @@
+{
+  "artiverse_mode": "one_shot_only",
+  "encoder_agreement": {
+    "artiverse_one_shot": {
+      "clip_pairwise_cosine_distance": {
+        "count": 3486,
+        "max": 0.4415209889411926,
+        "mean": 0.21831114962055842,
+        "median": 0.2171606421470642,
+        "min": 0.04245412349700928,
+        "q10": 0.1477292776107788,
+        "q90": 0.2883569598197937,
+        "std": 0.05492205468722387
+      },
+      "dinov2_pairwise_cosine_distance": {
+        "count": 3486,
+        "max": 1.076941728591919,
+        "mean": 0.8537076245213266,
+        "median": 0.872935950756073,
+        "min": 0.20987451076507568,
+        "q10": 0.7285500168800354,
+        "q90": 0.9549347162246704,
+        "std": 0.09865089967033219
+      },
+      "neighbor_agreement": {
+        "chance_adjusted_overlap": 0.41981074481074476,
+        "chance_overlap": 0.060240963855421686,
+        "fraction": 0.06,
+        "k": 5,
+        "per_sample": {
+          "count": 84,
+          "max": 1.0,
+          "mean": 0.4547619047619047,
+          "median": 0.4,
+          "min": 0.0,
+          "q10": 0.2,
+          "q90": 0.8,
+          "std": 0.21010471420152668
+        },
+        "raw_overlap": 0.4547619047619047
+      },
+      "pair_count": 3486,
+      "pairwise_cosine_distance_spearman": 0.5766293309006518,
+      "sample_count": 84
+    },
+    "pva": {
+      "clip_pairwise_cosine_distance": {
+        "count": 140715,
+        "max": 0.44229257106781006,
+        "mean": 0.20192667270348033,
+        "median": 0.20066428184509277,
+        "min": 0.013624489307403564,
+        "q10": 0.1418065309524536,
+        "q90": 0.2632472515106201,
+        "std": 0.04769313354562771
+      },
+      "dinov2_pairwise_cosine_distance": {
+        "count": 140715,
+        "max": 1.0609514713287354,
+        "mean": 0.8310899242194855,
+        "median": 0.8492858409881592,
+        "min": 0.02812933921813965,
+        "q10": 0.6977201104164124,
+        "q90": 0.9394212484359742,
+        "std": 0.10046809752357426
+      },
+      "neighbor_agreement": {
+        "chance_adjusted_overlap": 0.36271096627564875,
+        "chance_overlap": 0.06037735849056604,
+        "fraction": 0.06,
+        "k": 32,
+        "per_sample": {
+          "count": 531,
+          "max": 0.75,
+          "mean": 0.4011887947269303,
+          "median": 0.40625,
+          "min": 0.0625,
+          "q10": 0.25,
+          "q90": 0.5625,
+          "std": 0.12305806440199898
+        },
+        "raw_overlap": 0.4011887947269303
+      },
+      "pair_count": 140715,
+      "pairwise_cosine_distance_spearman": 0.5411458356340165,
+      "sample_count": 531
+    }
+  },
+  "per_encoder": {
+    "clip": {
+      "joint_projection_trustworthiness": {
+        "one_shot": {
+          "k": 37,
+          "sample_count": 615,
+          "score": 0.8402999360458238
+        }
+      },
+      "pva_vs_artiverse_one_shot": {
+        "artiverse_count": 84,
+        "knn_source_mixing": {
+          "artiverse_queries": {
+            "chance_adjusted_mixing": -0.46618908064691067,
+            "per_query": {
+              "count": 84,
+              "max": 1.0,
+              "mean": 0.801801801801802,
+              "median": 0.7972972972972974,
+              "min": 0.5405405405405406,
+              "q10": 0.7027027027027027,
+              "q90": 0.918918918918919,
+              "std": 0.09337635597022938
+            },
+            "random_mixing_expectation": 0.8648208469055375,
+            "raw_other_source_fraction": 0.801801801801802
+          },
+          "fraction": 0.06,
+          "k": 37,
+          "pva_queries": {
+            "chance_adjusted_mixing": -0.05836754567167105,
+            "per_query": {
+              "count": 531,
+              "max": 0.3783783783783784,
+              "mean": 0.08642540845930675,
+              "median": 0.08108108108108109,
+              "min": 0.0,
+              "q10": 0.0,
+              "q90": 0.1891891891891892,
+              "std": 0.07043332082516844
+            },
+            "random_mixing_expectation": 0.13680781758957655,
+            "raw_other_source_fraction": 0.08642540845930675
+          },
+          "source_macro_chance_adjusted": -0.26227831315929084
+        },
+        "mutual_cross_source_nearest_neighbors": {
+          "pair_count": 38,
+          "rate_over_artiverse": 0.4523809523809524,
+          "rate_over_pva": 0.07156308851224105
+        },
+        "nearest_other_source_cosine_distance": {
+          "artiverse_to_pva": {
+            "count": 84,
+            "max": 0.2488340139389038,
+            "mean": 0.10228969227700006,
+            "median": 0.09514087438583374,
+            "min": 0.03364306688308716,
+            "q10": 0.06459911465644837,
+            "q90": 0.15062893629074098,
+            "std": 0.03684374720224901
+          },
+          "pva_to_artiverse": {
+            "count": 531,
+            "max": 0.26453912258148193,
+            "mean": 0.1195641744832759,
+            "median": 0.11647021770477295,
+            "min": 0.03364306688308716,
+            "q10": 0.08014965057373047,
+            "q90": 0.16613340377807617,
+            "std": 0.03331785309002715
+          }
+        },
+        "pva_count": 531,
+        "source_silhouette_cosine": {
+          "artiverse_mean": 0.005531970411539078,
+          "interpretation": "higher means a larger rendered-source/domain gap, not better quality",
+          "pva_mean": 0.08079524338245392,
+          "source_macro_mean": 0.0431636068969965
+        }
+      }
+    },
+    "dinov2": {
+      "joint_projection_trustworthiness": {
+        "one_shot": {
+          "k": 37,
+          "sample_count": 615,
+          "score": 0.8596863454492496
+        }
+      },
+      "pva_vs_artiverse_one_shot": {
+        "artiverse_count": 84,
+        "knn_source_mixing": {
+          "artiverse_queries": {
+            "chance_adjusted_mixing": -0.34956040377727027,
+            "per_query": {
+              "count": 84,
+              "max": 1.0,
+              "mean": 0.8175675675675678,
+              "median": 0.8378378378378378,
+              "min": 0.6756756756756757,
+              "q10": 0.7108108108108109,
+              "q90": 0.8918918918918919,
+              "std": 0.06787254210317187
+            },
+            "random_mixing_expectation": 0.8648208469055375,
+            "raw_other_source_fraction": 0.8175675675675678
+          },
+          "fraction": 0.06,
+          "k": 37,
+          "pva_queries": {
+            "chance_adjusted_mixing": -0.05653962244944017,
+            "per_query": {
+              "count": 531,
+              "max": 0.2972972972972973,
+              "mean": 0.08800325749478292,
+              "median": 0.08108108108108109,
+              "min": 0.0,
+              "q10": 0.0,
+              "q90": 0.1891891891891892,
+              "std": 0.07368749610669077
+            },
+            "random_mixing_expectation": 0.13680781758957655,
+            "raw_other_source_fraction": 0.08800325749478292
+          },
+          "source_macro_chance_adjusted": -0.20305001311335522
+        },
+        "mutual_cross_source_nearest_neighbors": {
+          "pair_count": 61,
+          "rate_over_artiverse": 0.7261904761904762,
+          "rate_over_pva": 0.11487758945386065
+        },
+        "nearest_other_source_cosine_distance": {
+          "artiverse_to_pva": {
+            "count": 84,
+            "max": 0.7254871726036072,
+            "mean": 0.40865389222190496,
+            "median": 0.3968833386898041,
+            "min": 0.1146852970123291,
+            "q10": 0.2539684295654297,
+            "q90": 0.5652002573013306,
+            "std": 0.11715264845985492
+          },
+          "pva_to_artiverse": {
+            "count": 531,
+            "max": 0.8693585395812988,
+            "mean": 0.5670546713072926,
+            "median": 0.582421064376831,
+            "min": 0.1146852970123291,
+            "q10": 0.3878976106643677,
+            "q90": 0.7259729504585266,
+            "std": 0.13234813382305946
+          }
+        },
+        "pva_count": 531,
+        "source_silhouette_cosine": {
+          "artiverse_mean": 0.00818914920091629,
+          "interpretation": "higher means a larger rendered-source/domain gap, not better quality",
+          "pva_mean": 0.03417732194066048,
+          "source_macro_mean": 0.021183235570788383
+        }
+      }
+    }
+  },
+  "protocol": {
+    "cross_dataset_direction_policy": "report both directions, then equal-source macro",
+    "distance": "cosine distance on L2-normalized high-dimensional embeddings",
+    "encoder_agreement": "Spearman over all upper-triangle pair distances",
+    "neighbor_fraction": 0.06,
+    "neighbor_overlap_adjustment": "(observed - k/(n-1)) / (1 - k/(n-1))",
+    "tsne_policy": "visualization only; projection trustworthiness is reported separately"
+  },
+  "schema_version": 1
+}

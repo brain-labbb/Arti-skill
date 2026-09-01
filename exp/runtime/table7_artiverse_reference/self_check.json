@@ -1,0 +1,36 @@
+{
+  "artifact_hash_scope": "required outputs except self_check.json",
+  "artifact_hashes": {
+    "asset_records.json": "2b00e5796ed44bd466db52e7c76aaaf8ce9347ce84af3d4b67aee88cf432f7d2",
+    "manifest.json": "bc2ef262bc6e3fb3170cdb4b73375610a7eb6d3e9a1d179a2119c2a380f4eab0",
+    "protocol_snapshot.json": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+    "report.md": "7cd4fdf33aa74444c2952d466dff1ffad371d4521af7af6ed37d87dd2b8a40b5",
+    "summary.json": "67f17ee17111dc28999e826624b5557495f21b6f02629c417403f6a2781649ec"
+  },
+  "checks": {
+    "all_required_outputs_exist": true,
+    "asset_records_match_manifest_order": true,
+    "availability_conserved": true,
+    "determinism_not_rehash_shortcut": true,
+    "final_quick_preflight_ready": true,
+    "final_tree_matches_frozen_tree": true,
+    "full_state_partitions_conserved": true,
+    "geometry_records_match_frozen_selection": true,
+    "geometry_selection_exact_n100": true,
+    "geometry_selection_hash_exact": true,
+    "live_chunk_manifest_hash_exact": true,
+    "manifest_frozen_before_scoring": true,
+    "manifest_hash_recorded": true,
+    "manifest_identities_unique": true,
+    "outcome_filtering_disabled": true,
+    "protocol_snapshot_exact": true,
+    "required_outputs_match_protocol": true,
+    "runner_hash_recorded": true,
+    "strict_semantics_not_proxy": true
+  },
+  "manifest_sha256": "bc2ef262bc6e3fb3170cdb4b73375610a7eb6d3e9a1d179a2119c2a380f4eab0",
+  "protocol_id": "nano3d_table7_production_readiness_v1",
+  "protocol_sha256": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

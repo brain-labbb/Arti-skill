@@ -1,0 +1,63 @@
+{
+  "protocol_id": "nano3d_table2_baseline_naming_v1.1",
+  "scope": "direct and supplementary Naming audit for locally available baseline artifacts",
+  "artifact_coverage": {
+    "reporting": "report evaluable artifacts over the frozen requested cohort before Naming metrics",
+    "failed_generation": "exclude missing artifacts from per-asset Naming means, but never hide them from artifact coverage"
+  },
+  "units": {
+    "urdf_part": "one URDF link with at least one valid renderable visual geometry; multiple visuals on one link are merged for part counting",
+    "urdf_renderable_geometry": {
+      "mesh": "a nonempty filename resolving to a nonempty file inside the frozen package",
+      "box": "three finite positive size components",
+      "cylinder": "finite positive radius and length",
+      "sphere": "finite positive radius",
+      "unsupported_or_invalid": "does not make the link Naming-evaluable"
+    },
+    "glb_part": "one mesh-bearing GLB scene node",
+    "empty_group": "a link or node without mesh geometry; excluded from Naming",
+    "representation_rule": "URDF-link and GLB-node results must be labeled separately unless a converter-preservation audit proves equivalence"
+  },
+  "nameability": {
+    "placeholder_regex": "^(?:link|part|mesh|geometry|object)(?:[_-]?(?:\\d+|new|object))?$",
+    "formula": "named mesh-bearing parts / all mesh-bearing parts",
+    "case_insensitive": true
+  },
+  "cross_seed": {
+    "eligible_methods": "reusable generators with at least two successful seeds per frozen factory or template",
+    "metrics": [
+      "raw unique-name set Jaccard",
+      "raw name-multiset weighted Jaccard",
+      "exact raw-name-multiset mode rate"
+    ],
+    "aggregation": [
+      "pair-micro over all eligible within-factory seed pairs",
+      "factory-macro over within-factory pair means",
+      "factory median and 95 percent bootstrap confidence interval"
+    ],
+    "semantic_label_rule": "raw name metrics must not be called role consistency without independent role gold"
+  },
+  "bootstrap": {
+    "resamples": 10000,
+    "confidence": 0.95,
+    "seed": 260811002
+  },
+  "semantic_metrics": {
+    "requires": "frozen output-independent role gold plus three independent blind judges under naming_protocol_v2",
+    "fail_closed_fields": [
+      "semantic_precision",
+      "semantic_recall",
+      "naming_richness",
+      "functional_core_coverage",
+      "instance_discriminability",
+      "over_segmentation_rate"
+    ],
+    "missing_evidence_value": null
+  },
+  "prohibited_inferences": [
+    "do not infer semantic correctness from readable source names",
+    "do not treat unmatched named parts as false positives without judges",
+    "do not copy paper values into a local-rerun row",
+    "do not compare raw URDF-link counts to GLB-node counts without a representation note"
+  ]
+}

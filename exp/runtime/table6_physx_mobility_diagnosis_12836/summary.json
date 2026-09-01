@@ -1,0 +1,144 @@
+{
+  "protocol": "table6-physx-mobility-pybullet-12836-diagnosis/v1",
+  "date_utc": "2026-08-12",
+  "status": "CONFIRMED_PYBULLET_MULTIBODY_STATE_LIMIT_WITH_VALIDATED_WORKAROUND",
+  "scope": "Read-only diagnosis; no formal runner or formal result artifact was modified.",
+  "environment": {
+    "python": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+    "thread_caps": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "pybullet_api_version": 202010061,
+    "pybullet_build_time": "Aug 4 2026 09:39:21",
+    "pybullet_module": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/lib/python3.12/site-packages/pybullet.cpython-312-x86_64-linux-gnu.so"
+  },
+  "input": {
+    "dataset_id": "12836",
+    "category": "Keyboard",
+    "urdf": "/mnt/zsn/zsn_workspace/Ctrl-3D-trellis2-controlnet-dev/demo/physical_edit_demo/third_party/physx_mobility/extracted/PhysX_mobility/urdf/12836.urdf",
+    "urdf_sha256": "2b492feff73de2386998c4450b51467f8c23c7b0ce31e825267c8c6c48710b47",
+    "urdf_joint_count": 211,
+    "urdf_movable_joint_count": 105,
+    "urdf_fixed_joint_count": 106,
+    "native_collision_element_count": 0
+  },
+  "failure_matrix": [
+    {
+      "case": "formal_protocol",
+      "flags": 1048602,
+      "components": [
+        "URDF_USE_INERTIA_FROM_FILE",
+        "URDF_USE_SELF_COLLISION",
+        "URDF_USE_SELF_COLLISION_EXCLUDE_PARENT",
+        "URDF_IGNORE_VISUAL_SHAPES"
+      ],
+      "loaded_joint_count": 211,
+      "perform_collision_detection_success": true,
+      "get_joint_state_success": false
+    },
+    {
+      "case": "without_ignore_visual",
+      "flags": 26,
+      "loaded_joint_count": 211,
+      "perform_collision_detection_success": true,
+      "get_joint_state_success": false
+    },
+    {
+      "case": "inertia_only",
+      "flags": 2,
+      "loaded_joint_count": 211,
+      "perform_collision_detection_success": true,
+      "get_joint_state_success": false
+    },
+    {
+      "case": "zero_flags",
+      "flags": 0,
+      "loaded_joint_count": 211,
+      "perform_collision_detection_success": true,
+      "get_joint_state_success": false
+    },
+    {
+      "case": "self_collision_only",
+      "flags": 8,
+      "loaded_joint_count": 211,
+      "perform_collision_detection_success": true,
+      "get_joint_state_success": false
+    }
+  ],
+  "call_order_checks": {
+    "first_movable_joint_index": 1,
+    "first_movable_joint_name": "joint_prismatic_l_0_abstract_0_1",
+    "initial_get_joint_state_success": false,
+    "get_joint_state_after_reset_success": false,
+    "get_joint_state_after_collision_detection_success": false,
+    "get_link_state_success": false,
+    "get_base_position_and_orientation_success": false,
+    "interpretation": "Failure exists immediately after load and is independent of reset/collision call order. performCollisionDetection itself succeeds."
+  },
+  "capacity_evidence": {
+    "dataset_observations": {
+      "largest_tested_successful_joint_count": 125,
+      "smallest_tested_failing_joint_count": 155,
+      "no_dataset_assets_in_joint_count_interval": [
+        126,
+        154
+      ],
+      "all_tested_assets_at_or_above_155_failed_state_api": true
+    },
+    "synthetic_create_multibody_observations": [
+      {
+        "requested_joint_count": 127,
+        "reported_joint_count": 127,
+        "get_joint_state_success": true
+      },
+      {
+        "requested_joint_count": 129,
+        "reported_joint_count": 127,
+        "get_joint_state_success": true
+      },
+      {
+        "requested_joint_count": 211,
+        "reported_joint_count": 127,
+        "get_joint_state_success": true
+      }
+    ],
+    "interpretation": "The exact failure threshold for URDF loading is bracketed by dataset assets, while createMultiBody independently exposes a 127-joint cap. Together with whole-body state API failure at 211 joints, this supports a PyBullet command/status multibody-capacity limitation rather than an invalid joint index or collision protocol error."
+  },
+  "merge_fixed_links_validation": {
+    "flag": "URDF_MERGE_FIXED_LINKS",
+    "flag_value": 524288,
+    "formal_flags_with_merge_value": 1572890,
+    "loaded_joint_count_before": 211,
+    "loaded_joint_count_after": 105,
+    "movable_joint_count_before": 105,
+    "movable_joint_count_after": 105,
+    "movable_names_unique": true,
+    "movable_names_and_order_match_xml": true,
+    "joint_type_mismatch_count": 0,
+    "joint_limit_mismatch_count": 0,
+    "joint_axis_mismatch_count": 0,
+    "reset_readback_failure_count": 0,
+    "max_reset_readback_error": 0.0,
+    "perform_collision_detection_success": true,
+    "interpretation": "For asset 12836, fixed-link merging removes only fixed joints and preserves every scored movable joint field used by the functional protocol."
+  },
+  "recommendation": {
+    "action": "Add URDF_MERGE_FIXED_LINKS to the PhysX-Mobility functional load flags for the entire frozen cohort, then rerun the entire cohort without changing selection.",
+    "required_fail_closed_audits": [
+      "PyBullet movable count equals frozen XML movable count",
+      "Movable names are unique and match frozen XML names and order",
+      "Joint types match",
+      "Joint limits match within a declared numeric tolerance",
+      "Joint axes match within a declared numeric tolerance"
+    ],
+    "do_not": [
+      "Do not special-case asset 12836",
+      "Do not reselect the frozen cohort",
+      "Do not count the pre-merge PyBullet failure as an asset failure"
+    ]
+  }
+}

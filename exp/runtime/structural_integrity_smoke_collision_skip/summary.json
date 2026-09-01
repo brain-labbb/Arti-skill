@@ -1,0 +1,71 @@
+{
+  "config": {
+    "gap_fraction": 0.002,
+    "penetration_depth_fraction": 0.0,
+    "pose_samples": 9,
+    "roi_fraction": 0.02,
+    "skip_penetration": true,
+    "support_threshold": 0.1,
+    "surface_samples": 128
+  },
+  "datasets": {
+    "pva": {
+      "asset_count": 1,
+      "complete_asset_count": 1,
+      "geometry_coverage": {
+        "complete_assets": 1,
+        "denominator": 1,
+        "percentage": 100.0
+      },
+      "joint_gap_p95_fraction": {
+        "asset_evaluable": 1,
+        "denominator": 1,
+        "unit": "% asset bbox diagonal",
+        "value": 1.1385701568527296e-13
+      },
+      "joint_self_collision_free": {
+        "denominator": 1,
+        "evaluable_assets": 0,
+        "evaluable_poses": 0,
+        "free_poses": 0,
+        "passed": 0,
+        "percentage": null
+      },
+      "joint_support_asset_macro": {
+        "denominator": 1,
+        "evaluable_assets": 1,
+        "mean_rate": 33.33333333333333
+      },
+      "joint_support_micro": {
+        "candidate": 3,
+        "percentage": 33.333333333333336,
+        "supported": 1
+      },
+      "pose_swept_valid": {
+        "denominator": 1,
+        "evaluable_assets": 0,
+        "passed": 0,
+        "percentage": null
+      },
+      "rooted_assets": {
+        "denominator": 1,
+        "passed": 0,
+        "percentage": 0.0
+      },
+      "settings": {
+        "gap_fraction": 0.002,
+        "penetration_depth_fraction": 0.0,
+        "pose_samples": 9,
+        "roi_fraction": 0.02,
+        "skip_penetration": true,
+        "support_threshold": 0.1,
+        "surface_samples": 128
+      }
+    }
+  },
+  "manifest_path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_v2_core200_prepared_five_full_release_articraft10787_infinigen_paired_official_metrics_r2/manifest.json",
+  "manifest_sha256": "d25debf0cd4e1ef6be0e30906730c73455c5a7ab231cefbabd45e4226c3c3b3b",
+  "protocol_id": "structural-integrity-urdf-v1-pilot",
+  "schema_version": "structural_integrity_eval_v1",
+  "script_sha256": "353c6c8abc0010af907363fd1fb3c401c3dfcdd74b1bb51ae9d57178d71ed4d9"
+}

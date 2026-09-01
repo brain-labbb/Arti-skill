@@ -1,0 +1,39 @@
+{
+  "additive": 13,
+  "deterministic_gates": {
+    "all_gates": 14,
+    "artifact_valid": 18,
+    "hierarchy_preserved": 18,
+    "source_glb_changed": 18,
+    "target_handle": 14
+  },
+  "human_review": {
+    "adjudication_submitted": false,
+    "final_pass": null,
+    "locality_preserved": null,
+    "non_target_preserved": null,
+    "overall_agreement": null,
+    "reviewer_A_submitted": false,
+    "reviewer_B_submitted": false,
+    "reviewers_required": 2,
+    "target_anchor_agreement": null,
+    "target_fulfilled_agreement": null,
+    "target_scale_agreement": null
+  },
+  "limitations": [
+    "The 18 local assets are selected procedural assets, not the paper's private generated asset IDs.",
+    "GLB conversion uses the exp-local URDF/trimesh converter, not the paper's unreleased Blender converter.",
+    "Blender is unavailable; previews are deterministic matplotlib previews and are not paper canonical renders.",
+    "Human reviewer labels and adjudication are intentionally left null."
+  ],
+  "modified_existing": 5,
+  "packet": {
+    "panel_count": 18,
+    "private_key": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/blind_review_packet/private_key.json",
+    "public": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/blind_review_packet/public_packet.json",
+    "template": "/mnt/zsn/lyb/arti-skill/exp/runtime/nano3d_paper_editability_repro_20260807/blind_review_packet/reviewer_template.json"
+  },
+  "paper_reference": "arXiv:2607.22738v1 Section 9 / Tables 13-14",
+  "protocol": "nova3d_section9_paper_aligned_reduced_v1",
+  "tasks": 18
+}

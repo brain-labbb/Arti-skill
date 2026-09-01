@@ -1,0 +1,184 @@
+{
+  "bootstrap_ci": {
+    "assets_per_cluster": 7,
+    "cluster_count": 5,
+    "confidence": 0.95,
+    "method": "canonical-category cluster bootstrap with replacement",
+    "nameability_category_macro": [
+      1.0,
+      1.0
+    ],
+    "nameability_micro": [
+      1.0,
+      1.0
+    ],
+    "parts_per_asset_mean": [
+      5.428571428571429,
+      11.085714285714285
+    ],
+    "resamples": 10000,
+    "seed": 260811002
+  },
+  "comparison_scope": "five-category equal-N deterministic official-release resample; not same-prompt and not same-seed",
+  "coverage": {
+    "all_selected_naming_evaluable": true,
+    "all_selected_parse_success": true,
+    "assets_per_category": 7,
+    "canonical_categories": 5,
+    "category_names": [
+      "microwave",
+      "dishwasher",
+      "oven",
+      "faucet",
+      "refrigerator"
+    ],
+    "expected_assets": 35,
+    "full_release_records_checked": 2533,
+    "selected_assets": 35
+  },
+  "cross_seed": {
+    "eligible": false,
+    "reason": "LAM release records expose no frozen reusable template/factory seed identity",
+    "status": "N/A"
+  },
+  "direct_metrics": {
+    "assets": 35,
+    "assets_with_placeholder_parts": 0,
+    "fully_nameable_assets": 35,
+    "nameability_asset_macro": 1.0,
+    "nameability_category_macro": 1.0,
+    "nameability_micro": 1.0,
+    "parts_per_asset_max": 30,
+    "parts_per_asset_mean": 8.257142857142858,
+    "parts_per_asset_median": 6,
+    "parts_per_asset_min": 2,
+    "placeholder_renderable_parts": 0,
+    "total_named_renderable_parts": 289,
+    "total_renderable_parts": 289
+  },
+  "generated_at_utc": "2026-08-11T06:19:45.458649+00:00",
+  "generated_code_executed": false,
+  "generation_preflight": {
+    "config_contents_read": false,
+    "environment_credentials_inspected": false,
+    "evidence": {
+      "agent_initialization_present": true,
+      "config_manager_import": true,
+      "config_yaml_present": false,
+      "unconditional_config_yaml_initialization": true
+    },
+    "network_accessed": false,
+    "new_prompt_generation_without_api_configuration": "BLOCKED_NO_API_CONFIG",
+    "reason": "official entry point unconditionally loads config.yaml before initializing provider-backed agents; config.yaml is absent",
+    "run_pipeline_path": ".cache/table6_sources/lam/code/run_pipeline.py",
+    "run_pipeline_sha256": "07955dbe251f78e0e4f3dcbf44b7a2fde63de7de087dc9a9700e8ebb0cc9fff6",
+    "status": "NOT_RUN"
+  },
+  "network_accessed": false,
+  "paper_values_reused": false,
+  "per_category": {
+    "dishwasher": {
+      "assets": 7,
+      "assets_with_placeholder_parts": 0,
+      "fully_nameable_assets": 7,
+      "nameability_asset_macro": 1.0,
+      "nameability_micro": 1.0,
+      "parts_per_asset_max": 23,
+      "parts_per_asset_mean": 11.142857142857142,
+      "parts_per_asset_median": 10,
+      "parts_per_asset_min": 2,
+      "placeholder_renderable_parts": 0,
+      "total_named_renderable_parts": 78,
+      "total_renderable_parts": 78
+    },
+    "faucet": {
+      "assets": 7,
+      "assets_with_placeholder_parts": 0,
+      "fully_nameable_assets": 7,
+      "nameability_asset_macro": 1.0,
+      "nameability_micro": 1.0,
+      "parts_per_asset_max": 6,
+      "parts_per_asset_mean": 4.142857142857143,
+      "parts_per_asset_median": 4,
+      "parts_per_asset_min": 2,
+      "placeholder_renderable_parts": 0,
+      "total_named_renderable_parts": 29,
+      "total_renderable_parts": 29
+    },
+    "microwave": {
+      "assets": 7,
+      "assets_with_placeholder_parts": 0,
+      "fully_nameable_assets": 7,
+      "nameability_asset_macro": 1.0,
+      "nameability_micro": 1.0,
+      "parts_per_asset_max": 30,
+      "parts_per_asset_mean": 11.857142857142858,
+      "parts_per_asset_median": 7,
+      "parts_per_asset_min": 3,
+      "placeholder_renderable_parts": 0,
+      "total_named_renderable_parts": 83,
+      "total_renderable_parts": 83
+    },
+    "oven": {
+      "assets": 7,
+      "assets_with_placeholder_parts": 0,
+      "fully_nameable_assets": 7,
+      "nameability_asset_macro": 1.0,
+      "nameability_micro": 1.0,
+      "parts_per_asset_max": 13,
+      "parts_per_asset_mean": 9.428571428571429,
+      "parts_per_asset_median": 12,
+      "parts_per_asset_min": 2,
+      "placeholder_renderable_parts": 0,
+      "total_named_renderable_parts": 66,
+      "total_renderable_parts": 66
+    },
+    "refrigerator": {
+      "assets": 7,
+      "assets_with_placeholder_parts": 0,
+      "fully_nameable_assets": 7,
+      "nameability_asset_macro": 1.0,
+      "nameability_micro": 1.0,
+      "parts_per_asset_max": 10,
+      "parts_per_asset_mean": 4.714285714285714,
+      "parts_per_asset_median": 4,
+      "parts_per_asset_min": 3,
+      "placeholder_renderable_parts": 0,
+      "total_named_renderable_parts": 33,
+      "total_renderable_parts": 33
+    }
+  },
+  "protocol_id": "nano3d_lam_naming_matched_v1",
+  "provenance": {
+    "cohort_manifest_sha256": "9dddc7172f10eeca25d3b7fb341fba358dc21442f6a4a7262df6251cb4651072",
+    "records_sha256": "20aa53b70a0ddac80e6f5bdef212a204528b5a3261a06245ca14bfa8173ee27f",
+    "release_summary_sha256": "684c31d83613cfafe22dec9b870fad48989634e47e1cc49e15db42b5aff16da1",
+    "runner_sha256": "cf7e95e5fc1ee81f4fe01ba7e739218a55763f9bed9e48150a343f6dd3ca2da5",
+    "shared_protocol_sha256": "f4c4d915ce2e1bed5c99efd9dcebb97526a7d2639ad5021e3b068c3cf6105113",
+    "source_hashes": {
+      ".cache/table6_sources/lam/dataset/manifest.csv": "70216593ec02b71d596e456498ff9863ad0f8e519d5d27d2cf4f58792d412412",
+      "arti-template/agent/templates/Kitchen_Microwave.py": "020f661750038dcd7ea9f9041262a802e9246df23726c5b4dffb61a689079446",
+      "arti-template/agent/templates/Other_Built_in_oven.py": "6752353a26e49ec3e96044f93f2b8fca25556fe1f54a9982c517320682039cba",
+      "arti-template/agent/templates/Other_single_hole_basin_faucet.py": "15e8adc7c30714026d08098ca492f1e3ce5ae988529ff3b66a9a076babb48c7f",
+      "arti-template/agent/templates/dishwasher_with_dropdown_door_and_sliding_racks.py": "607b1e45bc8c17d16db0d9526e8104e944bf2e09600dbb05c21a74ac53cde4b3",
+      "arti-template/agent/templates/refrigerator_with_hinged_doors.py": "5e6618c9ad99c11326a2263d7b4ef4890e99becd6f9decedb8500c106d7a042e",
+      "exp/reference/baseline_naming_protocol_v1.json": "4e9d90300018ea47dd0473fc09cb866656b42cdc749377e5a46fb0a9c699cb1e",
+      "exp/reference/infinite_mobility_protocol_v1.json": "12d5e00765c05864967f7725a520207d01d1fa0b85edfc807f9973b590279607",
+      "exp/runtime/articraft_naming_v1/cohort_manifest.json": "7a49511679075c4f440b5cf35a7addac245c2a0ffdaca48a4a9618bb7c491fb4",
+      "exp/runtime/infinite_mobility_naming_v1/asset_records.jsonl": "bc9856ae48e3fa264bf408c2d620d5d7aaf193c68c54df88d8cc12810e0159d9",
+      "exp/runtime/lam_naming_v1/records.jsonl": "0ec93a27881e4941ed2792277f7e762c1aeee1f6d13ee2b7a1afc11c4e22251c"
+    },
+    "stable_results_sha256": "af35be0f5ce9737cec4f38a605b47adaaafdd50a41b782b47556ed22cf1f28a0"
+  },
+  "semantic_metrics": {
+    "functional_core_coverage": null,
+    "instance_discriminability": null,
+    "naming_richness": null,
+    "over_segmentation_rate": null,
+    "semantic_precision": null,
+    "semantic_recall": null
+  },
+  "semantic_status": "N/A: no LAM-linked output-independent role gold and no three complete independent blind judges",
+  "shared_protocol_id": "nano3d_table2_naming_matched_v1",
+  "status": "COMPLETE"
+}

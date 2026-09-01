@@ -1,0 +1,39 @@
+{
+  "command": [
+    "exp/scripts/run_urdf_table4a_ours_pva_per_class_n5.py",
+    "--mode",
+    "smoke",
+    "--table4-dir",
+    "exp/runtime/urdf_table4_ours_pva_per_class_n5_max_joints_n2655_20260824T060336Z",
+    "--n",
+    "3",
+    "--workers",
+    "3",
+    "--output-dir",
+    "exp/runtime/urdf_table4a_ours_pva_per_class_n5_smoke_n3_20260824T074757Z"
+  ],
+  "created_at_utc": "2026-08-24T07:56:43.128287Z",
+  "dataset": "Ours per-class N=5 (supplementary)",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "79e3a5bad5a80f94a8a650e8b716ce2769ad75537c5bb95f30d3be33add93e68",
+  "manifest_self_sha256_at_write": "94fde325505204c16181e59497fdc428f55960ec8810c3d12dfd1b3414502d46",
+  "mode": "smoke",
+  "outputs": {
+    "asset_records_sha256": "8201830ba257c3c8af45b2a48e8708fb0739b3c3da0099d500f06cd418ab983c",
+    "joint_records_sha256": "6039aedd9fe3f1e56c6a626e524faea4a549674a6cf4bf2059d0de23829c4b0e",
+    "summary_md_sha256": "6e14260cfc6ab9e03a8b0554de2cda80587c25e5ab2067aba882ce44f5af946f",
+    "summary_sha256": "64c69bedb0cc0245e6cbdde1278a94079e85a4d9f6edf9cf1748a4209449450d"
+  },
+  "protocol_id": "table4a_ours_pva_per_class_n5_max_joints_v1",
+  "record_count": 3,
+  "status_counts": {
+    "completed": 3,
+    "error": 0,
+    "total": 3
+  },
+  "verification": {
+    "all_pass": null,
+    "note": "smoke mode: formal verification skipped"
+  },
+  "wall_seconds": 427.347
+}

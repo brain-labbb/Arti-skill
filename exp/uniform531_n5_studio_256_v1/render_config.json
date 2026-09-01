@@ -1,0 +1,111 @@
+{
+  "asset_count": 2655,
+  "baseline_config": "/mnt/zsn/data/particulate/datasets/PV-A/renders/uniform531_studio_256_v1/render_config.json",
+  "baseline_config_sha256": "b97cb912147db3908de0183cf2736f98477a5a17963b6c29c17d98142ed4545e",
+  "blender": "/mnt/zsn/zsn_workspace/VoxHammer/third_party/blender-4.2.19-linux-x64/blender",
+  "blender_version": "Blender 4.2.19 LTS",
+  "class_count": 531,
+  "cohort_manifest": "/mnt/zsn/lyb/arti-skill/exp/PV-A-per-class-n5/manifest.json",
+  "cohort_manifest_content_sha256": "4bb13ac3ed1a11b1b32876141e8123c7d926910bf71263478afd53f39e86bb60",
+  "cohort_manifest_sha256": "6c1a76ffcee8f439f8d850f2574038906f4af6315968bd86bb2def6dd92d2227",
+  "driver": "/mnt/zsn/lyb/arti-skill/exp/scripts/render_pva_per_class_n5_uniform.py",
+  "driver_sha256": "190b199c9b58413048634c415c51c185a626a542363372f2aef6d7eee92c2c33",
+  "gpu_visibility": [
+    "4",
+    "6"
+  ],
+  "index_csv": "/mnt/zsn/lyb/arti-skill/template_maps/generator_picture_index.csv",
+  "index_csv_sha256": "30f719dfcb2d5db2c5e1f753e2ecf345f791f5e38802dd860c73a6175414c69d",
+  "input_receipt": {
+    "asset_and_dependency_sha256": "d465e953acf6334ddb144aed6e4fafda582e348b403f32a2a4bbb29fb5c9c65e",
+    "file_count": 27985,
+    "pbr_logical_snapshot_sha256": "ab0fa58902078f5fe5d8c69d0d4b0438327f1cb3b0a96434862a992358f404ab",
+    "pbr_pointer_sha256": "38e4dff7180ff7ae3d029c3bc5636de2a5fe73cb6e5a80a48c6b8f3acb7a75d1",
+    "policy": "full model.urdf, appearance.json, and mesh contents; PBR textures are pinned by appearance channel SHA receipts and verified by the renderer",
+    "render_helper_sha256": "405a5bfda70e90a7ec4db6709ca3d6fe53461ea6be64ba695bf84e15d3fece7b",
+    "total_bytes": 2724228230
+  },
+  "library_root": "/mnt/zsn/lyb/arti-skill/arti-template/pbr_material_library",
+  "output_root": "/mnt/zsn/lyb/arti-skill/exp/uniform531_n5_studio_256_v1",
+  "per_class": 5,
+  "per_class_count_values": [
+    5
+  ],
+  "render_contract": "pva531_n5_uniform_studio_v1",
+  "render_roster": "/mnt/zsn/lyb/arti-skill/exp/uniform531_n5_studio_256_v1/render_roster.csv",
+  "render_roster_sha256": "3ea31423b1a4e77db6f332e8f5b342cbb22ca9ca608124c1fe654dce4f3e45e9",
+  "renderer": "/mnt/zsn/lyb/arti-skill/arti-template/scripts/render_exported_asset_blender.py",
+  "renderer_sha256": "f418515a9817218b08d577d95983ec934c34ddf19f17bb89c73bf52aa60bb3a7",
+  "resolution": 256,
+  "samples": 4,
+  "schema_version": 1,
+  "selection": {
+    "ordered_identities_sha256": "d3592ca131be4cc94ba4019f2602754cc73ab5a7c073283d2bd695c511d98279",
+    "protocol_id": "pva-per-class-hash-sample-v1",
+    "seed": "arti-skill-pva-per-class-n5-v1",
+    "source_manifest": "/mnt/zsn/data/particulate/datasets/PV-A/manifest.csv",
+    "source_manifest_sha256": "11bbfa00067e5b8a4fe788db085f896a9754a6f2ec88818c16d9cee1c137c06a"
+  },
+  "source_type_counts": {
+    "builtin_no_picture": 495,
+    "picture_backed": 2160
+  },
+  "studio": {
+    "camera_direction": [
+      1.25,
+      -1.35,
+      0.85
+    ],
+    "camera_distance_policy": "bounding_sphere_auto_frame_1.18",
+    "camera_vertical_fov_degrees": 42.0,
+    "cycles_denoising": true,
+    "ground_rgba": [
+      0.32,
+      0.35,
+      0.4,
+      1.0
+    ],
+    "ground_roughness": 0.82,
+    "lights": [
+      {
+        "direction": [
+          0.4,
+          -0.8,
+          1.5
+        ],
+        "gain": 42.0,
+        "size_ratio": 1.5
+      },
+      {
+        "direction": [
+          -1.2,
+          -0.3,
+          0.6
+        ],
+        "gain": 15.0,
+        "size_ratio": 1.8
+      },
+      {
+        "direction": [
+          0.2,
+          1.0,
+          1.2
+        ],
+        "gain": 24.0,
+        "size_ratio": 1.2
+      }
+    ],
+    "look": "AgX - Medium High Contrast",
+    "mode": "opaque_studio",
+    "view_transform": "AgX",
+    "world_rgba": [
+      0.8,
+      0.84,
+      0.9,
+      1.0
+    ],
+    "world_strength": 0.55
+  },
+  "timeout_seconds": 900.0,
+  "workers_per_gpu": 4
+}

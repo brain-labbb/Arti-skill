@@ -1,0 +1,33 @@
+{
+  "command": [
+    "scripts/run_urdf_table4a_partnet_mobility.py",
+    "--mode",
+    "smoke",
+    "--n",
+    "3"
+  ],
+  "created_at_utc": "2026-08-19T09:12:59.696195Z",
+  "dataset": "PartNet-Mobility",
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "frozen_config_sha256": "f6f72c1af28b7ba7bd8f1df699fd8b5e475bab76f36adfdc5df9dedf8881243f",
+  "manifest_self_sha256_at_write": "ef4e49616e24012e5db8510f871692e7b50b61421966c685ecfe74c9187647bf",
+  "mode": "smoke",
+  "outputs": {
+    "asset_records_sha256": "12c62ee4052672c855c37c7317c77ced8c7fc7db1529f628a64479a4b8ccf8ab",
+    "joint_records_sha256": "1a823cb060c84acfd911816c338379f7b035892442ded0fc81891879a4ad9adb",
+    "summary_md_sha256": "ba7e3cf1a840e9b7a43509ba552b1883430d6700f976345a97ec939834748004",
+    "summary_sha256": "eee2340902cca7c2e01e7b201eab7708a37278ae9e085cf5a31a34295db0a832"
+  },
+  "protocol_id": "table4a_partnet_mobility_table4cohort_n800_v1",
+  "record_count": 3,
+  "status_counts": {
+    "completed": 3,
+    "error": 0,
+    "total": 3
+  },
+  "verification": {
+    "all_pass": null,
+    "note": "smoke mode: formal verification skipped"
+  },
+  "wall_seconds": 742.87
+}

@@ -1,0 +1,710 @@
+{
+  "adapter_readiness_excluded_from_gate": true,
+  "authoring_attempts": 0,
+  "check_counts": {
+    "adapter_readiness": 3,
+    "all": 115,
+    "failed": 7,
+    "frozen_consistency": 112,
+    "passed": 108
+  },
+  "checks": [
+    {
+      "check_id": "evaluator.regular_file",
+      "detail": "regular evaluator source loaded",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.regular_json_object",
+      "detail": "regular JSON object loaded",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.schema_version",
+      "detail": "schema_version must equal 1",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.manifest_id",
+      "detail": "manifest_id must be a nonempty string",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.frozen",
+      "detail": "frozen must be true",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.frozen_at_utc",
+      "detail": "frozen_at_utc must be an RFC 3339 UTC timestamp ending in Z",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.task_count_declared",
+      "detail": "task_count must equal 54",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.repeat_ids",
+      "detail": "repeat_ids must equal ['r0', 'r1', 'r2']",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.six_unique_domains",
+      "detail": "domains must contain exactly six unique nonempty strings",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.tasks_54",
+      "detail": "tasks must contain exactly 54 records",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.task_shapes",
+      "detail": "invalid task records: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.task_ids_unique",
+      "detail": "duplicate task_ids: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.task_domains",
+      "detail": "invalid domain tasks: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.task_difficulties",
+      "detail": "invalid difficulty tasks: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.task_categories",
+      "detail": "invalid category tasks: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.text_only",
+      "detail": "non-text tasks: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.prompt_hashes",
+      "detail": "empty/mismatched prompt hashes: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.hidden_hash_fields",
+      "detail": "invalid hidden_spec_sha256 tasks: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.contamination_flags",
+      "detail": "contamination_flags must be empty arrays: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.source_provenance",
+      "detail": "unexpected source_provenance tasks: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.local_output_independent",
+      "detail": "tasks without local_output_independent=true: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.balanced_domain_difficulty_grid",
+      "detail": "each domain/difficulty cell must have three tasks; bad cells: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.domain_records_match_tasks",
+      "detail": "declared domain task IDs must exactly match task records",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "manifest.no_hidden_material",
+      "detail": "forbidden evaluator-only public fields: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "hidden.regular_json_object",
+      "detail": "regular evaluator-only JSON object loaded",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "hidden.schema_version",
+      "detail": "schema_version must equal 1",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "hidden.hidden_specs_id",
+      "detail": "hidden_specs_id must equal table1_reliability_hidden_specs_v1",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "hidden.frozen",
+      "detail": "frozen must be true",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "hidden.frozen_at_utc",
+      "detail": "frozen_at_utc must be an RFC 3339 UTC timestamp ending in Z",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "hidden.task_count_declared",
+      "detail": "task_count must equal 54",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "hidden.coordinate_convention",
+      "detail": "coordinate_convention must match the frozen +Z/+Y/+X parent-link SI convention",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "hidden.canonical_hash_rule",
+      "detail": "canonical_hash_rule must explicitly name sort_keys, separators, and ensure_ascii",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "hidden.specs_54",
+      "detail": "specs must contain exactly 54 records",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "hidden.spec_shapes",
+      "detail": "invalid hidden spec records: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "hidden.spec_semantics",
+      "detail": "invalid hidden spec structures: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "hidden.task_ids_unique",
+      "detail": "duplicate hidden task_ids: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "hidden.task_ids_match_public_order",
+      "detail": "hidden specs task IDs and order must exactly match the public manifest",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "hidden.canonical_item_hashes",
+      "detail": "canonical hash mismatches: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "hidden.public_item_hash_bindings",
+      "detail": "public/private hidden hash mismatches: none",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "package_schema.regular_json_object",
+      "detail": "regular JSON schema object loaded",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "package_schema.draft2020_structure",
+      "detail": "schema must be a closed Draft 2020-12 object with required/properties",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "result_schema.regular_json_object",
+      "detail": "regular JSON schema object loaded",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "result_schema.draft2020_structure",
+      "detail": "schema must be a closed Draft 2020-12 object with required/properties",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.regular_json_object",
+      "detail": "regular JSON object loaded",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.schema_version",
+      "detail": "schema_version must identify protocol v1",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.protocol_id",
+      "detail": "protocol_id must be a nonempty string",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.frozen_design",
+      "detail": "frozen_design must be true",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.frozen_at_utc",
+      "detail": "frozen_at_utc must be an RFC 3339 UTC timestamp ending in Z",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.manifest_path",
+      "detail": "manifest path must equal exp/reference/table1_reliability_common_authoring_v1.json",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.manifest_sha256",
+      "detail": "manifest SHA-256 must match current frozen input bytes",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.hidden_specs_path",
+      "detail": "hidden_specs path must equal exp/reference/table1_reliability_hidden_specs_v1.json",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.hidden_specs_sha256",
+      "detail": "hidden_specs SHA-256 must match current frozen input bytes",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.hidden_specs_withheld",
+      "detail": "hidden_specs must declare withheld_from_author=true or visibility=evaluator_only",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.common_evaluator_path",
+      "detail": "common_evaluator path must equal exp/scripts/evaluate_table1_authoring_common.py",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.common_evaluator_sha256",
+      "detail": "common_evaluator SHA-256 must match current frozen input bytes",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.package_schema_path",
+      "detail": "package_schema path must equal exp/reference/table1_authoring_package_schema_v1.json",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.package_schema_sha256",
+      "detail": "package_schema SHA-256 must match current frozen input bytes",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.result_schema_path",
+      "detail": "result_schema path must equal exp/reference/table1_authoring_result_schema_v1.json",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.result_schema_sha256",
+      "detail": "result_schema SHA-256 must match current frozen input bytes",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.expected_task_count",
+      "detail": "expected_task_count must equal 54",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.independent_runs_per_task",
+      "detail": "independent_runs_per_task must equal 3",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.repeat_ids",
+      "detail": "repeat_ids must equal ['r0', 'r1', 'r2']",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.max_common_repair_turns",
+      "detail": "max_common_repair_turns must equal 3",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method_set",
+      "detail": "methods must contain exactly ['pva', 'lam', 'articraft']",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.pva.implementation_shape",
+      "detail": "implementation must define checkout_path, commit, git_tree, entrypoint, tracked_clean_at_freeze, and provenance",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.pva.checkout_path",
+      "detail": "checkout_path must name a canonical repository-contained Git checkout",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.pva.checkout_git_root",
+      "detail": "checkout_path must equal the checkout's Git top-level directory",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.pva.commit",
+      "detail": "declared commit must equal actual HEAD 01816391974d8e1fcf843ed05c7bf1be61621f65",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.pva.git_tree",
+      "detail": "declared git_tree must equal actual HEAD tree be4f35dd90e0f6755b3f48dd188ffa662a047785",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.pva.tracked_clean_at_freeze",
+      "detail": "tracked_clean_at_freeze must be true and tracked Git status must be clean",
+      "passed": false,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.pva.provenance",
+      "detail": "implementation provenance must be a nonempty string",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.pva.entrypoint",
+      "detail": "entrypoint must be a canonical regular file beneath the declared checkout",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.pva.entrypoint_tracked",
+      "detail": "entrypoint must be tracked by the declared checkout",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.pva.entrypoint_matches_head",
+      "detail": "entrypoint working bytes must match the frozen HEAD tree",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.pva.adapter_entrypoint",
+      "detail": "adapter_entrypoint must equal exp/scripts/run_table1_pva_authoring.py and be a regular file",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.pva.adapter_sha256",
+      "detail": "adapter_sha256 must match current adapter bytes",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.lam.implementation_shape",
+      "detail": "implementation must define checkout_path, commit, git_tree, entrypoint, tracked_clean_at_freeze, and provenance",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.lam.checkout_path",
+      "detail": "checkout_path must name a canonical repository-contained Git checkout",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.lam.checkout_git_root",
+      "detail": "checkout_path must equal the checkout's Git top-level directory",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.lam.commit",
+      "detail": "declared commit must equal actual HEAD 0b3a87beb8c35273a5acf8681221791aff746d8e",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.lam.git_tree",
+      "detail": "declared git_tree must equal actual HEAD tree 684d2b8162d6ecbf85cd9924967314c0ee4ec609",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.lam.tracked_clean_at_freeze",
+      "detail": "tracked_clean_at_freeze must be true and tracked Git status must be clean",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.lam.provenance",
+      "detail": "implementation provenance must be a nonempty string",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.lam.entrypoint",
+      "detail": "entrypoint must be a canonical regular file beneath the declared checkout",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.lam.entrypoint_tracked",
+      "detail": "entrypoint must be tracked by the declared checkout",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.lam.entrypoint_matches_head",
+      "detail": "entrypoint working bytes must match the frozen HEAD tree",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.lam.adapter_entrypoint",
+      "detail": "adapter_entrypoint must equal exp/scripts/run_table1_lam_authoring.py and be a regular file",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.lam.adapter_sha256",
+      "detail": "adapter_sha256 must match current adapter bytes",
+      "passed": false,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.articraft.implementation_shape",
+      "detail": "implementation must define checkout_path, commit, git_tree, entrypoint, tracked_clean_at_freeze, and provenance",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.articraft.checkout_path",
+      "detail": "checkout_path must name a canonical repository-contained Git checkout",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.articraft.checkout_git_root",
+      "detail": "checkout_path must equal the checkout's Git top-level directory",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.articraft.commit",
+      "detail": "declared commit must equal actual HEAD 06cd75fbc9e90fae33f127b494d13c35090356be",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.articraft.git_tree",
+      "detail": "declared git_tree must equal actual HEAD tree e9cfec5562e4a518bf8f57ee091c7255249431ea",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.articraft.tracked_clean_at_freeze",
+      "detail": "tracked_clean_at_freeze must be true and tracked Git status must be clean",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.articraft.provenance",
+      "detail": "implementation provenance must be a nonempty string",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.articraft.entrypoint",
+      "detail": "entrypoint must be a canonical regular file beneath the declared checkout",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.articraft.entrypoint_tracked",
+      "detail": "fatal: unable to create threaded lstat: Resource temporarily unavailable",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.articraft.entrypoint_matches_head",
+      "detail": "fatal: unable to create threaded lstat: Resource temporarily unavailable",
+      "passed": false,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.articraft.adapter_entrypoint",
+      "detail": "adapter_entrypoint must equal exp/scripts/run_table1_articraft_authoring.py and be a regular file",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method.articraft.adapter_sha256",
+      "detail": "adapter_sha256 must match current adapter bytes",
+      "passed": false,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.common_model_binding",
+      "detail": "all methods must bind provider=openai, model=gpt-5, reasoning_effort=high",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.method_sampling_bindings",
+      "detail": "each method must freeze role, temperature, top_p, and positive max_output_tokens",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.common_sampling_binding",
+      "detail": "temperature, top_p, and max_output_tokens must be common across methods",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.attempt_semantics",
+      "detail": "attempt semantics must define attempt_0, common_repair, and native_retry",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.metric_definitions",
+      "detail": "metric definitions must define executable, artifact_saved, common_qc, first_shot, final_success, and repair_turns",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.telemetry_fields",
+      "detail": "per-attempt telemetry must include wall time, input tokens, output tokens, and API cost",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.telemetry_policy",
+      "detail": "telemetry must freeze a missing-value policy and forbid credential values",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.timeouts",
+      "detail": "timeouts must freeze three positive attempt timeouts and a nonnegative native retry limit",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.evaluator_contract",
+      "detail": "common evaluator must exist at freeze and define required-before-execution, included gate scope, and exclusions",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.output_isolation",
+      "detail": "output isolation must freeze a root pattern, one run directory, no cross-method reads, and a preexisting-output policy",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.hidden_policy",
+      "detail": "hidden_policy must explicitly keep hidden specs evaluator-only",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "protocol.execution_readiness_contract",
+      "detail": "execution readiness must structurally declare frozen bindings, all three adapter booleans, and blockers",
+      "passed": true,
+      "scope": "frozen_consistency"
+    },
+    {
+      "check_id": "adapter.pva.ready",
+      "detail": "protocol does not declare adapter ready",
+      "passed": false,
+      "scope": "adapter_readiness"
+    },
+    {
+      "check_id": "adapter.lam.ready",
+      "detail": "adapter SHA binding mismatch; protocol does not declare adapter ready",
+      "passed": false,
+      "scope": "adapter_readiness"
+    },
+    {
+      "check_id": "adapter.articraft.ready",
+      "detail": "adapter SHA binding mismatch; protocol does not declare adapter ready",
+      "passed": false,
+      "scope": "adapter_readiness"
+    }
+  ],
+  "frozen_consistency_ready": false,
+  "generated_at_utc": "2026-08-12T09:09:58.365402Z",
+  "hidden_spec_content_persisted": false,
+  "input_files_modified": false,
+  "network_or_api_calls": 0,
+  "pass": false,
+  "schema_version": "table1_authoring_common_preflight_self_check_v1"
+}

@@ -1,0 +1,47 @@
+{
+  "dtype": "float32",
+  "extraction": {
+    "alpha_composite_background_rgb": [
+      255,
+      255,
+      255
+    ],
+    "amp": true,
+    "batch_size": 128,
+    "device": "cuda:0",
+    "encoder_label": "DINOv2",
+    "feature_dim": 768,
+    "feature_source": "last_hidden_state.cls_token",
+    "image_count": 2655,
+    "image_processor_use_fast": false,
+    "model_type": "dinov2",
+    "num_workers": 8
+  },
+  "model_fingerprint": "4206b0d68ec780ee11d4ae6020f36adb8df3609741ccee888dbce04507e63587",
+  "model_path": "/root/.cache/huggingface/hub/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+  "preprocessing": {
+    "alpha_composite_background_rgb": [
+      255,
+      255,
+      255
+    ],
+    "image_processor_use_fast": false
+  },
+  "raw_feature_receipt": {
+    "path": "/mnt/zsn/lyb/arti-skill/exp/pva531_n5_tsne/dinov2/raw_image_features.npy",
+    "sha256": "4bffbe891f378697b45e723ca2e96e19c5fe1447f55cc13d322b887c93703c73",
+    "size_bytes": 8156288
+  },
+  "raw_image_count": 2655,
+  "raw_paths_fingerprint": "5a8999746e60b8ab3a3e55f108a3db68df1b9d84279fbc1ddc73e1fffd27c60e",
+  "schema_version": 2,
+  "strict_cache_contract": {
+    "feature_helper_sha256": "21abf6a4ad1c85d1e7b7a1f1c04320e0fed6e4dbefa25b28a6cd4dc9371913c0",
+    "model_name": "dinov2",
+    "model_path": "/root/.cache/huggingface/hub/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+    "requested_batch_size": 128,
+    "requested_device": "cuda:0",
+    "requested_use_amp": true,
+    "schema_version": 1
+  }
+}

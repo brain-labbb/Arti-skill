@@ -1,0 +1,114 @@
+{
+  "protocol_id": "artiverse_hierarchy_reference_v1",
+  "protocol_version": 1,
+  "source": {
+    "dataset": "Artiverse",
+    "release_status": "PRE_RELEASE",
+    "huggingface_revision": "8c4b120418e7cbdf9ac4c9580c5dbfdbf128a248",
+    "access": "gated",
+    "license": "other",
+    "local_revision_evidence_relative_path": ".cache/huggingface/download/dataset_chunks/manifest.json.metadata",
+    "chunk_manifest_created_utc": "2026-06-05T22:10:49Z",
+    "chunk_manifest_expected_sha256": "8fa6468254a1f74c58f0c25699598bf88f622fabdaf74f0cd9268ee5663c5586",
+    "readme_expected_sha256": "2033582ef71f0b12bb15ca2a61d56edcf07414db5e7c3fe5437f6132ec4fea73",
+    "declared_model_count": 3544
+  },
+  "selection": {
+    "requested_per_category": 6,
+    "rank_hash": "SHA256",
+    "rank_payload_encoding": "UTF-8",
+    "rank_payload_format": "nano3d-table3-artiverse-reference-v1\n<target_category>\n<raw_category>\n<source>\n<model_id>",
+    "rank_payload_salt": "nano3d-table3-artiverse-reference-v1",
+    "ranking_rule": "within each target category, ascending rank_hash then raw_category/source/model_id; take first requested_per_category",
+    "selection_inputs": [
+      "target_category",
+      "raw_category",
+      "source",
+      "model_id"
+    ],
+    "content_blind": true,
+    "failure_policy": "retain every frozen selection in the requested denominator; never replace unavailable, parse-failed, invalid, or unscorable assets"
+  },
+  "panels": {
+    "primary_4class_matched_overlap": {
+      "status": "PRIMARY",
+      "target_categories": [
+        "storage_furniture",
+        "refrigerator",
+        "dishwasher",
+        "microwave"
+      ],
+      "raw_category_mapping": {
+        "storage_furniture": [
+          "armoire",
+          "chest_of_drawers",
+          "display_cabinet",
+          "locker",
+          "sideboard",
+          "sink_cabinet",
+          "wall_cabinet"
+        ],
+        "refrigerator": [
+          "refrigerator"
+        ],
+        "dishwasher": [
+          "dishwasher"
+        ],
+        "microwave": [
+          "microwave"
+        ]
+      },
+      "requested_count": 24,
+      "claim_boundary": "Primary four-category matched-reference panel. Storage furniture uses the pre-specified container-furniture crosswalk; the three appliance categories are exact raw categories. No table result is claimed."
+    },
+    "table_alias_5class_sensitivity": {
+      "status": "NONEXACT_ALIAS_SENSITIVITY_ONLY",
+      "target_categories": [
+        "storage_furniture",
+        "table",
+        "refrigerator",
+        "dishwasher",
+        "microwave"
+      ],
+      "raw_category_mapping": {
+        "storage_furniture": [
+          "armoire",
+          "chest_of_drawers",
+          "display_cabinet",
+          "locker",
+          "sideboard",
+          "sink_cabinet",
+          "wall_cabinet"
+        ],
+        "table": [
+          "coffee_table"
+        ],
+        "refrigerator": [
+          "refrigerator"
+        ],
+        "dishwasher": [
+          "dishwasher"
+        ],
+        "microwave": [
+          "microwave"
+        ]
+      },
+      "requested_count": 30,
+      "claim_boundary": "Nonexact category-alias sensitivity only. The table row uses coffee_table and must never be presented as an exact-category result or pooled with the primary panel. Desk is excluded."
+    }
+  },
+  "shared_panel_constraint": "For every target category shared by the primary and alias panels, the frozen ordered selections must be byte-identical.",
+  "evaluation": {
+    "structure_evaluator": "hierarchy_extended_metrics.py",
+    "ontology_alignment_evaluator": "partnet_hierarchy_correctness.py",
+    "ontology_alignment_input": "raw package URDF link names only",
+    "artiverse_articulation_annotations_used_as_partnet_gold": false,
+    "unsupported_joint_policy": "report every joint type; types outside fixed/revolute/continuous/prismatic/planar/floating are counted explicitly as unsupported_or_other and are never silently reclassified"
+  },
+  "claim_boundary": {
+    "dataset_role": "curated pre-release real-data reference, not a generation method, excluded from generated-method rankings and pairwise method claims",
+    "structure": "package-level URDF structural validity and representation diagnostics",
+    "ontology": "package-name semantic recoverability and induced PartNet-ontology alignment sensitivity; not PartNet gold and not instance-level kinematic hierarchy correctness",
+    "paper_ready": false
+  }
+}

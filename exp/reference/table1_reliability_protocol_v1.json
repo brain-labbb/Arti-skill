@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "protocol_id": "table1_reliability_protocol_v1",
+  "frozen_design": true,
+  "frozen_at_utc": "2026-08-12T08:15:10Z",
+  "revision_note": "final pre-run implementation checkout and adapter-byte binding after evaluator and telemetry hardening; zero formal provider calls before this revision",
+  "execution_ready": false,
+  "freeze_evidence": {
+    "formal_provider_calls_before_freeze": 0,
+    "formal_authoring_attempts_before_freeze": 0,
+    "manifest_or_hidden_spec_edits_after_formal_generation": 0
+  },
+  "execution_readiness": {
+    "status": "BLOCKED_ADAPTERS",
+    "frozen_inputs_complete": true,
+    "evaluator_bound": true,
+    "package_schema_bound": true,
+    "result_schema_bound": true,
+    "method_adapters_ready": {
+      "pva": false,
+      "lam": false,
+      "articraft": false
+    },
+    "method_blockers": {
+      "pva": [
+        "The host has no working read-deny isolation primitive that can prevent the author process from opening evaluator-only benchmark files; Codex workspace-write constrains writes but not repository reads."
+      ],
+      "lam": [
+        "LAM config.yaml, the selected OpenAI provider environment, and Node dependencies are not ready.",
+        "Common-evaluator feedback/repair, failed-output preservation, run-id output isolation, and normalized attempt telemetry are not implemented."
+      ],
+      "articraft": [
+        "The native CLI resolves --data-dir but does not pass the isolated data root into run_from_input storage.",
+        "Common-evaluator invocation, common-repair orchestration, and normalized result writing are not implemented."
+      ]
+    },
+    "blockers": [
+      "PVA author-process read isolation is not enforced.",
+      "LAM has three environment and five adapter blockers.",
+      "Articraft native storage isolation and common evaluator/repair/result wiring are incomplete."
+    ]
+  },
+  "manifest": {
+    "path": "exp/reference/table1_reliability_common_authoring_v1.json",
+    "sha256": "29334b672d7f192245773e6dc90877ecba090f352eaf04875aba6e594d56173a"
+  },
+  "hidden_specs": {
+    "path": "exp/reference/table1_reliability_hidden_specs_v1.json",
+    "sha256": "46d8e9fcbb33ae5f1bc2a9cb2edd1983d39b719a98b69bed9b0b689f408b7d14",
+    "visibility": "evaluator_only"
+  },
+  "common_evaluator": {
+    "path": "exp/scripts/evaluate_table1_authoring_common.py",
+    "sha256": "92eea2fa83d23794d3c9c31018e869dea32d1457f0d48b6a149ee22827240d7e",
+    "exists_at_freeze": true,
+    "required_before_execution": true,
+    "table1_gate_scope": [
+      "execution_probe",
+      "artifact_package",
+      "urdf_parse_and_tree",
+      "required_role_coverage",
+      "required_joint_parent_child_graph",
+      "required_joint_type",
+      "required_joint_axis",
+      "required_joint_limit_coverage",
+      "required_mimic_presence",
+      "input_hash_bindings"
+    ],
+    "excluded_from_table1_gate": "All measurable_constraints entries; they are reserved for the Constraints or Articulation axes."
+  },
+  "package_schema": {
+    "path": "exp/reference/table1_authoring_package_schema_v1.json",
+    "sha256": "1af0cf91204ecd5785599cb28febed9043c45bc28dfc76ac5f320d00e90d9460"
+  },
+  "result_schema": {
+    "path": "exp/reference/table1_authoring_result_schema_v1.json",
+    "sha256": "676588fafdf30b8f98969593fccf399a92a67bc7b5e9d433542631c20af60754",
+    "dialect": "https://json-schema.org/draft/2020-12/schema"
+  },
+  "expected_task_count": 54,
+  "independent_runs_per_task": 3,
+  "repeat_ids": [
+    "r0",
+    "r1",
+    "r2"
+  ],
+  "expected_runs_per_method": 162,
+  "max_common_repair_turns": 3,
+  "common_model_binding": {
+    "provider": "openai",
+    "model": "gpt-5",
+    "reasoning_effort": "high",
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "max_output_tokens": 64000
+  },
+  "methods": {
+    "pva": {
+      "role": "programmatic_variable_asset_authoring",
+      "provider": "openai",
+      "model": "gpt-5",
+      "reasoning_effort": "high",
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "max_output_tokens": 64000,
+      "implementation": {
+        "checkout_path": "arti-template",
+        "commit": "01816391974d8e1fcf843ed05c7bf1be61621f65",
+        "git_tree": "be4f35dd90e0f6755b3f48dd188ffa662a047785",
+        "entrypoint": "arti-template/agent/compiler.py",
+        "tracked_clean_at_freeze": true,
+        "provenance": "Nano3D project nested arti-template repository"
+      },
+      "adapter_entrypoint": "exp/scripts/run_table1_pva_authoring.py",
+      "adapter_sha256": "51be559deb00d3d4ad139f6cd9de2362574d190ba0fbc6ab01678aeec1316d58"
+    },
+    "lam": {
+      "role": "language_articulated_model_authoring",
+      "provider": "openai",
+      "model": "gpt-5",
+      "reasoning_effort": "high",
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "max_output_tokens": 64000,
+      "implementation": {
+        "checkout_path": "exp/baselines/LAM-official",
+        "commit": "0b3a87beb8c35273a5acf8681221791aff746d8e",
+        "git_tree": "684d2b8162d6ecbf85cd9924967314c0ee4ec609",
+        "entrypoint": "exp/baselines/LAM-official/run_pipeline.py",
+        "tracked_clean_at_freeze": true,
+        "provenance": "Official gaoypeng/LAM checkout"
+      },
+      "adapter_entrypoint": "exp/scripts/run_table1_lam_authoring.py",
+      "adapter_sha256": "188bd002bd255bb4102bde5ce13faac545b89e49140694eeb2c5818bb606e1eb"
+    },
+    "articraft": {
+      "role": "sdk_program_articulated_asset_authoring",
+      "provider": "openai",
+      "model": "gpt-5",
+      "reasoning_effort": "high",
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "max_output_tokens": 64000,
+      "implementation": {
+        "checkout_path": "articraft_data",
+        "commit": "06cd75fbc9e90fae33f127b494d13c35090356be",
+        "git_tree": "e9cfec5562e4a518bf8f57ee091c7255249431ea",
+        "entrypoint": "articraft_data/agent/runner_cli.py",
+        "tracked_clean_at_freeze": true,
+        "provenance": "Local pipeline mirror of the mattzh72/articraft codebase; not the supported successor checkout"
+      },
+      "adapter_entrypoint": "exp/scripts/run_table1_articraft_authoring.py",
+      "adapter_sha256": "722450013f5be593e3bdb6da2b8b40230d1719b954443c22734588f11a77d9b8"
+    }
+  },
+  "attempt_semantics": {
+    "attempt_0": "The first emitted model generation for one method-task-repeat tuple before evaluator feedback. A provider transport retry that emits no model output is not a new attempt.",
+    "common_repair": "One new model generation after receiving only bounded structured feedback from the frozen common evaluator. Attempts 1 through 3 are common repairs.",
+    "native_retry": "A method-native retry for a transient provider or tool failure, using the identical request and no evaluator feedback. It is logged separately, does not consume the common repair budget, and cannot overwrite an emitted output."
+  },
+  "metric_definitions": {
+    "executable": "The emitted source executes in the frozen isolated method adapter within 180 seconds and exits with code zero.",
+    "artifact_saved": "Execution saves nonempty source, one parseable URDF, and every referenced nonempty mesh beneath the isolated run root.",
+    "common_qc": "Executable and Artifact Saved pass; URDF is a connected acyclic single-root tree; every required role meets min_count; every required joint matches parent role, child role, type, signed parent-frame axis within 12 degrees, and covers the frozen lower/upper limits within 0.05 SI units; required mimic relationships are present; all bindings match. Reserved measurable constraints are excluded.",
+    "first_shot": "attempt_0 passes executable, artifact_saved, and common_qc.",
+    "final_success": "An attempt from 0 through 3 passes executable, artifact_saved, and common_qc.",
+    "repair_turns": "Number of common evaluator feedback-to-new-generation transitions before terminal success or exhaustion. Native retries are excluded."
+  },
+  "output_isolation": {
+    "root_pattern": "exp/runtime/table1_reliability/common_authoring/{method}/{task_id}/{repeat_id}/",
+    "one_method_task_repeat_per_directory": true,
+    "cross_method_read_access": false,
+    "preexisting_output_policy": "fail_closed_if_nonempty"
+  },
+  "hidden_policy": {
+    "generation_access_to_hidden_specs": false,
+    "evaluator_only": true,
+    "feedback_may_reveal": "Only failed common-gate identifiers and bounded diagnostics; never the expected role list, axis, limits, thresholds, reserved constraints, or another method's output.",
+    "no_post_generation_task_or_spec_edits": true
+  },
+  "telemetry_requirements": {
+    "per_attempt": [
+      "method_id",
+      "task_id",
+      "repeat_id",
+      "attempt_index",
+      "native_retry_index",
+      "request_started_at_utc",
+      "response_completed_at_utc",
+      "execution_started_at_utc",
+      "execution_completed_at_utc",
+      "wall_time_seconds",
+      "input_tokens",
+      "output_tokens",
+      "provider_request_id_hash",
+      "api_cost_usd",
+      "executable",
+      "artifact_saved",
+      "common_qc_pass",
+      "evaluator_gate_verdicts",
+      "failure_class",
+      "output_sha256s"
+    ],
+    "missing_value_policy": "Preserve null with an explicit reason; never impute paper, release, or proxy telemetry.",
+    "credential_values_forbidden": true
+  },
+  "timeouts": {
+    "model_response_seconds": 1800,
+    "execution_seconds_per_attempt": 180,
+    "common_evaluator_seconds_per_attempt": 180,
+    "native_retry_limit_per_attempt": 2
+  },
+  "reporting_policy": {
+    "intent_denominator_per_method": 162,
+    "available_denominator_reported_separately": true,
+    "strict_success_denominator": "all 162 intent runs per method",
+    "frozen_design_does_not_imply_execution_ready": true
+  }
+}

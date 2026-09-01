@@ -1,0 +1,53 @@
+{
+  "protocol_id": "partnet_mobility_official_reference_v1",
+  "protocol_version": 1,
+  "source": {
+    "dataset": "PartNet-Mobility",
+    "local_dataset_root": "/mnt/zsn/lyb/PartNet_Mobility/data/dataset",
+    "expected_instance_directory_count": 2347,
+    "companion_archive": "/mnt/zsn/lyb/PartNet_Mobility/partnet-mobility-v0.zip",
+    "companion_archive_expected_sha256": "b47247a44246111e8d09f2c0e64b4012ae35e0dcf4bb55f68a05b604455119ff",
+    "official_repository": "sapien-sim/PartNetMobility",
+    "official_repository_revision": "ee0aa3ef1df16181d76d83f7415aa8c94ed1da8f",
+    "access": "gated",
+    "license": "other",
+    "license_summary": "non-commercial research and educational use under the PartNet-Mobility and ShapeNet terms"
+  },
+  "selection": {
+    "requested_per_category": 6,
+    "rank_hash": "SHA256",
+    "rank_payload_encoding": "UTF-8",
+    "rank_payload_format": "<dataset_id>",
+    "rank_payload_salt": null,
+    "ranking_rule": "within each exact package category, ascending SHA256(dataset_id UTF-8), then dataset_id; take first six",
+    "selection_inputs": [
+      "dataset_id"
+    ],
+    "content_blind": true,
+    "failure_policy": "retain every frozen selection in the requested denominator; never replace unavailable, parse-failed, invalid, or unscorable assets"
+  },
+  "categories": {
+    "storage_furniture": "StorageFurniture",
+    "table": "Table",
+    "refrigerator": "Refrigerator",
+    "dishwasher": "Dishwasher",
+    "microwave": "Microwave"
+  },
+  "evaluation": {
+    "structure_evaluator": "hierarchy_extended_metrics.py",
+    "ontology_alignment_evaluator": "partnet_hierarchy_correctness.py",
+    "reported_alignment_views": [
+      "raw URDF link names",
+      "package semantics.txt assisted",
+      "evaluator-imputed category-root sensitivity"
+    ],
+    "package_annotations_are_independent_gold": false,
+    "same_ontology_provenance_warning": "PartNet-Mobility package semantics and the PartNet-derived ontology share provenance; annotation-assisted results are calibration only, not independent correctness evidence."
+  },
+  "claim_boundary": {
+    "dataset_role": "curated real-data reference, not a generation method and excluded from generated-method rankings",
+    "structure": "package-level URDF structural validity and representation diagnostics",
+    "ontology": "PartNet-ontology-referenced induced hierarchy alignment; not instance-level kinematic hierarchy correctness",
+    "source_authentication": "official repository identity and terms are pinned, but selected local bytes remain provenance-limited unless directly matched to official-revision object bytes"
+  }
+}

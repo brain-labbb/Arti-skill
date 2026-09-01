@@ -1,0 +1,121 @@
+{
+  "archive": {
+    "matches_expected_sha256": true,
+    "path": "/mnt/zsn/lyb/arti-skill/exp/PartNet-Mobility/partnet-mobility-v0.zip",
+    "sha256": "b47247a44246111e8d09f2c0e64b4012ae35e0dcf4bb55f68a05b604455119ff",
+    "size_bytes": 3268124298
+  },
+  "candidate_pool_identity_sha256": "0203a510202510cea7e469048e84b133bd65ccbc6e1e3aa90c9bfeea7807959d",
+  "cohort_boundary": {
+    "is_full_release_cohort": false,
+    "is_shared_category_balanced_cohort": false,
+    "paper_table_role": "sampled release diagnostic"
+  },
+  "cohort_label": "PartNet-Mobility N=800 sampled release cohort",
+  "collision_policy": {
+    "aor": "N/E: no stable exact overlap-volume implementation",
+    "continuous_collision_detection": "not_run",
+    "object_scale": "diagonal from release bounding_box.json",
+    "penetration_threshold_m": 1e-06,
+    "rest_panels": [
+      "all_pair",
+      "exclude_direct_parent_child"
+    ],
+    "surface_contact_allowed": true,
+    "sweep_sobol_strict_policy": "exclude_direct_parent_child"
+  },
+  "created_at_utc": "2026-08-13T13:14:33Z",
+  "dataset_root": "/mnt/zsn/lyb/arti-skill/exp/PartNet-Mobility/data/dataset",
+  "items": [
+    {
+      "audit_issue": null,
+      "bounding_box_sha256": "33492f7e312ee638796ca731e46a9f14644a67192543235b97363725832262ab",
+      "category": "Lamp",
+      "dataset_id": "16832",
+      "input_identity_sha256": "b6727e5a53612755ca2d171e8ef89f7341ccc39e7c6111d1ee9587faff48567e",
+      "missing_collision_mesh_reference_count": 0,
+      "missing_core_files": [],
+      "movable_dof_count": 2,
+      "object_bbox_diagonal_m": 1.8524293399463312,
+      "order": 0,
+      "package_audit_success": true,
+      "range_evaluable_dof_count": 2,
+      "rest_state_expected": 1,
+      "selection_digest": "00021106b7f17ab9a27cce94936b58133ee0586a808e583fe00d8f257b3cce56",
+      "single_state_expected": 42,
+      "sobol_state_expected": 64,
+      "urdf_sha256": "4c6c3993cf3c1d9630317fecb2300da7b60c4724aa90f8fe172d57830b492cb6"
+    },
+    {
+      "audit_issue": null,
+      "bounding_box_sha256": "163383367408e5536ee1ca8f780d37f70711f469bd38f7513d9cfd891e124ee2",
+      "category": "Switch",
+      "dataset_id": "100845",
+      "input_identity_sha256": "10386084c094ccb9c63443bfdf53e33f1b9ddd2926aeb222b04a79560be0012f",
+      "missing_collision_mesh_reference_count": 0,
+      "missing_core_files": [],
+      "movable_dof_count": 2,
+      "object_bbox_diagonal_m": 2.3701757919707136,
+      "order": 1,
+      "package_audit_success": true,
+      "range_evaluable_dof_count": 2,
+      "rest_state_expected": 1,
+      "selection_digest": "0004117ea8bbf5dfb30b41bfca5763007cbe432f59a4e763575c98c45b0f22e4",
+      "single_state_expected": 42,
+      "sobol_state_expected": 64,
+      "urdf_sha256": "d68d8ecd597cd71417c6b7e255d9dea7b0eb280c6963fe7d4b50ba9fd1832ca4"
+    },
+    {
+      "audit_issue": null,
+      "bounding_box_sha256": "23e311db91db85fd6ad3c589a1b5ebb0a4a4175fce25b845cbab7d7d766d4d00",
+      "category": "Switch",
+      "dataset_id": "100970",
+      "input_identity_sha256": "d3f9ca3d875e97fca7a7596685cea891ba00003c6439f45b5f2cfe620a9a72d6",
+      "missing_collision_mesh_reference_count": 0,
+      "missing_core_files": [],
+      "movable_dof_count": 1,
+      "object_bbox_diagonal_m": 2.241728366828149,
+      "order": 2,
+      "package_audit_success": true,
+      "range_evaluable_dof_count": 1,
+      "rest_state_expected": 1,
+      "selection_digest": "000deab09450265db8b1eacefec19a9f362f42cdbf49c4ca275ea15f954e095b",
+      "single_state_expected": 21,
+      "sobol_state_expected": 64,
+      "urdf_sha256": "a2b809ac9ed85cbdc2430512d86e380e85146c742195651bb6435d45ce137d75"
+    }
+  ],
+  "items_sha256": "34cdc5097b42c16194dd3d9c20992e329e195c9deb75fecdf1f48b172fab5269",
+  "ordered_selected_ids_sha256": "5415ee4cff9178d78dcc56d3de7f1e35512367ed0ded0ab6f7796e27acbcc3f4",
+  "protocol_id": "urdf_sim_ready_table4_partnet_mobility_n800_v1",
+  "release_asset_count": 2347,
+  "runtime": {
+    "pybullet_api_version": 202010061,
+    "python": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+    "runner_sha256": "f8793f0ddadd33e83e38a90956389afa596323238fd29c7fb1cc284fb4c6ccda",
+    "scipy_version": "1.18.0"
+  },
+  "sample_size": 3,
+  "sampling": {
+    "continuous_joint_interval": [
+      -3.141592653589793,
+      3.141592653589793
+    ],
+    "rest_state": "native URDF/PyBullet q=0",
+    "single_joint_other_joint_state": 0.0,
+    "single_joint_states_per_declared_nonfixed_joint": 21,
+    "sobol_scramble": true,
+    "sobol_seed": 20260813,
+    "sobol_states_per_asset_with_nonfixed_joint": 64
+  },
+  "selection_policy": {
+    "algorithm": "SHA256(salt + NUL + numeric dataset_id), ascending by (digest, numeric ID)",
+    "identity_fields_used": [
+      "dataset_id"
+    ],
+    "outcome_based_filtering": false,
+    "salt": "urdf-sim-ready-table4-partnet-mobility-n800-v1:20260813",
+    "selected_failures_retained_without_replacement": true
+  },
+  "status": "FROZEN"
+}

@@ -1,0 +1,80 @@
+{
+  "category_macro": {},
+  "category_results": {},
+  "claim_boundary": {
+    "continuous_collision_detection": "not_run",
+    "full_release_result": false,
+    "physical_dynamics_validity": "not_evaluated",
+    "semantic_joint_correctness": "not_evaluated",
+    "shared_category_balanced_result": false
+  },
+  "cohort": {
+    "category_count": 1,
+    "child_timeouts": 0,
+    "label": "Ours-500K full acquired roster (Table 2 formal manifest order)",
+    "load_success": 3,
+    "measurement_complete": 3,
+    "selected": 3
+  },
+  "completed_at": "2026-08-19T10:38:58.153618Z",
+  "dataset": "Ours-500K",
+  "manifest_content_sha256": "a09fae02ad0ef4dbd1d416a313cc723fe7f689089154dd8ec280fa977bf64462",
+  "metrics": {
+    "aor": {
+      "reason": "no stable exact overlap-volume implementation; bounding-box overlap is not substituted",
+      "status": "N/E"
+    },
+    "collision_free_range": {
+      "denominator": 105,
+      "passed_states": 105,
+      "rate": 1.0
+    },
+    "collision_state_rate": {
+      "collision_states": 0,
+      "definition": "fail-closed collision-or-unexecuted configurations / frozen expected configurations",
+      "denominator": 300,
+      "executed_states": 300,
+      "observed_collision_rate_executed": 0.0,
+      "observed_collision_states": 0,
+      "rate": 0.0,
+      "unexecuted_states": 0
+    },
+    "max_penetration": {
+      "denominator": 3,
+      "fully_measured_assets": 3,
+      "maximum_observed_normalized": 0.20204688698985748,
+      "normalization": "PyBullet q0 collision-shape union AABB diagonal (pybullet_q0_collision_shape_union_aabb_v1)",
+      "observed_assets": 3,
+      "status": "COMPLETE"
+    },
+    "multi_joint_sobol_cf": {
+      "denominator": 3,
+      "passed": 3,
+      "rate": 1.0
+    },
+    "rest_all_pair_cf": {
+      "denominator": 3,
+      "passed": 0,
+      "rate": 0.0
+    },
+    "rest_non_adjacent_cf": {
+      "denominator": 3,
+      "passed": 3,
+      "rate": 1.0
+    },
+    "single_joint_sweep_cf": {
+      "denominator": 3,
+      "passed": 3,
+      "rate": 1.0
+    },
+    "strict_collision_pass": {
+      "denominator": 3,
+      "passed": 3,
+      "rate": 1.0
+    }
+  },
+  "n_eval": 3,
+  "n_release": 500,
+  "protocol_id": "urdf_sim_ready_table4_ours_500k_table2_n500_v1",
+  "status": "COMPLETE"
+}

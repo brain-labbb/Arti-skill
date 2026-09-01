@@ -1,0 +1,66 @@
+{
+  "command": [
+    "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4b_partnet_mobility.py",
+    "--mode",
+    "formal",
+    "--workers",
+    "16",
+    "--output-dir",
+    "/mnt/zsn/lyb/arti-skill/exp/runtime/table4b_urdf_partnet_mobility_formal_n800_20260826T151243Z"
+  ],
+  "created_at_utc": "2026-08-26T15:27:44.309043Z",
+  "dataset": "PartNet-Mobility",
+  "frozen_config_sha256": "a5c6418befdc019afb62453f6cdf2d89eba65f4fef871b20e9785f779c1b2a22",
+  "geometry_protocol_id": "lam_supplementary_geometry_v1",
+  "manifest_self_sha256_at_write": "fcd27b4615279a65247d71f75d6ced2937c260006590ef874e6354d0c17b508d",
+  "mode": "formal",
+  "outputs": {
+    "asset_records_sha256": "ad7539ea85737473f5c294ec7543d6a7b45cbb19958307bead49975bb082a45b",
+    "summary_md_sha256": "45dc30b1eece7f3a4b9fca1b1ec5cc6343cef77dd3988ee18dfabfa6b1f91b11",
+    "summary_sha256": "8d437ee96bd0945b3e1fa71ea5c5d794ae37e39ecc62aea6b75ca34e8ad009ff"
+  },
+  "protocol_id": "table4b_partnet_mobility_table4cohort_n800_salt20260813_v1",
+  "record_count": 800,
+  "status_counts": {
+    "completed": 800,
+    "error": 0,
+    "total": 800
+  },
+  "verification": {
+    "all_pass": true,
+    "check_count": 6,
+    "checks": [
+      {
+        "check": "source_manifest_sha256",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "ordered_ids_sha256",
+        "detail": "ef6cb964e50dc712280256c5b2f675cc2c957095c3553b21845d3562a5011883",
+        "pass": true
+      },
+      {
+        "check": "record_count",
+        "detail": "800",
+        "pass": true
+      },
+      {
+        "check": "frozen_order_preserved",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "urdf_identity_matches_frozen_manifest",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "aggregate_recomputation_matches",
+        "detail": "",
+        "pass": true
+      }
+    ]
+  },
+  "wall_seconds": 846.116
+}

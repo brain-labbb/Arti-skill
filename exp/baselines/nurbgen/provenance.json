@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "method": "nurbgen",
+  "method_display_name": "NURBGen",
+  "not_text2cad": true,
+  "source": {
+    "repository": "https://github.com/SadilKhan/NURBGen",
+    "checkout": "/mnt/zsn/lyb/NURBGen",
+    "commit": "62855d4b258082e5fbd220badf056618f7840939",
+    "tracked_source_modified": false,
+    "license_file_in_repository": null,
+    "license_note": "The pinned GitHub tree has no LICENSE file. No repository-code license is inferred from the model card."
+  },
+  "adapter": {
+    "repository": "https://huggingface.co/SadilKhan/NURBGen",
+    "revision": "f2f88e264e735353506a853e761e96d8545649d9",
+    "type": "PEFT LoRA",
+    "filename": "adapter_model.safetensors",
+    "size_bytes": 528550256,
+    "git_blob_oid": "42306119def1dca94294acd148d6d8aa44063c43",
+    "sha256_from_huggingface_security_record": "d381fa4b5e82c1d4602e4019b5e444d3208ede942c9de841e22d72c793873d54",
+    "sha256_locally_verified": false,
+    "gated": "auto",
+    "license_from_model_card": "apache-2.0",
+    "access_attempt": {
+      "url": "https://huggingface.co/SadilKhan/NURBGen/resolve/f2f88e264e735353506a853e761e96d8545649d9/adapter_config.json",
+      "http_status": 401,
+      "error_code": "GatedRepo",
+      "evidence_headers": "/mnt/zsn/lyb/NURBGen/hf_adapter_headers.txt",
+      "evidence_body": "/mnt/zsn/lyb/NURBGen/hf_adapter_response.txt"
+    }
+  },
+  "base_model": {
+    "repository": "https://huggingface.co/Qwen/Qwen3-4B",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "weight_files_sha256": {
+      "model-00001-of-00003.safetensors": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223",
+      "model-00002-of-00003.safetensors": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5",
+      "model-00003-of-00003.safetensors": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1"
+    },
+    "license": "Apache-2.0",
+    "license_sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "license_evidence": "/mnt/zsn/lyb/NURBGen/Qwen3-4B.LICENSE",
+    "downloaded": false,
+    "download_note": "Not downloaded because the required gated LoRA is unavailable."
+  },
+  "official_environment": {
+    "specification": "/mnt/zsn/lyb/NURBGen/environment.yaml",
+    "specification_sha256": "b6349da209a72025577aff68087ebcba515750b005bf151d0d56ca6a94b65886",
+    "python": "3.11",
+    "torch": "2.7.1+cu126",
+    "ms_swift": "3.5.0",
+    "transformers": "4.52.3",
+    "peft": "0.15.2",
+    "flash_attention": "2.8.0.post2 (manual install required by author README)",
+    "installed_for_this_run": false,
+    "not_installed_reason": "Gated LoRA prevents any official model smoke or benchmark generation."
+  },
+  "benchmark": {
+    "root": "/mnt/zsn/lyb/arti-skill/exp/reference/table4_constraints_v2",
+    "prompt_manifest_sha256": "0b46c15c65c46550cc25654ccca10e4de87f1b97e6bde89796ea3cc9b439065e",
+    "task_count": 18,
+    "panel": "cad_numeric",
+    "numeric_constraint_count": 20,
+    "count_metric": "N/A when run in cad_numeric; N/R in this NOT_RUN execution",
+    "repair_budget": 0,
+    "timeout_seconds_per_task": 1800,
+    "attempts_per_task": 1
+  },
+  "execution": {
+    "status": "NOT_RUN_GATED_MODEL",
+    "smoke_attempt_count": 0,
+    "benchmark_attempt_count": 0,
+    "numeric_result": "N/R",
+    "count_result": "N/R",
+    "scorer_runs": 0,
+    "gpu_physical_index_reserved": 3
+  },
+  "evidence": {
+    "adapter_model_api": "/mnt/zsn/lyb/NURBGen/hf_model_api.json",
+    "adapter_tree_api": "/mnt/zsn/lyb/NURBGen/hf_tree_response.json",
+    "base_model_api": "/mnt/zsn/lyb/NURBGen/hf_base_model_api.json",
+    "base_tree_api": "/mnt/zsn/lyb/NURBGen/hf_base_tree.json"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "protocol": "nano3d_articulation_paper_aligned_v1",
+  "paper_reference": "Nova3D arXiv:2607.22738v1 Section 10, Tables 15-16",
+  "selection": {
+    "asset_count": 33,
+    "joint_count": 186,
+    "asset_manifest": "/mnt/zsn/lyb/arti-skill/exp/Nano3dasset.md"
+  },
+  "sampling": {
+    "single_joint_states_per_joint": 11,
+    "multi_joint_sobol_states_per_asset_with_gt_1_joint": 64,
+    "multi_joint_assets": 24,
+    "collision_policy": "URDF_USE_SELF_COLLISION_EXCLUDE_PARENT",
+    "ccd": false
+  },
+  "tier1": {
+    "articulable_asset_rate": "33/33",
+    "articulable_asset_rate_value": 1.0,
+    "joints_per_asset_mean": 5.636363636363637,
+    "native_joint_exposure": "186/186"
+  },
+  "tier2_static": {
+    "joint_type_accuracy": "N/A: missing frozen joint semantic gold/spec",
+    "joint_recall": "N/A: missing frozen expected-joint gold/spec",
+    "parent_child_accuracy": "N/A: structural edges available, correctness gold absent",
+    "axis_metadata_valid": "186/186",
+    "origin_metadata_valid": "186/186",
+    "bounded_limit_valid": "143/143",
+    "generic_revolute_range": "12/106",
+    "continuous_unbounded_joints": 43
+  },
+  "tier3_functional_proxy": {
+    "single_joint_states": 2046,
+    "single_joint_collision_free_states": 2046,
+    "single_joint_collision_free_rate": 1.0,
+    "joint_single_sweep_pass": "186/186",
+    "multi_joint_sobol_states": 1536,
+    "multi_joint_collision_free_states": 1536,
+    "full_range_collision_free_states": "3582/3582",
+    "full_range_collision_free_rate": 1.0,
+    "asset_single_sweep_pass": "33/33",
+    "asset_full_range_collision_free_proxy": "33/33",
+    "joint_geometric_validity": "N/A: paper metric also requires axis-on-moving-part semantic judgment; collision-only proxy is reported above",
+    "asset_geometric_validity": "N/A: paper metric also requires axis-on-moving-part semantic judgment; collision-only proxy is reported above",
+    "rest_pose_frozen": "N/A: no pre-articulation artifact pair",
+    "continuous_collision_detection": "not_run"
+  },
+  "limitations": [
+    "This is a 33-asset local existing-export evaluation, not the paper's 12-asset generated case study.",
+    "Self-collision excludes direct parent-child pairs to avoid unavoidable joint-interface contacts.",
+    "PyBullet discrete stepping is used; no continuous collision detection.",
+    "No joint spec/gold is available for semantic type, recall, parent-child correctness, or axis-on-moving-part."
+  ]
+}

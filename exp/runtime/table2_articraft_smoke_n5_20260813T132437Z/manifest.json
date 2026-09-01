@@ -1,0 +1,286 @@
+{
+  "created_at": "2026-08-13T13:24:53.619571Z",
+  "dataset": "Articraft-10K",
+  "evaluation": {
+    "config": {
+      "denominator_policy": "all frozen selected assets, including failures and exceptions",
+      "metrics": [
+        "parse_rate",
+        "resource_resolution",
+        "finite_fields",
+        "valid_tree",
+        "valid_joint_spec",
+        "collision_coverage",
+        "inertial_coverage",
+        "inertia_validity",
+        "strict_urdf_pass"
+      ],
+      "schema_version": "1.0.0",
+      "selection_algorithm": "random.Random(seed).sample(sorted(unique_asset_ids), n)",
+      "source_binding": "all regular package files hashed before freeze and before/after audit",
+      "standard_parser": {
+        "package": "urdfpy",
+        "required_version": "0.0.22"
+      },
+      "workers": 4
+    },
+    "config_sha256": "c7b81c7a08162ff8b0d5168dc3fd93875247df8b1e03f0a1555650516557990d",
+    "denominator_policy": "all frozen selected assets, including errors",
+    "evaluator_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_table2_urdf_articraft.py",
+    "evaluator_sha256": "73e1190249fbe4e07dd5bccdcfe41be9c3121013d5632f358bcc43b738a6aef5",
+    "gpu_required": false,
+    "metric_names": [
+      "parse_rate",
+      "resource_resolution",
+      "finite_fields",
+      "valid_tree",
+      "valid_joint_spec",
+      "collision_coverage",
+      "inertial_coverage",
+      "inertia_validity",
+      "strict_urdf_pass"
+    ],
+    "numpy_compatibility": {
+      "activation": "only when the standard parser is enabled and numpy.float is absent",
+      "aliases": {
+        "numpy.float": "builtins.float"
+      },
+      "parser_errors_suppressed": false,
+      "scope": "synchronized URDF.load call only; alias is removed immediately after parsing",
+      "site_packages_modified": false
+    },
+    "protocol_path": "/mnt/zsn/lyb/arti-skill/exp/URDF-Sim-Ready-Automatic-Evaluation.md",
+    "protocol_sha256": "2b7e45257b7c07310e69d8dca7f850a88d14f463f0f1dfb9b6529b87cecffc90",
+    "standard_parser": "urdfpy",
+    "standard_parser_version": "0.0.22",
+    "workers": 4
+  },
+  "manifest_content_sha256": "aab3140b122bc64e3f157d3408f62074fe2d32e349a01f311f6d2869de18019d",
+  "records": [
+    {
+      "asset_id": "rec_fidget_toy_d3e5dba051334aca88e7cba99ac794df",
+      "model_urdf_sha256": "5c8edef469d3d86aee2f4fabb8ae12af4876d0323a1c6e931e8c50e62360a69a",
+      "package": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K/released_urdf/rec_fidget_toy_d3e5dba051334aca88e7cba99ac794df",
+      "package_binding": {
+        "content_manifest_sha256": "ff97f40ebf33fa0e5909e6cee935f55873cbb82da3c9bf474378d9e09fb4e0bd",
+        "file_count": 4,
+        "files": [
+          {
+            "bytes": 974,
+            "path": "compile_report.json",
+            "sha256": "d9465c1fe53a1210408ba3bf4ff5f9e8ceaf6e24a1584bc4f4e65767d21a12bf"
+          },
+          {
+            "bytes": 3429,
+            "path": "model.urdf",
+            "sha256": "5c8edef469d3d86aee2f4fabb8ae12af4876d0323a1c6e931e8c50e62360a69a"
+          },
+          {
+            "bytes": 41397,
+            "path": "assets/meshes/inner_ring_shell.obj",
+            "sha256": "faf96a5d94dd31a0aa926fc648aa800b8ba8fb23f83af01212b2fd95cd6886c0"
+          },
+          {
+            "bytes": 41397,
+            "path": "assets/meshes/outer_ring_shell.obj",
+            "sha256": "80be6a9277e06222c3a596b407e52b2480becc65810312fed9e57d06628fbe22"
+          }
+        ],
+        "total_bytes": 87197
+      },
+      "selection_index": 0
+    },
+    {
+      "asset_id": "rec_mastmounted_fork_carriage_0003",
+      "model_urdf_sha256": "958c2c9c27d055f55b941614f1725c202671638ae316c943a221422d43c9e252",
+      "package": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K/released_urdf/rec_mastmounted_fork_carriage_0003",
+      "package_binding": {
+        "content_manifest_sha256": "a106291a711231961c55aa705591f93b1816ed04b19602bb8d7c6f625fb78f4a",
+        "file_count": 6,
+        "files": [
+          {
+            "bytes": 960,
+            "path": "compile_report.json",
+            "sha256": "2f940a00dcfd0afee7e7947b85c4336eb7927200cd6ba9a942cace5886538934"
+          },
+          {
+            "bytes": 3364,
+            "path": "model.urdf",
+            "sha256": "958c2c9c27d055f55b941614f1725c202671638ae316c943a221422d43c9e252"
+          },
+          {
+            "bytes": 11059,
+            "path": "assets/meshes/fork_carriage.obj",
+            "sha256": "51853ed586fae62847f4b0b95c5321e8c5426fa24fb7a5f7df098f7794064ad7"
+          },
+          {
+            "bytes": 156,
+            "path": "assets/meshes/fork_carriage.obj.cadquery.json",
+            "sha256": "a429659ced237288db2f840984a63409741ddae3326b39612b3342ef9e66d3aa"
+          },
+          {
+            "bytes": 2022,
+            "path": "assets/meshes/fork_tine.obj",
+            "sha256": "0a5e3a27deb4dc7a4af9368710784bc996e660bc6e70c5a285679fa75afe9971"
+          },
+          {
+            "bytes": 174,
+            "path": "assets/meshes/fork_tine.obj.cadquery.json",
+            "sha256": "bd383330a794563b85f2d5f20ca63b8d0e411a2509e9117897af4dd7aba79f11"
+          }
+        ],
+        "total_bytes": 17735
+      },
+      "selection_index": 1
+    },
+    {
+      "asset_id": "rec_top_load_washing_machine_with_hinged_lid_d1f25e3f1beb4684935f20e2fe18f3cc",
+      "model_urdf_sha256": "695d1963f4ba96f3c7bc7ea8bf4ee8d4a947fb3c273444017c88a3e9ea0d99ae",
+      "package": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K/released_urdf/rec_top_load_washing_machine_with_hinged_lid_d1f25e3f1beb4684935f20e2fe18f3cc",
+      "package_binding": {
+        "content_manifest_sha256": "37076ce05af7bf11c9706f9fcc05aa0233b1ffa5d34de1f357929df325fdd764",
+        "file_count": 9,
+        "files": [
+          {
+            "bytes": 1005,
+            "path": "compile_report.json",
+            "sha256": "f19fe08dbb4f95d6b60c27571dc5d5c40d1f5916d1ad0b176a10451d6d0e26ca"
+          },
+          {
+            "bytes": 17107,
+            "path": "model.urdf",
+            "sha256": "695d1963f4ba96f3c7bc7ea8bf4ee8d4a947fb3c273444017c88a3e9ea0d99ae"
+          },
+          {
+            "bytes": 326764,
+            "path": "assets/meshes/cabinet_shell.obj",
+            "sha256": "0698050ae8d32c68bc1cba049e81994894cc0c0084e2313f0330c96add0e2642"
+          },
+          {
+            "bytes": 170,
+            "path": "assets/meshes/cabinet_shell.obj.cadquery.json",
+            "sha256": "c98080bcf5fd2ca573bf3ceea79cf2c6923adbd3cd67ec02baaa983fd621cf53"
+          },
+          {
+            "bytes": 617602,
+            "path": "assets/meshes/lid_frame.obj",
+            "sha256": "0a3ef0d5a192fcdcd0bb1633f67f46df7c4edb8e4636a8076f5e10d5fd13e45d"
+          },
+          {
+            "bytes": 173,
+            "path": "assets/meshes/lid_frame.obj.cadquery.json",
+            "sha256": "f3e252d183e9d5238160a683e420ede7d6793dca16bb260237eb0477dd296112"
+          },
+          {
+            "bytes": 1080375,
+            "path": "assets/meshes/timer_dial_knob.obj",
+            "sha256": "4005917e70a5ad3ccc910246608cb78561278b80e67a5000405a101d498461a6"
+          },
+          {
+            "bytes": 617102,
+            "path": "assets/meshes/wash_tub.obj",
+            "sha256": "fe517b57b535a3d98c032214b08a2b1a8e7a0260707069dfc7f395d2ceb122b8"
+          },
+          {
+            "bytes": 187,
+            "path": "assets/meshes/wash_tub.obj.cadquery.json",
+            "sha256": "b3df631012f1d95f52d53e4d2e76fffc91edab5fa12b8bb7e3f93d15fd4b3598"
+          }
+        ],
+        "total_bytes": 2660485
+      },
+      "selection_index": 2
+    },
+    {
+      "asset_id": "rec_single_prismatic_slider_073f8fcdb9e447de9ad3201708c88a30",
+      "model_urdf_sha256": "0b7d6bca59febb648e82e5f5c75c7873fdd4293c1c63005d92ec4b12c1a995b4",
+      "package": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K/released_urdf/rec_single_prismatic_slider_073f8fcdb9e447de9ad3201708c88a30",
+      "package_binding": {
+        "content_manifest_sha256": "401222c750cd40351f629e951a8ca6d77f8485f6eb018d4f7ce0693469eb86ab",
+        "file_count": 4,
+        "files": [
+          {
+            "bytes": 985,
+            "path": "compile_report.json",
+            "sha256": "8f6d9ecc0ff718b9ab7a94ce28db9998863d759c455b929d7f10e88b94b74915"
+          },
+          {
+            "bytes": 2531,
+            "path": "model.urdf",
+            "sha256": "0b7d6bca59febb648e82e5f5c75c7873fdd4293c1c63005d92ec4b12c1a995b4"
+          },
+          {
+            "bytes": 69344,
+            "path": "assets/meshes/wall_plate_panel.obj",
+            "sha256": "473018e9751875a2f3f2ef873865340e2912bbcd31628e1da94831da99b52651"
+          },
+          {
+            "bytes": 159,
+            "path": "assets/meshes/wall_plate_panel.obj.cadquery.json",
+            "sha256": "e58f0e4019630c2ffb4b4928f7b787b9080673533a805fa643915cfe5c6689d8"
+          }
+        ],
+        "total_bytes": 73019
+      },
+      "selection_index": 3
+    },
+    {
+      "asset_id": "rec_box_fan_with_control_knob_56141ecd48aa4539a1b141792747b9f4",
+      "model_urdf_sha256": "3778a5ba514c868b2c287256327bff95ff38f6f4d73477233d7bdc9fec3d7c82",
+      "package": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K/released_urdf/rec_box_fan_with_control_knob_56141ecd48aa4539a1b141792747b9f4",
+      "package_binding": {
+        "content_manifest_sha256": "876c8c2c3d6aeff550ba64278ad0206d1f81110ec8c5c1c58228a280c81a03da",
+        "file_count": 5,
+        "files": [
+          {
+            "bytes": 637,
+            "path": "compile_report.json",
+            "sha256": "c5036d417a7b684d4fa639d60f3fdb08746b99614aec1a41670b9ced1f5cd365"
+          },
+          {
+            "bytes": 16784,
+            "path": "model.urdf",
+            "sha256": "3778a5ba514c868b2c287256327bff95ff38f6f4d73477233d7bdc9fec3d7c82"
+          },
+          {
+            "bytes": 8464498,
+            "path": "assets/meshes/box_fan_guard.obj",
+            "sha256": "3b01822846db236d051207b90652de83750835cf7a74c325b1bd301eb16ec933"
+          },
+          {
+            "bytes": 168661,
+            "path": "assets/meshes/box_fan_rotor.obj",
+            "sha256": "63d7088459d5a0592f7f0e41e7e4fb074cf0e11441b3688a528413953f6cf491"
+          },
+          {
+            "bytes": 687832,
+            "path": "assets/meshes/box_fan_speed_knob.obj",
+            "sha256": "3dd731b918c6e58084a358e90c230f62911ad21968d33d8aecd2e7e01f8672a4"
+          }
+        ],
+        "total_bytes": 9338412
+      },
+      "selection_index": 4
+    }
+  ],
+  "schema_version": "1.0.0",
+  "selection": {
+    "algorithm": "random.Random(seed).sample(sorted(unique_asset_ids), n)",
+    "limit": 5,
+    "n_eval": 5,
+    "outcome_based_reselection": false,
+    "requested_n": 800,
+    "seed": 20260813,
+    "selected_asset_ids_sha256": "dcd9914e3a836400faa8f88a2b3caf4714342c6792f7359e036995d9c64c69fd",
+    "selection_order_preserved": true
+  },
+  "source": {
+    "inventory_path": "/mnt/zsn/lyb/arti-skill/exp/dataset_inventory.json",
+    "inventory_sha256": "e281119f870bb6bae9599c3edc02de0a42a257e0d433335361d4a774592c1b5a",
+    "release_asset_count": 9996,
+    "release_asset_ids_sha256": "a52fab1cc35e9948ea75e5a7cb4e99408ae39a2e5d27eca3a479c24d5c9606ff",
+    "repo_id": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "root": "/mnt/zsn/lyb/arti-skill/exp/Articraft-10K/released_urdf"
+  }
+}

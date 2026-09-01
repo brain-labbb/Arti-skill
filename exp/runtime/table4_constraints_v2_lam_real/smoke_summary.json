@@ -1,0 +1,38 @@
+{
+  "backend": "official LAM pipeline + DashScope OpenAI-compatible backend",
+  "benchmark_repair_budget": 0,
+  "command": [
+    "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2_lam_real/.venv/bin/python",
+    "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2_lam_real/lam_dashscope_entry.py",
+    "--description",
+    "a cabinet with five drawers",
+    "--output-dir",
+    "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2_lam_real/smoke/raw",
+    "--num-executions",
+    "1",
+    "--parallel",
+    "0",
+    "--log-level",
+    "INFO"
+  ],
+  "description": "a cabinet with five drawers",
+  "elapsed_seconds": 1453.0933205597103,
+  "final_urdf": "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2_lam_real/smoke/raw/a_cabinet_with_five_drawers_1/pipeline_logs/stage_3_1_articulation_feedback/iteration_3/generated.urdf",
+  "finished_at_utc": "2026-08-11T07:24:34.347187+00:00",
+  "generated_urdfs": [
+    "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2_lam_real/smoke/raw/a_cabinet_with_five_drawers_1/generated.urdf",
+    "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2_lam_real/smoke/raw/a_cabinet_with_five_drawers_1/pipeline_logs/stage_3_1_articulation_feedback/iteration_1/generated.urdf",
+    "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2_lam_real/smoke/raw/a_cabinet_with_five_drawers_1/pipeline_logs/stage_3_1_articulation_feedback/iteration_2/generated.urdf",
+    "/mnt/zsn/lyb/arti-skill/exp/runtime/table4_constraints_v2_lam_real/smoke/raw/a_cabinet_with_five_drawers_1/pipeline_logs/stage_3_1_articulation_feedback/iteration_3/generated.urdf"
+  ],
+  "label": "official_readme_smoke",
+  "method_native_feedback": {
+    "articulation_max_iterations": 3,
+    "geometry_max_iterations": 4
+  },
+  "paper_backend_exact": false,
+  "returncode": 0,
+  "started_at_utc": "2026-08-11T07:00:21.249002+00:00",
+  "status": "completed",
+  "timeout_seconds": 1800
+}

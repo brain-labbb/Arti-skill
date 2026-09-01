@@ -1,0 +1,96 @@
+{
+  "$id": "https://nano3d.local/schemas/table1_authoring_package_v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Normalized, method-neutral package submitted to the frozen Nano3D Table 1 common evaluator.",
+  "properties": {
+    "artifacts": {
+      "additionalProperties": false,
+      "properties": {
+        "source": { "$ref": "#/$defs/artifact" },
+        "urdf": { "$ref": "#/$defs/artifact" }
+      },
+      "required": ["source", "urdf"],
+      "type": "object"
+    },
+    "attempt_index": { "maximum": 3, "minimum": 0, "type": "integer" },
+    "bindings": {
+      "additionalProperties": false,
+      "properties": {
+        "common_evaluator_sha256": { "$ref": "#/$defs/sha256" },
+        "hidden_specs_sha256": { "$ref": "#/$defs/sha256" },
+        "manifest_sha256": { "$ref": "#/$defs/sha256" },
+        "package_schema_sha256": { "$ref": "#/$defs/sha256" },
+        "protocol_sha256": { "$ref": "#/$defs/sha256" }
+      },
+      "required": [
+        "protocol_sha256",
+        "manifest_sha256",
+        "hidden_specs_sha256",
+        "common_evaluator_sha256",
+        "package_schema_sha256"
+      ],
+      "type": "object"
+    },
+    "execution_probe": {
+      "additionalProperties": false,
+      "properties": {
+        "exit_code": { "type": "integer" },
+        "finished_at_utc": { "format": "date-time", "type": "string" },
+        "source_sha256": { "$ref": "#/$defs/sha256" },
+        "started_at_utc": { "format": "date-time", "type": "string" },
+        "stderr_sha256": {
+          "anyOf": [{ "$ref": "#/$defs/sha256" }, { "type": "null" }]
+        },
+        "stdout_sha256": {
+          "anyOf": [{ "$ref": "#/$defs/sha256" }, { "type": "null" }]
+        },
+        "timed_out": { "type": "boolean" },
+        "wall_time_s": { "minimum": 0, "type": "number" }
+      },
+      "required": [
+        "started_at_utc",
+        "finished_at_utc",
+        "wall_time_s",
+        "exit_code",
+        "timed_out",
+        "source_sha256",
+        "stdout_sha256",
+        "stderr_sha256"
+      ],
+      "type": "object"
+    },
+    "method_id": { "enum": ["pva", "lam", "articraft"] },
+    "repeat_id": { "enum": ["r0", "r1", "r2"] },
+    "run_id": { "minLength": 1, "type": "string" },
+    "run_root": { "$ref": "#/$defs/path" },
+    "schema_version": { "const": "table1_authoring_package_v1" },
+    "task_id": { "minLength": 1, "type": "string" }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "method_id",
+    "task_id",
+    "repeat_id",
+    "attempt_index",
+    "run_root",
+    "bindings",
+    "artifacts",
+    "execution_probe"
+  ],
+  "type": "object",
+  "$defs": {
+    "artifact": {
+      "additionalProperties": false,
+      "properties": {
+        "path": { "$ref": "#/$defs/path" },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      },
+      "required": ["path", "sha256"],
+      "type": "object"
+    },
+    "path": { "minLength": 1, "type": "string" },
+    "sha256": { "pattern": "^[0-9a-f]{64}$", "type": "string" }
+  }
+}

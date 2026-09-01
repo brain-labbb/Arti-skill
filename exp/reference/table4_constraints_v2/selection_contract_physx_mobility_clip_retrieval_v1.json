@@ -1,0 +1,48 @@
+{
+  "batch_assets": 8,
+  "contract_id": "5d51177a968bd478913c37eb3c524d48346ada9d5b810e268ac12bf26e29951d",
+  "expected_assets": 2024,
+  "gpu": {
+    "compute_capability": [
+      9,
+      0
+    ],
+    "driver_version": "570.172.08",
+    "logical_device": 0,
+    "name": "NVIDIA L20X",
+    "physical_device": 1,
+    "total_memory_bytes": 150121021440,
+    "uuid": "GPU-7390aec1-d177-6672-4136-d998c85f489d"
+  },
+  "implementation": {
+    "selection_launcher_sha256": "a9452b3dd6edfe604c9dc60f84f908358df759cafcc8ebc8506ded832c664f68",
+    "selector_sha256": "4cbfe8fd2b8c225ebdb0b72487af0912e20d76fd074a430d54de838be7426bd6"
+  },
+  "model_id": "openai/clip-vit-base-patch32",
+  "model_revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+  "prompt_only_manifest_sha256": "d61accecdfc0f6fed6b9bf05339f79da12c89567e510d68f5df93fa88ac357d0",
+  "protocol_sha256": "6857194072ccb0ba3943d14a62f29c2364920ec01381a5475311535c1831031f",
+  "schema_version": 1,
+  "selector_runtime": {
+    "numpy": "2.4.4",
+    "pillow": "12.3.0",
+    "python": "3.13.2",
+    "torch": "2.6.0+cu124",
+    "transformers": "5.12.0"
+  },
+  "source_prompt_manifest_sha256": "0b46c15c65c46550cc25654ccca10e4de87f1b97e6bde89796ea3cc9b439065e",
+  "task_count": 18,
+  "thread_environment": {
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+    "HF_HUB_OFFLINE": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONHASHSEED": "0",
+    "TOKENIZERS_PARALLELISM": "false",
+    "TRANSFORMERS_OFFLINE": "1"
+  },
+  "views": 8
+}

@@ -1,0 +1,39 @@
+{
+  "classification": "SMOKE",
+  "cohort": {
+    "n_eval": 3,
+    "ordered_ids_sha256": "118038a746cafb91251afde5eb4f1164915d141acb3b529ea721a9d376bde3fa",
+    "selection_policy": "all Table 4 frozen manifest items (Table 1 fixed global sample) in existing order; no resampling or result-based filtering",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_artiverse_table1_n800_20260814/frozen_manifest.json",
+    "source_manifest_sha256": "0e69335a3d1574a1e1510124ade6e743cfd66fe894c1da3816b072954c75aedb"
+  },
+  "dataset": "Artiverse",
+  "execution": {
+    "child_interpreter": "/mnt/zsn/miniconda3/envs/genesis-main/bin/python3.12",
+    "child_timeout_seconds": 900,
+    "denominator_policy": "all frozen assets including failures and unmeasured items",
+    "process_isolation": "one fresh interpreter process per asset",
+    "workers": 3
+  },
+  "frozen_at_utc": "2026-08-20T04:00:56.772424Z",
+  "geometry_parameters": {
+    "collision_load_time_backend": "trimesh.Trimesh(process=False).triangles_tree+rtree",
+    "collision_load_time_cache_mode": "same_asset_one_unmeasured_warmup_then_warm_cache",
+    "collision_load_time_repeats": "one unmeasured warmup + five measured repeats, geometry rebuilt per repeat",
+    "collision_load_time_threads": "native thread count pinned to 1 via threadpoolctl",
+    "d_visual_definition": "q0_loadable_visual_union_aabb_diagonal_v1",
+    "exact_surface_backend": "trimesh.proximity.ProximityQuery.on_surface + rtree (no Genesis SDF substitute)",
+    "samples_per_direction": 32768,
+    "weld_relative_tolerance": 1e-09
+  },
+  "geometry_protocol_id": "lam_supplementary_geometry_v1",
+  "mode": "smoke",
+  "protocol_document_sha256": "6ad99e98f2df5ef1c0b23b3b275d206780e477958c8204b5f576562e69b90968",
+  "protocol_id": "table4b_artiverse_table1cohort_n800_seed20260813_v1",
+  "runner_identity": {
+    "geometry_module": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_geometry.py",
+    "geometry_module_sha256": "65d2641619b0429a37eb3a578b97ab7c0d5f298d84464842d16afcf3a13bd1b9",
+    "runner_script": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_urdf_table4b_artiverse.py",
+    "runner_script_sha256": "60c010b7e093f5a80617b7aa0a48863ca6940ff4824ec04e9a06c910b8271c12"
+  }
+}

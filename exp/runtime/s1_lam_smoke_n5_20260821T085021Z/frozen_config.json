@@ -1,0 +1,47 @@
+{
+  "classification": "SMOKE",
+  "code": {
+    "runner": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_s1_lam.py",
+    "runner_sha256": "d83aae78ac80531e92e59cc76d42409ef21a03386205a1c625089096c099a30d",
+    "static_atoms": "/mnt/zsn/lyb/arti-skill/exp/scripts/lam_supplementary_static.py",
+    "static_atoms_sha256": "4701415dad8a5c0a434c16887979bcb70c250ba0b25772014e8db73789098e5f",
+    "verifier": "/mnt/zsn/lyb/arti-skill/exp/scripts/verify_s1_lam.py",
+    "verifier_sha256": "d45b8d800fd69625857af5503f5547ecc328c9dee1e7c7522050fec9cb92d92a"
+  },
+  "cohort": {
+    "ordered_asset_keys_sha256": "643aa5b76ac61f57dd943bee26444a3525c01201a8dff3443763a7fd8d8267d3",
+    "selection": "first N records in frozen selection_rank 1..800 order",
+    "source_asset_records": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table3_lam_n800_seed20260813_20260814T022400Z_v3/asset_records.jsonl",
+    "source_asset_records_file_sha256": "7ef1c38d61bc780e41f62c7dd359e66f0bfeabe655c7453c93e2ea9830122d94",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table3_lam_n800_seed20260813_20260814T022400Z_v3/manifest.json",
+    "source_manifest_content_sha256": "f8f7fe4da5634d4f806e793c0da919689eab25be1ce0bbed7e2232f3453d15c2",
+    "source_manifest_file_sha256": "7e16683bfe4e4f37d7972082d8512713c1d8d1ae4ce142b75bf7dfb0509b9951"
+  },
+  "created_at": "2026-08-21T08:50:21.899599Z",
+  "dataset": "LAM released outputs",
+  "n_eval": 5,
+  "pair_policy": {
+    "eligible_pairs": "distinct source-URDF links with collision geometry",
+    "illegal_penetration_threshold_m": 1e-06,
+    "registered_method_specific_allowance_registry": [],
+    "shared_topology_exclusion": "exclude_direct_parent_child",
+    "surface_contact_allowed": true
+  },
+  "privacy": {
+    "generation_config": "hash metadata only; contents are not parsed or emitted",
+    "network_access": "disabled",
+    "released_code_execution": "disabled"
+  },
+  "protocol_id": "s1_lam_table3cohort_n800_seed20260813_v1",
+  "protocol_snapshot_sha256": "1cb56115375c4bcf8dee52a70821b3f88dfc03b64b3d8fb3d34f9c8b64b83dc9",
+  "schema_version": "supplementary-s1-lam/v1",
+  "table4": {
+    "asset_records_sha256": "15423f8646be26dd01fe9d1ca5c0a1b7b1f454349e77d1562827e719c0d1d014",
+    "manifest_content_sha256": "9a46a1cb7668666cf3c485cc35086cdd79a113d23a8b00625ede012c8b039d2d",
+    "manifest_sha256": "8adc7d8698eaeab5ee5a62d881ed50d4e65c5dc80c9d1d8ae0f4a4a204474594",
+    "protocol_id": "urdf_sim_ready_table4_lam_n800_v1",
+    "state_records_sha256": "ac62b73d71530982a63c1e8cf345cfda126608aa6e42ce9710383daace2af257",
+    "verification_sha256": "e74ed91dca984af8aba900cf3915b490fb1298e5c2bc539af7ade43570edbc51"
+  },
+  "workers": 4
+}

@@ -1,0 +1,41 @@
+{
+  "datasets": [
+    "articraft_10k"
+  ],
+  "intent_count": 159,
+  "manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_tipover_eligible_20260831/articraft/manifest.json",
+  "manifest_sha256": "90dda6b54da9916745effda0d9463bce052621f419ce20f676804973a2cadbf5",
+  "protocol_sha256": "18e782b59d8ff0469e40d7a8e4ea6773e4db3fb03d64c79a5125736aa6b3832b",
+  "runs": [
+    {
+      "complete": true,
+      "dataset_name": "Articraft-10K",
+      "dataset_slug": "articraft_10k",
+      "effective_workers": 3,
+      "intent_count": 159,
+      "launched_or_retained_count": 159,
+      "metric_denominator": 159,
+      "metric_pass_counts": {
+        "actuation": 0,
+        "constraint_drift": 0,
+        "limit_enforcement": 0,
+        "load": 0,
+        "reset": 0,
+        "settling": 0,
+        "simulator_pass": 0
+      },
+      "requested_workers": 3,
+      "resumed_count": 0,
+      "simulator": "genesis",
+      "terminal_count": 159,
+      "terminal_status_counts": {
+        "completed": 159
+      }
+    }
+  ],
+  "schema_version": "table5_n200_runtime_summary_v1",
+  "simulators": [
+    "genesis"
+  ],
+  "terminal_count": 159
+}

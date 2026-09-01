@@ -1,0 +1,61 @@
+{
+  "protocol_id": "nano3d_infinite_mobility_seed_reliability_v1",
+  "baseline": "Infinite Mobility",
+  "baseline_source": "workspace cache copied from the public Infinite-Mobility release",
+  "blender_version": "3.6.0",
+  "seeds": [
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+    12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
+    24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35
+  ],
+  "factories": [
+    "OfficeChairFactory",
+    "BarChairFactory",
+    "BeverageFridgeFactory",
+    "DishwasherFactory",
+    "MicrowaveFactory",
+    "OvenFactory",
+    "TVFactory",
+    "TapFactory",
+    "ToiletFactory",
+    "LiteDoorFactory",
+    "LampFactory",
+    "PlateOnRackBaseFactory",
+    "KitchenCabinetFactory",
+    "VaseFactory",
+    "BottleFactory",
+    "TableCocktailFactory",
+    "TableDiningFactory",
+    "PotFactory",
+    "PanFactory",
+    "WindowFactory"
+  ],
+  "case_timeout_seconds": 300,
+  "adapter": {
+    "texture_resolution": 64,
+    "multi_mesh_urdf_policy": "concatenate meshes belonging to one URDF visual before urdfpy serialization",
+    "package_path_policy": "generate in baseline-relative staging, then normalize URDF mesh references to package-relative paths",
+    "gpu_policy": "CUDA hidden; Blender CPU only"
+  },
+  "qc_contract": {
+    "required": [
+      "process_exit_zero",
+      "one_parseable_urdf",
+      "single_root_connected_acyclic_tree",
+      "all_mesh_references_exist_and_are_nonempty",
+      "at_least_one_link"
+    ],
+    "reported_not_gated": [
+      "movable_joint_count",
+      "visual_count",
+      "collision_count",
+      "relative_path_portability"
+    ]
+  },
+  "notes": [
+    "This freezes the 20 factory names published in the baseline README.",
+    "The cohort is a public-factory supplementary baseline, not a common-category matched result.",
+    "No rendering or GPU is used. Each factory-seed case runs in a fresh Blender process."
+    ,"Texture baking is retained at 64 px only to exercise package export; these packages are not used for appearance or production-readiness ranking."
+  ]
+}

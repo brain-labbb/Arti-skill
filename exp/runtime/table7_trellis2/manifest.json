@@ -1,0 +1,44 @@
+{
+  "assets": [],
+  "axis": "Table 7 Production Readiness",
+  "bounded_local_inventory": {
+    "attributable_final_asset_count": 0,
+    "checked_exact_method_locations": [
+      "arti-skill/TRELLIS.2",
+      "arti-skill/TRELLIS2",
+      "arti-skill/.cache/TRELLIS.2",
+      "arti-skill/.cache/TRELLIS2",
+      "arti-skill/.cache/table6_sources/trellis2",
+      "arti-skill/exp/baselines/TRELLIS.2",
+      "arti-skill/exp/baselines/trellis2",
+      "arti-skill/exp/runtime/table6_trellis2",
+      "arti-skill/exp/runtime/trellis2",
+      "arti-skill/exp/runtime/trellis2_outputs"
+    ],
+    "existing_method_locations": [],
+    "method_execution_runner_candidates": [],
+    "method_runtime_candidates": [],
+    "scope": "bounded top-level checks only; no recursive workspace scan"
+  },
+  "input_evidence": {
+    "paper_table": {
+      "path": "arti-skill/exp/Nano3dresults.md",
+      "sha256": "d97767fc15a7fafe6e4494e08398edece2c6a6ca5b6004486ca9768996336049"
+    }
+  },
+  "interpretation": "NOT_AN_EXPERIMENTAL_ZERO",
+  "manifest_frozen_before_scoring": true,
+  "method": "TRELLIS.2",
+  "protocol_id": "nano3d_table7_production_readiness_v1",
+  "protocol_sha256": "5fc86932f35f8b66514d5747be732b5c75fef7215c987628f5dd28522f710a7c",
+  "protocol_snapshot": "arti-skill/exp/runtime/table7_trellis2/protocol_snapshot.json",
+  "role": "supplementary representation control",
+  "schema_version": "1.0.0",
+  "selection_policy": {
+    "outcome_based_filtering": false,
+    "paper_cohort_is_not_a_local_cohort": true,
+    "reason": "no attributable released or locally generated TRELLIS.2 final package",
+    "requested_assets": 0
+  },
+  "status": "PAPER_ONLY_LOCAL_OUTPUTS_UNAVAILABLE"
+}

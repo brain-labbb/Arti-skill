@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "amendment_id": "table4_constraints_v2_partnet_mobility_clip_retrieval_v1",
+  "frozen_utc": "2026-08-12T08:54:05Z",
+  "status": "pre_result_frozen",
+  "scope": {
+    "panel": "fixed_dataset_retrieval_reference_supplementary",
+    "method_id": "partnet_mobility_clip_retrieval_v1",
+    "method_type": "prompt_only_retrieval_from_a_fixed_human_authored_dataset",
+    "same_prompt_generation_method": false,
+    "interpretation": "PartNet-Mobility is a fixed articulated-object dataset, not a generation method. This arm measures prompt-only global top-1 retrieval and must not be merged into the same-prompt generation ranking."
+  },
+  "benchmark": {
+    "prompt_manifest": "exp/reference/table4_constraints_v2/prompts.jsonl",
+    "prompt_manifest_sha256": "0b46c15c65c46550cc25654ccca10e4de87f1b97e6bde89796ea3cc9b439065e",
+    "protocol": "exp/reference/table4_constraints_v2/protocol.json",
+    "protocol_sha256": "6857194072ccb0ba3943d14a62f29c2364920ec01381a5475311535c1831031f",
+    "task_count": 18,
+    "prompt_policy": "After the opaque render snapshot is locked, use each exact complete English prompt string without rewriting, category filtering, or access to spec files."
+  },
+  "dataset": {
+    "id": "sapien-sim/PartNetMobility",
+    "official_huggingface_revision": "ee0aa3ef1df16181d76d83f7415aa8c94ed1da8f",
+    "official_terms_evidence": "exp/reference/table4_constraints_v2/partnet_mobility_official_terms_evidence.json",
+    "official_terms_evidence_sha256": "355e05c3d8844bee767715fd06cfaf2e1585c5b1a6af7bb9e4211de04f87b4d6",
+    "license": "other",
+    "access": "manual gated acknowledgement",
+    "terms_summary": "Non-commercial research and education only; research colleagues must first accept the terms; a for-profit employer is also bound; ShapeNet terms also apply.",
+    "partnet_software_license_not_asset_license": true,
+    "local_archive": "/mnt/zsn/lyb/PartNet_Mobility/partnet-mobility-v0.zip",
+    "local_archive_bytes": 3268124298,
+    "local_archive_sha256": "b47247a44246111e8d09f2c0e64b4012ae35e0dcf4bb55f68a05b604455119ff",
+    "local_archive_binding_to_official_huggingface_object": "unverified",
+    "provenance_status": "PROVENANCE_LIMITED",
+    "expected_asset_roots": 2347,
+    "expected_categories_source_audit_only": 46,
+    "units": "PartNet geometry is normalized to a unit sphere and does not preserve real-world metric scale.",
+    "redistribution_policy": "Keep raw selected assets and generated renders internal. Report only metrics, protocol details, and cryptographic hashes unless derivative-output rights are separately confirmed."
+  },
+  "source_audit": {
+    "phase": "private_before_render",
+    "formal_gate": "The source auditor must validate this exact amendment and an independently written ready PASS audit before creating any formal private output.",
+    "archive_closure": "Reject unsafe, duplicate-normalized, or symlink ZIP members. Stream SHA-256 every regular archive member and its corresponding extracted regular file, require equal bytes and hashes, then require exact archive/extracted path-set closure.",
+    "geometry_scene": "Parse source URDF only in the private source phase. Emit one geometry-only scene per opaque candidate containing only numeric zero-position transforms, opaque geometry blob relative paths, and blob SHA-256 values. Emit no link, joint, visual, semantic, category, source asset identity, target, or benchmark information.",
+    "geometry_blob": "For every archive-bound referenced OBJ, create geometry_blobs/<sha256>.obj as an internal hardlink or byte copy and verify its SHA-256. Renderer access to original source asset paths is forbidden.",
+    "render_plan": "Sorted ascending by opaque candidate key. Scene paths must be relative geometry_scenes/<candidate_key>.json and cannot be absolute or contain parent traversal.",
+    "private_outputs": [
+      "archive_member_manifest.jsonl",
+      "geometry_blobs",
+      "geometry_scenes",
+      "render_plan.jsonl",
+      "source_binding.jsonl",
+      "source_audit.lock.json"
+    ]
+  },
+  "renderer": {
+    "views": 8,
+    "image_size": [256, 256],
+    "run1_workers": 1,
+    "run2_workers": 4,
+    "task_order": "ascending opaque candidate key",
+    "fresh_full_runs": 2,
+    "replay_requirement": "All 8 PNG SHA-256 values and the complete worker runtime fingerprint must be identical for every candidate across both fresh runs.",
+    "scene": "Zero-joint-position geometry from the private geometry-only manifest; +Y up; azimuths 0,45,...,315 degrees; elevation 22.5 degrees; orthographic per-object AABB framing with 1.32 margin; fixed gray-blue rough dielectric; fixed camera-aligned directional light plus ambient; white background.",
+    "worker_allowed_inputs": [
+      "opaque candidate key",
+      "private root",
+      "relative geometry-only scene path and SHA-256",
+      "opaque geometry blob relative paths, hashes, and numeric transforms",
+      "output directory"
+    ],
+    "worker_forbidden_inputs": [
+      "URDF or XML",
+      "link, joint, visual, semantic, or category names",
+      "meta.json or semantics.txt",
+      "benchmark prompts, protocol, or specs",
+      "target dimensions or prior scores"
+    ],
+    "runtime_fingerprint": {
+      "egl_vendor": "NVIDIA",
+      "egl_version": "1.5",
+      "egl_client_apis": "OpenGL_ES OpenGL",
+      "gl_vendor": "NVIDIA Corporation",
+      "gl_renderer": "NVIDIA L20X/PCIe/SSE2",
+      "gl_version": "4.1.0 NVIDIA 570.172.08",
+      "glsl_version": "4.10 NVIDIA via Cg compiler",
+      "python": "3.13.2",
+      "numpy": "2.4.4",
+      "pillow": "12.3.0",
+      "trimesh": "4.12.2",
+      "pyrender": "0.1.45",
+      "pyopengl": "3.1.10",
+      "pyopengl_accelerate": "3.1.10",
+      "pyopengl_platform": "egl"
+    }
+  },
+  "opaque_snapshot": {
+    "exact_top_level_closure": [
+      "candidate_inventory.jsonl",
+      "model",
+      "renders",
+      "snapshot.lock.json"
+    ],
+    "candidate_inventory_exact_fields": [
+      "candidate_key",
+      "eligible",
+      "identity_sha256",
+      "render_sha256",
+      "snapshot_render_dir",
+      "views"
+    ],
+    "candidate_inventory_forbidden": "No source ID/path, source binding contents, URDF, geometry, bounds, extents, renderable count, part name, category, target, prompt, spec, or prior score.",
+    "candidate_render_path": "renders/<candidate_key>/000.png through 007.png exactly",
+    "phase_boundary": "The exact opaque snapshot is SHA-256 locked before the selector may read the frozen prompts."
+  },
+  "retriever": {
+    "model_id": "openai/clip-vit-base-patch32",
+    "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "implementation": "transformers.CLIPModel and CLIPProcessor",
+    "runtime": {
+      "python": "3.13.2",
+      "numpy": "2.4.4",
+      "torch": "2.6.0+cu124",
+      "transformers": "5.12.0",
+      "pillow": "12.3.0"
+    },
+    "formal_gpu": {
+      "physical_device": 1,
+      "uuid": "GPU-7390aec1-d177-6672-4136-d998c85f489d",
+      "name": "NVIDIA L20X",
+      "driver_version": "570.172.08",
+      "total_memory_bytes": 150121021440,
+      "compute_capability": [9, 0]
+    },
+    "batch_assets": 12,
+    "view_aggregation": "Extract a float32 512-D feature per view, convert to float64, independently L2-normalize each view, arithmetic-mean the 8 views, then L2-normalize in float64.",
+    "text_feature": "Use the exact full prompt with deterministic CLIP tokenizer truncation at 77 tokens, extract float32 feature, convert to float64, and L2-normalize.",
+    "score": "Float64 dot product.",
+    "selection": "Global top-1 over all 2347 eligible assets; no category filter.",
+    "tie_break": "Descending exact float64 score, then ascending opaque candidate key.",
+    "full_embedding_runs": 2,
+    "fresh_model_instance_per_run": true,
+    "replay_requirement": "Both full asset and prompt embedding arrays, tokenization/index metadata, and 18-row top-1 selection must be byte-identical.",
+    "repair_attempts": 0,
+    "rank_fallbacks": 0
+  },
+  "materialization": {
+    "phase_boundary": "Only after the selection lock exists may materialization open the private opaque-key-to-source binding and selected URDFs.",
+    "selected_source": "The exact source mobility.urdf bound by candidate key and pre-render SHA-256.",
+    "canonicalizer": "exp/scripts/canonicalize_table4_artifact.py",
+    "canonicalizer_unit_scale_argument": 1.0,
+    "unit_interpretation": "The resulting coordinates remain normalized dataset units and must not be interpreted as meters despite the generic canonicalizer field name.",
+    "repair_attempts": 0,
+    "rank_fallbacks": 0,
+    "failure_policy": "Any selected source or canonicalization failure is a task failure; do not select another rank and do not rescale to a target."
+  },
+  "reporting": {
+    "primary": [
+      "eligible render coverage over 2347 fixed candidates",
+      "selected artifact coverage over 18 prompts"
+    ],
+    "numeric_dimension": "N/A",
+    "numeric_reason": "PartNet-Mobility geometry is unit-sphere normalized without recoverable metric scale. All 20 numeric constraints are individually marked not applicable. Target-driven rescaling is forbidden.",
+    "count": "The existing name-matched renderable-node count is a supplementary proxy only, not semantic exact-count ground truth. It may be reported as N/R if structure/name granularity is judged unreliable.",
+    "required_label": "PartNet-Mobility prompt-only CLIP retrieval (fixed-dataset reference; not generation)",
+    "not_allowed": "Do not report numeric failures as zero, merge this arm into the same-prompt generation headline, or describe selected assets as generated."
+  },
+  "observation_budget_comparability": {
+    "partnet_mobility": "Eight synthetic 256x256 views under the protocol above.",
+    "physx_mobility": "The paired PhysX fixed-dataset arm is required to use the same eight synthetic 256x256 view budget for direct dataset-reference comparison.",
+    "artiverse": "The completed Artiverse arm used sixteen dataset-native views. It is a separate fixed-dataset reference with a different observation budget; no retriever-capacity or dataset-ranking conclusion may be drawn directly between it and the two synthetic-eight-view arms."
+  },
+  "implementation": {
+    "source_auditor_sha256": "20d64c023dfee73a922fe7f825f41e487227657dc942c2cd7f99f1bf9e11490c",
+    "render_worker_sha256": "0e11b0210daba4a3f31d7408671709fe01fe76d2c3e24aa749e3cabe7ccf2dbd",
+    "render_builder_sha256": "36abe8b1c8c3d382dff981fc2209b019739158c51e2c59d0f80ae208d5f6b921",
+    "snapshot_locker_sha256": "a4a3c3fa0a86e7d519ae4a3fdedb19194b68ba0b6e40499f6e08c0be5abcea46",
+    "selector_sha256": "58b96f2e5ba73fde63d202903739cfc70f7989d110bfaec4d529bcb8f8b97b7c",
+    "materializer_sha256": "6c13bf24c2e4705f740353c85d7fb64f072748179aec692dc05969d493d97a8f",
+    "integrity_verifier_sha256": "9a69724790fe5b6b31758c53579a6ed3f396a9ec30d1e5d60dfad5790623eda6",
+    "canonicalizer_sha256": "e46308fe8f3b653967ede6d4a75c881c012f55732542806fea2dde5003281b31",
+    "count_scorer_sha256": "d2983e299bb5467e5f5e937731c43b975b5725db953292edff7fd73b517b85d5",
+    "generic_integrity_verifier_sha256": "517aea9575bb8c8fa5a193dfe94ee9d927a9c50495c514cb488031620831c73f"
+  },
+  "formal_roots": {
+    "private_source": "exp/runtime/table4_constraints_v2/partnet_mobility_clip_retrieval_v1_private_source",
+    "render_build": "exp/runtime/table4_constraints_v2/partnet_mobility_clip_retrieval_v1_render_build",
+    "opaque_snapshot": "exp/runtime/table4_constraints_v2/partnet_mobility_clip_retrieval_v1_snapshot",
+    "selection_and_result": "exp/runtime/table4_constraints_v2/partnet_mobility_clip_retrieval_v1"
+  },
+  "execution_gate": "Before any formal private source output or render exists, an independent pre-result auditor must write a ready PASS audit and bound report into the otherwise empty selection_and_result root. Each subsequent phase independently revalidates the exact amendment and relevant implementation/audit hashes."
+}

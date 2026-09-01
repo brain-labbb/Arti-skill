@@ -1,0 +1,115 @@
+% Required packages: \usepackage{booktabs,graphicx}
+% BODY: Input this file where Table 5 should appear in the main paper.
+% APPENDIX: Input table5_appendix_protocol.tex in the appendix for the full
+% protocol, thresholds, denominator rules, and reproducibility details.
+\begin{table*}[t]
+  \centering
+  \caption{
+    Articulated-asset simulation readiness and physical stability.
+    Table~5(a1) evaluates single-simulator readiness in Genesis;
+    Table~5(a2) evaluates free-root center-of-mass stability in Genesis;
+    and Table~5(b) reports exact per-asset or per-joint intersections across
+    Genesis, PyBullet, and MuJoCo.
+  }
+  \label{tab:table5_simulation_readiness}
+
+  % BODY: Main Table 5a-I panel.
+  \vspace{2pt}
+  \textbf{(a1) Genesis single-simulator readiness}
+
+  \begingroup
+  \scriptsize
+  \setlength{\tabcolsep}{3.2pt}
+  \renewcommand{\arraystretch}{1.12}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{@{}lrrrrrr@{}}
+      \toprule
+      Dataset &
+      $N$ &
+      \shortstack{Import\\(\%) $\uparrow$} &
+      \shortstack{DoF mapping\\(\%) $\uparrow$} &
+      \shortstack{Complete non-placeholder\\inertials (\%) $\uparrow$} &
+      \shortstack{Genesis 10\,s simulation\\validity (\%) $\uparrow$} &
+      \shortstack{Trajectory coverage\\(\%) $\uparrow$} \\
+      \midrule
+      Articraft-10K       & 200 & 98.00          & 99.49          & 71.00          & 97.50          & \textbf{100.00} \\
+      LAM released outputs& 200 & 87.50          & 98.93          & 0.00           & 87.00          & 95.78 \\
+      Artiverse           & 200 & 99.50          & 99.21          & \textbf{100.00} & 96.00          & 95.50 \\
+      PartNet-Mobility    & 200 & 95.00          & 92.02          & 0.00           & 95.00          & 0.00 \\
+      SketchMobility      & 200 & 99.50          & 99.02          & 40.00          & \textbf{99.50} & 80.14 \\
+      Infinigen-Sim       & 200 & 93.00          & 90.28          & 0.00           & 93.00          & 0.00 \\
+      \textbf{Ours (PV-A)} & 200 & \textbf{100.00} & \textbf{100.00} & \textbf{100.00} & \textbf{99.50} & 99.36 \\
+      \bottomrule
+    \end{tabular}%
+  }
+  \endgroup
+
+  % BODY: Main Table 5a-II panel. This has a separate eligible denominator.
+  \vspace{5pt}
+  \textbf{(a2) Genesis free-root center-of-mass stability}
+
+  \begingroup
+  \small
+  \setlength{\tabcolsep}{7pt}
+  \renewcommand{\arraystretch}{1.08}
+  \begin{tabular}{@{}lrrrrr@{}}
+    \toprule
+    Dataset & Eligible $N$ & $N_{\mathrm{phys}}$ &
+    \shortstack{Physics cov.\\(\%) $\uparrow$} &
+    \shortstack{CoM support cov.*\\(\%) $\uparrow$} &
+    \shortstack{CoM static stability*\\(\%) $\uparrow$} \\
+    \midrule
+    Articraft-10K        & 159 & 114 & 71.70          & 97.37          & 88.60 \\
+    LAM released outputs & 75  & 4   & 5.33           & 100.00         & 75.00 \\
+    Artiverse            & 160 & 160 & \textbf{100.00} & \textbf{99.38} & \textbf{91.88} \\
+    PartNet-Mobility     & 158 & 0   & 0.00           & N/A            & N/A \\
+    SketchMobility       & 163 & 67  & 41.10          & 94.03          & 83.58 \\
+    Infinigen-Sim        & 170 & 0   & 0.00           & N/A            & N/A \\
+    \textbf{Ours (PV-A)}  & 156 & 156 & \textbf{100.00} & 99.36          & 89.10 \\
+    \bottomrule
+  \end{tabular}
+  \endgroup
+
+  % BODY: Main Table 5b panel.
+  \vspace{5pt}
+  \textbf{(b) Cross-simulator evaluation}
+
+  \begingroup
+  \small
+  \setlength{\tabcolsep}{9pt}
+  \renewcommand{\arraystretch}{1.08}
+  \begin{tabular}{@{}lrrr@{}}
+    \toprule
+    Dataset &
+    \shortstack{All-3 import\\(\%) $\uparrow$} &
+    \shortstack{All-3 DoF mapping\\(\%) $\uparrow$} &
+    \shortstack{All-3 stable\\(\%) $\uparrow$} \\
+    \midrule
+    Articraft-10K        & 91.50          & 94.60          & 91.50 \\
+    LAM released outputs & 41.50          & 54.39          & 41.00 \\
+    Artiverse            & 85.00          & 85.51          & 81.50 \\
+    PartNet-Mobility     & 42.00          & 25.82          & 42.00 \\
+    SketchMobility       & 42.00          & 43.66          & 42.00 \\
+    Infinigen-Sim        & 93.00          & 90.28          & 93.00 \\
+    \textbf{Ours (PV-A)}  & \textbf{99.50} & \textbf{99.76} & \textbf{99.00} \\
+    \bottomrule
+  \end{tabular}
+  \endgroup
+
+  % BODY: Keep this short note below the table in the main paper.
+  % APPENDIX: See table5_appendix_protocol.tex for the complete description.
+  \vspace{3pt}
+  \begin{minipage}{0.98\textwidth}
+    \footnotesize
+    \textit{Protocol summary.}
+    In (a1), each asset is reset three times and simulated for 10\,s at 240\,Hz
+    with a fixed root, gravity, contacts, self-collision, and zero applied
+    joint force. In (a2), the root is free, movable joints are locked at
+    canonical $q=0$, and the asset is simulated for 10\,s under gravity; its
+    denominator is the eligible free-standing cohort. The asterisked (a2)
+    metrics are conditional on $N_{\mathrm{phys}}$. In (b), All-3 denotes
+    the exact intersection of assets or joints passing in Genesis, PyBullet,
+    and MuJoCo, rather than an average of simulator-level rates. Full protocol
+    and failure-handling details are provided in the appendix.
+  \end{minipage}
+\end{table*}

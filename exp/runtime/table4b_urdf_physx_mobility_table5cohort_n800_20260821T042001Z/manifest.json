@@ -1,0 +1,62 @@
+{
+  "command": [
+    "exp/scripts/run_urdf_table4b_physx_mobility.py",
+    "--mode",
+    "formal",
+    "--workers",
+    "16",
+    "--receipt-set",
+    "/mnt/zsn/lyb/arti-skill/exp/runtime/table5_physx_mobility_n800_v2"
+  ],
+  "created_at_utc": "2026-08-21T04:43:29.591508Z",
+  "dataset": "PhysX-Mobility",
+  "frozen_config_sha256": "fd864a96dd85c2a0f6d9d7c736ebbfeb6c487950d1a776a0bdf50e0b26117f27",
+  "geometry_protocol_id": "lam_supplementary_geometry_v1",
+  "manifest_self_sha256_at_write": "e392d6a82cd56cf3462e95aa76666353d8c0ba35ed1d4f75385e4bff938e4988",
+  "mode": "formal",
+  "outputs": {
+    "asset_records_sha256": "4fc453d7ac4189ff4cc567fbfd4e01e5727535bbc6a91759682fee4b999f6b52",
+    "summary_md_sha256": "62024da17c41bbac31752e12c65de17d6ab0f46e83427a2354306df2ec254cb5",
+    "summary_sha256": "3dc9df891c454a0e22a35b82c83976e6dd784c9767a445f526c52cd6e4fa47f4",
+    "verification_sha256": "577da40a85ffe0251f07f428d77482ef055490a9d1aac5904f643ba005d5b7b5"
+  },
+  "protocol_id": "table4b_physx_mobility_table5cohort_n800_v1",
+  "record_count": 800,
+  "status_counts": {
+    "completed": 800,
+    "error": 0,
+    "total": 800
+  },
+  "verification": {
+    "all_pass": true,
+    "check_count": 5,
+    "checks": [
+      {
+        "check": "record_count",
+        "detail": "800",
+        "pass": true
+      },
+      {
+        "check": "frozen_order_preserved",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "claim_boundary_zero_collision_elements",
+        "detail": "",
+        "pass": true
+      },
+      {
+        "check": "d_visual_derivation_coverage_accounted",
+        "detail": "797/800",
+        "pass": true
+      },
+      {
+        "check": "aggregate_recomputation_matches",
+        "detail": "",
+        "pass": true
+      }
+    ]
+  },
+  "wall_seconds": 178.609
+}

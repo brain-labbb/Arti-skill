@@ -1,0 +1,225 @@
+{
+  "annotation_pairs": 1000,
+  "category_policy": "dataset-local frozen release label; SketchMobility uses {source}/{category}",
+  "classification": "FULL_RELEASE_DESCRIPTIVE_DIAGNOSTIC",
+  "created_at_utc": "2026-08-27T12:32:55.825045Z",
+  "dataset_expected_n": {
+    "articraft": 10787,
+    "artiverse": 3544,
+    "infinigen": 8226,
+    "infinite": 720,
+    "lam": 3217,
+    "ours_500k": 500,
+    "ours_n5": 2655,
+    "partnet": 2347,
+    "physx": 2024,
+    "pva": 302440,
+    "sketch": 4956
+  },
+  "dataset_inputs": {
+    "articraft": {
+      "records": {
+        "bytes": 12469294,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/articraft_github_merged_10787_20260827/merged/table1/asset_records.jsonl",
+        "sha256": "9f3c6119dc4427b16611ebaa42aa889c95555b8f5a01b15fd7ecded772671a30"
+      },
+      "roster": {
+        "bytes": 31966091,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/articraft_github_merged_10787_20260827/rosters/merged/full_release_roster.jsonl",
+        "sha256": "9429f12fa1a11e4df3567c859f921e0a868e0d4b08c149c9c22f8df020e5f1a6"
+      }
+    },
+    "artiverse": {
+      "records": {
+        "bytes": 4296679,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/artiverse/table1/asset_records.jsonl",
+        "sha256": "4e3af6e40f0a7efd5e27ce8a78d7212360bcbdedf21e68629f8987b742d8e694"
+      },
+      "roster": {
+        "bytes": 122568215,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/artiverse/full_release_roster.jsonl",
+        "sha256": "696a3396efd11890649eb9251e9055c5af9119e53ef27da7125f678fa6f813ff"
+      }
+    },
+    "infinigen": {
+      "records": {
+        "bytes": 8627763,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/infinigen/table1/asset_records.jsonl",
+        "sha256": "fdc59c8a3f630ec5eb90f3b182c9c00ca188e6b837a5964354cec358ac4d5ab3"
+      },
+      "roster": {
+        "bytes": 10750634,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/infinigen/full_release_roster.jsonl",
+        "sha256": "1d2c8f719218f2e8732a4bfd0dc4a8ed078ba88c14695683ab1bad5a27563a3c"
+      }
+    },
+    "infinite": {
+      "records": {
+        "bytes": 709869,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/infinite/table1/asset_records.jsonl",
+        "sha256": "d7582b4c838c3cc47c28f11af7565a61196a1f4beab0af4bb261d24a2df3dc9c"
+      },
+      "roster": {
+        "bytes": 10167991,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/infinite/full_release_roster.jsonl",
+        "sha256": "c843eaad143c31fe05ee728b9522ead8f03151e7afcede63a4610c5a016f4864"
+      }
+    },
+    "lam": {
+      "records": {
+        "bytes": 3791196,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/lam/table1/asset_records.jsonl",
+        "sha256": "2d078243a175fe6647309f68a6eb939f10a8e1230e95aa9678399acf5c108df0"
+      },
+      "roster": {
+        "bytes": 71644484,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/lam/full_release_roster.jsonl",
+        "sha256": "931ef46194487e1c4cb79fce7a2e1a58a5940d4ade13d4c2fc0b611668344091"
+      }
+    },
+    "ours_500k": {
+      "records": {
+        "bytes": 417818,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table1_ours_500k/asset_records.jsonl",
+        "sha256": "930951dd083ad91865388213e04c03fa2acdee5ca086411380e87be5225a64fe"
+      },
+      "roster": {
+        "bytes": 187005,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table1_ours_500k/manifest.json",
+        "sha256": "bc3eb334b1fc1c57378e50e7c2fab5d765a7599db8b3e82bc1d91536570b7c06"
+      }
+    },
+    "ours_n5": {
+      "records": {
+        "bytes": 2279757,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table1_pva_per_class_n5_max_joints/asset_records.jsonl",
+        "sha256": "8ccb7ef5e34545b72865396d1f71ca6fcb368e16f3fcab9f13820c985d488b05"
+      },
+      "roster": {
+        "bytes": 9502633,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table1_pva_per_class_n5_max_joints/manifest.json",
+        "sha256": "4b0360a398a5efba3532e9ca87c37bbedc5a3416783679f9f26f89e930e19644"
+      }
+    },
+    "partnet": {
+      "records": {
+        "bytes": 2200333,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/partnet/table1/asset_records.jsonl",
+        "sha256": "4760ddd6e98c60174c81482dcbcf11d40863136940ba0aadb7d82f258c0446ac"
+      },
+      "roster": {
+        "bytes": 96791516,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/partnet/full_release_roster.jsonl",
+        "sha256": "f69195cd170d0572640b69d6dffb7fb451aaad694018709654e27586c333f038"
+      }
+    },
+    "physx": {
+      "records": {
+        "bytes": 1907658,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/physx/table1/asset_records.jsonl",
+        "sha256": "f228ebd896b3a5d47c97cf73aeddf9c711c7c388160c2c737508ea0d447d1759"
+      },
+      "roster": {
+        "bytes": 2817735,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/physx/full_release_roster.jsonl",
+        "sha256": "12d399eb429847538cde92dc0325b7f67f26ce9ae63895fe41b3eea8564cc74a"
+      }
+    },
+    "pva": {
+      "records": {
+        "bytes": 302391101,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table1234_full_release_20260826/evaluation/table1/asset_records.jsonl",
+        "sha256": "df3e921bff53718ea7002431457a1449467c2510b2b5a4cef18aeade124cb8c1"
+      },
+      "roster": {
+        "bytes": 1428553137,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/pva_table1234_full_release_20260826/roster/full_release_roster.jsonl",
+        "sha256": "6110f8ec301ddbd0934dee5f4a828bca91a37dc554a0fec764c74ecea3482c91"
+      }
+    },
+    "sketch": {
+      "records": {
+        "bytes": 5187029,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/sketch/table1/asset_records.jsonl",
+        "sha256": "ee2c3e83a6fbadbdb011fba5fb7bae3f29ff8230aca3b3644c70950ad1e2caaf"
+      },
+      "roster": {
+        "bytes": 67367468,
+        "path": "/mnt/zsn/lyb/arti-skill/exp/runtime/table123_full_release_20260825/sketch/full_release_roster.jsonl",
+        "sha256": "ceb2203297e33e7807f8b38ea38527c47136307f4b0baccc6d81db7228394665"
+      }
+    }
+  },
+  "dataset_keys": [
+    "ours_500k",
+    "ours_n5",
+    "pva",
+    "articraft",
+    "lam",
+    "artiverse",
+    "partnet",
+    "physx",
+    "sketch",
+    "infinite",
+    "infinigen"
+  ],
+  "dependency_versions": {
+    "numpy": "2.5.1",
+    "python": "3.12.3",
+    "scipy": "1.18.0",
+    "trimesh": "5.0.0"
+  },
+  "exhaustive_group_limit": 256,
+  "fingerprint_core": {
+    "bytes": 50630,
+    "path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_table1_artiverse.py",
+    "sha256": "539c3ae9cd9084f20e7fd0b87b2cfa02512781b74233d878575fff9dc6dda82b"
+  },
+  "headline_blockers": [
+    "no frozen cross-dataset canonical category mapping or C_common roster",
+    "full-release cohorts do not implement matched n=20 with five resamples",
+    "near-duplicate threshold requires human calibration",
+    "candidate-retrieval recall is not established",
+    "canonical cross-dataset categories and canonical visual-role graph are not frozen"
+  ],
+  "manifest_content_sha256": "db9f328aa48374f8d14b6dec224ec10127bcc889c7d22053845d72d3311a085a",
+  "min_resolved_labels": 800,
+  "point_count": 2048,
+  "protocols": {
+    "calibration": "balanced-hard-random-human-label-asset-disjoint-v3",
+    "candidates": "category-graph-ckdtree-v1",
+    "chamfer": "symmetric-mean-unsquared-l2-pointcloud-v1",
+    "descriptor": "axis-radial-histogram-quantile-moments-v1",
+    "graph": "fixed-contracted-unordered-rooted-joint-tree-v1",
+    "points": "q0-visual-aabb-diagonal-pcg64dxsm-v1",
+    "rate": "connected-component-excess-over-geometry-evaluable-v1",
+    "variance": "within-release-label-population-variance-macro-v1"
+  },
+  "pva_mirror_receipts": {
+    "archive_records.jsonl": {
+      "bytes": 4537647,
+      "path": "/tmp/pva_table4_local_mirror_20260827/archive_records.jsonl",
+      "sha256": "c7dd6619a7b689aca4d018b23a6fbf7de72eb6c4a5dec8a0130b6774a29157f4"
+    },
+    "artifact_manifest.json": {
+      "bytes": 164538,
+      "path": "/tmp/pva_table4_local_mirror_20260827/artifact_manifest.json",
+      "sha256": "cb6b60c21c144227aaa29a65576ba9e9223a4fe7fef7d76dc8a1cf9fa33fcf09"
+    },
+    "manifest.json": {
+      "bytes": 215924,
+      "path": "/tmp/pva_table4_local_mirror_20260827/manifest.json",
+      "sha256": "6d87b3d504b2e2d10635af520e37a6dba430e49f2cb07bee512a8ecfbf79af93"
+    }
+  },
+  "pva_root_override": "/tmp/pva_table4_local_mirror_20260827/extracted",
+  "python_executable": "/mnt/zsn/lyb/arti-skill/exp/.venv_low_medium/bin/python",
+  "schema_version": "table1_diversity_run_v1",
+  "scratch": "/tmp/table1_var_neardup_diagnostic_20260827",
+  "script_path": "/mnt/zsn/lyb/arti-skill/exp/scripts/run_table1_diversity_metrics.py",
+  "script_sha256": "6aecb18228c510de2505c8095c59fc7d4186324e96754d6a3cc7dbd98c9ffe6a",
+  "table1_headline_eligible": false,
+  "target_precision": 0.98,
+  "top_k": 64,
+  "workers": 8
+}

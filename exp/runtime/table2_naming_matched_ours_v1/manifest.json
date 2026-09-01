@@ -1,0 +1,99 @@
+{
+  "artifact_gate": "compiler target=visual, run_checks=False, followed by frozen Naming v1.1 renderable-geometry and artifact-hash validation",
+  "comparison_label": "category-matched deterministic cohort",
+  "method": "Ours",
+  "protocol_id": "nano3d_table2_naming_matched_v1",
+  "protocol_sha256": "f4c4d915ce2e1bed5c99efd9dcebb97526a7d2639ad5021e3b068c3cf6105113",
+  "scope_note": "Full physics QC is outside Table 2 Naming and is not an inclusion gate.",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "templates": [
+    {
+      "category": "microwave",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "slug": "Kitchen_Microwave",
+      "stem": "microwave",
+      "template": "arti-skill/arti-template/agent/templates/Kitchen_Microwave.py",
+      "template_sha256": "020f661750038dcd7ea9f9041262a802e9246df23726c5b4dffb61a689079446"
+    },
+    {
+      "category": "dishwasher",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "slug": "dishwasher_with_dropdown_door_and_sliding_racks",
+      "stem": "dishwasher_with_dropdown_door_and_sliding_racks",
+      "template": "arti-skill/arti-template/agent/templates/dishwasher_with_dropdown_door_and_sliding_racks.py",
+      "template_sha256": "607b1e45bc8c17d16db0d9526e8104e944bf2e09600dbb05c21a74ac53cde4b3"
+    },
+    {
+      "category": "oven",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "slug": "Other_Built_in_oven",
+      "stem": "built_in_oven",
+      "template": "arti-skill/arti-template/agent/templates/Other_Built_in_oven.py",
+      "template_sha256": "6752353a26e49ec3e96044f93f2b8fca25556fe1f54a9982c517320682039cba"
+    },
+    {
+      "category": "faucet",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "slug": "Other_single_hole_basin_faucet",
+      "stem": "single_hole_basin_faucet",
+      "template": "arti-skill/arti-template/agent/templates/Other_single_hole_basin_faucet.py",
+      "template_sha256": "15e8adc7c30714026d08098ca492f1e3ce5ae988529ff3b66a9a076babb48c7f"
+    },
+    {
+      "category": "refrigerator",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "slug": "refrigerator_with_hinged_doors",
+      "stem": "refrigerator",
+      "template": "arti-skill/arti-template/agent/templates/refrigerator_with_hinged_doors.py",
+      "template_sha256": "5e6618c9ad99c11326a2263d7b4ef4890e99becd6f9decedb8500c106d7a042e"
+    }
+  ]
+}

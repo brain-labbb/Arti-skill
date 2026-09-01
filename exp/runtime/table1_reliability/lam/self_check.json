@@ -1,0 +1,36 @@
+{
+  "checks": {
+    "adapter_gates_fail_closed": true,
+    "authoring_and_release_denominators_separate": true,
+    "authoring_attempted_runs_zero": true,
+    "authoring_metrics_all_nr_null": true,
+    "credential_values_not_recorded": true,
+    "no_network_or_api": true,
+    "release_never_mapped_to_common_metrics": true,
+    "release_rows_expected_3217": true,
+    "release_sources_row_aligned": true,
+    "release_status_conserved": true,
+    "release_status_domain_exact": true,
+    "release_tier_conserved": true,
+    "release_tier_domain_exact": true,
+    "release_urdf_parse_count_bounded": true,
+    "status_classification_consistent": true,
+    "status_domain_fail_closed": true
+  },
+  "evidence_files": [
+    "arti-skill/exp/runtime/table1_reliability/lam/manifest.json",
+    "arti-skill/exp/runtime/table1_reliability/lam/provenance.json",
+    "arti-skill/exp/runtime/table1_reliability/lam/summary.json",
+    "arti-skill/exp/runtime/table1_reliability/lam/report.md"
+  ],
+  "generated_at_utc": "2026-08-12T08:19:04.035242Z",
+  "protocol_id": "nano3d_table1_lam_reliability_self_check_v1",
+  "sha256": {
+    "arti-skill/exp/scripts/preflight_table1_reliability_lam.py": "081764950263d9e5b8586524371216ea5a75d7b096f6b3b3b597537eecfc767f",
+    "manifest.json": "86162244a9cbf931228dd04497fe701150a9c71892d75feb4ab92fbbb7b198c1",
+    "provenance.json": "f964a33253a66833576d640fd2e143ea7ce67684a3ed5a4c4ae76d11e9eab588",
+    "report.md": "745abc94998fdb55c018949a0e9117a3ace7b638d164ed507e44c7bc5e81de1b",
+    "summary.json": "e086730ce3341370d835415dec5ec151c6a3fa2547133cc67580f16cd8e69606"
+  },
+  "status": "PASS"
+}

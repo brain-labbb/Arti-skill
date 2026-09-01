@@ -1,0 +1,78 @@
+{
+  "benchmark_positioning": "exploratory attributable pilot on IDs from an official mobility test list",
+  "dependency_integrity_pass_count": 45,
+  "dependency_integrity_status": "PASS",
+  "dependency_integrity_total_count": 45,
+  "failure_policy": "retain all eight intended IDs; no outcome replacement",
+  "held_out_claim": false,
+  "held_out_gate": "FAIL_HIGH_NO_TRAINING_EXCLUSION_MANIFEST",
+  "identity_fixed_before_observed_outputs_per_session_execution_record": true,
+  "identity_rows": [
+    {
+      "category": "Display",
+      "item_id": "4627",
+      "source": "full"
+    },
+    {
+      "category": "Clock",
+      "item_id": "6813",
+      "source": "full"
+    },
+    {
+      "category": "Oven",
+      "item_id": "102001",
+      "source": "full"
+    },
+    {
+      "category": "Phone",
+      "item_id": "103593",
+      "source": "full"
+    },
+    {
+      "category": "Laptop",
+      "item_id": "9918",
+      "source": "full"
+    },
+    {
+      "category": "TrashCan",
+      "item_id": "102187",
+      "source": "smoke"
+    },
+    {
+      "category": "Toaster",
+      "item_id": "103514",
+      "source": "full"
+    },
+    {
+      "category": "Pen",
+      "item_id": "102916",
+      "source": "full"
+    }
+  ],
+  "identity_rows_sha256": "de9a64b02efcafc7dd390e4b2264989f56bc6dfe0d681b53a29bca80e58e3aab",
+  "independent_protocol_audit_markdown_sha256": "f1367ef57cd47ac159dcc26ce0f45ebfb1cff048e6d1a89a31b44b5d0d21cd04",
+  "independent_protocol_audit_sha256": "18f9d60ac22f6b3cd754d6ef9ba3cb1a35010feaaf6cb2312726d69ce6c7a889",
+  "independent_protocol_audit_verdict": "NOT_READY_FOR_AN_UNQUALIFIED_TABLE6_METHOD_RESULT",
+  "independent_semantic_gold": false,
+  "intent_count": 8,
+  "model_revision": "765cd275839f88333cb754f1c6c0b8d3887a3b2c",
+  "operational_adapter_disclosure": {
+    "modified_source_file_count": 5,
+    "pristine_official_tracked_files_match": "334/334",
+    "purpose": "deterministic ordering/seeds, local dependency routing, checked subprocesses, and fail-fast evidence"
+  },
+  "processor_revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+  "protocol": "nano3d_table6_physx_omni_exploratory_attributable_pilot_v1",
+  "publication_gate": false,
+  "publication_gate_status": "FAIL_CLOSED_EXPLORATORY_ONLY",
+  "qwen_processor_primary_manifest_covered": false,
+  "qwen_processor_separate_blob_check": "PASS_11_OF_11",
+  "selection_gate_severity": "HIGH",
+  "selection_limitation": "no pre-run local selection artifact survives; do not claim salt argmin or formal outcome-independent benchmark sampling",
+  "selection_reproducibility": "NOT_EVIDENCED",
+  "selection_reproducibility_check": "FAIL",
+  "source_commit": "46fa1cd0b6883d4d14431d51c3326ef80a85ef64",
+  "test_list_revision": "7c87bcc252b33cdc10c8583c20ac899136729ad5",
+  "training_overlap_risk": "POSSIBLE: official training configuration names PhysX-Mobility; exclusion of these IDs is not evidenced",
+  "trellis_revision": "25e0d31ffbebe4b5a97464dd851910efc3002d96"
+}

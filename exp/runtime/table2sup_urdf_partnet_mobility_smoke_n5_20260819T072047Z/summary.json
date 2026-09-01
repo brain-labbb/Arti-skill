@@ -1,0 +1,149 @@
+{
+  "category_macro": {
+    "categories": {
+      "CoffeeMachine": {
+        "assets": 1,
+        "dynamics_joint_rate": {
+          "denominator": 3,
+          "numerator": 0,
+          "percent": 0.0
+        },
+        "portability_joint_rate": {
+          "denominator": 3,
+          "numerator": 0,
+          "percent": 0.0
+        },
+        "visual_bearing_asset_rate": {
+          "denominator": 1,
+          "numerator": 1,
+          "percent": 100.0
+        }
+      },
+      "Lamp": {
+        "assets": 1,
+        "dynamics_joint_rate": {
+          "denominator": 2,
+          "numerator": 0,
+          "percent": 0.0
+        },
+        "portability_joint_rate": {
+          "denominator": 2,
+          "numerator": 0,
+          "percent": 0.0
+        },
+        "visual_bearing_asset_rate": {
+          "denominator": 1,
+          "numerator": 1,
+          "percent": 100.0
+        }
+      },
+      "Switch": {
+        "assets": 2,
+        "dynamics_joint_rate": {
+          "denominator": 3,
+          "numerator": 0,
+          "percent": 0.0
+        },
+        "portability_joint_rate": {
+          "denominator": 3,
+          "numerator": 0,
+          "percent": 0.0
+        },
+        "visual_bearing_asset_rate": {
+          "denominator": 2,
+          "numerator": 2,
+          "percent": 100.0
+        }
+      },
+      "TrashCan": {
+        "assets": 1,
+        "dynamics_joint_rate": {
+          "denominator": 1,
+          "numerator": 0,
+          "percent": 0.0
+        },
+        "portability_joint_rate": {
+          "denominator": 1,
+          "numerator": 0,
+          "percent": 0.0
+        },
+        "visual_bearing_asset_rate": {
+          "denominator": 1,
+          "numerator": 1,
+          "percent": 100.0
+        }
+      }
+    },
+    "category_count": 4,
+    "dynamics_joint_rate_mean_percent": 0.0,
+    "portability_joint_rate_mean_percent": 0.0,
+    "visual_bearing_asset_rate_mean_percent": 100.0
+  },
+  "classification": "SMOKE",
+  "cohort": {
+    "j_eval": 9,
+    "n_eval": 5,
+    "ordered_ids_sha256": "ef6cb964e50dc712280256c5b2f675cc2c957095c3553b21845d3562a5011883",
+    "source_manifest": "/mnt/zsn/lyb/arti-skill/exp/runtime/urdf_table4_partnet_mobility_n800_20260813/frozen_manifest.json",
+    "source_manifest_sha256": "2ff015ee6bb377ce693126b52dd632a7565a3eaa9f0007e26122a1bb4ab99900"
+  },
+  "completed_at_utc": "2026-08-19T07:20:53.117916Z",
+  "dataset": "PartNet-Mobility",
+  "frozen_config_sha256": "ae2e7520744034eb247286fb5ea848b7a3ebbc586ec3f7ccacb9176851a7da0e",
+  "metrics": {
+    "joint_dynamics_coverage": {
+      "denominator": 9,
+      "joints_extracted": 9,
+      "numerator": 0,
+      "percent": 0.0
+    },
+    "joint_limit_portability": {
+      "denominator": 9,
+      "joints_extracted": 9,
+      "numerator": 0,
+      "percent": 0.0
+    },
+    "placeholder_mass_incidence": {
+      "complete_inertial_links": 0,
+      "coverage": {
+        "denominator": 19,
+        "numerator": 0,
+        "percent": 0.0
+      },
+      "dynamic_links_measured": 19,
+      "reason": "placeholder_registry_empty",
+      "registry_ids": [],
+      "status": "N/E"
+    },
+    "visual_bearing_collision_coverage": {
+      "asset": {
+        "denominator": 5,
+        "numerator": 5,
+        "percent": 100.0
+      },
+      "link_extraction_complete_assets": 5,
+      "link_micro": {
+        "denominator": 14,
+        "numerator": 14,
+        "percent": 100.0
+      },
+      "zero_visual_bearing_assets_completed": 0
+    }
+  },
+  "mode": "smoke",
+  "notes": [
+    "Placeholder-mass Incidence is N/E because the frozen placeholder registry is empty (uniform with the LAM supplementary precedent); complete-inertial coverage is reported alongside.",
+    "Parse gate for these supplementary metrics is XML well-formedness plus robot root (frozen precedent), not the urdfpy standard parser used by Table 2 Parse Rate.",
+    "All denominators are intent-to-evaluate: failures, timeouts and non-executed items remain in the denominator."
+  ],
+  "parse_passed_assets": 5,
+  "protocol_id": "table2_supplementary_partnet_mobility_table4cohort_n800_v1",
+  "run_directory": "/mnt/zsn/lyb/arti-skill/exp/runtime/table2sup_urdf_partnet_mobility_smoke_n5_20260819T072047Z",
+  "started_at_utc": "2026-08-19T07:20:49.725166Z",
+  "status_counts": {
+    "completed": 5,
+    "error": 0,
+    "total": 5
+  },
+  "wall_seconds": 3.38
+}

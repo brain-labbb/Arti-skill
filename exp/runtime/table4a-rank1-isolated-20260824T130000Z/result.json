@@ -1,0 +1,482 @@
+{
+  "asset_id": "PV-A/Accessories_Cushion/seed_0021",
+  "category": "Accessories_Cushion",
+  "child": {
+    "finished_at_utc": "2026-08-24T12:55:41.070508Z",
+    "pid": 1306758,
+    "python_executable": "/mnt/zsn/miniconda3/envs/genesis-main/bin/python3.12",
+    "python_version": "3.12.13"
+  },
+  "dataset_id": "PV-A/Accessories_Cushion/seed_0021",
+  "early_cpu_affinity": {
+    "observed": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "pid": 1306758,
+    "requested": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "status": "COMPLETE"
+  },
+  "eligible_pair_count": 0,
+  "engine_protocol_id": "genesis_contact_penetration_v1",
+  "expected_movable_dof": 1,
+  "expected_package_content_manifest_sha256": "4a828326dcd516bd5a051205a3237a20ae16202688857673b6c88f755893528d",
+  "expected_package_file_binding": [
+    {
+      "bytes": 118597,
+      "path": "appearance.json",
+      "sha256": "c65dc2140e1f9f23606e79fa065ab418e2ee3e15dd990b9801cc1145028e675b"
+    },
+    {
+      "bytes": 11861,
+      "path": "model.urdf",
+      "sha256": "df9d68cf7b73a72ad33a8b4999adbdd586dc2f0d0529644fa6ddc9d538b8d97a"
+    },
+    {
+      "bytes": 11295,
+      "path": "physics.json",
+      "sha256": "4de870ecc4caa181cf968039670ee4d6c1fef8ea53f5e01703bc7e91ef0cef98"
+    },
+    {
+      "bytes": 47295,
+      "path": "assets/meshes/compact_base.obj",
+      "sha256": "d2ccbb13eb8e3bd6ce4e5ec5f9cb5abe81dd44037275210f425b1a67755e8281"
+    },
+    {
+      "bytes": 23623,
+      "path": "assets/meshes/lid_black_edge.obj",
+      "sha256": "05f8f4b4f2b47ea114f63e9088ef36324bfa2506ec0a0b00d7f74e479da723df"
+    },
+    {
+      "bytes": 23596,
+      "path": "assets/meshes/lid_white_top.obj",
+      "sha256": "4b4b07669a059089b968b3f48a912259477fc98d63acc3ac301ee8ea9721ccb4"
+    },
+    {
+      "bytes": 27042,
+      "path": "assets/meshes/logo_ring_0.obj",
+      "sha256": "a9a27f9ec3c93e8c2d24d479ff03d925d94c5ee47a9a9a605a2dac66a53e3942"
+    },
+    {
+      "bytes": 27042,
+      "path": "assets/meshes/logo_ring_1.obj",
+      "sha256": "a9a27f9ec3c93e8c2d24d479ff03d925d94c5ee47a9a9a605a2dac66a53e3942"
+    },
+    {
+      "bytes": 38664,
+      "path": "assets/meshes/rim_gasket.obj",
+      "sha256": "755999a4ad8f4f9e1ad98dd8c13f2e5f916a2c2270b45173b93cd9a6e7d4e40e"
+    }
+  ],
+  "expected_package_file_binding_sha256": "4a828326dcd516bd5a051205a3237a20ae16202688857673b6c88f755893528d",
+  "expected_urdf_sha256": "df9d68cf7b73a72ad33a8b4999adbdd586dc2f0d0529644fa6ddc9d538b8d97a",
+  "input_identity_sha256": "94af879439387990afc8ff5f0734c074b8f3aa4cf099d226c2b4b2a8deed8e30",
+  "issues": [],
+  "joint_records": [
+    {
+      "dof_position": 0,
+      "full_range_cf_pass": true,
+      "illegal_states": 0,
+      "issues": [],
+      "joint_name": "base_to_lid",
+      "joint_type": "revolute",
+      "limit_endpoints_executed": 2,
+      "limit_endpoints_intended": 2,
+      "limit_reachable": true,
+      "safe_dof": 1,
+      "state_summaries": [
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 40,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "37aed087d1cfac1ac1185c1622819ee5100567b178df43d6c00e8a7db4bc244b",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "37aed087d1cfac1ac1185c1622819ee5100567b178df43d6c00e8a7db4bc244b",
+          "raw_contact_count": 40,
+          "sample_index": 0
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 40,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "af48e4d41ab9ff1e4d882867cee046e76d64aa73c95bc4474fc9c56101913eee",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "af48e4d41ab9ff1e4d882867cee046e76d64aa73c95bc4474fc9c56101913eee",
+          "raw_contact_count": 40,
+          "sample_index": 1
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 40,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "d4dce12aafd3c666f7a5f2f7eb76389362551aa900f78f2058f043f551f2943c",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "d4dce12aafd3c666f7a5f2f7eb76389362551aa900f78f2058f043f551f2943c",
+          "raw_contact_count": 40,
+          "sample_index": 2
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 40,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "d6734a56ae79946e7111e68c35ea929765a7e2e1cf38f2bc797c733a6a3286d4",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "d6734a56ae79946e7111e68c35ea929765a7e2e1cf38f2bc797c733a6a3286d4",
+          "raw_contact_count": 40,
+          "sample_index": 3
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 34,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "1a4e732110d51aa91d9daf4461427f65a850b0f8b7f7401baedb690b33401b87",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "1a4e732110d51aa91d9daf4461427f65a850b0f8b7f7401baedb690b33401b87",
+          "raw_contact_count": 34,
+          "sample_index": 4
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 38,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "b38ce028edafbb6a9d81c5d1eaec82c40085c58bc9055bcf0c2b0c89aaf30eb7",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "b38ce028edafbb6a9d81c5d1eaec82c40085c58bc9055bcf0c2b0c89aaf30eb7",
+          "raw_contact_count": 38,
+          "sample_index": 5
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 34,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "eb51a91f162bc34a0ce6804f8fbd9d925c003fe6c5259970c1dc30b3494f8892",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "eb51a91f162bc34a0ce6804f8fbd9d925c003fe6c5259970c1dc30b3494f8892",
+          "raw_contact_count": 34,
+          "sample_index": 6
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 40,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "8ff8f7ffc7b27036b8a767f94ea2b3596491307434457da63f388ba7fe9f4c76",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "8ff8f7ffc7b27036b8a767f94ea2b3596491307434457da63f388ba7fe9f4c76",
+          "raw_contact_count": 40,
+          "sample_index": 7
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 40,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "dd2ede8393c0b88bc8bac2c2a9d5cfb2ec3f04ededbc0082c305867d6ad618ea",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "dd2ede8393c0b88bc8bac2c2a9d5cfb2ec3f04ededbc0082c305867d6ad618ea",
+          "raw_contact_count": 40,
+          "sample_index": 8
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 38,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "ff9bc398b7fd5ef548645b7bb5a4a87154bd94b9c72df54598a0159f2a20486d",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "ff9bc398b7fd5ef548645b7bb5a4a87154bd94b9c72df54598a0159f2a20486d",
+          "raw_contact_count": 38,
+          "sample_index": 9
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 38,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "cece35d119e55d806528ad46bff931a777f8ee2c7d87f94c6ad2b1f11b9349c8",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "cece35d119e55d806528ad46bff931a777f8ee2c7d87f94c6ad2b1f11b9349c8",
+          "raw_contact_count": 38,
+          "sample_index": 10
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 40,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "5ea45c0500d28fb632e6fc489971b498b08cd563cfc9eeedac76e81aa433da63",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "5ea45c0500d28fb632e6fc489971b498b08cd563cfc9eeedac76e81aa433da63",
+          "raw_contact_count": 40,
+          "sample_index": 11
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 34,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "86e335208b28e905d8db363fed0e1b398a1eb2d66cfa9ca9a1cfcb789e9a0e82",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "86e335208b28e905d8db363fed0e1b398a1eb2d66cfa9ca9a1cfcb789e9a0e82",
+          "raw_contact_count": 34,
+          "sample_index": 12
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 38,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "02ffde4b17b5a5a096301e82061e454175070990b992562ac096ba19108ab909",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "02ffde4b17b5a5a096301e82061e454175070990b992562ac096ba19108ab909",
+          "raw_contact_count": 38,
+          "sample_index": 13
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 40,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "2ed19aa1f1540d3e9b5837791fd9a65bf5865d0bef5a76838d7cb0f7ac513b21",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "2ed19aa1f1540d3e9b5837791fd9a65bf5865d0bef5a76838d7cb0f7ac513b21",
+          "raw_contact_count": 40,
+          "sample_index": 14
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 38,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "12862d6f396fdd1d00fd994e13bbe55b9d1a432a077abfa4b751f94337092dfb",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "12862d6f396fdd1d00fd994e13bbe55b9d1a432a077abfa4b751f94337092dfb",
+          "raw_contact_count": 38,
+          "sample_index": 15
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 36,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "6c7a39e75100a10f436be92716147b0ad1632eb387cf38b51d5432443da4b29e",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "6c7a39e75100a10f436be92716147b0ad1632eb387cf38b51d5432443da4b29e",
+          "raw_contact_count": 36,
+          "sample_index": 16
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 38,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "ed6aa22c5d428110a012388ab5f93b3535818d06543f242f015b5d012a19bb46",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "ed6aa22c5d428110a012388ab5f93b3535818d06543f242f015b5d012a19bb46",
+          "raw_contact_count": 38,
+          "sample_index": 17
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 38,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "c263b341a905ce050ce01378559b9b24f0e0835f17e521f7530544fe212d71c4",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "c263b341a905ce050ce01378559b9b24f0e0835f17e521f7530544fe212d71c4",
+          "raw_contact_count": 38,
+          "sample_index": 18
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 38,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "1a01ff44e6ad84782925975b077416a5654003fb8187730314722e2fe3aaea80",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "1a01ff44e6ad84782925975b077416a5654003fb8187730314722e2fe3aaea80",
+          "raw_contact_count": 38,
+          "sample_index": 19
+        },
+        {
+          "eligible_contact_count": 0,
+          "excluded_direct_parent_child_contact_count": 36,
+          "executed": true,
+          "illegal_collision": false,
+          "max_eligible_penetration_m": 0.0,
+          "q_intended_values_sha256": "9f2a856c513baff5e5fef0e18c7daa8494e1a12283c6db4e6e10706e35981491",
+          "q_readback_max_abs_error": 0.0,
+          "q_xml_order_sha256": "9f2a856c513baff5e5fef0e18c7daa8494e1a12283c6db4e6e10706e35981491",
+          "raw_contact_count": 36,
+          "sample_index": 20
+        }
+      ],
+      "states_executed": 21,
+      "states_intended": 21,
+      "table3_joint_level_pass": true,
+      "xml_index": 0
+    }
+  ],
+  "load_success": true,
+  "load_time_seconds": 59.48252860829234,
+  "mapped_pair_count": 0,
+  "mapping_status": "COMPLETE",
+  "observed_package_file_binding_after": [
+    {
+      "bytes": 118597,
+      "path": "appearance.json",
+      "sha256": "c65dc2140e1f9f23606e79fa065ab418e2ee3e15dd990b9801cc1145028e675b"
+    },
+    {
+      "bytes": 11861,
+      "path": "model.urdf",
+      "sha256": "df9d68cf7b73a72ad33a8b4999adbdd586dc2f0d0529644fa6ddc9d538b8d97a"
+    },
+    {
+      "bytes": 11295,
+      "path": "physics.json",
+      "sha256": "4de870ecc4caa181cf968039670ee4d6c1fef8ea53f5e01703bc7e91ef0cef98"
+    },
+    {
+      "bytes": 47295,
+      "path": "assets/meshes/compact_base.obj",
+      "sha256": "d2ccbb13eb8e3bd6ce4e5ec5f9cb5abe81dd44037275210f425b1a67755e8281"
+    },
+    {
+      "bytes": 23623,
+      "path": "assets/meshes/lid_black_edge.obj",
+      "sha256": "05f8f4b4f2b47ea114f63e9088ef36324bfa2506ec0a0b00d7f74e479da723df"
+    },
+    {
+      "bytes": 23596,
+      "path": "assets/meshes/lid_white_top.obj",
+      "sha256": "4b4b07669a059089b968b3f48a912259477fc98d63acc3ac301ee8ea9721ccb4"
+    },
+    {
+      "bytes": 27042,
+      "path": "assets/meshes/logo_ring_0.obj",
+      "sha256": "a9a27f9ec3c93e8c2d24d479ff03d925d94c5ee47a9a9a605a2dac66a53e3942"
+    },
+    {
+      "bytes": 27042,
+      "path": "assets/meshes/logo_ring_1.obj",
+      "sha256": "a9a27f9ec3c93e8c2d24d479ff03d925d94c5ee47a9a9a605a2dac66a53e3942"
+    },
+    {
+      "bytes": 38664,
+      "path": "assets/meshes/rim_gasket.obj",
+      "sha256": "755999a4ad8f4f9e1ad98dd8c13f2e5f916a2c2270b45173b93cd9a6e7d4e40e"
+    }
+  ],
+  "observed_package_file_binding_after_sha256": "4a828326dcd516bd5a051205a3237a20ae16202688857673b6c88f755893528d",
+  "observed_package_file_binding_before": [
+    {
+      "bytes": 118597,
+      "path": "appearance.json",
+      "sha256": "c65dc2140e1f9f23606e79fa065ab418e2ee3e15dd990b9801cc1145028e675b"
+    },
+    {
+      "bytes": 11861,
+      "path": "model.urdf",
+      "sha256": "df9d68cf7b73a72ad33a8b4999adbdd586dc2f0d0529644fa6ddc9d538b8d97a"
+    },
+    {
+      "bytes": 11295,
+      "path": "physics.json",
+      "sha256": "4de870ecc4caa181cf968039670ee4d6c1fef8ea53f5e01703bc7e91ef0cef98"
+    },
+    {
+      "bytes": 47295,
+      "path": "assets/meshes/compact_base.obj",
+      "sha256": "d2ccbb13eb8e3bd6ce4e5ec5f9cb5abe81dd44037275210f425b1a67755e8281"
+    },
+    {
+      "bytes": 23623,
+      "path": "assets/meshes/lid_black_edge.obj",
+      "sha256": "05f8f4b4f2b47ea114f63e9088ef36324bfa2506ec0a0b00d7f74e479da723df"
+    },
+    {
+      "bytes": 23596,
+      "path": "assets/meshes/lid_white_top.obj",
+      "sha256": "4b4b07669a059089b968b3f48a912259477fc98d63acc3ac301ee8ea9721ccb4"
+    },
+    {
+      "bytes": 27042,
+      "path": "assets/meshes/logo_ring_0.obj",
+      "sha256": "a9a27f9ec3c93e8c2d24d479ff03d925d94c5ee47a9a9a605a2dac66a53e3942"
+    },
+    {
+      "bytes": 27042,
+      "path": "assets/meshes/logo_ring_1.obj",
+      "sha256": "a9a27f9ec3c93e8c2d24d479ff03d925d94c5ee47a9a9a605a2dac66a53e3942"
+    },
+    {
+      "bytes": 38664,
+      "path": "assets/meshes/rim_gasket.obj",
+      "sha256": "755999a4ad8f4f9e1ad98dd8c13f2e5f916a2c2270b45173b93cd9a6e7d4e40e"
+    }
+  ],
+  "observed_package_file_binding_before_sha256": "4a828326dcd516bd5a051205a3237a20ae16202688857673b6c88f755893528d",
+  "package": "/mnt/zsn/lyb/arti-skill/exp/PV-A-per-class-n5/assets/Accessories_Cushion/seed_0021",
+  "protocol_id": "table4a_ours_pva_per_class_n5_max_joints_v1",
+  "schema_version": "table4a-ours-pva-per-class-n5/v1",
+  "selection_index": 0,
+  "state_hash_cross_check": {
+    "mismatch": 0,
+    "no_reference": 0,
+    "verified": 21
+  },
+  "states_executed": 21,
+  "states_intended": 21,
+  "status": "completed",
+  "torch_threading": {
+    "after_evaluation": {
+      "inter_op_threads": 1,
+      "intra_op_threads": 1
+    },
+    "before_evaluation": {
+      "inter_op_threads": 1,
+      "intra_op_threads": 1
+    },
+    "expected": {
+      "inter_op_threads": 1,
+      "intra_op_threads": 1
+    },
+    "status": "COMPLETE"
+  },
+  "urdf_sha256": "df9d68cf7b73a72ad33a8b4999adbdd586dc2f0d0529644fa6ddc9d538b8d97a"
+}
