@@ -97,32 +97,35 @@ performance.
 > in visual class consistency under the tested encoders, but do not imply that
 > PV-A is globally superior in data quality or downstream utility.
 
-## Figures
+## Coordinate alignment and figures
 
-All figures below use the strict `n=5` cohort: every retained category has
-exactly five distinct rendered assets. In each per-dataset figure, the left
-panel is DINOv2-base and the right panel is CLIP ViT-B/32. Points are rendered
-images, colors identify categories, and outlined points are category centers.
+The figures below use a single joint t-SNE fit over all 4,855 strict `n=5`
+images for each encoder. The five dataset-specific figures then reuse the
+corresponding subset of those joint coordinates. Within a given encoder, all
+five figures use identical square `x/y` limits, so locations and relative
+spread can be compared directly. DINOv2 and CLIP remain separate feature
+spaces and are therefore shown in separate panels. Points are rendered images,
+colors identify categories, and outlined points are category centers.
 
 ### PV-A
 
-![PV-A strict n=5 t-SNE](individual_tsne/strict_n5/pva.png)
+![PV-A strict n=5 aligned joint t-SNE](individual_tsne/aligned_strict_n5/pva.png)
 
 ### Artiverse
 
-![Artiverse strict n=5 t-SNE](individual_tsne/strict_n5/artiverse.png)
+![Artiverse strict n=5 aligned joint t-SNE](individual_tsne/aligned_strict_n5/artiverse.png)
 
 ### Articraft-10K
 
-![Articraft-10K strict n=5 t-SNE](individual_tsne/strict_n5/articraft10k.png)
+![Articraft-10K strict n=5 aligned joint t-SNE](individual_tsne/aligned_strict_n5/articraft10k.png)
 
 ### PartNet-Mobility
 
-![PartNet-Mobility strict n=5 t-SNE](individual_tsne/strict_n5/partnet_mobility.png)
+![PartNet-Mobility strict n=5 aligned joint t-SNE](individual_tsne/aligned_strict_n5/partnet_mobility.png)
 
 ### LAM
 
-![LAM strict n=5 t-SNE](individual_tsne/strict_n5/lam.png)
+![LAM strict n=5 aligned joint t-SNE](individual_tsne/aligned_strict_n5/lam.png)
 
 ### Joint and metric summaries
 
@@ -132,15 +135,20 @@ images, colors identify categories, and outlined points are category centers.
 
 ## Artifact references
 
-The strict per-dataset PNGs are in `individual_tsne/strict_n5/`; their hashes
-and dimensions are recorded in `individual_tsne/manifest.json`. The source
-metric table is `strict_n5_feature_metrics.csv`, and the complete dataset/sample
-audit is `audit.json`.
+The aligned strict per-dataset PNGs and their shared-axis manifest are in
+`individual_tsne/aligned_strict_n5/`. The source joint coordinate files are in
+`coordinates/dinov2/joint_strict_n5.csv` and
+`coordinates/clip/joint_strict_n5.csv`. The source metric table is
+`strict_n5_feature_metrics.csv`, and the complete dataset/sample audit is
+`audit.json`.
 The analysis was produced by `exp/scripts/visualize_five_datasets_n5_tsne.py`.
 
 ## Reporting note
 
-t-SNE is used for qualitative visualization only. Each independent panel is
-fit separately, so absolute t-SNE coordinates, axis ranges, and apparent panel
-size are not directly comparable across datasets or encoders. Quantitative
-claims should be based on the original feature-space metrics above.
+t-SNE is used for qualitative visualization only. The aligned figures use one
+joint fit per encoder and shared limits within that encoder; DINOv2 and CLIP
+coordinates are still not comparable to one another. Quantitative claims
+should be based on the original feature-space metrics above. The earlier
+independently fitted panels remain under `individual_tsne/strict_n5/` for
+diagnostic reference, but should not be used for cross-dataset positional
+comparisons.
